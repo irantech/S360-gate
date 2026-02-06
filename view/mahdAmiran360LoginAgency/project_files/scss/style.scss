@@ -1,0 +1,274 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontFamily;
+  background: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.parent-box {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+  margin: auto;
+}
+
+.header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/01.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #6c757d;
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.login-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  display: inline-block;
+  background: $mainColor;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(235, 104, 5, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(235, 104, 5, 0.4);
+  color: #fff;
+  text-decoration: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  height: 150px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  border: 2px solid #e9ecef;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease;
+}
+
+
+.gallery-item:hover::after {
+  opacity: 0;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #dee2e6, transparent);
+  margin: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .parent-box {
+    border-radius: 15px;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .welcome-title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .login-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .gallery-item {
+    height: 120px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .welcome-title {
+    font-size: 1.1rem;
+  }
+
+  .login-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .gallery-item {
+    height: 100px;
+  }
+}
+
+/* Animation for smooth loading */
+.parent-box {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

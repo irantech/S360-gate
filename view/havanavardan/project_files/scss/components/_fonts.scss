@@ -1,0 +1,40 @@
+@font-face {
+  font-family: IRANSansWeb;
+  src: url("../fonts/IRANSansWeb/IRANSansWeb(FaNum).eot");
+  src: url("../fonts/IRANSansWeb/IRANSansWeb(FaNum).ttf");
+  src: url("../fonts/IRANSansWeb/IRANSansWeb(FaNum).woff");
+  src: url("../fonts/IRANSansWeb/IRANSansWeb(FaNum).woff2");
+}
+@font-face {
+  font-family: IRANSansFaNum-Bold;
+  src: url("../fonts/IRANSansWeb/IRANSansFaNum-Bold.eot");
+  src: url("../fonts/IRANSansWeb/IRANSansFaNum-Bold.ttf");
+  src: url("../fonts/IRANSansWeb/IRANSansFaNum-Bold.woff");
+  src: url("../fonts/IRANSansWeb/IRANSansFaNum-Bold.woff2");
+}
+@font-face {
+  font-family: 'KookFaNum-Bold';
+  src: url('../fonts/Kook-Economic/KookFaNum-Bold.eot');
+  src: url('../fonts/Kook-Economic/KookFaNum-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Kook-Economic/KookFaNum-Bold.woff2') format('woff2'),
+  url('../fonts/Kook-Economic/KookFaNum-Bold.woff') format('woff'),
+  url('../fonts/Kook-Economic/KookFaNum-Bold.ttf') format('truetype'),
+  url('../fonts/Kook-Economic/KookFaNum-Bold.svg#KookFaNum-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KookFaNum';
+  src: url('../fonts/Kook-Economic/KookFaNum.eot');
+  src: url('../fonts/Kook-Economic/KookFaNum.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Kook-Economic/KookFaNum.woff2') format('woff2'),
+  url('../fonts/Kook-Economic/KookFaNum.woff') format('woff'),
+  url('../fonts/Kook-Economic/KookFaNum.ttf') format('truetype'),
+  url('../fonts/Kook-Economic/KookFaNum.svg#KookFaNum') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

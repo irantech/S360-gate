@@ -1,0 +1,247 @@
+@import "../components/variables";
+
+.section_tours {
+  padding: 30px 0;
+  background: #f7fafd;
+}
+#tabsTour {
+  justify-content: center;
+  width: max-content;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1px 1px 0 0;
+  margin: auto auto 1.5rem;
+}
+.nav-tabs .nav-link {
+  padding: 1rem;
+}
+.project {
+  border:1px solid #ccc;
+  border-radius: 1rem;
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+  background: #fff;
+}
+
+.detail_tour {
+  padding: 5px 4px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.detail_tour em {
+  font-size: 12px;
+  margin-right: auto;
+  font-style: normal;
+}
+
+.project .img {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  height: 150px;
+}
+
+.project img {
+  width: 100%;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: -1;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  height: 100%;
+  border:1px solid #ccc;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.project .text {
+  width: 100%;
+  align-items: center;
+  color: #1ec6b6;
+  padding: 10px;
+  padding-top: 0;
+  position: relative;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.project .text h4.price {
+
+  padding: 0;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: $fontFamily_b;
+  margin-bottom: 0;
+  color: #777;
+}
+
+.project .text h4.price i {
+  transition: all ease .4s;
+  color: #aaa;
+  font-style: normal;
+  margin-left: 3px;
+  font-size: 12px;
+  margin: 0;
+}
+
+.project .text span {
+  font-family: $fontFamily_b;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.project .text h3 {
+  font-size: 20px;
+  text-align: center;
+  font-family: $fontFamily_b;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  min-height:70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project .text h3 a {
+  font-family: $fontFamily_b;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.project .text .star span {
+  color: #ffb400;
+}
+
+.project .text .star .rate a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.project .icon {
+  position: absolute;
+  top: -50px;
+  right: .5em;
+  width: 50px;
+  height: 50px;
+  bordeR: 1px solid #fff;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.project .icon span {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+.project:hover .icon, .project:focus .icon {
+  top: 30px;
+  opacity: 1;
+}
+
+.project:hover img, .project:focus img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  width: 100%;
+}
+
+.more_tour {
+  justify-content: left;
+  font-size: 12px;
+  align-items: center;
+}
+.nav-tabs .nav-link{
+  padding: 1rem;
+}
+
+.more_tour a {
+  background: $mainColor;
+  padding: 10px;
+  color: #fff;
+  border-radius: 1rem;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: all .3s;
+}
+.more_tour a::before {
+  content: '';
+  background-color: $mainColor;
+  width: 0;
+  bottom: -10px;
+  top: -10px;
+  position: absolute;
+  left: 0;
+  transition: all ease .4s;
+}
+.more_tour a:hover {
+  opacity: .7;
+}
+.more_tour a span {
+  color: #fff !important;
+  font-weight: bold;
+  position: relative;
+}
+.section_tours .nav-tabs .nav-link {
+  transition: all ease .4s;
+  margin: 0 1px;
+  font-size: 18px;
+  color: #333;
+  font-family: $fontFamily_b;
+}
+
+.section_tours .nav-tabs .nav-link.active,
+.section_tours .nav-tabs .nav-item.show .nav-link ,
+.section_hotel .nav-tabs .nav-link.active,
+.section_hotel .nav-tabs .nav-item.show .nav-link {
+  background-color: $mainColor;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+.section_tours .nav-tabs .nav-link.active,
+.section_tours .nav-tabs .nav-item.show .nav-link ,
+.section_hotel .nav-tabs .nav-link.active,
+.section_hotel .nav-tabs .nav-item.show .nav-link
+{
+  background-color: $mainColor;
+  border-radius: 1rem;
+  border: none;
+  color: #fff;
+}

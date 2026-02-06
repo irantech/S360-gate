@@ -1,0 +1,242 @@
+@media screen and (max-width:1200px) {
+    header .mainnav > ul > li {
+        display: inline-block;
+        padding: 10px 24px 10px 00px;
+    }
+    .hot-deal-list .item a {
+        font-size:12px;
+    }
+    .hot-deal-list .item p, .hot-deal-list .item h5 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hot-deal-list .item p {
+        font-size:12px !important;
+        font-weight: 300;
+        text-align: justify;
+    }
+    .hot-deal-list .item h6, .hot-deal-list .item h4 {
+        font-size: 12px;
+    }
+    .countries .trust-head p {
+        font-size:13px;
+    }
+    .country-item {
+        flex: 0 0 25%;
+        background-position: center center;
+        background-size: cover;
+        color: white;
+        height: 200px;
+    }
+    .tour-v .tour-info p {
+        font-size: 12px;
+        padding:15px;
+    }
+    .tour-v .tour-thumb {
+        height: 180px;
+    }
+    .safarname-info span.h4 a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        display: block;
+    }
+    .slider .carousel-caption .h1 {
+        font-size: 19px;
+        font-weight: bold;
+        text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+        display: block;
+        margin: 15px 0px;
+    }
+    .slider .carousel-caption p {
+        font-size: 12px;
+        line-height: 30px;
+        max-width: 95%;
+        margin-bottom: 0px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:992px) {
+    .navigation-portrait .submenu-indicator {
+        left: 0;
+        right: auto !important;
+    }
+    .submenu-indicator-chevron {
+        border-color: transparent #000 #000 transparent !important;
+    }
+    .nav-menu > li > a {
+        color: #000 !important;
+    }
+    .search_item {
+        width: 100% !important;
+        margin-bottom: 23px;
+        flex: 0 0 100% !important;
+        padding: 0px;
+    }
+    .trust .choose-us-item {
+        background: #fff;
+        padding: 60px 10px 35px;
+        margin: 0 auto;
+    }
+    .trust .choose-us-item p {
+        font-size: 12px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .trust .choose-us-item h4 {
+        font-size: 19px;
+    }
+    .safarname-info p {
+        font-size: 11px;
+    }
+    .footer-top .dastresi-sari ul li a {
+        font-size:12px;
+    }
+    .about-us-sec p {
+        font-size: 12px;
+    }
+    .social-icon li a {
+        width: 35px;
+        height: 35px;
+        margin: 0 auto;
+    }
+    .footer-middle .footer-links a {
+        font-size: 12px;
+    }
+    .iran-tech div {
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .country-item {
+        flex: 0 0 50%;
+    }
+    nav.main-nav .mainnav {
+        position: fixed;
+        width: 245px;
+        height: 100%;
+        background: white;
+        overflow-x: hidden;
+        float: right;
+        right: -245px;
+        top: 0;
+        opacity: 1;
+        padding: 0px 10px;
+        padding-top: 0px;
+        padding-top: 0px;
+        padding-top: 0px;
+        z-index: 999999;
+        padding-top: 15px;
+    }
+    nav.main-nav .mainnav > ul {
+        list-style: none;
+        display: flex;
+        padding: 0px;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+    nav.main-nav .mainnav > ul > li {
+        border-bottom: 1px solid #e1e1e1;
+        width: 100%;
+        text-align: right;
+        padding-right: 15px;
+        flex: 0 0 100%;
+        list-style: none;
+    }
+    nav.main-nav .mainnav > ul > li > a {
+        font-size: 12px;
+        color: #383838;
+    }
+    nav.main-nav .mainnav > ul > li.has-sub .megasub , nav.main-nav .mainnav > ul > li.has-sub .submenu {
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        border-top: 0px;
+        box-shadow: none;
+        background: none;
+        padding: 0px;
+        flex-wrap: wrap;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    nav.main-nav .mainnav li.has-sub .submenu ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .hot-deal-grid .item a{ opacity: 1;}
+    .certi_foo { width: 100%; text-align: center}
+    .country-item .country-detail {
+        opacity: 1;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .hot-deal-list .item{ height: auto}
+    .nafaratbime .search_item{ width: 50%}
+    .iran-tech {
+        text-align: center;
+    }
+    .search-box .nav-pills {
+        justify-content: space-between;
+    }
+    .search-box .nav-pills .nav-link {
+        min-width: 120px;
+    }
+    .trust .col-md-4 {
+        margin-bottom: 70px;
+    }
+    .social-icon {
+        max-width: 85%;
+        margin: 10px auto 40px;
+    }
+    .iran-tech div {
+        font-size: 12px;
+    }
+    .iran-tech {
+        margin-bottom: 20px;
+    }
+    .carousel-caption {
+        max-height: 230px;
+    }
+}
+@media screen and (max-width:576px) {
+    .search-box .nav-pills .nav-link {
+        min-width: 75px;
+        font-size:11px;
+    }
+    .slider .carousel-caption {
+        display: none;
+    }
+    .country-item {
+        flex: 0 0 100%;
+    }
+    .hot-deal-list .item img {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width:365px) {
+
+}
+
+@media( min-width: 991px){
+    .mainnav ul {height: 100%;}
+    .mainnav{ height: 100%;}
+    header .mainnav > ul > li {
+        height: 100%;
+        display: inline-block;
+        padding: 10px 18px 10px 0;
+        line-height: 60px;
+    }
+}

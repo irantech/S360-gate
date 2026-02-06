@@ -1,0 +1,73 @@
+@import "../components/variables";
+@import "../components/mixin";
+
+.services{
+  @include grid-style(3,2,20px,20px);
+  a{
+    border-radius: $rounded;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(transparent,black);
+    }
+    img{
+      transition: all .5s;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    div{
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 1rem;
+      p{
+        color: #fff;
+        font-size: 1rem;
+      }
+      h2{
+        color: #fff;
+        font-family: $fontFamily_b;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+    &:hover{
+      img{
+        transform: scale(1.2);
+      }
+    }
+  }
+  .service1{grid-area: 1 / 1 / 3 / 2;height: 500px;}
+  .service2{grid-area: 1 / 2 / 2 / 3;}
+  .service3{grid-area: 2 / 2 / 3 / 3;}
+  .service4{grid-area: 1 / 3 / 3 / 4;height: 500px;}
+}
+
+@media (max-width: 1200px) {
+  .services{
+    @include grid-style(2,1,20px,20px);
+    a{
+      grid-area: unset !important;
+      height: 300px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services{
+    @include grid-style(1,1,20px,20px);
+  }
+}

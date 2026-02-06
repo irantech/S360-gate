@@ -1,0 +1,1111 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+
+.parent-contactus{
+  .site-main-button-color{
+    background: $secondColor;
+    transition: all .3s;
+    &:hover{
+      border-color: $secondColor;
+      background: $secondColor;
+      opacity: .7;
+    }
+  }
+}
+
+body{
+  overflow-x: hidden;
+  direction: rtl;
+  padding: 0;
+  background: #fff !important;
+  line-height: 24px;
+  text-align: right;
+  color: #4b5259 !important;
+  font-family: $fontFamily !important;
+}
+
+//title
+.title-ghods{
+  @include flex-between();
+  align-items: end;
+  margin-bottom: 30px;
+
+  .text-title-ghods{
+    @include flex-direction-colum();
+    gap: 10px;
+
+    h2{
+      font-family: $fontFamilyBold;
+      color: #333;
+      margin-bottom: 0;
+      font-size: 30px;
+    }
+    p{
+      color: rgba(74, 74, 74, 0.58);
+      font-size: 18px;
+      margin-bottom: 0;
+      font-family: $fontFamily;
+    }
+  }
+  .more-title-ghods {
+    font-size: 16px;
+    color: #444;
+    width: auto;
+    line-height: 44px;
+    transition: $transition;
+    font-family: $fontFamily;
+    @include flex-center-all();
+    gap: 5px;
+
+    svg{
+      width: 10px;
+      fill: #444;
+      transition: $transition;
+    }
+
+    &:hover{
+      color: $secondColor;
+      text-decoration: none;
+    }
+    &:hover svg{
+      fill: $secondColor;
+    }
+  }
+}
+
+//BANNER
+.banner-kanoun{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  margin-top: -80px;
+
+  .owl-banner-kanoun{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: $transition;
+
+    .owl-item.active img{
+      animation: anim_banner_2 5s linear;
+    }
+
+    &:hover .owl-prev{
+      left: 0;
+    }
+    &:hover .owl-next{
+      right: 0;
+    }
+
+    .owl-nav > button {
+      outline: none;
+      margin: 0 1rem;
+      height: 45px !important;
+      width: 45px !important;
+      transition: all .3s !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border: 1px solid $mainColor !important;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      background: $mainColor;
+      transform: translateY(-50%);
+      border-radius: 50% !important;
+
+      svg{
+        width: 22px;
+        height: 22px;
+        fill: #fff;
+      }
+    }
+    .owl-prev {
+      left: -100px;
+    }
+    .owl-next {
+      right: -100px;
+    }
+
+    .owl-stage-outer {
+      height: 100%;
+    }
+    .owl-stage {
+      height: 100%;
+    }
+    .owl-item{
+      height: 100%;
+    }
+    .item {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .banner-text-kanoun{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: absolute;
+        z-index: 3;
+        top: 120px;
+
+        h5{
+          margin-bottom: 0;
+          color: #fff;
+          position: relative;
+          font-family: $fontFamilyBold;
+          font-size: 22px;
+        }
+        h2{
+          margin-bottom: 0;
+          color: #fff;
+          font-family: $fontFamilyBold;
+          font-size: 40px;
+          transition: $transition;
+        }
+      }
+    }
+  }
+
+  .parent-text-banner{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    gap: 15px;
+
+    h2{
+      color: #fff;
+      font-family: $fontTitle;
+      font-size: 40px;
+      filter: drop-shadow(-2px 5px 5px #333);
+    }
+    p{
+      color: #fff;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+}
+
+//tour-ghods
+.tour-ghods{
+  padding: 80px 0 0 0;
+
+  .item{
+    margin: 1px;
+  }
+  .parent-ul-tour{
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  #pills-tab {
+    padding-right: 0;
+    gap: 20px;
+
+    .nav-link{
+      border: 1px solid $secondColor;
+      color: $secondColor;
+      padding: 10px 30px;
+      border-radius: $rounded;
+      transition: $transition;
+      font-size: 18px;
+      font-family: $fontFamilyBold;
+      background: rgba(0,0,0,0);
+
+      &.active{
+        background: $secondColor;
+        color: #fff;
+        border-color: $secondColor;
+      }
+    }
+  }
+
+  .link-parent{
+    background: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border-radius: $rounded;
+    overflow: hidden;
+    position: relative;
+    transition: $transition;
+
+    .color-toman {
+      color: #16ae01;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+    &:hover .btn-tour-tab{
+      color: $secondColor !important;
+    }
+    &:hover .btn-tour-tab i{
+      color: $secondColor !important;
+    }
+    .parent-img-tour {
+      width: 100%;
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+        transition: $transition;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .parent-text-owl {
+      padding: 15px;
+      text-align: right;
+
+      .titr-tour-tab {
+        color: #333;
+        text-align: center;
+        font-size: 20px;
+        font-family: $fontFamilyBold,sans-serif;
+        margin-bottom: 15px;
+        @include text-limit(1);
+      }
+      .money-tour-tab{
+        @include flex-between();
+        align-items: center;
+        color: #555;
+        margin-bottom: 15px;
+
+        i{
+          margin-left: 5px;
+          font-size: 14px;
+          color: #777;
+        }
+      }
+      .money-calendar-tab{
+        @include flex-between();
+        align-items: center;
+        color: #555;
+        margin-bottom: 15px;
+
+        i{
+          margin-left: 5px;
+          font-size: 14px;
+          color: #777;
+        }
+      }
+
+      .parent-btn-night {
+        margin-bottom: 0 !important;
+        @include flex-between();
+        align-items: center;
+        color: #555;
+
+        i{
+          margin-left: 5px;
+          font-size: 14px;
+          color: #777;
+        }
+
+        .btn-tour-tab {
+          background: none;
+          border-radius: $rounded;
+          @include flex-align-items-center();
+          transition: $transition;
+          color: #555;
+          border: 1px solid transparent;
+          padding: 0 5px 0 0;
+
+          &:hover{
+            color: $secondColor;
+          }
+
+          i{
+            margin-left: 5px;
+            font-size: 14px;
+            color: #777;
+            margin-right: 7px;
+            transition: $transition;
+          }
+          &:hover i{
+            color: $secondColor;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+//accordion-gallery
+.accordion-gallery{
+  padding: 40px 0 80px;
+
+  .title-ghods{
+    justify-content: center !important;
+    .text-title-ghods{
+      align-items: center;
+    }
+  }
+
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 590px;
+    border-radius: $rounded;
+    overflow: hidden;
+  }
+
+  .item-accordion-gallery {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: flex 0.6s ease-out;
+    position: relative;
+    overflow: hidden;
+
+    .accordion-gallery-box-hover{
+      width: 500px;
+      padding: 30px;
+      @include flex-direction-colum();
+      gap: 15px;
+      align-items: flex-start;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+      height: 100%;
+      transition: $transition;
+      z-index: 1;
+
+
+      h2{
+        font-family: $fontTitle;
+        color: #fff;
+        @include text-limit(1);
+        transition: $transition;
+        transition-delay: .2s;
+        transform: translateY(10px);
+        opacity: 0;
+      }
+      div{
+        @include text-limit(4);
+        font-family: $fontFamily;
+        color: #fff;
+        text-align: right;
+        transition-delay: .3s;
+        transition: $transition;
+        transform: translateY(15px);
+        opacity: 0;
+      }
+      h3{
+        font-family: $fontFamilyBold;
+        color: #fff;
+        transition-delay: .4s;
+        transform: translateY(18px);
+        opacity: 0;
+        transition: $transition;
+      }
+      a{
+        background: #fff;
+        border-radius: $rounded;
+        color: $secondColor;
+        @include flex-center-all();
+        padding: 8px 24px;
+        transition: $transition;
+        margin-right: auto;
+        transform: translateY(10px);
+        opacity: 0;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(37,189,193,.5);
+      left: 0;
+      top: 0;
+      transition: opacity .3s ease;
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+  .item-accordion-gallery:hover {
+    flex: 7;
+  }
+  .item-accordion-gallery:hover::after {
+    opacity: 1;
+  }
+  .item-accordion-gallery:hover .accordion-gallery-box-hover h2 {
+    transform: unset;
+    opacity: 1;
+  }
+  .item-accordion-gallery:hover .accordion-gallery-box-hover h3 {
+    transform: unset;
+    opacity: 1;
+  }
+  .item-accordion-gallery:hover .accordion-gallery-box-hover div {
+    transform: unset;
+    opacity: 1;
+  }
+  .item-accordion-gallery:hover .accordion-gallery-box-hover a {
+    transform: unset;
+    opacity: 1;
+  }
+  .item-1 {
+    background-image: url("../images/g1.jpg");
+  }
+
+  .item-2 {
+    background-image: url("../images/g2.jpg");
+  }
+
+  .item-3 {
+    background-image: url("../images/g3.jpg");
+  }
+
+  .item-4 {
+    background-image: url("../images/g4.webp");
+  }
+
+
+}
+
+//about-ghods
+.about-ghods{
+  padding: 80px 0 0 0;
+  position: relative;
+
+  .parent-about{
+    @include grid-style(2,30px,30px);
+
+    .img-main{
+      width: 550px;
+    }
+    .heart-about{
+      position: absolute;
+      right: 69px;
+      bottom: 6px;
+      width: 80px;
+    }
+    .img-taj {
+      position: absolute;
+      left: 0;
+      top: -23px;
+      width: 60px;
+    }
+    .nastaliq{
+      font-size: 14px;
+      color: #808080;
+      margin-bottom: 5px;
+    }
+    h2{
+      @include text-limit(2);
+      margin-bottom: 22px;
+      color: #232323;
+      font-family: $fontTitle;
+      font-size: 28px;
+      line-height: 48px;
+    }
+    p{
+      color: #676977;
+      @include text-limit(2);
+    }
+    .ul-about {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include flex-direction-colum();
+      gap: 15px;
+
+      li{
+        color: #47443a;
+        font-size: 18px;
+
+        i{
+          background: $secondColor;
+          padding: 10px;
+          border-radius: 50%;
+          color: #fff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 7px;
+          margin-right: 5px;
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+
+    .about-icon {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      margin-top: 30px;
+      gap: 30px;
+      margin-right: 10px;
+
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        transition: all ease .5s;
+        border-radius: 50%;
+        font-size: 28px;
+
+        &:hover{
+          color: $secondColor !important;
+          text-decoration: none;
+        }
+      }
+    }
+    .btn-more-about {
+      background: $secondColor;
+      border-radius: $rounded;
+      padding: 10px 25px;
+      color: #fff;
+      transition: $transition;
+      margin-top: 40px;
+      display: inline-block;
+
+      &:hover {
+        opacity: .7;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//airline-ghods
+.airline-ghods{
+  margin-top: 80px;
+  padding: 40px 0;
+  background: #3c608a;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  .item{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    margin: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  .owl-demo1 {
+    a{
+      transition: all 0.3s ease;
+    }
+    p{
+      text-align: center;
+      margin-top: 10px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      max-width: 50%;
+      display: inline-block !important;
+    }
+  }
+  .owl-demo2 {
+    a{
+      transition: all 0.3s ease;
+    }
+    p{
+      text-align: center;
+      margin-top: 10px;
+    }
+    img{
+      max-width: 50%;
+      display: inline-block !important;
+    }
+  }
+
+  .parent-img-suppliers{
+    border-radius: $rounded;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+    border: 1px solid #999;
+
+    img{
+      width: 100%;
+      filter: brightness(90%);
+    }
+  }
+}
+
+//clup-ghods
+.clup-ghods{
+  padding: 80px 0 0 0;
+
+
+  .title-ghods{
+    justify-content: center !important;
+
+    .text-title-ghods{
+      align-items: center !important;
+    }
+  }
+
+  .parent-clup{
+    @include grid-style(4,20px,20px);
+
+    a{
+      @include flex-direction-colum();
+      gap: 20px;
+      border-radius: $rounded;
+      background: #f5f4f2;
+      padding: 20px;
+      align-items: center;
+      justify-content: space-between;
+      transition: $transition;
+
+      &:hover{
+        text-decoration: none;
+        background: #ebeae8;
+        transform: translateY(-10px);
+      }
+
+      .parent-img{
+        width:100%;
+        height: 206px;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .parent-text{
+        @include flex-center-all();
+
+        h3{
+          color: #222;
+          margin-bottom: 0;
+          font-family: $fontTitle;
+          font-size: 20px;
+        }
+      }
+    }
+
+  }
+}
+
+//hotel-ghods
+.hotel-ghods{
+  padding: 80px 0 0 0;
+
+  .parent-ul-hotel{
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+    #pills-tab-hotel{
+      padding-right: 0;
+      gap: 20px;
+      .nav-link{
+        border: 1px solid $secondColor;
+        color: $secondColor;
+        padding: 10px 30px;
+        border-radius: 10px;
+        transition: $transition;
+        font-size: 18px;
+        font-family: $fontFamilyBold;
+        background: rgba(0,0,0,0);
+
+        &.active{
+          background: $secondColor;
+          color: #fff;
+          border-color: $secondColor;
+        }
+      }
+    }
+  }
+
+  .link-parent{
+    width: 100%;
+    height: 400px;
+    @include flex-direction-colum();
+    align-items: flex-start;
+    justify-content: end;
+    position: relative;
+    padding: 20px;
+    transition: $transition;
+    border-radius: $rounded;
+    overflow: hidden;
+
+    &::before{
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent), to(rgba(15, 15, 15, 0.75)));
+      background: -webkit-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.99) 100%);
+      background: -o-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+      background: linear-gradient(top bottom, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+      position: absolute;
+      height: 60%;
+      width: 100%;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      content: "";
+      transition: $transition;
+    }
+
+    &:hover{
+      text-decoration: none;
+    }
+    &:hover::before{
+      height: 200%;
+    }
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      filter: brightness(80%);
+      z-index: 1;
+    }
+
+    .text-hotel{
+      width: 100%;
+      @include flex-direction-colum();
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+
+      .star-hotel{
+        @include flex-align-items-center();
+        justify-content: right;
+        font-size: 14px;
+        color: #f7af1c;
+        gap: 3px;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        font-family: $fontFamilyBold;
+        color: #fff3cd;
+        margin-bottom: 0;
+        font-size: 26px;
+      }
+      span{
+        font-size: 16px;
+        color: #d9d9d9;
+      }
+    }
+  }
+}
+
+//owl-dots Global
+.owl-theme .owl-dots {
+  @include flex-center-all();
+  margin-top: 20px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 9px;
+  height: 9px;
+  margin: 5px 7px;
+  background: #c2c3c3;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $secondColor;
+}
+
+.tandis {
+  background: #f7f7f7;
+  margin-top: 80px;
+}
+
+.parent-tandis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.text-tandis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-tandis p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.text-tandis p:nth-child(2) {
+  margin: 0;
+}
+
+.parent-tandis img {
+  width: 268px;
+  height: 120px;
+}
+
+
+@media (min-width: 991px) and (max-width:1200px){
+  .clup-ghods .parent-clup a .parent-img{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .parent-img-banner{
+    height: unset !important;
+  }
+  .parent-text-banner{
+    padding-left: 0 !important;
+  }
+  .parent-text-banner h2{
+    font-size: 20px !important;
+    margin-bottom: 9px !important;
+  }
+  .parent-text-banner p{
+    text-align: right !important;
+    font-size: 14px !important;
+  }
+  .btn-link-banner-more{
+    font-size: 12px !important;
+  }
+  .margin-center{
+    margin: 0 auto;
+  }
+  .img-sub2{
+    top: 18px !important;
+    right: -103px !important;
+    width: 186px !important;
+  }
+  .img-sub1{
+    top: -21px !important;
+    left: -80px !important;
+    width: 217px !important;
+  }
+  .img-sub3{
+    bottom: -2px !important;
+    left: 19px !important;
+    width: 198px !important;
+  }
+  .text-title-ghods h2{
+    font-size: 20px !important;
+  }
+  .text-title-ghods p{
+    font-size: 14px !important;
+  }
+  .more-title-ghods{
+    font-size: 14px !important;
+  }
+  .more-title-ghods svg{
+    width: 8px !important;
+  }
+  .tour-ghods #pills-tab .nav-link{
+    padding: 10px 20px !important;
+  }
+  .accordion-gallery-box-hover h2{
+    font-size: 20px !important;
+  }
+  .accordion-gallery-box-hover p{
+    font-size: 14px !important;
+  }
+  .accordion-gallery-box-hover h3{
+    font-size: 20px !important;
+  }
+  .accordion-gallery-box-hover a{
+    padding: 5px 15px !important;
+    font-size: 14px !important;
+  }
+  .parent-clup{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .clup-ghods .parent-clup a .parent-img{
+    width: 200px !important;
+    height: 180px !important;
+  }
+  .clup-ghods .parent-clup a .parent-text h3{
+    font-size: 16px !important;
+  }
+  .hotel-ghods .parent-ul-hotel #pills-tab-hotel .nav-link{
+    padding: 10px 20px !important;
+  }
+  .about-img{
+    display: none !important;
+  }
+  .parent-about{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .about-ghods .parent-about h2{
+    font-size: 22px !important;
+    line-height: 39px !important;
+  }
+}
+
+
+@media (max-width: 769px) {
+
+  .text-tandis p {
+    font-size: 16px;
+  }
+  .parent-tandis img {
+    width: 255px;
+    height: 110px;
+  }
+}
+.search_box .sub-bg2{
+  position: absolute;
+  left: 0 !important;
+  opacity: 1;
+  transform: rotateY(180deg);
+  bottom: 1px !important;
+  width: 267px !important;
+}
+.img-sub1{
+  width: 148px !important;
+}
+.img-sub2{
+  top: 18px !important;
+  right: -55px !important;
+  width: 143px !important;
+}
+.img-sub3{
+  left: -16px !important;
+}
+.last_text {
+  padding: 15px !important;
+  gap: 5px !important;
+}
+.hotel-ghods .text-title-ghods p{
+  display: none !important;
+}
+.hotel-ghods .title-ghods{
+  align-items: center !important;
+}
+
+
+
+@media (max-width: 576px) {
+  .text-tandis p {
+    font-size: 14px;
+  }
+  .parent-tandis img {
+    width: 235px;
+    height: 95px;
+  }
+  .banner-ghods{
+    padding-top: 20px !important;
+  }
+  .parent-div-banner-grid{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .parent-img-banner{
+    display: none !important;
+  }
+  .banner-ghods .parent-div-banner-grid .parent-text-banner p{
+    display: none;
+  }
+  .tour-ghods .title-ghods .text-title-ghods p{
+    display: none !important;
+  }
+  .title-ghods{
+    align-items: center !important;
+  }
+  .accordion-gallery .item-accordion-gallery .accordion-gallery-box-hover{
+    width: 220px !important;
+    padding: 10px !important;
+  }
+  .parent-clup {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .clup-ghods .parent-clup a .parent-img{
+    width: 180px !important;
+    height: 160px !important;
+  }
+  .hotel-ghods .text-title-ghods p{
+    display: none !important;
+  }
+  .about-ghods .parent-about .ul-about li{
+    font-size: 16px !important;
+  }
+  .airline-ghods .parent-img-suppliers img{
+    height: 40px !important;
+  }
+  .about-ghods .parent-about .btn-more-about{
+    font-size: 14px !important;
+    padding: 7px 20px !important;
+  }
+  .about-ghods .parent-about h2{
+    font-size: 20px !important;
+    line-height: 36px !important;
+  }
+  .clup-ghods {
+    padding: 0 0 60px !important;
+  }
+  .hotel-ghods .parent-ul-hotel{
+    margin-top: 20px !important;
+  }
+  .title-ghods{
+    margin-bottom: 20px !important;
+  }
+  .tour-ghods {
+    padding: 0 0 60px !important;
+  }
+  .tour-ghods .parent-ul-tour{
+    margin-top: 20px !important;
+  }
+  .text-title-ghods p{
+    text-align: center;
+  }
+  .hotel-ghods .link-parent .text-hotel h3{
+    font-size: 22px;
+  }
+  .banner-ghods .parent-forc h2{
+    font-size: 20px;
+  }
+}

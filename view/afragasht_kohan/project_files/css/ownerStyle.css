@@ -1,0 +1,91 @@
+.FontProject {
+    font-family: iranyekan, persian-number !important;
+}
+.formprj input.W1 {
+    font-family: iranyekan, persian-number!important;
+}
+._base_temp_style{
+    width: 100%;
+    float: right;
+    padding: 45px;
+    padding-top: 130px;
+}
+._base_temp_indiv_style{
+    position: relative;
+    float: right;
+    width: 100%;
+    background-color: white;
+    line-height: 25px;
+    font-size: 14px;
+}
+#HolderDetail .titr, #HolderLinksDetail .titr, #AboutFile .titr, #HolderBrch .titr, #HolderRahgiri .titr, .HolderPrint .titr {
+    font-family: iranyekan, persian-number !important;
+}
+.HolderPart p span span{
+    font-family: iranyekan, persian-number !important;
+    font-size:14px !important;
+    line-height: 30px !important;
+    text-align: justify !important;
+}
+.HolderPart p span{
+    font-family: iranyekan, persian-number !important;
+    font-size:14px !important;
+    line-height: 30px !important;
+    text-align: justify !important;
+}
+.HolderPart  p{
+    margin-top:25px !important;
+    padding : 30px!important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.AllTourHeader p, .AllTourRow p {
+    margin-top:unset !important;
+    padding : unset!important;
+    padding-top:unset !important;
+    padding-bottom:unset !important;
+    font-size: 14px !important;
+}
+.HolderPart .GalleryBox p{
+    margin-top:0px !important;
+    padding-left: 14px!important;
+    padding-top:0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 10px !important;
+    width: 100%;
+}
+
+#HolderDetail .titr, #HolderLinksDetail .titr, #AboutFile .titr, #HolderBrch .titr, #HolderRahgiri .titr, .HolderPrint .titr {
+    width: 100% !important;
+}
+#ViEtDeVdIvId{
+    margin-top: 25px !important;
+    padding: 30px!important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+#ViEtDeVdIvId span {
+    font-family: iranyekan, persian-number !important;
+    font-size:14px !important;
+    line-height: 30px !important;
+    text-align: justify !important;
+}
+#ViEtDeVdIvId span span{
+    font-family: iranyekan, persian-number !important;
+    font-size:14px !important;
+    line-height: 30px !important;
+    text-align: justify !important;
+    margin-top: 25px !important;
+    /* padding: 30px!important; */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.GalleryBox img{
+    width: 100% !important;
+}
+#ComentDetail span {
+    font-family:iranyekan, persian-number !important;
+    color : #585858 !important;
+    line-height: 30px;
+    text-align: justify;
+}

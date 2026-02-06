@@ -1,0 +1,931 @@
+
+.social a {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+  
+    opacity: .75;
+    transition: .3s all ease;
+    display: inline-block;
+    position:   absolute;
+    top: 0;
+    right: 0;
+}
+.social a:hover{
+    opacity: 1;
+}
+.social a img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.social{
+/*float: right;*/
+    float: right;
+    transition: .3s all ease;
+    width: 100%;
+    text-align: right;
+    line-height: 15px;
+}
+
+
+
+.top-content {
+    display: block;
+}
+
+
+
+/*jssor carousel*/
+#jssor_1{
+  position:relative;
+  margin:0 auto;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:110px;
+  overflow:hidden;
+  visibility:hidden;
+}
+.carousel-wrapper{
+  cursor:default;
+  position:relative;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:110px;
+  overflow:hidden;
+}
+     .jssorb03 {
+            position: absolute;
+        }
+        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            line-height: 21px;
+            color: white;
+            font-size: 12px;
+            background: url('../images/b03.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb03 div { background-position: -5px -4px; }
+        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+        .jssorb03 .av { background-position: -65px -4px; }
+        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+
+
+        .jssora03l, .jssora03r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('../images/a03.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora03l { background-position: -3px -33px; }
+        .jssora03r { background-position: -63px -33px; }
+        .jssora03l:hover { background-position: -123px -33px; }
+        .jssora03r:hover { background-position: -183px -33px; }
+        .jssora03l.jssora03ldn { background-position: -243px -33px; }
+        .jssora03r.jssora03rdn { background-position: -303px -33px; }
+        .jssora03l.jssora03lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
+        .jssora03r.jssora03rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
+
+
+
+/*number input*/
+.s-u-number-input{
+    -webkit-appearance: none;
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: iransans;
+    font-size: 13px;
+    direction: rtl;
+    width:100% ;
+    position: relative;
+    float: right;
+        padding: 0 5px;
+    box-sizing: border-box;
+}
+.local-inp-count{
+        width:100% ;
+    float: right;
+    box-sizing: border-box;
+    padding: 0 5px;
+        margin: 0
+}
+.s-u-number-input img{
+width: 30px;
+height: 30px;
+cursor: pointer;
+float: left;
+    background: #fff;
+}
+.s-u-number-input img:first-child{
+    border-radius: 3px 0 0 3px;
+}
+.s-u-number-input img:last-child{
+    border-radius:  0 3px 3px 0 ;
+}
+
+.s-u-number-input input{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    width: calc(100% - 60px);
+    border: none;
+    padding: 1px 0 1px 5px;
+    color:#1b4b1b;
+    box-sizing: border-box;
+    font-family: yekanNumbers,iransans;
+    direction: ltr;
+    text-align: left;
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  -moz-appearance:none;
+  margin: 0; 
+}
+input[type=number] {-moz-appearance: textfield;}
+.s-u-form-input-number{
+        width: 25%;
+    float: right;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+.inp-adt:before{
+    content: "(12+ سال)";
+    position: absolute;
+    right: 40px;
+    top: 0;
+    color: #333;
+    font-size: 12px;
+    font-family: yekanNumbers,iransans;
+}
+.inp-child:before{
+    content: "(2-12 سال)";
+    position: absolute;
+    right:40px;
+    top: 0;
+    color: #333;
+    font-size: 12px;
+    font-family: yekanNumbers,iransans;
+}
+.inp-baby:before{
+    content: "(0-2 سال)";
+    position: absolute;
+    right: 40px;
+    top: 0;
+    color: #333;
+    font-size: 12px;
+    font-family: yekanNumbers,iransans;
+}
+
+
+
+
+/*form box*/
+.form-wrapper {
+    position: absolute;
+    width: 675px;
+    direction: rtl;
+    text-align: right;
+    font-family: 'Yekan', Tahoma, Geneva, sans-serif;
+    border-radius: 0px;
+    box-sizing: border-box;
+    top: 38%;
+    right: 0;
+    left: 0;
+    margin:auto;
+    display: block; 
+    /*transform: translateX(-50%) translateY(-50%);*/
+    background: rgba(255, 255, 255, 0.66);
+    border: 3px solid #fc0;
+    /*padding-top: 20px;*/
+/*    border-bottom-left-radius: 48px;
+    border-bottom: solid 3px #8C1A55;
+    border-bottom-right-radius: 48px;
+    border-right:  solid 1px #8C1A55;
+    border-left:  solid 1px #8C1A55;*/
+
+}
+.slider-wrapper{
+    position: relative;
+    height: 600px;
+}
+
+.ui-datepicker.ui-datepicker-multi{
+    z-index: 99999 !important;
+}
+.form-wrapper form{
+    text-align: center;
+}
+.form-item {
+    padding: 0 10px;
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    margin: 10px 0;
+
+}
+.form-item-num{
+        width: 33.33%;
+}
+.form-item.form-item-full{
+    width: 100%;
+}
+
+.form-item span{
+    color: #fff;
+    width: 80px;
+    float: right;
+    text-align: right;
+    min-height: 1px;
+}
+.form-item .select2 span{
+    width: 100%;
+}
+.form-item .input ,.form-item .select,.form-item .inp-number{
+    width: 100% ;
+    float: right;
+    box-sizing: border-box;
+    /*padding: 0 5px;*/
+}
+.form-item .bargasht-calendar{
+animation: fadeIn .4s ease;
+}
+.form-item .search-btn{
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+.form-item .select.inp-class-flight{
+    width: 100%;
+    position: relative;
+    margin-top: 17px;
+    padding: 0;
+}
+.form-item .select.inp-class-flight:before{
+    content: 'کلاس پرواز';
+    position: absolute;
+       right: 0;
+    top: -25px;
+    color: #ffffff;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px #111;
+    font-family: yekanNumbers,iransans;  
+}
+.form-item .inp-number{
+    padding: 0;
+}
+.form-item .input input,.form-item .select select{
+    border: none;
+    border-radius: 0px;
+    height: 40px;
+    line-height: 26px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: yekan,yekanNumbers;
+    width: 100%;
+    outline: none;
+    border: 1px solid #4B607A ;
+}
+.form-item .inp-s-num select{
+ -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+        direction: rtl;
+}
+.form-item select:invalid { color: gray; }
+.form-item .inp-s-num{
+    position: relative;
+}
+/*.form-item .inp-s-num:before{
+    content: '(12+ سال)';
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 80px;
+    font: 12px/30px yekanNumbers,iransans;
+    direction: rtl;
+        z-index: 2;
+}
+.form-item .inp-s-num.child:before{
+    content: '(2-12 سال)';
+}
+.form-item .inp-s-num.baby:before{
+    content: '(0-2 سال)';
+}*/
+.form-item button{
+    line-height: 50px !important;
+    border: none;
+    background: #00d0e1 ;
+    color: #FFFAF0;
+    cursor: pointer;
+    transition: .2s all ease;
+    border-radius: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font: 17px IRANSans,'yekan';
+    font-weight: 800;
+}
+.form-item button:hover{
+    background: #fc0 ;
+}
+.form-inner{
+    position: relative;
+}
+.form-title{
+position: absolute;
+    left: 50%;
+    bottom: calc( 100% + 20px);
+    padding: 0px 40px;
+    box-sizing: border-box;
+    background: rgba(13, 41, 83,.8);
+    color: #fff;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.book-btn{
+    float: none;
+    width: 50%;
+    overflow: hidden;
+    margin: 10px auto 0;
+}
+.form-item.book-btn button{
+    width: 100%;
+}
+
+
+
+
+/*switch*/
+
+  .switchy-container{
+    position: relative;
+    margin: 0 auto;
+    width: 60px;
+    height: 22px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 0;
+    display: none;
+}
+
+.switchy-bar{
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  /*box-shadow: 0px 1px 3px #756381 inset;*/
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switchy-slider{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #1b5e20;
+    left: 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0;
+}
+.form-item .span1{
+    float: right;
+    padding:0 ;
+    cursor: pointer;
+        width: 50%;
+}
+.form-item .span2{
+    float: right;
+    padding:0 0 0 20px; 
+    cursor: pointer;
+}
+.form-item .safar{
+    color: #fff;
+    /*background: #fff;*/
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0px 10px;
+    transition: .2s all ease;
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    font-family: yekan;
+    box-sizing: border-box;
+    text-align: center;
+}
+.form-item .safar.selected-cal{
+    color: #fff;
+}
+.form-item .safar.selected-cal i{
+   color: #bfa06f;
+    font-size: 19px;
+    margin: 10px 0 0 9px;
+}
+.form-item .safar i{
+      font-size: 19px;
+    margin: 10px 0 0 9px;
+}
+.bargasht-calendar-disable{
+  position: relative;
+  display: none;
+}
+.bargasht-calendar-disable:before{
+    content: '';
+    background: rgba(255,255,255,.5);
+    width: calc(100% - 10px);
+    height: 100%;
+    top: 0;
+    right: 5px;
+    position: absolute;
+    z-index: 1;
+    cursor: not-allowed;
+    border-radius: 5px;
+}
+
+/*newsletter*/
+.n-letter{
+    overflow: hidden;
+    background: #8DACCE;
+    padding: 5px;
+    width: 50%;
+    float: right;
+}
+.NewsLetterBox input[type="text"] {
+    width: 98%;
+    height: 35px;
+    line-height: 35px;
+    float: right;
+    padding: 0px 10px;
+    margin: 5px 1%;
+    font: normal 14px "Yekan","YekanNumbers";
+    text-align: right;
+    border: 1px solid #4B607A;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    direction: rtl;
+}
+.NewsLetterBox input[type="text"]:hover {
+        border-right: 5px solid #fff;
+    background: rgba(255, 255, 255, 0.4);
+
+}
+.NewsLetterBox input[type="text"]:focus {
+    background: #fff;
+    color: #444;
+    border-right:5px solid #1158a2;
+}
+.NewsLetterBox input[type="button"] {
+    width: 98%;
+    line-height: 35px;
+    float: right;
+    height: 35px;
+    padding: 0px 10px;
+    font: normal 16px "Yekan","YekanNumbers";
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #fff;
+    background:#00d0e1 ;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 5px 1%;
+}
+.NewsLetterBox input[type="button"]:hover,
+.NewsLetterBox input[type="button"]:focus {
+    background: #fc0 ;
+    color: #fff;
+}
+
+.Ch-ContactUs {
+    width: 100%;
+    margin: 80px auto 0;
+    background: url(../images/bg-24.jpg) no-repeat center fixed;
+    min-height: 500px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.Ch-ContactUs-In {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 50px 10px;
+    direction: rtl;
+}
+.Ch-ContactUs-Box {
+    width: 30%;
+    float: right;
+    margin: 20px 1.6%;
+    background: #fff;
+    max-height: 354px;
+    min-height: 311px;
+}
+.Ch-ContactUs-BoxIn {
+    padding: 15px;
+}
+.Ch-ContactUs-Row {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 12px;
+    color: #666;
+}
+.Ch-ContactUs-Row h1 {
+    font-size: 13px;
+    font-family: 'DroidKufiRegular', tahoma;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #666;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #59C45A;
+}
+.Ch-ContactUs-R {
+    float: right;
+    width: 40px;
+}
+.Ch-ContactUs-R img {
+    width: 100%;
+}
+.Ch-ContactUs-L {
+    margin-right: 50px;
+    padding: 10px 0 0;
+}
+.Ch-Login {
+    background: url(../Images/bg-34.jpg) no-repeat center fixed;
+    height: auto;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 500px;
+    margin-top: 80px;
+}
+.Ch-Login-In {
+    padding: 100px 10px;
+    direction: rtl;
+    font-size: 12px;
+    color: #666;
+}
+.Ch-Login-Bl {
+    background: #fff;
+    max-width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.Ch-Login-Bl-H {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #00d0e1 ;
+}
+.Ch-Login-Bl-H h2 {
+    font-size: 18px;
+    font-family: "IRANSans","Yekan", "YekanNumbers";
+    color: #4B607A;
+    font-weight: 600;
+}
+.Ch-Login-Bl-C {
+    padding: 0;
+}
+.Ch-Login-Row {
+    margin-bottom: 5px;
+}
+.Ch-Login-R {
+    width: 40px;
+    height: 35px;
+    float: right;
+	margin-top:5px; 
+}
+.Ch-Login-R i{
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	text-align: center;
+	line-height: 35px;
+	background-color: #00d0e1;
+	color: #fff;
+}
+.Ch-Login-R::after {
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #00d0e1;
+    border-top: 5px solid transparent;
+    content: "";
+    position: absolute;
+	margin-left: -45px;
+    margin-top: 13px;
+}
+.Ch-Login-R img {
+    width: 100%;
+}
+.Ch-Login-L {
+    margin-right: 50px;
+}
+.Ch-Login-L input {
+    width: 95%;
+    border: 1px solid #eee;
+    line-height: 34px;
+    padding: 0 5px;
+    height: 36px;
+    color: #666;
+    font-size: 11px;
+    font-family: 'DroidKufiRegular', tahoma;
+}
+*+html .Ch-Login-L input {
+    width: 90%;
+}
+.Ch-Login-L p {
+    margin-bottom: 5px;
+    font-family: 'DroidKufiRegular', tahoma;
+    font-size: 11px;
+}
+.Ch-LoginIn-Btn {
+    margin: 20px 50px 0 0;
+}
+.Ch-LoginIn-Btn input {
+    background: #59C45A;
+    color: #fff;
+    border: none;
+    line-height: 24px;
+    padding: 0 15px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-family: 'DroidKufiRegular', tahoma;
+}
+.Ch-LoginIn-Btn input:hover {
+    background: #999;
+}
+
+
+/*tour carousel*/
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ *  Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* 
+ *  Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}
+
+/* 
+ *  Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+.tour-carousel .owl-nav{
+    position: absolute;
+    bottom: calc( 100% + 25px);
+
+}
+.tour-carousel .owl-controls .owl-nav .owl-next{
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: url(../images/c-right.png) no-repeat center center;
+    transition: .2s all ease
+}
+.tour-carousel .owl-controls .owl-nav .owl-prev{
+      float: left;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: url(../images/c-left.png) no-repeat center center;
+    transition: .2s all ease
+}
+
+.tour-carousel .owl-controls .owl-nav .owl-prev:hover,
+.tour-carousel .owl-controls .owl-nav .owl-next:hover{
+  background-color: #febf2b
+}
+
+
+
+
+
+

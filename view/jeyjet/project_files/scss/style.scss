@@ -1,0 +1,1094 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+@media (min-width: 1200px){
+  .container {
+    max-width: 1240px;
+  }
+}
+body{
+  overflow-x: hidden;
+  direction: rtl;
+  padding: 0;
+  background: #f9f9f9 !important;
+  line-height: 24px;
+  text-align: right;
+  color: #4b5259 !important;
+  font-family: $fontFamily;
+}
+
+
+//banner
+.banner-safiran{
+  width: 100%;
+  height: 500px;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//tour
+.tour-safiran{
+  padding: 0 0 60px;
+  position: relative;
+  margin-top: 40px;
+
+  .owl-nav{
+    height: 0;
+
+    button{
+      position: absolute;
+      top: -162px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #C7C7C7 !important;
+      transition: $transition;
+      @include flex-center-all();
+
+      &:hover{
+        background: rgba(199, 199, 199, 0.18) !important;
+      }
+      &:hover svg{
+        fill: $mainColor;
+      }
+
+    }
+    .owl-prev{
+      left: 172px;
+
+      svg{
+        width: 18px;
+        height: 28px;
+        fill: #fff;
+        transition: $transition;
+      }
+    }
+    .owl-next{
+      left: 116px;
+
+      svg{
+        width: 18px;
+        height: 28px;
+        fill: #fff;
+        transition: $transition;
+      }
+    }
+  }
+
+  .parent-ul-tour{
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+   #pills-tab {
+     justify-content: center;
+     width: max-content;
+     margin: auto;
+     border: 1px solid #ccc;
+     border-radius: $rounded;
+     padding: 2px;
+
+     .nav-link {
+       border: none;
+       color: #910018;
+       padding: 10px 30px;
+       border-radius: $rounded;
+       transition: all ease .4s;
+       font-size: 18px;
+       font-family: $fontFamilyBold;
+       background: rgba(0,0,0,0);
+
+       &.active{
+         background: $mainColor;
+         color: #fff;
+         border-color: $mainColor;
+       }
+     }
+  }
+
+  .project {
+    border:1px solid #ccc;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .project .img {
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    height: 200px;
+  }
+  .project img {
+    width: 100%;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: -1;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    height: 100%;
+    border:1px solid #ccc;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  .project .text {
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0;
+    position: relative;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    background: #fff;
+  }
+  .project .text h4.price {
+    padding: 0;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: $fontFamilyBold;
+    margin-bottom: 0;
+    color: #148f01;
+  }
+  .project .text h4.price i {
+    transition: all ease .4s;
+    color: #148f01;
+    font-style: normal;
+    margin-left: 3px;
+    font-size: 14px;
+    margin: 0;
+  }
+  .project .text > span {
+    font-family: $fontFamilyBold;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 5px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .project .text h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: $fontFamilyBold;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    min-height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project .text h3 a {
+    font-family: $fontFamilyBold;
+    color: rgba(0, 0, 0, 0.7);
+    @include text-limit(1);
+  }
+  .project .text h3 a:hover{
+    text-decoration: none;
+  }
+  .project .text .star span {
+    color: #fff;
+  }
+  .project .text .star .rate a {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .project .icon {
+    position: absolute;
+    top: -50px;
+    right: .5em;
+    width: 50px;
+    height: 50px;
+    bordeR: 1px solid #fff;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    opacity: 0;
+    z-index: 2;
+  }
+  .project .icon span {
+    color: #fff;
+    font-size: 20px;
+  }
+  .project:hover .icon, .project:focus .icon {
+    top: 30px;
+    opacity: 1;
+  }
+  .project:hover img, .project:focus img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    width: 100%;
+  }
+  .more_tour {
+    justify-content: left;
+    font-size: 12px;
+    align-items: center;
+  }
+  .more_tour a {
+    background: $mainColor;
+    padding: 10px;
+    color: #fff;
+    border-radius: 1rem;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
+  }
+  .more_tour a:hover{
+    text-decoration: none;
+    background: $secondColor;
+  }
+  .more_tour a:hover span{
+    color: #444 !important;
+  }
+  .more_tour button::before {
+    content: '';
+    background-color: $mainColor;
+    width: 0;
+    bottom: -10px;
+    top: -10px;
+    position: absolute;
+    left: 0;
+    transition: all ease .4s;
+  }
+  .more_tour button:hover {
+    opacity: .7;
+  }
+  .more_tour button span {
+    color: #fff !important;
+    font-weight: bold;
+    position: relative;
+  }
+  .item{
+    margin: 1px;
+  }
+}
+
+//title
+.title-safiran{
+  @include flex-between();
+  align-items: end;
+  margin-bottom: 30px;
+
+  .text-title-safiran{
+    @include flex-direction-colum();
+    gap: 10px;
+    margin-left: 10px;
+
+    h2{
+      font-family: $fontFamilyBold;
+      color: #333;
+      margin-bottom: 0;
+      font-size: 30px;
+    }
+    p{
+      color: rgba(74, 74, 74, 0.58);
+      font-size: 18px;
+      margin-bottom: 0;
+      font-family: $fontFamily;
+    }
+  }
+  .more-title-safiran {
+    font-size: 16px;
+    color: #333;
+    width: auto;
+    line-height: 44px;
+    transition: $transition;
+    font-family: $fontFamily;
+    @include flex-center-all();
+    gap: 5px;
+
+    svg{
+      width: 10px;
+      fill: #001233;
+      transition: $transition;
+    }
+
+    &:hover{
+      color: $mainColor;
+      text-decoration: none;
+    }
+    &:hover svg{
+      fill: $mainColor;
+    }
+  }
+}
+
+
+
+//hotel-ghods
+.hotel-ghods{
+
+  .parent-ul-hotel{
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+    #pills-tab-hotel{
+      justify-content: center;
+      width: max-content;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      padding: 2px;
+
+      .nav-link{
+        border: none;
+        color: $mainColor;
+        padding: 10px 30px;
+        transition: all .3s;
+        font-size: 18px;
+        font-family: $fontFamilyBold;
+        background: rgba(0,0,0,0);
+        border-radius: $rounded;
+
+        &.active{
+          background: $mainColor;
+          color: #fff;
+          border-color: $mainColor;
+        }
+      }
+    }
+  }
+
+  .link-parent{
+    width: 100%;
+    height: 300px;
+    @include flex-direction-colum();
+    align-items: flex-start;
+    justify-content: end;
+    position: relative;
+    padding: 20px;
+    transition: all .3s;
+    border-radius: $rounded;
+    overflow: hidden;
+
+    &::before{
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent), to(rgba(15, 15, 15, 0.75)));
+      background: -webkit-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.99) 100%);
+      background: -o-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+      background: linear-gradient(top bottom, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+      position: absolute;
+      height: 60%;
+      width: 100%;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      content: "";
+      transition: all .3s;
+    }
+
+    &:hover{
+      text-decoration: none;
+    }
+    &:hover::before{
+      height: 200%;
+    }
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .text-hotel{
+      width: 100%;
+      @include flex-direction-colum();
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+
+      .star-hotel{
+        @include flex-align-items-center();
+        justify-content: right;
+        font-size: 14px;
+        color: #f7af1c;
+        gap: 3px;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        font-family: $fontFamilyBold;
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 22px;
+        @include text-limit(1);
+      }
+      span{
+        font-size: 16px;
+        color: #d9d9d9;
+      }
+    }
+  }
+}
+
+.news {
+  padding: 0 0 50px 0;
+}
+
+.big_news .more_tour a {
+  margin-left: 10px;
+}
+
+.small_news .single_trip {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}
+.small_news .single_trip:last-child {
+  margin: 0 !important;
+}
+.big_news .single_trip{
+  margin: 0 !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.small_news .single_trip .info{
+  min-height: 150px;
+}
+
+.small_news .thumb {
+  height: 150px;
+  flex: 0 0 35%;
+  width: 35%;
+}
+
+.section_hotel_f {
+  background-color: #f7fafd
+}
+
+.small_news .info {
+  flex: 0 0 64%;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.big_news .info {
+  padding-bottom: 22px !important;
+}
+
+.small_news .more_tour {
+  margin-left: 10px;
+  margin-right: auto; /*! position: absolute; *//*! left: 0; *//*! bottom: 0; */
+  margin-top: auto;
+}
+
+.big_news .thumb {
+  height: 210px !important;
+}
+.recent_trip_area {
+  padding-top: 50px;
+}
+
+.recent_trip_area .single_trip {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 11px;
+  transition: all ease .4s;
+}
+
+.recent_trip_area .single_trip:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+
+.recent_trip_area .single_trip .thumb {
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.recent_trip_area .single_trip .thumb:before {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  z-index: 2;
+  display: block;
+  visibility: visible;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
+  transform: skewX(-25deg);
+}
+
+.recent_trip_area .single_trip .thumb img {
+  width: 100%;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recent_trip_area .single_trip:hover .thumb:before {
+  animation: fx_shine 1s forwards;
+}
+
+.recent_trip_area .single_trip .info {
+  text-align: right;
+  padding: 10px;
+  padding-top: 11px;
+  padding-left: 0;
+  flex-direction: column;
+}
+
+.recent_trip_area .single_trip .info .date a {
+  font-size: 13px;
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  color: #464b50;
+  display: block; /*! text-overflow: ellipsis; *//*! overflow: hidden; *//*! white-space: nowrap; */
+  width: 100%;
+}
+
+.recent_trip_area .single_trip .info .date a:hover {
+  text-decoration: none;
+}
+
+.titr {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: iransansb;
+  color: #444
+}
+
+.single_trip .info h3 {
+  color: #7a838b;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 10px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  padding: 0 8px;
+}
+
+.more_tour {
+  justify-content: left;
+  font-size: 12px;
+  margin-top: auto;
+}
+
+.more_tour a {
+  background: $mainColor;
+  padding: 10px;
+  color: #fff;
+  border-radius: 1rem;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: all ease .5s;
+}
+
+.more_tour a::before {
+  content: '';
+  background-color: $mainColor;
+  width: 0;
+  bottom: -10px;
+  top: -10px;
+  position: absolute;
+  left: 0;
+  transition: all ease .4s;
+}
+
+.more_tour a:hover {
+  opacity: .7;
+  text-decoration: none;
+}
+
+.more_tour a span {
+  color: #fff !important;
+  font-weight: bold;
+  position: relative;
+}
+
+.single_trip .info h3 {
+  color: #7a838b;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 10px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  padding: 0 8px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.big_news {
+  padding-right: 0;
+}
+
+.small_news {
+  padding-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .recent_trip_area .single_trip {
+    margin-bottom: 39px;
+  }
+  .text-count-passenger {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hotel-ghods .parent-ul-hotel #pills-tab-hotel .nav-link{
+    padding: 10px 20px !important;
+  }
+  .big_news{
+    margin-bottom: 30px;
+  }
+
+  .big_news .thumb {
+    height: 150px !important;
+    flex: 0 0 35%;
+    width: 35%;
+    padding-top: 11px;
+  }
+
+  .big_news .info {
+    flex: 0 0 64%;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .big_news .single_trip {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 10px 10px 10px;
+    flex-direction: unset;
+  }
+
+  .big_news .more_tour {
+    margin-left: 10px;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+  .small_news .more_tour {
+    margin-left: 3px;
+  }
+  .recent_trip_area .single_trip {
+    margin-bottom: 30px;
+  }
+  .big_news , .small_news {
+    padding: 0;
+  }
+}
+@media (max-width: 769px) {
+  .hotel-ghods .text-title-ghods p{
+    display: none !important;
+  }
+  .hotel-ghods .title-ghods{
+    align-items: center !important;
+  }
+  .title-safiran .text-title-safiran p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .hotel-ghods .text-title-ghods p{
+    display: none !important;
+  }
+  .hotel-ghods .parent-ul-hotel{
+    margin-top: 20px !important;
+  }
+  .big_news .thumb, .small_news .thumb {
+    width: 100%;
+    flex: 100%;
+    height: 145px;
+  }
+  .big_news .info, .small_news .info {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .recent_trip_area {
+    padding-bottom: 30px;
+  }
+  .big_news .single_trip {
+    padding: 11px;
+  }
+  .big_news .more_tour {
+    margin-left: 3px !important;
+    margin-right: auto;
+    position: unset;
+    margin-right: auto;
+    padding-bottom: 10px;
+  }
+  .big_news .more_tour a {
+    margin-left: 0;
+  }
+}
+
+
+//newsletters
+.newsletters{
+  padding: 0 0 50px;
+
+  .newsletterMain{
+    background-image: url(../images/news3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    background-color: rgba(51,51,51,.8);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    border-radius: $rounded;
+
+    .text_newsletter{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      div{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2{
+          font-family: $fontFamilyBold;
+          font-size: 2rem;
+          margin-bottom: 10px;
+          text-transform: capitalize;
+        }
+        p{
+          font-size: 1rem;
+          margin: 0;
+          text-align: right;
+        }
+      }
+
+      .parent-svg-newsletters{
+        margin-left: 30px;
+
+        svg{
+          width: 150px;
+          fill: #fff;
+        }
+      }
+    }
+
+     label{
+      position: relative;
+     }
+      input{
+        padding-right: 1rem;
+        border-radius: $rounded;
+        border: none;
+        font-size: 17px;
+        height: 50px;
+      }
+      a{
+        background: $mainColor;
+        @include flex-center-all();
+        height: 50px;
+        font-size: 20px;
+        color: #fff;
+        border-radius: $rounded;
+        transition: $transition;
+
+        &:hover{
+          box-shadow: 0 3px 15px 0 #dd0025;
+          background: #dd0025 !important;
+        }
+
+        svg{
+          width: 30px;
+          fill: #fff;
+          transition: $transition;
+        }
+      }
+  }
+}
+
+
+//owl-dots Global
+.owl-theme .owl-dots {
+  @include flex-center-all();
+  margin-top: 20px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 9px;
+  height: 9px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $mainColor;
+}
+
+
+//other-services
+.other-services{
+  padding: 60px 0 80px;
+
+  .parent-other-services{
+    @include flex-direction-colum();
+    gap: 20px;
+
+    h3{
+      color: #222;
+      font-size: 1rem;
+      font-family: $fontFamilyBold;
+      margin-bottom: 0;
+    }
+
+    .parent-item-grid{
+      @include grid-style(3,10px,10px);
+
+      .item-other-services{
+        border: 1px solid #ccc;
+        border-radius: $rounded;
+        background: #fff;
+        @include flex-align-items-center();
+        justify-content: space-between;
+        padding: .5rem .75rem;
+        transition: $transition;
+
+        &:hover{
+          text-decoration: none;
+        }
+
+        .parent-img-text{
+          @include flex-center-all();
+          gap: 15px;
+
+          h5{
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #4b5259;
+          }
+        }
+
+        .arrow-other-services{
+          width: 12px;
+          fill: #b0b1b1;
+        }
+      }
+    }
+  }
+
+
+}
+
+//top-footer
+.top-footer{
+  padding: 3rem 0;
+  border-top: 1px solid #E2E6E9;
+
+  .parent-top-footer{
+    @include grid-style(3, 60px, 20px);
+
+    .item-box-top-footer{
+      @include flex-align-items-center();
+      gap: 16px;
+
+      img{
+        width: 89px;
+        height: 89px;
+      }
+      .text-top-footer{
+        @include flex-direction-colum();
+        gap: 7px;
+
+        h3{
+          font-family: $fontFamilyBold;
+          margin-bottom: 0;
+          color: #4b5259;
+          font-size: 20px;
+        }
+        span{
+          font-size: 16px !important;
+          color: #6c7680 !important;
+        }
+      }
+      i {
+        --fa-primary-color: #b03c4d;
+        --fa-secondary-color: #910018;
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.my-footer-icon2{
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .parent-top-footer{
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-row-gap: 30px !important;
+  }
+}
+@media (max-width: 768px) {
+  .parent-item-grid{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media (max-width: 576px) {
+  .banner-safiran{
+    display: none;
+  }
+  .banner-safiran{
+    background: #f7f7f7;
+  }
+  .search_box {
+    margin-top: 80px;
+  }
+  .other-services{
+    padding: 60px 0 50px;
+  }
+  .text-title-safiran p{
+    display: none;
+  }
+  .text-title-safiran h2{
+    font-size: 20px !important;
+  }
+  .title-safiran{
+    align-items: center !important;
+  }
+  .more-title-safiran span{
+    font-size: 14px;
+  }
+  .more-title-safiran svg{
+    width: 8px;
+  }
+  .title-safiran{
+    margin-bottom: 20px !important;
+  }
+  .parent-ul-tour{
+    margin-top: 0 !important;
+  }
+  .tour-safiran .items-tour .text-bottom-tour h2{
+    font-size: 22px !important;
+  }
+  .tour-safiran .items-tour .text-bottom-tour .parent-info-tour-avan .info-right .cost{
+    font-size: 16px !important;
+  }
+  .tour-safiran .items-tour .text-bottom-tour .parent-info-tour-avan .info-left .rating-text{
+    font-size: 16px !important;
+  }
+  .blog-safiran .link-blog .parent-text-blog p{
+    font-size: 14px !important;
+  }
+  .blog-safiran .link-blog .parent-text-blog button{
+    font-size: 14px !important;
+  }
+  .blog-safiran .link-blog .parent-img-blog .parent-comment-star .data-blog{
+    font-size: 14px !important;
+  }
+  .newsletters .newsletterMain .text_newsletter .parent-svg-newsletters svg{
+    width: 100px !important;
+  }
+  .newsletters .newsletterMain .text_newsletter div h2{
+    font-size: 20px !important;
+  }
+  .newsletters .newsletterMain .text_newsletter div p{
+    font-size: 14px;
+  }
+  .newsletters .newsletterMain input{
+    font-size: 14px !important;
+  }
+  .newsletters{
+    padding: 0 0 50px;
+  }
+  .blog-safiran{
+    padding: 0 0 50px;
+  }
+  .tour-safiran{
+    padding: 0 0 50px;
+  }
+  .parent-top-footer{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .top-footer .parent-top-footer .item-box-top-footer img{
+    width: 70px;
+    height: 70px;
+  }
+  .top-footer .parent-top-footer .item-box-top-footer .text-top-footer h3{
+    font-size: 18px !important;
+  }
+  .my-footer-icon2{
+    display: flex !important;
+  }
+  .item-box-top-footer {
+    i {
+      font-size: 40px !important;
+    }
+  }
+  .hotel-ghods .parent-ul-hotel,.tour-safiran .parent-ul-tour{
+    margin-bottom: 15px !important;
+  }
+}

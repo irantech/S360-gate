@@ -1,0 +1,105 @@
+@import "../components/variables";
+
+.tourMainNav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.tourMainNav > li > a {
+  background: #ddd;
+  color: #555;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 100px !important;
+  border: 1px solid var(--secondColor);
+  transition: all .3s;
+  font-size: .9rem;
+  margin: 0 5px;
+}
+
+.tourMainNav > li > a.active {
+  background: $mainColor !important;
+  border: 1px solid $mainColor !important;
+}
+
+.tourLink {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.tourLink .tourImg {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tourLink .tourImg > img {
+  object-fit: cover;
+}
+
+.tourLink .tourText {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: -50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all .4s;
+}
+
+.tourLink .tourText > h3 {
+  font-size: 1.5rem;
+  color: $mainColor;
+  font-family: $fontFamily_b;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: right;
+}
+
+.tourLink .tourText > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .9rem;
+  color: #999;
+}
+
+.tourLink .tourText > h4 {
+  color: #666;
+  font-size: 1rem;
+  margin: .5rem 0;
+}
+
+.tourLink .tourText > span {
+  font-size: 1rem;
+  color: $mainColor;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tourLink:hover .tourText {
+  bottom: -50px;
+}
+@media (max-width: 768px) {
+  .tourLink:hover .tourText {
+    bottom: -120px !important;;
+  }
+}

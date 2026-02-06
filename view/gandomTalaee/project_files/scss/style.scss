@@ -1,0 +1,46 @@
+@import "components/fonts";
+@import "components/variables";
+@import "components/mixin";
+body, html {
+  font-family: $fontFamily, serif !important;
+  direction: rtl;
+  min-height: 100vh;
+  background: #fff;
+  overflow-x: hidden;
+  text-align: right;
+}
+main, .content_tech {
+  min-height: 100vh;
+}
+a, a:hover {
+  text-decoration: none
+}
+button{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+.button{
+  width: fit-content;
+  padding: 10px 30px;
+  color: #1e4f81;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #1e4f81;
+  transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover{
+    border-color: #1e4f81;
+    background-color: #1e4f81 !important;
+    color: #fff !important
+  }
+}
+@import "section/header";
+//@import "section/seachbox";
+@import "components/select2";
+@import "section/footer";

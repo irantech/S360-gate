@@ -1,0 +1,47 @@
+/*
+*
+*	CSS / jQuery animated Ticker
+*
+*	author	Dinko Skopljak
+*	web     https://futura-web.de
+*	email	ds@futura-web.de
+*
+*	CSS
+*
+*/
+
+.ticker{
+    display: flex;
+    padding-right: 100%;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.ticker ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.ticker li{
+    padding-right: 1rem;
+    white-space: nowrap;
+}
+
+.ticker li:first-child{
+    padding-right: 0;
+}
+
+.ticker li::before{
+    content: "";
+    display: inline;
+    padding-left: 1rem;
+}
+
+.ticker li:last-child::after{
+    content: "";
+    display: inline;
+    padding-right: 1rem;
+}

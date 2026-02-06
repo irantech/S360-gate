@@ -1,0 +1,1545 @@
+﻿@font-face {
+    font-family: IRANSansWeb;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff2")
+}
+
+@font-face {
+    font-family: IRANSansFaNum-Bold;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff2")
+}
+
+.cbox-count-passenger{
+    left: 0px !important;
+    right: unset !important;
+}
+
+.h-48 {
+    height: 48px
+}
+
+.searchBoxMain {
+    border: 1px solid #d7d4d2;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff
+}
+
+.display-0 {
+    display: none
+}
+
+.searchBox {
+    z-index: 2;
+    position: relative;
+    background: #fff
+}
+
+.d_contents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.switch_routs {
+    position: absolute;
+    left: -15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #262c5a;
+    font-size: 11px;
+    transition: all ease .4s
+}
+
+.switch_routs:hover {
+    background: #262c5a;
+    color: #fff;
+    border-color: #262c5a
+}
+
+.switch_routs:hover svg {
+    fill: #fff
+}
+
+.switch_routs svg {
+    width: 19px;
+    height: 19px;
+    transition: all ease .4s;
+    fill: #555
+}
+
+.col_with_route {
+    display: flex;
+    align-items: center
+}
+
+#titr_searchBox {
+    text-align: right;
+    color: #fff;
+    font-family: IRANSansWeb;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 20px
+}
+
+#titr_searchBox em {
+    font-style: normal
+}
+
+.nav-tabs {
+    border-bottom: none
+}
+
+.searchs_box {
+    z-index: 2;
+    position: relative;
+    padding: 10px
+}
+
+.rotate-45- {
+    transform: rotate(-45deg)
+}
+
+#hotel .row, #tour .row, #gasht .row, #flight .row {
+    width: 100%;
+    align-self: center;
+    margin: auto
+}
+
+.searchs_box .form-control[readonly] {
+    background: #fff
+}
+
+.searchs_box .form-control:disabled {
+    background: #eee
+}
+
+.col_search input::placeholder {
+    color: #555
+}
+
+.box-of-count-passenger{
+    font-size: .9rem !important;
+    border: 1px solid #d7d4d2 !important;
+}
+
+.col_search input:focus {
+    outline: none
+}
+
+.close_room {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
+    opacity: .6;
+    transition: all ease .4s;
+    top: 5px;
+    background: #000;
+    border-radius: 15px 0 15px 0;
+    background:center/contain no-repeat url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxlbGxpcHNlIHN0eWxlPSJmaWxsOiNFMDRGNUY7IiBjeD0iMjU2IiBjeT0iMjU2IiByeD0iMjU2IiByeT0iMjU1LjgzMiIvPg0KPGcgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAtMC43MDcxIDc3LjI2IDMyKSI+DQoJPHJlY3QgeD0iMy45OCIgeT0iLTQyNy42MTUiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iNTUuOTkyIiBoZWlnaHQ9IjI4NS42NzIiLz4NCgk8cmVjdCB4PSItMTEwLjgyOCIgeT0iLTMxMi44MTUiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iMjg1LjY3MiIgaGVpZ2h0PSI1NS45OTIiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K);
+}
+.close_room:hover {
+    opacity: 1;
+}
+
+.col_search input {
+    font-family: IRANSansWeb;
+    padding: 15px;
+    height: 50px;
+    font-size: .9rem;
+    border: 1px solid #d7d4d2;
+    border-radius: 10px
+}
+
+.col_search input.went {
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #d7d4d2;
+    border-left: none
+}
+
+.col_search input.return_input, .col_search input.return_input2, .col_search input.return_input_train {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #d7d4d2
+}
+
+.col_search ::placeholder {
+    color: #8e8e8e
+}
+
+.col_search {
+    padding: 5px
+}
+
+.col_search .button {
+    height: 50px !important;
+    background: #fff;
+    color: #262c5a
+}
+
+.date_search {
+    font-size: 0
+}
+
+.date_search .form-group {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    position: relative
+}
+
+.date_search i.fal, .search_col i.fal {
+    font-size: 16px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+    box-sizing: content-box;
+    color: #555
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #d7d4d2;
+    outline: 0;
+    box-shadow: none
+}
+
+.myhotels-rooms, .mypackege-rooms, .hotel_local-rooms {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+    background: #fff;
+    padding-bottom: 10px;
+    transition: all ease .4s;
+    z-index: 2
+}
+
+.myhotels-rooms::-webkit-scrollbar-track ,
+.mypackege-rooms::-webkit-scrollbar-track ,
+.hotel_local-rooms::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    background-color: #F5F5F5;
+}
+.myhotels-rooms::-webkit-scrollbar ,
+.mypackege-rooms::-webkit-scrollbar ,
+.hotel_local-rooms::-webkit-scrollbar {
+    width: 6px !important;
+    background-color: #F5F5F5;
+}
+.myhotels-rooms::-webkit-scrollbar-thumb ,
+.mypackege-rooms::-webkit-scrollbar-thumb ,
+.hotel_local-rooms::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #999;
+}
+
+.mypackege-rooms, .hotel_local-rooms {
+    min-width: 280px
+}
+
+.active_p, active_hotel_local {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.myroom-hotel-item-tedad h6 {
+    margin-left: 6px;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 14px
+}
+
+.btn_add_room:hover, .btn_add_room:hover {
+    background: #eee
+}
+
+.btn_add_room, .btn_add_room_p, .btn_add_room_hotel_local {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    transition: all ease .4s;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #777
+}
+
+.btn_add_room i {
+    margin-left: 10px
+}
+
+.myroom-hotel {
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0
+}
+
+.myroom-hotel-item .myroom-hotel-item-title {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: right;
+    padding: 6px 10px;
+    line-height: 25px;
+    color: #333;
+    display: flex;
+    font-size: 14px
+}
+
+.alert-warning {
+    text-align: right;
+    background: #262c5a
+}
+
+.myroom-hotel-item-tedad:first-child {
+    margin-bottom: 15px
+}
+
+.myroom-hotel-item-tedad > span {
+    font-weight: 200;
+    font-size: 12px
+}
+
+.myroom-hotel-item-tedad > span i {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 200;
+    color: #797979;
+    padding-right: 4px
+}
+
+.myroom-hotel-item-tedad > div {
+    margin-right: auto;
+    display: flex
+}
+
+.myroom-hotel-item-tedad div input {
+    width: 25px;
+    font-size: 12px;
+    border: none;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    -moz-appearance: textfield;
+    padding: 0
+}
+
+.tarikh-tavalods {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    display: flex
+}
+
+.tarikh-tavalods .tarikh-tavalod-item {
+    flex: 0 0 100%;
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    border-bottom: 1px solid #eee
+}
+
+.tarikh-tavalods .tarikh-tavalod-item:last-child {
+    border: none
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span {
+    font-size: 11px
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span i {
+    font-style: normal;
+    font-weight: bold
+}
+
+.tarikh-tavalods .tarikh-tavalod-item select {
+    font-size: 12px;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #262c5a;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 97px;
+    height: 30px;
+    padding: 3px 5px;
+    color: #777
+}
+
+.origin_start, .destnition_start {
+    display: flex;
+    align-items: center
+}
+
+.iconInputHotel {
+    display: flex;
+    align-items: center
+}
+
+.btn:focus, .btn.focus {
+    box-shadow: none
+}
+
+.box-of-count-nafar-boxes {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 15px
+}
+
+.down-count-nafar {
+    border-color: #737373 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 20px;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0
+}
+
+.down-count-nafar.fa-caret-up {
+    transform: rotate(180deg)
+}
+
+.box-of-count-nafar {
+    height: 50px;
+    border: 1px solid #d7d4d2;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 0px !important
+}
+
+.text-count-nafar {
+    font-family: IRANSansWeb;
+    color: #555 !important;
+    top: 0;
+    right: 5px;
+    font-size: .9rem;
+    text-align: right
+}
+
+.cbox-count-nafar {
+    position: absolute;
+    min-width: 290px;
+    top: 100%;
+    z-index: 10;
+    left: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    background-color: #fff;
+    display: none;
+    cursor: default;
+    border-top: 0;
+    border: 1px solid #ccc
+}
+
+.cbox-count-nafar-ch {
+    padding: 10px
+}
+
+.cbox-count-nafar-ch > .row {
+    margin-right: -5px;
+    margin-left: -5px
+}
+
+.cbox-count-nafar-ch > .row > div {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: IRANSansWeb
+}
+
+.type-of-count-nafar {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 25px;
+    display: flex;
+    font-size: 10px;
+    align-items: center
+}
+
+.type-of-count-nafar h6 {
+    margin-left: 6px;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 14px
+}
+
+.num-of-count-nafar {
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.number-count:hover {
+    background: unset;
+    color: #777;
+    cursor: default
+}
+
+.counting-of-count-nafar {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #262c5a;
+    font-size: 12px;
+    border-radius: 100%;
+    margin: 0 5px;
+    color: #737373;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s
+}
+
+.counting-of-count-nafar svg {
+    fill: #737373;
+    width: 15px;
+    height: 15px
+}
+
+.counting-of-count-nafar:hover {
+    background: #262c5a;
+    color: #fff
+}
+
+.counting-of-count-nafar:hover svg {
+    fill: #fff
+}
+
+.number-count {
+    position: relative;
+    width: 25px;
+    border: none;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal
+}
+
+.rotateb::before {
+    transform: rotate(180deg)
+}
+
+.days-in-hotel {
+    font-size: 13px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 0 5px;
+    text-align: center;
+    color: #8e8e8e;
+    border: 1px solid #ccc
+}
+
+.days-in-hotel i {
+    font-size: 19px;
+    position: relative;
+    margin-left: 5px
+}
+
+.days-in-hotel .result-st em {
+    font-style: normal;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #262c5a
+}
+
+.days-in-hotel .result-st {
+    margin-top: 0px;
+    display: flex;
+    align-items: center
+}
+
+.days-in-hotel .fa-hotel {
+    color: #fff
+}
+
+#flight .radios {
+    width: 100%;
+    position: absolute;
+    top: 7px;
+    right: 5px
+}
+
+.switch {
+    position: relative;
+    height: 35px;
+    width: 186px;
+    background: rgba(255, 255, 255, .25);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    direction: ltr
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    font-size: .9rem;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    margin: 0
+}
+
+.switch-input {
+    display: none
+}
+
+.switch-input:checked + .switch-label {
+    color: #262c5a;
+    -webkit-transition: .15s ease-out;
+    -moz-transition: .15s ease-out;
+    -o-transition: .15s ease-out;
+    transition: .15s ease-out
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+    right: 89px
+}
+
+.switch-input:checked + .switch-label-on_multiTrack ~ .switch-selection {
+    right: 178px
+}
+
+.switch-selection {
+    justify-content: right;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+    width: 93px;
+    height: 29px;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-transition: right .15s ease-out;
+    -moz-transition: right .15s ease-out;
+    -o-transition: right .15s ease-out;
+    transition: right .15s ease-out
+}
+
+.nafaratbime {
+    display: contents
+}
+
+.search_btn_insuranc {
+    margin-right: auto
+}
+
+#myTabContent {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%
+}
+
+#myTabContent > .tab-pane {
+    width: 100%
+}
+
+#myTabContent > .tab-pane {
+    position: relative
+}
+
+#myTab a span {
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: all ease .4s;
+    text-align: center;
+    justify-content: center
+}
+
+#myTab a span h4 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    transition: all ease .4s;
+    font-family: IRANSansFaNum-Bold
+}
+
+#myTab a span h6 {
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    transition: all ease .4s
+}
+
+#myTab {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #d7d4d2;
+    margin: 0 0 1rem;
+    padding: 0 0 .5rem;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+#myTab::-webkit-scrollbar {
+    display: none
+}
+
+#myTab .nav-item {
+    min-width: 120px;
+    display: inline-block;
+    display: flex
+}
+
+#myTab .nav-item .nav-link {
+    background: transparent !important;
+    border: none;
+    transition: all .3s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 120px;
+    align-items: center
+}
+
+#myTab .nav-item .nav-link::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #000;
+    display: flex;
+    position: absolute;
+    transition: all .3s;
+    bottom: -9px
+}
+
+#myTab .nav-item .nav-link:hover::after {
+    width: 100%
+}
+
+#myTab .nav-item .nav-link.active h4 {
+    color: #3662db
+}
+
+#myTab .nav-item .nav-link.active::after {
+    width: 100%;
+    background: #3662db
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border: none
+}
+
+.search_col .form-group {
+    position: relative
+}
+
+#flight_multiTrack {
+    display: none
+}
+
+.switches {
+    padding: 8px 5px
+}
+
+.myhotels-rooms::-webkit-scrollbar {
+    width: 1em
+}
+
+.myhotels-rooms::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+}
+
+.myhotels-rooms::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+    outline: 1px solid #708090
+}
+
+#train .switches {
+    text-align: right;
+    padding: 15px 5px
+}
+
+.myroom-hotel {
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0
+}
+
+.myroom-hotel-item, .myroom-hotel_local-item, .myroom-package-item {
+    flex: 0 0 calc(25% - 20px);
+    text-align: right;
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px
+}
+
+.myroom-hotel-item-title, .myroom-hotel_local-item-title, .myroom-package-item-title {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: right;
+    padding: 6px 10px;
+    line-height: 25px;
+    color: #333;
+    font-family: IRANSansFaNum-Bold;
+    display: flex;
+    font-size: 14px
+}
+
+.myroom-hotel-item .myroom-hotel-item-title span.close, .myroom-hotel_local-item .myroom-hotel_local-item-title span.close, .myroom-package-item-title span.close {
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    cursor: pointer;
+    margin-left: 5px;
+    background-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.myroom-hotel-item .myroom-hotel-item-title i, .myroom-hotel_local-item .myroom-hotel_local-item-title i, .myroom-package-item-title i {
+    color: #262c5a
+}
+
+.myroom-hotel-item .myroom-hotel-item-title i svg, .myroom-hotel_local-item .myroom-hotel_local-item-title i svg, .myroom-package-item-title i svg {
+    fill: red;
+    width: 20px;
+    height: 20px
+}
+
+.btn_group {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px
+}
+
+.btn_group > div {
+    width: 100%;
+    margin: 0
+}
+
+.btn_group > div > i {
+    margin-left: 5px
+}
+
+.btn_add_room:hover, .btn_add_room:hover {
+    background: #eee
+}
+
+.btn_add_room, .btn_add_room_p, .btn_add_room_hotel_local {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    transition: all ease .4s;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #777
+}
+
+.btn_close_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px dashed #18b500;
+    cursor: pointer;
+    transition: all ease .4s;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #777
+}
+
+.myroom-hotel-item-info, .myroom-hotel_local-item-info, .myroom-package-item-info {
+    padding: 10px
+}
+
+.myroom-hotel-item-tedad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 10px;
+    color: #555
+}
+
+.myroom-hotel-item-tedad > span {
+    font-weight: 200;
+    font-size: 12px
+}
+
+.myroom-hotel-item-tedad > span i {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 200;
+    color: #797979;
+    padding-right: 4px
+}
+
+.myroom-hotel-item-tedad > div {
+    margin-right: auto;
+    display: flex
+}
+
+.myroom-hotel-item-tedad div input {
+    width: 25px;
+    font-size: 12px;
+    border: none;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    -moz-appearance: textfield;
+    padding: 0;
+    cursor: default;
+    user-select: none
+}
+
+.myroom-hotel-item-tedad div input:focus-visible {
+    outline: none
+}
+
+.myroom-hotel-item-tedad div > i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #262c5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    line-height: 19px;
+    font-size: 11px;
+    transition: all .3s
+}
+
+.myroom-hotel-item-tedad div > i svg {
+    fill: #737373;
+    width: 15px;
+    height: 15px
+}
+
+.myroom-hotel-item-tedad div > i:hover {
+    background: #262c5a;
+    color: #fff
+}
+
+.myroom-hotel-item-tedad div > i:hover svg {
+    fill: #fff
+}
+
+.tarikh-tavalods {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    display: flex
+}
+
+.tarikh-tavalods .tarikh-tavalod-item {
+    flex: 0 0 100%;
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    border-bottom: 1px solid #eee
+}
+
+.tarikh-tavalods .tarikh-tavalod-item:last-child {
+    border: none
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span {
+    font-size: 11px
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span i {
+    font-style: normal;
+    font-weight: bold
+}
+
+.tarikh-tavalods .tarikh-tavalod-item select {
+    font-size: 12px;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #262c5a;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 97px;
+    height: 30px;
+    padding: 3px 5px;
+    color: #777
+}
+
+.form-control-rd-lbl span {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 1px #ccc inset;
+    -moz-box-shadow: 0 0 0 1px #ccc inset;
+    box-shadow: 0 0 0 1px #ccc inset;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0;
+    line-height: 0;
+    float: right;
+    position: relative;
+    -webkit-transition: .15s all;
+    -moz-transition: .15s all;
+    -o-transition: .15s all;
+    transition: .15s all;
+    height: 18px;
+    width: 18px;
+    top: 6px;
+    margin-left: 5px
+}
+
+.form-control-rd {
+    display: none
+}
+
+.radios .TripTypeRadio label {
+    font-size: 12px;
+    cursor: pointer;
+    color: #999;
+    font-weight: 400;
+    margin: 0
+}
+
+.cbox-count-check::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(210, 210, 210, 0.9) 20%, rgb(210, 210, 210) 50%, rgba(210, 210, 210, 0.9) 80%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(210, 210, 210, 0.9) 20%, rgb(210, 210, 210) 50%, rgba(210, 210, 210, 0.9) 80%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(210, 210, 210, 0.9) 20%, rgb(210, 210, 210) 50%, rgba(210, 210, 210, 0.9) 80%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#000000", GradientType=1);
+    height: 1px;
+    left: 0;
+    top: 0
+}
+
+.cbox-count-check .radios .form-group {
+    margin-bottom: 2px;
+    text-align: right
+}
+
+.div_btn {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.btn-close {
+    background: #262c5a;
+    transition: all ease .4s;
+    color: #fff;
+    cursor: pointer
+}
+
+.btn-close:hover {
+    opacity: .7
+}
+
+.checkbox_coupe {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: right !important;
+    border-top: 1px solid #eee;
+    margin-top: 10px
+}
+
+.checkbox_coupe label {
+    margin-bottom: 0;
+    color: #999;
+    font-size: 14px
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+    width: 100%
+}
+
+input#coupe[type=checkbox]:not(:checked), input#coupe[type=checkbox]:checked {
+    position: absolute;
+    opacity: 0
+}
+
+input#coupe[type=checkbox]:not(:checked) + label, input#coupe[type=checkbox]:checked + label {
+    position: relative;
+    padding-right: 1.95em;
+    cursor: pointer
+}
+
+input#coupe[type=checkbox]:not(:checked) + label:before, input#coupe[type=checkbox]:checked + label:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1)
+}
+
+input#coupe[type=checkbox]:not(:checked) + label:after, input#coupe[type=checkbox]:checked + label:after {
+    content: "✓ ";
+    position: absolute;
+    top: .24em;
+    right: .15em;
+    font-size: 1.2em;
+    line-height: .8;
+    color: #262c5a;
+    transition: all .2s
+}
+
+input#coupe[type=checkbox]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0)
+}
+
+input#coupe[type=checkbox]:checked + label:after {
+    opacity: 1;
+    transform: scale(1)
+}
+
+input#coupe[type=checkbox]:checked:focus + label:before, input#coupe[type=checkbox]:not(:checked):focus + label:before {
+    border: 2px dotted #f39200
+}
+
+.d-ceckboxs {
+    padding: 0 10px;
+    margin-bottom: 0;
+    width: 100%
+}
+
+.d-ceckboxs .cntr label:not(:last-child) {
+    padding-left: 20px;
+    font-weight: normal;
+    display: flex;
+    align-items: center
+}
+
+.cntr {
+    margin: auto;
+    display: flex;
+    align-items: center
+}
+
+.btn-radio {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-user-select: none;
+    margin: 0;
+    user-select: none
+}
+
+.btn-radio input {
+    display: none
+}
+
+.btn-radio input:checked + span {
+    background-color: #becdf8;
+    color: #3662de
+}
+
+.btn-radio span {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    font-family: IRANSansFaNum-Bold;
+    height: 40px;
+    margin: 0 0 0 2px;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #343b53;
+    transition: all .3s
+}
+
+.btn-radio span:hover {
+    background-color: #e7edfd;
+    color: #3662db
+}
+
+.nafaratbime .search_item {
+    margin: 0 !important
+}
+
+.nafaratbime {
+    margin: 0 !important
+}
+
+.city_start {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+    padding: 5px 0
+}
+
+.city_start i {
+    color: #ccc;
+    margin-left: 10px
+}
+
+.hotel_passenger_picker, .package_passenger_picker, .hotel_local_passenger_picker {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #d7d4d2;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #fff
+}
+
+.hotel_passenger_picker > span, .hotel_local_passenger_picker > span, .package_passenger_picker > span {
+    font-size: 12px;
+    color: #8e8e8e;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.hotel_passenger_picker ul, .hotel_local_passenger_picker ul, .package_passenger_picker ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    list-style: none
+}
+
+.hotel_passenger_picker ul li, .hotel_local_passenger_picker ul li, .package_passenger_picker ul li {
+    font-size: 12px;
+    color: #555;
+    text-align: revert
+}
+
+.hotel_passenger_picker ul em, .hotel_local_passenger_picker ul em, .package_passenger_picker ul em {
+    font-style: normal;
+    padding: 0 3px
+}
+
+#search-flight-form .form-group {
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+#search-flight-form .form-control {
+    font-family: IRANSansWeb;
+    padding: 10px 27px 10px 5px;
+    height: 46px;
+    font-size: 12px;
+    border-left: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 10px
+}
+
+.default-airports {
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    max-height: 280px;
+    width: 830px;
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    color: #000;
+    z-index: 9;
+    transition: all ease .4s;
+    border: 1px solid #ccc;
+    scrollbar-width: thin;
+    scrollbar-color: #ffa01c #28445b;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.default-airports .box-title {
+    width: 100%;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #aaa;
+    cursor: default;
+    font-size: 12px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc
+}
+
+.default-airports .column-container {
+    border-left: 1px solid #eee;
+    flex-grow: 1;
+    background-color: #fff;
+    width: 33.33333%;
+    position: relative
+}
+
+.default-airports .column-container .airport-item {
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: right;
+    cursor: pointer;
+    transition: all ease .4s;
+    color: #404040;
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 10px
+}
+
+.default-airports .column-container .airport-item .airport-name {
+    color: #6b6b6b;
+    display: inline-block;
+    font-size: 12px;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px
+}
+
+.default-airports .column-container .airport-item .airport-city i {
+    color: #262c5a;
+    font-size: 11px;
+    font-style: normal
+}
+
+.default-airports .column-container .airport-item .airport-city em {
+    display: block;
+    bottom: 10px;
+    color: #777;
+    min-width: 50px;
+    border: 1px solid rgba(125, 95, 255, .2117647059);
+    left: 10px;
+    font-style: normal;
+    font-size: 10px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 4px;
+    text-align: center
+}
+
+.airport-search-results {
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9999999;
+    cursor: pointer;
+    max-height: 150px;
+    overflow: auto;
+    box-shadow: 0 10px 17px 0 rgba(0, 0, 0, .23);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 0;
+    border: 1px solid #d4d4d4;
+    top: 100%;
+    border-radius: 10px;
+    padding: 0;
+    right: 0
+}
+
+.airport-search-results .airport-search-item, .airport-search-results .error-message {
+    position: relative;
+    transition: all ease .4s;
+    border-bottom: none;
+    padding: 15px 5px;
+    border-bottom: 1px dashed #d3d3d3;
+    text-align: right;
+    color: #222;
+    font-size: 12px;
+    direction: rtl;
+    display: flex;
+    align-items: center
+}
+
+.airport-search-results .airport-search-item .name {
+    flex: fit-content;
+    display: flex
+}
+
+.airport-search-results .airport-search-item .code {
+    color: #777;
+    min-width: 50px;
+    border: 1px solid rgba(125, 95, 255, .2117647059);
+    left: 10px;
+    font-style: normal;
+    font-size: 10px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 4px;
+    text-align: center
+}
+
+#search-flight-form .form-control.went {
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #ccc;
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left: none
+}
+
+#search-flight-form .form-control.return_input {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc
+}
+
+.btn_multiTrack {
+    background: #fff;
+    transition: all ease .4s;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    color: #262c5a;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.btn_multiTrack i {
+    font-weight: 500
+}
+
+.btn_multiTrack:hover {
+    background: #eee;
+    color: #262c5a;
+    border: 1px solid #262c5a
+}
+
+.dis_btn_multiTrack {
+    border: 1px solid #aaa !important;
+    background: #aaa !important;
+    color: #fff
+}
+
+.dis_btn_multiTrack::before {
+    border: 1px solid #aaa !important;
+    background: #aaa !important;
+    color: #fff
+}
+
+.btn_multiTrack_delete::before {
+    display: none
+}
+
+.btn_multiTrack_delete {
+    background: rgba(238, 56, 78, .1215686275);
+    color: #262c5a;
+    border: 1px dashed
+}
+
+.btn_multiTrack_delete:hover {
+    border: 1px solid;
+    background: #262c5a;
+    color: #fff
+}
+
+.with_multiTrack {
+    width: 275px
+}
+
+@media (max-width: 768px) {
+    .radios {
+        display: flex;
+        justify-content: center
+    }
+
+    .d-ceckboxs {
+        position: static;
+        width: 100%
+    }
+
+    #myTab {
+        justify-content: flex-start
+    }
+}
+
+@media (max-width: 575px) {
+    .style-sm {
+        padding: 1rem 0 !important;
+        margin: 1rem 0 !important;
+        border-bottom: 1px solid #dee2e6 !important;
+        border-top: 1px solid #dee2e6 !important
+    }
+}
+
+/*# sourceMappingURL=tabs.css.map */

@@ -4,13 +4,6 @@
 /dist/*
 /logs/
 /vendor/
-/view/*
-!/view/assets
-!/view/administrator
-!/view/demo360
-!/view/demoSepehri
-!/view/client
-!/view/include
 /view/client/assets/js/vue/node_modules
 
 

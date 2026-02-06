@@ -1,0 +1,11 @@
+{
+  "name": "camera-slider-master",
+  "version": "1.0.0",
+  "scripts": {
+    "start" : "sass --watch scss:css --style compressed",
+    "start360" : "sass --watch --style compressed  view/avan-tour/project_files/scss:view/avan-tour/project_files/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

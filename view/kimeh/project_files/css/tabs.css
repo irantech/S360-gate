@@ -1,0 +1,815 @@
+.nav-tabs {
+    border-bottom-color: transparent;
+}
+
+#myTabContent {
+    min-height: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(254, 226, 153, 0.8);
+    border-radius: 1px 0 1px 1px;
+}
+
+#myTabContent > div {
+    width: 100%;
+}
+
+
+
+#myTab a:hover {
+
+    color: #737373;
+}
+
+#myTab a.active {
+
+    background: rgba(254, 226, 153, 0.8);
+    color: #202020;
+
+    border: none;
+}
+
+#myTab a.active span {
+    color: #fff;
+}
+
+.nav-tabs .nav-link {
+    text-align: center;
+}
+
+#myTab .nav-link {
+    border: 0;
+    
+    font-family: IRANSansm;
+    display: flex;
+ 
+    justify-content: center;
+    /*! border-radius: 0; */
+    color: #000;
+    font-size: 13px;
+    background: rgb(255, 255, 255);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 10px;
+    border-radius: 0;
+}
+
+#myTab .nav-item {
+    display: inline-block;
+
+}
+#myTab .nav-item:first-child{
+    border-radius: 0 1px 0 0;
+    overflow: hidden;
+}
+#myTab .nav-item:last-child{
+    border-radius: 1px 0 0 0;
+    overflow: hidden;
+}
+#myTab .nav-link i {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.col_search input {
+    font-family: 'IRANSansnum';
+    padding: 5px 25px 5px 0;
+    border-radius: 1px;
+    height: 45px;
+    font-size: 12px;
+    border-left: none;
+    border: none;
+    background: #9a7333;
+    color: #fff;
+    transition: all ease .4s;
+}
+
+.col_search ::placeholder {
+    color: #8e8e8e;
+}
+
+.col_search {
+    padding: 5px;
+}
+
+.date_search {
+    font-size: 0
+}
+
+.date_search .form-group {
+    display: inline-block;
+
+    width: 50%;
+
+    margin: 0;
+    position: relative;
+}
+
+.date_search i.fa, .search_col i.fa {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    position: absolute;
+    line-height: 45px;
+    top: 0px;
+    right: 4px;
+    padding-left: 11px;
+    display: block;
+    width: 20px;
+    box-sizing: content-box;
+    height: 45px;
+
+    color: #fff;
+}
+
+.form-control:focus {
+    color: #fff;
+     background-color: #9a7333;
+    border-color: #9a7333;;
+    outline: 0;
+    box-shadow: none;
+}
+
+.theme-btn {
+    background: #9a7333;
+    border-color: #9a7333;
+    height: 45px;
+    width: 100%;
+    transition: all ease .4s;
+    color: #fff;
+    border-radius: 1px;
+}
+
+.theme-btn:hover {
+    background: #fff;
+    color: #222;
+    border-color: #222;
+}
+
+.btn:focus, .btn.focus {
+    box-shadow: none
+}
+
+.down-count-nafar {
+    color: #737373 !important;
+    top: 0px;
+    left: 0px;
+    line-height: 45px;
+    font-size: 12px;
+    position: absolute;
+    text-align: left;
+    padding-left: 13px;
+    width: 100%;
+    /*! border: 1px solid #ccc; */
+    border-radius: 0;
+    z-index: 1;
+}
+
+.box-of-count-nafar {
+    height: 45px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 0px !important;
+}
+
+.text-count-nafar {
+    font-family: 'IRANSansnum';
+    color: #8e8e8e !important;
+    top: 0px;
+    right: 5px;
+    font-size: 13px;
+    line-height: 45px;
+    position: absolute;
+    text-align: right;
+}
+
+.cbox-count-nafar {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #e0e1e5;
+    border-radius: 0;
+    -webkit-box-shadow: -3px 2px 10px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: -3px 2px 10px 0 rgba(0, 0, 0, .2);
+    box-shadow: -3px 2px 10px 0 rgba(0, 0, 0, .2);
+    top: 46px;
+    z-index: 10;
+    left: 0;
+    min-width: 260px;
+    right: 0px;
+    background-color: white;
+    display: none;
+    cursor: default;
+    border-top: 0;
+}
+
+.cbox-count-nafar-ch {
+    padding: 10px;
+}
+
+.cbox-count-nafar-ch > .row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.cbox-count-nafar-ch > .row > div {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'IRANSansnum';
+}
+
+.type-of-count-nafar {
+    color: #999;
+    padding-right: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 25px;
+}
+
+.num-of-count-nafar {
+    color: #999;
+    padding-left: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-size: 0;
+}
+
+.counting-of-count-nafar {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 23px;
+    display: inline-block;
+    border: 1px solid #737373;
+    font-size: 12px;
+
+    border-radius: 100%;
+    margin: 0 5px;
+    color: #737373;
+}
+
+.number-count {
+    top: -2px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    display: inline-block;
+    border: 1px solid #D1D1D1;
+    font-size: 12px;
+}
+
+.rotateb::before {
+    transform: rotate(180deg)
+}
+
+.days-in-hotel {
+    font-size: 12px;
+    height: 45px;
+    border-radius: 1px;
+    font-family: IRANSansm;
+    border: 1px solid #9a7333;
+    background: #fff;
+    padding: 0 5px;
+    text-align: center;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.days-in-hotel i {
+    font-size: 19px;
+    position: relative;
+    color: #555;
+    margin: 0 5px;
+}
+
+.days-in-hotel .result-st em {
+    font-style: normal;
+    margin: 0 2px;
+}
+
+.days-in-hotel .result-st {
+    font-family: IRANSansnum;
+    font-size: 14px;
+    margin-top: 0px;
+
+    animation: blink 1s linear infinite;
+    color: #222;
+    display: inline;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.days-in-hotel .fa-hotel {
+    color: #FFF;
+}
+
+.radios {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.switch {
+    position: relative;
+    margin: 20px auto 0;
+    height: 35px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+
+.switch-label-off {
+    padding-left: 2px;
+}
+
+.switch-label-on {
+    padding-right: 2px;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked + .switch-label {
+    color: #404040;
+
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+
+    right: 98px;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
+    width: 100px;
+    height: 31px;
+
+    border-radius: 3px;
+    background-color: #fff700;
+    -webkit-transition: right 0.15s ease-out;
+    -moz-transition: right 0.15s ease-out;
+    -o-transition: right 0.15s ease-out;
+    transition: right 0.15s ease-out;
+}
+
+.nafaratbime {
+    display: contents
+}
+
+.search_btn_insuranc {
+    margin-right: auto;
+}
+
+.inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 10px 5px;
+    position: relative;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.inputGroup label {
+    padding: 12px 8px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: color 200ms ease-in;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+    margin: 0;
+    font-size: 12px;
+    display: flex;
+
+    justify-content: end;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.inputGroup label:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+    background-color: #0a2352;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+}
+
+.inputGroup label:after {
+    width: 20px;
+    height: 20px;
+    content: '';
+    border: 2px solid #D1D7DC;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+
+    /*! -webkit-transform: translateY(-50%); */
+    /*! transform: translateY(-50%); */
+    /*! cursor: pointer; */
+    /*! -webkit-transition: all 200ms ease-in; */
+    /*! transition: all 200ms ease-in; */
+    background-size: 23px;
+}
+
+.inputGroup input:checked ~ label {
+    color: #fff;
+}
+
+.inputGroup input:checked ~ label:before {
+    -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+}
+
+.inputGroup input:checked ~ label:after {
+    background-color: #ff3a46;
+    border-color: #ff3a46;
+}
+
+.inputGroup input {
+    width: 32px;
+    height: 32px;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.form {
+    padding: 0 16px;
+    max-width: 550px;
+    margin: 50px auto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.raftobargasht, .switch-tabs {
+    display: flex;
+}
+
+.raftobargasht {
+    margin-left: auto;
+}
+
+.switch-tabs {
+    /*! margin-left: auto; */
+}
+
+.switch-tabs .inputGroup {
+    width: 150px;
+}
+
+#hotel .switch-tabs .inputGroup,
+#tour .switch-tabs .inputGroup {
+    width: 130px;
+}
+#gasht .switch-tabs .inputGroup {
+    width: 110px;
+}
+
+.col_search.date_search .form-group:first-child input {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.col_search.date_search .form-group:last-child input {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.flat_tab {
+    width: 20px;
+    height: 20px;
+    right: 25px;
+    position: absolute;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+.flat_flight_da {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwMCAzMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTQ5Ljk5NywwQzY3LjE1OCwwLDAuMDAzLDY3LjE2MSwwLjAwMywxNDkuOTk3UzY3LjE1OCwzMDAsMTQ5Ljk5NywzMDBzMTUwLTY3LjE2MywxNTAtMTUwLjAwM1MyMzIuODM3LDAsMTQ5Ljk5NywweiAgICAgTTIyMi45NzgsOTkuNDYxbC0zMi40MzUsMzAuNzExbDIwLjU2Miw4Mi44NDRsLTEyLjI3LDEyLjI3bC0zOS4yNjItNjQuMDI4bC0wLjkwNS0wLjkwNWwtNDAuMzg1LDM4LjI0ICAgIGMtMC4yMjgsMC4yMzEtMC40ODUsMC40MDUtMC43MTgsMC42MjJsLTEuMjk3LDI5LjQ4MWwtNDQuOTY1LTQ0Ljk2MmwyOS40NzEtMS4yOTRjMC4yMTgtMC4yMzksMC4zOTQtMC40OTMsMC42MjUtMC43MjQgICAgbDM4LjI0LTQwLjM4N0wxMzkuMzE0LDE0MWwtNjQuNjAxLTM5LjgzMmwxMi4yNy0xMi4yN2w4Mi40NzEsMjAuOTQ2bDMxLjA3OS0zMi44MjdjNi4yMDEtNi4yMDEsMTYuMjUxLTYuMTk5LDIyLjQ0NywwICAgIEMyMjkuMTc3LDgzLjIxNSwyMjkuMTc3LDkzLjI2MywyMjIuOTc4LDk5LjQ2MXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIHN0eWxlPSJmaWxsOiNGRjVGNUYiPjwvcGF0aD4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+);
+}
+
+.flat_flight_kh {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDk1OS4xOTIgOTU5LjE5MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTU5LjE5MiA5NTkuMTkyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGc+Cgk8cGF0aCBkPSJNOTIzLjc3NywyLjM0bC0xMDEuNSw0Ni4yYy02LjUsMy0xMi41LDcuMS0xNy42LDEyLjJsLTE2NS40LDE2NS41bC01NjkuNi02OC4zYy0xMC4zLTEuMi0yMC43LDIuMy0yOCw5LjdsLTMxLjcsMzEuNyAgIGMtMTYuOCwxNi44LTExLjYsNDUuMiwxMC4xLDU0LjlsNDA4LjIsMTgzbC0xMTcuMiwxMTcuMmgtMjA0LjdjLTksMC0xNy42LDMuNi0yNCw5Ljg5OWwtMTcuMSwxNy4yYy0xNywxNy0xMS40LDQ1LjcsMTAuNiw1NS4xMDEgICBsMTcyLjcsNzRsNzQsMTcyLjY5OWM5LjQsMjIsMzguMiwyNy42MDEsNTUuMTAxLDEwLjYwMWwxNy4xOTktMTcuMmM2LjQtNi40LDkuOS0xNSw5LjktMjR2LTIwNC43bDExNy4yLTExNy4ybDE4Myw0MDguMzAxICAgYzkuNywyMS42OTksMzguMSwyNi44OTksNTQuODk5LDEwLjFsMzEuNy0zMS43YzcuNC03LjQsMTAuOS0xNy43LDkuNy0yOGwtNjguNC01NjkuNmwxNjUuNS0xNjUuNWM1LjEwMS01LjEsOS4yLTExLDEyLjItMTcuNiAgIGw0Ni4yLTEwMS41Qzk2Ni40NzgsMTQuNDQsOTQ0Ljg3Ny03LjI2LDkyMy43NzcsMi4zNHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIHN0eWxlPSJmaWxsOiNGRjVGNUYiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+);
+}
+
+.flat_hotel_da {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTM2My44NjggNDUuMDg5aDEzMy4xMzJjOC4yODQgMCAxNSA2LjcxNiAxNSAxNXY3Mi4wOTRoLTE0OC4xMzJ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRjVGNUYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PHBhdGggZD0ibTE2Ni41NTIgMzk2LjI1M2guMTVjMTEuNTAxIDAgMjAuODU4IDkuMzU4IDIwLjg1OCAyMC44NTh2NC43MzVoLTQxLjg2N3YtNC43MzVjLjAwMS0xMS41MDEgOS4zNTgtMjAuODU4IDIwLjg1OS0yMC44NTh6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRjVGNUYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PHBhdGggZD0ibTE0NS42OTQgNDUxLjg0N2g0MS44Njd2NjAuMTUzaC00MS44Njd6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRjVGNUYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PHBhdGggZD0ibTM2My44NjggNDk3YzAgNS4yNTgtLjkxNSAxMC4zMDUtMi41OCAxNWgxMzUuNzEyYzguMjg0IDAgMTUtNi43MTYgMTUtMTV2LTMzNC44MTdoLTE0OC4xMzJ6bTg5LjEyNi0xMzAuMDMyYzAtOC4yODQgNi43MTYtMTUgMTUtMTVzMTUgNi43MTYgMTUgMTV2MjAuMDEzYzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1em0wLTgwLjA1MmMwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxM2MwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXptMC04MC4wNTJjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bS02MS41IDE2MC4xMDRjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bTAtODAuMDUyYzAtOC4yODQgNi43MTYtMTUgMTUtMTVzMTUgNi43MTYgMTUgMTV2MjAuMDEzYzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1em0wLTgwLjA1MmMwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxM2MwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGNUY1RiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD48cGF0aCBkPSJtMCAxNXY0ODJjMCA4LjI4NCA2LjcxNiAxNSAxNSAxNWgxMDAuNjk0di05NC44ODljMC0yOC4wNDMgMjIuODE1LTUwLjg1OCA1MC44NTgtNTAuODU4aC4xNWMyOC4wNDMgMCA1MC44NTggMjIuODE1IDUwLjg1OCA1MC44NTh2OTQuODg5aDEwMS4zMDhjOC4yODQgMCAxNS02LjcxNiAxNS0xNXYtNDgyYzAtOC4yODQtNi43MTYtMTUtMTUtMTVoLTMwMy44NjhjLTguMjg0IDAtMTUgNi43MTYtMTUgMTV6bTI1NS44NjggMjcxLjkxNmMwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxM2MwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXptMC04MC4wNTJjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bS03MS41IDgwLjA1MmMwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxM2MwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXptMC04MC4wNTJjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bS0yLjI5NS0xNTAuOTgxYzAtOC4yODQgNi43MTYtMTUgMTUtMTVzMTUgNi43MTYgMTUgMTV2MzAuMTVoNDEuNXYtMzAuMTVjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXY5MC4zYzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1di0zMC4xNDloLTQxLjV2MzAuMTQ5YzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1em0tNjYuMjA0IDIzMS4wMzNjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bTAtODAuMDUyYzAtOC4yODQgNi43MTYtMTUgMTUtMTVzMTUgNi43MTYgMTUgMTV2MjAuMDEzYzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1em0wLTgwLjA1MWMwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxNGMwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXptLTcxLjUgMTYwLjEwM2MwLTguMjg0IDYuNzE2LTE1IDE1LTE1czE1IDYuNzE2IDE1IDE1djIwLjAxM2MwIDguMjg0LTYuNzE2IDE1LTE1IDE1cy0xNS02LjcxNi0xNS0xNXptMC04MC4wNTJjMC04LjI4NCA2LjcxNi0xNSAxNS0xNXMxNSA2LjcxNiAxNSAxNXYyMC4wMTNjMCA4LjI4NC02LjcxNiAxNS0xNSAxNXMtMTUtNi43MTYtMTUtMTV6bTAtODAuMDUxYzAtOC4yODQgNi43MTYtMTUgMTUtMTVzMTUgNi43MTYgMTUgMTV2MjAuMDE0YzAgOC4yODQtNi43MTYgMTUtMTUgMTVzLTE1LTYuNzE2LTE1LTE1eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkY1RjVGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPjwvZz4gPC9zdmc+);
+}
+
+.flight_local,
+.flight_forign,
+#hotel_dakheli,
+#hotel_khareji,
+#tour_dakheli,
+#tour_khareji,
+#gasht_div,
+#transfer_div
+
+{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+#myTabContent .form-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.myroom-hotel {
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+}
+
+.myroom-hotel-item {
+    flex: 0 0 calc(25% - 20px);
+    text-align: right;
+    margin: 10px;
+    background: white;
+    color: #606060;
+    border-radius: 6px;
+}
+
+.myroom-hotel-item .myroom-hotel-item-title {
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    color: #fff;
+    background: #9a7333;
+    font-family: IRANSansm;
+    display: flex;
+    font-size: 14px;
+}
+
+.myroom-hotel-item .myroom-hotel-item-title span.close {
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    cursor: pointer;
+    background: #d6be81;
+    margin-right: auto;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRiIgcG9pbnRzPSI0MDQuMTc2LDAgMjU2LDE0OC4xNzYgMTA3LjgyNCwwIDAsMTA3LjgyNCAxNDguMTc2LDI1NiAwLDQwNC4xNzYgMTA3LjgyNCw1MTIgMjU2LDM2My44MjQgICA0MDQuMTc2LDUxMiA1MTIsNDA0LjE3NiAzNjMuODI0LDI1NiA1MTIsMTA3LjgyNCAiIGRhdGEtb3JpZ2luYWw9IiNFMjFCMUIiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiNFMjFCMUIiPjwvcG9seWdvbj48L2c+IDwvc3ZnPg==);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.myroom-hotel-item-info {
+    padding: 10px;
+
+}
+
+.myroom-hotel-item-tedad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.myroom-hotel-item-tedad:first-child {
+    margin-bottom: 15px;
+}
+
+.myroom-hotel-item-tedad > span {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.myroom-hotel-item-tedad > span i {
+    font-family: IRANSansnum;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 200;
+    color: #797979;
+    padding-right: 4px;
+}
+
+.myroom-hotel-item-tedad > div {
+    margin-right: auto;
+    display: flex;
+}
+
+.myroom-hotel-item-tedad div input {
+    width: 25px;
+    font-size: 12px;
+    border: none;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    -moz-appearance: textfield;
+}
+
+.myroom-hotel-item-tedad div > i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #d6be81;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    line-height: 19px;
+    font-size: 11px;
+    transition: all ease .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myroom-hotel-item-tedad div > i:hover {
+    background-color: #d6be81;
+}
+
+.myroom-hotel-item-tedad div > i:hover:before {
+    color: #fff;
+}
+
+.tarikh-tavalods {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item {
+    flex: 0 0 calc(50% - 2.5px);
+    background: #ececec;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span {
+    font-size: 11px;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span i {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item select {
+    font-size: 12px;
+    width: 100%;
+}
+
+#train .raftobargasht {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+input#coupe[type="checkbox"]:not(:checked),
+input#coupe[type="checkbox"]:checked {
+    position: absolute;
+    opacity: 0;
+}
+
+input#coupe[type="checkbox"]:not(:checked) + label,
+input#coupe[type="checkbox"]:checked + label {
+    position: relative;
+    padding-right: 1.95em;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+input#coupe[type="checkbox"]:not(:checked) + label:before,
+input#coupe[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+/* checked mark aspect */
+input#coupe[type="checkbox"]:not(:checked) + label:after,
+input#coupe[type="checkbox"]:checked + label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: .24em;
+    right: .15em;
+    font-size: 1.2em;
+    line-height: 0.8;
+    color: #ef3d30;
+    transition: all .2s;
+
+}
+
+/* checked mark aspect changes */
+input#coupe[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+input#coupe[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* accessibility */
+input#coupe[type="checkbox"]:checked:focus + label:before,
+input#coupe[type="checkbox"]:not(:checked):focus + label:before {
+
+}
+
+.checkbox_coupe {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 5px;
+}

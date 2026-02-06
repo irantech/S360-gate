@@ -1,0 +1,682 @@
+@import "components/fonts";
+@import "components/variables";
+@import "components/mixin";
+body {
+  font-family: $fontFamily, serif !important;
+  direction: rtl;
+  min-height: 100vh;
+  background: #f8f9fb;
+  overflow-x: hidden;
+  text-align: right;
+}
+main, .content_tech {
+  min-height: 100vh;
+}
+a, a:hover {
+  text-decoration: none
+}
+button{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+.title{
+  font-size: 27px;
+  font-family: $fontFamilyBold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.banner{
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  min-height: 650px;
+  video{
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    @include width_height(100%);
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+  .banner_main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5rem;
+    .text_searchBox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h2{
+        color: #fff;
+        font-family: $fontFamilyBold;
+        font-size: 1.7rem;
+      }
+      h3{
+        color: #fff;
+        font-family: $fontFamilyBold;
+        font-size: 1.5rem;
+      }
+    }
+    .ticker{
+      font-size: 40px;
+      font-family: $fontFamilyBold;
+      margin-bottom: 0;
+      color: #fff;
+      height: 132px;
+      width: 450px;
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li{
+          &:first-child{
+            animation: anim 4s infinite;
+          }
+          &:last-child{
+            animation: anim 4s infinite 1s;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes anim {
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.displayiN{
+  display: none;
+}
+
+@import "components/select2";
+@import "section/header";
+@import "section/tab";
+@import "section/advertising";
+@import "section/tour";
+@import "section/box";
+@import "section/blog";
+@import "section/news-letters";
+@import "section/footer";
+
+.float-sm{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background: #fff9;
+  border-radius: 0 $rounded $rounded 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.fl-fl .fab {
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+}
+.fl-fl .fab.fa-telegram {
+  background: #31a8e0;
+}
+.fl-fl .fab.fa-whatsapp-c {
+  background: #2bb741;
+  img{
+
+    width: 23px;
+    height: 23px;
+  }
+}
+.fl-fl .fab.fa-instagram {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.fl-fl .fab.fa-linkedin-in {
+  background: #0077b5;
+}
+.fl-fl .fab.fa-youtube {
+  background: #f70000;
+}
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px !important;
+  vertical-align: top !important;
+  font-family: inherit;
+  height: 100%;
+  display: flex;
+}
+
+
+.tour_category{
+  #pills-tab {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    .nav-link {
+      font-size: 14px !important;
+      display: inline-block !important;
+      text-align: center !important;
+      border: 1px solid $mainColor !important;
+      border-radius: $rounded !important;
+      position: relative !important;
+      color: $mainColor !important;
+      transition: 0.3s ease all !important;
+      z-index: 1 !important;
+      background: transparent !important;
+      padding: 0.5rem 1rem !important;
+      cursor: pointer;
+    }
+    li > .nav-link.active {
+      background: $mainColor !important;
+      color: #fff !important;
+    }
+  }
+}
+.news_grid {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+.news_grid>a {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: $rounded;
+  background: #fff;
+}
+.news_grid>a .imgBox {
+  overflow: hidden;
+  border-radius: 8px;
+  height: 250px
+}
+.news_grid>a .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .3s
+}
+.news_grid>a .news_txt {
+  margin-top: 1rem
+}
+.news_grid>a .news_txt .news_txt_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.news_grid>a .news_txt .news_txt_header h2 {
+  font-family: $fontFamilyBold;
+  color: #555;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  transition: all .3s
+}
+.news_grid>a .news_txt .news_txt_header span {
+  color: #888;
+  margin-bottom: 0;
+  font-size: 1rem;
+  transition: all .3s
+}
+.news_grid>a .news_txt .news_txt_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .8rem
+}
+.news_grid>a .news_txt .news_txt_footer h5 {
+  color: #888;
+  margin-bottom: 0;
+  font-size: 1rem;
+  transition: all .3s
+}
+.news_grid>a .news_txt .news_txt_footer h6 {
+  color: #888;
+  margin-bottom: 0;
+  font-size: 1rem;
+  transition: all .3s
+}
+.news_grid>a:hover .imgBox img {
+  transform: scale(1.1)
+}
+.news_grid>a:hover .news_txt .news_txt_header h2 {
+  color: $mainColor
+}
+.news_grid>a:hover .news_txt .news_txt_header span {
+  color: $mainColor
+}
+.news_grid>a:hover .news_txt .news_txt_footer h5 {
+  color: $mainColor
+}
+.news_grid>a:hover .news_txt .news_txt_footer h6 {
+  color: $mainColor
+}
+@media(max-width: 1200px) {
+  .news_grid>a .news_txt .news_txt_footer h5 {
+    font-size:.8rem
+  }
+  .news_grid>a .news_txt .news_txt_footer h6 {
+    font-size: .8rem
+  }
+}
+@media(max-width: 992px) {
+  .news_grid {
+    grid-template-columns: repeat(1, 1fr) !important
+  }
+  .tour_category{
+    #pills-tab {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      width: 100%;
+      .nav-link{
+        width: 100%;
+      }
+    }
+  }
+}
+@media(max-width: 768px) {
+  .float-sm{
+    display: none;
+  }
+}
+@media (max-width: 545px) {
+  .ticker{
+    font-size: 20px !important;
+  }
+  .tour .title {
+    flex-direction: column;
+  }
+  .tour .title > h2 {
+    margin-bottom: 1rem
+  }
+  .tour_category{
+    #pills-tab {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.installmentCalculator{
+  user-select: none;
+  background-color: #fff;
+  .installmentCalculator_box{
+    .installmentCalculator_box_div1{
+      > h2 {
+        color: $secondColor;
+        font-size: 38px;
+        font-family: $fontFamilyBold;
+        margin-bottom: 30px;
+      }
+      > div {
+        > div.header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 2rem 0 .5rem 0;
+          > h3 {
+            font-size: 24px;
+            text-align: right;
+            color: #6c6c6c;
+            margin-bottom: 0;
+            position: relative;
+          }
+          > div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border-radius: $rounded;
+            border: 1px solid #ddd;
+            padding: 5px;
+            h6{
+              margin: 0;
+            }
+            span{
+
+            }
+          }
+        }
+      }
+    }
+    .installmentCalculator_box_div2{
+      padding: 30px;
+      border-radius: $rounded;
+      border: 1px solid #ddd;
+      background-color: #ffffff;
+      >h3{
+        text-align: right;
+        font-family: $fontFamilyBold;
+        color: $secondColor;
+        font-size: 28px;
+      }
+      .main_price{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        p{
+          color: $secondColor;
+          font-size: 24px;
+          margin: 0;
+        }
+        h3{
+          color: $mainColor;
+          font-size: 45px;
+          font-weight: 800;
+        }
+      }
+      .box_price{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+        >div{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          p{
+            color: #6c6c6c;
+            text-align: center;
+            font-size: 22px;
+            margin: 0;
+          }
+          h3{
+            color: $secondColor;
+            font-size: 30px;
+            text-align: center;
+            font-family: $fontFamilyBold;
+            margin: 0;
+          }
+          span{
+            color: #6c6c6c;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .AdvancedInstallmentCalculatorBox{
+    display: none;
+    >h2{
+      color: $secondColor;
+      font-size: 28px;
+      font-family: $fontFamilyBold;
+      margin-bottom: 30px;
+    }
+    >div{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: 30px;
+      >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p , h6.title-2{
+          font-size: 18px;
+          color: #6c6c6c;
+          margin-bottom: 10px;
+        }
+        h6.title-2{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          >div{
+            border: 1px solid #ddd;
+            padding: 2px;
+            border-radius: $rounded;
+            color: #333;
+            button{
+              border: none;
+              outline: none;
+              padding: 5px;
+              border-radius: $rounded;
+              font-size: 12px;
+              color: #333;
+              background-color: transparent;
+              cursor: pointer;
+              &.active{
+                background-color: $mainColor;
+                color: #fff;
+              }
+            }
+          }
+        }
+        >input , .anAmount > input{
+          border: 1px solid #ddd;
+          width: 100%;
+          padding: 0 25px;
+          height: 47px;
+          border-radius: $rounded;
+          background: #fff;
+          font-family: $fontFamilyBold;
+          color: #333;
+          font-size: 14px;
+          &:focus{
+            border: 1px solid #ddd;
+            outline: none;
+          }
+        }
+        .plus_minus_box{
+          border: 1px solid #ddd;
+          padding: 0 25px;
+          height: 47px;
+          border-radius: $rounded;
+          background: #fff;
+          font-family: $fontFamilyBold;
+          color: #333;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          >i {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: $rounded;
+            border: 1px solid #ddd;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            svg{
+              width: 15px;
+              height: 15px;
+              fill: #333;
+            }
+            &:hover{
+              background: #f3f3f3;
+            }
+          }
+        }
+        .anAmount{
+          display: none;
+        }
+      }
+      .Main_AdvancedInstallmentCalculatorBtn{
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid $mainColor;
+        padding: 12px 25px;
+        border-radius: $rounded;
+        background: $mainColor;
+        font-family: $fontFamilyBold;
+        color: #fff;
+        font-size: 14px;
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover , &.active{
+          background: #f1f1f1;
+          color: #666;
+        }
+      }
+    }
+  }
+  .AdvancedInstallmentCalculatorBox_response_hide{
+    display: none;
+  }
+  .AdvancedInstallmentCalculatorBtn__close{
+    display: none;
+  }
+  .AdvancedInstallmentCalculatorBox_response{
+    padding: 30px;
+    border-radius: $rounded;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    div{
+      h2{
+        text-align: right;
+        font-size: 18px;
+        font-weight: 700;
+        color: $mainColor;
+      }
+      div{
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        h3{
+          color: $secondColor;
+          font-size: 30px;
+          margin: 0;
+          font-family: $fontFamilyBold;
+          text-align: center;
+        }
+        span{
+          color: #6c6c6c;
+          font-size: 24px;
+          font-weight: 300;
+          text-align: center;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  .AdvancedInstallmentCalculatorBtn{
+    margin: 2rem auto 0 auto;
+    cursor: pointer;
+    border: 1px solid $mainColor;
+    padding: 12px 25px;
+    border-radius: $rounded;
+    background: $mainColor;
+    font-family: $fontFamilyBold;
+    color: #fff;
+    font-size: 14px;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover , &.active{
+      background: #f1f1f1;
+      color: #666;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .installmentCalculator_box_div2{
+    margin-bottom: 2rem !important;
+    margin-top: 1rem !important;
+  }
+  .installmentCalculator .AdvancedInstallmentCalculatorBox>div{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .installmentCalculator .AdvancedInstallmentCalculatorBox_response{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .installmentCalculator .AdvancedInstallmentCalculatorBox_response div div h3 {
+    font-size: 20px;
+  }
+  .installmentCalculator .AdvancedInstallmentCalculatorBox_response div div span{
+    font-size: 16px;
+    line-height: inherit;
+  }
+  .installmentCalculator .AdvancedInstallmentCalculatorBox_response div h2{
+    margin: 0;
+  }
+}
+@media (max-width: 545px) {
+  .installmentCalculator .AdvancedInstallmentCalculatorBox>div{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+
+
+
+
+
+
+
+

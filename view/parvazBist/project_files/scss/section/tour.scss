@@ -1,0 +1,195 @@
+@import "../components/variables";
+@import "../components/mixin";
+.owl-tour {
+  width:100%;
+  >div,
+  >div>div,
+  >div>div>.owl-item,
+  >div>div>.owl-item>.item {
+    height:100%;
+  }
+  >div>div>.owl-item>.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+    a{
+      overflow: hidden;
+      border-radius: $rounded;
+      border: 1px solid #d2d2d275;
+      transition: all .3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      .img_box{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        img{
+          transition: all .3s;
+          width: 100%;
+          object-fit: cover;
+          height: 300px;
+        }
+        .price{
+          position: absolute;
+          top: 20px;
+          padding: 8px 16px;
+          right: 0;
+          background: #fd4561;
+          span{
+            font-size: 14px;
+            font-family: $fontFamilyBold;
+            color: #fff;
+            span{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .text_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px 15px;
+        padding-top: 2.5rem!important;
+        h3{
+          font-size: 17px;
+          font-family: $fontFamilyBold;
+          margin-bottom: 1rem;
+          color: #333;
+        }
+        .calendar{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span{
+            font-size: 14px;
+            font-family: $fontFamilyBold;
+            margin-bottom: .2rem;
+            color: #333;
+          }
+        }
+        p{
+          color: #333;
+          font-size: 14px;
+          font-family: $fontFamilyBold;
+          text-align: justify;
+          margin: 0;
+
+          overflow: hidden;
+          height: 63px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+      &:hover{
+        box-shadow: 4px 14px 28px rgba(0,0,0,.1);
+        .img_box img{
+          transform: scale(1.1);
+        }
+      }
+      .bluBox{
+        position: absolute;
+        top: 280px;
+        width: 90%;
+        margin: auto;
+        background: $mainColor;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        border-radius: $rounded;
+        div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 0;
+          gap: 8px;
+          svg{
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+          }
+          h6{
+            margin: 0;
+            font-size: 14px;
+            font-family: $fontFamilyBold;
+            color: #fff;
+          }
+        }
+      }
+      .button-group-tour {
+        width: 100%;
+        display: flex;
+        button{
+          width: 100%;
+          border: none;
+          border-top: 1px solid #ddd;
+          padding: 15px 0;
+          color: #333;
+          font-size: 14px;
+          background: #f0f0f0;
+          border-radius: 0 0 $rounded $rounded;
+          font-family: $fontFamilyBold;
+          @include flex-center-all;
+          gap: 10px;
+          cursor: pointer;
+          svg{
+            @include width_height(15px)
+          }
+        }
+      }
+    }
+  }
+}
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px
+}
+.owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px
+}
+.owl-dots .owl-dot:hover span,.owl-dots .owl-dot.active span {
+  background: $mainColor
+}
+.owl-nav>.owl-next {
+  right: 0 !important;
+}
+.owl-nav>.owl-prev {
+  left: 0 !important;
+}
+.owl-nav>button>svg {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+}
+.owl-nav>button {
+  outline: none;
+  height: 54px !important;
+  width: 54px !important;
+  transition: all .3s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  border: 2px solid #fff !important;
+  position: absolute;
+  background-color: #FFF !important;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-200%);
+}

@@ -1,0 +1,678 @@
+/*------------------------------------------------------max-width -1200------------------------------*/
+@media screen and (max-width: 1200px)
+{
+	.txt30{
+		font-size: 20px;
+	}
+
+	footer p.txt14{
+		font-size: 12px;
+	}
+	.tour-det, .tour-det2 {
+	    width: 100%;
+	    margin-left: 0px;
+	}
+	.txt28{
+		font-size: 20px;
+	}
+	.toor .grid{
+		height: 260px;
+	}
+	.hotel-wrapper .grid {
+	    height: 260px;
+	}
+	.hotel-wrapper .grid figure figcaption{
+	    padding: 1em;
+	}
+	header {
+	    width: 100%;
+	    margin: 0;
+	}
+	.logo-title {
+	    padding: 10px 0px 10px 0;
+	    margin-left: 0;
+	
+	}
+	
+	.top-tell a{
+	    margin-top: 0;
+	}
+	ul.mainMenu > li{
+	    margin: 0 10px;
+	}
+	.top-tell {
+	    float: right;
+	    margin-top: 30px;
+	}
+	
+	.a-i-text h6 {
+	    font-size: 22px;
+	    margin: 8px auto;
+	}
+	 form .container{
+	    max-width: 1000px;
+	
+	}
+	.switch-field label{
+	    line-height: 30px;
+	    font-size: 10px;
+	}
+	.en{
+	    right: 25px;
+	}
+
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------max-width -991------------------------------*/
+@media screen and (max-width: 991px)
+{
+
+footer p.txt14{
+	font-size: 14px;
+}
+.tour-det, .tour-det2 {
+    width: 100%;
+    margin-left: 0px;
+}
+.tour-det h3 {
+    font-size: 20px;
+}
+.tour-det p{
+	font-size: 12px;
+}
+.txt28{
+	font-size: 20px;
+}
+
+.fix-logo-wrapper{
+	width: 160px;
+}
+.fix-title h1 {
+    font-size: 10px;
+}
+/*ul.mainMenu {
+    width: calc(100% - 160px);
+}*/
+.grid {
+    height: 150px;
+}
+.copyright{
+	margin-top: 0;
+}
+.hotel-wrapper .grid {
+    height: 200px;
+}
+.hotel-wrapper .grid figure figcaption{
+    padding: 10px;
+}
+figure.effect-julia h2{
+    font-size: 22px;
+}
+.footer-logo{
+    width: 32%;
+    margin-bottom: 0;
+}
+.copyrights{
+    text-align: center;
+}
+ul.mainMenu > li{
+    margin:0 5px;
+}
+.logo {
+    width: 90px;
+    height: 50px;
+
+}
+.logo-title a h1 {
+    font-size: 12px;
+}
+.top-tell {
+    float: right;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 0;
+}
+.mainMenuContainer {
+    margin-top:25px;
+}
+ul.mainMenu > li ul.subMenu li a {
+    width: 100%;
+    float: right;
+    font-size: 12px;
+    text-align: right;
+    padding: 0px 20px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    background: #363636;
+    transition: all 0.1s ease-out;
+    box-sizing: border-box;
+    border-bottom: 1px solid #555;
+}
+.has-menu::before{
+    left: -5px;
+    top: 10px;
+}
+header .container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.hotel-wrapper .container{
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.about-item{
+    padding: 0 10px;
+}
+.about-item-box {
+    padding: 10px;
+        height: 350px;
+}
+.yahoo-icon a img {
+     width: auto; 
+}
+.yahoo-icon {
+    text-align: center;
+}
+.chatbox{
+    margin: 5px 4%;
+}
+.top-tell a {
+    font-size: 11px;
+        margin-right: 40px;
+}
+.search-box .col-md-2{
+padding-left:5px;
+padding-right: 5px;
+}
+.en {
+    width: 27px;
+    height: 27px;
+    line-height:30px;
+    right: 10px;
+    top: 30px;
+}
+#g-map{
+    margin-bottom: 10px;
+}
+.search-box2 .container{
+    width: 90%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------max-width-767---------------------------------*/
+@media screen and (max-width:767px) {
+
+.txt30{
+	font-size: 24px;
+}
+.txt24{
+	font-size: 20px;
+}
+.txt20{
+	font-size: 18px;
+}
+
+
+
+ul.mainMenu > li > a:hover {
+    cursor: pointer;
+}
+ul.mainMenu > li ul.subMenu li a:hover{
+	cursor: pointer;
+}
+
+
+a.mobMenu{
+    background-color: #ca1325;
+    line-height: 40px;
+    color: #fff;
+}
+
+.tour-det{
+    width: 100%;
+}
+/*
+.toor{
+    margin: 15px auto;
+    width: 70%;
+    float: none;
+}
+*/
+.mainMenuContainer{
+	top: 0;
+	position: relative;
+}
+.slider-caption{
+	font-size: 30px;
+}
+
+.mainMenuContainer{
+	background: #fbc02d;
+    border-bottom: none;
+        width: 100%;
+    margin: 10px 0 0 ;
+}
+ul.mainMenu > li{
+    border-bottom: 1px solid #fcf350;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+ul.mainMenu > li > ul.subMenu a span {
+    padding-left: 5px;
+    display: inline-block;
+}
+
+.has-menu:before{
+	display: none;
+}
+.fix-logo-wrapper{
+	display: none;
+}
+ul.mainMenu {
+    width: 100%;
+}
+ul.mainMenu > li ul.subMenu li a {
+    color: #121212;
+    background: #ffca28;
+    border-bottom: 1px solid #FF9800;
+}
+.grid {
+    height: 200px;
+}
+.tour-det h3 {
+    font-size: 24px;
+}
+.tour-det p {
+    font-size: 14px;
+}
+.about{
+    width: 80%;
+}
+.hotel-wrapper .grid {
+    height: 280px;
+}
+.hotel-wrapper .grid figure figcaption{
+    padding: 16px;
+}
+figure.effect-julia h2{
+    font-size: 26px;
+}
+header {
+    position: relative;
+    background: #363636;
+        overflow: hidden;
+}
+.top-tell {
+    float: right;
+    width: auto;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 45px;
+    margin-top: 0;
+}
+.about-item {
+    padding: 0 20px;
+    width: 70%;
+    float: none;
+    margin: 60px auto;
+}
+.about-item-box {
+    height: 285px;
+}
+.yahoo-icon a img {
+    width: 100%;
+    margin: auto;
+}
+.footer-logo {
+    width: 40%;
+}
+.top-tell a {
+    font-size: 14px;
+    margin-right: 50px;
+}
+.logo-title {
+    margin-left: 5px;
+}
+.camera_caption{
+    bottom: 5%;
+}
+#gallery > div{
+    /*top: 152px;*/
+    height: 100%;
+    width: 100%;
+}
+#gallery > span.next-slide,#gallery > span.prev-slide{
+    display: none;
+}
+.switch-field label {
+    line-height: 30px;
+    font-size: 10px;
+    flex-grow: 1;
+}
+.ex-form{
+    height: 400px
+}
+.search-box .txt-input, .search-box .btn-input {
+    padding: 0 5px;
+}
+.search-box .container{
+    width: 90%;
+}
+.OpenerBox{
+    height: 100%;
+}
+.en {
+    width: 32px;
+    height: 32px;
+    line-height: 35px;
+    right: 15px;
+    top: 45px;
+}
+
+
+}
+
+
+
+
+/*------------------------------------------max-width-544------------------------------*/
+@media screen and (max-width: 544px)
+{
+	
+	.hotel-wrapper{
+		height: auto;
+	}
+	.hotel-wrapper .row>div{
+	margin: 20px auto;
+	}
+
+	.toor{
+		margin: 20px auto;
+        width: 100%;
+	}
+
+.tour-det, .tour-det2 {
+    width: 100%;
+   margin: 0 auto;
+}
+
+.txt28{
+	font-size: 18px;
+}
+
+.customer-radio{
+	font-size: 11px;
+}
+.popUpContent input {
+   
+    font: normal 12px 'IranSansLight';
+ 
+}
+
+.slider-caption {
+        position: absolute;
+    top: 500px;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 40px;
+    background: rgba(0,0,0,.5);
+    padding: 25px 40px;
+}
+
+.grid {
+    height: 250px;
+}
+.hotel-wrapper .grid {
+    height: 250px;
+}
+
+.mainMenuContainer{
+	border: none;
+}
+.toor .grid {
+    height: 300px;
+}
+.about{
+    width: 85%;
+}
+.hotel-wrapper .grid {
+    height: 320px;
+}
+.hotel-wrapper .grid figure figcaption{
+    padding: 16px;
+}
+figure.effect-julia h2{
+    font-size: 26px;
+}
+.contact p, .footer-list p,.footer-list li, .chat p{
+    text-align: center;
+}
+.chatbox {
+    margin: 5px 4%;
+}
+.right-footer,.footer-list,.contact{
+    margin-bottom: 30px;
+}
+.bottom-footer {
+    margin-top: 30px;
+}
+
+.TrcBox{
+    width: 100%;
+}
+.footer-logo {
+    width: 30%;
+    margin-bottom: 0;
+}
+.about-item {
+    width: 100%;
+}
+.camera_caption > div>p{
+   font-size: 12px;
+    width: 230px;
+}
+.top-tell a {
+    font-size: 11px;
+    margin: 0 auto
+}
+.top-tell {
+    margin: auto;
+    float: none;
+    text-align: center;
+    padding: 0;
+        width: 120px;
+}
+.ex-form {
+    height: 300px;
+}
+.search-box .container{
+    flex-wrap: wrap;
+}
+.logo-title {
+    float: none;
+}
+.en {
+    right: 75px;
+    top: 97px;
+}
+
+#gallery{
+    height: 400px !important;
+}
+.search-box2 .container{
+    width: 100%;
+    box-sizing: border-box;
+}
+.search-box2 .txt-input, .search-box2 .btn-input {
+    padding: 0 5px;
+}
+
+
+}
+
+
+
+
+
+/*------------------------------------------------col-ss -max-width-350----------------------------------------*/
+@media screen and (max-width: 350px) { 
+
+.col-ss-1, .col-ss-2,
+.col-ss-3, .col-ss-4,
+.col-ss-5, .col-ss-6,
+.col-ss-7, .col-ss-8,
+.col-ss-9, .col-ss-10,
+.col-ss-11, .col-ss-12 {
+    float: right;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-ss-6 {
+    width: 50%;
+}
+.col-ss-12
+{
+    width: 100%;
+
+}
+
+.txt28{
+	font-size: 14px;
+}
+.tour-det, .tour-det2 {
+    width: 100%;
+   margin: 0 auto;
+}
+
+
+.tour-det h3 {
+    font-size: 20px;
+}
+.toor .grid {
+    height: 200px;
+}
+
+.about{
+    width: 90%;
+}
+
+
+/*.logo-title a h1 {
+    font-size: 18px;
+}*/
+.under-title span{
+	width: 120px;
+}
+.grid {
+    height: 180px;
+}
+.toor{
+	padding: 0;
+}
+.main-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.hotel-wrapper .grid {
+    height: 200px;
+}
+.col-xs-12{
+	padding: 0;
+}
+.TrcBox{
+    width: 100%
+}
+.logo-title {
+    display: inline-block;
+    float: none;
+    padding: 10px 0;
+    margin: 0;
+}
+.top-tell {
+    float: none;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+.about-item {
+    width: 100%;
+    padding: 0 10px;
+}
+.about-item-box {
+    height: 350px;
+}
+.c-title a{
+    font-size: 20px;
+
+}
+.c-comment{
+    /*width: 200px;*/
+
+}
+#gallery > div{
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+#gallery{
+    height: 300px !important;
+}
+.search-box .col-md-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 80%;
+    margin: 8px 10%;
+}
+.en {
+    right: 30px;
+    top: 110px;
+}
+.search-box2 .container {
+
+    flex-wrap: wrap;
+}
+
+
+
+}
+
+
+
+ 

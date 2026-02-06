@@ -1,0 +1,375 @@
+
+@media screen and (max-width:1200px) {
+    #hotel-sec .hotel-item .hotel-item-thumb img {
+    height: 100%;
+  }
+  header.scrolled {
+    height: 70px;
+  }
+  header.scrolled .mainnav > ul > li {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+  header .mainnav > ul > li {
+    display: inline-block;
+    padding: 0px 6px 0px 6px;
+  }
+  header .mainnav > ul > li > a {
+    font-size:12px;
+  }
+  header .mainnav ul li.has-sub .submenu ul li a {
+    font-size:12px;
+  }
+  .megasub ul li a {
+    font-size:12px;
+  }
+  header {
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 80%,rgba(0,0,0,0) 100%);
+  }
+  .property-sec-inner {
+    padding: 0px 40px;
+    display: block;
+  }
+  #searchbox-sec #pills-tab li a {
+    min-width: 10px;
+  }
+  header nav .main_nav_col {
+    flex-wrap: wrap; 
+  }
+  header nav  .logo {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  header.scrolled nav  .logo {
+    display: none;
+  }
+  header nav  .logo img {
+    margin: auto;
+  }
+  #searchbox-sec .searchbox-inner {
+    padding: 15px 5px;
+  }
+  #searchbox-sec .searchbox-tabs {
+    padding:20px 10px;
+  }
+  #tours-box .row > div {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+}
+@media screen and (max-width:992px) {
+
+  .header-search {
+    display: none !important;
+  }
+  #searchbox-sec #pills-tab li {
+    margin-bottom: 15px;
+  }
+  #searchbox-sec #pills-tab li:nth-child(7) , #searchbox-sec #pills-tab li:nth-child(8) {
+    margin-bottom: 0px;
+  }
+  header nav .logo {
+    flex: 0 0 100%;
+    text-align: right;
+  }
+  .slider-inner {
+    display: none;
+  }
+  #slider-sec .site-slider img {
+    min-height: 500px;
+  }
+  #slider-sec .site-slider > .carousel-inner .carousel-caption {
+    top:initial;
+    bottom: 160px;
+  }
+  #searchbox-sec .hotel-tab .search_item, #searchbox-sec .khalkhal-tab .search_item {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 20px;
+}
+  #searchbox-sec .bime-tab .search_item {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom:10px;
+}
+  .nafaratbime {
+    flex: 0 0 100%;
+  }
+  .btn-pc {
+    display: none;
+  }
+  .btn-mob {
+    display: block !important;
+  }
+  .nafaratbime .search_item {
+    flex:0 0 25% !important;
+  }
+  #searchbox-sec .visa-tab .search_item {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 20px;
+}
+  #hotel-sec .hotel-item .hotel-item-thumb {
+    flex: 0 0 150px;
+  }
+  .tour-item {
+    margin-bottom: 15px;
+  }
+    #about-sec .row > div:nth-child(2) {
+      order:2;
+  }
+    #about-sec .row > div:nth-child(3) {
+    order:1;
+  }
+  .khalkhal-info {
+    margin-top:50px;
+  }
+  .khalkhal-gallery img {
+    width:85% !important;
+    margin: auto;
+    height: 240px;
+    object-fit: cover;
+  }
+  .hamburger {
+    width: 35px;
+    height: 35px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDM0NC4zMzkgMzQ0LjMzOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzQ0LjMzOSAzNDQuMzM5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8Zz4KCQkJPHJlY3QgeT0iNDYuMDYiIHdpZHRoPSIzNDQuMzM5IiBoZWlnaHQ9IjI5LjUyIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3JlY3Q+CgkJPC9nPgoJCTxnPgoJCQk8cmVjdCB5PSIxNTYuNTA2IiB3aWR0aD0iMzQ0LjMzOSIgaGVpZ2h0PSIyOS41MiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iI2ZmZmZmZiI+PC9yZWN0PgoJCTwvZz4KCQk8Zz4KCQkJPHJlY3QgeT0iMjY4Ljc0OCIgd2lkdGg9IjM0NC4zMzkiIGhlaWdodD0iMjkuNTMxIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3JlY3Q+CgkJPC9nPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+    background-size:contain;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    cursor: pointer;
+    bottom: 0px;
+    margin: auto;
+  }
+  header.scrolled nav .logo {
+    display: block;
+}
+  .mainnav {
+    position: fixed;
+    width: 245px;
+    height: 100%;
+    background: white;
+    overflow-x: hidden;
+    float: right;
+    right: -245px;
+    top: 0;
+    opacity: 1;
+    padding: 0px 10px;
+    padding-top: 0px;
+    z-index: 999999;
+    padding-top: 15px;
+}
+  .mainnav > ul {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+}
+  header .mainnav > ul > li {
+    flex: 0 0 100%;
+    padding: 10px 0px 10px 00px !important;
+    line-height: 30px;
+    border-bottom: 1px solid #eaeaea;
+}
+  header .mainnav > ul > li a {
+    color:#363636;
+    background: none;
+    margin-left: 30px;
+    width: calc(100% - 30px);
+    display: block;
+  }
+  header .mainnav > ul > li.has-sub a:before {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    content: "";
+    left: -20px;
+    top:0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 2.5px;
+    background-size:9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDUxLjg0NyA0NTEuODQ3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEuODQ3IDQ1MS44NDc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMjI1LjkyMywzNTQuNzA2Yy04LjA5OCwwLTE2LjE5NS0zLjA5Mi0yMi4zNjktOS4yNjNMOS4yNywxNTEuMTU3Yy0xMi4zNTktMTIuMzU5LTEyLjM1OS0zMi4zOTcsMC00NC43NTEgICBjMTIuMzU0LTEyLjM1NCwzMi4zODgtMTIuMzU0LDQ0Ljc0OCwwbDE3MS45MDUsMTcxLjkxNWwxNzEuOTA2LTE3MS45MDljMTIuMzU5LTEyLjM1NCwzMi4zOTEtMTIuMzU0LDQ0Ljc0NCwwICAgYzEyLjM2NSwxMi4zNTQsMTIuMzY1LDMyLjM5MiwwLDQ0Ljc1MUwyNDguMjkyLDM0NS40NDlDMjQyLjExNSwzNTEuNjIxLDIzNC4wMTgsMzU0LjcwNiwyMjUuOTIzLDM1NC43MDZ6IiBmaWxsPSIjMDAwMDAwIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    background-color:#e4e4e4;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    transition: all ease 0.3s;
+    opacity: 0.5;
+  }
+   header .mainnav > ul > li.has-sub.open-sub a:before { 
+      transform:rotate(0deg);
+     
+  }
+  header .mainnav ul li.has-sub:hover .submenu , .mainnav ul li.has-sub:hover .megasub {
+    transition:0s ;
+    visibility: hidden;
+    opacity: 0;
+    top:initial;
+  }
+  .mainnav ul li.has-sub.open-sub .megasub ,   .mainnav ul li.has-sub.open-sub .submenu {
+    position: relative;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: initial;
+    box-shadow: none;
+    right: initial !important;
+    top: initial !important;
+    background: #eaeaea;
+    margin-top: 10px;
+  }
+  .mainnav ul li.has-sub.open-sub .megasub li {
+    margin: 10px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .mainnav ul li.has-sub.open-sub .megasub ul {
+    flex-wrap: wrap;
+    background:none;
+  }
+  .megasub ul li.title {
+    padding-top:0px !important;
+    margin-top:0px !important;
+  }
+}
+@media (min-width: 767px) {
+
+  .irtech__{ text-align: left}
+}
+@media screen and (max-width:768px) {
+
+ .change-lang {
+    display: none !important;
+  }
+  .register-nazar a {
+    top:20px;
+    left: 0px;
+  }
+  #safarname-sec .safarname-item .safarname-item-info {
+    padding: 13px;
+  }
+  .footer-bot * {
+    text-align: center !important;
+  }
+  .footer-bot .row > div {
+    margin-bottom:10px;
+  }
+  .footer-about {
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 20px;
+  }
+  #searchbox-sec .search_item {
+   flex: 0 0 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  #searchbox-sec #pills-tab {
+    justify-content: space-between;
+  }
+  #khalkhal-sec span {
+    margin-top: 60px;
+    font-size: 40px;
+  }
+  #searchbox-sec #pills-tab li {
+    flex: 0 0 48% !important;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #searchbox-sec #pills-tab li a {
+    margin:0  auto;
+    height: 87px;
+  }
+  footer .footer-newslatter form {
+   flex-wrap:wrap;
+  }
+  #searchbox-sec .searchbox-tabs {
+    padding-top:0px
+  }
+footer .footer-newslatter form > div {
+  flex:0 0 calc(50% - 10px);
+  margin-bottom: 10px;
+  margin-left:10px;
+  }
+footer .footer-newslatter form > div input {
+    border-left: 1px solid #d1d1d1;
+  border-radius: 4px;
+}
+footer .footer-newslatter form > div:last-child {
+    margin:0 auto;  
+  }
+footer .footer-newslatter form > div button {
+    height: 42px;
+    line-height: 43px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  #property-sec .property-tabs ul {
+    flex-wrap: wrap;
+  }
+  #property-sec .property-tabs ul li {
+    flex: 0 0 25%;
+    margin-bottom: 5px;
+}
+    #property-sec .property-tabs ul li a {
+    border:1px solid #ececec;
+      margin:0px 5px;
+}
+}
+@media screen and (max-width:576px) {
+footer .code-peygiri {
+    border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+  
+  #property-sec .property-tabs ul {
+    justify-content: center;
+  }
+  #property-sec .property-tabs ul li {
+    flex: 0 0 33%;
+    margin-bottom: 5px;
+}
+  .safarname-carousel-outer {
+    padding:0px 30px;
+  }
+  header.scrolled nav .logo img {
+    top: -3px;
+  }
+  #about-sec .khalkhal-info div {
+    flex-wrap: wrap;
+  }
+  #about-sec .khalkhal-info div a:first-child {
+    margin-bottom:20px;
+  }
+  #tour-sec .col-md-12 p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .tours-box ul li a {
+    border: 1px solid #d7975b;
+    padding: 10px 20px;
+  }
+  .section-title h3 {
+    font-size:28px;
+  }
+  #tour-sec .tour-item .tour-item-thumb img { 
+    width: 100% !important;
+    height: 250px;
+    object-fit: cover;
+    }
+}
+@media screen and (max-width:400px) {
+  .user_box{ margin-right: 5px !important;}
+    #property-sec .property-tabs ul li {
+    flex: 0 0 50%;
+    margin-bottom: 5px;
+}
+  
+
+}
+@media (max-width:1400px) and ( min-width: 990px) {
+  header nav .mainnav > ul{ justify-content: center;}
+
+}

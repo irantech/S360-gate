@@ -1,0 +1,703 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1240px;
+  }
+}
+
+body{
+  overflow-x: hidden;
+  direction: rtl;
+  padding: 0;
+  background: #fff !important;
+  line-height: 24px;
+  text-align: right;
+  color: #4b5259 !important;
+  font-family: $fontFamily;
+}
+
+//banner-kanoun
+.banner-kanoun{
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 98px);
+  min-height: 500px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+
+  .owl-banner-kanoun{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+      position: absolute;
+      inset: 0;
+    }
+    .banner-text-kanoun{
+      @include flex-direction-colum();
+      gap: 14px;
+      position: relative;
+      z-index: 2;
+
+      h5{
+        margin-bottom: 0;
+        color: #fff;
+        position: relative;
+        font-family: $fontFamilyBold;
+        font-size: 22px;
+      }
+      h2{
+        margin-bottom: 0;
+        color: #fff;
+        font-family: $fontFamily;
+        font-size: 40px;
+        transition: $transition;
+      }
+    }
+  }
+  .owl-stage-outer {
+    height: 100%;
+  }
+  .owl-stage-outer .owl-stage {
+    height: 100%;
+  }
+  .owl-stage-outer .owl-stage .owl-item {
+    height: 100%;
+  } .owl-stage-outer .owl-stage .owl-item .item {
+    height: 100%;
+   @include flex-center-all();
+  }
+}
+
+//title
+.title-kanoun{
+  @include flex-between();
+  align-items: end;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed $secondColor;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 2;
+
+  .text-title-kanoun{
+    @include flex-direction-colum();
+    gap: 10px;
+
+    h2{
+      font-family: $fontFamilyBold;
+      color: #333;
+      margin-bottom: 0;
+      font-size: 30px;
+    }
+    p{
+      color: rgba(74, 74, 74, 0.58);
+      font-size: 18px;
+      margin-bottom: 0;
+      font-family: $fontFamily;
+    }
+  }
+  .more-title-kanoun {
+    font-size: 16px;
+    color: #fff;
+    width: auto;
+    transition: $transition;
+    font-family: $fontFamily;
+    @include flex-center-all();
+    gap: 9px;
+    background: $mainColor;
+    border-radius: 20px;
+    padding: 7.9px 15px;
+
+    svg{
+      width: 10px;
+      fill: #fff;
+      transition: $transition;
+    }
+
+    &:hover{
+      color: #fff;
+      text-decoration: none;
+      background: $secondColor;
+    }
+    &:hover svg{
+      fill: #fff;
+    }
+  }
+}
+
+//owl-dots Global
+.owl-theme .owl-dots {
+  @include flex-center-all();
+  margin-top: 20px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 9px;
+  height: 9px;
+  margin: 5px 7px;
+  background: #c2c3c3;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $secondColor;
+}
+
+//owl-nav Global
+.owl-nav span{
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 7em;
+  border: 1px solid #333;
+  transition: all ease .3s;
+  color: #333;
+
+  &:hover{
+    background: $secondColor;
+    color: #fff;
+    border-color: $secondColor;
+  }
+}
+.owl-nav .owl-prev span {
+  position: absolute;
+  right: -20px;
+  top: 30%;
+}
+.owl-nav .owl-next span {
+  position: absolute;
+  left: -20px;
+  top: 30%;
+}
+
+
+//tour-kanoun
+.tour-kanoun{
+  padding: 0 0 80px;
+
+  .parent-ul-tour {
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+    #pills-tab {
+      padding-right: 0;
+      gap: 20px;
+
+     .nav-link {
+        border: 1px solid $mainColor;
+        color: $mainColor;
+        padding: 10px 30px;
+        border-radius:20px;
+        transition: $transition;
+        font-size: 18px;
+        font-family: $fontFamily;
+        background: rgba(0,0,0,0);
+
+       &.active{
+         background: $mainColor;
+         color: #fff;
+         border-color: $mainColor;
+       }
+      }
+    }
+  }
+
+  .link-parent{
+    width: 100%;
+    @include flex-direction-colum();
+    gap: 10px;
+    transition: $transition;
+    color: #444;
+
+    &:hover{
+      text-decoration: none;
+    }
+    &:hover img{
+      filter: brightness(120%) !important;
+    }
+
+    .parent-img-tour{
+      width: 100%;
+      height: 270px;
+      overflow: hidden;
+      border-radius: $rounded;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+        transition: $transition;
+      }
+    }
+    .parent-text-owl{
+      @include flex-direction-colum();
+      align-items: flex-start;
+      padding: 0 5px;
+      gap: 8px;
+
+      h2{
+        font-size: 22px;
+        color: #222222;
+        font-family: $fontFamilyBold;
+        margin-bottom: 0;
+      }
+      .money-tour-tab{
+        @include flex-center-all();
+        gap: 5px;
+        color: #444;
+        .color-toman{
+          color: #1e7e34;
+          font-size: 18px;
+          font-family: $fontFamilyBold;
+        }
+
+        i{
+          margin-left: 3px;
+        }
+      }
+      .money-calendar-tab{
+        @include flex-center-all();
+        gap: 5px;
+
+        i{
+          margin-left: 3px;
+        }
+      }
+      .parent-rating{
+        @include flex-center-all();
+        gap: 5px;
+
+        span{
+          color: #555;
+          font-size: 14px;
+        }
+        .rating-stars{
+          @include flex-center-all();
+          gap: 3px;
+
+          svg{
+            width: 16px;
+            fill: #ffa700;
+          }
+        }
+      }
+      .night{
+        @include flex-center-all();
+        gap: 5px;
+      }
+      .btn-tour-tab{
+        padding: 4px 12px;
+        border-radius: 20px;
+        background: $mainColor;
+        transition: $transition;
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+        color: #fff;
+        font-size: 14px;
+        margin-right: auto;
+
+        &:hover{
+          background: $secondColor;
+        }
+      }
+    }
+  }
+}
+
+//special-tours-kanoun
+.special-tours-kanoun{
+  padding: 0 0 80px;
+
+  .parent-special-tours-paeiz{
+    @include grid-style(3,30px,30px);
+
+    .items-special-tours-paeiz{
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: right;
+      padding: 20px;
+      border-radius: $rounded;
+      overflow: hidden;
+      transition: $transition;
+      height: 500px;
+
+      &:hover{
+        text-decoration: none;
+      }
+      &:hover img{
+        transform: scale(1.1);
+      }
+
+      &::after{
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent), to(rgba(15, 15, 15, 0.75)));
+        background: -webkit-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.99) 100%);
+        background: -o-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+        background: linear-gradient(top bottom, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+        position: absolute;
+        height: 150%;
+        width: 100%;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        content: "";
+        transition: all ease .5s;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        transition: $transition;
+      }
+      .parent-text{
+        @include flex-direction-colum();
+        gap: 7px;
+        position: relative;
+        z-index: 2;
+
+        p{
+          color: #fff;
+          text-align: justify;
+          line-height: 23px;
+          font-size: 14px;
+          margin-bottom: 0;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          transition: all ease .5s;
+        }
+        .data-blog{
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          svg{
+            width: 14px;
+            fill: #fff;
+          }
+          span{
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+
+        h2{
+          color: #fff;
+          font-size: 22px;
+          margin-bottom: 0;
+          font-family: $fontFamilyBold;
+        }
+        h4{
+          color: #fff;
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .parent-special-tours2{
+    @include grid-style(1,30px,30px);
+
+    .items-special-tours2{
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: right;
+      padding: 20px;
+      border-radius: $rounded;
+      overflow: hidden;
+      transition: $transition;
+
+      &:hover{
+        text-decoration: none;
+      }
+
+      &:hover img{
+        transform: scale(1.1);
+      }
+
+      &::after{
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent), to(rgba(15, 15, 15, 0.75)));
+        background: -webkit-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.99) 100%);
+        background: -o-linear-gradient(top, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+        background: linear-gradient(top bottom, transparent 50%, rgba(15, 15, 15, 0.75) 100%);
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        content: "";
+        transition: all ease .5s;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        transition: $transition;
+      }
+      .parent-text{
+        @include flex-direction-colum();
+        gap: 7px;
+        position: relative;
+        z-index: 2;
+
+        p{
+          color: #fff;
+          text-align: justify;
+          line-height: 23px;
+          font-size: 14px;
+          margin-bottom: 0;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          transition: all ease .5s;
+        }
+
+        .data-blog{
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          svg{
+            width: 14px;
+            fill: #fff;
+          }
+          span{
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+        h2{
+          color: #fff;
+          font-size: 22px;
+          margin-bottom: 0;
+          font-family: $fontFamilyBold;
+        }
+        h4{
+          color: #fff;
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+//newsletter
+.newsletter {
+  padding: 0 0 70px ;
+  position: relative;
+}
+
+.parent-newsletter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  border-radius: $rounded;
+  border: 1px solid #DEDEDE;
+  overflow: hidden;
+  background: #FCFCFC;
+}
+
+.newsletter-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+.parent-text-newsletter {
+  height: 100%;
+  padding: 50px 40px;
+  background: #FCFCFC;
+}
+
+.parent-icon-newsletter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.parent-icon-newsletter i {
+  font-size: 90px;
+  color: #333;
+  padding-left: 30px;
+}
+
+.parent-icon-newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+  text-align: right;
+  color: #333;
+}
+
+.parent-icon-newsletter p {
+  font-size: 1rem;
+  text-align: right;
+  color: #333;
+}
+
+.form_newsletter > label > i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 20px;
+  transform: translateY(-50%);
+  color: #808080;
+}
+
+.form_newsletter > label > input {
+  padding-right: 37px;
+  border-radius: $rounded;
+  font-size: 16px;
+  height: 50px;
+  border: 1px solid #b5b5b5;
+  color: #b5b5b5;
+}
+
+.form_newsletter > label > a {
+  background: $mainColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: $rounded;
+  transition: all .3s;
+  border: 2px solid transparent;
+}
+
+.btn-newsletterMain:hover {
+  text-decoration: none;
+  border-color: $secondColor;
+  background: $secondColor;
+  color: #fff;
+}
+
+
+@media (max-width: 991px) {
+  .parent-special-tours-paeiz {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .items-special-tours-paeiz2 {
+    display: none !important;
+  }
+  .parent-newsletter {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .parent-newsletter .newsletter-item:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .banner-kanoun{
+    height: 800px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-kanoun .owl-stage-outer .owl-stage .owl-item .item{
+    align-items: flex-start;
+  }
+  .banner-kanoun .owl-banner-kanoun .banner-text-kanoun{
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .banner-kanoun .owl-banner-kanoun .banner-text-kanoun h5{
+    font-size: 16px;
+  }
+  .banner-kanoun .owl-banner-kanoun .banner-text-kanoun h2{
+    font-size: 22px;
+  }
+  .banner-kanoun{
+    height: unset;
+    min-height: 600px;
+  }
+  .title-kanoun .text-title-kanoun p{
+    display: none;
+  }
+  .title-kanoun .text-title-kanoun h2{
+    font-size: 20px;
+  }
+  .title-kanoun .more-title-kanoun{
+    font-size: 12px;
+    padding: 1px 7px;
+  }
+  .parent-special-tours-paeiz {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .special-tours-paeiz .parent-special-tours-paeiz .items-special-tours-paeiz {
+    height: 300px !important;
+  }
+  .special-tours-kanoun .parent-special-tours2 .items-special-tours2{
+    height: 300px;
+  }
+  .items-special-tours-paeiz2 {
+    display: flex !important;
+  }
+  .special-tours-kanoun .parent-special-tours-paeiz .items-special-tours-paeiz{
+    height: 300px;
+  }
+  .parent-text-newsletter{
+    padding: 10px !important;
+  }
+  .parent-icon-newsletter i{
+    font-size: 70px;
+    padding-left: 20px;
+  }
+  .parent-icon-newsletter h2{
+    font-size: 22px;
+  }
+  .parent-icon-newsletter p{
+    margin-bottom: 0;
+  }
+  .form_newsletter > label > input{
+    font-size: 14px;
+  }
+  .owl-nav .owl-next span{
+    left: -9px;
+  }
+  .owl-nav .owl-prev span{
+    right: -9px;
+  }
+}

@@ -1,0 +1,556 @@
+@font-face {
+    font-family: lalezar;
+    font-style: normal;
+
+    src: url('../../../assets/all-fonts/lalezar/Lalezar-Regular.ttf');
+    src: url('../../../assets/all-fonts/lalezar/Lalezar-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/lalezar/Lalezar-Regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/lalezar/Lalezar-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/lalezar/Lalezar-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: IranYekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../../assets/all-fonts/yekan/yekannumbers-regular.eot");
+    src: url("../../../assets/all-fonts/yekan/yekannumbers-regular.eot?#iefix") format("embedded-opentype"), url("../../../assets/all-fonts/yekan/yekannumbers-regular.woff") format("woff"), url("../../../assets/all-fonts/yekan/yekannumbers-regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: IranYekanb;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../../assets/all-fonts/yekan/iranyekanwebbold.eot");
+    src: url("../../../assets/all-fonts/yekan/iranyekanwebbold.eot?#iefix") format("embedded-opentype"), url("../../../assets/all-fonts/yekan/iranyekanwebbold.woff2") format("woff2"), url("../../../assets/all-fonts/yekan/iranyekanwebbold.woff") format("woff"), url("../../../assets/all-fonts/yekan/iranyekanwebbold.ttf") format("truetype")
+}
+@font-face {
+    font-family: IRANSansm;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../../assets/all-fonts/IRANSansWeb_Medium.eot');
+    src: url('../../../assets/all-fonts/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../assets/all-fonts/IRANSansWeb_Light.eot');
+    src: url('../../../assets/all-fonts/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../assets/all-fonts/IRANSansWeb.eot');
+    src: url('../../../assets/all-fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSansnum;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../../assets/all-fonts/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('../../../assets/all-fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/IRANSansWeb(FaNum)_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSansnum;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../assets/all-fonts/IRANSansWeb(FaNum).eot');
+    src: url('../../../assets/all-fonts/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../../assets/all-fonts/IRANSansWeb(FaNum).woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../../assets/all-fonts/IRANSansWeb(FaNum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../../assets/all-fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+body {
+    overflow-x: hidden;
+    font-family: IRANSansnum;
+    direction: rtl;
+    text-align: right;
+    background-color: #f5f5f5;
+}
+
+li {
+    list-style: none
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font: 17px/46px IRANSansnum;
+    direction: rtl;
+    color: #000;
+}
+h4 {
+    font: 15px/38px IRANSansnum;
+    direction: rtl;
+    color: #000;
+}
+h2,h3 {
+    font: 15px/38px IRANSansnum;
+    direction: rtl;
+    color: #000;
+}
+a{
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+    color: #cd5823;
+}
+.center-eleman{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.reserve_btn{
+    background: #23324c;
+    padding: 3px 10px;
+    color: #fff;
+    margin-right: auto;
+    border-radius: 3px;
+    transition: all ease .4s;
+
+}
+
+.reserve_btn:hover{
+    background: #23324cd5;
+    color:#fff;
+}
+
+.hover_tour {
+    opacity: 0;
+    transition: all ease .4s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 248px;
+    display: flex;
+    left: 0;
+    right: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.5);
+}
+.hover_tour > div{
+    width: 100%;
+    text-align: center;
+}
+.hover_tour .tour-name{
+    color:#fff;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-lastnews-item:hover .hover_tour{
+    opacity: 1;
+}
+
+.tourist .row2-kh{
+    position: relative;
+}
+.tour_card{
+    position: relative;
+    width: 25%;
+    height: 225px;
+    padding: 10px;
+
+}
+
+.tour_card:nth-child(3){
+    height: 450px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+}
+.tour_card:nth-child(4){
+    height: 450px;
+    right: 0;
+    bottom: 0;
+}
+.tour_card:nth-child(6){
+
+    position: absolute;
+    left: 0;
+    top: 225px;
+}
+.tour_card:nth-child(7){
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+}
+.tour_card_child{
+    height: 100%;
+}
+
+
+
+.tour_card a{
+    display: flex;
+
+}
+.tour_card a ,.tour_card a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/*-------------------- media ---------------------*/
+@media only screen and (max-width: 768px) {
+   .search_item{
+       width: 100%!important;
+       flex: 0 0 100%!important;
+       margin-bottom: 10px !important;
+   }
+}
+@media only screen and (max-width: 1390px) {
+    .icon-tourist2 {
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 1199px) {
+    .nav-brand {
+        display: block;
+    }
+    .hotel-logo-text2{
+        width: 50px!important;
+        height: 50px!important;
+    }
+    .nav-menu > li > a{
+        font-size: 11px!important;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .search {
+        bottom: 14%;
+        position: absolute;
+        z-index: 2;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .search-box .nav-pills .nav-link{
+        font-size:17px !important;
+        line-height: 50px !important;
+        margin-left: 22px !important;
+    }
+    .search-box .nav-pills .nav-link.active, .search-box .nav-pills .show > .nav-link{
+        padding: 0 12px !important;
+    }
+
+    .footer-network{width: 40%;}
+    .navigation-portrait .submenu-indicator {
+        height: 44px;
+        top: 0;
+        margin-top: 0;
+        position: absolute;
+        text-align: center;
+        z-index: 20000;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .bottom-parent-newsletter ,.bottom-parent-newsletter2{
+        display: none;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .nav-dropdown .submenu-indicator {
+        left: 0px;
+        top: -6px;
+    }
+    .menu-login{
+        margin-top:36px !important;
+    }
+    .nav-menu > li > a {
+        padding: 13px 16px 11px 26px !important;
+    }
+    .navigation-portrait .submenu-indicator {
+        text-align: center;
+    }
+    .navigation-portrait .nav-menu > li > a {
+        color: #000 !important;
+        font-family: IRANSansnum;
+        font-size: 13px !important;
+    }
+    .nav-menu > li:hover > a, .nav-menu > li.active > a, .nav-menu > li.focus > a {
+        color: #000;
+    }
+
+}
+
+@media (max-width: 576px) {
+    #owl-banner.owl-carousel.owl-rtl .owl-item{
+        padding: 0!important;
+    }
+    #owl-banner .item img {
+        height: 305px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tour_card{
+        width: 100% !important;
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 200px !important;
+    }
+    .tourist .row2-kh{
+        height: 1400px!important;
+    }
+    .width-gallery img{
+        height: auto!important;
+    }
+    .width2-gallery img{
+        height: auto!important;
+    }
+    .column-flex2{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .column-flex{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .service{
+        height: 385px!important;
+    }
+
+    .main-navigation-button2{
+        font-size: 8px !important;
+        line-height: 26px !important;
+        margin: 0 1px !important;
+        padding: 2px !important;
+    }
+    .menu-login {
+        margin-top: 0;
+        margin-left: 35px !important;
+    }
+    .nav-toggle{
+        width: 34px!important;
+        height: 34px!important;
+        top: 39px !important;
+        padding: 8px 5px 6px!important;
+    }
+    .wave-bg-parent{
+        display: none;
+    }
+    .footer-network{
+        width: 70%;
+    }
+    .coderah{width: 70%}
+    .nav-introduction{
+        width: 95%;
+    }
+    .search-box{
+        background: none!important;
+    }
+    .footer-icon{height: 119px;}
+    .BannerRibbon-titr{
+        padding-top:18%;
+    }
+    .nav-item a {
+        font-size: 13px;
+    }
+    .search {
+        position: relative;
+        margin-top: 0px;
+        background: #000;
+        opacity: 1;
+    }
+    .search_button{
+        flex:0 0 100%!important;
+    }
+    #owl-banner .owl-nav .owl-prev{
+        width: 25px;
+        height: 25px;
+        background: #eee center/5px no-repeat url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5Mi4wMDQgNDkyLjAwNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkyLjAwNCA0OTIuMDA0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPGc+CgkJPHBhdGggZD0iTTM4Mi42NzgsMjI2LjgwNEwxNjMuNzMsNy44NkMxNTguNjY2LDIuNzkyLDE1MS45MDYsMCwxNDQuNjk4LDBzLTEzLjk2OCwyLjc5Mi0xOS4wMzIsNy44NmwtMTYuMTI0LDE2LjEyICAgIGMtMTAuNDkyLDEwLjUwNC0xMC40OTIsMjcuNTc2LDAsMzguMDY0TDI5My4zOTgsMjQ1LjlsLTE4NC4wNiwxODQuMDZjLTUuMDY0LDUuMDY4LTcuODYsMTEuODI0LTcuODYsMTkuMDI4ICAgIGMwLDcuMjEyLDIuNzk2LDEzLjk2OCw3Ljg2LDE5LjA0bDE2LjEyNCwxNi4xMTZjNS4wNjgsNS4wNjgsMTEuODI0LDcuODYsMTkuMDMyLDcuODZzMTMuOTY4LTIuNzkyLDE5LjAzMi03Ljg2TDM4Mi42NzgsMjY1ICAgIGM1LjA3Ni01LjA4NCw3Ljg2NC0xMS44NzIsNy44NDgtMTkuMDg4QzM5MC41NDIsMjM4LjY2OCwzODcuNzU0LDIzMS44ODQsMzgyLjY3OCwyMjYuODA0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgc3R5bGU9ImZpbGw6IzMyM0Q4NSI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=) !important;
+    }
+    #owl-banner .owl-nav .owl-next{
+        width: 25px;
+        height: 25px;
+        background:#eee center/5px no-repeat url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5Mi4wMDQgNDkyLjAwNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkyLjAwNCA0OTIuMDA0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnIHRyYW5zZm9ybT0ibWF0cml4KC0xLCAxLjIyNDY1ZS0xNiwgLTEuMjI0NjVlLTE2LCAtMSwgNDkyLjAwNCwgNDkyLjAwNCkiPjxnPgoJPGc+CgkJPHBhdGggZD0iTTM4Mi42NzgsMjI2LjgwNEwxNjMuNzMsNy44NkMxNTguNjY2LDIuNzkyLDE1MS45MDYsMCwxNDQuNjk4LDBzLTEzLjk2OCwyLjc5Mi0xOS4wMzIsNy44NmwtMTYuMTI0LDE2LjEyICAgIGMtMTAuNDkyLDEwLjUwNC0xMC40OTIsMjcuNTc2LDAsMzguMDY0TDI5My4zOTgsMjQ1LjlsLTE4NC4wNiwxODQuMDZjLTUuMDY0LDUuMDY4LTcuODYsMTEuODI0LTcuODYsMTkuMDI4ICAgIGMwLDcuMjEyLDIuNzk2LDEzLjk2OCw3Ljg2LDE5LjA0bDE2LjEyNCwxNi4xMTZjNS4wNjgsNS4wNjgsMTEuODI0LDcuODYsMTkuMDMyLDcuODZzMTMuOTY4LTIuNzkyLDE5LjAzMi03Ljg2TDM4Mi42NzgsMjY1ICAgIGM1LjA3Ni01LjA4NCw3Ljg2NC0xMS44NzIsNy44NDgtMTkuMDg4QzM5MC41NDIsMjM4LjY2OCwzODcuNzU0LDIzMS44ODQsMzgyLjY3OCwyMjYuODA0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgc3R5bGU9ImZpbGw6IzMyM0Q4NSI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=) !important;
+    }
+    .top_header {
+        padding: 10px 0;
+    }
+    .phone_number {
+        margin-bottom: 5px;
+    }
+    .top_header .phone_number a {
+        font-size: 11px;
+    }
+
+    .newsletter {
+        background-position: right top;
+    }
+    .tourist-title {
+        font-size: 20px !important;
+        padding-top: 34px;
+    }
+    .search-box .nav-pills .nav-link {
+        font-size: 11px;
+    }
+    .search-box .nav-pills .nav-link i{
+        display: none;
+    }
+    .search-box .nav-pills .nav-link{
+        min-width: 56px;
+    }
+    .raftobargasht ul li label{
+        font-size: 11px;
+    }
+    .search_button {
+        font-size: 10px;
+    }
+    .search_input {
+        font-size: 10px;
+        font-weight: normal;
+        padding: 0 2px;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding: 0 3px;
+    }
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        font-size: 10px !important;
+    }
+    .select2-results__option {
+        font-size: 10px !important;
+    }
+    .days-in-hotel,.days-in-hotel .result-st {
+        font-size: 10px !important;
+        line-height:20px;
+        padding: 0 3px;
+        text-align: center;
+    }
+    .days-in-hotel i {
+        display: none;
+    }
+    .nav-toggle{
+        left: 0!important;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px){
+    .search_item {
+        width: 48% !important;
+        flex: 0 0 48% !important;
+        margin-bottom: 10px !important;
+        margin-left: 1%;
+    }
+    .search-box .nav-pills .nav-link.active, .search-box .nav-pills .show > .nav-link{
+        font-size: 11px!important;
+    }
+    .search{
+        bottom: 0!important;
+    }
+    .search-box .nav-pills .nav-link.active, .search-box .nav-pills .show > .nav-link{
+        font-size: 12px!important;
+    }
+    #owl-banner .owl-item img {
+        height: 450px!important;
+    }
+    .section_fast{
+        padding-top: 28px!important;
+    }
+    .tour_card{
+        width: 50%;
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 200px !important;
+    }
+   /* .arz {
+        height: 752px !important;
+    }*/
+
+
+    .width2-gallery img{
+        height: 268px!important;
+    }
+}
+@media (min-width: 768px) {
+    .tourist-parent-sm{
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+
+    .tourist-parent-lg{
+        display: none;
+    }
+    .tourist-parent-sm{
+        display: block;
+    }
+    .tour-bt{
+        margin-bottom: 10px;
+    }
+    .search .container-fluid {
+        background-color: rgba(0,33,63,0.7);
+    }
+    .top_header .phone_number a.email{display: none}
+    .social-icons_top li {padding: 0 !important;}
+    .search-box .nav-pills .nav-link {
+        min-width: 67px;
+        min-height: 35px;
+        padding: 0px 0 !important;
+        border-radius: 0px;
+        vertical-align: middle;
+        line-height: 40px;
+        font-size: 11px;
+        color: white;
+        max-width: 85px;
+        position: relative;
+        text-align: center;
+        font-weight: 500;
+        margin: 3px 3px 0;
+    }
+    .raftobargasht ul li label{font-size: 12px;}
+    .arz { background: none;height: auto;}
+    .top-parent-arz,.bottom-parent-arz{
+        display: none;
+    }
+    .arz-parent{
+        margin-top: 0;
+        position: relative;
+        z-index: 0;
+    }
+}
+@media (min-width: 480px) {
+   earch-box .nav-pills .nav-link{
+        min-width:37px !important;
+    }
+    footer .cantact .address p{
+        margin-right: 5%;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .hotel-item{
+        height: 266px !important;
+    }
+    .menu-login{
+        margin-right: 30%!important;
+    }
+    .hotel-logo-text2{
+        display: none!important;
+    }
+    .main-navigation__sub-menu2{
+        left:-76px!important;
+    }
+}
+
+.center-eleman {
+    margin-top: 180px;
+    margin-bottom: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.main-navigation__sub-menu2{
+    left: 60px !important;
+    right: auto !important;
+}

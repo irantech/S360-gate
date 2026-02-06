@@ -1,0 +1,186 @@
+/*------------------------------------------- max-width -1210------------------------------*/
+@media screen and (max-width: 1210px){
+
+
+} 
+/*------------------------------------------- max-width -1200------------------------------*/
+@media screen and (max-width: 1200px){
+
+}
+/*------------------------------------------- max-width -1120------------------------------*/
+@media screen and (max-width: 1080px){
+	
+}
+
+
+/*------------------------------------------- max-width -991-----------------------------*/
+@media screen and (max-width: 991px){
+	.form-wrapper{width: 95%; height: auto;  top: 13%;}
+	
+	.form-item.form-item-insurance{width: 49.6%}
+	.form-item.form-item-Insurance-day{    width: 20%;}
+	.item {margin: 20px 0;}
+	.item figcaption .title-box{left: 90px}
+	.form-item-btn { width: 100% !important;margin-top: 10px;}
+	
+
+	#emanad{display: inline-block;}
+	.social{display: inline-block;text-align: right;}
+	.copyright{height: 70px}
+	.copyright .company p,.copyright .irantech p {text-align: center;}
+	.ace-responsive-menu > li > a{padding: 12px 8px;font-size: 13px;}
+	.navbar .logo a{width: 120px}
+	.logo .title{display: none;}
+	.c-tabs-nav a{width: 23% !important}
+	.form-item{width: 48%}
+	.form-item-right{width: 100%}
+	.form-item-left{float: none;}
+	.form-item button{margin-top: 0;border-radius:0;height: 43px; }
+	.c-tabs-nav a:nth-child(2){right: 26.7%}
+	.c-tabs-nav a:nth-child(3){left:26.7%;}
+	footer .footerTitle span{padding-top: 	30px}
+}
+
+
+/*------------------------------------------ max-width-767------------------------------*/
+@media screen and (max-width:767px){
+	
+
+	
+	.form-item.form-item-date {width: 48%;}
+	/*.c-tabs-nav a:nth-child(1){width: 50%}
+	.c-tabs-nav a:nth-child(2){width: 50%;right: auto;left: -10px}*/
+	.item figcaption .title-box {left: 30px;}
+	.navbar .logo{width: 100%;float: none;text-align: center;}
+
+	.menu-toggle #menu-btn{right: 5px;left: auto;    top: -43px;}
+	.disno{display: none;}
+}
+/*menu*/
+@media screen and (max-width:770px){
+	.menu-toggle{z-index: 123}
+	nav.site-nav{float: left;}
+	nav.site-nav li{background-color: #fff}
+	.main-menu {
+		width: 50%;
+	position: absolute;left: -24px;}
+	.ace-responsive-menu > li{width: 100%;background-color: #fff;}
+	.ace-responsive-menu > li > a{
+		text-align: right;
+		padding-right: 38px;}
+	.main-menu {
+	    width: 100%;
+	    position: absolute;
+	    left: 0;
+	}
+	.footer-list-menu .items{padding-right: 0px;margin: 10px 0;text-align: right;}
+	.left-link .ribbon{display:none;	}
+	.nav-top-text {display: inline-block;	}
+	.c-tabs-nav a:nth-child(1){right: -7px}
+	.c-tabs-nav a:nth-child(2){right:24.5%}
+	.c-tabs-nav a:nth-child(3){left:24.5%;}
+	.c-tabs-nav a:nth-child(4){left: -7px}
+	.c-tabs-nav a {width: 25% !important;}
+	.form-item.form-item-insurance {width: 24%;}
+	.form-item.form-item-Insurance-day { width: 33.33%;}
+	.form-wrapper{top:17%;}
+
+}
+
+/*------------------------------------------ max-width-600 ------------------------------*/
+@media screen and (max-width: 600px){
+	.footer-list-menu .items{ padding-right: 20px; margin:0 }
+
+}
+/*------------------------------------------ max-width-544------------------------------*/
+@media screen and (max-width: 545px){
+	.item figcaption .title-box {left: 200px;}
+	/*.navbar .logo {width: 77%;}*/
+
+	.dh-aboutus .discription{width: 94%;margin: 0 auto}
+
+	.navbar .logo img{margin-right:20px;}
+	.nopadding{padding:0 !important;}
+	.form-item.form-item-insurance {width: 49%;}
+}
+
+
+/*------------------------------------------ max-width-480------------------------------*/
+@media screen and (max-width: 480px) { 
+	.item figcaption .title-box {left:100px;}
+
+	/*.camera_fakehover{display: none;}*/
+	.top-wrapper{
+		/*background-color: #9c9c9c;*/
+		position: relative;
+		/*height: 600px;*/
+		top: 0;
+		display: block;
+		/*padding: 23px 0 41px 0;*/
+	}
+	.form-wrapper {
+		top: 10%;
+	
+	}
+
+	.navbar .logo a{margin-top: 0;width: 110px;margin-right: 10px}
+	.footer .footer-list-menu{width: 95%}
+
+
+.navbar .top-navbar-wrapper .right-link{display: none;}
+footer .footerTitle span{text-align: center !important;}
+.social,.footer-list-menu .items{text-align: center;}
+.TrcBox{float: none;}
+}
+
+
+@media screen and (max-width: 400px){
+	   .float-panel .logo img{display: block !important;}
+	   .menu-toggle #menu-btn{top:-50px;}
+}
+
+
+/*------------------------------------------------col-ss -max-width-350----------------------------------------*/
+@media screen and (max-width: 350px) { 
+
+.col-ss-1, .col-ss-2,
+.col-ss-3, .col-ss-4,
+.col-ss-5, .col-ss-6,
+.col-ss-7, .col-ss-8,
+.col-ss-9, .col-ss-10,
+.col-ss-11, .col-ss-12 {
+    float: right;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-ss-6 {
+    width: 50%;
+}
+.col-ss-12
+{
+    width: 100%;
+
+}
+.col-xs-12{
+    padding: 0;
+
+}
+
+.item {
+    margin: 20px auto;
+    width: 96%;
+    text-align: center;
+    float: none;
+}
+
+footer .footerTitle span{display: block;right: 0;left:0;margin: 0 auto;text-align: center;}
+.pad400{padding: 10px}
+.dh-travelogue .discription{padding: 0 20px}
+.c-tabs-nav__link span{font-size: 	11px}
+}
+
+
+
+ 

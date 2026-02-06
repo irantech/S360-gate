@@ -1,0 +1,141 @@
+@import "../components/variables";
+
+.recent_trip_area {
+  padding-top: 50px;
+}
+
+.recent_trip_area .single_trip {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 11px;
+  transition: all ease .4s;
+}
+.recent_trip_area .single_trip:hover{
+  box-shadow: 0 0 10px #ccc;
+}
+
+.recent_trip_area .single_trip .thumb {
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.recent_trip_area .single_trip .thumb:before{
+  position: absolute;
+  top: 0;
+  left: -120%;
+  z-index: 2;
+  display: block;
+  visibility: visible;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.5) 100%);
+  transform: skewX(-25deg);
+}
+.recent_trip_area .single_trip .thumb img {
+  width: 100%;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+}
+.recent_trip_area .single_trip:hover .thumb:before{
+
+  animation: fx_shine 1s forwards;
+}
+@keyframes fx_shine{0%{left:-90%}100%{left:130%}}
+.recent_trip_area .single_trip .info {
+  text-align: right;
+  padding: 10px;
+  padding-top: 11px;
+  padding-left: 0;
+}
+
+.recent_trip_area .single_trip .info .date a {
+  font-size: 13px;
+  font-family: $fontFamily_b;
+  font-weight: 400;
+  color: #464b50;
+  display: block;
+  /*! text-overflow: ellipsis; */
+  /*! overflow: hidden; */
+  /*! white-space: nowrap; */
+  width: 100%;
+}
+
+
+.single_trip .info h3 {
+  color: #7a838b;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 10px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  padding: 0 8px;
+}
+
+.small_news .info {
+  flex: 0 0 64%;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.big_news .info {
+
+  padding-bottom: 22px !important;
+
+}
+
+.small_news .more_tour {
+  margin-left: 10px;
+  margin-right: auto;
+  /*! position: absolute; */
+  /*! left: 0; */
+  /*! bottom: 0; */
+
+  margin-right: auto;
+}
+
+.big_news .more_tour a {
+  margin-left: 10px;
+}
+
+.small_news .single_trip {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px ;
+  flex: 1;
+  width: 100%;
+}
+
+.small_news .thumb {
+  height: 100% ;
+  flex: 0 0 35%;
+
+  width: 35%;
+
+}
+
+@media (max-width: 992px) {
+  .small_news .thumb , .recent_trip_area .single_trip .thumb{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 300px;
+  }
+  .small_news .info{
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+

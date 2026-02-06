@@ -1,0 +1,203 @@
+
+
+.form-control-rd-lbl{ margin: 0}
+.radios .TripTypeRadio label{ font-size: 14px; cursor: pointer; font-family: 'IRANSans'; color: #fff;
+}
+
+.in-tarikh{height: 35px;font-family: Tahoma, Geneva, sans-serif;font-size: 12px;width: 100%;border: 1px solid #d1d1d1;border-radius: 5px;padding-right: 8px;}
+
+
+
+
+
+
+
+
+.rotateb::before{ transform: rotate(180deg)}
+
+
+
+
+
+@media( min-width: 991px){
+    .m-t-8{ margin-top: 8px;}
+    #hotel > .row{
+        margin-top: 45px;
+    }
+}
+
+
+
+.nafaratbime{ display: contents}
+
+
+
+
+
+.svg-icon-wrapper{ padding: 10px 0;}
+.tabs-title{ color: #fff;}
+.tabs-bar .tab{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-bottom: -1px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    width: 25%;
+    font-size: 14px;
+}
+
+.tab-active{
+    border: 1px solid #999;
+    border-bottom: 1px solid #fff;
+}
+.tab-active .tabs-title{ color: #c01501}
+
+
+.content-active{
+    display: block;
+    direction: rtl;
+}
+
+
+
+.tab-pane{ font-size: 0; direction: rtl; text-align: right}
+
+.fa-caret-down::before{content: '';}
+
+
+.button-winona{width: 100%;
+    transition: all ease .4s;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1 !important;
+    box-shadow: 0 0 2px 0 #d1d1d1 ;
+    height: 35px;
+    background-color: #fff;}
+
+.button-winona:hover{box-shadow: 0 0 4px 0 #d1d1d1 ; background: #f9f9f9
+}
+
+.search-box-container{top: 150px;
+
+    position: relative;
+
+    background: #000000a3;
+
+    padding: 20px;}
+
+
+@media ( min-width: 992px){
+    .tab_bimeh{  margin: 150px auto 120px auto !important;}
+
+    .col-searchi_{ position: relative;width: 16.6666%;display: inline-block;padding: 0 4px;}
+
+    #hotel .col-searchi_:first-child{width: 25%;}
+    #hotel .col-searchi_:nth-child(4){width: 25%;}
+    #bimeh .col-searchi_{ width: 25%;}
+}
+
+@media ( max-width: 992px) and (min-width: 768px){
+
+    .col-searchi_{ margin-bottom: 5px; position: relative;width: 33.3333%;display: inline-block;padding: 0 4px;}
+
+    #hotel .col-searchi_:first-child{width: 50%;}
+    #hotel .col-searchi_:nth-child(2){width: 50%;}
+    #hotel .col-searchi_{width: 33.3333%;}
+    #bimeh .col-searchi_{ width: 33.3333%;}
+}
+@media ( max-width: 768px) and (min-width: 576px){
+
+    .col-searchi_{ margin-bottom: 5px; position: relative;width: 50%;display: inline-block;padding: 0 4px;}
+
+    #hotel .col-searchi_:first-child{width: 50%;}
+    #hotel .col-searchi_:nth-child(2){width: 50%;}
+    #hotel .col-searchi_{width: 33.3333%;}
+    #bimeh .col-searchi_{ width: 50%;}
+
+
+}
+@media ( max-width: 576px){
+    .tabs-bar img{ width: 30px;
+        height: 30px;}
+    .tabs-title{font-size: 12px;}
+    .tabs-bar .tab{ padding: 3px;}
+
+    .col-searchi_{ margin-bottom: 5px; position: relative;width: 100%;display: inline-block;padding: 0 4px;}
+
+    .nafaratbime .col-searchi_{ width: 50%;}
+    #bimeh  .col-searchi_:last-child{width: 50%;}
+
+
+}
+
+#bimeh .row{ margin: 0}
+
+/**, ::before, ::after {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+
+.button-winona {
+    width: 100%;
+    transition: all ease .4s;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1 !important;
+    box-shadow: 0 0 2px 0 #d1d1d1;
+    height: 35px;
+    background-color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #7a7a7a;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.tab_bimeh {
+    background:#993768;
+    padding: 15px;
+
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+.tab-title-div{ text-align: center}
+.tab-title-div span{
+
+    width: 200px;
+
+    background:#452f91;
+
+    color: #fff;
+
+    height: 50px;
+
+    display: grid;
+
+    align-items: center;
+
+    font-family: Tahoma, Geneva, sans-serif;
+
+    text-align: center;
+
+    margin: 0 auto 10px auto;
+
+    border-radius: 5px;
+
+}

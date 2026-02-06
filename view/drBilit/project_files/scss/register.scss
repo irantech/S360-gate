@@ -1,0 +1,89 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+.main-navigation__sub-menu2{
+    background-color: #fff;
+    border-radius: $rounded;
+    box-shadow: 0 2px 10px #00000026;
+    width: 230px;
+    left: 5%;
+    position: absolute;
+    top: 91%;
+    z-index: 1000000;
+    overflow: hidden;
+    transform: translateX(-50%);
+    .sup-menu-flex{
+        >div{
+            background-color: #f8fafb;
+            padding: 10px;
+            > h2 {
+                color: #000;
+                font-weight: bold;
+                font-size: 17px;
+                text-align: right;
+            }
+        }
+        >a{
+            display: flex;
+            gap: 5px;
+            padding: 0 10px;
+            height: 48px;
+            font-size: 14px;
+            align-items: center;
+            justify-content: flex-start;
+            color: #000;
+            font-weight: bold;
+            transition: all .3s;
+            cursor: pointer;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    fill: #515762;
+                }
+            }
+            &:hover{
+                background: #e8f1fa;
+                text-decoration: none;
+            }
+        }
+        .sup-menu-flex_span{
+            font-size: 14px;
+        }
+        .sup-menu-flex_a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+            color: $mainColor;
+            font-size: 14px;
+            padding: 2px 5px;
+            transition: all .3s;
+            position: relative;
+            border: solid 1px rgba(0,0,0,0);
+            border-radius: 12px;
+            cursor: pointer;
+            width: fit-content;
+            span {
+                margin: 0;
+                padding: 0;
+                color: $mainColor;
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: $mainColor
+            }
+            &:hover {
+                transition: all .3s;
+                border-color: rgba(160,160,160,.07);
+                background-color: rgba(214,214,214,.22)
+            }
+        }
+    }
+}

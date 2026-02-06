@@ -1,0 +1,828 @@
+@font-face {
+    font-family: IRANSansWeb;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff2")
+}
+
+@font-face {
+    font-family: IRANSansFaNum-Bold;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff2")
+}
+
+body {
+    font-family: IRANSansWeb, serif !important;
+    overflow-x: hidden;
+    direction: rtl;
+    text-align: right;
+    min-height: 100vh;
+    background: #f8f5f4
+}
+
+main, .content_tech {
+    min-height: 100vh
+}
+
+@font-face {
+    font-family: IRANSansWeb;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansWeb(FaNum).woff2")
+}
+
+@font-face {
+    font-family: IRANSansFaNum-Bold;
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.eot");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.ttf");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff");
+    src: url("../../../assets/all-fonts/IRANSansWeb/IRANSansFaNum-Bold.woff2")
+}
+
+footer {
+    background: #fff;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd
+}
+
+footer .footer_main {
+    width: 100%
+}
+
+footer .footer_main .footer_main_text .footer_main_text_grid {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px
+}
+
+footer .footer_main .footer_main_text .footer_main_text_grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+footer .footer_main .footer_main_text .footer_main_text_grid div h4 {
+    font-family: IRANSansFaNum-Bold;
+    color: #444;
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: .5rem
+}
+
+footer .footer_main .footer_main_text .footer_main_text_grid div a {
+    color: #777;
+    font-size: .9rem;
+    text-align: justify;
+    margin-top: .7rem;
+    transition: all .3s
+}
+
+footer .footer_main .footer_main_text .footer_main_text_grid div a:hover {
+    color: #262c5a
+}
+
+footer .footer_main .footer_main_tow .namads {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #e7f1ff;
+    padding: 1rem;
+    flex-wrap: wrap
+}
+
+footer .footer_main .footer_main_tow .namads a {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .3s
+}
+
+footer .footer_main .footer_main_tow .namads a:hover {
+    background: #d4e6ff
+}
+
+footer .footer_main .footer_main_tow .namads a img {
+    display: block;
+    width: 80px;
+    height: 80px
+}
+
+footer .footer_main .footer_main_tow > form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem
+}
+
+footer .footer_main .footer_main_tow > form input {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    height: 45px;
+    border: 1px solid #d7d4d2;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+    width: calc(100% - 150px);
+    color: #8e8e8e
+}
+
+footer .footer_main .footer_main_tow > form input:focus {
+    outline: none
+}
+
+footer .footer_main .footer_main_tow > form button {
+    height: 45px;
+    width: 135px;
+    border-radius: 10px;
+    background: #eee;
+    color: #333;
+    transition: all .3s;
+    cursor: no-drop !important
+}
+
+footer .footer_main .footer_main_tow > form button.active {
+    background: #262c5a;
+    color: #fff;
+    cursor: pointer !important
+}
+
+footer .footer_main .footer_main_tow > form button.active:hover {
+    background: #1c2256;
+    color: #fff
+}
+
+footer .footer_copyright {
+    background: #e8edf1;
+    margin-top: 2rem
+}
+
+footer .footer_copyright .footer_copyright_main {
+    display: flex;
+    justify-content: space-between
+}
+
+footer .footer_copyright .footer_copyright_main .footer_copyright_text {
+    display: flex;
+    align-items: center
+}
+
+footer .footer_copyright .footer_copyright_main .footer_copyright_text p {
+    color: #777;
+    font-size: .75rem;
+    text-align: justify;
+    margin-bottom: .5rem
+}
+
+footer .footer_copyright .footer_copyright_main .social_media {
+    display: flex;
+    gap: 10px
+}
+
+footer .footer_copyright .footer_copyright_main .social_media a {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #8bceff
+}
+
+footer .footer_copyright .footer_copyright_main .social_media a svg {
+    width: 20px;
+    height: 20px;
+    fill: #0084e7
+}
+
+footer .footer_copyright_iran-tech {
+    background: #262c5a
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main {
+    display: flex;
+    justify-content: center
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .footer_copyright_text {
+    display: flex;
+    align-items: center
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .footer_copyright_text p {
+    color: #fff;
+    font-size: .75rem;
+    text-align: justify;
+    margin-bottom: .5rem
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .footer_copyright_text p a {
+    color: #fff
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .social_media {
+    display: flex;
+    gap: 10px
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .social_media a {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #8bceff
+}
+
+footer .footer_copyright_iran-tech .footer_copyright_main .social_media a svg {
+    width: 20px;
+    height: 20px;
+    fill: #0084e7
+}
+
+@media (max-width: 992px) {
+    .footer_main_text {
+        display: none !important
+    }
+
+    /*footer {*/
+    /*    margin-bottom: 83px*/
+    /*}*/
+
+    .nav-menu > li > a {
+        justify-content: space-between !important
+    }
+}
+
+@media (max-width: 470px) {
+    .namads a {
+        width: 50% !important
+    }
+}
+
+.box_button_header {
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+    position: relative;
+}
+
+.button_header {
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background: #fefefe;
+    color: #666;
+    font-size: 14px;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-header {
+    animation: anim_header .9s infinite
+}
+
+@keyframes anim_header {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.button_header:hover {
+    background: #f1f1f1;
+    color: #666
+}
+
+.header_area {
+    min-height: 83px
+}
+
+#navbar {
+    background-color: #fff;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 250;
+    width: 100%;
+    border-bottom: 1px solid #bfbfc5;
+    display: flex;
+    align-items: center
+}
+
+.nav-header > a > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center
+}
+
+.nav-header > a > div > h1 {
+    font-size: 1.5rem;
+    font-family: IRANSansFaNum-Bold;
+    color: #100441;
+    margin: 0
+}
+
+.nav-header > a > div > span {
+    font-size: 13px;
+    font-family: IRANSansWeb;
+    color: #240bbd;
+    margin: 0
+}
+
+#navbar {
+    height: 83px;
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.nav-menus-wrapper {
+    margin-right: 60px;
+    display: flex;
+    align-items: center
+}
+
+.nav-toggle:hover {
+    background: #f1f1f1;
+    color: #666
+}
+
+.nav-toggle {
+    width: 42px;
+    height: 42px;
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fefefe;
+    color: #666;
+    font-size: 14px;
+    transition: all .3s;
+    display: none;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-toggle > svg {
+    width: 100%;
+    height: 100%;
+    fill: #777
+}
+
+.navigation-portrait .nav-toggle {
+    display: flex
+}
+
+.navigation-portrait .nav-menus-wrapper {
+    width: 320px;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 102;
+    overflow-y: auto;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.navigation-portrait .nav-menus-wrapper.nav-menus-wrapper-open {
+    left: 0
+}
+
+.nav-menus-wrapper-close-button {
+    display: none
+}
+
+.navigation-portrait .nav-menus-wrapper-close-button > svg {
+    width: 100%;
+    height: 100%;
+    fill: #777;
+    transition: all .3s
+}
+
+.navigation-portrait .nav-menus-wrapper-close-button:hover svg {
+    fill: red
+}
+
+.navigation-portrait .nav-menus-wrapper-close-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 10px
+}
+
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 100%;
+    align-items: center
+}
+
+.navigation-portrait .nav-menu {
+    width: 100%
+}
+
+.nav-menu > li {
+    display: flex;
+    text-align: right;
+    height: 100%;
+    position: relative
+}
+
+.navigation-portrait .nav-menu > li {
+    width: 100%;
+    position: relative;
+    border-top: solid 1px #ccc
+}
+
+.nav-menu > li:hover > a, .nav-menu > li:hover > a > .submenu-indicator > svg {
+    color: #515151;
+    fill: #515151
+}
+
+.nav-menu > li > a {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: #343b53;
+    transition: all .3s;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 5px;
+    font-size: 15px;
+    height: 83px;
+    font-family: IRANSansFaNum-Bold
+}
+
+.nav-menu > li > a::after {
+    content: "";
+    width: 0;
+    transition: all .3s;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    background: #262c5a;
+    box-shadow: 0 0 5px #262c5a;
+    border-radius: 10px
+}
+
+.nav-menu > li:hover > a::after, .nav-menu > li > a:hover::after {
+    width: 100%
+}
+
+.navigation-portrait .nav-menu > li > a {
+    width: 100%;
+    height: auto;
+    padding: 12px 15px 12px 26px
+}
+
+.nav-overlay-panel {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    z-index: 101
+}
+
+.no-scroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.nav-dropdown {
+    min-width: 170px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    list-style: none;
+    z-index: 98;
+    white-space: nowrap;
+    background: #fff;
+    border-radius: 0 0 5px 5px !important;
+    padding: 0px;
+    border: 1px solid #ddd !important;
+    top: 100%
+}
+
+.nav-dropdown.nav-submenu .nav-submenu {
+    top: -1px
+}
+
+.nav-dropdown > li {
+    display: flex;
+    position: relative
+}
+
+.a_header_active {
+    color: #fff !important;
+    transition: all .3s;
+    background: #1c2256
+}
+
+.a_header_active:hover {
+    background: #549bf4
+}
+
+.navigation-portrait .nav-dropdown {
+    width: 100%;
+    position: static;
+    left: 0
+}
+
+.nav-dropdown li:hover svg, .nav-dropdown li:focus svg {
+    fill: #fff
+}
+
+.nav-dropdown .submenu-indicator svg {
+    transform: rotate(90deg)
+}
+
+.navigation-portrait .submenu-indicator.submenu-indicator-up svg {
+    fill: #fff
+}
+
+.nav-dropdown .nav-dropdown {
+    right: 100%
+}
+
+.nav-dropdown > li > a {
+    width: 100%;
+    padding: 10px 10px;
+    float: right;
+    text-decoration: none;
+    font-size: 13px;
+    color: #555;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+.nav-dropdown > li.focus > a, .nav-dropdown > li:hover > a {
+    background: #1c2256;
+    color: #fff !important
+}
+
+.nav-dropdown.nav-dropdown-left {
+    right: 0
+}
+
+.nav-dropdown > li > .nav-dropdown-left {
+    left: auto;
+    right: 100%
+}
+
+.navigation-landscape .nav-dropdown.nav-dropdown-left > li > a {
+    text-align: right
+}
+
+.navigation-portrait .nav-dropdown > li > a {
+    padding: 10px
+}
+
+.nav-dropdown-horizontal {
+    width: 100%;
+    left: 0;
+    background-color: #fdfdfd;
+    border-top: solid 1px #f0f0f0
+}
+
+.nav-dropdown-horizontal .nav-dropdown-horizontal {
+    width: 100%;
+    top: 100%;
+    left: 0
+}
+
+.navigation-portrait .nav-dropdown-horizontal .nav-dropdown-horizontal {
+    border-top: none
+}
+
+.nav-dropdown-horizontal > li {
+    width: auto;
+    clear: none;
+    position: static
+}
+
+.navigation-portrait .nav-dropdown-horizontal > li {
+    width: 100%
+}
+
+.nav-dropdown-horizontal > li > a {
+    position: relative
+}
+
+.navigation-portrait .nav-dropdown-horizontal .submenu-indicator {
+    transform: rotate(0)
+}
+
+.nav-dropdown-horizontal .submenu-indicator {
+    transform: rotate(90deg)
+}
+
+.navigation-portrait .nav-dropdown-horizontal .submenu-indicator.submenu-indicator-up, .navigation-portrait .submenu-indicator.submenu-indicator-up {
+    transform: rotate(-180deg)
+}
+
+.submenu-indicator {
+    transition: all .2s;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.submenu-indicator > svg {
+    width: 100%;
+    height: 100%;
+    fill: #343b53
+}
+
+.navigation-portrait .nav-menu > li > a {
+    width: 100%;
+    height: auto
+}
+
+.logIn > i {
+    display: none
+}
+
+.no-scroll{
+    overflow: hidden !important;
+}
+
+@media (min-width: 1350px) {
+    .container {
+        max-width: 1320px !important
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 30px
+    }
+
+    .box_button_header_phone {
+        display: none
+    }
+}
+
+.nav-dropdown > div > li {
+    display: flex;
+    position: relative
+}
+
+.nav-dropdown > div > li > a {
+    width: 100%;
+    padding: 10px 10px;
+    float: right;
+    text-decoration: none;
+    font-size: 13px;
+    color: #555;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+@media (max-width: 992px) {
+    .special_tour_banner > .container > h3 {
+        display: none !important
+    }
+}
+
+@media (max-width: 991px) {
+    .button_header{
+        padding: 9px 25px;
+    }
+    .navigation-portrait .submenu-indicator.submenu-indicator-up svg {
+        fill: #343b53
+    }
+    .nav-dropdown > li.focus > a svg, .nav-dropdown > li:hover > a svg {
+        fill: #fff !important;
+    }
+    /*.main-navigation__sub-menu2{*/
+    /*    top: unset !important;*/
+    /*    bottom: 110% !important;*/
+    /*}*/
+    .nav-toggle {
+        display: flex
+    }
+
+    .footer_main > ul {
+        grid-template-columns:repeat(2, 1fr)
+    }
+
+    /*.footer {*/
+    /*    margin-bottom: 80px*/
+    /*}*/
+
+    /*.header_area {*/
+    /*    left: 0;*/
+    /*    position: fixed;*/
+    /*    bottom: 0;*/
+    /*    z-index: 250;*/
+    /*    width: 100%*/
+    /*}*/
+
+    /*#navbar {*/
+    /*    position: static;*/
+    /*    border-bottom: none;*/
+    /*    border-top: 1px solid #bfbfc5*/
+    /*}*/
+
+    .nav-dropdown > li {
+        flex-direction: column
+    }
+
+    .logIn {
+        padding: 10px
+    }
+
+    .logIn > i > svg {
+        fill: #666;
+        width: 20px;
+        height: 20px
+    }
+
+    .logIn > i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0
+    }
+
+    .logIn > span {
+        display: none
+    }
+
+    .box_button_header {
+        margin-right: auto
+    }
+
+    .nav-menu {
+        gap: 0;
+        height: unset
+    }
+
+    .navigation-portrait .nav-menu > li {
+        height: unset;
+        flex-direction: column
+    }
+
+    .nav-dropdown .submenu-indicator svg {
+        transform: rotate(0)
+    }
+
+    .navigation-portrait .nav-dropdown > li > a {
+        padding: 12px 15px 12px 26px
+    }
+}
+
+@media (max-width: 768px) {
+    .footer_main > ul {
+        grid-template-columns:repeat(1, 1fr)
+    }
+}
+
+/*# sourceMappingURL=header.css.map */

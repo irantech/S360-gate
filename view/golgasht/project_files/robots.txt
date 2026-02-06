@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /*?=*
+Disallow: /*src=*
+Disallow: /search?q=*
+Disallow: /aboutUs
+Disallow: /*rules
+Disallow: /*admin
+Disallow: /*langs
+Disallow: /gds/fa/resultExternalHotel/*
+Disallow: /gds/fa/searchHotel
+Disallow: /gds/fa/searchHotel*
+
+Sitemap: https://golgashthotel.ir/gds/view/golgasht/project_files/sitemap.xml

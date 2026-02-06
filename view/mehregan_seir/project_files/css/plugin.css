@@ -1,0 +1,328 @@
+/*---------------------grid portfolio------------*/
+
+.grid {
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    height: 350px;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #363636;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+  font-size: 24px;
+      padding-right: 5px;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* Individual effects */
+
+
+/*---------------*/
+/***** Layla *****/
+/*---------------*/
+
+figure.effect-layla {
+  background: #121212;
+}
+
+figure.effect-layla img {
+  height: 100%;
+}
+
+figure.effect-layla figcaption {
+  padding: 3em;
+}
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+  top: 30px;
+  right: 50px;
+  bottom: 30px;
+  left: 50px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+figure.effect-layla h2 {
+  padding-top: 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+  padding: 0.5em 2em;
+  text-transform: none;
+  opacity: 0;
+  -webkit-transform: translate3d(0,-10px,0);
+  transform: translate3d(0,-10px,0);
+  font-size: 13px;
+}
+
+figure.effect-layla h2 {
+  -webkit-transform: translate3d(0,-30px,0);
+  transform: translate3d(0,-30px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+/*  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;*/
+}
+figure.effect-layla p span{
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+figure.effect-layla:hover img {
+  transform: scale(1.15);
+  transition: 3s all ease;
+
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-duration: .3s;
+}
+figure.effect-layla h2{
+  font-size: 20px;
+
+}
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  transition: .4s all ease;
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+
+}
+
+
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+/*------------------social--------------------*/
+.social{
+  text-align: center;
+}
+
+
+.social li {
+    display: inline-block;
+    margin: 5px 10px;
+    background: transparent;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: .6;
+}
+.social li:hover{
+  opacity: 1;
+}
+
+.social  li a {
+  display: block;
+}
+.social  li a img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*-------------jssor*/
+#gallery{
+  overflow:hidden;
+  width: 100%;
+ position: relative;
+}
+
+#gallery > div{
+  position:absolute;
+  top:0; left:0; bottom:0;right:0; height: 100%;
+}
+#gallery > div{
+  /*background: none 50% / cover;*/
+  transform:scale(1.05);
+  transition:0.5s;
+  opacity: 0;
+}
+#gallery > div img{
+  width: 100%;
+  height: 100%;
+}
+#gallery > div.on{
+  /*transition-delay: 0.01s;
+  transition-duration: .2s;*/
+  transform:scale(1);
+  opacity: 1;
+}
+#gallery > span{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 40%;
+  cursor: pointer;
+  transition: .2s all ease;
+}
+#gallery > span.prev-slide:hover,#gallery > span.next-slide:hover{
+  opacity: 1;
+}
+#gallery > span.prev-slide{
+  background: url(../images/left.png) no-repeat center center;
+  background-size: contain;
+  left: 10px;
+  opacity: .8;
+}
+#gallery > span.next-slide{
+  background: url(../images/right.png) no-repeat center center;
+  background-size: contain;
+  right: 10px;
+  opacity: .8;
+}
+
+.camera_caption {
+    bottom: 20%;
+    display: block;
+    position: absolute;
+     width: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+.camera_caption > div {
+  padding: 10px 20px;
+      padding: 0px 20px;
+    text-align: center;
+    direction: rtl;
+    color: #fff;
+}
+.c-title{
+  text-align: center;
+}
+.c-title a{
+  font-size: 46px;
+  font-weight: 600;
+  font-family: Yekan;
+  color: #fff;
+}
+.c-comment p{
+  width: 300px;
+  font-size: 16px;
+ margin: auto;
+  text-align: center;
+}
+
+
+
+
+

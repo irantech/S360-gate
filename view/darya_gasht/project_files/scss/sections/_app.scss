@@ -1,0 +1,123 @@
+@import "../components/variables";
+
+.app{
+  .app_main{
+    box-shadow: 0 6px 8px rgba(142,152,169,.12);
+    border-radius: $rounded;
+    padding: 1rem;
+    background: #fff;
+    height: 100%;
+    border: 1px solid #ddd;
+    .row {
+      height: 100%;
+      .img_box{
+        img{
+          height: 250px;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .app_main_text{
+        display: flex;
+        flex-direction: column;
+        h2{
+          font-family: $fontFamily_b;
+          color: #333;
+          font-size: 1.5rem;
+          text-align: justify;
+          margin-bottom: .5rem;
+        }
+        span{
+          text-align: justify;
+          padding-bottom: 1rem;
+          color: #555;
+        }
+        .app_main_link{
+          margin-top: auto;
+        }
+      }
+      .qrCode{
+        border: 1px solid #ddd;
+        padding: 12px 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: #fefefe;
+        color: #666;
+        font-size: 14px;
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        h4{
+          font-size: 1rem;
+        }
+        img{
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .newsLetters_main{
+    box-shadow: 0 6px 8px rgba(142,152,169,.12);
+    border-radius: $rounded;
+    padding: 1rem;
+    background: linear-gradient(294deg, rgba(95,114,255,1) 25%, rgba(104,111,170,1) 86%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    h3{
+      font-family: $fontFamily_b;
+      color: #fff;
+      font-size: 1.4rem;
+      text-align: right;
+      margin-bottom: auto;
+      padding-bottom: 1rem;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      input{
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        height: 45px;
+        border: 1px solid #d7d4d2;
+        background-color: #fff;
+        position: relative;
+        border-radius: $rounded;
+        margin-bottom: 0 !important;
+        color: #8e8e8e;
+        &:focus{outline: none}
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        height: 45px;
+        border: 1px solid $mainColor;
+        background-color: $mainColor;
+        color: #fff;
+        position: relative;
+        cursor: pointer;
+        border-radius: $rounded;
+        margin-bottom: 0 !important;
+        transition: all .3s;
+        &:hover{
+          background-color: $mainColor;
+          border: 1px solid $mainColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .app .app_main .row .img_box img{
+    display: none;
+  }
+}

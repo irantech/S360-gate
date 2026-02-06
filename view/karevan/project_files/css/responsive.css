@@ -1,0 +1,554 @@
+/*------------------------------------------------------max-width -1200------------------------------*/
+@media screen and (max-width: 1200px)
+{
+
+
+
+
+}
+
+
+
+
+
+
+/*------------------------------------------------------max-width -991------------------------------*/
+@media screen and (max-width: 991px)
+{
+    .logo-phone{display:none;   }
+ul.mainMenu > li > a{    padding: 3px 20px 0;}
+
+ul.mainMenu > li > a.img001 {
+    background: #AB997D ;
+}
+ul.mainMenu > li > a.img002 {
+    background: #fff url(../images/img002.png) no-repeat 4% 74% ;
+}
+ul.mainMenu > li > a.img003 {
+    background:  #fff url(../images/img003.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img004 {
+    background: #fff url(../images/img004.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img005 {
+    background: #fff url(../images/img005.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img006 {
+    background: #fff url(../images/img006.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img007 {
+    background: #fff url(../images/img007.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img008 {
+    background: #fff url(../images/img008.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img009 {
+    background: #fff url(../images/img009.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img001:hover {
+    background: #AB997D;
+}
+ul.mainMenu > li > a.img002:hover {
+    background: #fff url(../images/img002.png) no-repeat 4% 74% ;
+}
+ul.mainMenu > li > a.img003:hover {
+    background:  #fff url(../images/img003.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img004:hover {
+    background: #fff url(../images/img004.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img005:hover {
+    background: #fff url(../images/img005.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img006:hover {
+    background: #fff url(../images/img006.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img007:hover {
+    background: #fff url(../images/img007.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img008:hover {
+    background: #fff url(../images/img008.png) no-repeat 4% 74%;
+}
+ul.mainMenu > li > a.img009:hover {
+    background: #fff url(../images/img009.png) no-repeat 4% 74%;
+}
+.logo-phone{  
+ 
+    width: 100%;
+}
+.cbp-qtrotator{
+    height: 500px;
+}
+.mainMenuContainer {
+    background-color: #fff;
+direction: rtl;
+float: right;
+position: fixed;
+top: 0;
+right: -50%;
+z-index: 9999;
+width: 50% !important;
+height: 100%;
+
+box-shadow: -2px 0px 6px #333;
+}
+.logo-title {
+  width: 100%;
+padding-right: 30px;
+border-bottom: none;
+}
+.top-menu {
+    width: 0;
+}
+header{
+    padding: 0;
+     z-index: 80;
+}
+/*.menu-fix{
+    width: 50%;
+}*/
+
+.top-wrapper{
+    height: 50px;
+}
+
+.tour-item-wrapper{
+    width: 40%;
+    margin:20px 5%;
+}
+
+ul.mainMenu > li > a {
+    border-bottom: 1px solid #444;
+}
+ul.mainMenu > li ul.subMenu li a {
+    background: #666;
+    color: #fff;
+}
+
+ul.mainMenu > li.has-menu::before {
+    display: none;
+}
+ul.mainMenu{
+    z-index: 999;
+}
+.m-level2 li h3{
+color: #fff;
+font-size: 14px;
+padding-right: 40px;
+background: #555;
+line-height: 35px;
+overflow: hidden;
+}
+.m-level2 li h3 span{
+    margin-left: 5px;
+}
+
+.tour-item {
+    width: 70%;
+    position: relative;
+    background: #fff;
+    margin: 10px auto;
+}
+.hotel-item{
+    width: 50%;
+}
+.c-item{
+    width:33.3%;
+}
+.social {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.social a{
+    float: none;
+    display: inline-block;
+}
+.menu-fix ul.mainMenu > li > a {
+     line-height: 40px; 
+}
+.form-wrapper{
+    top: 12%;
+    height: 200px;
+    width: 90%;
+}
+.c-tabs-nav a:nth-child(1)::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: " ";
+    height: 0;
+    right: 15%;
+    margin-top: -10px;
+    pointer-events: none;
+    position: absolute;
+    top: 23%;
+    width: 0;
+   
+}
+.c-tabs-nav a:nth-child(2)::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: " ";
+    height: 0;
+    right: 49%;
+    margin-top: -10px;
+    pointer-events: none;
+    position: absolute;
+    top: 23%;
+    width: 0;
+}
+.c-tabs-nav a:nth-child(3)::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: " ";
+    height: 0;
+    right: 82%;
+    margin-top: -10px;
+    pointer-events: none;
+    position: absolute;
+    top: 23%;
+    width: 0;
+}
+.c-tabs-nav__link.is-active::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ab997d  rgba(255,255,255,0)rgba(255,255,255,0) rgba(255,255,255,0) !important;
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: " ";
+    height: 0;
+
+    position: absolute;
+    width: 0;
+}
+
+
+
+}
+
+
+
+
+/*-------------------------------------------------------max-width-982---------------------------------*/
+@media screen and (max-width:982px) {
+	
+	.mainMenuContainer {
+		width: 35% !important;
+	}
+}
+
+
+/*-------------------------------------------------------max-width-767---------------------------------*/
+@media screen and (max-width:767px) {
+
+.copyright .company p, .copyright .irantech p {
+    text-align: center;
+}
+.copyright .irantech p {
+    text-align: center;
+}
+
+.tour-item-wrapper{
+width: 70%;
+margin: 20px auto;
+float: none;
+}
+.tour-item-a {
+    height: 280px;
+}
+.s-item h3{
+    font-size: 18px;
+}
+
+.s-item{
+    padding-top: 0;
+}
+
+.top-footer{
+    transform: skewY(0deg);
+    height: auto;
+    padding: 15px 0;
+}
+.top-footer .container{
+   transform: skewY(0deg); 
+}
+.logo-title{
+    padding-right: 0;
+}
+.tour-item {
+    width: 100%;
+    margin: 0;
+}
+.visa-p{
+    padding: 10px;
+}
+.c-item {
+    width: 50%;
+}
+.newsletter{
+    margin-bottom:20px;
+}
+.form-wrapper {
+    height: 230px;
+}
+.c-tab,.c-tab__content{
+    height: auto;
+    min-height: 160px;
+    width: 100%;
+}
+.form-item{
+    width: 50%;
+}
+.c-tabs-nav{
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+
+}
+.c-tabs-nav__link{
+    width: 33.33%;
+    padding:7px 5px;
+    float: right;
+}
+
+
+}
+
+
+
+
+/*------------------------------------------max-width-544------------------------------*/
+@media screen and (max-width: 544px)
+{
+.logo-title .logo{display: inline-block;margin: 0 auto; }
+.s-item{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.tour-item-wrapper{
+    width: 100%;
+}
+
+.NewsLetterBox input[type="button"]{
+    margin-bottom: 10px;
+    clear: both;
+    width: 100%;
+}
+.NewsLetterBox input[type="text"]{
+    width: 100%;
+}
+.video{
+    height: 350px;
+}
+.menu-fix {
+    width: 100%;
+}
+.mainMenuContainer{
+    width: 60% !important;
+    right: -569px;
+}
+.tour-item-a {
+    height: 200px;
+}
+.t-overlay{
+    padding:40px 10px;
+}
+.tour-det{
+    padding: 40px 10px 0;
+    height: 200px;
+}
+.tour-det h4 a{
+    font-size: 18px;
+}
+.t-overlay p{
+    font-size: 12px;
+}
+.visa-left{
+    display: none;
+}
+.visa-right{
+    width: 100%;
+    background: url(../images/bg2b.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.visa-p{
+    color: #000;
+    width: 100%;
+}
+.hotel-item {
+    width: 100%;
+}
+.c-item {
+    width: 100%;
+    height: 250px;
+}
+
+.form-item {
+    width: 100%;
+}
+.c-tab, .c-tab__content {
+    min-height: 310px;
+}
+
+
+.form-wrapper {
+    height: 280px;
+}
+.title h2{display: none;}
+.c-tabs-nav a:nth-child(1)::before,.c-tabs-nav a:nth-child(2)::before, .c-tabs-nav a:nth-child(3)::before{
+    top:18%;
+}
+.menu-fix .title {
+    margin-right: 0px;
+    height: 33px;
+}
+}
+
+
+
+/*------------------------------------------------col-ss -max-width-415----------------------------------------*/
+@media screen and (max-width: 415px) { 
+.logo-title .logo {
+	display: block;
+}
+}
+
+/*------------------------------------------------col-ss -max-width-400----------------------------------------*/
+@media screen and (max-width: 400px) { 
+.top-wrapper {
+    height: 0px;
+}
+}
+}
+
+
+/*------------------------------------------------col-ss -max-width-350----------------------------------------*/
+@media screen and (max-width: 350px) { 
+
+.col-ss-1, .col-ss-2,
+.col-ss-3, .col-ss-4,
+.col-ss-5, .col-ss-6,
+.col-ss-7, .col-ss-8,
+.col-ss-9, .col-ss-10,
+.col-ss-11, .col-ss-12 {
+    float: right;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-ss-6 {
+    width: 50%;
+}
+.col-ss-12
+{
+    width: 100%;
+
+}
+.col-xs-12,.tour-item-wrapper{
+	padding: 0;
+
+}
+.video{
+    height: 300px;
+}
+.logo-title .logo {
+    width: 55px;
+    height: 45px;
+}
+.title{
+    margin-right: 5px;
+}
+.title h1 {
+    font-size: 20px;
+    line-height: 36px;
+}
+.title h2 {
+    font-size: 14px;
+}
+.logo-title{
+    padding:0;
+}
+.tour-det {
+    padding:10px;
+    height: auto;
+    width: 100%;
+}
+.tour-item-a {
+    height: 200px;
+    width: 100%;
+}
+.tour-item {
+    margin: 0 0 10px 0;
+}
+
+.tour-det::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: none;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid transparent;
+    position: absolute;
+    left: 50%;top: auto;
+    transform: translateY(0) translateX(-50%);
+    bottom: 100%;
+    border-right: 20px solid transparent;
+}
+.t-outer .tour-det::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-bottom: none;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 100%;
+    transform: translateY(0) translateX(-50%);
+}
+
+
+
+.form-item.form-item-date{width: 50%}
+
+
+.form-item.form-item-number {
+    width: 50%;}
+
+.form-wrapper {
+    height: 330px;
+}
+
+
+
+}
+
+
+
+ 

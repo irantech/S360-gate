@@ -1,0 +1,3592 @@
+#reserve_border
+{
+border: 2px solid #CCCCCC;
+}
+
+#vizacountry_txt
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+	vertical-align:middle;
+	border: 1px solid #333333;
+}
+#vizacountry_txt a
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+#vizacountry_txt a:hover
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #1A4699;
+	text-decoration: none;
+}
+/*///////////////////////////////*/
+#font_linkpage{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+#font_linkpage a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-decoration: none;
+}
+#font_linkpage a:hover{
+	color: #000099;
+		font-family: Tahoma;
+	font-size: 9pt;
+}
+/* form */	
+.contain-brows
+{
+     width:230px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+	background-color:#FFFFFF;
+}
+.contain-text{
+	width:150px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+}
+.contain-text-sms{
+	width:120px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+}
+.contain-en-sms-min{
+	width:58px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+}
+.contain-en{
+	width:150px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+}
+.contain-address{
+	width:300px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #003366;
+}
+.contain-more{
+	width:300px;
+	text-align: right;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 150px;
+	border: 1px solid #003366;
+	text-decoration: none;
+}	
+.contain-bottom{
+	width:50px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	background-color: #F1F3F9;
+	border: 1px solid #003366;
+}	
+
+.combo{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 80px;
+	border: 1px solid #003366;
+}
+.combo_2_12{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 85px;
+	border: 1px solid #003366;
+}
+.combo_zir2{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 80px;
+	border: 1px solid #003366;
+}
+#line{
+	background-color: #BEC6CB;
+	height: 1px;
+}
+#line_print{
+	background-color: #000000;
+	height: 2px;
+}
+#contain-fild
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#contain-fild a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #C10000;
+	font-weight: normal;
+	text-decoration: none;	
+}
+#contain-fild a:hover
+{
+	color: #000099;
+	font-size: 9pt;	
+}
+#contain-fild b
+{
+	color: #000000;
+	font-size: 9pt;
+	font-weight:bold;	
+}
+#contain-message2
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #FF0000;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#contain-message
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #FF0000;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+#contain-fild_mor
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+}
+#contain-fild-sql
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+	text-decoration: none;	
+}
+#contain-fild-sql b
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #333333;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: middle;
+}
+#contain-fild-sql a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #C10000;
+	font-weight: normal;
+	text-decoration: none;	
+}
+#contain-fild-sql a:hover
+{
+	font-size: 9pt;
+	color: #000099;
+		text-decoration: none;
+}
+#contain-fild-point{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+}
+#contain-fild-point a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+	vertical-align: middle;
+		text-decoration: none;
+}
+#contain-fild-point a:hover
+{
+	font-size: 9pt;
+	color: #000099;
+}
+#contain-fild-point_mor{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	vertical-align: top;
+}
+#contain-box
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #9EACD6;	
+}
+/********************CODE:MI**********iran-moarefi***/
+#mi_pic-title{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #003366;
+	height: 20px;
+	width: 168px;
+	background-color: #F1F3F9;
+	text-decoration: none;
+}
+#mi_pic-title a{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+    text-decoration: none;
+}
+#mi_pic-title a:hover{
+	color: #000099;
+}
+.mi_border-aks{
+	border: 1px solid #003366;
+	height:110px;
+	width: 168px;
+}
+#mi-1036_border-aks{
+	border: 1px solid #003366;
+	height: 130px;
+	width: 200px;
+}
+#mi_pic-title2{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #003366;
+	height: 20px;
+	width: 250px;
+	background-color: #F1F3F9;
+}
+#mi_pic-title2 a{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+    text-decoration: none;	
+}
+#mi_pic-title2 a:hover{
+	color: #000099;
+}
+.mi_border-aks2{
+	border: 1px solid #003366;
+	height: 134px;
+	width: 250px;
+}
+#mi_matn
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+}
+#mi-1032-tr1{
+	background-color: #F1F3F9;
+	border: 1px solid #003366;
+	width: 500px;
+	height: 20px;
+}
+#mi-1032-tr2{
+	background-color: #FFFFFF;
+	border: 1px solid #003366;
+	width: 500px;
+	height: 20px;
+}
+/********************************tor local**************************/
+#font_1127_com{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	/*background-color: #E1DFF4;*/
+	text-align: justify;
+	vertical-align: top;
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid #003366;
+}
+
+#tl-1125_td
+{
+    height: 102px;
+	width:160px;
+	text-align: right;
+	vertical-align: top;
+}
+.tl-1125_borderaks{
+	 text-align: right;
+	vertical-align: top;
+	width:143px;
+}
+#tl-1125_color-title{
+	border: 1px solid #003366;
+	height: 20px;
+	width: 168px;
+	background-color: #F1F3F9;
+}
+#tl-1125_font-title{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+}
+#tl-1125_font-title a{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+    text-decoration: none;	
+}
+#tl-1125_font-title a:hover{
+	color: #000099;
+}
+#tl-11272_titr_tr{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: right;
+	background-color: #CAD1E8;
+	border: 1px solid #003366;
+	height: 30px;
+	vertical-align: middle;
+}
+#tl_line_form{
+	background-color: #F1F3F9;
+	height: 1px;
+}
+#tl_link-back
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+#tl_link-back a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #C10000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	    text-decoration: none;
+}
+#tl_link-back a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000099;
+}
+#tl_border_table{
+	width: 250px;
+	border: 1px solid #003366;
+}
+#tl_border_aks{
+	width: 100px;
+	border: 1px solid #003366;
+}
+#tl_border_td_detail{
+	width: 500px;
+	border: 1px solid #003366;
+}
+#tl_border_td_rezerv {
+	width: 150px;
+	border: 1px solid #003366;
+	background-color: #F1F3F9;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#tl_border_td_rezerv a {
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #C10000;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;	
+}
+#tl_border_td_rezerv a:hover {
+	font-size: 9pt;
+	color: #000099;
+	text-decoration: none;	
+}
+#tl_border_td_detail_aks{
+	width: 150px;
+	border: 1px solid #003366;
+	height: 100px;
+	text-align: center;
+}
+
+#tl_border_matn{
+	border: 1px solid #003366;
+	margin: 0px;
+	padding: 5px;
+}
+#tl_border_matn p{
+	margin: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#tl_border_gallery{
+	width: 130px;
+	height: 130px;
+}
+/****************************keshvar****************/
+.ksh-1106999_border-aks{
+	border: 1px solid #003366;
+	height: 300px;
+	width: 168px;
+}
+.ksh-1102999_border-aks2{
+	border: 1px solid #003366;
+	height: 100px;
+	width: 200px;
+}
+#ksh_border-link_detail{
+	border: 1px solid #003366;
+	height: 22px;
+	width: 150px;
+}
+#ksh_border-link_detail a{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #C10000;
+}
+#ksh_border-link_detail a:hover{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #0D347D;
+}
+#ksh_border-aks_tr2{
+	/*border: 1px solid #003366;*/
+	height:45px;
+	width: 168px;
+}
+#ksh-1106999_titr_tr{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+}
+#ksh_border-aks{
+	height: 110px;
+	width: 168px;
+	background-color: #F1F3F9;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #003366;	
+}
+#ksh_pic-title_td{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #003366;
+	height: 22px;
+	width: 168px;
+	background-color: #F1F3F9;
+}
+#ksh_pic-title_td a{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+    text-decoration: none;
+}
+#ksh_pic-title_td a:hover{
+	color: #000099;
+}
+#ksh_border-list_td2{
+	border: 1px solid #003366;
+	background-color: #F1F3F9;
+	height: 25px;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: right;
+    text-decoration: none;
+}
+#ksh_border-list_td1{
+	border: 1px solid #003366;
+	width: 485px;
+	height: 25px;
+}
+#ksh-1102999_aksasli{
+	border: 1px solid #98B7DE;
+	height: 80px;
+	width: 70px;
+}
+#ksh-1102999_titr_tr{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000000;
+	text-align: right;
+	border: 1px solid #98B7DE;
+	background-color: #CAD1E8;
+}
+#ksh-1102999-trdetail{
+	background-color: #F1F3F9;
+}
+#ksh-detailall-tr1{
+	background-color: #F1F3F9;
+}
+#ksh-detailall-tr2{
+	background-color: #F1F3F9;
+}
+#keshvar_txt
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	text-decoration:none;
+}
+#keshvar_txt a
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: right;
+	text-decoration:none;
+}
+#keshvar_txt a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #077AB1;
+	text-align: right;
+	text-decoration:none;
+	}
+
+
+#keshvar_title
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FF0000;
+	text-align: right;
+	text-decoration:none;
+}
+
+.div_img{
+	height:160px;
+	position:relative;
+	overflow:hidden;
+}
+.div_txt_keshavar
+{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	float:right;
+	/*background-color:#000;*/
+	background:url(../images/back_keshvar.png) repeat top;
+	width:173px;
+	*width:180px;
+	height:80px;
+	padding-left:6px;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFF;
+	text-align:left;
+	text-decoration:none;
+	padding-top:5px;
+	margin-bottom:-50px;
+	*margin-bottom:-45px;
+}
+
+.div_txt_keshavar a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration:none;
+}
+.div_txt_keshavar a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FF7800;
+	text-decoration:none;
+}
+
+/*/////////////////////////////////////////////////////////*/
+.div_img_index{
+	height:160px;
+	position:relative;
+	overflow:hidden;
+}
+.div_txt_keshavar_index
+{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	float:right;
+	background-color:#000;
+	background:url(../images/back_keshvar.png) repeat top;
+	width:205px;
+	*width:180px;
+	height:80px;
+	padding-left:6px;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFF;
+	text-align:left;
+	text-decoration:none;
+	padding-top:5px;
+	margin-bottom:-50px;
+	*margin-bottom:-45px;
+}
+
+.div_txt_keshavar_index a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration:none;
+}
+.div_txt_keshavar_index a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FF7800;
+	text-decoration:none;
+}
+
+/****************************tor khareji********************/
+.tkh-12111999_border-aks{
+	border: 1px solid #003366;
+	height:110px;
+	width: 168px;
+}
+#font_12112_com{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	/*background-color: #E1DFF4;*/
+	text-align: justify;
+	vertical-align: top;
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid #003366;
+}
+
+
+.tkh-12114_border-aks_asli{
+	width: 143px;
+	height:115px;
+	text-align: right;
+	vertical-align:top;
+
+}
+.tkh-12114_border-aks{
+	width: 100px;
+	height:100px;
+}
+
+.tkh-12114_border-aks2{
+	width: 100px;
+	height:41px;
+}
+
+
+#tkh-12113999_border_aks{
+	width: 150px;
+	border: 1px solid #003366;
+}
+
+#tkh-1216999_td{
+    height:102px;
+	width: 160px;
+	text-align: right;
+	vertical-align: top;
+}
+.tkh-1216999_borderaks{
+	width: 143px;
+	text-align: right;
+	vertical-align: top;
+}
+.tkh-1216999_nophoto{
+	width: 176px;
+	height:118px;
+	text-align: right;
+	vertical-align: top;
+}
+#tkh-1216999_pic-title{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #003366;
+	height: 20px;
+	width: 168px;
+	background-color: #F1F3F9;
+}
+#tkh-1216999_pic-title a{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+    text-decoration: none;
+}
+#tkh-1216999_pic-title a:hover{
+	color: #000099;
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+#tkh-1217_titr_tr{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: right;
+	vertical-align: middle;
+	height: 100px;
+	background-image: url(../images/product_title/kaleb-matn.jpg);
+	background-repeat: no-repeat;	
+}
+#tkh-1217_border_matn{
+	border: 1px solid #003366;
+	margin: 0px;
+	padding: 5px;
+}
+#tkh-1217_border_matn p{
+	margin: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#tkh-1217_border_form{
+	width: 500px;
+	border: 1px solid #003366;
+}
+#tkh_border_table{
+	width: 250px;
+	border: 1px solid #003366;
+}
+#tkh-12112_border_aks{
+	width: 100px;
+	border: 1px solid #003366;
+}
+#tkh_border_td_detail{
+	width: 400px;
+	border: 1px solid #003366;
+}
+#tkh_border_td_rezerv {
+	width: 150px;
+	border: 1px solid #98B7DE;
+	background-color: #F1F3F9;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+}
+#tkh_border_td_rezerv a {
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #C10000;
+	text-align: center;
+	vertical-align: middle;
+    text-decoration: none;	
+}
+#tkh_border_td_rezerv a:hover {
+	color: #000099;
+}
+#tkh_border_td_detail_aks{
+	width: 150px;
+	border: 1px solid #003366;
+	height: 100px;
+	text-align: center;
+}
+#tkh_border_jozeyat{
+	border: 1px solid #003366;
+}
+#tkh-12113999_border_matn{
+	border: 1px solid #003366;
+	height: 22px;
+	background-color: #F1F3F9;
+}
+#tkh-12113999_border_form{
+		border: 1px solid #72A0C2;
+}
+#tkh_border_gallery{
+	width: 130px;
+	border: 1px solid #003366;
+	height: 130px;
+}
+/****************hotel********************/
+#h-1081_titr_tr{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: right;
+	vertical-align: middle;
+	background-image: url(../images/reservehotel/detail_gallery.jpg);
+	background-repeat: no-repeat;
+}
+#h_pic_title{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #0033CC;
+	text-align: center;
+	vertical-align: middle;
+	height: 28px;
+	width: 143px;
+	background-color:#FFFFFF;
+	text-decoration:none;
+	
+}
+#h_pic_title a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+	text-decoration:none;
+    text-decoration: none;	
+}
+#h_pic_title a:hover{
+	color: #000099;
+	font-family: Tahoma;
+	font-size: 9pt;
+}
+.h_border-aks{
+	width: 162px;
+	text-align:right ;
+	vertical-align: top;
+	
+}
+.hotel_border_aks
+{
+     width: 143px;
+	text-align:right ;
+	vertical-align: top;
+}
+/*********************sefaresh blit*********************/
+#b-1175-colortd{
+	background-color: #E0E4F1;
+}
+#b_border_link{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	background-color: #F1F3F9;
+	text-align: center;
+	height: 30px;
+	width: 100px;
+	border: 1px solid #003366;
+}
+#b_border_link a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	text-align: center;
+	color: #C10000;
+    text-decoration: none;	
+}
+#b_border_link a:hover{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000099;
+}
+.b_combo{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	height: 22px;
+	width: 70px;
+	border: 1px solid #003366;
+}
+.contain-bottom_result{
+	width:100px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	background-color: #F1F3F9;
+	border: 1px solid #003366;
+}
+.contain-bottom_sefaresh{
+	width:50px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #333333;
+	height: 20px;
+	background-color: #F1F3F9;
+	border: 1px solid #003366;
+}
+#s_khat{
+	background-color: #F1F3F9;
+	height: 1px;
+	width: 100px;
+}
+#s_border_td1{
+	width: 234px;
+	border: 1px solid #003366;
+	background-color: #F1F3F9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#s_border_td2{
+	width: 66px;
+	border: 1px solid #003366;
+	background-color: #F1F3F9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#s_11773_tr{
+	background-color: #F1F3F9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+/********************personel*******************/
+#pl_border_aks_td{
+	width: 134px;
+	height: 134px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/ghab_pic/images/ghab_pic_05.jpg);
+	background-repeat: no-repeat;	
+}
+.pl_border_aks{
+	width: 134px;
+	}
+#pl_border_td_detail{
+	width: 400px;
+	border: 1px solid #003366;
+}
+/*****************faq*****************/
+#f-1071_link{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	background-color: #F1F3F9;
+	height:30px;
+	width: 240px;
+	border: 1px solid #D3D8DC;
+}
+#f-1071_link a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+	text-decoration: none;
+}
+#f-1071_link a:hover{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000099;
+}
+
+/*******************tour news*************************/
+#tor-110
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+#tor-110 b
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #ECB01F;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: middle;
+}
+.tor-110_borderaks{
+	width: 104px;
+}
+/*******************title page************************/
+#product-titel{
+	width: 560px;
+	vertical-align: top;
+	text-align: right;
+	height: 25px;
+	background-color: #F1F3F9;
+}
+#product-titel-txt{
+   	vertical-align: middle;
+	text-align: right;
+	height: 21px;
+	padding-right: 25px;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	padding-top: 4px;
+}
+	#product-titel-txt  a {
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #C10000;
+    text-decoration: none;	
+	}
+	#product-titel-txt  a:hover {
+	color: #000099;
+	font-family: Tahoma;
+	font-size: 8pt;
+	}
+/**********clock*********/
+.style3{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: right;
+	vertical-align: middle;
+}	
+.style15{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+}
+/********gallery**************/
+#gallery_td{
+	width:160px;
+	height:102px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.gallery_border_aks{
+	
+	width:160px;
+	text-align: right;
+	vertical-align: top;
+	
+}
+.g_detail_borderaks{
+ border: 1px solid #98B7DE;
+}
+#g_detail_matn{
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	background-color: #F1F3F9;
+	text-align: center;
+	vertical-align: middle;
+	height: 25px;
+	border: 1px solid #003366;
+}
+
+/***********************/
+#about
+{
+	font-family: Tahoma;
+	font-size:9pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: justify;
+	vertical-align: middle;
+	text-decoration: none;	
+}
+#about a
+{
+	font-family: Tahoma;
+	font-size:9pt;
+	color: #C10000;
+	font-weight: bold;
+	text-align: justify;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#about a:hover
+{
+	font-size:9pt;
+	color: #E9BF72;
+}
+#about b
+{
+	font-family: Tahoma;
+	font-size:9pt;
+	color: #333333;
+	font-weight: bold;
+	text-align: justify;
+	vertical-align: middle;
+}
+#about p
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: justify;
+	vertical-align: middle;
+	margin: 0px;
+	padding: 5px;
+}
+#about_titr
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #FF0000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+#font_news_detail
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #ffffff;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+}
+.border_news_detail
+{
+	border: 1px solid #FFFFFF;
+}
+/*********detail article and safarname***************/
+.n-118-borderaks{
+	height: 100px;
+	width: 130px;
+	border: 1px solid #003366;
+}
+#n-118-bordertable{
+	border: 1px solid #003366;
+	background-color: #F1F3F9;
+}
+.n-1181-borderaks{
+	border: 2px solid #003366;
+}
+#n-1181-bordertable{
+	/*border: 1px solid #98B7DE;
+	background-color: #F1F3F9;*/
+	padding: 7px;
+}
+/*******************form table rahgiri*****************************/
+#rah-120-t2d1{
+	border-top: 1px solid #C6C6C6;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C6C6C6;
+}
+#rah-120-t12d2{
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #C6C6C6;
+	border-left-color: #C6C6C6;
+}
+#rah-120-t2d3{
+	border-top: 1px solid #C6C6C6;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C6C6C6;
+}
+#rah-120-t3d3{
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C6C6C6;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C6C6C6;
+}
+#rah-120-t3d1{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C6C6C6;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C6C6C6;
+}
+#rah-120-t3d2{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C6C6C6;
+}
+#rah_141_tr
+{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C6C6C6;
+	border-bottom-color: #C6C6C6;
+	border-left-color: #C6C6C6;
+}
+#rah_141_tr1
+{
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #C6C6C6;
+	border-left-color: #C6C6C6;
+}
+/*///////////////////nazarsanji////////////////////*/
+#nazar_txt
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #000000;
+	text-align: right;
+	vertical-align: top;
+}
+/*////////////package_pic//////////////////*/
+#package_pic_txt
+{
+     font-family: Tahoma;
+	font-size: 8pt;
+	color: #000000;
+	text-align: right;
+	vertical-align: top;
+}
+#title_package2level
+{
+    font-family: Tahoma;
+	font-size: 8pt;
+	color: #000000;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid #003366;
+	height:22px;
+}
+/*///////////////////////////////////////////////*/
+#titel_txt
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-align: right;
+	vertical-align: top;
+}
+#titel_txt a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-decoration: none;
+}
+#titel_txt a:hover{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #000099;
+}
+/******************** login *******************/
+#login-t-all{
+	border: 1px solid #CE832F;
+	height: 60px;
+	background-color: #EDCFAF;
+}
+#login-t-txt{
+	background-color: #E4B989;
+	border-right: 1px;
+	border-bottom: 1px solid #CE832F;
+}
+#login-txt{
+	font-family: Tahoma;
+	font-size: 10pt;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+}
+/*////////////////tor//////////////////////*/
+#hotel_tortd_1127
+{
+background-color:#F8F9F9;
+}
+#price_tortd_1127
+{
+	width:160px;
+	height:24px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/tourlist/images/tourlist_11.jpg);
+	background-repeat: no-repeat;
+}
+
+#price_tor_1127
+{
+text-align:center;
+vertical-align:middle;
+font-family: Tahoma;
+font-size: 10pt;
+color: #000000;
+}
+
+#hotel_tor_1127
+{
+text-align:center;
+vertical-align:middle;
+font-family: Tahoma;
+font-size: 10pt;
+color: #000000;
+}
+
+#torname_tortd_1127
+{
+	width:160px;
+	height:18px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/tourlist/images/tourlist_20.jpg);
+	background-repeat: repeat-y;
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: #000000;
+	padding:3px;
+    text-decoration:none;
+}
+#torname_tortd_1127 a
+{
+	font-family: Tahoma;
+    font-size: 8pt;
+    color: #C10000;
+    text-decoration:none;
+}
+#torname_tortd_1127 a:hover
+{
+	font-family: Tahoma;
+    font-size: 8pt;
+    color: #2372B5;
+   text-decoration:none;
+}
+
+#torname_tortd_1127_liner
+{
+	width:45px;
+	height:18px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/tourlist/images/tourlist_21.jpg);
+	background-repeat: repeat-y;
+
+}
+#torname_tortd_1127_linel
+{
+	width:45px;
+	height:18px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/tourlist/images/tourlist_19.jpg);
+	background-repeat: repeat-y;
+
+}
+/*////////////////hotel-in city//////////////////////*/
+#hotelname_1082
+{
+    width:162px;
+	height:31px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/hotellist/images/hotellist_04.jpg);
+	background-repeat: repeat-y;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #F8990C;
+	text-decoration: none;
+	
+}
+#hotelname_1082 a
+{
+   font-family: Tahoma;
+	font-size: 9pt;
+	color: #C10000;
+	text-decoration: none;
+}
+#hotelname_1082 a:hover
+{
+   font-family: Tahoma;
+	font-size: 9pt;
+	color: #000099;
+	text-decoration: none;
+}
+#hotelname_liner
+{
+     width:8px;
+	height:33px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/hotellist/images/hotellist_05.jpg);
+	background-repeat: repeat-y;
+}
+#hotelname_linel
+{
+     width:8px;
+	height:33px;
+	text-align:center;
+	vertical-align:middle;
+	background-image: url(../images/hotellist/images/hotellist_03.jpg);
+	background-repeat: repeat-y;
+}
+
+#hotel_star
+{
+     width:42px;
+	height:33px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/hotellist/images/hotellist_06.jpg);
+	background-repeat: no-repeat;
+}
+#hotel_pic_td
+{
+	width:162px;
+	height:102px;
+	text-align:right;
+	vertical-align:top;
+}
+/*///////////////city of hotel /////////////////////*/
+#listcity_hotel_td
+{
+    width:143px;
+	height:115px;
+	text-align:right;
+	vertical-align:top;
+}
+#listcity_hotel_td
+{
+    width:143px;
+	height:115px;
+	text-align:right;
+	vertical-align:top;
+}
+#listcity_td13
+{
+    width:27px;
+	height:31px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/listcity/images/listcity_13.png);
+	background-repeat: no-repeat;
+}
+#listcity_td14
+{
+    width:143px;
+	height:31px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/listcity/images/listcity_14.png);
+	background-repeat: no-repeat;
+}
+#listcity_td15
+{
+    width:30px;
+	height:31px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/listcity/images/listcity_15.png);
+	background-repeat: no-repeat;
+}
+/*/////////////////specialtor//////////////////////////*/
+#specialtor_pic_td
+{
+    width:106px;
+	height:116px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/special_tour/special-pic/images/specialtour_pic_05.jpg);
+	background-repeat: no-repeat;
+	
+}
+#specialtor_pic_td_java
+{
+    width:05px;
+	height:50px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/special_tour/special-pic/images/specialtour_pic_05.jpg);
+	background-repeat: no-repeat;
+	
+}
+#specialtor_txt_all
+{
+	width:400px;
+	text-align:right;
+	vertical-align:top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	
+}
+
+#specialtor_txt_bor
+{
+	width:400px;
+	text-align:right;
+	vertical-align:top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	padding:5px;
+	border: 1px solid #E1E0E0;
+	background-color:#FFFFFF;	
+	
+}
+
+#special_title_txt2
+{
+    text-align:left;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #000099;
+	text-decoration: none;
+}
+#special_title_txt2 a
+{
+    text-align:left;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #C10000;
+	text-decoration: none;
+}
+#special_title_txt2 a:hover
+{
+	color: #660000;
+	text-decoration: none;
+}
+
+#specialtor_title
+{
+     width:400px;
+	height:22px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/special_tour/title/titel-vige.jpg);
+	background-repeat: no-repeat;
+}
+
+#special_title_txt
+{
+     height:22px;
+    text-align:right;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 10pt;
+	color: #000099;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+#special_title_txt b
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+	color: #000099;
+	text-decoration: none;
+	font-weight:bold;
+}
+#special_title_txt a
+{
+	font-size: 10pt;
+	color: #000099;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+#special_title_txt a:hover
+{
+	font-size: 10pt;
+	color: #F78404;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+#special_table
+{
+    text-align: right;
+	vertical-align:top;
+   /* background-color:#F5F4F4;*/
+}
+/*////////////////////tor////////////////////////////*/
+#tor_khareji_pic
+{
+     width:160px;
+     height:102px;
+     text-align: right;
+	vertical-align:top;
+}
+.tor_khareji_pic
+{
+     width:160px;
+     text-align: right;
+	vertical-align:top;
+}
+#tor_title_local_td
+{
+	width:480px;
+	height:28px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/kaleb-matn/localtour/images/kaleb-matn_01.jpg);
+	background-repeat: no-repeat;
+	text-align:right;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #3960AE;
+	padding-right:40px;
+	text-decoration: none;
+}
+
+#tor_title_td
+{
+	width:620px;
+	height:28px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/kaleb-matn/images/kaleb-matn_01.jpg);
+	background-repeat: no-repeat;
+	text-align:right;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #3960AE;
+	padding-right:20px;
+	text-decoration: none;	
+}
+#tor_title_txt
+{
+	height:28px;
+	text-align:right;
+	vertical-align:middle;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #3960AE;
+	text-decoration: none;	
+}
+#tor_matn
+{
+   text-align:right;
+	vertical-align:top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;	
+	padding-top:10px;
+}
+#tor_matn p
+{
+	text-align:justify;
+	vertical-align:top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	padding:5px;	
+}
+
+#tor_matn_liner
+{
+    width:5px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/kaleb-matn/images/kaleb-matn_07.jpg);
+	background-repeat: repeat-y;
+	
+}
+#tor_matn_linel
+{
+    width:5px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/kaleb-matn/images/kaleb-matn_05.jpg);
+	background-repeat: repeat-y;
+}
+
+#torgallery_td{
+	width: 134px;
+	height: 134px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/ghab_pic/images/ghab_pic_05.jpg);
+	background-repeat: no-repeat;	
+}
+.torgallery_pic
+{
+	width: 134px;
+	text-align: right;
+	vertical-align:top;
+}
+#tordetail_txt_td
+{
+    width:709px;
+	height:100px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/off/images/tourdetail_03.jpg);
+	background-repeat: no-repeat;	
+	}
+	
+#tordetail_local_txt_td
+{
+    width:473px;
+	height:104px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/localtour/off/images/tourdetail_04.jpg);
+	background-repeat: no-repeat;	
+	}
+/*************************reservehotel******************************/
+#reservehotel_title_td
+{
+    width:158px;
+	height:56px;
+	text-align:right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/images/reservehotel_02.png);
+	background-repeat: no-repeat;	
+}
+
+#reservehotel_td{
+	width: 158px;
+	height: 129px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/images/reservehotel_05.png);
+	background-repeat: no-repeat;	
+	}
+.reservehotel_pic
+{
+	width: 158px;
+}
+#reservehotel_title
+{
+    width:158px;
+	height:51px;
+	text-align:right;
+	vertical-align:top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;	
+	padding-top:5px;
+}
+
+#reserve_pic_td
+{
+    width: 43px;
+	height: 44px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/images/reservehotel_07.jpg);
+	background-repeat: no-repeat;	
+	}
+.reserve_pic
+{
+    width: 43px;
+	text-align: right;
+	vertical-align:top;
+}
+
+
+#reserve_map_td
+{
+    width: 158px;
+	height: 44px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/images/reservehotel_08.jpg);
+	background-repeat: no-repeat;	
+	}
+.reserve_map
+{
+    width: 158px;
+	text-align: right;
+	vertical-align:top;
+}
+#gallery_back_pic
+{
+	width: 490px;
+	text-align: right;
+	vertical-align:top;
+}
+#gallery_back_linel
+{
+	width: 5px;
+	height:8px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/gallery/images/detail_hotel_gallery_02.png);
+	background-repeat: repeat-y;
+}
+
+#gallery_back_liner
+{
+	width: 5px;
+	height:8px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/reservehotel/gallery/images/detail_hotel_gallery_04.png);
+	background-repeat: repeat-y;
+}
+
+#comment_hotel
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: normal;
+	text-align: justify;
+	vertical-align: middle;
+	text-decoration: none;	
+}
+/*////////////////////////gallery-hotel///////////*/
+
+#hotelgallery_td{
+	width: 134px;
+	height: 134px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/ghab_pic/images/ghab_pic_05.jpg);
+	background-repeat: no-repeat;	
+}
+.hotelgallery_pic
+{
+	width: 134px;
+	height: 134px;
+	text-align: right;
+	vertical-align:top;
+}
+
+
+
+/*//////////////////////news///////////////////////*/
+#news_pic_td
+{
+   width: 100px;
+	height: 80px;
+	text-align: right;
+	vertical-align:top;
+	background-image: url(../images/frame/images/frame_05.jpg);
+	background-repeat: no-repeat;	
+}
+.news_pic
+{  text-align: right;
+	vertical-align:top;
+   width: 100px;
+   height:80px;
+}
+/*////////////////////////////////////////////////////////////*/
+#gallery_tor_title
+{
+    width: 550px;
+	height: 44px;
+	text-align: right;
+	vertical-align:middle;
+	/*background-image: url(../images/tourdetail_portal/showgallery/images/gallery_tour_01.jpg);
+	background-repeat: no-repeat;*/
+}
+
+#gallery_title_txt
+{
+    font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;	
+	text-align: center;
+	vertical-align:middle;
+	}
+#gallery_comment_liner
+{
+    width: 33px;
+    text-align: right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/showgallery/images/gallery_tour_07.jpg);
+	background-repeat:repeat-y;	
+}
+#gallery_comment_linel
+{
+    width: 33px;
+    text-align: right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/showgallery/images/gallery_tour_05.jpg);
+	background-repeat:repeat-y;	
+}
+
+#gallery_next
+{
+    width: 454px;
+    text-align: right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/showgallery/images/gallery_tour_11.jpg);
+	background-repeat:repeat-y;	
+}
+#gallery_tor_pic
+{
+    width: 484px;
+     height:411px;
+    text-align: right;
+	vertical-align:top;
+	background-image: url(../images/tourdetail_portal/showgallery/images/gallery_tour_03.jpg);
+	background-repeat: no-repeat;	
+}
+#gallery_tor_comment
+{
+	width: 484px;
+	text-align: right;
+	vertical-align:top;
+	background-color:#F9F6F4;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;	
+	padding-top:5px;
+}
+/*///////////////galery_jahan/////////////////*/
+.galery_jahan_pic
+{
+    text-align: right;
+	vertical-align: top;
+	width: 136px;
+	height:120px;
+}
+/*******************************************************/
+.about_aks1{
+	width: 133px;
+	height: 134px;
+}
+.about_aksaval{
+	width: 500px;
+	height: 252px;
+}
+#about_bordermatn{
+	margin: 0px;
+	padding: 5px;
+}
+/**********************package**************************/
+#package_title
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	font-weight:bold;
+	background-color: #FCEDA8;
+	text-align: center;
+	vertical-align: middle;
+	height:20px;
+}
+#pagage_back_pic
+ {
+	background-repeat:no-repeat;
+	width:170px;
+	height:160px;
+	text-align:center;
+	vertical-align:bottom;
+	background-position: center;
+}
+
+.pagage2_list_pic
+ {
+	width:250px;
+	height:160px;
+    border: 1px solid #003366;
+}
+
+/**********************package2**************************/
+#pagage2_back_pic
+ {
+	background-repeat:no-repeat;
+	height:160px;
+	text-align:center;
+	vertical-align:bottom;
+	background-position: center;
+}
+#pagage2_txt
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+	vertical-align:middle;
+	font-weight: normal;
+}
+#pagage2_txt a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #04567D;
+	text-decoration: none;
+}
+#pagage2_txt a:hover
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #F9BB39;
+}
+
+.g2-201-borderaks{
+	height: 160px;
+	width: 200px;
+	border: 1px solid #354463;
+}
+#g2-201-title{
+	height: 25px;
+	width: 200px;
+	border: 1px solid #354463;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #006699;
+	text-decoration: none;
+	background-color: #EEF9FD;
+	text-align: center;
+	vertical-align: middle;
+}
+#g2-201-title a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #FF3300;
+	text-decoration: none;
+	text-align: center;
+}
+#g2-201-title a:hover{
+	color: #006699;
+}
+.g2-2011-borderaks{
+	height: 113px;
+	width: 150px;
+	border: 1px solid #98B7DE;
+}
+#g2-2011-title{
+	height: 25px;
+	width: 150px;
+	border: 1px solid #98B7DE;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #006699;
+	text-decoration: none;
+	background-color: #F1F3F9;
+	text-align: center;
+	vertical-align: middle;
+}
+#g2-2011-title a{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #FF3300;
+	text-decoration: none;
+	text-align: center;
+}
+#g2-2011-title a:hover{
+	color: #006699;
+}
+#g2-2012-bordertable{
+	border: 1px solid #98B7DE;
+	background-color: #F1F3F9;
+	padding: 7px;
+}
+.g2-2012-borderaks{
+	height: 350px;
+	width: 400px;
+	border: 1px solid #98B7DE;
+}
+#divleft
+{
+	width:69px;
+	float: left;
+	padding-left:2px;
+}
+
+#divright
+{
+	width:179px;
+	float: right;
+	clear: both;
+}
+#title_package2level
+{
+   font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+	text-decoration: none;	
+   border: 1px solid #98B7DE;
+   height:22px;
+
+}
+#title_package2level a
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #950025;
+	font-weight: normal;
+	text-decoration: none;	
+}
+#title_package2level a:hover
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #F9B413;
+	font-weight: normal;
+	text-decoration: none;	
+}
+
+.combo_big
+{
+   font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 90px;
+	border: 1px solid #003366;
+}
+
+/*/////////////order/////////////*/
+#contain-fild-black
+{
+	font-family: Tahoma;
+	font-size: 9pt;	
+	color: #000000;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#contain-fild-black a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #FF3300;
+	font-weight: normal;
+	text-decoration: none;	
+}
+#contain-fild-black a:hover
+{
+   font-family: Tahoma;
+	color: #FF3300;
+	font-size: 9pt;	
+}
+#contain-fild-black b
+{
+	color: #000000;
+	font-size: 9pt;
+	font-weight:bold;	
+}
+
+
+
+
+/*/////////////////////personel///////////////////////////*/
+#personel_pic1
+{
+	background-image: url(../images/personel/images/personel_01.jpg);
+	background-repeat: no-repeat;
+	width: 520px;
+	height:48px;
+}
+#personel_pic3
+{
+	background-color: #FFFFFF;
+	width: 322px;
+}
+#personel_pic_frame_td
+{
+	text-align: right;
+	vertical-align: top;
+	width: 129px;
+	height: 130px;
+}
+.personel_pic_frame
+{
+	width: 129px;
+	height: 130px;
+}
+/*///////////////////moshtari////////////////////////////////////////*/
+.print_info
+{
+	border: 1px solid #4E4E4E;
+	text-align: center;
+	vertical-align: middle;
+	width: 60px;
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF3300;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+#moshtari
+{
+	text-align: right;
+	vertical-align: top;
+	width: 500px;
+	background-image: url(../images/member.jpg);
+	background-repeat: no-repeat;
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF3300;
+	text-decoration: none;
+	padding-right:15px;
+	padding-left:15px;
+	padding-bottom:10px;
+	padding-top:10px;
+	height:50px;
+}
+#moshtari p
+{
+	text-align:center;
+	vertical-align:middle;
+}
+#moshtari-r
+{
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight:bold;
+}
+#moshtari-l
+{
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 10pt;
+   font-weight:bold;
+}
+#moshtari-m
+{
+	vertical-align: center;
+	font-family: Tahoma;
+	font-size: 10pt;
+   font-weight:bold;
+}
+#moshtari_border
+{
+	border: 1px solid #000000;
+}
+#moshtari_print
+{
+padding-right:250px;
+}
+#moshtari-message
+{	
+    font-family: Tahoma;
+	font-size: 10pt;
+    color:#FF0000;
+	text-align:center;
+	vertical-align: center;
+
+}
+#moshtari-message p
+{
+	font-family: Tahoma;
+	font-size: 10pt;
+	color:#000000;
+	text-align:justify;
+	vertical-align: center;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px;
+}
+/*////////////////////////////////////*/
+#line_visa
+{
+	background-color:#E0E0E0;
+	height:1px; 
+}
+#line_visa2
+{
+	background-color:#036;
+	height:1px; 
+}
+#b_border_visa{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FCFDFE;
+	text-align: center;
+	border: 1px solid #003366;
+	
+}
+#visa_title{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #FF0000;
+    text-align: center;
+}
+#visa_txt_madarek
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	text-align: justify;
+	vertical-align: top;
+}
+#visa_txt_madarek p
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	text-align: justify;
+	vertical-align: top;
+}
+#visa_reserve
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #FF0000;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none;
+	padding-left:10px;
+}
+#visa_reserve a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+	vertical-align: middle;
+    text-decoration: none;
+}
+#visa_reserve a:hover
+{
+	font-size: 9pt;
+	color: #006699;
+}
+/*////////////////////////////////////////////////*/
+/*//////////////////tors-khareji////////////////////*/
+
+
+
+.contain-combo-day
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 40px;
+	border: 1px solid #003366;
+}
+
+.contain-combo-mounth
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 70px;
+	border: 1px solid #003366;
+}
+.contain-combo-year
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 50px;
+	border: 1px solid #003366;
+}
+.contain-combo
+{
+   font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 70px;
+	border: 1px solid #003366;
+}
+
+#line_tor_hotels
+{
+	background-repeat: repeat-x;
+	background-image: url(../images/image_css_90/line_hotels.png);
+	height:1px;
+	width:690px;
+	background-color:#829FC3;
+}
+#line_tor_hotels_p
+{
+	height:1px;
+	width:750px;
+	background-color:#829FC3;
+}
+
+#hotel_hotel_txt_m
+{
+	text-align: center;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;	
+}
+
+#hotel_hotel_txt_r
+{
+	text-align: top;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;	
+	height:25px;
+}
+#hotel_hotel_txt
+{
+	text-align: right;
+	vertical-align: middle;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;	
+	height:25px;
+
+}
+#hotel_hotel_txt a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #1A5591;
+	text-decoration: none;	
+}
+#hotel_hotel_txt a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #09449D;
+	text-decoration: none;	
+}
+
+#t-104-hotel
+{
+    text-align: right;
+	vertical-align: top;
+	height: 35px;
+	width: 690px;
+	background-repeat: no-repeat;
+	background-image: url(../images/image_css_90/hotel_detail.png);
+}
+#t-104-hotel_p
+{
+    text-align: right;
+	vertical-align: top;
+	height: 75px;
+	width: 750px;
+	background-repeat: no-repeat;
+	background-image: url(../images/image_css_90/hotel_detail_p.png);
+}
+#t-104-hotel-last
+{
+    text-align: right;
+	vertical-align: top;
+	height: 75px;
+	width: 690px;
+	background-repeat: no-repeat;
+	background-image: url(../images/image_css_90/hotel_detail_last.png);
+}
+#t-104-hotel-last_p
+{
+    text-align: right;
+	vertical-align: top;
+	height: 75px;
+	width: 750px;
+	background-repeat: no-repeat;
+	background-image: url(../images/tourdetail_portal/tour_khareji/hotel_detail_last_p.jpg);
+}
+
+#tordetail_all{
+	text-align: right;
+	vertical-align: top;
+	height: 220px;
+	width: 550px;
+    margin: 0px;
+	padding: 0px;
+}
+	
+#back_tor
+{	height: 96px;
+	width: 550px;
+	background-image: url(../images/tourdetail_portal/tourdetail_world.jpg);
+	background-repeat: no-repeat;
+}
+/*//////////////////print_border_detail////////////////////////*/
+#print_border_detail
+{
+	border: 1px solid #096897;
+
+}
+#print_border_detail_txt
+{
+	border: 1px solid #096897;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #333333;
+	text-align: right;
+	vertical-align:middle;
+	height:25px;
+
+}
+/*////gallery safarname//////////////////////////////////////////////////////////*/
+#gh_tr11{
+	background-image: url(../images/ghab_pic/images/ghab_pic_01.jpg);
+	height: 4px;
+	width: 4px;
+}
+#gh_tr12{
+	background-image: url(../images/ghab_pic/images/ghab_pic_02.jpg);
+	height: 4px;
+    background-repeat: repeat-x;
+}
+#gh_tr13{
+	background-image: url(../images/ghab_pic/images/ghab_pic_03.jpg);
+	height: 4px;
+	width: 4px;
+}
+#gh_tr21{
+	background-image: url(../images/ghab_pic/images/ghab_pic_04.jpg);
+	width: 4px;
+	background-repeat: repeat-y;
+	background-position: right;
+}
+#gh_tr23{
+	background-image: url(../images/ghab_pic/images/ghab_pic_06.jpg);
+	width: 4px;
+	background-repeat: repeat-y;
+	background-position: left;
+}
+#gh_tr31{
+	background-image: url(../images/ghab_pic/images/ghab_pic_07.jpg);
+	height: 4px;
+	width: 4px;
+}
+#gh_tr32{
+	background-image: url(../images/ghab_pic/images/ghab_pic_08.jpg);
+	height: 4px;
+	background-repeat: repeat-x;
+}
+#gh_tr33{
+	background-image: url(../images/ghab_pic/images/ghab_pic_09.jpg);
+	height: 4px;
+	width: 4px;
+}
+#gallery_font{
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF0000;
+	text-align: center;
+	vertical-align: middle;
+}
+#gallery_all_title
+{   
+    height:25px;
+	font-family: Tahoma;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #FF9933;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*////////////////detail tor- tooltip//////////////////////////////*/
+.tipsy-inner {
+	padding:10px 15px;
+	line-height:1.5em;
+	font-weight:bold;
+}
+.tipsy {
+	opacity:.7;
+	filter:alpha(opacity=70);
+	background-repeat:no-repeat;
+	padding:5px;
+	vertical-align: top;
+}
+.tipsy-inner {
+	padding:8px 8px;
+	max-width:200px;
+	font-weight:bold;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	background-color:#000;
+	color:#FFFFFF;
+	text-align:left;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+.tipsy-west {
+	background-image:url(../images/tourdetail_portal/tour_khareji/images/tipsy-west.gif);
+    background-position:left center;
+}
+
+/*/////////////// advertisement/////////////////////////////////////////////////*/
+#SlideShow1{
+	height: 122px;
+	width: 136px;
+	z-index: 0;
+    position: relative;
+	text-align:center;
+	vertical-align:middle;
+}
+#SlideShow2{
+	height: 122px;
+	width: 136px;
+	z-index: 0;
+    position: relative;
+	text-align:center;
+	vertical-align:middle;
+}
+.adver_aks{
+	height: 122px;
+	width: 136px;
+}
+/***********************************************************************/
+.send
+{
+	width:35px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 18px;
+	border: 1px solid #BEC7DE;
+}
+
+
+.contain-rahgiri
+{
+    width:100px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #BEC7DE;
+}
+.bottom_rahgiri
+{
+     width:20px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #BEC7DE;
+}
+
+/*//////////// box-link///////////////////*/
+#box-link-all{
+	
+}
+#box-link-bordar{
+	background-color: #F3F3F3;
+	border: 1px solid #D3D3D3;
+	margin: 0px;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+	padding:5px;
+	height: 30px;
+}
+#box-link-bordar a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #C10000;
+	text-align: center;
+	vertical-align: middle;
+		text-decoration: none;
+}
+#box-link-bordar a:hover
+{
+	font-size: 9pt;
+	color: #000099;
+}
+/*********arz***************/
+#prc_120_tr1{
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #E6E6E6;
+	height: 30px;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+#prc_120_tr2rangi{
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #F1F3F9;
+	height: 30px;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+#prc_120_tr2{
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	height: 30px;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*////////////////////////////////////////////////////////*/
+.adver_borderaks
+{
+	width:136px;
+	height:122px;
+}
+/********************sokhan rooz**********************/
+#theTicker{
+	TEXT-ALIGN: right;
+	MARGIN: 0px;
+	DIRECTION: rtl;
+	font-family: Tahoma;
+	font-size: 9pt;
+	line-height: 150%;
+	font-weight: bold;
+	color: #BC090D;
+}
+/******************************************/
+
+
+/*****************new package*************************/
+#packagenew
+{
+    font-family: Tahoma;
+	font-size: 8pt;
+	color: #000000;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid #003366;
+	height:22px;
+}
+.packagenew_pic
+ {
+	width:250px;
+	height:160px;
+    border: 1px solid #003366;
+}/************************************************************/
+
+
+
+/*/////////////////////////moshtari//////////////////////////*/
+.combo-day{
+	width:45px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #006FA4;
+	direction:rtl;
+}
+.combo-mounth{
+	width:55px;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #006FA4;
+	direction:rtl;
+	text-align:right;
+}
+.combo-year{
+	width:50px;
+	text-align: right;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #006FA4;
+}
+.tavalod_year
+{
+    width:50px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	height: 20px;
+	border: 1px solid #006FA4;
+}
+
+.combo_max{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	vertical-align:middle;
+	height: 20px;
+	width: 110px;
+	border: 1px solid #006FA4;
+}
+
+.combo_tahsilat
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 80px;
+	border: 1px solid #006FA4;
+}
+#member_border
+{border: 1px solid #006FA4;}
+
+
+.combo_sex
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #333333;
+	text-align: right;
+	height: 20px;
+	width: 67px;
+	border: 1px solid #006FA4;
+}
+
+#afrad_ghab_liner
+{
+	width:5px;
+	background-image: url(../images/moshtari/sabtname/images/sabtname_04.jpg);
+	background-repeat: repeat-y;
+}
+#afrad_ghab_linel
+{
+	width:5px;
+	background-image: url(../images/moshtari/sabtname/images/sabtname_02.jpg);
+	background-repeat: repeat-y;
+}
+
+.afrad_name
+{
+  width:155px;
+    text-align:right;
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	text-decoration:none;
+}
+.afrad_sen
+{
+    width:60px;
+    text-align:right;
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	text-decoration:none;
+}
+
+#detail_sabtname_title
+{
+	text-align:right;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #FF0000;
+	font-weight: bold;
+	text-decoration:none;
+	background-color: #FFFFFF;
+	height:22px;
+}
+
+.postalcode{
+	width:190px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 7pt;
+	font-weight: normal;
+	color: #484545;
+	height: 20px;
+	border: 1px solid #006FA4;
+}
+
+/*user pass************************************************************************************************/
+.baner-user-box {
+	width: 140px;
+	height: 20px;
+	font-family: Tahoma;
+	font-size: 8pt;
+	text-decoration: none;
+	text-align: left;
+	background-color: #DEE6EF;
+	vertical-align: middle;
+	border: 1px solid #819FC3;
+	color: #666666;
+}
+	.baner-pss-box {
+	width: 90px;
+	height: 20px;
+	font-family: Tahoma;
+	font-size: 8pt;
+	text-decoration: none;
+	text-align: left;
+	background-color: #DEE6EF;
+	vertical-align: middle;
+	border: 1px solid #819FC3;
+	color: #666666;
+}
+.baner-dokme-user {
+	width: 40px;
+	height: 20px;
+	font-family: Tahoma;
+	font-size: 7pt;
+	text-decoration: none;
+	text-align: center;
+	background-color:  #DEE6EF;
+	vertical-align: middle;
+	border: 1px solid #819FC3;
+	color: #666666;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+}
+.cart_number_txt-me
+{
+	text-align:right;
+	font-family: Tahoma;
+	font-size: 9pt;
+	color: #000000;
+	font-weight: normal;
+	text-decoration:none;
+	height:22px;
+	width:30px;
+	text-align:left;
+	vertical-align: top;
+	border: 1px solid #17a8e1;
+	background-color: #cbeefc;
+}
+.bottom_cartrahal-me
+{
+	text-align:center;
+	vertical-align: top;
+	height:23px;
+	border: 1px solid #17a8e1;
+	width: 20px;
+	font-family: Tahoma;
+	font-size: 7pt;
+	color: #333;
+}
+
+#taeed_customer
+{
+   text-align:center;
+	font-family: Tahoma;
+	font-size: 10pt;
+	color: #0D4386;
+	font-weight: bold;
+	text-decoration:none;
+	text-align:center;
+	vertical-align: middle;
+	border: 1px solid #07335F;
+    height:25px;
+}
+/*///////////////////////////////////////////////////*/
+
+/*/////////////gallery_commentt////////////////////////////////////*/
+#gallery_commentt
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+	vertical-align:middle;
+	border: 1px solid #CAC6C6;
+}
+#gallery_commentt a
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #104280;
+}
+#gallery_commentt a:hover
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #FF0000;
+}
+/*//////////////////////////////////////////////*/
+
+/*//////////index-welcome/////////////////*/
+.div_max_search_hotel{
+ margin-top:370px;
+  margin-left:70px;
+ width:80%;
+ height:80%;
+ position:absolute;
+ z-index:10000;
+ display:none;
+ top:0px;
+ left:0px;
+ background-position:center;
+ background-color:#000;
+}
+
+#close-about{
+  top:-30%;
+  float:right;
+  padding-right:10px;
+  margin-top:-20px;
+}
+
+#result_search{
+ margin-top:20px;
+ text-align:center;
+}
+/*******************************************/
+#moshtari-padding
+{
+	padding:5px;
+}
+
+.print
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+	vertical-align:middle;
+	border: 1px solid #000;
+}
+
+#detail_tour_back{
+
+  	width:690px;
+    background:url(../images/image_css_90/kaleb-matn.png) no-repeat; 
+    background-position:top;
+	height:31px;
+    font-family:Tahoma;
+    font-size:8pt;
+    color:#2c5fa1;
+    text-align:right;
+	vertical-align:middle;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#detail_tour_back_txt
+{
+	padding-top:10px;
+}
+
+
+#detail_tour_line2
+{  width:688px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #83ace0;
+	border-bottom-color: #83ace0;
+	border-left-color: #83ace0;
+}
+/*///////////////////////////////////////////////////////*/
+#td_pakage {
+	font-family: tahoma;
+	font-size: 10pt;
+	color: #660000;
+	background-color: #FFFFCC;
+	border: 1px solid #0000FF;
+
+}
+#td_pakage a{
+	font-family: tahoma;
+	font-size: 10pt;
+	color: #CC9900;
+	background-color: #FFFFCC;
+	text-decoration: none;
+}
+#td_pakage a:hover{
+	font-family: tahoma;
+	font-size: 10pt;
+	color: #336600;
+	background-color: #FFFFCC;
+	text-decoration: none;
+}
+#td_keshvar {
+	font-family: tahoma;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #DDFFFC;
+	background-position: center center;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px 1 #006699;
+}
+#sms_td
+{
+	background-image: url(../images/gallery/sms/sms.jpg);
+	background-repeat: no-repeat;
+}
+
+.torloc_khareji_pic
+{
+ width:158px;
+ height:100px;
+}
+/*///////////////////////////////////////////////////////////////*/
+
+/*******************************************************************************/
+#menu_right_nav{
+	float:right;
+	height:172px;
+	width:170px;
+	border:0px solid #F00;
+}
+
+#menu_right_nav ul li{
+	margin-top:-11px;
+	*margin-top:0px;	
+	float:right;
+	height:172px;
+	width:170px;
+	text-align:center;
+	display:inline;
+	position:relative;
+	font-family:Tahoma;
+	background:#F00;
+}
+
+#menu_right_nav li ul{
+	display:none;
+	margin-top:-120px;
+	margin-right:5px;
+
+	height:200px; 
+	
+	border:0px solid #F00;		
+}
+
+#menu_right_nav li ul li{
+	background:#32799e;
+	
+	margin:0px;	
+	padding:5px;
+		
+    font-family:Tahoma;
+	color:#FFF;
+	font-size:12px;
+		
+	width:150px;	
+	height:17px;
+	opacity:0.9;
+}
+
+#menu_right_nav li ul li a{
+		font-family:Tahoma;
+		color:#FFF;
+		text-decoration:none;		
+}
+
+#menu_right_nav li ul li a:hover{
+		font-family:Tahoma;
+		color:#9F0;
+}
+#login_member{
+	background:url(../images/frem1/images/frem1_02.jpg) no-repeat;
+	width:300px;
+	height:123px;
+	
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	color:#000;
+	font-weight:normal;
+}
+.news_pic{
+	border:1px solid #EBEBF1;	
+}
+
+
+#imagelink{
+	margin-bottom:5px;
+	padding:0px;
+	margin-right:-4px;
+	border:0px solid #fff;
+	position:relative;
+}
+
+.register{
+	position:relative;
+	border:0px solid #FF0;
+}
+
+.tooltip_member{
+	position:absolute;
+	width:100px;
+	background:#ecdde5;
+	border:2px solid #de94b1;
+	
+	top:3px;
+	right:202px;
+	z-index:2000;
+	display:none;
+	padding:5px;
+	
+	text-align:right;
+	direction:rtl;
+}
+.link_tooltip_member{
+  	width:100px;
+	height:20px;
+	margin-bottom:3px;
+	border-bottom:1px solid #bb82a0;
+}
+.tooltip_member a{
+	float:right;
+	margin-bottom:5px;
+
+	font-family:tahoma;
+	font-size:11px;
+	color:#612043;
+	text-decoration:none;
+	font-weight:bold;
+}
+.tooltip_member a:hover{
+	font-family:tahoma;
+	font-size:11px;
+	color:#a5547d;	
+}
+
+
+/*//////////////////////////////////*/
+
+.ad_boxes-list-tour{
+	margin:0px auto;
+	margin-top:5px;
+	width:700px;
+	float:right;
+	z-index:1;
+	
+}
+
+.div_img_tour{
+	height:160px;
+	position:relative;
+	overflow:hidden;
+	width:200px;
+	border:1px solid  #CCC;
+	float:right;
+	margin-left:10px;
+	margin-top:10px;
+}
+.div_txt_tour
+{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	float:right;
+	/*background-color:#000;*/
+	background:url(../images/back_keshvar.png) repeat top;
+	width:193px;
+	*width:200px;
+	height:80px;
+	padding-left:6px;
+	font-family: Tahoma;
+	font-weight:bold;
+	font-size: 8pt;
+	color: #FFF;
+	text-align:right;
+	text-decoration:none;
+	padding-top:5px;
+	margin-bottom:-53px;
+	*margin-bottom:-48px;
+}
+
+.div_txt_tour a
+{
+	color: #FFF;
+	text-decoration:none;
+}
+.div_txt_tour a:hover
+{
+	color: #FF7800;
+	text-decoration:none;
+}
+/***********search_faq***********************/
+.srch_faq{
+	text-align:center;
+	direction:rtl;
+	margin-bottom:20px;
+}
+.txtsrch_faq{
+	width:300px;
+	height:30px;
+	vertical-align:bottom;
+	font:15px/30px 'Yekan','BKoodakBold', Tahoma;
+	border:1px solid #CFCFCF;
+}
+.btnsrch_faq{
+	width:100px;
+	height:34px;
+	font:17px/30px 'BKoodakBold', Tahoma;
+	text-align: center;
+	color:#FFF;
+	padding-bottom:5px;
+	background-color:#983667;
+	border:none;
+	
+}
+.faq_title
+{
+	font:15px/30px 'BKoodakBold', Tahoma;
+	color: #333333;
+	text-align: left;
+	vertical-align:top;
+}
+.faq_content
+{
+	font:normal 12px/25px Tahoma;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+	text-decoration: none;	
+}
