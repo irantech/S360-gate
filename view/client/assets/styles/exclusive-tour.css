@@ -1,0 +1,3390 @@
+:root{
+    --rounded : 8px;
+}
+
+
+/****************
+    sidebar Styles
+*****************/
+@import '../fonts/booking/booking.css';
+
+.next_tour_n_ .bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.th_hotel.totalRoomCurrency_hotel {
+    text-align: center;
+    padding: 10px;
+}
+
+.roomFinalPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.extra-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.extra-price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5px;
+    background: #f8f9fa;
+    border-radius: 3px;
+}
+
+.extra-price-label {
+    color: #7f8c8d;
+}
+
+.extra-price-value {
+    color: #e74c3c;
+    font-weight: bold;
+    direction: rtl;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.extra-title-bed {
+    font-weight: bold;
+    direction: rtl;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.plus_price_room {
+    cursor: pointer;
+    color: #3498db;
+    margin-right: 5px;
+}
+
+.plus_price_room:hover {
+    color: #2980b9;
+}
+
+/* Room Package Box Styles */
+.room-package-box {
+    min-width: 280px;
+    max-width: 350px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.room-package-box:hover {
+    border-color: var(--mainColor);
+}
+
+.room-package-box.selected {
+    border-color: var(--mainColor);
+    border-width: 2px;
+}
+
+.room-package-box.selected .room-name {
+    color: var(--mainColor);
+}
+
+.room-package-box.selected .room-type {
+    background: var(--mainColor);
+    color: #fff;
+}
+
+/* Package Header */
+.package-header {
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotel-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.package-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Rooms in Package */
+.rooms-in-package {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rooms-in-package::-webkit-scrollbar {
+    width: 4px;
+}
+
+.rooms-in-package::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 2px;
+}
+
+/* Room Item */
+.room-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.room-item:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.room-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.room-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.room-type {
+    background: #ddd;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.room-item-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.detail {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Package Footer */
+.package-footer {
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.availability {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 4px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.btn-select-package {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-select-package:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* When there's only one room in package */
+.room-package-box.single-room .rooms-in-package {
+    max-height: none;
+}
+
+.room-package-box.single-room .room-item {
+    background: white;
+    border-right-width: 4px;
+}
+
+/* Visual indicator for multiple rooms */
+.room-package-box.multiple-rooms .package-header::after {
+    content: '🏨';
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Main Container */
+.flights-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    direction: rtl;
+}
+
+/* Section Titles */
+.section-title {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.section-title h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Rooms Section */
+.rooms-section {
+    margin-bottom: 40px;
+}
+
+.rooms-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    scrollbar-width: none; /* برای فایرفاکس */
+    -ms-overflow-style: none; /* برای IE و Edge */
+    cursor: grab;
+    user-select: none;
+}
+
+.rooms-container::-webkit-scrollbar {
+    display: none; /* برای Chrome / Safari / Edge */
+}
+
+.rooms-container.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.rooms-container > div {
+    flex-shrink: 0;
+}
+
+
+/* Room Box */
+.room-box {
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.room-box:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.room-box.selected {
+    background: #e8f5e9;
+    border-color: #4CAF50;
+    border-width: 2px;
+}
+
+.room-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.room-type-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.room-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.room-details .info-item {
+    margin-bottom: 5px;
+}
+
+.hotel-info {
+    font-size: 13px;
+    color: #999;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+    margin-top: 8px;
+}
+
+.btn-select-room {
+    width: 100%;
+    padding: 8px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-select-room:hover {
+    background: #45a049;
+}
+
+/* Flights Section */
+.flights-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.flight-column {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.flights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+    direction: ltr;
+}
+
+.flights-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.flights-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.flights-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Flight Box */
+.flight-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    direction: rtl;
+    display: flex;
+    gap: 10px;
+}
+
+.flight-box:hover {
+    border-color: var(--mainColor);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.flight-section-header h2 {
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.flights-container {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ccc transparent; /* Firefox */
+}
+
+/* Chrome و Webkit مرورگرها */
+.flights-container::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+}
+
+.flights-container::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.flights-container::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.flights-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.flight-box.selected {
+    border-color: var(--mainColor);
+    border-width: 2px;
+}
+
+.flight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.airline-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.airline-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.airline-details {
+    display: flex;
+    gap: 10px;
+}
+
+.airline-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.flight-number {
+    font-size: 12px;
+    color: #666;
+}
+
+.flight-type-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.flight-type-badge.charter {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.flight-type-badge.scheduled {
+    background: #cce5ff;
+    color: #004085;
+}
+
+/* Flight Route */
+.flight-route-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.route-point {
+    text-align: center;
+}
+
+.route-point .time {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.route-point .airport-code {
+    display: block;
+    font-size: 14px;
+    color: #2196F3;
+    font-weight: 500;
+}
+
+.route-point .date {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 3px;
+}
+
+.flight-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.route-line {
+    width: 150px;
+    height: 1px;
+    background: #ddd;
+    position: relative;
+    width: 100%;
+}
+
+.duration {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.btn-select-flight {
+    width: 100%;
+    padding: 8px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-select-flight:hover {
+    background: #1976D2;
+}
+
+/* Matching Result - Fixed Position */
+.matching-result {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    background: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-height: 70vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.matching-result h2 {
+    color: #4CAF50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.summary-item {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.summary-item h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.summary-item p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.price-summary {
+    border-top: 2px solid #e0e0e0;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.price-item.total {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4CAF50;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+/* Continue Button */
+.continue-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.btn-continue,
+.btn-reset {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-continue {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-continue:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background: #f44336;
+    color: white;
+}
+
+.btn-reset:hover {
+    background: #da190b;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .flights-section {
+        grid-template-columns: 1fr;
+    }
+
+    .matching-result {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .room-box {
+        min-width: 100%;
+    }
+
+    .flights-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Loading Animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* استایل برای flight-box غیرفعال */
+.flight-box.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.flight-box.disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(200, 200, 200, 0.3);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.flight-box:not(.disabled) {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Passenger Form Wrapper */
+.passenger-form-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.package-summary-sidebar {
+    width: 350px;
+    position: sticky;
+    top: 20px;
+    flex-shrink: 0;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.summary-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.summary-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-section:last-child {
+    border-bottom: none;
+}
+
+.summary-section h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.hotel-name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.room-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.room-info small {
+    color: #666;
+    font-size: 12px;
+}
+
+.flight-detail {
+    font-size: 13px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.price-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.price-row.total-price {
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Content */
+.passenger-form-content {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.form-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Passenger Type Section */
+.passenger-type-section {
+    margin-bottom: 30px;
+}
+
+.passenger-type-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Passenger Card */
+.passenger-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.passenger-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 20px;
+}
+
+.passenger-card-header h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.passenger-card-body {
+    padding: 20px;
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.btn-back, .btn-next {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-back {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.btn-back:hover {
+    background: #e0e0e0;
+}
+
+.btn-next {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .passenger-form-wrapper {
+        flex-direction: column;
+    }
+
+    .package-summary-sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.logo-airline-ico {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image: url(../images/airline-dakheli.png);
+    background-position: -300px 0;
+    border-radius: 9999px;
+}
+
+div.IV .logo-airline-ico {
+    background-position: 120px 120px;
+}
+
+div.PR .logo-airline-ico {
+    background-position:120px 60px;
+}
+
+div.PYA .logo-airline-ico,
+div.PY .logo-airline-ico {
+    background-position: 0 0;
+}
+
+div.ZV .logo-airline-ico {
+    background-position: -60px 0;
+}
+
+div.Y9 .logo-airline-ico {
+    background-position: -120px 0;
+}
+
+div.AXV .logo-airline-ico {
+    background-position: -356px -53px;
+}
+
+div.VR .logo-airline-ico, div.Varesh .logo-airline-ico, div._VR .logo-airline-ico, div.VRH .logo-airline-ico {
+    background-position: -180px 0;
+}
+
+div.RI, div.IRU .logo-airline-ico {
+    background-position: -300px -60px;
+}
+div.RI .logo-airline-ico {
+    background-position: 115px -60px ;
+}
+div.AVAAIR .logo-airline-ico{
+    background-position: 59px -60px;
+}
+div.AXV .logo-airline-ico-foreign{
+    background-position: 122px -2px;
+}
+div.TF .logo-airline-ico {
+    background-position: -240px 0;
+}
+
+div.JR .logo-airline-ico {
+    background-position: 0 -60px;
+}
+
+div.AK .logo-airline-ico {
+    background-position: -60px -60px;
+}
+
+div.IR .logo-airline-ico {
+    background-position: -120px -60px;
+}
+
+div.NV .logo-airline-ico {
+    background-position: -180px -60px;
+}
+
+div.B9 .logo-airline-ico {
+    background-position: -240px -60px;
+}
+div.A1 .logo-airline-ico {
+    background-position: 116px 300px;
+}
+
+div.JI .logo-airline-ico, div.J1 .logo-airline-ico {
+    background-position: 0 -60px;
+}
+
+div.flypersia .logo-airline-ico,
+div.FP .logo-airline-ico,
+div.FP0 .logo-airline-ico{
+    background-position: -180px -180px;
+}
+
+div.EP .logo-airline-ico {
+    background-position: 00px -120px;
+}
+
+div.QB .logo-airline-ico {
+    background-position: -60px -120px;
+}
+
+div.HH .logo-airline-ico {
+    background-position: -120px -120px;
+}
+
+
+div.IV .logo-airline-ico {
+    background-position: -180px -120px;
+}
+
+div.IRZ .logo-airline-ico, div.saha .logo-airline-ico, div.SA .logo-airline-ico,div.sa .logo-airline-ico, div._007 .logo-airline-ico, div.SHI .logo-airline-ico {
+    background-position: -240px -120px;
+}
+div.ATS .logo-airline-ico {
+    background-position: -356px -118px;
+}
+div.I3 .logo-airline-ico {
+    background-position: 0 -180px;
+}
+div.TKN .logo-airline-ico {
+    background-position: -359px -180px;
+}
+div.DZD .logo-airline-ico {
+    background-position: 59px 242px;
+}
+div.Y0 .logo-airline-ico {
+    background-position: 59px 242px;
+}
+div.W5 .logo-airline-ico {
+    background-position: -60px -180px;
+}
+
+div.SR .logo-airline-ico, div.sepehran .logo-airline-ico, div.IS .logo-airline-ico, div._008 .logo-airline-ico {
+    background-position: -120px -180px;
+}
+div.YAZDAIR .logo-airline-ico {
+    background-position: 58px 242px;
+}
+
+
+.logo-airline-ico-foreign {
+
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image: url(../images/new-foreign-airline.jpg);
+    background-position: 360px 120px;
+}
+
+
+.\32 j .logo-airline-ico-foreign {
+    background-position: -300px 0;
+}
+
+/*Airline Flight IR  */
+div.EP .logo-airline-ico-foreign {
+    background-position: 0 60px
+}
+
+div.AJ .logo-airline-ico-foreign {
+    background-position: 60px 60px;
+}
+
+div.IV .logo-airline-ico-foreign {
+    background-position: 180px 120px;
+}
+
+div.TI .logo-airline-ico-foreign {
+    background-position: -180px 180px;
+}
+
+div.ZV .logo-airline-ico-foreign {
+    background-position: 180px 60px;
+}
+div.A7 .logo-airline-ico {
+    background-position: 60px -120px;
+}
+
+div.Y9 .logo-airline-ico-foreign {
+    background-position: -60px 60px;
+}
+
+
+div.IR .logo-airline-ico-foreign {
+    background-position: -300px 60px;
+}
+
+div.foreign.VF .logo-airline-ico-foreign {
+    background-position: 300px 66px;
+}
+div.DZ .logo-airline-ico-foreign {
+    background-position: 722px 0;
+}
+
+div.NV .logo-airline-ico-foreign {
+    background-position: 60px 120px;
+}
+
+div.B9 .logo-airline-ico-foreign {
+    background-position: -240px -540px;
+}
+div.DZD .logo-airline-ico-foreign ,div.yazdair .logo-airline-ico-foreign {
+    background-position: -716px 181px;
+}
+div.Y0 .logo-airline-ico-foreign ,div.yazdair .logo-airline-ico-foreign {
+    background-position: -716px 181px;
+}
+
+div.JI .logo-airline-ico-foreign,
+div.J1 .logo-airline-ico-foreign,
+div.JR .logo-airline-ico-foreign {
+    background-position: -360px 60px
+}
+
+div.parsair .logo-airline-ico,
+div.PA .logo-airline-ico,
+div._PA .logo-airline-ico {
+    background-position: -240px -180px;
+}
+
+div.PA .logo-airline-ico-foreign,
+div.parsair .logo-airline-ico-foreign {
+    background-position: 599px 0;
+}
+
+div.QB .logo-airline-ico-foreign {
+    background-position: -180px -540px
+}
+
+div.J9 .logo-airline-ico-foreign {
+    background-position: 900px 306px;
+}
+
+div.AX .logo-airline-ico-foreign {
+    background-position: -420px -417px;
+}
+
+div.RI .logo-airline-ico-foreign {
+    background-position: -235px 0;
+}
+
+div.IS .logo-airline-ico-foreign {
+    background-position: -240px -359px;
+}
+
+div.HH .logo-airline-ico-foreign {
+    background-position: -120px 60px;
+}
+
+div.IF .logo-airline-ico-foreign {
+    background-position: -600px -360px;
+}
+
+div.IRZ .logo-airline-ico-foreign,
+div.saha .logo-airline-ico-foreign,
+div.SA .logo-airline-ico-foreign,
+div._007 .logo-airline-ico-foreign,
+div.SHI .logo-airline-ico-foreign {
+    background-position: -540px -480px;
+}
+
+div.I3 .logo-airline-ico-foreign {
+    background-position: 240px 60px;
+}
+
+div.W5 .logo-airline-ico-foreign {
+    background-position: -480px -480px;
+}
+
+/*Airline Flight IR  */
+
+
+
+
+/*Airline Flight Foreign  */
+
+div.foreign.PS .logo-airline-ico-foreign {
+    background-position: -60px -120px;
+}
+
+div.foreign.KK .logo-airline-ico-foreign {
+    background-position: 0 -120px;
+}
+
+div.foreign.SU .logo-airline-ico-foreign {
+    background-position: 120px -60px;
+}
+
+div.foreign.J2 .logo-airline-ico-foreign {
+    background-position: -360px 0;
+}
+
+div.foreign.J21 .logo-airline-ico-foreign {
+    background-position: -360px 0;
+}
+
+div.foreign.QR .logo-airline-ico-foreign {
+    background-position: -360px -120px;
+}
+
+div.foreign.WY .logo-airline-ico-foreign ,
+div.foreign.omanair .logo-airline-ico-foreign {
+    background-position: -360px -60px;
+}
+
+div.foreign.EK .logo-airline-ico-foreign {
+    background-position: -180px -120px;
+}
+
+div.foreign.TK .logo-airline-ico-foreign,
+div.foreign.AJTK .logo-airline-ico-foreign {
+    background-position: -240px -120px;
+}
+
+div.foreign.flypersia .logo-airline-ico-foreign,
+div.foreign.FP .logo-airline-ico-foreign,
+div.foreign.FP0 .logo-airline-ico-foreign {
+    background-position: -240px 120px;
+}
+
+div.foreign.EY .logo-airline-ico-foreign {
+    background-position: -300px -120px;
+}
+
+div.foreign.LH .logo-airline-ico-foreign {
+    background-position: -120px -120px;
+}
+
+div.foreign.OS .logo-airline-ico-foreign {
+    background-position: 120px -120px;
+}
+
+div.foreign.AZ .logo-airline-ico-foreign {
+    background-position: -420px -60px;
+}
+
+div.foreign.KK .logo-airline-ico-foreign {
+    background-position: -0 -120px;
+}
+
+div.foreign.G9 .logo-airline-ico-foreign {
+    background-position: 180px -60px;
+}
+
+div.foreign.KL .logo-airline-ico-foreign {
+    background-position: -480px -60px;
+}
+
+div.foreign.PC .logo-airline-ico-foreign,
+div.foreign.pegasus .logo-airline-ico-foreign {
+    background-position: -420px -120px;
+}
+
+div.foreign.GF .logo-airline-ico-foreign {
+    background-position: 60px -60px;
+}
+
+div.foreign.TG .logo-airline-ico-foreign {
+    background-position: -480px -120px;
+}
+
+div.foreign.BA .logo-airline-ico-foreign {
+    background-position: -60px -60px;
+}
+
+div.foreign.A3 .logo-airline-ico-foreign {
+    background-position: -540px -120px;
+}
+
+div.foreign.AF .logo-airline-ico-foreign {
+    background-position: -540px -60px;
+}
+
+div.foreign.SA .logo-airline-ico-foreign {
+    background-position: -120px -60px;
+}
+
+div.foreign.AK .logo-airline-ico-foreign {
+    background-position: -180px -180px;
+}
+
+div.foreign.AC .logo-airline-ico-foreign {
+    background-position: -120px -180px;
+}
+
+div.foreign.QF .logo-airline-ico-foreign {
+    background-position: -60px -180px;
+}
+
+div.foreign.CZ .logo-airline-ico-foreign {
+    background-position: -60px -240px;
+}
+
+div.foreign.U2 .logo-airline-ico-foreign {
+    background-position: 0 -180px;
+}
+
+div.foreign.TKN .logo-airline-ico-foreign {
+    background-position: -359px 242px;
+}
+div.foreign.FZ .logo-airline-ico-foreign {
+    background-position: -120px 0;
+}
+div.foreign.PD .logo-airline-ico-foreign {
+    background-position: 720px 300px;
+}
+
+div.foreign.IB .logo-airline-ico-foreign {
+    background-position: 60px -120px;
+}
+
+div.foreign.KE .logo-airline-ico-foreign {
+    background-position: -180px 0;
+}
+
+div.foreign.KU .logo-airline-ico-foreign {
+    background-position: -240px -60px
+}
+
+div.foreign.MH .logo-airline-ico-foreign {
+    background-position: 180px 300px;
+}
+
+div.foreign.OV .logo-airline-ico-foreign {
+    background-position: 180px 0;
+}
+
+div.foreign.VY .logo-airline-ico-foreign {
+    background-position: -180px -60px;
+}
+
+div.foreign.ME .logo-airline-ico-foreign {
+    background-position: -360px -300px;
+}
+
+div.foreign.IA .logo-airline-ico-foreign {
+    background-position: -240px -300px;
+}
+
+div.foreign.JP .logo-airline-ico-foreign {
+    background-position: -300px -60px;
+}
+
+div.foreign.SN .logo-airline-ico-foreign {
+    background-position: -360px -240px;
+}
+
+div.foreign.JP .logo-airline-ico-foreign {
+    background-position: -300px -60px
+}
+
+div.foreign.KC .logo-airline-ico-foreign {
+    background-position: 120px -180px;
+}
+
+div.foreign.AB .logo-airline-ico-foreign {
+    background-position: 300px -180px
+}
+
+div.foreign.XC .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+div.foreign.CA .logo-airline-ico-foreign {
+    background-position: -120px -240px
+}
+
+div.foreign.UX .logo-airline-ico-foreign {
+    background-position: 120px 0
+}
+
+div.foreign.JU .logo-airline-ico-foreign {
+    background-position: -240px 0;
+}
+
+div.foreign.AS .logo-airline-ico-foreign {
+    background-position: 0 -300px
+}
+
+div.foreign.AA .logo-airline-ico-foreign {
+    background-position: 0 -60px
+}
+
+div.foreign.OZ .logo-airline-ico-foreign {
+    background-position: 300px 0;
+}
+
+div.foreign.CX .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+div.foreign.DL .logo-airline-ico-foreign {
+    background-position: -420px 360px;
+}
+
+div.foreign.EN .logo-airline-ico-foreign {
+    background-position: -480px 300px
+}
+
+div.foreign.KA .logo-airline-ico-foreign {
+    background-position: -60px 300px
+}
+
+div.foreign.E2 .logo-airline-ico-foreign {
+    background-position: 0 0;
+}
+
+div.foreign.EW .logo-airline-ico-foreign {
+    background-position: 240px 0;
+}
+
+div.foreign.GA .logo-airline-ico-foreign {
+    background-position: 60px -180px
+}
+
+div.foreign.QX .logo-airline-ico-foreign {
+    background-position: -60px 0;
+}
+
+div.foreign.AI .logo-airline-ico-foreign {
+    background-position: 180px 360px
+}
+
+div.foreign.NQ .logo-airline-ico-foreign {
+    background-position: 240px 420px
+}
+
+div.foreign.\39 W .logo-airline-ico-foreign {
+    background-position: 360px -300px;
+}
+
+div.foreign.B6 .logo-airline-ico-foreign {
+    background-position: 360px -180px
+}
+
+div.foreign.KQ .logo-airline-ico-foreign {
+    background-position: -300px -180px
+}
+
+div.foreign.OD .logo-airline-ico-foreign {
+    background-position: 240px 300px
+}
+
+div.foreign.OA .logo-airline-ico-foreign {
+    background-position: 120px 300px
+}
+
+div.foreign.FV .logo-airline-ico-foreign {
+    background-position: -300px -300px;
+}
+
+div.foreign.S7 .logo-airline-ico-foreign {
+    background-position: -360px -180px
+}
+
+div.foreign.SV .logo-airline-ico-foreign {
+    background-position: -180px -300px;
+}
+
+div.foreign.\33 U .logo-airline-ico-foreign {
+    background-position: 180px -180px;
+}
+
+div.foreign.SQ .logo-airline-ico-foreign {
+    background-position: 60px -240px;
+}
+
+div.foreign.UL .logo-airline-ico-foreign {
+    background-position: 60px -300px;
+}
+
+div.foreign.LX .logo-airline-ico-foreign {
+    background-position: -300px -240px
+}
+
+div.foreign.TF .logo-airline-ico-foreign {
+    background-position: 300px 60px;
+}
+
+div.foreign.UA .logo-airline-ico-foreign {
+    background-position: 360px 0
+}
+
+div.foreign.U6 .logo-airline-ico-foreign {
+    background-position: -180px -240px
+}
+
+div.foreign.UT .logo-airline-ico-foreign {
+    background-position: -240px -240px
+}
+
+div.foreign.WS .logo-airline-ico-foreign {
+    background-position: 120px -240px
+}
+
+div.foreign.PYA .logo-airline-ico-foreign {
+    background-position: 120px 60px;
+}
+
+div.foreign.VR .logo-airline-ico-foreign,
+div.Varesh .logo-airline-ico-foreign,
+div._VR .logo-airline-ico-foreign ,
+div.VRH .logo-airline-ico-foreign {
+    background-position: 120px 120px
+}
+
+div.foreign.CPN .logo-airline-ico-foreign {
+    background-position: 181px 120px;
+}
+
+div.foreign.ET .logo-airline-ico-foreign {
+    background-position: 0 240px
+}
+
+div.foreign.CX .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+div.foreign.\38 Q .logo-airline-ico-foreign {
+    background-position: -240px -180px
+}
+
+div.foreign.MS .logo-airline-ico-foreign {
+    background-position: -120px 300px
+}
+
+div.foreign.RJ .logo-airline-ico-foreign {
+    background-position: 240px -240px
+}
+
+div.foreign.sepehran .logo-airline-ico-foreign ,
+div.foreign._008 .logo-airline-ico-foreign {
+    background-position: 240px -240px
+}
+
+/* ========================================
+   SIDEBAR STYLES - CONSOLIDATED
+   ======================================== */
+
+.parent-box-calendar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.parent-box-calendar i{
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    position: static !important;
+}
+
+.parent-box-input--h .select{
+    width: 100%;
+}
+
+.parent-box-input--h .select2-container--default .select2-selection--single{
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.parent-box-input--h .select2-selection__rendered{
+    font-size: 14px !important;
+    color: #4b5259;
+}
+
+.parent-box-input i{
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    position: static !important;
+}
+
+.parent-box-input--h{
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 5px;
+}
+
+.calendar--input{
+    height: 37px !important;
+    line-height: 26px !important;
+    border-radius: 3px !important;
+    padding: 0 6px !important;
+    box-sizing: border-box !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    outline: none !important;
+    text-align: right !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    border: none !important;
+    font-feature-settings: "ss02" !important;
+    background: transparent !important;
+    cursor: pointer !important;
+}
+
+.parent-box-input{
+    justify-content: space-between;
+    background: #f0f3f7;
+    border-radius: 8px;
+    padding: 4px 12px;
+    border: 1px solid #eee;
+}
+
+.filtertip-searchbox-box1 {
+    box-shadow: none;
+    width: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtertip_hotel .filtertip-searchbox-box1 {
+    background: none;
+}
+
+.parent-research-internal-hotel-sidebar {
+    display: grid;
+    grid-template-areas:
+    "city city"
+    "checkIn checkOut"
+    "night room"
+    "roomBox roomBox"
+    "searchBtn searchBtn";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.form-hotel-item-searchBox-date>.stayingTime{
+    font-size: 14px;
+    padding: 0;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.parent-research-internal-hotel-sidebar--new{
+    display: flex !important;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(1) {
+    grid-area: city;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(2) {
+    grid-area: checkIn;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(3) {
+    grid-area: checkOut;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(4) {
+    grid-area: night;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(6) {
+    grid-area: room;
+}
+
+.parent-research-internal-hotel-sidebar #box-foreign-hotel-room:nth-child(7) {
+    grid-area: roomBox;
+}
+
+.parent-research-internal-hotel-sidebar .form-hotel-item:nth-child(8) {
+    grid-area: searchBtn;
+}
+
+.parent-research-internal-hotel-sidebar .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 12px !important;
+    color: #a5a0a0;
+}
+
+.form-hotel-item-searchBox {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.form-hotel-item{
+    width: 100%;
+}
+
+.form-hotel-item-searchBox-btn{
+    margin-bottom: 0;
+}
+
+.form-hotel-item-searchBox-btn{
+    margin-bottom: 0;
+}
+
+.form-hotel-item-searchBox-date {
+    width: 100%;
+    position: relative;
+}
+
+.form-hotel-item-searchBox-date .input{
+    display: flex;
+    align-items: center;
+}
+
+.form-hotel-item-searchBox-date .input i{
+    left:10px;
+    position: absolute;
+
+}
+
+.form-hotel-item-searchBox-date.padr5 .calendar-icon{
+    left: 6px;
+}
+
+.form-hotel-item-searchBox-date.padl5 .calendar-icon{
+    left: 10px;
+}
+
+.form-hotel-item .select select {
+    height: 35px;
+    line-height: 26px;
+    border-radius: 3px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    text-align: right;
+    color: #a5a0a0;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    font-feature-settings: "ss02";
+}
+
+.form-hotel-item-stayTime {
+    position: relative;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: inherit;
+    outline: none;
+    text-align: right;
+    color: #989595;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    display:flex;
+    align-items: center;
+    padding-right:5px;
+    cursor: default;
+}
+
+.form-hotel-item-stayTime .fa-stack{
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+}
+
+.form-hotel-item-searchBox-btn button {
+    /*padding: 8px 20px;*/
+    font-size: 13px;
+    text-decoration: none;
+    height: 35px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #444;
+    transition: all ease .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f3f7;
+    border: 1px solid #eee !important;
+}
+
+.form-hotel-item-searchBox-btn button:hover {
+    background: #cfcfcf;
+}
+
+.form-hotel-item-searchHotelName {
+    margin: 10px auto;
+    height: 35px;
+    line-height: 26px;
+    border-radius: 2px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    text-align: right;
+    color: #989595;
+    font-size: 12px;
+    border: 1px solid #ebebeb;
+}
+
+.parent_sidebar .filtertip-searchbox .form-hotel-item-searchHotelName-i {
+    margin-left: 6px;
+}
+
+.form-hotel-item-searchHotelName-i {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+
+.box-external-hotel-detail .filtertip-searchbox-box1 {
+    gap: 10px;
+    padding: 0;
+}
+
+.filtertip-searchbox .filter-content {
+    padding: 2px 15px 15px 15px !important;
+    position: relative;
+    width: 100%;
+    line-height: 22px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-color: #c8c3c3;
+    text-align: right;
+    border-radius: 0 0 3px 3px;
+}
+
+.filtertip-searchbox #logExternalHotel {
+    padding: 0 !important;
+}
+
+.filtertip_hotel_detail {
+    background: #dd9b30;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    font-family: inherit;
+
+}
+
+.filtertip_hotel_detail::after {
+    content: " ";
+    bottom: 0;
+    top: 100%;
+    right: 44%;
+    left: 46%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #dd9b30;
+    border-width: 10px;
+    z-index: 1;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.box-reserve-hotel-fix-items-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.parent--price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-reserve-hotel-fix-items-2 span {
+    display: block;
+    width: auto;
+    text-align: right;
+    position: relative;
+}
+
+.box-reserve-hotel-fix-items-2 .roomFinalPrice {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.parent-advance--payment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parent-advance--payment p{
+    font-size: 14px;
+}
+
+.Reserve_box_detail .multi-rooms-price-btn-container button {
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 16px;
+    width: 140px;
+    height: 42px;
+    background-color: #10b510 !important;
+}
+
+.Reserve_box_detail .multi-rooms-price-btn-container button i {
+    transition: all ease .4s;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.Reserve_box_detail .multi-rooms-price-btn-container button:hover i {
+    transform: translateX(-10px);
+}
+
+.filter_hotel_boxes {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12px;
+}
+
+.filter_hotel_boxes:has(.box-external-hotel-detail) {
+    top: 12px;
+}
+
+.roomFinalPrice{
+    font-size: 18px;
+    color: #5eb75e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roomFinalPrice i{
+    color:#777;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.roomFinalPrice > i{
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+.filter_hotel_boxes .filterBox{
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.03);
+    overflow: hidden;
+    padding: 15px 10px;
+}
+
+.parent-research-internal-hotel-detail-sidebar {
+    gap: 10px;
+    /*padding-top: 14px;*/
+    padding-bottom: 10px;
+}
+
+.parent-research-external-hotel-detail-sidebar {
+    padding-top: 14px;
+    gap: 10px;
+}
+
+.parent-research-external-hotel-detail-sidebar .form-hotel-item-searchBox-date .calendar-icon {
+    height: auto;
+    width: auto;
+    line-height: unset;
+}
+
+.parent-research-external-hotel-detail-sidebar .form-hotel-item-searchBox-date .calendar-icon i {
+    position: unset;
+    font-size: 15px;
+    margin-left: 4px;
+    width: unset;
+}
+
+.sidebar-detailHotel .filterBox > .filtertip_hotel_detail {
+    padding: 12px;
+}
+
+.filter_hotel_boxes_detail-internal_hotel {
+    margin-bottom: 10px;
+}
+
+
+.roomFinalTxt{
+    display: flex;
+}
+
+.inputSearchForeign-box {
+    position: relative;
+    width:100%;
+}
+
+.inputSearchForeign {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 35px;
+    color: #aaa;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: right;
+    direction: rtl;
+    padding: 0 5px;
+    font-size: 12px ;
+}
+
+.ul-inputSearch-externalHotel {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 100%;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 100;
+    overflow: auto;
+    border: 1px solid #d4d4d4;
+    max-height: 250px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: #aaa #F5F5F5;
+    scrollbar-width: thin;
+}
+
+.ul-inputSearch-externalHotel::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ul-inputSearch-externalHotel::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #aaa;
+}
+
+.ul-inputSearch-externalHotel::-webkit-scrollbar-track {
+    border-radius: 5px;
+    border:1px solid #ddd;
+    background-color: #F5F5F5;
+}
+
+.ul-inputSearch-externalHotel > li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.ul-inputSearch-externalHotel > h2 {
+    cursor: default;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    background-color: #f8fafb;
+    justify-content: space-between;
+    display: flex;
+    color: #6c7680;
+    margin: 0;
+    font-size: .75rem;
+}
+
+.ul-inputSearch-externalHotel > li:last-child {
+    border-bottom: none;
+}
+
+.ul-inputSearch-externalHotel > li:hover .div_c_sr_i{
+    background: var(--mainColor);
+    color:#fff
+}
+
+.ul-inputSearch-externalHotel > li:hover .div_c_sr_i > svg{
+    fill:#fff
+}
+
+.ul-inputSearch-externalHotel > li:hover .c-text {
+    color: var(--mainColor);
+}
+
+.form-hotel-item-boder {
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    padding:0 5px
+}
+
+.parent-research-external-hotel-detail-sidebar .form-hotel-item-searchBox-date .form-hotel-item-boder {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.form-hotel-item-boder i{
+    margin-left: 5px;
+    margin-right: auto;
+    font-size: 15px;
+}
+
+.form-hotel-item-boder span.stayingTime{
+    font-size: 12px;
+    color: #a5a0a0;
+}
+
+.myroom-hotel {
+    width: 100%;
+    padding: 0;
+    display: block;
+    clear: both;
+    gap: 5px;
+}
+
+.myroom-hotel-item {
+    text-align: right;
+    background: white;
+    color: #292929;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.myroom-hotel-item .myroom-hotel-item-title {
+    font-weight: bold;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    text-align: right;
+    padding: 5px 10px;
+    display: flex;
+    font-size: 14px;
+    border-bottom:1px solid #eee;
+}
+
+.myroom-hotel-item .myroom-hotel-item-title span.close {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    background: gray;
+    margin-right: auto;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRiIgcG9pbnRzPSI0MDQuMTc2LDAgMjU2LDE0OC4xNzYgMTA3LjgyNCwwIDAsMTA3LjgyNCAxNDguMTc2LDI1NiAwLDQwNC4xNzYgMTA3LjgyNCw1MTIgMjU2LDM2My44MjQgICA0MDQuMTc2LDUxMiA1MTIsNDA0LjE3NiAzNjMuODI0LDI1NiA1MTIsMTA3LjgyNCAiIGRhdGEtb3JpZ2luYWw9IiNFMjFCMUIiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiNFMjFCMUIiPjwvcG9seWdvbj48L2c+IDwvc3ZnPg==);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+    position: relative;
+    top: 3px;
+}
+
+.myroom-hotel-item-info {
+    padding: 10px 5px;
+}
+
+.myroom-hotel-item-tedad:first-child {
+    margin-bottom: 15px;
+}
+
+.myroom-hotel-item-tedad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.myroom-hotel-item-tedad > span {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.myroom-hotel-item-tedad > span i {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 200;
+    color: #797979;
+    padding-right: 4px;
+    font-family: inherit;
+}
+
+.myroom-hotel-item-tedad > div {
+    margin-right: auto;
+    display: flex;
+}
+
+.myroom-hotel-item-tedad div input {
+    width: 25px;
+    border: none;
+    text-align: center;
+    height: 25px;
+    font-size:12px;
+    line-height: 25px;
+    font-feature-settings: "ss02";
+}
+
+.myroom-hotel-item-tedad div > i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid currentcolor;
+    cursor: pointer;
+    text-align: center;
+    line-height: 19px;
+    font-size: 11px !important;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarikh-tavalods {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item {
+    flex: 0 0 calc(50% - 2.5px);
+    background: #f2f2f2;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span {
+    font-size: 11px;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item span i {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.tarikh-tavalods .tarikh-tavalod-item select {
+    font-size: 12px;
+    width: 100%;
+}
+
+.roomFinalPrice{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent-data-night-room--new{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.parent-counter-analog{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*.parent-research-external-hotel-detail-sidebar .select2-container--default .select2-selection--single .select2-selection__rendered {*/
+/*    font-size: 12px !important;*/
+/*    color: #a5a0a0;*/
+/*}*/
+
+.sidebar-detailHotel .filterBoxTop .filtertip_hotel_detail i {
+    display: none;
+}
+
+.parent-fixed--new{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.parent-fixed--new--flex .roomFinalPrice{
+    margin-bottom: 5px;
+}
+
+.parent-calender--new{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.roomFinalPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.roomHotelLocal {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 7px;
+    padding: 2px 0;
+    margin: 15px 0;
+}
+.roomHotelLocal .loader-box-user-buy {
+    width: 250px;
+    position: relative;
+    text-align: center;
+    height: 110px;
+    margin: 20px auto 30px;
+}
+.roomHotelLocal .loader-box-user-buy span:nth-child(1) {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    display: block;
+    border: #48C1C7 3px dashed;
+    border-left-color: rgb(72, 193, 199);
+    border-left-color: rgb(72, 193, 199);
+    border-left-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: rotating 1.5s linear infinite;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.roomHotelLocal .loader-box-user-buy span:nth-child(2) {
+    margin-top: 20px;
+    display: block;
+    font-size: 13px;
+}
+
+.parent-hotel-details--new{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0;
+    margin-top: 20px;
+}
+.parent-hotel-details--new .box-hotel--new{
+    grid-area: 1/1/2/9;
+}
+.parent-hotel-details--new .side-bar-hotel--new{
+    grid-area: 1/9/2/13;
+}
+
+.parent-hotel-details--new .side-bar-hotel--new{
+    grid-area: 1/9/2/13;
+}
+
+@media (max-width: 991px) {
+    .parent-hotel-details--new{
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-row-gap: 20px !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .parent-hotel-details--new .box-hotel--new{
+        grid-area: unset !important;
+        order: 2;
+    }
+    .parent-hotel-details--new .side-bar-hotel--new{
+        grid-area: unset !important;
+        order: 1;
+    }
+}
+
+.passengerDetailReservationTour_aside_lastBox > .parent_next_tour_n_ {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+/* ========================================
+   استایل‌های بخش قیمت در sidebar
+   ======================================== */
+
+.passengerDetailReservationTour_aside_lastBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 21px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding-right: 40px;
+    padding-left: 4px;
+}
+
+.passengerDetailReservationTour_aside_title_main {
+    margin-bottom: 2px;
+}
+
+.passengerDetailReservationTour_aside > p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.passengerDetailReservationTour_aside > p svg {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.passengerDetailReservationTour_aside_lastBox .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: white;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    margin: 0;
+}
+
+.passengerDetailReservationTour_aside_lastBox .price > span:first-child {
+    color: #666;
+    font-weight: 500;
+}
+
+.passengerDetailReservationTour_aside_lastBox .price > span:last-child {
+    color: #333;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.passengerDetailReservationTour_aside_lastBox .price.total {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+    border: 2px solid #42940f;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.passengerDetailReservationTour_aside_lastBox .price.total > span:last-child {
+    color: #42940f;
+    font-size: 18px;
+}
+
+/* استایل‌های شمارنده قیمت‌ها (بدون انیمیشن رنگی) */
+.price-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price-value {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.price-value-wrapper p {
+    margin: 0;
+    display: inline-block;
+    font-size: 12px;
+    color: #888;
+}
+
+.price.total .price-value {
+    font-size: 18px;
+    color: #42940f;
+}
+
+.price.total .price-value-wrapper p {
+    font-size: 14px;
+    color: #42940f;
+}
+
+/* استایل‌های بخش اطلاعات پکیج انتخابی */
+.selected-package-info {
+    gap: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.package-info-section {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.package-info-section > div {
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-info-section h4 {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.package-info-section p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    display: flex;
+    gap: 20px;
+}
+
+/* استایل responsive */
+@media (max-width: 991px) {
+    .passengerDetailReservationTour_aside_lastBox {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .passengerDetailReservationTour_aside_lastBox .price {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .passengerDetailReservationTour_aside_lastBox .price.total {
+        font-size: 15px;
+    }
+
+    .price-value {
+        font-size: 14px;
+    }
+
+    .price.total .price-value {
+        font-size: 16px;
+    }
+}
+
+
+.section-title-entertainment,
+.entertainment-container {
+    flex: 0 0 100%;   /* هر کدوم یک ردیف کامل بگیرن */
+}
+.section-title-entertainment {
+    font-size: 18px;
+    margin: 20px 10px 8px 0;
+    color: #444;
+    margin-right: 12px;
+}
+
+.entertainment-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.ent-box {
+    width: 240px;
+    min-width: 240px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+
+    /* مهم ↓ فقط روی hover انیمیشن بدهیم، نه روی selected */
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ent-box:hover {
+    border-color: var(--mainColor);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.ent-info {
+    margin-top: 4px;
+}
+
+.ent-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.ent-price {
+    font-size: 14px;
+    color: #444;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ★ حالت انتخاب بدون transition تا Delay ندهد */
+.ent-box.selected {
+    border: 2px solid;
+    border-color: var(--mainColor);
+    transform: none !important;   /* ثابت باشد */
+    transition: none !important;  /* تاخیر از بین برود */
+}
+
+.ent-discount-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: #ff3b30;
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+
+/* تیک */
+.ent-checkmark {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid ;
+    border-color: var(--mainColor);
+    border-radius: 50%;
+}
+
+.ent-box.selected .ent-checkmark {
+    display: block;
+    background-color: #444;
+}
+
+.price.extra-services,
+.price.final-total {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #f9fbff;
+    border-radius: 10px;
+    border: 1px solid #dce6ff;
+}
+
+.price.extra-services span:first-child,
+.price.final-total span:first-child {
+    font-weight: 600;
+    color: #444;
+}
+
+.price.extra-services .price-value-wrapper,
+.price.final-total .price-value-wrapper {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1f4bd6;
+}
+
+#final-price-box.price-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+#final-price-box .row {
+    display: flex;
+    justify-content: flex-start !important;
+    font-size: 13px;
+    padding: 4px 0;
+}
+
+#final-price-box .row.total {
+    border-top: 1px solid #334155;
+    padding-top: 6px;
+    font-weight: 700;
+}
+
+#final-price-box .value {
+    font-weight: 900;
+}
+
+/* سایدبار کلی */
+.passengerDetailReservationTour_aside {
+    font-family: inherit;
+}
+
+/* باکس اصلی صورتحساب / پکیج */
+.passengerDetailReservationTour_aside_box {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    padding: 16px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+@media (min-width: 992px) {
+    .passengerDetailReservationTour_aside_box .selected-package-info {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+    }
+}
+
+.passengerDetailReservationTour_aside_box .package-info-section {
+    flex: 1;
+}
+
+.passengerDetailReservationTour_aside_box .hotel-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.passengerDetailReservationTour_aside_box .room-info {
+    font-size: 12px;
+    color: #475569;
+    margin-bottom: 2px;
+}
+
+.rooms-row {
+    display: flex;
+    flex-wrap: wrap;      /* موبایل */
+    gap: 12px;            /* فاصله کارت‌ها */
+}
+.room-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.room-details {
+    color: #6b7280;
+    display: block;
+}
+
+.room-card {
+    padding: 10px 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* فاصله بین title و details */
+    gap: 12px; /* فاصله داخلی */
+}
+
+
+
+.passengerDetailReservationTour_aside_box .room-info small {
+    display: inline-block;
+    margin-top: 2px;
+    color: #64748b;
+}
+
+/* تیترهای کوچک داخل ستون پرواز */
+.passengerDetailReservationTour_aside_box h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 4px;
+}
+
+.passengerDetailReservationTour_aside_box .flight-details {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    font-size: 11px;
+    color: #475569;
+}
+
+.flight-title {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    color: #111827 !important;
+}
+
+.flight-info-row {
+    display: flex;
+    flex-wrap: wrap; /* برای موبایل */
+    align-items: center;
+    gap: 16px; /* فاصله آیتم‌ها */
+    font-size: 14px;
+    color: #374151;
+}
+
+.flight-info-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.flight-info-item .label {
+    color: #6b7280;
+}
+
+/* باکس پایین (قیمت‌ها + دکمه) */
+/* کانتینر کلی */
+/* ردیف قیمت */
+.passengerDetailReservationTour_aside_lastBox .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* متن عنوان → سمت راست */
+.passengerDetailReservationTour_aside_lastBox .row > span:first-child {
+    text-align: right;
+    font-weight: 500;
+    color: #cfd3da;
+}
+
+/* عدد → هل داده شده به چپ */
+.passengerDetailReservationTour_aside_lastBox .value {
+    margin-left: auto;     /* 👈 کلید کار */
+    text-align: left;
+    direction: ltr;        /* 👈 اعداد درست نمایش داده شوند */
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* ردیف جمع کل */
+.passengerDetailReservationTour_aside_lastBox .row.total {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 12px;
+    margin-top: 6px;
+}
+
+.passengerDetailReservationTour_aside_lastBox .row.total .value {
+    font-size: 16px;
+    color: #2DBE2D;
+}
+
+
+
+
+/* استایل باکس‌ها */
+.ent-package-box {
+    min-width: 240px;
+    max-width: 240px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin-left: 12px;
+}
+
+.ent-package-box.selected {
+    border-color: var(--mainColor);
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* محتوای داخل باکس */
+.ent-item-header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.ent-item-details span {
+    font-size: 13px;
+    color: #333;
+    display: block;
+}
+
+/* کاروسل */
+.entertainment-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    margin-right:10px;
+}
+
+/* فلش‌ها */
+.ent-arrow {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgba(70, 80, 100, 0.2);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.ent-arrow:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.1);
+    border-color: var(--mainColor);
+}
+
+.ent-arrow.left-arrow {
+    left: -24px;
+}
+.ent-arrow.right-arrow {
+    right: -10px;
+}
+
+.price-old {
+    font-size: 13px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.old-number {
+    text-decoration: line-through;
+}
+
+.discount-badge-inline {
+    background: #ff3b30;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 6px;
+}
+
+.price-new {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 3px;
+}
+
+.currency-line {
+    font-size: 13px;
+    color: #444;
+    margin-top: 4px;
+}
+/* FINAL FIX — PRICE ALIGNMENT */
+#final-price-box .row {
+    /*! display: flex; */
+    /*! align-items: center; */
+    /*! justify-content: flex-start !important; */
+    /*! width: 100%; */
+}
+
+/* عنوان */
+#final-price-box .row > span:first-child {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* عدد */
+#final-price-box .value {
+    /*! margin-left: auto !important; */   /* ← حیاتی */
+    /*! text-align: left; */
+    /*! direction: ltr; */
+    /*! font-weight: 700; */
+    /*! font-size: 14px; */
+    /*! color: #0f172a; */                 /* سفید نباشد */
+    /*! white-space: nowrap; */
+}
+
+/* جمع کل */
+#final-price-box .row.total {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+    margin-top: 6px;
+}
+
+/* TEST FIX — FINAL PRICE ALIGNMENT */
+#final-price-box .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    width: 100%;
+}
+
+#final-price-box .row > span:first-child {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+#final-price-box .value {
+    margin-left: auto !important;
+    text-align: left;
+    direction: ltr;
+    font-weight: 700;
+    font-size: 14px;
+    color: #111827;
+    white-space: nowrap;
+}
+
+#final-price-box .row.total {
+    margin-left: auto !important;
+    text-align: left;
+    /*! direction: ltr; */
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+/* === FORCE ALIGN PRICE ROWS (FINAL FIX) === */
+#final-price-box .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+#final-price-box .row > span:first-child {
+    flex: 0 0 auto !important;
+    text-align: right !important;
+    color: #374151;
+    font-size: 13px;
+}
+
+#final-price-box .row > .value {
+    flex: 1 1 auto !important;
+    margin-left: auto !important;
+    text-align: left !important;
+    direction: ltr !important;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#final-price-box .row.total > .value {
+    /*! color: #15a249; */
+    font-size: 15px;
+}
+[data-price-type="final-total"]::before {
+    content: "ریال ";
+    margin-left: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* کانتینر عدد */
+[data-price-type="final-total"] {
+    direction: ltr;          /* عدد */
+    display: inline-flex;    /* کلید حل */
+    align-items: center;
+}
+
+/* ریال سمت چپ عدد */
+[data-price-type="final-total"]::before {
+    content: "ریال";
+    direction: rtl;          /* واحد پول */
+    margin-right: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+.hotel-dates-summary {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #444;
+}
+
+.hotel-dates-summary .date-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hotel-dates-summary .date-label {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.hotel-dates-summary .date-value {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.aside-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    width: fit-content;      /* ← این مهم‌ترین خطه */
+    min-width: 440px;
+    max-width: 560px;
+}
+.flight-single-line {
+    display: flex;
+}
+
+.flight-main {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* نام ایرلاین */
+.flight-main .airline-name {
+    min-width: 90px;   /* ← این عدد را بسته به UI می‌تونی تغییر بدی */
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* شماره پرواز */
+.flight-main .flight-no {
+    min-width: 60px;
+    text-align: center;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+/* جداکننده */
+.flight-main .separator {
+    min-width: 10px;
+    text-align: center;
+}
+
+/* لیبل تاریخ */
+.flight-main .datetime-label {
+    min-width: 95px;
+    white-space: nowrap;
+}
+
+/* مقدار تاریخ و ساعت */
+.flight-main .datetime-value {
+    min-width: 140px;
+    direction: ltr;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+
+    /* ستون aside تمام عرض */
+    .aside-column {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    /* هر دو باکس هم‌عرض صفحه */
+    .passengerDetailReservationTour_aside_box,
+    .passengerDetailReservationTour_aside_lastBox {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* اطلاعات پرواز چندخطی شود */
+    .flight-main {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
+
+    .flight-main .airline-name {
+        min-width: auto;
+        font-weight: 600;
+    }
+
+    .flight-main .flight-no {
+        min-width: auto;
+    }
+
+    .flight-main .datetime-label {
+        display: none; /* ← برای موبایل بهتره */
+    }
+
+    .flight-main .datetime-value {
+        width: 100%;
+        font-size: 12px;
+        color: #374151;
+    }
+
+    /* تاریخ هتل */
+    .date-row {
+        font-size: 12px;
+    }
+
+    /* اتاق */
+    .room-card {
+        padding: 8px 10px;
+    }
+
+    /* قیمت‌ها */
+    .price-minimal .row {
+        font-size: 13px;
+    }
+
+    /* دکمه */
+    .passengerDetailReservationTour_aside_lastBox button {
+        height: 48px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+}
+#steps {
+    margin: 10px auto 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 106%;
+}
+
+#final_ok_and_insert_passenger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px .75rem;
+    border: solid 1px rgba(0, 0, 0, .12);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+    outline: 2px none #4B5259;
+    outline-offset: calc(2px * -1);
+    background-color: #2dbe2d;
+    color: #F2F9FF;
+    transition: all .3s;
+    align-self: flex-end;
+}
+.main-pay-content {
+
+    width: 106%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

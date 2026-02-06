@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('icomoon.eot?u6hcz5');
+    src:    url('icomoon.eot?u6hcz5#iefix') format('embedded-opentype'),
+        url('icomoon.ttf?u6hcz5') format('truetype'),
+        url('icomoon.woff?u6hcz5') format('woff'),
+        url('icomoon.svg?u6hcz5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ICON-01:before {
+    content: "\e926";
+}
+.icon-beach:before {
+    content: "\e900";
+}
+.icon-black:before {
+    content: "\e901";
+}
+.icon-car:before {
+    content: "\e902";
+}
+.icon-coffee:before {
+    content: "\e903";
+}
+.icon-dog:before {
+    content: "\e904";
+}
+.icon-drink:before {
+    content: "\e905";
+}
+.icon-fashion:before {
+    content: "\e906";
+}
+.icon-food-2:before {
+    content: "\e907";
+}
+.icon-food:before {
+    content: "\e908";
+}
+.icon-food-1:before {
+    content: "\e909";
+}
+.icon-furniture:before {
+    content: "\e90a";
+}
+.icon-gym-2:before {
+    content: "\e90b";
+}
+.icon-gym:before {
+    content: "\e90c";
+}
+.icon-gym-1:before {
+    content: "\e90d";
+}
+.icon-interface:before {
+    content: "\e90e";
+}
+.icon-location:before {
+    content: "\e90f";
+}
+.icon-monitor:before {
+    content: "\e910";
+}
+.icon-monuments:before {
+    content: "\e911";
+}
+.icon-musical:before {
+    content: "\e912";
+}
+.icon-note:before {
+    content: "\e913";
+}
+.icon-party:before {
+    content: "\e914";
+}
+.icon-people-2:before {
+    content: "\e915";
+}
+.icon-people:before {
+    content: "\e916";
+}
+.icon-placeholder:before {
+    content: "\e917";
+}
+.icon-rest:before {
+    content: "\e918";
+}
+.icon-shape:before {
+    content: "\e919";
+}
+.icon-shapes:before {
+    content: "\e91a";
+}
+.icon-sign:before {
+    content: "\e91b";
+}
+.icon-hotel:before {
+    content: "\e91c";
+}
+.icon-telephone:before {
+    content: "\e91d";
+}
+.icon-technology-1:before {
+    content: "\e91e";
+}
+.icon-technology-3:before {
+    content: "\e91f";
+}
+.icon-technology-2:before {
+    content: "\e920";
+}
+.icon-technology:before {
+    content: "\e921";
+}
+.icon-tool:before {
+    content: "\e922";
+}
+.icon-transport-1:before {
+    content: "\e923";
+}
+.icon-transport:before {
+    content: "\e924";
+}
+.icon-walking-with-dog:before {
+    content: "\e925";
+}
+

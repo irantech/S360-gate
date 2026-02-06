@@ -1,0 +1,15 @@
+@font-face {
+	font-family:'Yekan';
+	src: url("fonts/W_yekan.eot?#iefix") format("embedded-opentype"),
+		 url("fonts/W_yekan.woff") format("woff"), 
+		 url("fonts/W_yekan.ttf") format("truetype"),
+		 url("fonts/W_yekan.svg#svgFontName") format("svg");
+}
+@font-face {
+	font-family: IRANSans;
+	src: url('fonts/IRANSansWeb_Medium.eot');
+	src: url('fonts/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+	url('fonts/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+	url('fonts/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	url('fonts/IRANSansWeb_Medium.ttf') format('truetype');
+}

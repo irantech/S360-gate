@@ -1,0 +1,19 @@
+@font-face{
+    font-family:'DroidB';
+    font-style:normal;
+    src:url('DroidKufi-Bold.eot');
+    src:url('DroidKufi-Bold.eot?#iefix') format('embedded-opentype')
+        ,url('DroidKufi-Bold.woff') format('woff')
+        ,url('DroidKufi-Bold.ttf') format('truetype')
+        ,url('DroidKufi-Bold.svg#Droid Arabic Kufi') format('svg');
+}
+@font-face{
+    font-family:'Droid';
+    font-style:normal;
+
+    src:url('DroidKufi-Regular.eot');
+    src:url('DroidKufi-Regular.eot?#iefix') format('embedded-opentype')
+        ,url('DroidKufi-Regular.woff') format('woff')
+        ,url('DroidKufi-Regular.ttf') format('truetype')
+        ,url('DroidKufi-Regular.svg#Droid Arabic Kufi') format('svg');
+}

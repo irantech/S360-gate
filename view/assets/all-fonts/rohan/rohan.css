@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "rohan";
+  font-style: normal; 
+  font-weight: normal;
+
+  	src:    url("IRANSansWeb_UltraLight.eot") format("embedded-opentype"),
+  			url("WebsimaRohanRound-Regular.woff2") format("woff2"),
+   			url("WebsimaRohanRound-Regular.woff") format("woff"),
+   			url("WebsimaRohanRound-Regular.ttf") format("truetype");
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>410 Gone</title>
+			<meta http-equiv="refresh" content="10 ; url= /">
+	</head>
+	<body style="text-align: center;padding: 0;margin: 0;height: 100vh;display: flex;justify-content: center;align-items: center;">
+	<a style="display: flex;width: 100%;height: 100%;" href="/">
+		<img src="/gds/410.png" style="margin:auto; width:100%; height:100%;object-fit: contain;" alt="oops!" title="oops!">
+	</a>
+	</body>
+</html>

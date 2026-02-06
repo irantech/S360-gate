@@ -1,0 +1,325 @@
+/* Visa Section Page Styles */
+
+.visa-section-page {
+    padding: 40px 0;
+}
+
+/* Header Controls */
+.visa-header-controls {
+    /*background: white;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+    margin-bottom: 10px;
+}
+
+/* Filter Buttons */
+.visa-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.visa-filter-btn {
+    padding: .5rem !important;
+    border: 1px solid rgb(203 213 225) !important;
+    background: transparent ;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(89, 101, 119) !important;
+    height:2.5rem !important;
+    display: flex;
+    align-items: center;
+}
+
+.visa-filter-btn:hover {
+    border-color: #007bff;
+    color: #007bff;
+    transform: translateY(-2px);
+
+}
+
+.visa-filter-btn.active {
+    border-color: rgb(54 98 219) !important;
+    color: rgb(54 98 219) !important;
+    background-color: rgb(239 246 255) !important;
+}
+
+/* Country Select */
+.visa-country-select-wrapper {
+    border-radius: 8px;
+    border: 1px solid rgb(71,85,101) !important;
+    font-size: 14px;
+}
+.visa-country-select-wrapper .select2-container--default .select2-selection--single .select2-selection__placeholder{
+    margin-top:15px !important;
+}
+.visa-country-select {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0 !important;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+#select2-visaCountrySelect-container{
+    margin-top:0px !important;
+}
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered{
+    padding:1 !important;
+}
+/*.visa-country-select .select2{*/
+/*    border:1px solid #ccc !important;*/
+/*}*/
+
+    /* Visa Cards Container */
+.visa-cards-container {
+    min-height: 300px;
+}
+
+/* Visa Card */
+.visa-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ededed;
+    padding: 8px;
+}
+
+.visa-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Visa Card Image */
+.visa-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius:1rem;
+}
+
+.visa-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.visa-card:hover .visa-card-image img {
+    transform: scale(1.1);
+}
+
+/* Visa Type Badge */
+.visa-card-type-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Visa Card Body */
+.visa-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.visa-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+/* Visa Card Info */
+.visa-card-info {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.visa-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: .875rem !important;
+    color:rgb(20 29 56) !important;
+    font-weight: 700;
+}
+.visa-info-item-time{
+    font-size: .777rem !important
+}
+.visa-info-item-deadline{
+    font-size: .875rem !important;
+    font-weight: 700 !important;
+    color:#000;
+}
+.visa-info-item-price{
+    display:flex;
+    flex-direction:column;
+    align-items:end;
+    justify-content:center;
+}
+.price-label{
+    font-size:0.75rem;
+    color: rgb(53, 57, 61) !important;
+}
+.price{
+    font-size: 1.25rem !important;
+    color: rgb(13, 112, 102) !important;
+    font-weight: 600;
+}
+.price-format{
+    font-size: 1rem !important;
+    color: rgb(13, 112, 102) !important
+
+}
+
+.visa-info-item i {
+    margin-left: 10px;
+    color: #007bff;
+    width: 20px;
+}
+
+/* Visa Card Footer */
+.visa-card-footer {
+    margin-top: auto;
+}
+
+.btn-visa-detail {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-visa-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Visa Card Item - For filtering */
+.visa-card-item {
+    transition: all 0.3s ease;
+    padding:10px !important;
+    cursor: pointer;
+}
+
+.visa-card-item.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .visa-filter-buttons {
+        justify-content: center;
+    }
+
+    .visa-filter-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .visa-header-controls {
+        padding: 15px;
+    }
+
+    .visa-country-select-wrapper {
+        margin-top: 15px;
+    }
+
+    .visa-card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .visa-section-page {
+        padding: 20px 0;
+    }
+
+    .visa-filter-btn {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .visa-card-image {
+        height: 150px;
+    }
+
+    .visa-card-title {
+        font-size: 16px;
+    }
+}
+
+/* Loading State */
+.visa-cards-loading {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.visa-cards-loading i {
+    font-size: 48px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* No Results Message */
+.visa-no-results {
+    text-align: center !important;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.visa-no-results i {
+    font-size: 64px;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-align: center !important;
+
+}
+
+.visa-no-results h4 {
+    color: #999;
+    font-weight: 500;
+    text-align: center !important;
+
+}
+
+.visa-no-results p {
+
+    text-align: center !important;
+
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color:rgb(52, 59, 83) !important
+}
+
+.alert-info{
+    background:#fff;
+    border:none;
+}
+
+.select2-results__option{
+    color:unset !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    color:#fff !important;
+}

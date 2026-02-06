@@ -1,0 +1,3420 @@
+    /* Modern Design System */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #2cabe3;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --info-color: #0891b2;
+    --secondary-color: #6b7280;
+    --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0 [0] 5);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+    background: var(--light-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modern Header */
+.modern-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+tbody {
+    color: #222;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-left .main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-action {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Filter Bar */
+.filter-bar {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.filter-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-header h4 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-header i {
+    color: var(--primary-color);
+}
+
+.filter-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+.filter-group label {
+    color: var(--text-primary);
+    font-size: 12px;
+}
+.filter-group .select2-container--default .select2-selection--multiple,
+.filter-input,
+.filter-select {
+    padding: 9px 10px 9px 0px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: yekan, sans-serif !important;
+    transition: all 0.2s ease;
+    background: white;
+    color: var(--text-primary);
+    width: 100% !important;
+    max-width: 290px;
+}
+.filter-group .select2-container--default .select2-selection--multiple:hover,
+.filter-input:hover,
+.filter-select:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.filter-group .select2-container--default .select2-selection--multiple:focus,
+.filter-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.filter-group .select2-container--default .select2-selection--multiple{
+  padding: 7px 10px 5px 0px;
+}
+#sellerFilter {
+    position: relative;
+}
+
+#seller_suggestions ,
+#flightCode_suggestions{
+    position: absolute;
+    top: 100%; /* درست زیر فیلد */
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none; /* پیش‌فرض مخفی */
+}
+#seller_suggestions li,
+#flightCode_suggestions li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#seller_suggestions li:hover,
+#flightCode_suggestions li:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+.filter-options {
+    display: flex;
+    gap: 2rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-filter, .btn-clear {
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    font-size:12px;
+    justify-content: center;
+}
+
+.btn-filter {
+    background-color: #2cabe3;
+    color: white;
+}
+
+.btn-filter:hover {
+    background-color: #2563eb;
+}
+
+.btn-clear {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-clear:hover {
+    background: #4b5563;
+}
+#btn-excel ,#btn-print_manifest{
+    border-radius: 8px;
+}
+/* Statistics Cards */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.stat-icon.primary {
+    background: var(--primary-color);
+}
+
+.stat-icon.success {
+    background: var(--success-color);
+}
+
+.stat-icon.warning {
+    background: var(--warning-color);
+}
+
+.stat-icon.danger {
+    background: var(--danger-color);
+}
+
+.stat-icon.info {
+    background: var(--info-color);
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.table-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+    background: #f7f7f7;
+}
+
+.table-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Table Styles */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.flights-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.flights-table thead {
+    background: #f7f7f7;
+}
+
+.flights-table th {
+    padding: 0.75rem;
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.flights-table td {
+    padding: 0.75rem;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    font-size: 11px;
+}
+
+.flights-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* Table Cell Styles */
+.flight-number strong {
+    font-weight: 600;
+    color: #000;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.btn-action-small {
+    background: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.btn-action-small:hover {
+    color: var(--primary-color);
+}
+
+/* Seller Button Styles */
+.btn-seller-info {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.98rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    width: 100%;
+    justify-content: center;
+    min-height: 28px;
+}
+
+.btn-seller-info:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #212529;
+    text-decoration: none;
+}
+
+.btn-seller-info i {
+    font-size: 1.0rem;
+    color: #6c757d;
+}
+
+.seller-title {
+    font-size: 1.0rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50px;
+    color: #495057;
+}
+
+/* Seller Details Modal Styles */
+.seller-details-content {
+    padding: 0.75rem;
+}
+
+.seller-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+
+.seller-title-large {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.55rem;
+    color: #212529;
+}
+
+.seller-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+    color: #28a745;
+}
+
+.seller-price-label {
+    font-size: 1.0rem;
+    color: #6c757d;
+}
+
+.seller-flight-info {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+.seller-flight-info h6 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.98rem;
+}
+
+.seller-flight-info p {
+    color: #6c757d;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.0rem;
+}
+
+.seller-flight-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Agency Lock Seat Modal Styles */
+.agency-lock-seat-content {
+    padding: 0;
+}
+
+.seller-info-section {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.agency-table-section {
+    padding: 0.75rem;
+}
+
+/* Compact Flight Info Styles */
+.compact-flight-info {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.flight-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.flight-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.flight-title-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.airline-name-compact {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.flight-code-compact {
+    background: #007bff;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.flight-route-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.flight-route-compact i {
+    color: #007bff;
+    font-size: 11px;
+}
+
+.flight-meta-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.meta-item-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+}
+
+.label-compact {
+    color: #666;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+.value-compact {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Flight Details Grid */
+.flight-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.detail-card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.detail-card.seller-card {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border-color: #28a745;
+}
+
+.detail-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.detail-card.seller-card .detail-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.detail-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-label {
+    font-size: 10px;
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-card.seller-card .detail-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.detail-value {
+    font-size: 11px;
+    color: #333;
+    font-weight: 600;
+}
+
+.detail-card.seller-card .detail-value {
+    color: white;
+}
+
+.seller-name {
+    font-size: 1rem !important;
+}
+
+.seller-price-compact {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* Compact Agency Statistics */
+.agency-stats-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.stat-card-compact {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.stat-icon-compact {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.stat-content-compact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-number-compact {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-label-compact {
+    font-size: 10px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Compact Agency Table Section */
+.agency-table-section-compact {
+    padding: 1rem;
+}
+
+.agency-table-header-compact {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.agency-table-header-compact h6 {
+    margin: 0;
+    color: #495057;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Compact Vehicle Grade Summary */
+.vehicle-grade-summary-compact {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.summary-header-compact {
+    background: #e9ecef;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.summary-header-compact h6 {
+    margin: 0;
+    color: #495057;
+    font-weight: 600;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summary-content-compact {
+    padding: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.summary-item-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    min-width: 100px;
+}
+
+.grade-name-compact {
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+.total-capacity-compact {
+    font-weight: 600;
+    color: #28a745;
+    background: #d4edda;
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+/* Compact Agency Table */
+.agency-table-container-compact {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.agency-table-compact {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.agency-table-compact thead {
+    background: #f8f9fa;
+}
+
+.agency-table-compact th {
+    padding: 0.5rem;
+    text-align: right;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.agency-table-compact td {
+    padding: 0.5rem;
+    text-align: right;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+.agency-table-compact tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.agency-name-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.agency-name-compact i {
+    color: #6c757d;
+    font-size: 11px;
+}
+
+.agency-seats-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.seat-count-compact {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 11px;
+}
+
+.seat-label-compact {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.flight-date-compact {
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+/* Empty State Compact */
+.empty-agency-state-compact {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6c757d;
+}
+
+.empty-agency-state-compact i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.empty-agency-state-compact p {
+    margin: 0;
+    font-size: 11px;
+}
+
+/* Responsive adjustments for compact design */
+@media (max-width: 768px) {
+    .flight-header-compact {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    .flight-meta-compact {
+        text-align: center;
+    }
+
+    .flight-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agency-stats-compact {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-content-compact {
+        justify-content: center;
+    }
+
+    .agency-table-compact {
+        font-size: 10px;
+    }
+
+    .agency-table-compact th,
+    .agency-table-compact td {
+        padding: 0.375rem;
+    }
+}
+
+.agency-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.agency-table-header h6 {
+    margin: 0;
+    color: #495057;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.agency-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.0rem;
+    color: #6c757d;
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.stat-item i {
+    color: #007bff;
+}
+
+.agency-table-container {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.agency-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+}
+
+.agency-table thead {
+    background: #f8f9fa;
+}
+
+.agency-table th {
+    padding: 0.75rem;
+    text-align: right;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 1.0rem;
+    white-space: nowrap;
+}
+
+.agency-table td {
+    padding: 0.75rem;
+    text-align: right;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+/* Responsive table adjustments */
+@media (max-width: 1200px) {
+    .agency-table {
+        font-size: 11px;
+    }
+
+    .agency-table th,
+    .agency-table td {
+        padding: 0.5rem;
+    }
+
+    .vehicle-grade-capacities {
+        min-width: 150px;
+    }
+
+    .capacity-item {
+        font-size: 10px;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+.agency-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.agency-name {
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.agency-name i {
+    color: #6c757d;
+    font-size: 1.0rem;
+}
+
+.agency-seats {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.seat-count {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.seat-label {
+    font-size: 1.0rem;
+    color: #6c757d;
+}
+
+/* Vehicle Grade Capacities Styles */
+.vehicle-grade-capacities {
+    min-width: 200px;
+}
+
+.capacity-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.capacity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+    font-size: 11px;
+}
+
+.capacity-item .grade-name {
+    font-weight: 500;
+    color: #495057;
+}
+
+.capacity-item .capacity-value {
+    font-weight: 600;
+    color: #28a745;
+    background: #d4edda;
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+.no-capacity {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 11px;
+}
+
+/* Vehicle Grade Summary Styles */
+.vehicle-grade-summary {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.summary-header {
+    background: #e9ecef;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.summary-header h6 {
+    margin: 0;
+    color: #495057;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summary-content {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    min-width: 120px;
+}
+
+.summary-item .grade-name {
+    font-weight: 500;
+    color: #495057;
+    font-size: 11px;
+}
+
+.summary-item .total-capacity {
+    font-weight: 600;
+    color: #28a745;
+    background: #d4edda;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.day-badge {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.inactive {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.empty-agency-state {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.empty-agency-state i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.empty-agency-state p {
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+.seller-details-loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.seller-details-loading .loading-spinner {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.seller-details-loading p {
+    color: #6c757d;
+    margin: 0;
+}
+
+.agency-error-modal {
+    text-align: center;
+    padding: 2rem;
+}
+
+.agency-error-modal .error-icon {
+    font-size: 2rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+}
+
+.agency-error-modal h5 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.agency-error-modal p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.empty-content i {
+    font-size: 4rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+}
+
+.empty-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.empty-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Modal Styles */
+.modal-header {
+    background: var(--light-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    display:flex;
+}
+
+.modal-header .close{
+    position: absolute;
+    left: 15px;
+    top: 12px;
+}
+
+.modal-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Compact Flight Details Modal Styles */
+.flight-details-compact {
+    max-width: 100%;
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* Compact Header */
+.flight-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.flight-basic-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.flight-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.airline-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.flight-code {
+    background: #007bff;
+    color: white;
+    padding: 0.375rem 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.flight-route i {
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.flight-meta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-item .label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.meta-item .value {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.flight-actions-compact {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-compact {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.agency-badge {
+    background: #28a745;
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.agency-badge i {
+    font-size: 1.0rem;
+}
+
+.agency-value {
+    background: #28a745 !important;
+    color: white !important;
+    font-weight: 500 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+    border: none !important;
+}
+
+.btn-compact:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Compact Statistics */
+.stats-compact {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.stat-compact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    min-width: 80px;
+}
+
+.stat-compact .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+.stat-compact .stat-label {
+    font-size: 0.98rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Compact Passenger Table */
+.passenger-table-compact {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.table-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.table-content-compact {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Ticket Groups */
+.ticket-groups-compact {
+    padding: 0;
+}
+
+.ticket-group-compact {
+    border-bottom: 1px solid #f1f3f4;
+    background: #fff;
+}
+
+.ticket-group-compact:last-child {
+    border-bottom: none;
+}
+
+.ticket-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.ticket-info-compact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ticket-id-compact {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+}
+
+.ticket-time-compact {
+    font-weight: 500;
+    color: #666;
+    font-size: 11px;
+}
+
+.ticket-capacity-compact {
+    font-weight: 500;
+    color: #666;
+    font-size: 11px;
+}
+
+.ticket-stats-compact {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.stat-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.stat-badge.manifest-stat {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.stat-badge.book-stat {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Compact Passenger List */
+.passenger-list-compact {
+    padding: 0;
+}
+
+.passenger-item-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f1f3f4;
+    transition: background-color 0.2s ease;
+}
+
+.passenger-item-compact:hover {
+    background: #f8f9fa;
+}
+
+.passenger-item-compact:last-child {
+    border-bottom: none;
+}
+
+.passenger-info-compact {
+    flex: 1;
+}
+
+.passenger-name-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.passenger-name-compact strong {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.passenger-type-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.passenger-type-badge.manifest {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.passenger-type-badge.book {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.passenger-details-compact {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.detail-item .label {
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-item .value {
+    color: #333;
+    font-family: 'Courier New', monospace;
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+    font-size: 0.95rem;
+}
+
+.passenger-actions-compact {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.action-btn:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Empty State */
+.empty-passengers-compact {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.empty-passengers-compact i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.empty-passengers-compact p {
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+/* Loading State */
+.flight-details-loading {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.loading-spinner {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Error Modal */
+.error-modal {
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-icon {
+    font-size: 3rem;
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+/* Passenger Details Modal */
+.passenger-details-modal {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.passenger-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.passenger-header h5 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.passenger-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.info-item span {
+    color: var(--text-primary);
+    padding: 0.5rem;
+    background: var(--light-bg);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.passenger-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .filter-row {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        padding: 1rem;
+    }
+
+    .filter-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-filter, .btn-clear {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.flight-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.flight-info {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.flight-actions {
+    justify-content: flex-start;
+}
+
+.flight-header-compact {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.flight-basic-info {
+    align-items: center;
+    text-align: center;
+}
+
+.flight-meta {
+    justify-content: center;
+}
+
+.flight-actions-compact {
+    justify-content: center;
+}
+
+.stats-compact {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.table-header-compact {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.table-filters {
+    justify-content: center;
+}
+
+.passenger-details-compact {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.passenger-item-compact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+}
+
+.passenger-actions-compact {
+    justify-content: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-actions {
+        justify-content: center;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-actions {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .table-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .table-actions {
+        justify-content: center;
+    }
+
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .passenger-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .passenger-tabs .nav-tabs {
+        flex-direction: column;
+    }
+
+    .passenger-tabs .nav-link {
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+    }
+
+    .passenger-table-container {
+        max-height: 300px;
+    }
+
+    .passenger-table {
+        font-size: 1.0rem;
+    }
+
+    .passenger-table th,
+    .passenger-table td {
+        padding: 0.5rem 0.25rem;
+    }
+}
+
+/* Scrollbar Styling */
+.table-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flights-table tbody tr {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Pagination Styles */
+.pagination-container {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pagination-info {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-pagination {
+    background: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 40px;
+    justify-content: center;
+}
+
+.btn-pagination:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-pagination.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-pagination:disabled {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+}
+
+.pagination-ellipsis {
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 0 0.5rem;
+}
+
+.pagination-per-page {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-per-page label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.pagination-per-page select {
+    padding: 0.375rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background: white;
+    color: var(--text-primary);
+}
+
+.pagination-per-page span {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .pagination-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pagination-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-per-page {
+        justify-content: center;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .flights-table th,
+[dir="rtl"] .flights-table td {
+    text-align: center;
+}
+
+[dir="rtl"] .action-buttons {
+    flex-direction: row-reverse;
+}
+
+.select2-container--default .select2-selection--single {
+    background: inherit !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 23px !important;
+    width: 40px !important;
+}
+
+.select2-container, .select2-container .select2-selection--single .select2-selection__rendered {
+    height: auto !important;
+}
+
+/* Compact Capacity Display Styles */
+.capacity-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 60px;
+}
+
+.capacity-total,
+.capacity-used,
+.capacity-remaining {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 10px;
+}
+
+.capacity-number {
+    font-weight: 700;
+    font-size: 11px;
+    min-width: 20px;
+    text-align: center;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.capacity-number.allocated {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.capacity-number.reserved {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.capacity-number.remaining {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.capacity-number.remaining.warning {
+    background: #fff3cd;
+    color: #856404;
+    border:0px;
+}
+
+.capacity-label {
+    font-size: 9px;
+    color: #62666a;
+    font-weight: 500;
+}
+
+.no-data {
+    color: #999;
+    font-style: italic;
+}
+
+/* Ultra Compact Agency Lock Seat Modal Styles */
+.agency-lock-seat-content-ultra-compact {
+    padding: 0;
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* Ultra Compact Flight Header */
+.flight-header-ultra-compact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flight-main-info-ultra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.flight-title-ultra {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.airline-name-ultra {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+.flight-code-ultra {
+    background: #007bff;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.flight-class-ultra {
+    background: #28a745;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.flight-route-ultra {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+    color: #666;
+}
+
+.flight-route-ultra i {
+    color: #007bff;
+    font-size: 10px;
+}
+
+.flight-meta-ultra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.meta-row-ultra {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.meta-item-ultra {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 10px;
+    color: #666;
+}
+
+.meta-item-ultra i {
+    color: #007bff;
+    font-size: 0.75rem;
+}
+
+.seller-info-ultra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.seller-name-ultra {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+}
+
+.seller-price-ultra {
+    font-size: 10px;
+    color: #28a745;
+    font-weight: 500;
+}
+
+/* Ultra Compact Statistics Row */
+.stats-row-ultra-compact {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.stat-item-ultra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.stat-item-ultra i {
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.stat-number-ultra {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-label-ultra {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Ultra Compact Vehicle Grade Summary */
+.vehicle-grade-summary-ultra {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.summary-header-ultra {
+    display: flex;
+    align-items: center;
+}
+
+.summary-title-ultra {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.summary-content-ultra {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.summary-item-ultra {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    font-size: 10px;
+}
+
+.grade-name-ultra {
+    font-weight: 500;
+    color: #495057;
+}
+
+.total-capacity-ultra {
+    font-weight: 600;
+    color: #28a745;
+    background: #d4edda;
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+}
+
+/* Ultra Compact Agency Table Section */
+.agency-table-section-ultra {
+    padding: 0.75rem 1rem;
+}
+
+.agency-table-header-ultra {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.agency-table-header-ultra h6 {
+    margin: 0;
+    color: #495057;
+    font-weight: 600;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Ultra Compact Agency Table */
+.agency-table-container-ultra {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.agency-table-ultra {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.agency-table-ultra thead {
+    background: #f8f9fa;
+}
+
+.agency-table-ultra th {
+    padding: 0.5rem;
+    text-align: right;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.agency-table-ultra td {
+    padding: 0.5rem;
+    text-align: right;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+.agency-table-ultra tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.agency-name-ultra {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.agency-name-ultra i {
+    color: #6c757d;
+    font-size: 10px;
+}
+
+.agency-seats-ultra {
+    text-align: center;
+}
+
+.seat-count-ultra {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 11px;
+}
+
+.flight-date-ultra {
+    font-size: 10px;
+    color: #495057;
+}
+
+/* Empty State Ultra */
+.empty-agency-state-ultra {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6c757d;
+}
+
+.empty-agency-state-ultra i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.empty-agency-state-ultra p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments for ultra compact design */
+@media (max-width: 768px) {
+    .flight-header-ultra-compact {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    .flight-meta-ultra {
+        text-align: center;
+    }
+
+    .meta-row-ultra {
+        justify-content: center;
+    }
+
+    .seller-info-ultra {
+        text-align: center;
+    }
+
+    .stats-row-ultra-compact {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .vehicle-grade-summary-ultra {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .summary-content-ultra {
+        justify-content: center;
+    }
+
+    .agency-table-ultra {
+        font-size: 10px;
+    }
+
+    .agency-table-ultra th,
+    .agency-table-ultra td {
+        padding: 0.375rem;
+    }
+}
+
+/* Official Table-Based Design Styles */
+.agency-lock-seat-content-official {
+    padding: 0;
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* Flight Information Table */
+.flight-info-table {
+    font-family: yekan, sans-serif !important;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 11px;
+}
+
+.flight-info-table th {
+    font-family: yekan, sans-serif !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.flight-info-table td {
+    font-family: yekan, sans-serif !important;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.flight-info-table td:nth-child(odd) {
+    background: #f8f9fa;
+    font-weight: 500;
+    color: #495057;
+}
+
+.flight-info-table td:nth-child(even) {
+    background: white;
+    color: #333;
+}
+
+/* Statistics Table */
+.stats-table {
+    font-family: yekan, sans-serif !important;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 11px;
+}
+
+.stats-table th {
+    font-family: yekan, sans-serif !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.stats-table td {
+    font-family: yekan, sans-serif !important;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.stats-table td:nth-child(odd) {
+    background: #f8f9fa;
+    font-weight: 500;
+    color: #495057;
+}
+
+.stats-table td:nth-child(even) {
+    background: white;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Vehicle Grade Summary Table */
+.vehicle-grade-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 11px;
+}
+
+.vehicle-grade-summary-table th {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.vehicle-grade-summary-table td {
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.vehicle-grade-summary-table td:nth-child(odd) {
+    background: #f8f9fa;
+    font-weight: 500;
+    color: #495057;
+}
+
+.vehicle-grade-summary-table td:nth-child(even) {
+    background: white;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Agency Assignment Table */
+.agency-assignment-table {
+    font-family: yekan, sans-serif !important;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.agency-assignment-table th {
+    font-family: yekan, sans-serif !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.agency-assignment-table td {
+    font-family: yekan, sans-serif !important;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.agency-assignment-table tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+.agency-assignment-table tbody tr:nth-child(even) {
+    background: white;
+}
+
+.agency-assignment-table tbody tr:hover {
+    background: #e9ecef;
+}
+
+/* Empty State Cell */
+.empty-state-cell {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 1rem !important;
+}
+
+.empty-state-cell i {
+    margin-left: 0.5rem;
+    opacity: 0.5;
+}
+
+/* Responsive adjustments for official table design */
+@media (max-width: 768px) {
+    .flight-info-table,
+    .stats-table,
+    .vehicle-grade-summary-table,
+    .agency-assignment-table {
+        font-size: 10px;
+    }
+
+    .flight-info-table th,
+    .flight-info-table td,
+    .stats-table th,
+    .stats-table td,
+    .vehicle-grade-summary-table th,
+    .vehicle-grade-summary-table td,
+    .agency-assignment-table th,
+    .agency-assignment-table td {
+        padding: 0.375rem;
+    }
+}
+
+/* Official Flight Details Design Styles */
+.flight-details-official {
+    padding: 0;
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* Passenger List Table */
+.passenger-list-table {
+    font-family: yekan, sans-serif !important;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.passenger-list-table th {
+    font-family: yekan, sans-serif !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.passenger-list-table td {
+    font-family: yekan, sans-serif !important;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.passenger-list-table tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+.passenger-list-table tbody tr:nth-child(even) {
+    background: white;
+}
+
+.passenger-list-table tbody tr:hover {
+    background: #e9ecef;
+}
+
+/* Action Buttons */
+.btn-action {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-action:hover {
+    background: #0056b3;
+}
+
+.btn-action-small {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin: 0 0.1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-action-small:hover {
+    background: #545b62;
+}
+
+/* Passenger Tabs Styles */
+.passenger-tabs-container {
+    margin-top: 1rem;
+}
+
+.passenger-tabs-header {
+    font-family: yekan, sans-serif !important;
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    font-family: yekan, sans-serif !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    color: #495057;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 6px 6px 0 0;
+    margin-right: 0.25rem;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #007bff;
+    border-color: #007bff;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Responsive adjustments for flight details */
+@media (max-width: 768px) {
+    .passenger-list-table {
+        font-size: 10px;
+    }
+
+    .passenger-list-table th,
+    .passenger-list-table td {
+        padding: 0.375rem;
+    }
+
+    .btn-action,
+    .btn-action-small {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.3rem;
+    }
+
+    .passenger-tabs-header {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .tab-btn {
+        border-radius: 6px;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .tab-btn.active {
+        border-bottom: 1px solid #007bff;
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Agency Close Time Modal Styles - Modern Design */
+.agency-close-time-modal {
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+.agency-close-time-modal .modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.agency-close-time-modal .modal-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.agency-close-time-modal .modal-title i {
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 0.5rem;
+}
+
+.agency-close-time-modal .close {
+    color: white;
+    opacity: 0.8;
+}
+
+.agency-close-time-modal .close:hover {
+    opacity: 1;
+}
+
+/* Agency Info Section */
+.agency-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.agency-name {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.agency-description {
+    color: #6c757d;
+    margin: 0;
+    font-size: 11px;
+}
+
+/* Time Section Styles */
+.time-section {
+    margin-bottom: 2rem;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    background: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.section-header i {
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.time-input-group {
+    padding: 1.5rem;
+}
+
+/* Quick Options */
+.quick-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.time-option {
+    background: white;
+    border: 2px solid #e9ecef;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+    text-align: center;
+}
+
+.time-option:hover {
+    border-color: #007bff;
+    color: #007bff;
+    transform: translateY(-1px);
+}
+
+.time-option.active {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+/* Custom Input */
+.custom-input {
+    margin-top: 1rem;
+}
+
+.custom-input input {
+    border: 2px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+    transition: all 0.2s ease;
+}
+
+.custom-input input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.custom-input small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #6c757d;
+    font-size: 10px;
+}
+
+/* Expire Options */
+.expire-options {
+    padding: 1.5rem;
+}
+
+.quick-expire {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.expire-option {
+    background: white;
+    border: 2px solid #e9ecef;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expire-option:hover {
+    border-color: #28a745;
+    color: #28a745;
+    transform: translateY(-1px);
+}
+
+.expire-option.clear {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.expire-option.clear:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.custom-expire input {
+    border: 2px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 11px;
+    transition: all 0.2s ease;
+}
+
+.custom-expire input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* Current Status */
+.current-status {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.status-badge i {
+    color: #28a745;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    padding: 3rem 2rem;
+}
+
+.loading-spinner i {
+    color: #007bff;
+}
+
+.loading-spinner p {
+    color: #6c757d;
+    margin-top: 1rem;
+}
+
+/* Error Modal */
+.error-message {
+    padding: 2rem 1rem;
+}
+
+.error-text {
+    color: #6c757d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+/* Success Modal */
+.success-message {
+    padding: 2rem 1rem;
+}
+
+.success-text {
+    color: #155724;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.badge-secondary {
+    font-family: yekan, sans-serif !important;
+    color: #fff;
+    background-color: #6c757d;
+}
+
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+
+/* Agency Assignment Table Button Styles */
+.agency-assignment-table .btn-sm {
+    font-family: yekan, sans-serif !important;
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+    border-radius: 0.25rem;
+}
+
+.agency-assignment-table .btn-primary {
+    font-family: yekan, sans-serif !important;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.agency-assignment-table .btn-primary:hover {
+    font-family: yekan, sans-serif !important;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.agency-assignment-table .btn-primary i {
+    margin-left: 0.25rem;
+}
+
+/* Expire Time Management Styles */
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-group-vertical .btn {
+    margin-bottom: 0.25rem;
+}
+
+.btn-group-vertical .btn:last-child {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+    background-color: transparent;
+}
+
+.btn-outline-warning:hover {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 15px;
+    border-radius: 0.2rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+/* Countdown Styles */
+#expireCountdown {
+    border-radius: 0.375rem;
+    border: 1px solid;
+}
+
+#expireCountdown.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+
+#expireCountdown.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+#countdownTimer {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+.status-cancelled {
+    color: red;
+    font-weight: bold;
+}
+
+.status-blocked {
+    color: red;
+    font-size: 16px;
+}
+
+.status-actived {
+    color: green;
+    font-size: 16px;
+}
+
+.status-none {
+    color: gray;
+}
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px; width: 26px;
+        left: 4px; bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #4caf50;
+    }
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+    #globalOperationContent label {
+        display: block;
+        text-align: right;
+    }
+    #flight_list .dropdown-item {
+        color: #000 !important;
+        font-size: 12px !important;
+    }
+    .dropdown-menu .dropdown-item {
+        color: #000 !important;
+        font-size: 12px !important;
+    }
+
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus {
+        background-color: #f0f0f0 !important;
+        color: #000 !important;
+    }

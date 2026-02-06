@@ -1,0 +1,250 @@
+html body #ui-datepicker-div {
+    height: auto !important;
+    width: 600px !important;
+    transform: translateX(50%);
+    right: 50%;
+    z-index: 9999999 !important;
+    padding: 0;
+    padding: 5px;
+}
+body .ui-datepicker .ui-datepicker-buttonpane {
+    margin: 4.2em 0 0 !important;
+}
+.calender-loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.robotoFont {
+    font-family: 'Roboto';
+}
+
+.calender-loader {
+    background: url("./../images/load25.gif") no-repeat scroll 0 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-size : cover;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 30px;
+    height: 20px;
+    background-position: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+}
+
+.calender-bottom-price {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    display:flex;
+    width: max-content;
+}
+.ui-datepicker .ui-datepicker-header{
+    margin-top: 0.5rem !important;
+}
+.div-calender-bottom-price{
+    margin: 15px 10px;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    top: -12px;
+    color:#fff;
+    font-size: 15px;
+    gap: 5px;
+    display: flex;
+}
+
+.div-background-color-calender-bottom-price-min{
+    color: rgb(57, 174, 0);
+}
+.div-background-color-calender-bottom-price-min::before {
+    content: "کمترین قیمت :";
+    font-size: 12px;
+}
+.div-background-color-calender-bottom-price-middle{
+    color: rgb(250, 200, 16);
+}
+.div-background-color-calender-bottom-price-middle::before {
+    content: "بیشترین قیمت :";
+    font-size: 12px;
+}
+
+.div-background-color-calender-bottom-price-max{
+    color: rgb(239, 64, 86);
+}
+.div-background-color-calender-bottom-price-max::before {
+    content: "بیشترین قیمت :";
+    font-size: 12px;
+}
+.ui-widget-content  {
+    position: relative;
+}
+.ui-datepicker td:hover .detail-price {
+    visibility: visible !important;
+    opacity: 1;
+}
+.detail-price{
+    background: #0009;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    bottom: 130%;
+    width: max-content;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 8px 15px;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    align-items: flex-start;
+}
+.detail-price::before {
+    content: "";
+    position: absolute;
+    bottom: -13%;
+    right: 50%;
+    transform: translateX(50%);
+    border: 8px solid transparent;
+    border-top-color: #0009;
+}
+.detail-price span{
+    color: #fff;
+    font-size: 12px;
+}
+
+.ui-datepicker-today > a {
+}
+.ui-datepicker td {
+    color: #333 !important;
+    font-size: 14px !important;
+    transition: all ease .3s;
+    cursor: pointer;
+    position: relative;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    background: transparent !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: transparent !important;
+    border-radius: 8px;
+}
+.ui-datepicker td span, .ui-datepicker td {
+    max-width: 50px;
+    margin: auto;
+}
+.ui-datepicker td  div {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
+.w-price {
+    opacity: 0;
+}
+body  #ui-datepicker-div{
+    height: 23em !important;
+    width: 51.5em !important;
+}
+.ui-datepicker .ui-datepicker-buttonpane{
+    margin: 0.2em 0 0 !important;
+}
+.ui-datepicker th{
+    padding-bottom: 25px;
+}
+.ui-datepicker td  div.detail-price > span{
+    max-width: max-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*insurance-costume-calender*/
+html body #ui-datepicker-div.insurance-costume-calender {
+    height: 22.5em !important;
+    width: 25rem !important;
+    top: 20% !important;
+    left: 70px !important;
+    right: unset;
+}
+/*insurance-costume-calender*/
+@media (max-width:992px) {
+    .calender-bottom-price{
+        display: none;
+    }
+    html body #ui-datepicker-div {
+        width: 450px !important;
+        height: auto !important;
+    }
+    body .ui-datepicker .ui-datepicker-buttonpane {
+        margin: 1.2em 0 0 !important;
+    }
+    html body #ui-datepicker-div.insurance-costume-calender {
+        height: auto !important;
+        width: 90% !important;
+        left: 50% !important;
+        right: 50%;
+    }
+    html body #ui-datepicker-div.insurance-costume-calender .ui-state-default, .ui-widget-content .ui-state-default{
+        height: 35185
+        px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ui-widget-content a:hover .detail-price{
+        display: none;
+    }
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: none !important;
+    background: transparent !important;
+    font-weight: 400;
+    color: #333
+}
+.ui-datepicker-today{
+    background: #eee !important;
+    /*border-radius: 8px !important;*/
+}
+.ui-datepicker td:hover{
+    background: #eee;
+    /*border-radius: 8px !important;*/
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+    border: none;
+    background: #eee;
+    border-radius: 8px !important;
+}
+
+@media (max-width:576px) {
+    html body #ui-datepicker-div {
+        width: 95% !important;
+        height: auto !important;
+        box-shadow: 0px 0px 0px 1000px #00000073;
+        top: 90px !important;
+    }
+}

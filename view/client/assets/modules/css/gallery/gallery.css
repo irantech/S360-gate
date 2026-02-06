@@ -1,0 +1,13 @@
+.h-500px{height:500px}.gallery{display:flex;flex-wrap:wrap;padding:1rem 0}.gallery .one a{display:flex;height:500px}.gallery .two{display:flex;flex-direction:column}.gallery .two a{display:flex;height:250px}.gallery>div a{position:relative;border-radius:12px;overflow:hidden;border:2px solid #fff}.gallery>div a img{object-fit:cover;width:100%;height:100%}.gallery>div a>div{overflow:hidden;position:absolute;bottom:0;right:0;background:linear-gradient(0deg, black, transparent);width:100%;display:flex;padding:1rem}.gallery>div a>div h3{color:#fff;font-size:1.3rem}.banner-owl{width:100%;height:100%;border-radius:12px}.banner-owl .owl-banner{width:100%;height:100%;border-radius:12px}.banner-owl .owl-banner>div,.banner-owl .owl-banner>div>div,.banner-owl .owl-banner>div>div>.owl-item,.banner-owl .owl-banner>div>div>.owl-item>.item,.banner-owl .owl-banner>div>div>.owl-item>.item a{height:100%;border-radius:12px}.banner-owl .owl-banner>div>div>.owl-item{padding:0}.banner-owl .owl-banner>div>div>.owl-item>.item a{height:400px;display:flex}.banner-owl .owl-banner>div>div>.owl-item>.item a>div{overflow:hidden;position:absolute;bottom:0;right:0;background:linear-gradient(0deg, black, transparent);width:100%;display:flex;padding:1rem}.banner-owl .owl-banner>div>div>.owl-item>.item a>div h3{color:#fff;font-size:1.3rem}.banner-owl .owl-banner img{height:100%;object-fit:cover;border-radius:12px}/*# sourceMappingURL=gallery.css.map */
+
+/*error*/
+.error {
+    padding: 5px;
+    margin: 5px 5px 20px 5px;
+    border: solid 1px #FBD3C6;
+    background: #FDE4E1;
+    color: #CB4721;
+    line-height: 25px;
+    /*border-radius: 5px !important;*/
+    clear: both !important;
+}

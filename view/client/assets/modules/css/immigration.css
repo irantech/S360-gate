@@ -1,0 +1,439 @@
+
+body{
+
+    overflow-x: hidden;
+    direction: rtl;
+    padding: 0;
+    background: #f7f7f7 !important;
+    line-height: 24px;
+    text-align: right;
+    color: #4B5259 !important;
+}
+.parent-immigration-internal-page{
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    /*! padding: 30px; */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.parent-text-immigration-internal-page h2{
+    color: #000;
+    margin-bottom: 0;
+    font-size: 26px;
+}
+.parent-text-immigration-internal-page p{
+    text-align: justify;
+    color: #797F86;
+    margin-bottom: 22px;
+    line-height: 28px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+.immigration-internal-page{
+    padding: 50px 0;
+}
+.parent-data-immigration-internal-page{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.item-immigration-internal-page{
+    display: flex;
+    align-items: center;
+    color: #111;
+    flex: 1;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.item-immigration-internal-page i{
+    margin-left: 5px;
+    color: #2c96ea;
+}
+.answer{
+    color: #4B5259 !important;
+    margin-right: 7px;
+}
+.parent-text-immigration-internal-page{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fcfcfc;
+    border-right: 1px solid #ccc;
+}
+.btn-reservation{
+    background: var(--mainColor);
+    padding: 8px 20px;
+    width: 100px;
+    color: #fff;
+    transition: all ease .3s;
+    border: 1px solid transparent;
+    box-shadow: none;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+}
+.btn-reservation i{
+    margin-right: 7px;
+    transition: all ease .3s;
+}
+.btn-reservation:hover i{
+    transform: translateX(-5px);
+}
+.parent-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 0 10px 5px;
+}
+.img-back1{
+    position: absolute;
+    top: 228px;
+    left: 0;
+    width: 32px;
+
+}
+.img-back2{
+    position: absolute;
+    top: 81px;
+    right: 0;
+    width: 69px;
+}
+.img-back3{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130px;
+}
+.img-back4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 108px;
+}
+.img-main{
+    width: 100%;
+    /*! height: 100%; */
+}
+.bottom-img{
+    background: var(--mainColor);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+.parent-titr-tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.parent-titr-tab .nav-pills{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.parent-titr-tab .nav-pills .nav-item .nav-link{
+    background: transparent;
+    color: #888;
+    border: none;
+
+    transition: all ease .3s;
+}
+.nav-pills .nav-link.active{
+    color: #fff !important;
+}
+.parent-titr-tab .nav-pills .nav-item .nav-link:hover{
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.parent-sidebar-blog{
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    position: sticky;
+    top: 15px;
+}
+.parent-sidebar-blog h2{
+    color: #000;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+.parent-link-data{
+    display: flex;
+    flex-direction: column;
+}
+.immigration-internal-page-blog{
+    padding:0 0 50px;
+}
+.link-data-immigration-blog{
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+    transition: all ease .3s;
+    border-bottom: 1px dashed #bbb;
+}
+.link-data-immigration-blog i{
+    margin-left: 7px;
+    color: #666;
+    transition: all ease .3s;
+}
+.link-data-immigration-blog:last-child{
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.link-data-immigration-blog:hover{
+    text-decoration: none;
+    color: var(--mainColor);
+}
+.link-data-immigration-blog:hover i{
+    color: var(--mainColor);
+}
+.parent-immigration-blog{
+    display: flex;
+    flex-wrap: wrap;
+}
+.parent-text-blog{
+    margin-right: 40px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+}
+.your-question{
+    margin-right: 40px;
+    padding: 50px 0 0;
+}
+.titr-text-blog h2{
+    color: #000;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+.panel-default-migration-blog{
+    margin: 12px 0;
+    border-radius: 8px !important;
+    cursor: pointer;
+    border: 1px solid #ddd !important;
+}
+.panel-heading {
+    border-bottom: 1px solid #ddd;
+}
+.btn-link-migration-blog {
+    text-align: right !important;
+    outline: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between;
+    text-decoration: none !important;
+    color: #444;
+    font-size: 15px;
+    padding: 1rem 24px !important;
+    transition: all ease .3s !important;
+    line-height: 26px;
+
+}
+.icone-arrow {
+    width: 30px;
+    height: 30px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease-in-out .4s;
+    font-size: 16px;
+    padding: 10px;
+}
+.btn-link-migration-blog:hover {
+    color: var(--mainColor);
+}
+[data-toggle="collapse"] .fa:before {
+
+    content: "\f106";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f107";
+
+}
+#accordion-faq-blog .panel-collapse p{
+    color: #6c7680;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    padding: 10px 15px;
+    margin-bottom: 0;
+}
+.img-main5 {
+        width: 100%;
+}
+.img-back4{
+    display: none;
+}
+.parent-immigration-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+.immigration-card-item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border: 1px solid #ccc;
+    padding: 20px;
+    justify-content: center;
+}
+.icon-card-immigration svg{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+.svg-box-one{
+    fill: #5aa5d7;
+}
+.svg-box-two{
+    fill: #b91e50;
+}
+.svg-box-three{
+    fill: #eda800;
+}
+.text-card-immigration h3{
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+.text-card-immigration p{
+    font-size: 11px;
+    color: #6c7680;
+}
+.immigration-card{
+    padding: 0 0 50px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .parent-img{
+        padding-top: 20px;
+    }
+    .img-main{
+        width: 50%;
+    }
+    .parent-text-immigration-internal-page{
+        border-right: none;
+    }
+    .img-back1{
+        position: absolute;
+        top: 158px;
+        left: 0;
+        width: 47px;
+    }
+    .img-back2{
+        position: absolute;
+        top: 114px;
+        right: 0;
+        width: 92px;
+    }
+    .parent-sidebar-blog{
+        margin-bottom: 40px;
+    }
+    .parent-text-blog{
+        margin-right: 0;
+    }
+    .your-question{
+        margin-right: 0;
+    }
+    .parent-immigration-card{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+
+    }
+    .immigration-card-item{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .parent-img{
+        padding-top: 70px;
+    }
+    .img-back2{
+        position: absolute;
+        top: 114px;
+        right: 0;
+        width: 52px;
+    }
+    .img-back1 {
+        position: absolute;
+        top: 97px;
+        left: 0;
+        width: 25px;
+    }
+    .parent-titr-tab{
+        flex-direction: column;
+    }
+    .parent-text-immigration-internal-page h2{
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    .parent-data-immigration-internal-page{
+        display: block;
+        margin-bottom: 0;
+    }
+    .item-immigration-internal-page{
+        margin-bottom: 15px;
+    }
+    .btn-link-migration-blog{
+        font-size: 13px !important;
+    }
+    .titr-text-blog h2{
+        font-size: 20px;
+    }
+    .parent-immigration-card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .immigration-card-item{
+        justify-content: right;
+        padding: 15px;
+    }
+    .text-card-immigration h3{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+}

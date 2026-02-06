@@ -1,0 +1,435 @@
+@font-face {
+  font-family: "RavisIcon";
+  src: url("RavisIcon.eot");
+
+  src: url("RavisIcon.eot?hebbe4#iefix") format("embedded-opentype"),
+   url("RavisIcon.ttf") format("truetype"), 
+   url("RavisIcon.woff") format("woff"), 
+   url("RavisIcon.svg?") format("svg");
+
+
+     font-style: normal;
+  font-weight: normal;
+}
+[class^="ravis-icon-"],[class*=" ravis-icon-"] {
+ font-family:'RavisIcon' !important;
+ speak:none;
+ font-style:normal;
+ font-weight:normal;
+ font-variant:normal;
+ text-transform:none;
+ line-height:1;
+ -webkit-font-smoothing:antialiased;
+ -moz-osx-font-smoothing:grayscale
+}
+.ravis-icon-air-conditioner:before {
+ content:"\e900"
+}
+.ravis-icon-alarm-clock:before {
+ content:"\e901"
+}
+.ravis-icon-briefcase:before {
+ content:"\e902"
+}
+.ravis-icon-door-knob:before {
+ content:"\e903"
+}
+.ravis-icon-drawers:before {
+ content:"\e904"
+}
+.ravis-icon-fire-extinguisher:before {
+ content:"\e905"
+}
+.ravis-icon-funnel:before {
+ content:"\e906"
+}
+.ravis-icon-hanger:before {
+ content:"\e907"
+}
+.ravis-icon-iron:before {
+ content:"\e908"
+}
+.ravis-icon-key:before {
+ content:"\e909"
+}
+.ravis-icon-microwave:before {
+ content:"\e90a"
+}
+.ravis-icon-navigator:before {
+ content:"\e90b"
+}
+.ravis-icon-newspaper:before {
+ content:"\e90c"
+}
+.ravis-icon-nightstand:before {
+ content:"\e90d"
+}
+.ravis-icon-paint-roller:before {
+ content:"\e90e"
+}
+.ravis-icon-photo-camera:before {
+ content:"\e90f"
+}
+.ravis-icon-plug:before {
+ content:"\e910"
+}
+.ravis-icon-radio:before {
+ content:"\e911"
+}
+.ravis-icon-shower:before {
+ content:"\e912"
+}
+.ravis-icon-speaker:before {
+ content:"\e913"
+}
+.ravis-icon-stairs:before {
+ content:"\e914"
+}
+.ravis-icon-stairs-1:before {
+ content:"\e915"
+}
+.ravis-icon-television:before {
+ content:"\e916"
+}
+.ravis-icon-toilet-paper:before {
+ content:"\e917"
+}
+.ravis-icon-towel:before {
+ content:"\e918"
+}
+.ravis-icon-wash:before {
+ content:"\e919"
+}
+.ravis-icon-watch:before {
+ content:"\e91a"
+}
+.ravis-icon-air-conditioner2:before {
+ content:"\e91b"
+}
+.ravis-icon-bar:before {
+ content:"\e91c"
+}
+.ravis-icon-business-center:before {
+ content:"\e91d"
+}
+.ravis-icon-check-in:before {
+ content:"\e91e"
+}
+.ravis-icon-cleaning-service:before {
+ content:"\e91f"
+}
+.ravis-icon-coffee-cup:before {
+ content:"\e920"
+}
+.ravis-icon-conference:before {
+ content:"\e921"
+}
+.ravis-icon-family-room:before {
+ content:"\e922"
+}
+.ravis-icon-hotel:before {
+ content:"\e923"
+}
+.ravis-icon-hotel-room:before {
+ content:"\e924"
+}
+.ravis-icon-hotel-sign:before {
+ content:"\e925"
+}
+.ravis-icon-hotel-staff:before {
+ content:"\e926"
+}
+.ravis-icon-laundry-service:before {
+ content:"\e927"
+}
+.ravis-icon-luggage:before {
+ content:"\e928"
+}
+.ravis-icon-no-smoking:before {
+ content:"\e929"
+}
+.ravis-icon-not-disturb:before {
+ content:"\e92a"
+}
+.ravis-icon-parking:before {
+ content:"\e92b"
+}
+.ravis-icon-reception:before {
+ content:"\e92c"
+}
+.ravis-icon-reception-bell:before {
+ content:"\e92d"
+}
+.ravis-icon-restaurant:before {
+ content:"\e92e"
+}
+.ravis-icon-room-key:before {
+ content:"\e92f"
+}
+.ravis-icon-room-service:before {
+ content:"\e930"
+}
+.ravis-icon-safebox:before {
+ content:"\e931"
+}
+.ravis-icon-shower2:before {
+ content:"\e932"
+}
+.ravis-icon-spa:before {
+ content:"\e933"
+}
+.ravis-icon-sport-centre:before {
+ content:"\e934"
+}
+.ravis-icon-swimming-pool:before {
+ content:"\e935"
+}
+.ravis-icon-television2:before {
+ content:"\e936"
+}
+.ravis-icon-toiletries:before {
+ content:"\e937"
+}
+.ravis-icon-wifi-room:before {
+ content:"\e938"
+}
+.ravis-icon-h-clock:before {
+ content:"\e939"
+}
+.ravis-icon-h-telephone:before {
+ content:"\e93a"
+}
+.ravis-icon-alarm-clock2:before {
+ content:"\e93b"
+}
+.ravis-icon-bathroom-sink:before {
+ content:"\e93c"
+}
+.ravis-icon-bathtub-with-water-dropping:before {
+ content:"\e93d"
+}
+.ravis-icon-beer-mug:before {
+ content:"\e93e"
+}
+.ravis-icon-black-and-white-credit-cards:before {
+ content:"\e93f"
+}
+.ravis-icon-bottle-in-bucket:before {
+ content:"\e940"
+}
+.ravis-icon-bowling-pin-and-ball:before {
+ content:"\e941"
+}
+.ravis-icon-briefcase-with-plus-symbol:before {
+ content:"\e942"
+}
+.ravis-icon-burger-on-plate:before {
+ content:"\e943"
+}
+.ravis-icon-cigar-with-smoke:before {
+ content:"\e944"
+}
+.ravis-icon-closed-sign:before {
+ content:"\e945"
+}
+.ravis-icon-clothes-hanger:before {
+ content:"\e946"
+}
+.ravis-icon-clothes-iron:before {
+ content:"\e947"
+}
+.ravis-icon-cocktail-glass:before {
+ content:"\e948"
+}
+.ravis-icon-coffee-pot:before {
+ content:"\e949"
+}
+.ravis-icon-computer-with-wifi-signal:before {
+ content:"\e94a"
+}
+.ravis-icon-desk-bell:before {
+ content:"\e94b"
+}
+.ravis-icon-digital-phone:before {
+ content:"\e94c"
+}
+.ravis-icon-dollar-bills:before {
+ content:"\e94d"
+}
+.ravis-icon-door-hanger:before {
+ content:"\e94e"
+}
+.ravis-icon-door-key:before {
+ content:"\e94f"
+}
+.ravis-icon-double-bed:before {
+ content:"\e950"
+}
+.ravis-icon-down-left-arrow:before {
+ content:"\e951"
+}
+.ravis-icon-elevator-braille-button:before {
+ content:"\e952"
+}
+.ravis-icon-fast-food-burger-and-drink:before {
+ content:"\e953"
+}
+.ravis-icon-fire-extinguisher2:before {
+ content:"\e954"
+}
+.ravis-icon-food-tray-with-cover:before {
+ content:"\e955"
+}
+.ravis-icon-golf-green:before {
+ content:"\e956"
+}
+.ravis-icon-gym-dumbbell:before {
+ content:"\e957"
+}
+.ravis-icon-hair-dryer:before {
+ content:"\e958"
+}
+.ravis-icon-hair-scissors-and-comb:before {
+ content:"\e959"
+}
+.ravis-icon-hotel-bellhop:before {
+ content:"\e95a"
+}
+.ravis-icon-hotel-coat-check:before {
+ content:"\e95b"
+}
+.ravis-icon-hotel-do-not-disturb-door-hanger:before {
+ content:"\e95c"
+}
+.ravis-icon-hotel-door-key:before {
+ content:"\e95d"
+}
+.ravis-icon-hotel-elevator-sign:before {
+ content:"\e95e"
+}
+.ravis-icon-hotel-five-stars-sign:before {
+ content:"\e95f"
+}
+.ravis-icon-hotel-food-cart:before {
+ content:"\e960"
+}
+.ravis-icon-hotel-front-view:before {
+ content:"\e961"
+}
+.ravis-icon-hotel-keycard:before {
+ content:"\e962"
+}
+.ravis-icon-hotel-left-luggage:before {
+ content:"\e963"
+}
+.ravis-icon-hotel-luggage-trolley:before {
+ content:"\e964"
+}
+.ravis-icon-hotel-maid:before {
+ content:"\e965"
+}
+.ravis-icon-hotel-receptionist:before {
+ content:"\e966"
+}
+.ravis-icon-hotel-receptionist-1:before {
+ content:"\e967"
+}
+.ravis-icon-hotel-single-bed:before {
+ content:"\e968"
+}
+.ravis-icon-hotel-tv:before {
+ content:"\e969"
+}
+.ravis-icon-ice-cream-cone:before {
+ content:"\e96a"
+}
+.ravis-icon-information-sign:before {
+ content:"\e96b"
+}
+.ravis-icon-no-cameras-sign:before {
+ content:"\e96c"
+}
+.ravis-icon-no-smoking-sign:before {
+ content:"\e96d"
+}
+.ravis-icon-open-sign:before {
+ content:"\e96e"
+}
+.ravis-icon-parking-sign:before {
+ content:"\e96f"
+}
+.ravis-icon-pet-transport-box:before {
+ content:"\e970"
+}
+.ravis-icon-photo-camera2:before {
+ content:"\e971"
+}
+.ravis-icon-plunger-and-brush:before {
+ content:"\e972"
+}
+.ravis-icon-pool-eight-ball:before {
+ content:"\e973"
+}
+.ravis-icon-restaurant-sign:before {
+ content:"\e974"
+}
+.ravis-icon-soup-bowl:before {
+ content:"\e975"
+}
+.ravis-icon-sun-umbrella-with-beach-chair:before {
+ content:"\e976"
+}
+.ravis-icon-surveillance-camera:before {
+ content:"\e977"
+}
+.ravis-icon-sweeping-broom:before {
+ content:"\e978"
+}
+.ravis-icon-swimming-pool-sign:before {
+ content:"\e979"
+}
+.ravis-icon-taxi-front-view:before {
+ content:"\e97a"
+}
+.ravis-icon-tennis-racket-and-ball:before {
+ content:"\e97b"
+}
+.ravis-icon-thermometer-cold-temperature:before {
+ content:"\e97c"
+}
+.ravis-icon-thermometer-high-temperature:before {
+ content:"\e97d"
+}
+.ravis-icon-three-star-hotel-sign:before {
+ content:"\e97e"
+}
+.ravis-icon-toilet-sign:before {
+ content:"\e97f"
+}
+.ravis-icon-toilet-sign-1:before {
+ content:"\e980"
+}
+.ravis-icon-toothpaste-and-toothbrush:before {
+ content:"\e981"
+}
+.ravis-icon-towel-on-hanger:before {
+ content:"\e982"
+}
+.ravis-icon-towel-on-hanger-1:before {
+ content:"\e983"
+}
+.ravis-icon-travelling-luggage:before {
+ content:"\e984"
+}
+.ravis-icon-two-semicircles:before {
+ content:"\e985"
+}
+.ravis-icon-up-right-arrow:before {
+ content:"\e986"
+}
+.ravis-icon-waiter-with-tray:before {
+ content:"\e987"
+}
+.ravis-icon-washing-machine:before {
+ content:"\e988"
+}

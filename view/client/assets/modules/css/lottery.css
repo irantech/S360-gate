@@ -1,0 +1,322 @@
+/* Lottery Modal Styles */
+.lottery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lottery-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.lottery-modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    animation: slideUp 0.4s ease;
+}
+
+.lottery-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.lottery-modal-close:hover {
+    color: #333;
+}
+
+.lottery-step {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.lottery-step.active {
+    display: block;
+    animation: stepFadeIn 0.4s ease forwards;
+}
+
+.lottery-modal-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.lottery-modal-desc {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.lottery-form-group {
+    margin-bottom: 20px;
+}
+
+.lottery-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd !important;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+    direction: ltr;
+}
+
+.lottery-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.lottery-input.error {
+    border-color: #dc3545;
+}
+
+.lottery-error {
+    display: block;
+    color: #dc3545;
+    font-size: 12px;
+    text-align: right;
+    min-height: 18px;
+}
+
+.lottery-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.lottery-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.lottery-btn-primary {
+    background: var(--mainColor);
+    color: #fff;
+}
+
+.lottery-btn-primary:hover:not(:disabled) {
+    background: var(--secondColor);
+}
+
+.lottery-btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.lottery-btn-secondary:hover {
+    background: #5a6268;
+}
+
+.lottery-btn-mainColor {
+    background: var(--mainColor);
+    color: #fff;
+}
+
+.lottery-btn-mainColor:hover {
+    background:var(--secondColor);
+}
+.btn-to-sherkat{
+    background:var(--mainColor);
+    color:#fff;
+}
+
+.lottery-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.lottery-actions .lottery-btn {
+    width: auto;
+    flex: 1;
+}
+
+.lottery-result {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lottery-prize-img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Countdown Timer */
+.lottery-countdown {
+    border-radius: 8px;
+    padding: 12px;
+    text-align: left !important;
+    direction: rtl;
+}
+
+.countdown-label {
+    font-size: 14px;
+    color: #666;
+    margin-left: 8px;
+}
+.lottery-trigger{
+    background:var(--mainColor);
+    color:#fff;
+}
+.lottery-trigger:hover{
+    background:var(--secondColor);
+    color:#fff;
+}
+
+.submit_btn{
+    justify-content:end !important;
+    display:inline-block;
+    width:100px !important;
+    padding:2px !important;
+}
+.countdown-time {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--mainColor);
+    direction: ltr;
+    display: inline-block;
+}
+
+.countdown-time.warning {
+    color: #dc3545;
+    animation: pulse 1s infinite;
+}
+
+/* Resend Button */
+.lottery-resend-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.mag_box_two p{
+    margin:4px 0 !important;
+}
+.lottery-btn-link {
+    background: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+    text-decoration:none;
+}
+
+.lottery-btn-link:hover:not(:disabled) {
+    color: #0056b3;
+}
+
+.lottery-btn-link:disabled {
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* Loading State */
+.lottery-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.lottery-btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes stepFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .lottery-modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .lottery-modal-title {
+        font-size: 20px;
+    }
+
+    .lottery-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

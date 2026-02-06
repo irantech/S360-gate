@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'mitra';
+  src: url('BMitra.eot');
+  src: url('BMitra.eot?#iefix') format('embedded-opentype'),
+	   url('BMitra.woff') format("woff"),
+  	   url('BMitra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

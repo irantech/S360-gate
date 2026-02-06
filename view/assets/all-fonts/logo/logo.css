@@ -1,0 +1,20 @@
+
+@font-face { 
+	font-family: "Baloo-Regular"; 
+	font-style: normal;
+	font-weight: 200;
+	src:
+
+		url("Baloo-Regular.ttf") format("truetype"); 
+}
+
+
+@font-face { 
+	font-family: "Exo-Light";
+	font-style: normal;
+	font-weight: 300;
+	src:
+		
+		url("Exo-Light.ttf") format("truetype");
+ }
+

@@ -1,0 +1,126 @@
+Delimiter ;;
+////////////////////////////////////////////////
+
+CREATE PROCEDURE sp_price_hotel_change_tb(IN _city VARCHAR(45),IN _hotelStar VARCHAR(45),IN _counterId VARCHAR(45),IN _date VARCHAR(45),IN _typeApplication ENUM('api','externalApi'))
+BEGIN
+IF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE 
+                city_code=_city AND hotel_star=_hotelStar AND
+                counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,1 as Type FROM  price_hotel_change_tb WHERE 
+                        city_code=_city AND hotel_star=_hotelStar AND
+                        counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+												
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE
+                city_code=_city AND hotel_star=_hotelStar AND
+                counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,2 as Type FROM  price_hotel_change_tb WHERE
+                        city_code=_city AND hotel_star=_hotelStar AND
+                        counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE 
+                city_code=_city AND hotel_star='all' AND
+                counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,3 as Type FROM  price_hotel_change_tb WHERE
+                        city_code=_city AND hotel_star='all' AND
+                        counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+												
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE
+                city_code=_city AND hotel_star='all' AND
+                counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,4 as Type FROM  price_hotel_change_tb WHERE
+                        city_code=_city AND hotel_star='all' AND
+                        counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE 
+                city_code='all' AND hotel_star=_hotelStar AND
+                counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,5 as Type FROM  price_hotel_change_tb WHERE
+                        city_code='all' AND hotel_star=_hotelStar AND
+                        counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+												
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE
+                city_code='all' AND hotel_star=_hotelStar AND
+                counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,6 as Type FROM  price_hotel_change_tb WHERE
+                        city_code='all' AND hotel_star=_hotelStar AND
+                        counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE 
+                city_code='all' AND hotel_star='all' AND
+                counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,7 as Type FROM  price_hotel_change_tb WHERE
+                        city_code='all' AND hotel_star='all' AND
+                        counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+
+
+ELSEIF EXISTS ( SELECT id FROM  price_hotel_change_tb WHERE
+                city_code='all' AND hotel_star='all' AND
+                counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                type_application=_typeApplication AND is_del='no'
+                ORDER BY city_code, hotel_star ) THEN
+
+					SELECT *,8 as Type FROM  price_hotel_change_tb WHERE
+                        city_code='all' AND hotel_star='all' AND
+                        counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        type_application=_typeApplication AND is_del='no'
+                        ORDER BY city_code, hotel_star;
+
+END IF;
+END;;

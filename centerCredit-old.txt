@@ -1,0 +1,199 @@
+<?php
+require_once(LIBRARY_DIR . 'bank/BankBase.php');
+//error_reporting(1);
+//error_reporting(E_ALL | E_STRICT);
+//@ini_set('display_errors', 1);
+//@ini_set('display_errors', 'on');
+class centerCredit extends BankBase
+{
+
+    private $url = 'https://test3ds.bcc.kz:5445/cgi-bin/cgi_link';
+//    private $url = 'https://payment.centercredit.kz/api/payment';
+
+    private function curlRequest($url,$request_data)
+    {
+
+        $url = 'https://test3ds.bcc.kz:5445/cgi-bin/cgi_link';
+//        $data = json_encode($request_data);
+
+//        $data['MERCHANT']   = 'AG2POST90033823';
+//        $data['MERCH_PAYTO_TOKEN_ID']   = 'AG2POST90033823';
+//        $data['ORDER']   = 'AG2POST90033823';
+//        $data['DESC']   = 'aaaa';
+//        $data['MERCHANT']   = '00000001';
+//        $data['MERCH_NAME']   = '00000001';
+        $data['TERMINAL']   = '88888881';
+//        $data['TIMESTAMP']   = date( "Y/m/d H:i:s" );
+//        $data['MERCH_GMT']   = '+6';
+//        $data['TRTYPE']   = '8';
+//        $data['BACKREF']   = $request_data['BACKREF'];
+//        $data['LANG']   = $request_data['LANG'];
+//        $data['NONCE']   = $request_data['NONCE'];
+//        $data['P_SIGN']   = $request_data['P_SIGN'];
+//        $data['MK_TOKEN']   = 'MERCHB';
+//        $data['NOTIFY_URL']   = $request_data['BACKREF'];
+//        $data['CLIENT_IP']   = '0.0.0.0';
+
+//        $data['CARD']   = '4463755551594568';
+
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/x-www-form-urlencoded"
+        ));
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30); // or any other value
+
+        curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, true);  // Disable proxy
+        curl_setopt($ch, CURLOPT_PROXY, "");  // Clear proxy setting
+
+
+
+        $response = curl_exec($ch);
+//        if ($_SERVER['REMOTE_ADDR'] == '84.241.4.20') {
+//            var_dump($response);
+//            die();
+//        }
+
+        if ($_SERVER['REMOTE_ADDR'] == '84.241.4.20') {
+            var_dump(curl_error($ch) , curl_errno($ch));
+            die;
+        }
+        if (curl_errno($ch)) {
+            echo 'خطا: ' . curl_errno($ch) . ' ' .  curl_error($ch);die();
+        } else {
+            $result = json_decode($response, true);
+            if ($result['status'] === 'success') {
+                header('Location: ' . $result['payment_url']);
+                exit;
+            } else {
+                echo 'خطا در پرداخت: ' . $result['message'];
+            }
+        }
+        curl_close($ch);
+
+        return json_decode($result, JSON_OBJECT_AS_ARRAY);
+
+
+
+
+
+
+
+
+//        $apiUrl = 'https://test3ds.bcc.kz:5445/cgi-bin/cgi_link'; // آدرس API بانک
+//        $token = 'AG2POST90033823';             // توکن اختصاصی شما
+//        $paymentData = [
+//            'amount' => 10000,                            // مبلغ پرداخت (مثلاً به تنگه)
+//            'currency' => 'KZT',                          // واحد پول
+//            'order_id' => '123456789',                    // شناسه سفارش
+//            'description' => 'Payment for Order #123456'  // توضیحات
+//        ];
+//        if ($_SERVER['REMOTE_ADDR'] == '84.241.4.20') {
+//            echo json_encode($paymentData);
+//            die();
+//        }
+//        // تبدیل داده‌ها به JSON
+//        $jsonData = json_encode($paymentData);
+//        $ch = curl_init($apiUrl);
+//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+//            'Content-Type: application/json',
+//            'Authorization: Bearer ' . $token          // استفاده از توکن در هدر
+//        ]);
+//        curl_setopt($ch, CURLOPT_POST, true);
+//        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+//        // اجرای درخواست
+//        $response = curl_exec($ch);
+//
+//        // بررسی خطاهای احتمالی
+//        if (curl_errno($ch)) {
+//            echo 'خطا در اتصال: ' . curl_error($ch);
+//        } else {
+//            echo 'پاسخ سرور: ' . $response;
+//        }
+//        // بستن cURL
+//        curl_close($ch);
+
+
+
+
+    }
+
+    public function requestPayment($request_data = [])
+    {
+
+
+        $url = $this->url ;
+        functions::insertLog( 'payPing request params : ' . json_encode( $request_data ), 'logBankPayPing' );
+
+        $response =$this->curlRequest($url,$request_data);
+
+        functions::insertLog( 'payPing  request response : ' . json_encode( $response ), 'logBankPayPing' );
+
+        if (!$response["Success"] && $response["Status"] != 200) {
+            return $this->showResult(false, $response, 'Error code = '.$response["code"]);
+        }
+        return $this->showResult(true, $response, 'go to payment page');
+
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function verifyPayment($verify_params = [])
+    {
+        $url = $this->url . '/verify';
+
+        functions::insertLog( ' verify_transaction params : ' . json_encode( $verify_params ), 'logBankPayPing' );
+        $payment_token= $verify_params['token'];
+        $reciept_clientRefId = $verify_params['clientRefId'];
+
+        $request=[
+            'PaymentRefId'=>$reciept_clientRefId
+        ];
+
+        functions::insertLog( ' verify_transaction : ' . json_encode( [$url ,$request ] ), 'logBankPayPing' );
+
+        $response =$this->curlRequest($url,$request , $payment_token);
+        functions::insertLog( ' verify_transaction response : ' . json_encode($response), 'logBankPayPing' );
+
+//var_dump($response);
+//die;
+        if (!$response["success"]) {
+            $message=functions::Xmlinformation( 'NoPayment' )->__toString();
+            return $this->showResult(false, $response,$message);
+        }
+        $url = $this->url . 'confirm_transaction';
+        functions::insertLog( ' confirm_transaction : ' . json_encode( [$url ,$request ] ), 'logBankPayPing' );
+
+        $confirm_response =$this->curlRequest($url,$request);
+
+        functions::insertLog( ' confirm_transaction response : ' . json_encode($response), 'logBankPayPing' );
+
+        if (!$confirm_response["success"]) {
+            $message=functions::Xmlinformation( 'NoPayment' )->__toString();
+            return $this->showResult(false, $response,$message);
+        }
+
+        $url = $this->url . 'get_transaction';
+        functions::insertLog( ' get_transaction : ' . json_encode( [$url ,$request ] ), 'logBankPayPing' );
+
+        $get_response =$this->curlRequest($url,$request);
+        functions::insertLog( ' get_transaction response : ' . json_encode($response), 'logBankPayPing' );
+
+        if (!$get_response["success"]) {
+            $message=functions::Xmlinformation( 'NoPayment' )->__toString();
+            return $this->showResult(false, $response,$message);
+        }
+
+        $response_array=[
+            'trackingCode'=>$response['content']['ConfirmTransactionNumber'],
+            'amount'=>$response['content']['Amount'],
+            'factorNumber'=>$response['content']['MerchantOrderId'],
+        ];
+        return $this->showResult(true, $response_array, 'تراکنش انجام شد');
+
+    }
+}

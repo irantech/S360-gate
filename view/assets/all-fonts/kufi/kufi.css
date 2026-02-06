@@ -1,0 +1,8 @@
+@font-face {  
+  font-family: "kufi"; 
+  font-style: normal;
+  font-weight: 200;
+  src:
+    url("DroidKufi-Regular.woff") format("woff"),
+    url("DroidKufi-Regular.ttf") format("truetype"); 
+}

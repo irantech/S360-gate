@@ -1,0 +1,22 @@
+.international-available-airlines-log-info span , .airlines-info.destination span:last-of-type , .international-available-airlines-detail-tittle span , .international-available-airlines-detail-tittle span i ,  .cancel-policy-inner .cancel-policy-item .cancel-policy-item-text , .tblprice .tdprice i , .tab-content.current ul li , .s-u-number-input-change input , .s-u-jalali-change input , .s-u-filter-item #amount , .s-u-filter-item-time label > i  .tip-content p a , .s-u-filter-item-time label > i , .priceSortAdt i , .airlines-info-inner span:first-child
+, .s-u-bozorg-change .price i , .s-u-result-items-div-change span , .s-u-result-item-date-format-change , .member-price i , .member-price , .s-u-passenger-item-change select, .s-u-passenger-item-change input , .s-u-result-items-div-change .font-chanhe , .foreign .date-time , .time-flight , .hotel-start-price b , .hotel-time-stay , .form-hotel-item-stayTime , .ribbon-hotel span i
+, .form-hotel-room-item span , .stayingTime , .rp-tableHotelRoom .pricePerNight , .hotel-start-price b , .maxlist-more a , .form-hotel-room-item .input input , .form-hotel-room-item .select select , .insurance-list-box-content h5 , .insurance-list-box-content h4 , .form-item-Insurance-day > div.input input , .RoomDescription .DetailPriceView .details , .RoomDescription .DetailPriceView .details .NotAvailableSeprate , .RoomDescription .DetailPriceView .details .seprate , .RoomDescription .DetailPriceView .details .AvailableSeprate , .divDiscountRoom span , .rp-tableHotelRoom .finalPrice div.roomFinalPrice , .rp-tableHotelRoom .finalPrice div , .rp-tableHotelRoom .strikePrice , .divDiscountRoom span b
+.DetailPriceView .seprate , .roomCapacity .txtIcon.ng-binding , .divDiscountRoom span b
+{
+font-family: 'IRANSans' !important;
+}
+.airlines-info-inner span:first-child {
+    font-size:10px !important;
+}
+
+.dateprice{
+    padding: 5px 13px;
+}
+
+.col_t_price span.s_price{
+    font-family: Tahoma;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default , .ui-datepicker .ui-datepicker-title{
+    font-family: 'IRANSans' !important;
+}

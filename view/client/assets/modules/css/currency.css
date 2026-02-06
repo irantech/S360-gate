@@ -1,0 +1,10 @@
+
+body{
+    direction: rtl;
+    padding: 0;
+    background: #eeeeee !important;
+    line-height: 24px;
+    text-align: right;
+    color: #4B5259 !important;
+}
+

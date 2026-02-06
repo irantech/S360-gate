@@ -1,0 +1,50 @@
+Delimiter ;;
+////////////////////////////////////////////////
+
+CREATE PROCEDURE sp_point_club_tb(IN _service VARCHAR(45),IN _baseCompany VARCHAR(45),IN _company VARCHAR(45),IN _counterId VARCHAR(45))
+BEGIN
+IF EXISTS ( SELECT id FROM  point_club_tb WHERE 
+                type_service=_service AND base_company=_baseCompany AND
+                company=_company AND counterTypeId=_counterId AND is_enable='1'
+                ORDER BY id ) THEN
+
+					SELECT *,1 as Type FROM  point_club_tb WHERE 
+                        type_service=_service AND base_company=_baseCompany AND
+                        company=_company AND counterTypeId=_counterId AND is_enable='1'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  point_club_tb WHERE
+                type_service=_service AND base_company=_baseCompany AND
+                company='all' AND counterTypeId=_counterId AND is_enable='1'
+                ORDER BY id ) THEN
+
+					SELECT *,2 as Type FROM  point_club_tb WHERE
+                        type_service=_service AND base_company=_baseCompany AND
+                        company='all' AND counterTypeId=_counterId AND is_enable='1'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  point_club_tb WHERE 
+                type_service=_service AND base_company='all' AND
+                company='all' AND counterTypeId=_counterId AND is_enable='1'
+                ORDER BY id ) THEN
+
+					SELECT *,3 as Type FROM  point_club_tb WHERE
+                        type_service=_service AND base_company='all' AND
+                        company='all' AND counterTypeId=_counterId AND is_enable='1'
+                        ORDER BY id;
+												
+
+ELSEIF EXISTS ( SELECT id FROM  point_club_tb WHERE
+                 type_service='all' AND base_company='all' AND
+                 company='all' AND counterTypeId=_counterId AND is_enable='1'
+                 ORDER BY id ) THEN
+
+					SELECT *,4 as Type FROM  point_club_tb WHERE
+                        type_service='all' AND base_company='all' AND
+                        company='all' AND counterTypeId=_counterId AND is_enable='1'
+                        ORDER BY id ;
+
+END IF;
+END;;

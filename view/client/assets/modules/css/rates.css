@@ -1,0 +1,16 @@
+.rates-box input {
+    display: none;
+}
+.rates-box label {
+    display: inline-block;
+    padding-right: 1rem;
+    font-size: 1rem;
+    color: #949B93;
+}
+/*.rates-box label:hover, label:hover ~ label {
+    color: #FF7F00;
+}*/
+
+.rates-box input:checked ~ label,.start-color {
+    color: #FFC613;
+}

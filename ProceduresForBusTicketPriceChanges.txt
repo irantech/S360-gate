@@ -1,0 +1,295 @@
+Delimiter ;;
+////////////////////////////////////////////////
+
+CREATE PROCEDURE sp_bus_ticket_price_changes_tb(IN _originCity VARCHAR(45),IN _destinationCity VARCHAR(45),IN _companyBus VARCHAR(45),IN _counterId VARCHAR(45),IN _date VARCHAR(45))
+BEGIN
+IF EXISTS ( SELECT id FROM bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city=_destinationCity AND
+                company_bus=_companyBus AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+	 
+					SELECT *,1 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city=_destinationCity AND
+                        company_bus=_companyBus AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city=_destinationCity AND
+                company_bus=_companyBus AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+					SELECT *,2 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city=_destinationCity AND
+                        company_bus=_companyBus AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city='all' AND
+                company_bus=_companyBus AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+					SELECT *,3 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city='all' AND
+                        company_bus=_companyBus AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city='all' AND
+                company_bus=_companyBus AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,4 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city='all' AND
+                        company_bus=_companyBus AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id ;
+
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city=_destinationCity AND
+                company_bus=_companyBus AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+	 
+					SELECT *,5 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city=_destinationCity AND
+                        company_bus=_companyBus AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+												
+								
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city=_destinationCity AND
+                company_bus=_companyBus AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,6 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city=_destinationCity AND
+                        company_bus=_companyBus AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+	
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city='all' AND
+                company_bus=_companyBus AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+	 
+					SELECT *,7 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city='all' AND
+                        company_bus=_companyBus AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city='all' AND
+                company_bus=_companyBus AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,8 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city='all' AND
+                        company_bus=_companyBus AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+
+
+
+
+ELSEIF EXISTS ( SELECT id FROM bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city=_destinationCity AND
+                company_bus='all' AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+					SELECT *,9 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city=_destinationCity AND
+                        company_bus='all' AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city=_destinationCity AND
+                company_bus='all' AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+					SELECT *,10 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city=_destinationCity AND
+                        company_bus='all' AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city='all' AND
+                company_bus='all' AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+					SELECT *,11 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city='all' AND
+                        company_bus='all' AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city=_originCity AND destination_city='all' AND
+                company_bus='all' AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,12 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city=_originCity AND destination_city='all' AND
+                        company_bus='all' AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id ;
+
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city=_destinationCity AND
+                company_bus='all' AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,13 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city=_destinationCity AND
+                        company_bus='all' AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city=_destinationCity AND
+                company_bus='all' AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,14 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city=_destinationCity AND
+                        company_bus='all' AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city='all' AND
+                company_bus='all' AND counter_id=_counterId AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,15 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city='all' AND
+                        company_bus='all' AND counter_id=_counterId AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+ELSEIF EXISTS ( SELECT id FROM  bus_ticket_price_changes_tb WHERE
+                origin_city='all' AND destination_city='all' AND
+                company_bus='all' AND counter_id='0' AND
+                ((start_date<=_date) AND (end_date>=_date)) AND
+                is_del='no'
+                ORDER BY id ) THEN
+
+
+
+					SELECT *,16 as Type FROM  bus_ticket_price_changes_tb WHERE
+                        origin_city='all' AND destination_city='all' AND
+                        company_bus='all' AND counter_id='0' AND
+                        ((start_date<=_date) AND (end_date>=_date)) AND
+                        is_del='no'
+                        ORDER BY id;
+
+
+
+
+
+
+
+
+
+END IF;
+END;;

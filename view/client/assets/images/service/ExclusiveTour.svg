@@ -1,0 +1,10 @@
+<svg fill="#666" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+    <!-- بدنه کوله پشتی -->
+    <path d="M16 24c0-6 8-12 16-12s16 6 16 12v28c0 4-4 8-8 8H24c-4 0-8-4-8-8V24z" stroke="#666" stroke-width="2" fill="none"/>
+
+    <!-- جیب جلو -->
+    <rect x="24" y="36" width="16" height="12" rx="2" ry="2" fill="none" stroke="#666" stroke-width="2"/>
+
+    <!-- دسته بالای کوله -->
+    <path d="M28 24c0-2 0-4 4-4s4 2 4 4" stroke="#666" stroke-width="2" fill="none"/>
+</svg>

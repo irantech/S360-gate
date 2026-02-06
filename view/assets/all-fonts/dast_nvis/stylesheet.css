@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Mj_Ghalam-1';
+    src: url('Mj_Ghalam-1.eot');
+    src: url('Mj_Ghalam-1.eot?#iefix') format('embedded-opentype'),
+        url('Mj_Ghalam-1.woff2') format('woff2'),
+        url('Mj_Ghalam-1.woff') format('woff'),
+        url('Mj_Ghalam-1.ttf') format('truetype'),
+        url('Mj_Ghalam-1.svg#Mj_Ghalam-1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,51 @@
+.rate-base-layer, .rate-select-layer
+{
+    color: #48C1C7;
+}
+.rate-hover-layer
+{
+    color: #48C1C7;
+}
+.rate{
+    float: left;
+}
+.rate > div{
+    font-size: 36px;
+}
+.rate-wrapper{
+    width: 100%;
+    overflow:hidden;
+    margin-bottom: 10px;
+}
+.rate-box{
+    direction: ltr;
+    flex: 0 0 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.rate-box i{
+    float: left;
+    margin: 0 32px;
+    line-height: 57px;
+    font-size: 16px;
+}
+.rated{
+    float: right;
+    font-size: 30px;
+    font-family: yekanNumbers;
+    padding: 5px 10px;
+}
+.rated-count{
+    float: right;
+    font-size: 16px;
+    font-family:yekanNumbers,IRANSansMedium;
+    padding: 18px 0px 0 0;
+}
+.snippet-message{
+    font-size: 11px;
+    display: block;
+    padding: 5px;
+    line-height: 40px;
+    margin: 0 10px;
+}

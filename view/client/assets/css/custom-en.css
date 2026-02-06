@@ -1,0 +1,34 @@
+.gds-login_en{ direction: ltr}
+
+.gds-login_en .custom-checkbox{ margin-right: 4px;}
+
+.gds-login_en form > div.gds-l-up span::before{ left: 10px; right: auto !important;}
+.gds-login_en form > div input::placeholder{  text-align: left !important;}
+
+.gds-login_en form > div input {
+
+    padding: 13px 15px 13px 40px !important;}
+
+.gds-login_en .select2-container--default .select2-selection--single .select2-selection__arrow{ right: 4px; left: auto}
+.gds-login_en .select2-container .select2-selection--single .select2-selection__rendered{ text-align: left; padding-left: 20px;}
+
+.gds-login_en .select2-container--default .select2-results__option{ text-align: left !important;}
+.gds-login_en  .gds-login-forget a{ text-align: left}
+
+.gds-login_en form .gds-login-submit input{ padding: 10px !important;}
+.select2-container--default .select2-results__option{ text-align: left !important;}
+
+
+
+
+
+
+
+@media ( max-width: 480px){
+    .gds-login_en .select2-container--default .select2-results__option{ text-align: left !important;}
+    .gds-login_en form > div input {
+
+        padding: 13px 0px 13px 30px !important;}
+    .gds-login_en .gds-login-detai{ border-radius: 5px !important;}
+    .gds-login-detail::before{ border-radius: 5px !important;}
+}

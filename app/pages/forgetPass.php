@@ -1,0 +1,72 @@
+<div class="page" data-page="blit-info-1">
+
+    <div class="page-content">
+        <div class="nav-info site-bg-main-color">
+            <div class="nav-info-inner">
+                <div class="back-link">
+                    <a href="#" class="link back">
+                        <span></span>
+                    </a>
+                </div>
+                <div class="title">اطلاعات پروفایل</div>
+            </div>
+        </div>
+        <div class="blit-info-page">
+
+
+            <div class="passenger-info passenger-profile-change">
+
+                <div class="list list-passenger">
+                    <span class="passenger-profile-change-head">تغییر کلمه عبور</span>
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title item-floating-label">کلمه عبور قبلی</div>
+                                <div class="item-input-wrap">
+                                    <input type="text">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-input">
+                            <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title item-floating-label">کلمه عبور جدید</div>
+                                <div class="item-input-wrap">
+                                    <input type="text">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-input">
+                            <div class="item-media">
+                                <i class="icon demo-list-icon"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title item-floating-label">تکرار کلمه عبور</div>
+                                <div class="item-input-wrap">
+                                    <input value="سروش" type="text">
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="bottom-btn">
+                <a href="/blit-info-2/" class="bot-btn site-bg-main-color">ثبت تغییرات</a>
+            </div>
+        </div>
+
+    </div>
+</div>

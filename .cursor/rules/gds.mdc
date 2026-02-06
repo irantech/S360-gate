@@ -1,0 +1,68 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# GDS Project Structure and Patterns
+
+## Project Overview
+This is a travel booking system with a central databaphp) and customer-specific dModel.php). It follows a PHP-based MVC architecture with a custom templating system using Smarty.
+
+## Directory Structure
+- `/view/`: Contains all view templates using Smarty (*.tpl files)
+- `/view/administrator/`: Admin panel templates
+- `/controller/`: Contains controller classes
+- `/library/`: Contains core classes and models
+- `/sql/`: Contains SQL schema files
+- `/assets/`: Static assets like JS, CSS and images
+
+## Controller Patterns
+Controllers typically extend `ClientAuth` class and follow these patterns:
+- Methods that return data usually return arrays, not JSON strings
+- AJAX endpoints return data structures that will be encoded to JSON
+- Controllers use models via `getModel(ModelName::class)->get()`
+
+## AJAX Handling
+The system uses two main AJAX approaches:
+1. Traditional approach with `user_ajax.php` using 'flag' parameter
+2. Modern approach with `ajax.php` using className, method, and to_json parameters
+
+For the modern approach, AJAX calls should be structured as:
+```javascript
+$.ajax({
+    type: "post",
+    url: `${amadeusPath}ajax`,
+    data: JSON.stringify({
+        className: 'ControllerName',
+        method: 'methodName',
+        paramName: paramValue,
+        to_json: true
+    }),
+    contentType: "application/json"
+});
+```
+
+## Database Models
+- Models extend `ModelBase` or `Model` classes
+- Soft delete pattern is used with `deleted_at` field
+- Models have methods like `get()`, `find()`, `findAll()`, `all()`, etc.
+- Query chaining is used: `->get()->where()->find()`
+- Use `updateWithBind()` and `insertWithBind()` for database operations
+
+## Feature Implementation
+When implementing new features:
+1. Create a directory in `/view/administrator/` for the feature
+2. Create a controller in `/controller/`
+3. Create models in `/model/` if needed
+4. Create SQL files in `/sql/` for database schema
+5. Use existing CSS/JS patterns and UI components
+
+## UI Components
+- UI uses Bootstrap with RTL support
+- DataTables for table functionality
+- Bootstrap Switch for toggle switches
+- Forms use JS validation
+- Toast notifications for user feedback
+
+## Multilingual Support
+The system supports multiple languages including Persian (fa), English (en), and Arabic (ar).
