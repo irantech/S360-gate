@@ -1,4 +1,6 @@
 /.idea/
+/.claude/
+/.cursor/
 /.ideadd/
 /casch/
 /dist/*
@@ -16,7 +18,6 @@
 
 
 /pic/
-/index.php
 /config/
 /dist/
 /library/ApiSource/iranTechApi/pic/airlines/
