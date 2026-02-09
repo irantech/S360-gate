@@ -1,3 +1,74 @@
+$(document).ready(function (){
+    $(".main-navigation__button2").click(function (e) {
+        e.stopPropagation()
+        $(".main-navigation__sub-menu2").toggleClass("d-flex")
+    })
+    $("body").click(function () {
+        $(".main-navigation__sub-menu2").removeClass("d-flex")
+    })
+
+    $("#scroll-top").hide();
+    // fade in #back-top
+    $(function () {
+        $('#scrollTop').fadeOut();
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#scrollTop').fadeIn();
+            } else {
+                $('#scrollTop').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#scroll-top button').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+        });
+    });
+    $(window).scroll(function () {
+
+        let sctop = $(this).scrollTop();
+
+        if(sctop > 20){
+            $('#header').addClass('fixedmenu');
+        }
+        else{
+            $('#header').removeClass('fixedmenu');
+        }
+    });
+    $(document).ready(function(){
+// menu scroll bottom
+        $('.fixicone').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+        });
+        var header = $('.header_area'),
+            headerHeight = header.height(),
+            treshold = 0,
+            lastScroll = 0;
+
+        $(document).on('scroll', function (evt) {
+            var newScroll = $(document).scrollTop(),
+                diff = newScroll-lastScroll - 10;
+
+            // normalize treshold range
+            treshold = (treshold+diff>headerHeight) ? headerHeight : treshold+diff;
+            treshold = (treshold < 0) ? 0 : treshold + 10;
+
+            header.css('top', (-treshold)+'px');
+
+            lastScroll = newScroll;
+        });
+    });
+});
+//iframe register
+$('.stop-propagation').bind('click', function (e) {
+    e.stopPropagation();
+});
+
+
 // RPEPOLOMP
 $(document).ready(function () {
     $('body').on('click', '.more_close_matn', function () {
@@ -127,13 +198,13 @@ $(document).ready(function () {
 
 
     var header = $('.header_area'),
-      headerHeight = header.height(),
-      treshold = 0,
-      lastScroll = 0;
+        headerHeight = header.height(),
+        treshold = 0,
+        lastScroll = 0;
 
     $(document).on('scroll', function (evt) {
         var newScroll = $(document).scrollTop(),
-          diff = newScroll-lastScroll - 10;
+            diff = newScroll-lastScroll - 10;
 
         // normalize treshold range
         treshold = (treshold+diff>headerHeight) ? headerHeight : treshold+diff;
@@ -259,7 +330,7 @@ $(document).ready(function () {
 
         if(i < 5){
             HtmlCode +=
-              `<div class="myroom-hotel-item" data-roomNumber="${i}">
+                `<div class="myroom-hotel-item" data-roomNumber="${i}">
              <div class="myroom-hotel-item-title">
              <span class="close">
              <i class="fal fa-trash-alt"></i>
@@ -319,7 +390,7 @@ $(document).ready(function () {
 
         if(i < 5){
             HtmlCode +=
-              `<div class="myroom-package-item" data-roomNumber="${i}">
+                `<div class="myroom-package-item" data-roomNumber="${i}">
              <div class="myroom-package-item-title">اتاق  ${numberText}
              <span class="close">
              <i class="fal fa-trash-alt"></i>
@@ -367,22 +438,22 @@ $(document).ready(function () {
                 numberTextChild = "چهارم";
             }
             HtmlCode += '<div class="tarikh-tavalod-item">'
-              + '<span>سن کودک <i>' + numberTextChild + '</i></span>'
-              + '<select id="childAge' + roomNumber + i + '" name="childAge' + roomNumber + i + '">'
-              + '<option value="1">0 تا 1 سال</option>'
-              + '<option value="2">1 تا 2 سال</option>'
-              + '<option value="3">2 تا 3 سال</option>'
-              + '<option value="4">3 تا 4 سال</option>'
-              + '<option value="5">4 تا 5 سال</option>'
-              + '<option value="6">5 تا 6 سال</option>'
-              + '<option value="7">6 تا 7 سال</option>'
-              + '<option value="8">7 تا 8 سال</option>'
-              + '<option value="9">8 تا 9 سال</option>'
-              + '<option value="10">9 تا 10 سال</option>'
-              + '<option value="11">10 تا 11 سال</option>'
-              + '<option value="12">11 تا 12 سال</option>'
-              + '</select>'
-              + '</div>';
+                + '<span>سن کودک <i>' + numberTextChild + '</i></span>'
+                + '<select id="childAge' + roomNumber + i + '" name="childAge' + roomNumber + i + '">'
+                + '<option value="1">0 تا 1 سال</option>'
+                + '<option value="2">1 تا 2 سال</option>'
+                + '<option value="3">2 تا 3 سال</option>'
+                + '<option value="4">3 تا 4 سال</option>'
+                + '<option value="5">4 تا 5 سال</option>'
+                + '<option value="6">5 تا 6 سال</option>'
+                + '<option value="7">6 تا 7 سال</option>'
+                + '<option value="8">7 تا 8 سال</option>'
+                + '<option value="9">8 تا 9 سال</option>'
+                + '<option value="10">9 تا 10 سال</option>'
+                + '<option value="11">10 تا 11 سال</option>'
+                + '<option value="12">11 تا 12 سال</option>'
+                + '</select>'
+                + '</div>';
             i++;
         }
 
@@ -1019,7 +1090,7 @@ function createRoomHotel(roomCount) {
 
     if(i < 5){
         HtmlCode +=
-          `<div class="myroom-hotel-item" data-roomNumber="${i}">
+            `<div class="myroom-hotel-item" data-roomNumber="${i}">
              <div class="myroom-hotel-item-title">
              <span class="close">
              <i class="fal fa-trash-alt"></i>
@@ -1079,7 +1150,7 @@ function createRoomHotelPackage(roomCount) {
 
     if(i < 5){
         HtmlCode +=
-          `<div class="myroom-package-item" data-roomNumber="${i}">
+            `<div class="myroom-package-item" data-roomNumber="${i}">
              <div class="myroom-package-item-title">اتاق  ${numberText}
              <span class="close">
              <i class="fal fa-trash-alt"></i>
@@ -1352,3 +1423,125 @@ window.addEventListener("load", function() {
     }, 600); // می‌توانید مقدار تأخیر را در صورت نیاز تنظیم کنید
 });
 
+// کد برای انتخاب نفر در بیمه
+//----------------------start passenger Count js-----------------------------//
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggleBime = document.querySelector('.dropdown-toggle-insurance');
+    const dropdownMenu = document.querySelector('.dropdown-menu-insurance');
+    const increaseButtons = document.querySelectorAll('.increase');
+    const decreaseButtons = document.querySelectorAll('.decrease');
+
+    function updateTotalPassengers() {
+        const counts = document.querySelectorAll('.counter-insurance span');
+        let total = 0;
+        counts.forEach((count ,index) => {
+            const countValue = parseInt(count.textContent);
+            total += countValue;
+        });
+        if(dropdownToggleBime != null) {
+            if (total > 0 ) {
+                dropdownToggleBime.textContent = total + ' مسافر';
+            } else {
+                dropdownToggleBime.textContent = 'تعداد مسافر';
+            }
+        }
+        $('#passengers-count-js').val(total);
+    }
+
+    if (dropdownToggleBime != null) {
+        // باز و بسته کردن منو با کلیک روی دکمه
+        dropdownToggleBime.addEventListener('click', function(event) {
+            event.stopPropagation(); // جلوگیری از انتشار رویداد به body
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // بستن منو با کلیک خارج از آن
+        document.addEventListener('click', function(event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownToggleBime.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    }
+
+
+    increaseButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const countSpan = this.parentElement.querySelector('span');
+            let group = this.getAttribute('data-age')
+            let count = parseInt(countSpan.textContent);
+            countSpan.textContent = count + 1;
+            updateTotalPassengers();
+            const newInput = createAgeInput(index + '-' + count , group);
+            this.parentElement.parentElement.appendChild(newInput);
+        });
+    });
+
+    decreaseButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const countSpan = this.parentElement.querySelector('span');
+            let count = parseInt(countSpan.textContent);
+            if (count > 0) {
+                countSpan.textContent = count - 1;
+                updateTotalPassengers();
+                const inputId = 'txt_birth_insurance' + index + '-' + (count - 1);
+                const inputToRemove = document.getElementById(inputId);
+                if (inputToRemove) {
+                    inputToRemove.remove();
+                }
+            }
+        });
+    });
+
+    updateTotalPassengers();
+});
+
+function createAgeInput(index , ageGroup) {
+    console.log('ageGroup' ,  ageGroup)
+    const ageValue = generateBirthDate(ageGroup); // Generate random age between 18 and 60
+    const input = document.createElement('input');
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('class', 'form-control passengers-age-js shamsiBirthdayCalendar');
+    input.setAttribute('id', 'txt_birth_insurance' + index);
+    input.setAttribute('name', 'txt_birth_insurance' + index);
+    input.setAttribute('type', 'hidden');
+    input.setAttribute('value', ageValue);
+    return input;
+}
+
+function generateBirthDate(ageGroup){
+
+    const today = new Date(); // Get current date
+    const currentYearShamsi = today.getFullYear() - 621; // Convert Gregorian to Shamsi approximately
+
+    let minYear, maxYear;
+
+    if (ageGroup === "0-12") {
+        minYear = currentYearShamsi - 12; // Max 12 years old
+        maxYear = currentYearShamsi;      // Min 0 years old
+    } else if (ageGroup === "13-64") {
+        minYear = currentYearShamsi - 64;
+        maxYear = currentYearShamsi - 13;
+    } else if (ageGroup === "65-70") {
+        minYear = currentYearShamsi - 70; // Max 70 years old
+        maxYear = currentYearShamsi - 65; // Min 65 years old
+    } else if (ageGroup === "71-75") {
+        minYear = currentYearShamsi - 75; // Max 75 years old
+        maxYear = currentYearShamsi - 71; // Min 71 years old
+    } else if (ageGroup === "76-85") {
+        minYear = currentYearShamsi - 85; // Max 85 years old
+        maxYear = currentYearShamsi - 76; // Min 76 years old
+    } else if (ageGroup === "+81") {
+        minYear = currentYearShamsi - 100; // Assume max age 100
+        maxYear = currentYearShamsi - 81;  // Min 81 years old
+    } else {
+        throw new Error("Invalid age group");
+    }
+
+    const year = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear; // Random year within range
+    const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, '0'); // Random month 01-12
+    const day = String(Math.floor(Math.random() * 29) + 1).padStart(2, '0'); // Random day 01-29
+
+    return `${year}-${month}-${day}`; // Format: YYYY-MM-DD
+}
+
+//----------------------end passenger Count js-----------------------------//

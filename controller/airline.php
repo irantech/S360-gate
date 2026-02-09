@@ -33,7 +33,16 @@ class airline extends clientAuth
     {
         return $this->getModel('airlineModel')->get(['id', 'name_fa', 'name_en', 'abbreviation', 'active' , 'foreignAirline'], true)->all();
     }
+    public function airLineListJson()
+    {
+        $data = $this->getModel('airlineModel')
+            ->get(['id', 'name_fa', 'name_en', 'abbreviation', 'active', 'foreignAirline'], true)
+            ->all();
 
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        exit;
+    }
     #endregion
 
     public function geSpecificAirlineById($id)

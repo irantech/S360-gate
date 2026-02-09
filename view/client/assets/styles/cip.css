@@ -1,0 +1,1789 @@
+/* =============================================
+   CIP Modern Design System - 2024
+   ============================================= */
+
+:root {
+    --cip-primary: #6366f1;
+    --cip-primary-dark: #4f46e5;
+    --cip-primary-light: #818cf8;
+    --cip-secondary: #0ea5e9;
+    --cip-success: #10b981;
+    --cip-success-dark: #059669;
+    --cip-warning: #f59e0b;
+    --cip-danger: #ef4444;
+    --cip-gray-50: #f9fafb;
+    --cip-gray-100: #f3f4f6;
+    --cip-gray-200: #e5e7eb;
+    --cip-gray-300: #d1d5db;
+    --cip-gray-400: #9ca3af;
+    --cip-gray-500: #6b7280;
+    --cip-gray-600: #4b5563;
+    --cip-gray-700: #374151;
+    --cip-gray-800: #1f2937;
+    --cip-gray-900: #111827;
+    --cip-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --cip-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --cip-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --cip-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --cip-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --cip-radius-sm: 6px;
+    --cip-radius: 10px;
+    --cip-radius-lg: 16px;
+    --cip-radius-xl: 24px;
+    --cip-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =============================================
+   Steps Progress Bar - Modern
+   ============================================= */
+
+#steps {
+    width: 100%;
+    margin: 20px auto;
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    box-shadow: var(--cip-shadow-md);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    border-radius: var(--cip-radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+#steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cip-primary) 0%, var(--cip-secondary) 100%);
+}
+
+.steps_items {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: calc(100% - 100px);
+    max-width: 600px;
+}
+
+.steps_items .separator {
+    flex: 1;
+    height: 4px;
+    display: block;
+    background: var(--cip-gray-200);
+    border-radius: 2px;
+    margin: 0 -8px;
+    transform: translateY(-14px);
+    transition: var(--cip-transition);
+}
+
+.steps_items .separator.done {
+    background: linear-gradient(90deg, var(--cip-success) 0%, var(--cip-success-dark) 100%);
+}
+
+.donetoactive {
+    background: linear-gradient(90deg, var(--cip-success) 0%, var(--cip-primary) 100%) !important;
+}
+
+.step {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100px;
+    position: relative;
+}
+
+.step span {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 3px solid var(--cip-gray-200);
+    border-radius: 50%;
+    color: var(--cip-gray-400);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: var(--cip-transition);
+    box-shadow: var(--cip-shadow);
+}
+
+.step h3 {
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    margin: 0;
+    color: var(--cip-gray-500);
+    font-weight: 600;
+}
+
+.step:after {
+    content: attr(data-desc);
+    min-width: max-content;
+    display: block;
+    color: var(--cip-gray-500);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.step.active span {
+    border-color: var(--cip-primary);
+    color: var(--cip-primary);
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    transform: scale(1.1);
+}
+
+.step.active h3 {
+    color: var(--cip-primary);
+}
+
+.step.done span {
+    z-index: 1;
+    background: linear-gradient(135deg, var(--cip-success) 0%, var(--cip-success-dark) 100%);
+    border-color: var(--cip-success);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.step.done h3 {
+    color: var(--cip-success);
+}
+
+.bg-golden {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+    border-color: #f59e0b !important;
+}
+
+/* =============================================
+   CIP Container & Layout
+   ============================================= */
+
+.cip-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* =============================================
+   Flight Info Box - Modern Glass Design
+   ============================================= */
+
+.cip-flight-info-wrapper {
+    width: 100%;
+    margin: 24px auto 0;
+    background: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    overflow: visible;
+    box-shadow: var(--cip-shadow-lg);
+    position: relative;
+}
+
+.cip-flight-info-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(14, 165, 233, 0.02) 100%);
+    border-radius: var(--cip-radius-lg);
+    pointer-events: none;
+}
+
+.cip-flight-info-header {
+    background: linear-gradient(135deg, var(--cip-primary) 0%, var(--cip-secondary) 100%);
+    border-bottom: none;
+    padding: 20px 24px;
+    border-radius: var(--cip-radius-lg) var(--cip-radius-lg) 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cip-flight-info-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cip-flight-info-header .cip-section-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.cip-flight-info-header .cip-section-title i {
+    font-size: 22px;
+    color: white;
+    opacity: 0.9;
+}
+
+.cip-flight-info-body {
+    padding: 28px;
+    background: white;
+    overflow: visible !important;
+}
+
+.cip-flight-info-body .cip-form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    overflow: visible !important;
+}
+
+.cip-flight-info-body .cip-form-row:last-child {
+    margin-bottom: 0;
+}
+
+/* =============================================
+   Form Elements - Modern Style
+   ============================================= */
+
+.cip-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.cip-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cip-gray-700);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+.cip-label i {
+    color: var(--cip-gray-400);
+    font-size: 14px;
+}
+
+.cip-required {
+    color: var(--cip-danger);
+    font-weight: 700;
+}
+
+.cip-optional {
+    color: var(--cip-gray-400);
+    font-size: 11px;
+    font-weight: 400;
+    margin-right: 4px;
+}
+
+.cip-input-wrapper {
+    position: relative;
+}
+
+.cip-input,
+.cip-select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--cip-gray-200);
+    border-radius: var(--cip-radius);
+    font-size: 14px;
+    color: var(--cip-gray-800);
+    background: var(--cip-gray-50);
+    transition: var(--cip-transition);
+    outline: none;
+    font-family: inherit;
+}
+
+.cip-input::placeholder {
+    color: var(--cip-gray-400);
+}
+
+.cip-input:hover,
+.cip-select:hover {
+    border-color: var(--cip-gray-300);
+    background: white;
+}
+
+.cip-input:focus,
+.cip-select:focus {
+    border-color: var(--cip-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.cip-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236b7280'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+    background-size: 20px;
+    padding-left: 40px;
+}
+
+.cip-input-disabled {
+    background-color: var(--cip-gray-100) !important;
+    color: var(--cip-gray-500) !important;
+    cursor: not-allowed;
+    border-color: var(--cip-gray-200) !important;
+}
+
+/* Time Wrapper */
+.cip-time-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cip-time-select {
+    flex: 1;
+    min-width: 90px;
+}
+
+.cip-time-separator {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cip-gray-400);
+}
+
+/* Error States */
+.cip-form-group.cip-has-error .cip-input,
+.cip-form-group.cip-has-error .cip-select {
+    border-color: var(--cip-danger);
+    background-color: #fef2f2;
+}
+
+.cip-form-group.cip-has-error .cip-input:focus,
+.cip-form-group.cip-has-error .cip-select:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.cip-error-message {
+    color: var(--cip-danger);
+    font-size: 12px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cip-error-message::before {
+    content: '\f071';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 11px;
+}
+
+/* =============================================
+   Passengers Section - Modern Cards
+   ============================================= */
+
+.cip-passengers-wrapper {
+    width: 100%;
+    margin: 24px auto;
+    padding: 0;
+    background: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--cip-shadow-lg);
+}
+
+.cip-passengers-header {
+    background: linear-gradient(135deg, var(--cip-gray-800) 0%, var(--cip-gray-900) 100%);
+    border-bottom: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cip-section-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cip-section-title i {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.cip-passengers-summary {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.cip-passengers-summary .cip-summary-item {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: var(--cip-radius);
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin:0;
+}
+
+.cip-passengers-forms {
+    background: var(--cip-gray-50);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Passenger Box */
+.cip-passenger-box {
+    background: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--cip-shadow);
+    transition: var(--cip-transition);
+}
+
+.cip-passenger-box:hover {
+    box-shadow: var(--cip-shadow-md);
+    transform: translateY(-2px);
+}
+
+.cip-passenger-header {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid var(--cip-gray-100);
+}
+
+.cip-phonebook-btn {
+    margin-right: auto;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, var(--cip-primary) 0%, var(--cip-secondary) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--cip-radius);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--cip-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cip-phonebook-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.cip-phonebook-btn i {
+    font-size: 14px;
+}
+
+.cip-passenger-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--cip-primary) 0%, var(--cip-primary-dark) 100%);
+    border-radius: var(--cip-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: var(--cip-shadow-sm);
+}
+
+.cip-passenger-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cip-passenger-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cip-gray-800);
+}
+
+.cip-passenger-type {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.cip-passenger-type-adt {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1d4ed8;
+}
+
+.cip-passenger-type-chd {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #b45309;
+}
+
+.cip-passenger-type-inf {
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+    color: #be185d;
+}
+
+.cip-passenger-body {
+    padding: 24px;
+    background: white;
+}
+
+.cip-form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cip-form-row:last-child {
+    margin-bottom: 0;
+}
+
+/* =============================================
+   Services Section - Modern Design
+   ============================================= */
+
+.cip-services-wrapper {
+    background: white;
+    border-radius: var(--cip-radius-lg);
+    box-shadow: var(--cip-shadow-lg);
+    margin: 24px 0;
+    overflow: hidden;
+    border: none;
+}
+
+.cip-services-header {
+    background: linear-gradient(135deg, var(--cip-primary) 0%, #8b5cf6 100%);
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cip-services-header::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cip-services-header .cip-section-title {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.cip-services-header .cip-section-title i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.cip-services-body {
+    padding: 0;
+}
+
+.cip-table-responsive {
+    overflow-x: auto;
+}
+
+/* Services Table - Desktop */
+.cip-services-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cip-services-table thead {
+    background: var(--cip-gray-50);
+}
+
+.cip-services-table th {
+    padding: 16px 24px;
+    text-align: right;
+    color: var(--cip-gray-600);
+    font-weight: 600;
+    border-bottom: 2px solid var(--cip-gray-100);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cip-services-table th:first-child {
+    width: 55%;
+}
+
+.cip-services-table th:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+
+.cip-services-table th:last-child {
+    width: 20%;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.cip-services-table td {
+    padding: 24px;
+    border-bottom: 1px solid var(--cip-gray-100);
+    vertical-align: top;
+}
+
+.cip-extra-inputs-row td {
+    padding: 0 !important;
+}
+
+.cip-extra-inputs-row .cip-extra-inputs {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.cip-services-table tbody tr {
+    transition: var(--cip-transition);
+}
+
+.cip-services-table tbody tr:hover {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+}
+
+.cip-services-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.cip-service-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cip-service-title strong {
+    color: var(--cip-gray-800);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cip-service-desc {
+    color: var(--cip-gray-500);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.cip-service-quantity {
+    text-align: center;
+    vertical-align: top;
+}
+
+.cip-service-total {
+    vertical-align: top;
+}
+
+.cip-quantity-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--cip-gray-100);
+    border-radius: var(--cip-radius);
+    padding: 4px;
+}
+
+.cip-quantity-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: white;
+    border-radius: var(--cip-radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--cip-gray-600);
+    transition: var(--cip-transition);
+    box-shadow: var(--cip-shadow-sm);
+}
+
+.cip-quantity-btn:hover:not(:disabled) {
+    background: var(--cip-primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+.cip-quantity-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: var(--cip-gray-100);
+    box-shadow: none;
+}
+
+.cip-quantity-input {
+    width: 56px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid var(--cip-gray-200);
+    border-radius: var(--cip-radius-sm);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cip-gray-800);
+    background: white;
+    transition: var(--cip-transition);
+}
+
+.cip-quantity-input:focus {
+    outline: none;
+    border-color: var(--cip-primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.cip-service-total {
+    text-align: left;
+    padding-left: 24px;
+}
+
+/* Fixed Price Display */
+.cip-fixed-price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-direction: row-reverse;
+}
+
+.cip-price-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cip-success);
+}
+
+.cip-price-unit {
+    font-size: 13px;
+    color: var(--cip-gray-500);
+    font-weight: 500;
+}
+
+/* =============================================
+   Services Cards - Mobile
+   ============================================= */
+
+.cip-services-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.cip-service-card {
+    background: white;
+    border: 2px solid var(--cip-gray-100);
+    border-radius: var(--cip-radius-lg);
+    overflow: hidden;
+    transition: var(--cip-transition);
+}
+
+.cip-service-card:hover {
+    border-color: var(--cip-primary-light);
+    box-shadow: var(--cip-shadow-md);
+}
+
+.cip-service-card-header {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    padding: 18px;
+    border-bottom: 1px solid var(--cip-gray-100);
+}
+
+.cip-service-card-title {
+    margin: 0;
+}
+
+.cip-service-card-title strong {
+    color: var(--cip-gray-800);
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+}
+
+.cip-service-card-desc {
+    color: var(--cip-gray-500);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+.cip-service-card-body {
+    padding: 18px;
+}
+
+.cip-service-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--cip-gray-100);
+}
+
+.cip-service-card-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cip-service-card-row:first-child {
+    padding-top: 0;
+}
+
+.cip-service-card-label {
+    color: var(--cip-gray-500);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cip-service-card-value {
+    color: var(--cip-gray-800);
+    font-weight: 600;
+}
+
+/* =============================================
+   Extra Inputs - Modern Style
+   ============================================= */
+
+.cip-extra-inputs {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    border: 2px dashed var(--cip-gray-200);
+    border-radius: var(--cip-radius);
+    padding: 20px;
+    margin-top: 16px;
+}
+
+.cip-extra-input-row {
+    margin-bottom: 16px;
+    animation: slideIn 0.3s ease;
+}
+
+.cip-extra-input-row:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cip-extra-input-row label {
+    display: block;
+    color: var(--cip-gray-600);
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.cip-extra-input-row input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--cip-gray-200);
+    border-radius: var(--cip-radius);
+    font-size: 14px;
+    transition: var(--cip-transition);
+    background: white;
+}
+
+.cip-extra-input-row input:focus {
+    outline: none;
+    border-color: var(--cip-primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Extra Input Group */
+.cip-extra-input-group {
+    background: white;
+    border: 2px solid var(--cip-gray-100);
+    border-radius: var(--cip-radius);
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: var(--cip-transition);
+}
+
+.cip-extra-input-group:hover {
+    border-color: var(--cip-primary-light);
+}
+
+.cip-extra-input-group:last-child {
+    margin-bottom: 0;
+}
+
+.cip-extra-input-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--cip-gray-100);
+}
+
+.cip-extra-input-header .badge {
+    background: linear-gradient(135deg, var(--cip-primary) 0%, var(--cip-primary-dark) 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Service Inputs Grid - کنار هم */
+.cip-service-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.cip-service-input-item {
+    min-width: 0;
+}
+
+.cip-service-input-item input,
+.cip-service-input-item select {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .cip-service-inputs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cip-service-inputs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cip-extra-input-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.cip-extra-input-fields.mobile {
+    grid-template-columns: 1fr;
+}
+
+.cip-extra-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.cip-extra-field-full {
+    grid-column: 1 / -1;
+}
+
+.cip-extra-field label {
+    color: var(--cip-gray-600);
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.cip-extra-field input,
+.cip-extra-field select,
+.cip-extra-field textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--cip-gray-200);
+    border-radius: var(--cip-radius);
+    font-size: 14px;
+    transition: var(--cip-transition);
+    background: var(--cip-gray-50);
+}
+
+.cip-extra-field input:focus,
+.cip-extra-field select:focus,
+.cip-extra-field textarea:focus {
+    outline: none;
+    border-color: var(--cip-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* =============================================
+   Contact Info Box - Buyer Contact
+   ============================================= */
+
+.cip-contact-wrapper {
+    width: 100%;
+    margin: 24px auto 0;
+    background: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    overflow: visible;
+    box-shadow: var(--cip-shadow-lg);
+    position: relative;
+}
+
+.cip-contact-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.02) 0%, rgba(99, 102, 241, 0.02) 100%);
+    border-radius: var(--cip-radius-lg);
+    pointer-events: none;
+}
+
+.cip-contact-header {
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    border-bottom: none;
+    padding: 20px 24px;
+    border-radius: var(--cip-radius-lg) var(--cip-radius-lg) 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cip-contact-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cip-contact-header .cip-section-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.cip-contact-header .cip-section-title i {
+    font-size: 22px;
+    color: white;
+    opacity: 0.9;
+}
+
+.cip-contact-body {
+    padding: 28px;
+    background: white;
+    border-radius: 0 0 var(--cip-radius-lg) var(--cip-radius-lg);
+}
+
+.cip-contact-body .cip-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .cip-contact-header {
+        padding: 16px 20px;
+    }
+
+    .cip-contact-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cip-contact-body .cip-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   Summary Box - Modern Glass Design
+   ============================================= */
+
+.cip-selected-services-summary {
+    background: white;
+    border-radius: var(--cip-radius-lg);
+    margin: 24px 0;
+    overflow: hidden;
+    box-shadow: var(--cip-shadow-xl);
+    border: none;
+}
+
+.cip-summary-header {
+    background: linear-gradient(135deg, var(--cip-success) 0%, #059669 100%);
+    color: white;
+    padding: 20px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cip-summary-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cip-summary-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.cip-summary-header h3 i {
+    font-size: 22px;
+}
+
+.cip-summary-body {
+    padding: 24px;
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+}
+
+.cip-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    background: white;
+    border-radius: var(--cip-radius);
+    margin-bottom: 12px;
+    border: 2px solid var(--cip-gray-100);
+    transition: var(--cip-transition);
+}
+
+.cip-summary-item:hover {
+    border-color: var(--cip-primary-light);
+    box-shadow: var(--cip-shadow);
+    transform: translateX(-4px);
+}
+
+.cip-summary-item:last-child {
+    margin-bottom: 0;
+}
+
+.cip-summary-item-title {
+    color: var(--cip-gray-800);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cip-summary-item-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cip-summary-item-qty {
+    background: linear-gradient(135deg, var(--cip-primary) 0%, #8b5cf6 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cip-summary-item-price {
+    color: var(--cip-success);
+    font-weight: 700;
+    font-size: 15px;
+    direction: rtl;
+}
+
+.cip-summary-divider {
+    border: none;
+    border-top: 2px dashed var(--cip-gray-200);
+    margin: 20px 0;
+}
+
+.cip-summary-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: white;
+    border-radius: var(--cip-radius);
+    margin-bottom: 14px;
+    border: 2px solid var(--cip-gray-100);
+}
+
+.cip-summary-total-row.main-service {
+    background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+    border: 2px solid var(--cip-warning);
+}
+
+.cip-summary-total-row.main-service i {
+    color: var(--cip-warning);
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.cip-summary-total-row.ancillary-total {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 2px solid var(--cip-success);
+}
+
+.cip-summary-total-row.grand-total {
+    background: linear-gradient(135deg, var(--cip-primary) 0%, #8b5cf6 100%);
+    color: white;
+    border: none;
+    margin-bottom: 0;
+    box-shadow: var(--cip-shadow-lg);
+}
+
+.cip-summary-total-label {
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cip-summary-total-value {
+    font-weight: 700;
+    font-size: 18px;
+    direction: rtl;
+}
+
+.cip-summary-total-value small {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 6px;
+    opacity: 0.8;
+}
+
+.cip-summary-total-row.grand-total .cip-summary-total-value {
+    font-size: 24px;
+}
+
+.cip-summary-total-row.grand-total .cip-summary-total-value small {
+    font-size: 14px;
+}
+
+.cip-summary-empty {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--cip-gray-500);
+    background: white;
+    border-radius: var(--cip-radius);
+    margin: 12px 0;
+    border: 2px dashed var(--cip-gray-200);
+}
+
+.cip-summary-empty i {
+    font-size: 50px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+    display: block;
+    color: var(--cip-gray-400);
+}
+
+.cip-summary-empty p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--cip-gray-500);
+}
+
+/* =============================================
+   Continue Button - Modern Style
+   ============================================= */
+
+.cip-continue-btn-wrapper {
+    padding: 24px;
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    border-top: 2px solid var(--cip-gray-100);
+}
+
+.cip-continue-btn {
+    width: 100%;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, var(--cip-success) 0%, var(--cip-success-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--cip-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.cip-continue-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.cip-continue-btn:hover::before {
+    left: 100%;
+}
+
+.cip-continue-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.45);
+}
+
+.cip-continue-btn:active {
+    transform: translateY(-1px);
+}
+
+.cip-continue-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    background: var(--cip-gray-400);
+}
+
+.cip-continue-btn i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.cip-continue-btn:hover i {
+    transform: translateX(-6px);
+}
+
+/* =============================================
+   Footer Section
+   ============================================= */
+
+.cip-passengers-footer {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, white 100%);
+    padding: 20px 24px;
+    border-top: 2px solid var(--cip-gray-100);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cip-btn-submit {
+    background: linear-gradient(135deg, var(--cip-success) 0%, var(--cip-success-dark) 100%);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: var(--cip-radius);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--cip-transition);
+    font-family: inherit;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.cip-btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.cip-btn-submit:active {
+    transform: translateY(-1px);
+}
+
+.cip-btn-submit i {
+    transition: transform 0.3s ease;
+}
+
+.cip-btn-submit:hover i {
+    transform: translateX(-4px);
+}
+
+/* =============================================
+   Autocomplete List - Modern
+   ============================================= */
+
+.cip-autocomplete-wrapper {
+    position: static;
+}
+
+.cip-autocomplete-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: none;
+    border-radius: 0 0 var(--cip-radius) var(--cip-radius);
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 99999 !important;
+    box-shadow: var(--cip-shadow-xl);
+    margin-top: -2px;
+}
+
+.cip-autocomplete-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+}
+
+.cip-autocomplete-list li {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: var(--cip-radius-sm);
+    transition: var(--cip-transition);
+    margin-bottom: 4px;
+}
+
+.cip-autocomplete-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cip-autocomplete-list li:hover {
+    background: linear-gradient(135deg, var(--cip-gray-50) 0%, var(--cip-gray-100) 100%);
+}
+
+.cip-autocomplete-list .div_c_sr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cip-autocomplete-list .c-text {
+    font-size: 14px;
+    color: var(--cip-gray-800);
+    font-weight: 500;
+    flex: 1;
+}
+
+.cip-autocomplete-list em {
+    font-size: 12px;
+    color: var(--cip-gray-500);
+    font-style: normal;
+    background: var(--cip-gray-100);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* =============================================
+   Error Box
+   ============================================= */
+
+.cip-error-box {
+    background: white;
+    border: none;
+    border-radius: var(--cip-radius-lg);
+    padding: 50px;
+    text-align: center;
+    box-shadow: var(--cip-shadow-lg);
+}
+
+.cip-error-box i {
+    font-size: 60px;
+    color: var(--cip-warning);
+    margin-bottom: 20px;
+}
+
+.cip-error-box p {
+    font-size: 17px;
+    color: var(--cip-gray-600);
+    margin-bottom: 24px;
+}
+
+.cip-btn-back {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--cip-primary) 0%, var(--cip-primary-dark) 100%);
+    color: white;
+    padding: 14px 32px;
+    border-radius: var(--cip-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--cip-transition);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.cip-btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    color: white;
+}
+
+/* =============================================
+   Checkbox Styling
+   ============================================= */
+
+.cip-service-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--cip-primary);
+}
+
+/* =============================================
+   Animations
+   ============================================= */
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.cip-form-group.cip-has-error {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading state */
+.cip-btn-submit.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.cip-btn-submit.loading span {
+    visibility: hidden;
+}
+
+.cip-btn-submit.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =============================================
+   Responsive Design
+   ============================================= */
+
+@media (max-width: 992px) {
+    .cip-form-row,
+    .cip-flight-info-body .cip-form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cip-services-table th,
+    .cip-services-table td {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #steps {
+        padding: 20px 15px;
+    }
+
+    .steps_items {
+        width: 100%;
+    }
+
+    .step span {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .step h3 {
+        font-size: 11px;
+    }
+
+    .cip-passengers-header,
+    .cip-flight-info-header,
+    .cip-services-header {
+        padding: 16px 20px;
+    }
+
+    .cip-section-title {
+        font-size: 16px;
+    }
+
+    .cip-passengers-forms,
+    .cip-flight-info-body,
+    .cip-passenger-body {
+        padding: 20px;
+    }
+
+    .cip-form-row,
+    .cip-flight-info-body .cip-form-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .cip-services-desktop {
+        display: none !important;
+    }
+
+    .cip-services-mobile {
+        display: block !important;
+    }
+
+    .cip-summary-body {
+        padding: 20px;
+    }
+
+    .cip-summary-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .cip-summary-item-details {
+        justify-content: space-between;
+    }
+
+    .cip-summary-total-row:not(.grand-total) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .cip-continue-btn {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .cip-btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cip-form-row,
+    .cip-flight-info-body .cip-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .cip-input,
+    .cip-select {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .cip-label {
+        font-size: 12px;
+    }
+
+    .cip-passenger-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .cip-passenger-number {
+        font-size: 15px;
+    }
+
+    .cip-time-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cip-time-separator {
+        display: none;
+    }
+
+    .cip-service-card {
+        border-radius: var(--cip-radius);
+    }
+
+    .cip-service-card-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .cip-service-card-value {
+        text-align: right;
+    }
+
+    .cip-quantity-control {
+        justify-content: flex-end;
+    }
+
+    .cip-extra-input-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .cip-summary-total-row.grand-total .cip-summary-total-value {
+        font-size: 20px;
+    }
+}
