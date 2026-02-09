@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'iransans';
+  src: url("./../../../assets/all-fonts/iransans/IRANSansWeb(FaNum).eot") format("eot");
+  src: url("./../../../assets/all-fonts/iransans/IRANSansWeb(FaNum).woff") format("woff");
+  src: url("./../../../assets/all-fonts/iransans/IRANSansWeb(FaNum).woff2") format("woff2");
+  src: url("./../../../assets/all-fonts/iransans/IRANSansWeb(FaNum).ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iranbold';
+  src: url("./../../../assets/all-fonts/iranbold/IRANSansWeb_Bold.eot") format("eot");
+  src: url("./../../../assets/all-fonts/iranbold/IRANSansWeb_Bold.woff") format("woff");
+  src: url("./../../../assets/all-fonts/iranbold/IRANSansWeb_Bold.woff2") format("woff2");
+  src: url("./../../../assets/all-fonts/iranbold/IRANSansWeb_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url("./../../../assets/all-fonts/Lalezar/Lalezar-Regular.eot");
+  src: url('./../../../assets/all-fonts/Lalezar/Lalezar-Regular.eot?#iefix') format('embedded-opentype'), url("./../../../assets/all-fonts/Lalezar/Lalezar-Regular.woff2") format('woff2'), url("./../../../assets/all-fonts/Lalezar/Lalezar-Regular.woff") format('woff'), url("./../../../assets/all-fonts/Lalezar/Lalezar-Regular.ttf") format('truetype'), url('./../../../assets/all-fonts/Lalezar/Lalezar-Regular.svg#Lalezar-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
