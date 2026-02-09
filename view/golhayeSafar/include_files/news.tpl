@@ -1,9 +1,13 @@
-{assign var="data_search_blog" value=['service'=>'Public','section'=>'article', 'limit' =>8]}
-{assign var='articles' value=$obj_main_page->articlesPosition($data_search_blog)}
-{assign var='counter' value=1}
-{assign var="article_count" value=$articles|count}
+{assign var="main_articles" value=$obj_main_page->getNewsArticles()}
 
+{assign var="news" value=$main_articles['data']}
 
+{assign var="langVar" value="Fa"}
+{if $smarty.const.SOFTWARE_LANG eq 'en'}
+    {assign var="langVar" value="En"}
+{/if}
+
+{if $news}
 <section class="i_modular_news news">
             <div class="container">
                 <div class="title">
@@ -12,7 +16,7 @@
                 </div>
                 <div class="parent-news">
                     {assign var="count" value="1"}
-                    {foreach $articles as $item}
+                    {foreach $news as $item}
                         {if $count <5 }
                         <a class="__i_modular_nc_item_class_0" href="{$item['link']}">
                             <div class="parent-img">
@@ -42,3 +46,4 @@
                 </div>
             </div>
         </section>
+{/if}
