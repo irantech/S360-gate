@@ -1,7 +1,7 @@
 {assign var=dateNow value=dateTimeSetting::jdate("Ymd", "", "", "", "en")}
 {assign var="internal_hotel_params" value=['Count'=> '5', 'type' =>'internal']}
 
-{assign var='internal_hotels' value=$obj_main_page->getHotelWebservice($internal_hotel_params)}
+{*{assign var='internal_hotels' value=$obj_main_page->getHotelWebservice($internal_hotel_params)}*}
 {assign var='foregin_hotels' value=$obj_main_page->getExternalHotelCity()}
 
 
@@ -12,18 +12,23 @@
     {assign var="langVar" value="Fa"}
 {/if}
 
+{assign var=dateNow value=dateTimeSetting::jdate("Ymd", "", "", "", "en")}
+{load_presentation_object filename="reservationHotel" assign="objHotelCity"}
+{assign var="list_city_hotel" value=$objHotelCity->cityHotelMain()}
+
+
 <div class="section_hotel popular_destination_area">
     <div class="container">
         <ul class="nav nav-tabs" id="tabsHotel" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active show" id="Hotel_L-tab" data-toggle="tab" href="#Hotel_L"
-                                    role="tab" aria-controls="Hotel_L" aria-selected="true">
+                   role="tab" aria-controls="Hotel_L" aria-selected="true">
                     ##domesticHotel##
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="Hotel_F-tab" data-toggle="tab" href="#Hotel_F" role="tab"
-                                    aria-controls="Hotel_F" aria-selected="false">
+                   aria-controls="Hotel_F" aria-selected="false">
                     ##foreigneHotel##
                 </a>
             </li>
@@ -32,37 +37,26 @@
             <div class="tab-pane fade show active" id="Hotel_L" role="tabpanel" aria-labelledby="Hotel_L-tab">
                 <div class="row">
                     <div class="owl_4 owl-carousel">
-                        {foreach $internal_hotels as $item}
+                        {foreach $list_city_hotel as $key=>$item}
+                            <div class="item">
+                                <a href="{$smarty.const.ROOT_ADDRESS}/searchHotel&type=new&city={$item['id']}&startDate={$objDate->jtoday()}&nights=3&rooms=R:2-0-0">
+                                    <div class="single_destination">
+                                        <div class="thumb">
+                                            <img src="{$smarty.const.ROOT_ADDRESS_WITHOUT_LANG}/pic/cityPic/{$item.city_name_en}.jpg"
+                                                 alt="{$item['city_name']}">
+                                        </div>
+                                        <div class="content">
+                                            <p class="d-flex align-items-center">
+                                                هتل های {$item['city_name']}
+                                            </p>
+                                            {*                                        <span class="d-flex align-items-center">*}
+                                            {*                                            {$item['City']}*}
+                                            {*                                        </span>*}
 
-                        <div class="item">
-                            <a href="{$smarty.const.ROOT_ADDRESS}/detailHotel/api/{$item['HotelIndex']}">
-                                <div class="single_destination">
-                                    <div class="thumb">
-                                        <img src="{$item['Picture']}"
-                                                alt="{$item['City']}">
-                                    </div>
-                                    <div class="content">
-                                        <p class="d-flex align-items-center">
-                                            {$item['Name']}
-                                        </p>
-                                        <span class="d-flex align-items-center">
-                                            {$item['City']}
-                                        </span>
-                                        {for $i = 0; $i < count($item['StarCode']); $i++}
-                                            <div class="rating rating_{$item['StarCode']}">
-                                                {for $star = 1; $star <= 5; $star++}
-                                                    {if $star <= $item['StarCode']}
-                                                        <i class="fa fa-star"></i>
-                                                    {else}
-                                                        <i class="fa fa-star-o"></i>
-                                                    {/if}
-                                                {/for}
-                                            </div>
-                                        {/for}
 
+                                        </div>
                                     </div>
-                                </div>
-                            </a></div>
+                                </a></div>
                         {/foreach}
                     </div>
                 </div>
@@ -83,20 +77,20 @@
                                             <p class="d-flex align-items-center">
                                                 {$item["DepartureCity$langVar"]}
                                             </p>
-{*                                            <span class="d-flex align-items-center">*}
-{*                                            {$item['address']}*}
-{*                                        </span>*}
-{*                                            {for $i = 0; $i < count($item['star_code']); $i++}*}
-{*                                                <div class="rating rating_{$item['star_code']}">*}
-{*                                                    {for $star = 1; $star <= 5; $star++}*}
-{*                                                        {if $star <= $item['star_code']}*}
-{*                                                            <i class="fa fa-star"></i>*}
-{*                                                        {else}*}
-{*                                                            <i class="fa fa-star-o"></i>*}
-{*                                                        {/if}*}
-{*                                                    {/for}*}
-{*                                                </div>*}
-{*                                            {/for}*}
+                                            {*                                            <span class="d-flex align-items-center">*}
+                                            {*                                            {$item['address']}*}
+                                            {*                                        </span>*}
+                                            {*                                            {for $i = 0; $i < count($item['star_code']); $i++}*}
+                                            {*                                                <div class="rating rating_{$item['star_code']}">*}
+                                            {*                                                    {for $star = 1; $star <= 5; $star++}*}
+                                            {*                                                        {if $star <= $item['star_code']}*}
+                                            {*                                                            <i class="fa fa-star"></i>*}
+                                            {*                                                        {else}*}
+                                            {*                                                            <i class="fa fa-star-o"></i>*}
+                                            {*                                                        {/if}*}
+                                            {*                                                    {/for}*}
+                                            {*                                                </div>*}
+                                            {*                                            {/for}*}
 
                                         </div>
                                     </div>

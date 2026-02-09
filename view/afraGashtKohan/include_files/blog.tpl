@@ -4,9 +4,8 @@
 {assign var='blog' value=$obj_main_page->articlesPosition($data_search_blog)}
 {assign var='counter' value=0}
 {assign var="article_count" value=$blog|count}
-{assign var="first_item" value=$blog['data'][0]}
-{assign var="othe_itmes" value=$blog['data']|array_slice:1}
-
+{assign var="first_item" value=$blog[0]}
+{assign var="othe_itmes" value=$blog|array_slice:1}
 
 {if $first_item}
     <div class="news recent_trip_area">
