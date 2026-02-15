@@ -3,12 +3,10 @@ $("document").ready(function () {
    $(".visa-type-js").change(() => {
       $("#gdsVisa .cbox-count-passenger-js").show()
    })
-
    // بارگذاری خودکار کشورها هنگام لود صفحه
    if ($(".country-visa-js").length > 0) {
       getVisaTypeSpecialCountry()
    }
-
    // وقتی کشور انتخاب شد، انواع ویزای مربوط به آن را نمایش بده
    $(".country-visa-js").on('change', function() {
       fillVisaTypeByCountry(this)
@@ -93,7 +91,7 @@ function getVisaTypeSpecialCountry(obj) {
          Object.keys(obj_arrival).forEach(key => {
             let option_text = ''
 
-               option_text =  obj_arrival[key]["name"]
+            option_text =  obj_arrival[key]["name"]
 
             let option_value = `${obj_arrival[key]["abbreviation"]}`
             let new_option = `<option value='${option_value}'>${option_text}</option>`
@@ -247,8 +245,8 @@ function searchVisa() {
    let count_passengers = $('.number-count-js').attr('data-number')
 
    checkSearchFields(
-      country_visa,
-      visa_type
+       country_visa,
+       visa_type
    )
 
    country_visa = country_visa.val()

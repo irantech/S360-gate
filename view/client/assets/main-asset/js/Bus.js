@@ -60,6 +60,7 @@ function searchBus() {
    destination_bus = destination_bus.val()
    departure_date_bus = departure_date_bus.val()
    let url = `${amadeusPathByLang}buses/${origin_bus}-${destination_bus}/${departure_date_bus}`
+   console.log('is_new_tab: ' , is_new_tab)
 
    openLink(url, is_new_tab)
 }

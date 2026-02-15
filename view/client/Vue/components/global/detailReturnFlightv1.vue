@@ -1,0 +1,145 @@
+<template>
+  <div>
+    <span>
+        {{ useXmltag('Returnflight')}}
+    </span>
+    <div class="parent-click-travel-data" v-for="detail_flight in return_detail_flight">
+
+      <div class="international-available-airlines-detail airlines-stops-time "
+           v-if="detail_flight.is_transit">
+                <span class="iranB  lh25 displayib txtRight">
+                    <span class=" iranb  lh18 displayib">
+                        {{ useXmltag('Stopat')}} :
+                    </span>
+                    <span class="open  displayib">
+                       {{ detail_flight.departure.departure_city}}({{ detail_flight.departure.departure_airport}})
+                    </span>
+                </span>
+        <span class="open  lh25 displayib fltl">
+                     {{ detail_flight.transit }}
+                </span>
+
+      </div>
+
+      <div class="title-click-travel-data">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2H248.4c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48H542.8c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32H608c17.7 0 32-14.3 32-32s-14.3-32-32-32H32c-17.7 0-32 14.3-32 32z"/></svg>
+        <h4>{{ useXmltag('FlightTicket')}} {{detail_flight.departure.departure_city}} {{ useXmltag('On')}} {{detail_flight.arrival.arrival_city}}</h4>
+      </div>
+      <div class="details-click-travel">
+        <div class="calendar-click-travel col-lg-2 p-0">
+          <h3>{{detail_flight.departure_time}}</h3>
+          <span>{{detail_flight.departure_date}}</span>
+        </div>
+        <div class="start-click-travel col-lg-2 p-0">
+          <h3>{{detail_flight.departure.departure_code}}</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M368.6 312l0-24c-8.2 0-15.8 4.2-20.2 11.1L368.6 312zM265.4 473.3l-20.2-12.9 0 0 20.2 12.9zm-82.8-6.1l22.9 7.3 0 0-22.9-7.3zM232.3 312l22.9 7.3c2.3-7.3 1-15.3-3.5-21.5s-11.7-9.8-19.4-9.8l0 24zM136 312l0-24c-7.6 0-14.7 3.6-19.2 9.6L136 312zM92.8 369.6L112 384l0 0L92.8 369.6zM80 376l0-24 0 24zm-42.1 0l0 24 0-24zM24.6 358l22.9 7.1 0 0L24.6 358zM56 256l22.9 7.1c1.4-4.6 1.4-9.5 0-14.1L56 256zM24.6 154l22.9-7.1 0 0L24.6 154zm13.3-18l0 24 0-24zM80 136l0-24 0 24zm12.8 6.4L73.6 156.8l19.2-14.4zM136 200l-19.2 14.4c4.5 6 11.6 9.6 19.2 9.6l0-24zm96.3 0l0 24c7.7 0 14.9-3.7 19.4-9.8s5.8-14.2 3.5-21.5L232.3 200zM182.7 44.9l22.9-7.3 0 0-22.9 7.3zm82.8-6.1L245.2 51.7l0 0 20.2-12.9zM368.6 200l-20.2 12.9c4.4 6.9 12 11.1 20.2 11.1l0-24zM576 256c0-17.4-8.8-31.1-18.7-40.7c-9.9-9.6-22.4-16.9-34.8-22.4C498 182.1 468.7 176 448 176l0 48c13.4 0 36.1 4.4 55.1 12.8c9.4 4.2 16.4 8.7 20.7 12.9c4.2 4.1 4.2 6.2 4.2 6.3l48 0zM448 336c20.6 0 49.8-5.8 74.4-16.5c12.4-5.4 25-12.7 34.9-22.4c10-9.8 18.7-23.6 18.7-41.1l-48 0c0 .6-.1 2.8-4.2 6.8c-4.3 4.2-11.2 8.6-20.6 12.7C484.3 283.8 461.6 288 448 288l0 48zm-79.4 0l79.4 0 0-48-79.4 0 0 48zm-83 150.2L388.9 324.9l-40.4-25.9L245.2 460.3l40.4 25.9zM238.5 512c19.1 0 36.9-9.7 47.2-25.8l-40.4-25.9c-1.5 2.3-4 3.7-6.7 3.7l0 48zm-40.6 0l40.6 0 0-48-40.6 0 0 48zm-38.1-52.2c-8.3 25.8 11 52.2 38.1 52.2l0-48c5.4 0 9.3 5.3 7.6 10.4l-45.7-14.6zm49.6-155.1L159.8 459.8l45.7 14.6 49.6-155.1-45.7-14.6zM136 336l96.3 0 0-48L136 288l0 48zm-19.2-38.4L73.6 355.2 112 384l43.2-57.6-38.4-28.8zM73.6 355.2c1.5-2 3.9-3.2 6.4-3.2l0 48c12.6 0 24.4-5.9 32-16L73.6 355.2zM80 352l-42.1 0 0 48L80 400l0-48zm-42.1 0c5.6 0 10.1 4.5 10.1 10.1l-48 0C0 383 17 400 37.9 400l0-48zM48 362.1c0 1-.2 2-.4 3L1.7 350.9C.6 354.6 0 358.3 0 362.1l48 0zm-.4 3l31.4-102L33.1 248.9 1.7 350.9l45.9 14.1zM78.9 248.9l-31.4-102L1.7 161.1l31.4 102 45.9-14.1zm-31.4-102c.3 1 .4 2 .4 3l-48 0c0 3.8 .6 7.5 1.7 11.1l45.9-14.1zm.4 3c0 5.6-4.5 10.1-10.1 10.1l0-48C17 112 0 129 0 149.9l48 0zM37.9 160L80 160l0-48-42.1 0 0 48zM80 160c-2.5 0-4.9-1.2-6.4-3.2L112 128c-7.6-10.1-19.4-16-32-16l0 48zm-6.4-3.2l43.2 57.6 38.4-28.8L112 128 73.6 156.8zM232.3 176L136 176l0 48 96.3 0 0-48zM159.8 52.2l49.6 155.1 45.7-14.6L205.5 37.6 159.8 52.2zM197.9 0c-27.1 0-46.4 26.4-38.1 52.2l45.7-14.6c1.7 5.2-2.2 10.4-7.6 10.4l0-48zm40.6 0L197.9 0l0 48 40.6 0 0-48zm47.2 25.8C275.4 9.7 257.6 0 238.5 0l0 48c2.7 0 5.3 1.4 6.7 3.7l40.4-25.9zM388.9 187.1L285.7 25.8 245.2 51.7 348.4 212.9l40.4-25.9zM448 176l-79.4 0 0 48 79.4 0 0-48z"/></svg>
+          <!--                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">&lt;!&ndash;! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. &ndash;&gt;<path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg>-->
+        </div>
+        <span class="line-click-travel col-lg-4 p-0"></span>
+        <div class="end-click-travel col-lg-2 p-0">
+          <h3>{{detail_flight.arrival.arrival_code}}</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M336 192c0-79.5-64.5-144-144-144S48 112.5 48 192c0 12.4 4.5 31.6 15.3 57.2c10.5 24.8 25.4 52.2 42.5 79.9c28.5 46.2 61.5 90.8 86.2 122.6c24.8-31.8 57.8-76.4 86.2-122.6c17.1-27.7 32-55.1 42.5-79.9C331.5 223.6 336 204.4 336 192zm48 0c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192zm-160 0a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm-112 0a80 80 0 1 1 160 0 80 80 0 1 1 -160 0z"/></svg>
+          <!--                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">&lt;!&ndash;! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. &ndash;&gt;<path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>-->
+        </div>
+        <div class="calendar-click-travel col-lg-2 p-0">
+          <h3>{{detail_flight.arrival_time}}</h3>
+          <span>{{detail_flight.arrival_date}}</span>
+        </div>
+      </div>
+      <div class="option-click-travel">
+        <div class="option-item" v-if="detail_flight.aircraft !=''">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M312 167.4l-24 0c0 8.2 4.2 15.8 11.1 20.2L312 167.4zM473.3 270.6l12.9-20.2h0l-12.9 20.2zm-6.1 82.8l-7.3 22.9 7.3-22.9zM312 303.7l7.3-22.9c-7.3-2.3-15.3-1-21.5 3.5s-9.8 11.7-9.8 19.4h24zm0 72.3H288c0 7.6 3.6 14.7 9.6 19.2L312 376zm57.6 43.2l-14.4 19.2h0l14.4-19.2zM358 487.4l7.1-22.9 0 0L358 487.4zM256 456l7.1-22.9c-4.6-1.4-9.5-1.4-14.1 0L256 456zM154 487.4l-7.1-22.9h0l7.1 22.9zm-11.6-68.2l14.4 19.2-14.4-19.2zM200 376l14.4 19.2c6-4.5 9.6-11.6 9.6-19.2l-24 0zm0-72.3l24 0c0-7.7-3.7-14.9-9.8-19.4s-14.2-5.8-21.5-3.5l7.3 22.9zM44.9 353.3l7.3 22.9h0l-7.3-22.9zm-6.1-82.8L25.8 250.3l0 0 12.9 20.2zM200 167.4l12.9 20.2c6.9-4.4 11.1-12 11.1-20.2H200zM256 0c-17.4 0-31.1 8.8-40.7 18.7c-9.6 9.9-16.9 22.4-22.4 34.8C182.1 78 176 107.3 176 128h48c0-13.4 4.4-36.1 12.8-55.1c4.2-9.4 8.7-16.4 12.9-20.7c4.1-4.2 6.2-4.2 6.3-4.2V0zm80 128c0-20.6-5.8-49.8-16.5-74.4c-5.4-12.4-12.7-25-22.4-34.9C287.2 8.6 273.4 0 256 0V48c.6 0 2.8 .1 6.8 4.2c4.2 4.3 8.6 11.2 12.7 20.6C283.8 91.7 288 114.4 288 128l48 0zm0 39.4V128l-48 0v39.4l48 0zm150.2 83L324.9 147.1l-25.9 40.4L460.3 290.8l25.9-40.4zM512 297.5c0-19.1-9.7-36.9-25.8-47.2l-25.9 40.4c2.3 1.5 3.7 4 3.7 6.7h48zm0 40.6V297.5H464v40.6h48zm-52.2 38.1c25.8 8.3 52.2-11 52.2-38.1H464c0-5.4 5.3-9.3 10.4-7.6l-14.6 45.7zM304.7 326.5l155.1 49.6 14.6-45.7L319.3 280.8l-14.6 45.7zM336 376V303.7H288V376h48zm-38.4 19.2l57.6 43.2L384 400l-57.6-43.2-28.8 38.4zm57.6 43.2c-2-1.5-3.2-3.9-3.2-6.4h48c0-12.6-5.9-24.4-16-32l-28.8 38.4zM352 432v42.1h48V432H352zm0 42.1c0-5.6 4.5-10.1 10.1-10.1v48c20.9 0 37.9-17 37.9-37.9H352zM362.1 464c1 0 2 .2 3 .4l-14.1 45.9c3.6 1.1 7.4 1.7 11.1 1.7V464zm3 .4l-102-31.4-14.1 45.9 102 31.4 14.1-45.9zM248.9 433.1l-102 31.4 14.1 45.9 102-31.4-14.1-45.9zm-102 31.4c1-.3 2-.4 3-.4l0 48c3.8 0 7.5-.6 11.1-1.7l-14.1-45.9zm3-.4c5.6 0 10.1 4.5 10.1 10.1H112c0 20.9 17 37.9 37.9 37.9l0-48zM160 474.1l0-42.1H112v42.1h48zm0-42.1c0 2.5-1.2 4.9-3.2 6.4L128 400c-10.1 7.6-16 19.4-16 32h48zm-3.2 6.4l57.6-43.2-28.8-38.4L128 400l28.8 38.4zM176 303.7l0 72.3 48 0 0-72.3-48 0zM52.2 376.2l155.1-49.6-14.6-45.7L37.6 330.5l14.6 45.7zM0 338.1c0 27.1 26.4 46.4 52.2 38.1L37.6 330.5c5.2-1.7 10.4 2.2 10.4 7.6H0zm0-40.6l0 40.6H48l0-40.6H0zm25.8-47.2C9.7 260.6 0 278.4 0 297.5H48c0-2.7 1.4-5.3 3.7-6.7L25.8 250.3zM187.1 147.1L25.8 250.3l25.9 40.4L212.9 187.6l-25.9-40.4zM176 128v39.4h48V128H176z"/></svg>
+          <div class="">
+            <span>{{ useXmltag('Typeairline')}}:</span>
+            <h6>{{detail_flight.aircraft.aircraft_name}}</h6>
+          </div>
+        </div>
+        <div class="option-item"  v-if=" detail_flight.source_id =='14'"    @click='getBaggage()'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H72c30.9 0 56 25.1 56 56V408c0 4.4 3.6 8 8 8h72H496 616c13.3 0 24 10.7 24 24s-10.7 24-24 24H544c0 26.5-21.5 48-48 48s-48-21.5-48-48H256c0 26.5-21.5 48-48 48s-48-21.5-48-48H136c-30.9 0-56-25.1-56-56V56c0-4.4-3.6-8-8-8H24C10.7 48 0 37.3 0 24zM360 48c-4.4 0-8 3.6-8 8V96h96V56c0-4.4-3.6-8-8-8H360zM496 96h48c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h48V56c0-30.9 25.1-56 56-56h80c30.9 0 56 25.1 56 56V96zM256 144c-8.8 0-16 7.2-16 16V288c0 8.8 7.2 16 16 16h32V144H256zm80 0V304H464V144H336zM544 304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16H512V304h32z"/></svg>
+          <div class="">
+            <span :id='`${detail_flight.flight_id}`'>{{ useXmltag('BaggageRule')}}</span>
+            <h6>{{detail_flight.baggage.baggage_statement}}</h6>
+          </div>
+        </div>
+        <div class="option-item"  v-else>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H72c30.9 0 56 25.1 56 56V408c0 4.4 3.6 8 8 8h72H496 616c13.3 0 24 10.7 24 24s-10.7 24-24 24H544c0 26.5-21.5 48-48 48s-48-21.5-48-48H256c0 26.5-21.5 48-48 48s-48-21.5-48-48H136c-30.9 0-56-25.1-56-56V56c0-4.4-3.6-8-8-8H24C10.7 48 0 37.3 0 24zM360 48c-4.4 0-8 3.6-8 8V96h96V56c0-4.4-3.6-8-8-8H360zM496 96h48c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h48V56c0-30.9 25.1-56 56-56h80c30.9 0 56 25.1 56 56V96zM256 144c-8.8 0-16 7.2-16 16V288c0 8.8 7.2 16 16 16h32V144H256zm80 0V304H464V144H336zM544 304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16H512V304h32z"/></svg>
+          <div class="">
+            <span>{{ useXmltag('Permissible')}}:</span>
+            <h6>{{detail_flight.baggage.baggage_statement}} </h6>
+          </div>
+        </div>
+        <div class="option-item" v-if="detail_flight.cabin_type !=''">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16V384c0 8.8 7.2 16 16 16H576c8.8 0 16-7.2 16-16V349c-41.4-10.7-72-48.2-72-93s30.6-82.3 72-93V128c0-8.8-7.2-16-16-16H64zM0 128C0 92.7 28.7 64 64 64H576c35.3 0 64 28.7 64 64v61.3c0 11.2-12.8 18.7-24 18.7c-26.5 0-48 21.5-48 48s21.5 48 48 48c11.2 0 24 7.5 24 18.7V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zm432 16a16 16 0 1 1 0 32 16 16 0 1 1 0-32zm0 64a16 16 0 1 1 0 32 16 16 0 1 1 0-32zm-16 80a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zm16 48a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM186.7 224l-23.2-69.5c-1.7-5.2 2.1-10.5 7.6-10.5h31.1c8.5 0 16.4 4.5 20.7 11.9L262.7 224h40.3c16.1 0 31.5 6.4 42.8 17.7c7.9 7.9 7.9 20.7 0 28.5C334.4 281.6 319 288 302.9 288H262.7l-39.7 68.1c-4.3 7.4-12.2 11.9-20.7 11.9H171.1c-5.5 0-9.3-5.4-7.6-10.5L186.7 288H144l-19.2 25.6c-3 4-7.8 6.4-12.8 6.4H98.2c-5.2 0-9-4.9-7.8-9.9L103 259.9c.6-2.5 .6-5.2 0-7.8L90.5 201.9c-1.3-5 2.6-9.9 7.8-9.9H112c5 0 9.8 2.4 12.8 6.4L144 224h42.7z"/></svg>
+          <!--                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">&lt;!&ndash;! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. &ndash;&gt;<path d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H576c35.3 0 64-28.7 64-64V336c0-8.8-7.3-15.8-15.8-18c-27.7-7-48.2-32.1-48.2-62s20.5-55 48.2-62c8.6-2.2 15.8-9.1 15.8-18V128c0-35.3-28.7-64-64-64H64zm352 64a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zm0 64a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zm16 48a16 16 0 1 1 0 32 16 16 0 1 1 0-32zm-16 80a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zm16 48a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM176 224l-28.5-85.5c-1.7-5.2 2.1-10.5 7.6-10.5h31.1c8.5 0 16.4 4.5 20.7 11.9L256 224h46.9c16.1 0 31.5 6.4 42.8 17.7c7.9 7.9 7.9 20.7 0 28.5C334.4 281.6 319 288 302.9 288H256l-49.1 84.1c-4.3 7.4-12.2 11.9-20.7 11.9H155.1c-5.5 0-9.3-5.4-7.6-10.5L176 288H120l-19.2 25.6c-3 4-7.8 6.4-12.8 6.4H74.2c-5.2 0-9-4.9-7.8-9.9L79 259.9c.6-2.5 .6-5.2 0-7.8L66.5 201.9c-1.3-5 2.6-9.9 7.8-9.9H88c5 0 9.8 2.4 12.8 6.4L120 224h56z"/></svg>-->
+          <div class="" >
+            <span>{{ useXmltag('Classrate')}}:</span>
+            <h6>{{detail_flight.cabin_type}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Modal v-model="showModal"  :rtl=true wrapper-class="modal-wrapper">
+      <body-modal :data_detail="data_modal"></body-modal>
+    </Modal>
+  </div>
+
+</template>
+
+<script>
+import bodyModal from '../global/modal/bodyModal';
+import VueModal from '@kouts/vue-modal';
+import '@kouts/vue-modal/dist/vue-modal.css'
+export default {
+  name: 'detailReturnFlight',
+  props: ['dept_detail_flight' , 'return_detail_flight'],
+  components:{
+    'Modal' : VueModal,
+    'body-modal': bodyModal
+  },
+  computed : {
+    dataSearch() {
+      return this.$store.state.setDataSearch.dataSearch
+    },
+  },
+  data(){
+    return{
+      data_baggage : [],
+      data_modal : [] ,
+      showModal: false
+    }
+  },
+  methods :{
+    getBaggage(){
+      document.getElementById(this.dept_detail_flight[0].flight_id).classList.add('skeleton');
+      let _this = this;
+      axios.post(amadeusPath + 'ajax',
+        {
+          className: 'newApiFlight',
+          method: 'getInfoBaggage',
+          request_number: _this.dept_detail_flight[0].request_number,
+          flight_id :_this.dept_detail_flight[0].flight_id,
+          source_id :_this.dept_detail_flight[0].source_id
+        },
+        {
+          'Content-Type': 'application/json'
+        }).then(function (response) {
+        console.log(response.data.data);
+        _this.data_baggage = response.data.data ;
+        _this.callModal(_this.data_baggage)
+        document.getElementById(_this.dept_detail_flight[0].flight_id).classList.remove('skeleton');
+      }).catch(function (error) {
+      });
+
+
+    },
+    callModal(value){
+      this.data_modal = value ;
+      this.showModal = true
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
