@@ -3410,39 +3410,39 @@ class bookshowTest extends clientAuth {
                                                target="_blank">' . $flightBook['NameAgency'] . '</a><br/>
                                             <hr style="margin:3px">';
 
-                    if ( $flightBook['api_id'] == '1' ) {
-                        $DataFlightType .= "سرور5";
-                    } elseif ( $flightBook['api_id'] == '5' ) {
-                        $DataFlightType .= " سرور 4";
-                    } elseif ( $flightBook['api_id'] == '14' ) {
-                        $DataFlightType .= " سرور 14";
-                    }elseif ( $flightBook['api_id'] == '15' ) {
-                        $DataFlightType .= " سرور 15";
-                    }elseif ( $flightBook['api_id'] == '16' ) {
-                        $DataFlightType .= "سرور 16";
-                    } elseif ( $flightBook['api_id'] == '17' ) {
-                        $DataFlightType .= "سرور 17";
-                    } elseif ( $flightBook['api_id'] == '12' ) {
-                        $DataFlightType .= "سرور 12";
-                    } elseif ( $flightBook['api_id'] == '13' ) {
-                        $DataFlightType .= " سرور 13";
-                    } elseif ( $flightBook['api_id'] == '8' ) {
-                        $DataFlightType .= "سرور 7";
-                    } elseif ( $flightBook['api_id'] == '10' ) {
-                        $DataFlightType .= " سرور 9";
-                    } elseif ( $flightBook['api_id'] == '11' ) {
-                        $DataFlightType .= "سرور 10";
-                    }elseif ( $flightBook['api_id'] == '18' ) {
-                        $DataFlightType .= "سرور 18";
-                    }elseif ( $flightBook['api_id'] == '19' ) {
-                        $DataFlightType .= "سرور 19";
-                    }elseif ( $flightBook['api_id'] == '20' ) {
-                        $DataFlightType .= " سپهر";
-                    }elseif ( $flightBook['api_id'] == '21' ) {
-                        $DataFlightType .= " چارتر118";
-                    }elseif ( $flightBook['api_id'] == '43' ) {
-                        $DataFlightType .= " سیتی نت";
-                    }
+//                    if ( $flightBook['api_id'] == '1' ) {
+//                        $DataFlightType .= "سرور5";
+//                    } elseif ( $flightBook['api_id'] == '5' ) {
+//                        $DataFlightType .= " سرور 4";
+//                    } elseif ( $flightBook['api_id'] == '14' ) {
+//                        $DataFlightType .= " سرور 14";
+//                    }elseif ( $flightBook['api_id'] == '15' ) {
+//                        $DataFlightType .= " سرور 15";
+//                    }elseif ( $flightBook['api_id'] == '16' ) {
+//                        $DataFlightType .= "سرور 16";
+//                    } elseif ( $flightBook['api_id'] == '17' ) {
+//                        $DataFlightType .= "سرور 17";
+//                    } elseif ( $flightBook['api_id'] == '12' ) {
+//                        $DataFlightType .= "سرور 12";
+//                    } elseif ( $flightBook['api_id'] == '13' ) {
+//                        $DataFlightType .= " سرور 13";
+//                    } elseif ( $flightBook['api_id'] == '8' ) {
+//                        $DataFlightType .= "سرور 7";
+//                    } elseif ( $flightBook['api_id'] == '10' ) {
+//                        $DataFlightType .= " سرور 9";
+//                    } elseif ( $flightBook['api_id'] == '11' ) {
+//                        $DataFlightType .= "سرور 10";
+//                    }elseif ( $flightBook['api_id'] == '18' ) {
+//                        $DataFlightType .= "سرور 18";
+//                    }elseif ( $flightBook['api_id'] == '19' ) {
+//                        $DataFlightType .= "سرور 19";
+//                    }elseif ( $flightBook['api_id'] == '20' ) {
+//                        $DataFlightType .= " سپهر";
+//                    }elseif ( $flightBook['api_id'] == '21' ) {
+//                        $DataFlightType .= " چارتر118";
+//                    }elseif ( $flightBook['api_id'] == '43' ) {
+//                        $DataFlightType .= " سیتی نت";
+//                    }
 
                 }
                 else {
