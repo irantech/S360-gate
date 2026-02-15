@@ -1,0 +1,256 @@
+[v-cloak]{
+    display: none;
+}
+.images-loader{
+    width: 83px!important;
+    margin: 0 auto!important;
+}
+
+.my-progress-bar{
+    background: #009aff!important;
+}
+.low2{
+    display: block!important;
+    position: relative!important;
+    top: 1px !important;
+    background: transparent;
+}
+#resultFake {
+    min-height: 0!important;
+}
+#result-vue{
+    display: none;
+}
+.international-available-airlines-logo{
+    border:none!important;
+    background: none!important;
+    box-shadow: none!important;
+}
+.filtertip::after {
+    content: " ";
+    bottom: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
+}
+/*.filtertip::after {
+    content: " ";
+    bottom: 0;
+    top: 100%;
+    right: 0;
+    left:0;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #009aff!important;
+    border-width: 10px;
+    -webkit-transform: rotate(
+            180deg
+    );
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(
+            180deg
+    );
+}*/
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    max-width: 100%;
+    width: 100% !important;
+}
+.selectedTicket .raft-ticket i {
+    color: #c3c3c3;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    right: 13px;
+    float: right;
+    background: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 30px;
+    box-shadow: 0px 0px 6px -1px rgb(0 0 0 80%);
+}
+.selectedFlightClass{
+    padding-top: 44px!important;
+}
+.ui-slider .ui-slider-handle{
+    width: 15px!important;
+    height: 15px!important;
+}
+#slider-range .ui-state-default{
+    background: white!important;
+}
+.s-u-filter-item{
+    background: none!important;
+    border: none!important;
+    padding: 0!important;
+    box-shadow: none!important;
+}
+.s-u-filter-content {
+    padding:20px 15px 15px 15px!important;
+}
+.s-u-filter-title{
+    padding:10px 0 !important;
+}
+/*.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-top-color:#009aff!important;
+}*/
+#s-u-result-wrapper-ul .items .international-available-box{
+    width: 100%!important;
+}
+.international-available-btn{
+    width: 100%!important;
+    display: block!important;
+    padding: 8px 0px!important;
+    color: white!important;
+    border-radius: 4px!important;
+    border: 0px none!important;
+    font-family: inherit !important;
+    letter-spacing: -0.5px!important;
+    font-size: 15px!important;
+}
+.lazy-loader-parent{
+    background-color: rgba(54,70,93,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index:99999;
+}
+.loader-page{
+    color:#000;
+    background-color:#fff;
+    width:50%;
+    height: auto;
+    min-height: 300px;
+    padding:20px!important;
+    margin:0 auto;
+    margin-top:150px!important;
+    font-size:14px;
+    line-height: 44px;
+    border-radius: 8px;
+}
+.wrapper2{
+    clear:both;
+}
+.parent-in{
+    width:100%;
+    height: auto;
+    vertical-align: center;
+}
+.logo-img{
+
+}
+.LoadLightboxImg2{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+.loader-txt{
+    text-align:center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff;
+    padding-top:20px;
+}
+.loader-distinc{
+    font-size: 18px!important;
+    line-height: 53px!important;
+    background: #eeee;
+    border-radius: 8px;
+    margin: 25px 14px 0;
+}
+.loader-img{
+   /* width:30%;
+    display: inline-block;
+    float:right;*/
+    margin-top:50px
+}
+
+.marquee {
+    font-size:18px!important;
+    line-height: 44px!important;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    color: #000;
+    text-shadow: 2px 2px 4px #fff;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 1s linear infinite;
+    -webkit-animation: scroll-left 1s linear infinite;
+    animation: scroll-left 5s linear infinite;
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(-100%);
+    }
+    100% {
+        -moz-transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+.s-u-content-result{
+    display: none;
+}
+.lowest {margin-bottom:20px;}
+.logo-icon{
+    max-width:310px!important;
+    width: 50%;
+    margin:0 auto;
+    display:block;
+    max-height:310px!important;
+}
+@media only screen and (max-width: 767px) {
+    .LoadLightboxImg2 {
+        max-width: 70px !important;
+        width: 70px !important;
+
+    }
+    .loader-img{margin-top:10px!important;}
+    .loader-page{width:90%;!important;}
+}

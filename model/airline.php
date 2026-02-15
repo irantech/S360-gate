@@ -10,6 +10,28 @@ class airline_tb extends ModelBase
     {
         return parent::select("select * from $this->table where del='no' ORDER BY LEAST(Commission_internal, Commission_external) DESC");
     }
+
+public function getAllOrderByiata()
+{
+    return parent::select("
+        SELECT *
+        FROM $this->table
+        WHERE del = 'no'
+        ORDER BY 
+            (airline_iata_id IS NULL), 
+            (airline_iata_id IN (
+                SELECT airline_iata_id 
+                FROM $this->table
+                WHERE del = 'no' AND airline_iata_id IS NOT NULL
+                GROUP BY airline_iata_id
+                HAVING COUNT(*) > 1
+            )) DESC,
+            airline_iata_id,
+            id
+    ");
+}
+
+
     public function getAllDomestic($client_id)
     {
         $admin = Load::controller('admin');

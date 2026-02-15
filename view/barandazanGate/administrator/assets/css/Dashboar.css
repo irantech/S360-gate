@@ -1,0 +1,264 @@
+.panel-body-top {
+    padding: 25px;
+    height: 578px;
+}
+.panel-body-down {
+    padding: 25px;
+    height: 578px;
+    background: #fafbfc;
+    border-radius: 0 0 12px 12px;
+}
+
+
+.modern-notice {
+    padding: 20px;
+    background: #fafbfc;
+    border-radius: 0 0 12px 12px;
+}
+
+.modern-notice ul {
+    list-style: none; /* حذف بولت‌ها */
+    padding-left: 0;
+    margin: 0;
+}
+
+.modern-notice ul li {
+    position: relative;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+    border-right: 4px solid #ff6b6b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.modern-notice ul li:last-child {
+    margin-bottom: 0;
+}
+
+.modern-notice a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.modern-notice a:hover {
+    color: #fff;
+    background: #ff6b6b;
+    text-decoration: none;
+}
+ .help-download {
+     position: relative;
+     margin: 25px 0;
+     padding: 0;
+     background: linear-gradient(135deg, #f03c52 0%, #d42a40 50%, #ff6b81 100%);
+     border-radius: 16px;
+     box-shadow:
+             0 10px 30px rgba(240, 60, 82, 0.25),
+             inset 0 1px 0 rgba(255, 255, 255, 0.3);
+     color: white;
+     text-align: center;
+     cursor: pointer;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     overflow: hidden;
+     border: none;
+     text-decoration: none;
+     display: block;
+ }
+
+.help-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent);
+    transition: left 0.6s ease;
+}
+
+.help-download:hover::before {
+    left: 100%;
+}
+
+.help-download:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+            0 20px 40px rgba(240, 60, 82, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.help-download:active {
+    transform: translateY(-2px) scale(1);
+}
+
+.help-download-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 25px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.help-download-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 12px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.help-download:hover .help-download-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.help-download-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.help-download h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    line-height: 1.3;
+}
+
+.help-download p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.help-download-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.help-download:hover .help-download-cta {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateX(5px);
+}
+
+.help-download-cta-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.help-download-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.help-download:hover .help-download-arrow {
+    transform: translateX(8px);
+}
+
+/* افکت شیشه‌ای (Glassmorphism) */
+.help-download::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+/* استایل برای حالت موبایل */
+@media (max-width: 768px) {
+    .help-download {
+        margin: 20px 0;
+        border-radius: 14px;
+    }
+
+    .help-download-content {
+        padding: 25px 20px;
+        gap: 12px;
+    }
+
+    .help-download-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .help-download h3 {
+        font-size: 18px;
+    }
+
+    .help-download p {
+        font-size: 14px;
+    }
+
+    .help-download-cta {
+        padding: 10px 20px;
+    }
+}
+
+/* انیمیشن ورود */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.help-download {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* بهبود خوانایی متن */
+.help-download * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

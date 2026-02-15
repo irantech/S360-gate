@@ -1,5 +1,6 @@
 <?php
 // از سمت سایت iran-tech.com وصل میشیم و فاکتورهایی که پرداخت نشده را close می کنیم
+//iran-tech.com/factors/CurlFromOtherSyatems/CheckFactorForSafar360.php
 
 require_once __DIR__ . '/../config/configBase.php';
 
@@ -27,7 +28,7 @@ if (is_array($input) && !empty($input)) {
 
     $stmt = $pdo->prepare(
         "UPDATE clients_tb 
-         SET status_factor = 'Close' 
+         SET status_factor_user = 'Close' 
          WHERE hash_id_whmcs = :hash_id_whmcs"
     );
 

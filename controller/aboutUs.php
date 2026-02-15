@@ -7,17 +7,21 @@
 //}
 class aboutUs extends clientAuth {
     public function getData($lang = 'fa') {
-
+   
         if ($lang) {
             $result =  $this->getModel('aboutUsModel')->get()
                 ->where('page_type','about_us')
                 ->where('language',$lang)
                 ->find();
+
         } else {
             $result = $this->getModel('aboutUsModel')->get()
                 ->where('page_type','about_us')
                 ->find();
+
         }
+
+
         return $result;
 
     }
@@ -76,7 +80,6 @@ class aboutUs extends clientAuth {
                 $media[$key] = $record;
             }
         }
-
         $update_data=[
             'summary'=>$params['summary'],
             'title'=>$params['title'],

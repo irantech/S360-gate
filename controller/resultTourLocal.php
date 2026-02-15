@@ -983,6 +983,13 @@ class resultTourLocal extends clientAuth {
 
         return !empty($setting) && $setting['enable'] == 1;
     }
+    public function is_toman()
+    {
+        $setting = $this->getModel('reservationSettingModel')
+            ->getByTitle('toman');
+
+        return !empty($setting) && $setting['enable'] == 1;
+    }
 
 
 
@@ -1300,7 +1307,7 @@ class resultTourLocal extends clientAuth {
             $minPrice['minPriceA'] = $resultMinPrice['adult_price_one_day_tour_a'];
 
             $minPrice['CurrencyTitleFa'] = $resultMinPrice['currency_type_one_day_tour'];
-
+            $minPrice['is_toman'] = $this->is_toman();
 
         } else {
 
@@ -1374,7 +1381,7 @@ class resultTourLocal extends clientAuth {
             $minPrice['minPriceA'] = $resultMinPrice['min_price_a'];
 
             $minPrice['CurrencyTitleFa'] = $resultMinPrice['currency_type'];
-
+            $minPrice['is_toman'] = $this->is_toman();
         }
         
 

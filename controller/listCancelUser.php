@@ -354,7 +354,17 @@ WHERE 1=1
                         $type='قطار';
                     }
 
-                    $sms = "کنسلی جدید-" . CLIENT_NAME . "-{$date}-{$type}";
+                    $sms =
+                        "پشتیبان safar360 آژانس مشتری شما کنسلی دارد\n\n" .
+                        "کنسلی جدید - " . CLIENT_NAME . " - {$date} - {$type}\n" .
+                        "دلیل کنسلی: {$data['DescriptionClient']}\n" .
+                        "ایرلاین: {$resultBook['airline_name']}\n" .
+                        "مبدا: {$resultBook['origin_city']}\n" .
+                        "مقصد: {$resultBook['desti_city']}\n" .
+                        "ساعت: {$resultBook['time_flight']}\n" .
+                        "شماره پرواز: {$resultBook['flight_number']}\n" .
+                        "PNR: {$resultBook['pnr']}";
+
                     $cellArray = array(
                         'abasi2' => '09057078341',
                         'alami' => '09155909722',

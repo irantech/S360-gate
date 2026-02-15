@@ -455,13 +455,14 @@ class priceChanges extends baseController
 
         $calculate_price_change= [];
         if(!empty($data_info['price_change_list'])){
+            if (!($flight_type == 'system' && $check_private == 'private')) {
             $info_price_change = $data_info['price_change_list'][$airline_iata][$flight_type][$locality][$get_counter_type_id] ;
 
-
-            $calculate_price_change = array(
-                'change_type'=>$info_price_change['change_type'],
-                'price'=>$info_price_change['price'],
-            );
+                $calculate_price_change = array(
+                    'change_type'=>$info_price_change['change_type'],
+                    'price'=>$info_price_change['price'],
+                );
+            }
 
         }
 
@@ -482,14 +483,17 @@ class priceChanges extends baseController
         $price['adult']['TotalPriceWithDiscount'] = 0;
         $price['adult']['BasePrice'] = $data['price']['adult']['BasePrice'];
         $price['adult']['TaxPrice'] = $data['price']['adult']['TaxPrice'];
+        $price['adult']['CommisionPrice'] = $data['price']['adult']['CommisionPrice'];
         $price['child']['TotalPrice'] = $data['price']['child']['TotalPrice'];
         $price['child']['TotalPriceWithDiscount'] = 0;
         $price['child']['BasePrice'] = $data['price']['child']['BasePrice'];
         $price['child']['TaxPrice'] = $data['price']['child']['TaxPrice'];
+        $price['child']['CommisionPrice'] = $data['price']['child']['CommisionPrice'];
         $price['infant']['TotalPrice'] = $data['price']['infant']['TotalPrice'];
         $price['infant']['TotalPriceWithDiscount'] = 0;
         $price['infant']['BasePrice'] = $data['price']['infant']['BasePrice'];
         $price['infant']['TaxPrice'] = $data['price']['infant']['TaxPrice'];
+        $price['infant']['CommisionPrice'] = $data['price']['infant']['CommisionPrice'];
         $price['hasDiscount'] = 'No';
 
 
@@ -512,18 +516,20 @@ class priceChanges extends baseController
                     $price_type['TotalPrice'] += ($price_type['TotalPrice'] * (IT_COMMISSION/100) );
                 }
 
-                if ($calculate_price_change['change_type'] == 'cost') {
-                    $change_price = true;
-                    $add_on_price = $calculate_price_change['price'];
-                }
-                elseif ($calculate_price_change['change_type'] == 'percent') {
-                    $change_price = true ;
-                    if(in_array($source_id,$arraySourceIncreasePriceFlightSystem) && $data['typeZone'] == 'Local' && $flight_type =='system'){
-                        $add_on_price = (($price_type['BasePrice'] * $calculate_price_change['price']) / 100);
+                if (!($flight_type == 'system' && $check_private == 'private')) {
+                    if ($calculate_price_change['change_type'] == 'cost') {
+                        $change_price = true;
+                        $add_on_price = $calculate_price_change['price'];
+                    }
+                    elseif ($calculate_price_change['change_type'] == 'percent') {
+                        $change_price = true ;
+                        if(in_array($source_id,$arraySourceIncreasePriceFlightSystem) && $data['typeZone'] == 'Local' && $flight_type =='system'){
+                            $add_on_price = (($price_type['BasePrice'] * $calculate_price_change['price']) / 100);
 
-                    }else{
-                        $add_on_price = (($price_type['TotalPrice'] * $calculate_price_change['price']) / 100);
+                        }else{
+                            $add_on_price = (($price_type['TotalPrice'] * $calculate_price_change['price']) / 100);
 
+                        }
                     }
                 }
 
@@ -567,16 +573,25 @@ class priceChanges extends baseController
                     if ((!empty($calculate_price_change) && $flight_type == 'charter') || (($data['typeZone'] == 'Portal' && $change_price ) || in_array($source_id,$arraySourceIncreasePriceFlightSystem))) {
                         $price['hasDiscount'] = 'yes';
 
+                        if ($flight_type == 'system' && $check_private == 'private') {
+                            $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price[$key]['CommisionPrice'] * ($discount['off_percent'] / 100)));
+                        } else {
+                            $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - (($add_on_price * $discount['off_percent']) / 100));
+                        }
 
-                        $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - (($add_on_price * $discount['off_percent']) / 100));
                     }else if(empty($calculate_price_change) && $flight_type == 'charter' && $discount['off_percent'] > 0 && (($data['typeZone'] == 'Portal' && $change_price ) || ($data['typeZone'] != 'Portal'))) {
-                        $price[$key]['has_discount'] = 'no';
+                        $price[$key]['has_discount'] = 'yes';
+                        if ($flight_type == 'system' && $check_private == 'private') {
+                            $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price[$key]['CommisionPrice'] * ($discount['off_percent'] / 100)));
+                        } else {
+                            $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - (($add_on_price * $discount['off_percent']) / 100));
+                        }
                     } else if ($check_private == 'public' && $flight_type == 'system') {
                         $price['hasDiscount'] = 'yes';
                         $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($agencyBenefitSystemFlight[$key] * ($discount['off_percent'] / 100)));
                     } else if ($check_private == 'private' && $flight_type == 'system') {
                         $price['hasDiscount'] = 'yes';
-                        $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($agencyBenefitSystemFlight[$key] * ($discount['off_percent'] / 100)));
+                        $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price[$key]['CommisionPrice'] * ($discount['off_percent'] / 100)));
                     }
                 }
 

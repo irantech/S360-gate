@@ -1,7 +1,5 @@
 <?php
 
-
-
 class functions {
 
 
@@ -931,7 +929,7 @@ class functions {
         $admin = Load::controller( 'admin' );
         $sql   = " SELECT isPublic ,isPublicreplaced,sourceReplaceId,sourceId FROM config_flight_tb WHERE  airlineId ='{$airlineInfo['id']}' AND typeFlight='{$typeFlight}' AND isInternal='{$isInternal}'";
         $pid   = $admin->ConectDbClient( $sql, $clientId, "Select", "", "", "" );
-        if ( ($pid['isPublic'] == '0' && $pid['sourceId']==$sourceId ) || ($pid['isPublicreplaced'] == '0' && $pid['sourceReplaceId']==$sourceId ) || $sourceId == '20') {
+        if ( ($pid['isPublic'] == '0' && $pid['sourceId']==$sourceId ) || ($pid['isPublicreplaced'] == '0' && $pid['sourceReplaceId']==$sourceId )) {
             return 'private';
         } else {
             return 'public';
@@ -1112,11 +1110,12 @@ class functions {
             if ( strtolower( $each['flight_type'] ) == 'system' ) {
 
                $isCounter = Load::controller( 'login' )->isCounter();
+                $isCounter = json_decode($isCounter);
                $isSafar360 = self::isSafar360();
 
                 // اگر میخواهید تخفیف برای منبع درست کار کند مانند شرط زیر برای منبع مورد نظر هم یک شرط بزارید-
 
-                if ( ($each['IsInternal'] == '1' && $each['api_id'] != '14') || ($each['api_id'] != '10' && $each['api_id'] != '15' && $each['api_id'] != '17' && $each['api_id'] != '14' && $each['api_id'] != '8' && $each['api_id'] != '43' && $each['api_id'] != '21') ) {
+                if ( ($each['IsInternal'] == '1' && $each['api_id'] != '14') || ($each['api_id'] != '10' && $each['api_id'] != '15' && $each['api_id'] != '17' && $each['api_id'] != '14' && $each['api_id'] != '8' && $each['api_id'] != '43' && $each['api_id'] != '21' && $each['api_id'] != '20') ) {
 
 
 
@@ -1290,89 +1289,194 @@ class functions {
 
     #region calculateFare
 
-    public static function CalculateDiscountOnePerson( $RequestNumber, $nationalCode, $FlagPriceChange = 'yes' ) {
+   public static function CalculateDiscountOnePerson( $RequestNumber, $nationalCode, $FlagPriceChange = 'yes' ) {
 
-        //yes means nesesary calculate  price changes
-        $modelBase = Load::library( 'Model' );
-
-
-        
-        $Sql = "SELECT *  FROM book_local_tb WHERE (request_number='{$RequestNumber}' OR factor_number='{$RequestNumber}') AND (passenger_national_code='{$nationalCode}' OR passportNumber='{$nationalCode}')";
-
-        $rec = $modelBase->load( $Sql );
+      //yes means nesesary calculate  price changes
+      $modelBase = Load::library( 'Model' );
 
 
-        $amount     = 0;
-        $isInternal = ( $rec['IsInternal'] == '1' ) ? 'internal' : 'external';
-        if ( strtolower( $rec['flight_type'] ) == 'system' ) {
-            $checkPrivate = ( $rec['pid_private'] == '1' ) ? 'private' : 'public';
-            if ( ($rec['IsInternal'] == '1' && $rec['api_id'] != '14') || ($rec['api_id'] != '10' && $rec['api_id'] != '14'&& $rec['api_id'] != '15') ) {
-                if ( $rec['percent_discount'] > 0 ) {
-                    if ( $checkPrivate == 'public' ) {
-                        $amount += $rec['adt_price'] - ( $rec['adt_fare'] * ( $rec['percent_discount'] / 200 ) );
-                        $amount += $rec['chd_price'] - ( $rec['chd_fare'] * ( $rec['percent_discount'] / 200 ) );
-                        $amount += $rec['inf_price'];
-                    } elseif ( $checkPrivate == 'private' ) {
-                        $amount += $rec['adt_price'] - ( $rec['adt_fare'] * ( $rec['percent_discount'] / 100 ) );
-                        $amount += $rec['chd_price'] - ( $rec['chd_fare'] * ( $rec['percent_discount'] / 100 ) );
-                        $amount += $rec['inf_price'];
 
-                    }
-                } else {
-                    $amount += $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
-                }
-            } else {
-                if ( $rec['IsInternal'] == '0' || $rec['api_id'] == '14') {
-                    $everyAmount = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+      $Sql = "SELECT *  FROM book_local_tb WHERE (request_number='{$RequestNumber}' OR factor_number='{$RequestNumber}') AND (passenger_national_code='{$nationalCode}' OR passportNumber='{$nationalCode}')";
 
-                    if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'percent' ) {
+      $rec = $modelBase->load( $Sql );
+
+
+      $amount     = 0;
+      $isInternal = ( $rec['IsInternal'] == '1' ) ? 'internal' : 'external';
+      if ( strtolower( $rec['flight_type'] ) == 'system' ) {
+
+         $isCounter = Load::controller( 'login' )->isCounter();
+         $isCounter = json_decode($isCounter);
+         $isSafar360 = self::isSafar360();
+
+         // اگر میخواهید تخفیف برای منبع درست کار کند مانند شرط زیر برای منبع مورد نظر هم یک شرط بزارید-
+
+         if ( ($rec['IsInternal'] == '1' && $rec['api_id'] != '14') || ($rec['api_id'] != '10' && $rec['api_id'] != '15' && $rec['api_id'] != '17' && $rec['api_id'] != '14' && $rec['api_id'] != '8' && $rec['api_id'] != '43' && $rec['api_id'] != '21' && $rec['api_id'] != '20') ) {
+
+
+
+            if ( $rec['percent_discount'] > 0 ) {
+               if ( $rec['pid_private'] == '0' ) {
+
+                  if (isset($rec['adt_price']) && $rec['adt_price'] != '0') {
+                     $amount += $rec['adt_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                  }
+                  if (isset($rec['chd_price']) && $rec['chd_price'] != '0') {
+                     $amount += $rec['chd_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                  }
+                  if (isset($rec['inf_price']) && $rec['inf_price'] != '0') {
+                     $amount += $rec['inf_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                  }
+
+               } elseif ( $rec['pid_private'] == '1' ) {
+                  if ($isCounter || $isSafar360) {
+                     $amount += ($rec['adt_price'] - $rec['adt_com']) - ( $rec['adt_com'] * ( $rec['percent_discount'] / 100 ) );
+                     $amount += ($rec['chd_price'] - $rec['chd_com']) - ( $rec['chd_com'] * ( $rec['percent_discount'] / 100 ) );
+                     $amount += ($rec['inf_price'] - $rec['inf_com']) - ( $rec['inf_com'] * ( $rec['percent_discount'] / 100 ) );
+                  } else {
+                     $amount += $rec['adt_price'] - ( $rec['adt_com'] * ( $rec['percent_discount'] / 100 ) );
+                     $amount += $rec['chd_price'] - ( $rec['chd_com'] * ( $rec['percent_discount'] / 100 ) );
+                     $amount += $rec['inf_price'] - ( $rec['inf_com'] * ( $rec['percent_discount'] / 100 ) );
+                  }
+
+               }
+            }
+            else {
+               if ($rec['pid_private'] == '0') {
+                  $amount += $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+               } elseif ($rec['pid_private'] == '1') {
+                  if ($isCounter || $isSafar360) {
+                     $amount += ($rec['adt_price'] - $rec['adt_com']) + ($rec['chd_price'] - $rec['chd_com']) + ($rec['inf_price'] - $rec['inf_com']);
+                  } else {
+                     $amount += $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+                  }
+               }
+            }
+         }
+         else {
+            if ( $rec['IsInternal'] == '0' || $rec['api_id'] == '14') {
+
+               $airlineModel = Load::getModel('airlineModel');
+               $airlineForCom = $airlineModel->get(['abbreviation','foreignAirline','amadeusStatus'], true)->where('abbreviation', $rec['airline_iata'])->all();
+               if (!isset($airlineForCom[0]['foreignAirline'])) {
+                  $foreignAirline = null;
+               }
+               if ($airlineForCom[0]['foreignAirline'] == 'active' || $airlineForCom[0]['foreignAirline'] == null || empty($airlineForCom[0]['foreignAirline']) ) {
+                  $foreignAirline = true;
+               } else {
+                  $foreignAirline = false;
+               }
+
+               if (!$foreignAirline) {
+                  if ( $rec['pid_private'] == '0' ) {
+
+                     if (isset($rec['adt_price']) && $rec['adt_price'] > 0) {
+                        $amount += $rec['adt_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                     }
+                     if (isset($rec['chd_price']) && $rec['chd_price'] > 0) {
+                        $amount += $rec['chd_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                     }
+                     if (isset($rec['inf_price']) && $rec['inf_price'] > 0) {
+                        $amount += $rec['inf_price'] - ($rec['system_flight_commission'] * ($rec['percent_discount'] / 100));
+                     }
+
+                  }
+                  elseif ( $rec['pid_private'] == '1' ) {
+
+                     if ($isCounter || $isSafar360) {
+                        $amount += ($rec['adt_price'] - $rec['adt_com']) - ( $rec['adt_com'] * ( $rec['percent_discount'] / 100 ) );
+                        $amount += ($rec['chd_price'] - $rec['chd_com']) - ( $rec['chd_com'] * ( $rec['percent_discount'] / 100 ) );
+                        $amount += ($rec['inf_price'] - $rec['inf_com']) - ( $rec['inf_com'] * ( $rec['percent_discount'] / 100 ) );
+                     } else {
+                        $amount += $rec['adt_price'] - ( $rec['adt_com'] * ( $rec['percent_discount'] / 100 ) );
+                        $amount += $rec['chd_price'] - ( $rec['chd_com'] * ( $rec['percent_discount'] / 100 ) );
+                        $amount += $rec['inf_price'] - ( $rec['inf_com'] * ( $rec['percent_discount'] / 100 ) );
+                     }
+                  }
+               }
+               else {
+
+                  $everyAmount = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+
+
+
+
+
+
+                  if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'percent' ) {
+
+                     if($rec['IsInternal'] == '1' &&  $rec['api_id'] == '14'){
+                        $everyAmountFake = $rec['api_commission'] + $rec['adt_fare'] + $rec['chd_fare'] + $rec['inf_fare'];
+                     }
+                     else{
                         $everyAmountFake = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
-                        $ChangeAmount    = $everyAmountFake * ( $rec['price_change'] / 100 );
-                        $everyAmount     += $ChangeAmount;
-                        $amount          += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
-                    } else if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'cost' ) {
-                        $ChangeAmount = $rec['price_change'];
-                        $everyAmount  += $ChangeAmount;
-                        $amount       += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
-                    } else {
-                        $amount += $everyAmount;
-                    }
-                }
-            }
-        } else {
-            $everyAmount = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
 
-            if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'cost' ) {
-                $everyAmount  += $rec['irantech_commission'];
-                $ChangeAmount = $rec['price_change'];
-                $everyAmount  += $ChangeAmount;
-                if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
-                    $amount += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
-                } else if ( $rec['passenger_age'] == 'Inf' ) {
-                    $amount += $everyAmount;
-                }
-            } elseif ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'percent' ) {
-                $ChangeAmount = $everyAmount * ( $rec['price_change'] / 100 );
-                $everyAmount  += $ChangeAmount;
-                $everyAmount  += $rec['irantech_commission'];
-                if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
-                    $amount += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
-                } else if ( $rec['passenger_age'] == 'Inf' ) {
-                    $amount += $everyAmount;
-                }
-            } else {
-                $everyAmount += $rec['irantech_commission'];
-                if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
-                    $ChangeAmount = 0;
-                    $amount       += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
-                } else if ( $rec['passenger_age'] == 'Inf' ) {
-                    $amount += $everyAmount;
-                }
+                     }
+
+                     $ChangeAmount    = $everyAmountFake * ( $rec['price_change'] / 100 );
+
+
+
+                     $everyAmount     += $ChangeAmount;
+
+                     $amount          += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
+
+
+                  }
+                  else if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'cost' ) {
+                     $ChangeAmount = $rec['price_change'];
+                     $everyAmount  += $ChangeAmount;
+                     $amount       += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
+                  }
+                  else {
+                     $amount += $everyAmount;
+                  }
+               }
             }
-        }
-    
-        return round( $amount );
-    }
+         }
+      }
+      else {
+
+
+         $everyAmount = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+
+         if ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'cost' ) {
+            $everyAmount  += $rec['irantech_commission'];
+            $ChangeAmount = $rec['price_change'];
+            $everyAmount  += $ChangeAmount;
+            if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
+               $amount += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
+            } else if ( $rec['passenger_age'] == 'Inf' ) {
+               $amount += $everyAmount;
+            }
+         }
+         elseif ( $rec['price_change'] > 0 && $rec['price_change_type'] == 'percent' ) {
+            $everyAmountFake = $rec['api_commission'] + $rec['adt_price'] + $rec['chd_price'] + $rec['inf_price'];
+            $ChangeAmount    = $everyAmountFake * ( $rec['price_change'] / 100 );
+
+            $everyAmount += $ChangeAmount;
+            $everyAmount += $rec['irantech_commission'];
+
+
+            if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
+               $amount += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
+            } else if ( $rec['passenger_age'] == 'Inf' ) {
+               $amount += $everyAmount;
+            }
+         } else {
+            if ( $rec['passenger_age'] == 'Adt' || $rec['passenger_age'] == 'Chd' ) {
+               $ChangeAmount = 0;
+               $everyAmount  += $rec['irantech_commission'];
+               $amount       += $everyAmount - ( ( $ChangeAmount * $rec['percent_discount'] ) / 100 );
+            } else if ( $rec['passenger_age'] == 'Inf' ) {
+               $everyAmount += $rec['irantech_commission'];
+               $amount      += $everyAmount;
+            }
+         }
+      }
+
+      return round( $amount );
+   }
     #endregion
 
     #region CalculatePriceTicketOnePerson
@@ -4129,6 +4233,34 @@ class functions {
             $sql    = "SELECT B.*, "
                 . " (SELECT COUNT(id) FROM book_exclusive_tour_tb WHERE request_number = B.request_number) AS CountTicket "
                 . " FROM book_exclusive_tour_tb B  WHERE "
+                . " (B.factor_number='{$request_number}' OR B.request_number='{$request_number}') "
+                . " AND (((B.factor_number OR B.request_number) > 0) OR ((B.factor_number OR B.request_number) <>'')) ";
+            $result = $Model->select( $sql );
+        }
+
+        return $result;
+    }
+
+
+
+    public static function info_cip_directions( $request_number ) {
+
+        if ( TYPE_ADMIN == '1' ) {
+            $ModelBase = Load::library( 'ModelBase' );
+            $sql       = "SELECT R.*, "
+                . " (SELECT COUNT(id) FROM report_cip_tb WHERE request_number = R.request_number) AS CountTicket "
+                . " FROM report_cip_tb R WHERE "
+                . " (R.factor_number='{$request_number}' OR R.request_number='{$request_number}') "
+                . " AND (((R.factor_number OR R.request_number) > 0) OR ((R.factor_number OR R.request_number) <>'')) ";
+            $result    = $ModelBase->select( $sql );
+
+
+
+        } else {
+            $Model  = Load::library( 'Model' );
+            $sql    = "SELECT B.*, "
+                . " (SELECT COUNT(id) FROM book_cip_tb WHERE request_number = B.request_number) AS CountTicket "
+                . " FROM book_cip_tb B  WHERE "
                 . " (B.factor_number='{$request_number}' OR B.request_number='{$request_number}') "
                 . " AND (((B.factor_number OR B.request_number) > 0) OR ((B.factor_number OR B.request_number) <>'')) ";
             $result = $Model->select( $sql );

@@ -1,6 +1,5 @@
 <?php
 
-
 class bookshow extends clientAuth
 {
 
@@ -66,7 +65,7 @@ class bookshow extends clientAuth
         $_POST = $param;
         $resultBook = $this->listBookLocal();
         $bookshowTest = $this->getController('bookshowTest');
-        $transactions = $bookshowTest->getTransactionsByDateRange($param['date_of'],$param['to_date']);
+        $transactions = $bookshowTest->getTransactionsByDateRange($param['date_of'],$param['to_date'],$param['pnr'],$param['factor_number'],$param['request_number'],$param['passenger_name']);
 
         if (!empty($resultBook)) {
 
@@ -77,7 +76,7 @@ class bookshow extends clientAuth
                 $TitleMarkCounter='مارک کان';
                 $TitleMarkAgency='مارک آژ';
                 $TitlePayment='آژانس/مس';
-                $TitleComAgencyProvider='کم چارتری';
+                $TitleComAgencyProvider='کم پرووایدر';
             }
             else {
                 $TitleComAgency='کمیسیون';
@@ -86,11 +85,11 @@ class bookshow extends clientAuth
                 $TitleMarkCounter='مارک کانتر';
                 $TitleMarkAgency='مارک آژانس';
                 $TitlePayment='فروش';
-                $TitleComAgencyProvider='کمیسیون چارتری';
+                $TitleComAgencyProvider='کمیسیون پرووایدر';
             }
 
             // برای نام گذاری سطر اول فایل اکسل //
-            $firstRowColumnsHeading = ['تاریخ خرید', 'شماره فاکتور', 'نوع پرواز', 'مبدا - مقصد', 'ایرلاین', 'شناسه نرخی', 'شماره بلیط' , 'pnr' ,'شماره پرواز', 'ساعت پرواز',
+            $firstRowColumnsHeading = ['تاریخ خرید', 'کد رهگیری', 'نوع پرواز', 'مبدا - مقصد', 'ایرلاین', 'شناسه نرخی', 'شماره بلیط' , 'pnr' ,'شماره پرواز', 'ساعت پرواز',
                 'تاریخ پرواز','شماره موبایل خریدار','نام مسافر', 'درصد تخفیف خریدار', 'آژانس همکار (نام خریدار)', 'یک طرفه / دو طرفه',
                 'وضعیت', 'خرید از طریق' , 'total' , 'fare' , $TitleComAgency , $TitleComAgencyProvider , $TitleBuyFromIt , $TitleMarkAgency , $TitleMarkCounter , $TitlePayment , $TitleShareAgency];
 
@@ -339,7 +338,11 @@ class bookshow extends clientAuth
 
 
                         $DataFlightAgencyShare =number_format($agencyShare);
-                        $DataFlightitAgencyCommission =number_format($book['sum_system_flight_commission']);
+                        if ($book['flight_type'] == 'system' && $book['successfull'] == 'private_reserve') {
+                            $DataFlightitAgencyCommission =number_format(0);
+                        } else {
+                            $DataFlightitAgencyCommission =number_format($book['sum_system_flight_commission']);
+                        }
                         if ($book['request_cancel'] != 'confirm' && ($book['successfull'] == 'book' || $book['successfull'] == 'private_reserve')) {
                             $priceAgency += $agencyShare;
                         }
@@ -351,7 +354,11 @@ class bookshow extends clientAuth
                     $DataFlightitAgencyCommission = '-';
                 }
 
-                $DataFlightitAgencyCommissionProvider = number_format($book['sum_adt_com'] + $book['sum_chd_com'] + $book['sum_inf_com']);
+                if ($book['flight_type'] == 'system' && $book['successfull'] == 'private_reserve') {
+                    $DataFlightitAgencyCommissionProvider = number_format($book['sum_adt_com'] + $book['sum_chd_com'] + $book['sum_inf_com']);
+                } else {
+                    $DataFlightitAgencyCommissionProvider = number_format(0);
+                }
 
                 if (
                     ($book['flight_type'] == 'system' && $book['IsInternal'] == '1') ||
@@ -390,7 +397,7 @@ class bookshow extends clientAuth
 
 
                 $dataRows[$k]['creation_date_int'] = $creation_date_int;
-                $dataRows[$k]['factor_number'] = $book['factor_number'] . ' ';
+                $dataRows[$k]['request_number'] = $book['request_number'] . ' ';
                 $dataRows[$k]['flight_type'] = $flight_type;
                 $dataRows[$k]['city'] = $city;
                 $dataRows[$k]['airline_name'] = $airline_name;

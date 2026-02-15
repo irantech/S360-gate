@@ -1,0 +1,22 @@
+
+@font-face {
+ font-family:IRANYekanN;
+ src:url(300/699085bd.eot);
+ src:url(300/699085bd.eot?#iefix) format("embedded-opentype"),url(300/a80f71ff.woff2) format("woff2"),url(300/088dfe8a.woff) format("woff"),url(300/2c83275a.ttf) format("truetype");
+ font-weight:300;
+ font-style:normal
+}
+@font-face {
+ font-family:IRANYekanN;
+ src:url(400/5bea6c32.eot);
+ src:url(400/5bea6c32.eot?#iefix) format("embedded-opentype"),url(400/1fdcadec.woff2) format("woff2"),url(400/56a1baa4.woff) format("woff"),url(400/79533773.ttf) format("truetype");
+ font-weight:400;
+ font-style:normal
+}
+@font-face {
+ font-family:IRANYekanN;
+ src:url(700/7c912e00.eot);
+ src:url(700/7c912e00.eot?#iefix) format("embedded-opentype"),url(700/fe12f13a.woff2) format("woff2"),url(700/2d7cc7cd.woff) format("woff"),url(700/a7d41f91.ttf) format("truetype");
+ font-weight:700;
+ font-style:normal
+}

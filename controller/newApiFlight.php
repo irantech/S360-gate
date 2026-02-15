@@ -629,7 +629,8 @@ class newApiFlight extends clientAuth
         functions::insertLog('url is=> ' . $url . '   give time send request With Code =>' . $this->UniqueCode . ' && Origin:' . $d['Origin'] . ' &&destination:' . $d['Destination'] . 'with data request' . $JsonArray . '\n', 'newApiFlight');
 
         $result = functions::curlExecution($url, $JsonArray, 'yes');
-        
+
+
         error_log('End Search in  : ' . date('Y/m/d H:i:s') . " \n", 3, LOGS_DIR . 'log_Request_send_search.txt');
 
         error_log('End Receive Data Search in GDS  ==> ' . date('Y/m/d H:i:s') . " \n", 3, dirname(dirname(dirname(__FILE__))) . '/Core/assets/logFile/flight_international/' . $this->UniqueCode . '.txt');
@@ -1698,7 +1699,7 @@ class newApiFlight extends clientAuth
             $isCurrencyAndNotFarsi = (ISCURRENCY && $isNotFarsi);
 
             // OPTIMIZATION: Pre-define business cabin types for fast lookup
-            $businessCabinTypes = ['C' => true, 'J' => true, 'D' => true, 'I' => true, 'Z' => true];
+            $businessCabinTypes = ['C' => true, 'C1' => true, 'C2' => true, 'C3' => true,'C4' => true,'C5' => true, 'J' => true, 'I' => true, 'Z' => true];
 
             // OPTIMIZATION: Function result cache (Memoization) - این cache ها سرعت را 3-5 برابر می‌کنند!
             // برای 1000 پرواز: 12000+ فراخوانی format_hour و 8000+ فراخوانی تبدیل تاریخ را حذف می‌کند
@@ -1800,17 +1801,20 @@ class newApiFlight extends clientAuth
                                 'TotalPrice' => $passengerAdult['TotalPrice'],
                                 'BasePrice' => $passengerAdult['BasePrice'],
                                 'TaxPrice' => $passengerAdult['TaxPrice'],
+                                'CommisionPrice' => $passengerAdult['CommisionPrice']
                             ),
                             'child' => array(
                                 'TotalPrice' => $passengerChild['TotalPrice'],
                                 'BasePrice' => $passengerChild['BasePrice'],
                                 'TaxPrice' => $passengerChild['TaxPrice'],
+                                'CommisionPrice' => $passengerChild['CommisionPrice']
                             ),
 
                             'infant' => array(
                                 'TotalPrice' => $passengerInfant['TotalPrice'],
                                 'BasePrice' => $passengerInfant['BasePrice'],
                                 'TaxPrice' => $passengerInfant['TaxPrice'],
+                                'CommisionPrice' => $passengerInfant['CommisionPrice']
                             ),
                         )
                     );
@@ -1896,7 +1900,7 @@ class newApiFlight extends clientAuth
 
                     if ($isSystemAndDomestic) {
 
-                        if ($checkPrivate = 'private') {
+                        if ($checkPrivate == 'private') {
                             $markup_amount_adult =
                                 $passengerAdult['CommisionPrice'];
 
@@ -3704,7 +3708,7 @@ class newApiFlight extends clientAuth
 
                     // OPTIMIZATION: Use business cabin types lookup
                     $cabinType = $outputRoute0['CabinType'];
-                    $businessCabinTypes = ['C' => true, 'J' => true, 'D' => true, 'I' => true, 'Z' => true];
+                    $businessCabinTypes = ['C' => true, 'C1' => true, 'C2' => true, 'C3' => true, 'J' => true, 'D' => true, 'I' => true, 'Z' => true];
                     $type_flight = isset($businessCabinTypes[$cabinType]) ? 'business' : 'economy';
                     $source_id = $flight['SourceId'];
 
@@ -3749,17 +3753,20 @@ class newApiFlight extends clientAuth
                             'adult' => array(
                                 'TotalPrice' => $passengerAdult['TotalPrice'],
                                 'BasePrice' => $passengerAdult['BasePrice'],
-                                'TaxPrice' => $passengerAdult['TaxPrice']
+                                'TaxPrice' => $passengerAdult['TaxPrice'],
+                                'CommisionPrice' => $passengerAdult['CommisionPrice']
                             ),
                             'child' => array(
                                 'TotalPrice' => $passengerChild['TotalPrice'],
                                 'BasePrice' => $passengerChild['BasePrice'],
-                                'TaxPrice' => $passengerChild['TaxPrice']
+                                'TaxPrice' => $passengerChild['TaxPrice'],
+                                'CommisionPrice' => $passengerChild['CommisionPrice']
                             ),
                             'infant' => array(
                                 'TotalPrice' => $passengerInfant['TotalPrice'],
                                 'BasePrice' => $passengerInfant['BasePrice'],
                                 'TaxPrice' => $passengerInfant['TaxPrice'],
+                                'CommisionPrice' => $passengerInfant['CommisionPrice']
                             ),
                         )
                     );
@@ -3807,9 +3814,10 @@ class newApiFlight extends clientAuth
 
 
                     // OPTIMIZATION: Cache checkConfigPid results با کلید ساده‌تر (بدون sourceId)
-                    $checkPrivateCacheKey = $airline_iata . '_' . $flightTypeLowerCase;
+                    $checkPrivateCacheKey = $airline_iata . '_' . $flightTypeLowerCase . '_' . $flight['SourceId'] . '_' . $flight['OutputRoutes'][0]['CabinType'] . '_' . $flight['OutputRoutes'][0]['FlightNo'];
 
                     if (!isset($checkPrivateCache[$checkPrivateCacheKey])) {
+
                         $checkPrivateCache[$checkPrivateCacheKey] = functions::checkConfigPid($airline_iata, 'internal', $flightTypeLowerCase, $flight['SourceId']);
                     }
                     $checkPrivate = $checkPrivateCache[$checkPrivateCacheKey];
@@ -3817,7 +3825,7 @@ class newApiFlight extends clientAuth
 
                     if ($flight['FlightType'] == 'system') {
 
-                        if ($checkPrivate = 'private') {
+                        if ($checkPrivate == 'private') {
                             $markup_amount_adult =
                                 $passengerAdult['CommisionPrice'];
 
@@ -3847,7 +3855,6 @@ class newApiFlight extends clientAuth
 
                         $markup_amount_infant =
                             round($price_change_calculate['infant']['markup_amount']);
-
                     }
 
                     $this->tickets['flights'][$direction][$key] = [
@@ -3917,12 +3924,12 @@ class newApiFlight extends clientAuth
                         'persian_departure_date' => $date_persian,
                         'description' => $flight['Description'],
                         'seat_class' => (
-                        ($flight['OutputRoutes'][0]['CabinType'] == 'C' || $flight['OutputRoutes'][0]['CabinType'] == 'J' || $flight['OutputRoutes'][0]['CabinType'] == 'D' || $flight['OutputRoutes'][0]['CabinType'] == 'I' || $flight['OutputRoutes'][0]['CabinType'] == 'Z') ? $seatClassBusinessText :
-                            (($flight['OutputRoutes'][0]['CabinType'] == 'PY' || $flight['OutputRoutes'][0]['CabinType'] == 'W' || $flight['OutputRoutes'][0]['CabinType'] == 'P' || $flight['OutputRoutes'][0]['CabinType'] == 'R') ? 'پریمیوم' : $seatClassEconomyText)
+                        ($flight['OutputRoutes'][0]['CabinType'] == 'C' || $flight['OutputRoutes'][0]['CabinType'] == 'C1' || $flight['OutputRoutes'][0]['CabinType'] == 'C2' || $flight['OutputRoutes'][0]['CabinType'] == 'C3' || $flight['OutputRoutes'][0]['CabinType'] == 'C4' || $flight['OutputRoutes'][0]['CabinType'] == 'C5' || $flight['OutputRoutes'][0]['CabinType'] == 'J'  || $flight['OutputRoutes'][0]['CabinType'] == 'I' || $flight['OutputRoutes'][0]['CabinType'] == 'Z') ? $seatClassBusinessText :
+                            (($flight['OutputRoutes'][0]['CabinType'] == 'PY' || $flight['OutputRoutes'][0]['CabinType'] == 'P' || $flight['OutputRoutes'][0]['CabinType'] == 'R' || $flight['OutputRoutes'][0]['CabinType'] == 'CH' || $flight['OutputRoutes'][0]['CabinType'] == 'EP' || $flight['OutputRoutes'][0]['CabinType'] == 'PE') ? 'پریمیوم' : $seatClassEconomyText)
                         ),
                         'seat_class_en' => (
-                        ($flight['OutputRoutes'][0]['CabinType'] == 'C' || $flight['OutputRoutes'][0]['CabinType'] == 'J' || $flight['OutputRoutes'][0]['CabinType'] == 'D' || $flight['OutputRoutes'][0]['CabinType'] == 'I' || $flight['OutputRoutes'][0]['CabinType'] == 'Z') ? 'business' :
-                            (($flight['OutputRoutes'][0]['CabinType'] == 'PY' || $flight['OutputRoutes'][0]['CabinType'] == 'W' || $flight['OutputRoutes'][0]['CabinType'] == 'P' || $flight['OutputRoutes'][0]['CabinType'] == 'R') ? 'premium_economy' : 'economy')
+                        ($flight['OutputRoutes'][0]['CabinType'] == 'C' || $flight['OutputRoutes'][0]['CabinType'] == 'C1' || $flight['OutputRoutes'][0]['CabinType'] == 'C2' || $flight['OutputRoutes'][0]['CabinType'] == 'C3' || $flight['OutputRoutes'][0]['CabinType'] == 'J'  || $flight['OutputRoutes'][0]['CabinType'] == 'I' || $flight['OutputRoutes'][0]['CabinType'] == 'Z') ? 'business' :
+                            (($flight['OutputRoutes'][0]['CabinType'] == 'PY' || $flight['OutputRoutes'][0]['CabinType'] == 'P' || $flight['OutputRoutes'][0]['CabinType'] == 'R') ? 'premium_economy' : 'economy')
                         ),
                         'cabin_type' => $flight['OutputRoutes'][0]['CabinType'],
                         'capacity' => ($flight['Capacity'] > 10) ? 9 : $flight['Capacity'],
@@ -3956,7 +3963,7 @@ class newApiFlight extends clientAuth
                                 'arrival_date_abbreviation' => (!empty($details_dept['ArrivalDate'])) ? functions::DateFormatType($details_dept['ArrivalDate'], 'gregorian') : null,
                                 'arrival_time' => (!empty($details_dept['ArrivalDate'])) ? functions::format_hour($details_dept['ArrivalTime']) : null,
                                 'duration_flight_time' => (!empty($details_dept['ArrivalDate'])) ? functions::format_hour($details_dept['FlightTime']) : null,
-                                'seat_class' => (($details_dept['CabinType'] == 'C' || $details_dept['CabinType'] == 'J' || $details_dept['CabinType'] == 'D' || $details_dept['CabinType'] == 'I' || $details_dept['CabinType'] == 'Z') ? $seatClassBusinessText : $seatClassEconomyText),
+                                'seat_class' => (($details_dept['CabinType'] == 'C' || $details_dept['CabinType'] == 'C1' || $details_dept['CabinType'] == 'C2' || $details_dept['CabinType'] == 'C3' || $details_dept['CabinType'] == 'C4' || $details_dept['CabinType'] == 'C5' || $details_dept['CabinType'] == 'J'  || $details_dept['CabinType'] == 'I' || $details_dept['CabinType'] == 'Z') ? $seatClassBusinessText : $seatClassEconomyText),
                                 'baggage' => array('code' => $details_dept['Baggage'][0]['Code'],
                                     'charge' => $details_dept['Baggage'][0]['Charge'],
                                     'type' => $details_dept['Baggage'][0]['Type'],
@@ -4046,7 +4053,7 @@ class newApiFlight extends clientAuth
                                     'arrival_time' => functions::format_hour($details_return['ArrivalTime']),
                                     'arrival_date_abbreviation' => (!empty($details_return['ArrivalDate'])) ? functions::DateFormatType($details_return['ArrivalDate'], 'gregorian') : null,
                                     'duration_flight_time' => functions::format_hour($details_return['FlightTime']),
-                                    'seat_class' => (($details_return['CabinType'] == 'C' || $details_return['CabinType'] == 'J' || $details_return['CabinType'] == 'D' || $details_return['CabinType'] == 'I' || $details_return['CabinType'] == 'Z') ? $seatClassBusinessXml : $seatClassEconomyXml),
+                                    'seat_class' => (($details_return['CabinType'] == 'C' || $details_return['CabinType'] == 'C1' || $details_return['CabinType'] == 'C2' || $details_return['CabinType'] == 'C3' || $details_return['CabinType'] == 'C4' || $details_return['CabinType'] == 'C5' || $details_return['CabinType'] == 'J' ||  $details_return['CabinType'] == 'I' || $details_return['CabinType'] == 'Z') ? $seatClassBusinessXml : $seatClassEconomyXml),
                                     'baggage' => array(
                                         'code' => $details_return['Baggage'][0]['Code'],
                                         'charge' => $details_return['Baggage'][0]['Charge'],
@@ -4272,7 +4279,7 @@ class newApiFlight extends clientAuth
 
     public function getFeeCancel($params) {
 
-        return $this->getController('cancellationFeeSetting')->feeByAirlineAndCabinType($params);
+        return $this->getController('cancellationFeeSetting')->feeByAirlineAndCabinTypeNew($params);
     }
 
     public function getPopularInternationalFlight($params) {
@@ -4851,7 +4858,7 @@ class newApiFlight extends clientAuth
             }
             if($min_price_list && count($min_price_list) > 0) {
                 $min_price = min($min_price_list);
-            }else{
+            }else {
                 $min_price = 0 ;
             }
 

@@ -356,6 +356,8 @@ class apiLocal extends clientAuth
         $data_json = json_encode($d);
         $Revalidate = $this->curlExecution($url, $data_json, 'yes');
 
+        functions::insertLog('$Revalidate: ' . json_encode($Revalidate) , '0abbasi');
+
 
         error_log('try show result Request Client AND Response in  method Revalidate in : ' . date('Y/m/d H:i:s') . 'url'. $url .' with request Number=>'.$_POST['UniqueCode'].'  array equal in => : ' . $data_json . " \n" . json_encode($Revalidate, true) . " \n", 3, LOGS_DIR . 'log_Request_Response_Revalidate.txt');
 
@@ -439,7 +441,8 @@ class apiLocal extends clientAuth
                     if($_POST['MultiWay']=='multi_destination')
                     {
                         $data['Direction'] = 'multi_destination';
-                    }else{
+                    }
+                    else {
                         $isInternalFlight = $data['IsInternalFlight'] == '1';
                         $hasReturnRoutes = !empty($Revalidate['Result']['Flight']['ReturnRoutes']);
                         $isTestServer = functions::isTestServer();
@@ -648,7 +651,8 @@ class apiLocal extends clientAuth
                     $return['result_message'] = $error;
                 }
             }
-        } else {
+        }
+        else {
 
             $MessageError = functions::ShowError($Revalidate['Messages']['errorCode']);
 
@@ -1616,11 +1620,13 @@ class apiLocal extends clientAuth
                     $book['Result']['Request']['RequestFlights'] = array();
                 }
 
+                $check_private = ($passengers[0]['pid_private'] == '1') ? 'private' : 'public';
+
                 foreach ($book['Result']['Request']['RequestFlights'] as $RequestFlights) {
 
                     //تغییرات قیمت فقط برای چارتری داخلی و یا خارجی(هم سیستمی و هم چارتری)
 
-                    if ((in_array($sourceId,functions::sourceIncreasePriceFlightSystem())) || ($FlightType == 'charter')  || ($FlightType == 'system' && $IsInternal == '0' && $sourceId !='8' && $sourceId !='16')) {
+                    if (((in_array($sourceId,functions::sourceIncreasePriceFlightSystem())) || ($FlightType == 'charter')  || ($FlightType == 'system' && $IsInternal == '0' && $sourceId !='8' && $sourceId !='16')) && $check_private == 'public') {
                         $data_price_change['counter_id']   =  $UserInfo['fk_counter_type_id'];
                         $data_price_change['airline_iata'] = $AirlineIata;
                         $data_price_change['locality']     = ($IsInternal == '1' ? 'local' : 'international');
@@ -1635,7 +1641,6 @@ class apiLocal extends clientAuth
                     }
                 }
 
-                $check_private = ($passengers[0]['pid_private'] == '1') ? 'private' : 'public';
 
 
                 $airlineModel = $this->getModel('airlineModel');

@@ -1,0 +1,71 @@
+.main-temp-content-reg {
+    background: #fff;
+    display: block;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    min-height: auto;
+    border-radius: 6px;
+    width: 100%;
+    direction: rtl;
+}
+.register-login {
+    display: flex;
+    flex-wrap: wrap;
+}
+.register-login > div.agancy-register {
+    flex: 0 0 50%;
+    padding: 40px 20px;
+    background: #030271;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+.register-login > div{
+    text-align: center;
+}
+.register-login > div h3 {
+    font-size: 19px;
+    margin-top: 25px;
+}
+.register-login > div.agancy-register h3 {
+    color: white;
+}
+.register-login > div.agancy-register a {
+    background: white;
+    color: #030271;
+    padding: 7px 30px;
+    margin-top: 25px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+.register-login > div > span, .register-login > div > span svg {
+    width: 100px;
+    height: 100px;
+}
+.register-login > div a {
+    background: #030273;
+    color: white;
+    padding: 7px 30px;
+    margin-top: 25px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+.register-login > div.user-register > span svg {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 12px;
+}
+.register-login > div {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 40px 20px;
+}
+a:hover{
+    text-decoration: none !important;
+}

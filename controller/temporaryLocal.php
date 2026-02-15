@@ -37,6 +37,7 @@ class temporaryLocal extends clientAuth {
         $check_private = $this->getController('configFlight')->checkConfigStatusSpecificAirline($data_check_status_airline);
         $isForeignAirline = $this->getController('airline')->isForeignAirline($data_temporary['Airline_IATA']);
         $isCounter = $this->getController('login')->isCounter();
+        $isCounter = json_decode($isCounter);
         $isSafar360 = functions::isSafar360();
 
         $calculate_price_change = array(
@@ -124,7 +125,7 @@ class temporaryLocal extends clientAuth {
             $price_type['TotalPrice'] =  $price[$key]['TotalPrice'];
 
             $price_type['BasePrice']  =   $price[$key]['BasePrice'];
-            if ($calculate_price_change['price'] > 0 && ($flight_type == 'charter' || ($type_zone == 'Portal' && $source_id !='8' && $source_id !='16' && $source_id !='12')
+            if ($calculate_price_change['price'] > 0 && ($flight_type == 'charter' || ($type_zone == 'Portal')
                     || in_array($source_id, $arraySourceIncreasePriceFlightSystem)) && $price_type['TotalPrice'] > 0) {
 
                 if($check_private=='public' && $source_id =='14' && $type_zone == 'Portal'){
@@ -181,12 +182,12 @@ class temporaryLocal extends clientAuth {
                 } elseif ($check_private == 'public' && $flight_type == 'system') {
                     $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price_type['Commission'] * ($discount['off_percent'] / 100)));
                 } elseif ($check_private == 'private' && $flight_type == 'system') {
-                    $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price_type['BasePrice'] * ($discount['off_percent'] / 100)));
+                    $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - ($price[$key]['CommisionPrice'] * ($discount['off_percent'] / 100)));
                 }
             }
             elseif ($flight_type == 'system' && !$foreignAirline && $type_zone == 'Portal') {
                 $price[$key]['has_discount'] = 'yes';
-                $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - (($price_type['Commission'] * $discount['off_percent']) / 100));
+                $price[$key]['TotalPriceWithDiscount'] = round($price[$key]['TotalPrice'] - (($price[$key]['CommisionPrice'] * $discount['off_percent']) / 100));
             }
             $origin_price_total_after_change = $price[$key]['TotalPrice'];
             $origin_price_discount_total_after_change = $price[$key]['TotalPriceWithDiscount'];

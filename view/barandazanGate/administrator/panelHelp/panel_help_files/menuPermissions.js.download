@@ -1,0 +1,215 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- Switchery برای سطح دسترسی عملیات ---
+  var opsElems = Array.prototype.slice.call(document.querySelectorAll('.operation-checkbox'));
+  opsElems.forEach(function(el) {
+    new Switchery(el, {
+      size: 'small',
+      color: '#00c292',         // سبز روشن
+      secondaryColor: '#ED5565' // قرمز خاموش
+    });
+    updateSwitcheryColor(el, '#00c292', '#ED5565');
+  });
+
+  // --- Switchery برای منوها ---
+  var menuElems = Array.prototype.slice.call(document.querySelectorAll('.parent-checkbox, .child-checkbox, .subchild-checkbox'));
+  menuElems.forEach(function(el) {
+    new Switchery(el, { size: 'small', color: '#1AB394', secondaryColor: '#ED5565' });
+    updateSwitcheryColor(el, '#1AB394', '#ED5565');
+  });
+
+  // --- باز و بسته کردن زیرمنوها ---
+  document.querySelectorAll('.toggle-collapse').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      const target = document.querySelector(this.dataset.target);
+      target.classList.toggle('collapse');
+    });
+  });
+
+  // --- کنترل تغییر parent ---
+  // --- کنترل تغییر parent ---
+  document.querySelectorAll('.parent-checkbox').forEach(function(parent){
+    parent.addEventListener('change', function(){
+      var idMember = $("#idMember").val();
+      var isAccess = this.checked ? 1 : 0;
+      var idMenu = $(this).data("id");
+
+      toggleAccess(idMember, idMenu, isAccess);
+      updateSwitcheryColor(this);
+
+      // پیدا کردن تمام child و subChildهای داخل همان card
+      // داخل parent-checkbox handler
+      var card = this.closest('.card');
+      if(card){
+        var childCheckboxes = card.querySelectorAll('.child-checkbox');
+        childCheckboxes.forEach(function(child){
+          $(child).prop('checked', isAccess);
+          updateSwitcheryColor(child);
+          toggleAccess(idMember, $(child).data('id'), isAccess);
+
+          // همه subChildهای داخل همان child
+          var subChildrenContainer = child.parentElement.querySelectorAll('.subchild-checkbox');
+          subChildrenContainer.forEach(function(subChild){
+            $(subChild).prop('checked', isAccess);
+            updateSwitcheryColor(subChild);
+            toggleAccess(idMember, $(subChild).data('id'), isAccess);
+          });
+        });
+      }
+
+    });
+  });
+
+  // --- کنترل تغییر child ---
+  $(document).on('change', '.child-checkbox', function(){
+    var child = $(this);
+    // پیدا کردن parent واقعی
+    var parentCheckbox = child.closest('.mb-3, .p-2').parent().siblings('.d-flex').find('.parent-checkbox').first();
+
+    if(parentCheckbox.length && !parentCheckbox.prop('checked') && child.prop('checked')){
+      child.prop('checked', false);
+      updateSwitcheryColor(child[0]);
+      $.toast({
+        heading: 'هشدار',
+        text: 'ابتدا سرگروه را روشن کنید',
+        position: 'top-right',
+        loaderBg: '#fff',
+        icon: 'warning',
+        hideAfter: 3000,
+        textAlign: 'right',
+        stack: false
+      });
+      return;
+    }
+
+    var idMember = $("#idMember").val();
+    var idMenu = child.data("id");
+    var isAccess = child.prop('checked') ? 1 : 0;
+    toggleAccess(idMember, idMenu, isAccess);
+    updateSwitcheryColor(child[0]);
+
+    // همگام‌سازی subChild
+    child.closest('.mb-3, .p-2').find('.subchild-checkbox').each(function(){
+      $(this).prop('checked', isAccess);
+      updateSwitcheryColor(this);
+      toggleAccess(idMember, $(this).data('id'), isAccess);
+    });
+  });
+
+  // --- کنترل تغییر subChild ---
+  $(document).on('change', '.subchild-checkbox', function(){
+    var subChild = $(this);
+    var childCheckbox = subChild.closest('.p-2, .mb-3').find('.child-checkbox').first();
+    var parentCheckbox = childCheckbox.closest('.collapse').siblings('.d-flex').find('.parent-checkbox').first();
+
+    if((childCheckbox.length && !childCheckbox.prop('checked')) || (parentCheckbox.length && !parentCheckbox.prop('checked'))){
+      subChild.prop('checked', false);
+      updateSwitcheryColor(subChild[0]);
+      $.toast({
+        heading: 'هشدار',
+        text: 'ابتدا سرگروه و سرگروه میانی را روشن کنید',
+        position: 'top-right',
+        loaderBg: '#fff',
+        icon: 'warning',
+        hideAfter: 3000,
+        textAlign: 'right',
+        stack: false
+      });
+      return;
+    }
+
+    var idMember = $("#idMember").val();
+    var idMenu = subChild.data("id");
+    var isAccess = subChild.prop('checked') ? 1 : 0;
+    toggleAccess(idMember, idMenu, isAccess);
+    updateSwitcheryColor(subChild[0]);
+  });
+
+  // --- کنترل تغییر سطح دسترسی عملیات ---
+  $("#saveOperationAccess").on("click", function () {
+    let userId = $("#idMember").val();
+    let role = $("#roleMember").val();
+    let canInsert = $("#perm_insert").is(":checked") ? 1 : 0;
+    let canUpdate = $("#perm_update").is(":checked") ? 1 : 0;
+    let canDelete = $("#perm_delete").is(":checked") ? 1 : 0;
+
+    $.ajax({
+      url: amadeusPath + 'user_ajax.php',
+      type: "POST",
+      data: {
+        flag: "setUserPermissions",
+        user_id: userId,
+        role:role,
+        can_insert: canInsert,
+        can_update: canUpdate,
+        can_delete: canDelete
+      },
+      success: function (res) {
+        var parts = res.split(':');
+        var status = parts[0];
+        var message = parts[1] ? parts[1] : "پاسخی دریافت نشد";
+
+        $.toast({
+          heading: 'تغییر دسترسی عملیات',
+          text: message,
+          position: 'top-right',
+          loaderBg: '#fff',
+          icon: (status === "Success") ? 'success' : 'error',
+          hideAfter: 3000,
+          textAlign: 'right'
+        });
+      },
+      error: function () {
+        $.toast({
+          heading: 'خطا',
+          text: 'خطا در ذخیره سطح دسترسی عملیات',
+          position: 'top-right',
+          loaderBg: '#fff',
+          icon: 'error',
+          hideAfter: 3000,
+          textAlign: 'right'
+        });
+      }
+    });
+  });
+
+});
+
+// --- توابع کمکی ---
+function toggleAccess(idMember, idMenu, isAccess){
+  $.ajax({
+    url: amadeusPath + 'user_ajax.php',
+    type: "POST",
+    data: {
+      flag: "StatusMenuCounter",
+      idMember: idMember,
+      idMenu: idMenu,
+      isAccess: isAccess
+    },
+    success: function(response){
+      var res = response.split(':');
+      console.log(res[1]);
+      /*$.toast({
+        heading: 'تغییر دسترسی',
+        text: res[1],
+        position: 'top-right',
+        loaderBg: '#fff',
+        icon: (response.indexOf("Success") > -1) ? 'success' : 'error',
+        hideAfter: 3000,
+        textAlign: 'right'
+      });*/
+    }
+  });
+}
+
+function updateSwitcheryColor(checkbox, colorOn = '#1AB394', colorOff = '#ED5565'){
+  var switchery = checkbox.nextSibling;
+  if(switchery && switchery.classList.contains('switchery')){
+    var checked = checkbox.checked;
+    switchery.style.backgroundColor = checked ? colorOn : colorOff;
+    switchery.style.borderColor = checked ? colorOn : colorOff;
+    var small = switchery.querySelector('small');
+    if(small){ small.style.left = checked ? '20px' : '0px'; }
+  }
+}

@@ -1,0 +1,243 @@
+{load_presentation_object filename="lottery" assign="lottery"}
+
+
+{assign var="section" value=$smarty.get.section}
+
+
+<style>
+    .imageThumb{
+        width:100% !important;
+        height: 60%;
+        margin-bottom:10px;
+    }
+
+    .dropzone-radio-shakhes{
+        display:none !important;
+    }
+
+    .dropzone-parent-box{
+        margin-top:10px !important;
+        margin-bottom:0px !important;
+
+    }
+    .dropzone-btn-trash {
+        font-size: 0 !important;
+        width:0 !important;
+        justify-content:center;
+        margin-bottom:0 !important;
+        border:none !important;
+        background:white;
+        padding:0;
+        height: 0;
+    }
+    .dropzone-btn-trash i{
+        color: #a40000;
+        margin-top: 6px;
+        margin-right: 10px;
+    }
+    .dropzone-parent-trash-shakkhes{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        flex-direction: row;
+        width:100% !important;
+    }
+    .dropzone-btn-trash i{
+        margin-left:0 !important;
+    }
+    #preview-gallery{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:3px;
+    }
+</style>
+
+<link rel="stylesheet" src="assets/css/select2.css">
+<link rel="stylesheet" src="assets/css/lottery.css">
+
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <ol class="breadcrumb FloatRight">
+                <li><a href="{$smarty.const.ROOT_ADDRESS_WITHOUT_LANG}/itadmin/admin">خانه</a></li>
+
+                    <li>
+                        <a href="{$smarty.const.ROOT_ADDRESS_WITHOUT_LANG}/itadmin/lottery/list?section={$section}">
+                            لیست قرعه کشی ها
+                        </a>
+                    </li>
+
+
+                    <li class="active">درج قرعه کشی جدید</li>
+
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <form data-toggle="validator" method="post" id="insertNewArticle" enctype='multipart/form-data'>
+            <input type="hidden" name="className" value="lottery">
+            <input type="hidden" name="method" value="InsertLottery">
+            <input type="hidden" name="section" value="{$section}">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="d-flex flex-wrap gap-10">
+
+
+                    <div class="bg-white d-flex flex-wrap rounded w-100 ">
+                        <div class='d-flex justify-content-between align-content-center flex-wrap w-100'>
+                            <h4 class='d-flex flex-wrap font-bold m-0 py-3 px-4'>اطلاعات پایه</h4>
+                        </div>
+
+                        <hr class='m-0 mb-4 w-100'>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label" for="title">عنوان Title</label>
+                                <input type="text" class="form-control" name="title" id="title"
+                                       placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label" for="content">توضیحات</label>
+                                <textarea name="description" class="ckeditor form-control"
+                                          placeholder="توضیحات"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="d-flex flex-wrap gap-10">
+
+
+                    <div class=" d-flex bg-white d-flex flex-wrap rounded w-100 ">
+                        <div class='d-flex justify-content-between align-content-center flex-wrap w-100'>
+                            <h4 class='align-items-center d-flex flex-wrap font-bold gap-10 m-0 px-4 py-3'>
+                              آپلود جوایز
+                            </h4>
+                            <span class='btn btn-info btn-outline fa fa-question-circle font-16 ml-3 my-3 p-2 rounded-max tooltip-info'
+                                  data-toggle="tooltip" data-placement="top" title=""
+                                  data-original-title="تصاویر خود را انتخاب یا در کادر بکشید"></span>
+                        </div>
+
+
+                        <hr class='m-0 mb-4 w-100'>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for='gallery_files'
+                                   id="drop_zone"
+                                   class='d-flex flex-wrap justify-content-center align-items-center border-dashed border-primary p-5 w-100'
+                                   ondrop="dropHandler(event,true);"
+                                   ondragover="dragOverHandler(event);">
+                                <p>تصاویر خود را انتخاب یا در کادر بکشید</p>
+                            </label>
+                        </div>
+
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="d-flex flex-wrap form-group gap-5 w-100">
+                                <label for="gallery_files" class="control-label d-none">انتخاب فایل ها</label>
+                                <input onchange="dropHandler(event,true)" type='file' accept="image/*,pdf"
+                                       class=' d-none'
+                                       multiple name='gallery_files[]' id='gallery_files'>
+
+                                <div id='preview-gallery'></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="bg-white d-flex flex-wrap rounded w-100 ">
+                        <div class='d-flex justify-content-between align-content-center flex-wrap w-100'>
+                            <h4 class='align-items-center d-flex flex-wrap font-bold gap-10 m-0 px-4 py-3'>
+                                تصویر شاخص
+                            </h4>
+                            <span class='btn btn-info btn-outline fa fa-question-circle font-16 ml-3 my-3 p-2 rounded-max tooltip-info'
+                                  data-toggle="tooltip" data-placement="top" title=""
+                                  data-original-title=" تصویر اصلی این مقاله"></span>
+                        </div>
+
+
+                        <hr class='m-0 mb-4 w-100'>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group selected_image">
+                                <label for="cover_image">تصویر شاخص </label>
+                                <input type="file" class="form-control-file dropify" name="cover_image"
+                                       id="cover_image"
+                                       data-default-file="">
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <div class='col-12 d-flex align-items-center justify-content-center w-100 parentbtn-btn-fixed'>
+                <button class="btn btn-success btn-block btn-fixed insert-btn" type="submit">ذخیره</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/select2.min.js"></script>
+<script type="text/javascript" src="assets/JsFiles/lottery.js"></script>
+
+   <script src="assets/js/mag-jquery-dropzone.js"></script>
+<script type="text/javascript">
+
+
+
+   function getCategoryChange(selectObject) {
+      // alert(selectObject.value)
+      var value = selectObject.value
+      document.getElementById("lang_cat").value = value
+      // console.log(value);
+      alert(value)
+   }
+
+   /* function rebuildGallery(added_files) {
+  const gallery_preview= $('#gallery_preview');
+      gallery_preview.html('')
+      added_files.forEach(function(item){
+
+        gallery_preview.append('<img class="col-md-3" src="'+item.dataURL+'" />')
+
+      })
+    }*/
+
+   /* let added_files = []
+   myDropzone.on("thumbnail", function(file, dataURL) {
+
+      console.log("file", file)
+      added_files.push(file)
+
+
+   })
+
+   function setAsSelectedImage(_this, file_name) {
+      const selectedImageName = $("input[name=\"selectedImageName\"]")
+      const selectedImageRow = $("input[name=\"selectedImageRow\"]")
+
+      $("#previews").find(".btn-actions").each(function() {
+         $(this).find(".btn-primary").addClass("btn-outline")
+      })
+      _this.removeClass("btn-outline")
+      selectedImageName.val(file_name)
+   } */
+
+   $(document).ready(function() {
+
+   })
+</script>

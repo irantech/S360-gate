@@ -1205,8 +1205,12 @@ class parvazBookingLocal extends apiLocal
 
                $CabinType = $info['cabin_type'];
 
-               $Fee = functions::FeeCancelFlight($info['airline_iata'], $CabinType);
-
+//               $Fee = functions::FeeCancelFlight($info['airline_iata'], $CabinType);
+                 $params = [
+                     'airline_iata'=>$info['airline_iata'],
+                     'cabin_type'=>$CabinType
+                 ];
+               $Fee = Load::controller( 'cancellationFeeSetting' )->feeByAirlineAndCabinTypeNew($params);
                $Price = '0';
                if (functions::TypeUser($info['member_id']) == 'Ponline') {
                    $Price = functions::CalculateDiscountOnePerson($info['request_number'], ($info['passenger_national_code'] == '0000000000' || $info['passenger_national_code'] == '' ? $info['passportNumber'] : $info['passenger_national_code']), 'yes');
@@ -1689,44 +1693,42 @@ class parvazBookingLocal extends apiLocal
                                                     <div style="font-size: 19px ; color: #000; margin-top: -20px" class="divborderPoint">
                                                         جدول جرائم کنسلی
                                                     </div>
-<?php } ?>
-                                                    <table width="100%" align="center" cellpadding="5" cellspacing="0" style="margin:10px;" border="1"
-                                                           class="solidBorder">
+                                       <?php } ?>
+                                                     <table width="100%" align="center" cellpadding="5" cellspacing="0" style="margin:10px;" border="1" class="solidBorder">
                                                        <?php if($_GET['lang'] == 'fa'){ ?>
 
-                                                      <tr class="cancellationPolicy-tableHead">
-                                                        <td class="cancellationPolicy-c1">کلاس پروازی</td>
-                                                        <td class="cancellationPolicy-c2">تا 12 ظهر 3 روز قبل از پرواز</td>
-                                                        <td class="cancellationPolicy-c3">تا 12 ظهر 1 روز قبل از پرواز</td>
-                                                        <td class="cancellationPolicy-c4">تا 3 ساعت قبل از پرواز</td>
-                                                        <td class="cancellationPolicy-c5">تا 30 دقیقه قبل از پرواز</td>
-                                                        <td class="cancellationPolicy-c6">از 30 دقیقه قبل پرواز به بعد</td>
-                                                      </tr>
+                                                          <tr class="cancellationPolicy-tableHead">
+                                                             <td class="cancellationPolicy-c1">کلاس پروازی</td>
+                                                              <?php foreach($Fee['data'] as $item): ?>
+                                                                 <td class="cancellationPolicy-title"><?php echo $item['title']; ?></td>
+                                                              <?php endforeach; ?>
+                                                          </tr>
                                                       <?php } else { ?>
 
-                                                       <tr class="cancellationPolicy-tableHead">
-                                                        <td class="cancellationPolicy-c1">Flight class</td>
-                                                        <td class="cancellationPolicy-c2">Until 12 noon 3 days before flight</td>
-                                                        <td class="cancellationPolicy-c3">Until 12 noon 1 day before flight</td>
-                                                        <td class="cancellationPolicy-c4">Up to 3 hours before flight</td>
-                                                        <td class="cancellationPolicy-c5">Up to 30 minutes before flight</td>
-                                                        <td class="cancellationPolicy-c6">From 30 minutes before the flight onwards</td>
-                                                      </tr>
+                                                          <tr class="cancellationPolicy-tableHead">
+                                                             <td class="cancellationPolicy-c1">کلاس پروازی</td>
+                                                              <?php foreach($Fee['data'] as $item): ?>
+                                                                 <td class="cancellationPolicy-title"><?php echo $item['title_en']; ?></td>
+                                                              <?php endforeach; ?>
+                                                          </tr>
 
                                                       <?php }  ?>
-                                                      <tr>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['TypeClass'] ?></td>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['ThreeDaysBefore'] ?>%</td>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['OneDaysBefore'] ?>%</td>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['ThreeHoursBefore'] ?>%</td>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['ThirtyMinutesAgo'] ?>%</td>
-                                                        <td class="cancellationPolicy-title"><?php echo $Fee['OfThirtyMinutesAgoToNext'] ?>%</td>
-                                                      </tr>
+                                                        <tr>
+                                                           <td class="cancellationPolicy-title"><?php echo $Fee['TypeClass']; ?></td>
+                                                            <?php foreach($Fee['data'] as $item): ?>
+                                                            <?php if($_GET['lang'] == 'fa'){ ?>
+                                                               <td class="cancellationPolicy-title"><?php echo $item['fine_text']; ?></td>
+                                                            <?php } else { ?>
+                                                            <td class="cancellationPolicy-title"><?php echo $item['fine_text_en']; ?></td>
+                                                                <?php } ?>
+                                                            <?php endforeach; ?>
+
+                                                        </tr>
                                                     </table>
                                                   </div>
-                           <?php }
+                           <?php } else { ?>
 
-                       else { ?>
+
                                                   <div class="divborder" style="margin: auto 100px">
                                                         <?php if($_GET['lang'] == 'fa'){ ?>
 
@@ -1736,7 +1738,7 @@ class parvazBookingLocal extends apiLocal
                        <?php } ?>
                                                     <table width="100%" align="center" cellpadding="5" cellspacing="0" style="margin:10px;" border="1"
                                                            class="solidBorder">
-                                    <?php if($_GET['lang'] == 'fa'){ ?>
+                                                <?php if($_GET['lang'] == 'fa'){ ?>
 
                                                       <tr class="cancellationPolicy-tableHead">
                                                         <td class="cancellationPolicy-c1">کلاس پروازی</td>

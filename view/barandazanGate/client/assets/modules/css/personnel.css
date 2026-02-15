@@ -1,0 +1,194 @@
+
+/*@font-face {*/
+/*    font-family: 'yekanbakhBold';*/
+/*    src: url("../fonts/yekanbakhBold/Yekan-Bakh-FaNum-06-Bold.woff") format("woff");*/
+/*    font-weight: bold;*/
+/*    font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'yekanbakhmedium';*/
+/*    src: url("../fonts/yekanbakhmedium/Yekan-Bakh-FaNum-05-Medium.woff") format("woff");*/
+/*}*/
+/*:root{*/
+/*    --mainColor: #850707;*/
+/*    --secondColor: #1f2a31;*/
+
+/*}*/
+/*body{*/
+/*    font-family: 'yekanbakhmedium', sans-serif !important;*/
+/*    overflow-x: hidden;*/
+/*    direction: rtl;*/
+/*    padding: 0;*/
+/*    background: #fff !important;*/
+/*    line-height: 24px;*/
+/*    text-align: right;*/
+/*    color: #4B5259 !important;*/
+/*}*/
+.parent-personnal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.item-personnal{
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ccc;
+    background: #fdfdfd;
+}
+.personnal-img{
+    width: 240px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.personnal-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*! background: red; */
+}
+.social-personnal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.social-personnal a svg{
+    width: 20px;
+    fill: #908f8f;
+}
+.social-personnal a{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*! background: #3c3837; */
+    border-radius: 50%;
+    transition: all ease .3s;
+}
+.personnal-text h3{
+    color: #444;
+    text-align: center;
+    /*font-family: 'yekanbakhBold';*/
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.personnal-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color:#4B5259 ;
+    text-align: center;
+}
+.parent-personnal-description{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.personnal-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.personnal{
+    padding: 70px 0;
+}
+.personnal-post{
+    font-size: 14px;
+    color: #626262;
+}
+.personnal-job{
+    font-size: 15px;
+    color: #3c3c3c;
+}
+.social-personnal a:hover{
+    transform: translateY(-5px);
+}
+.personnal-responsive{
+    display: none !important;
+}
+
+@media (max-width:991px) {
+    .personnal-img{
+        width: 100%;
+        height: 206px;
+    }
+    .owl-personnal .owl-stage-outer .owl-stage .owl-item{
+        height: 100%;
+    }
+    .owl-personnal .owl-stage-outer .owl-stage .owl-item .item{
+        height: 100%;
+    }
+    .owl-personnal .owl-stage-outer .owl-stage{
+        height: 100%
+    }
+    .owl-personnal .owl-stage-outer{
+        height: 100%
+    }
+    .personnal-responsive .owl-personnal{
+        height: 100%
+    }
+    .personnal-responsive{
+        display: block !important;
+    }
+    .personnal{
+        display: none;
+    }
+    .owl-personnal .owl-nav button{
+        width: 40px !important;
+        height: 40px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 1em !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all ease .3s !important;
+        background: #fff !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    .owl-personnal .owl-nav button svg{
+        width: 10px;
+        fill: #777;
+        transition: all ease .3s;
+    }
+    .owl-personnal .owl-nav .owl-next {
+        left: -14px;
+        right: unset !important;
+    }
+    .owl-personnal .owl-nav .owl-prev{
+        right: -14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .owl-personnal .owl-nav button{
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .owl-personnal .owl-nav .owl-prev {
+        right: -10px;
+    }
+    .owl-personnal .owl-nav .owl-next {
+        left: -10px;
+    }
+    .personnal-text{
+        gap: 15px;
+    }
+    .item-personnal{
+        gap: 15px;
+    }
+    .personnal-text h3{
+        font-size: 20px;
+    }
+}

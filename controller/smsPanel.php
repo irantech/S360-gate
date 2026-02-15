@@ -314,6 +314,7 @@ class smsPanel
     public function getGroupReports($type)
     {
 
+
         $sendType = filter_var($type, FILTER_SANITIZE_STRING);
 
         if($sendType == 'manual'){
@@ -324,13 +325,19 @@ class smsPanel
 
         $Model = Load::library('Model');
         $query = "SELECT report.*,
-                        blt.pnr as pnr_number,
-                        (SELECT COUNT(id) FROM sms_reports_tb WHERE sameID = report.sameID) AS totalSend,
-                        (SELECT COUNT(id) FROM sms_reports_tb WHERE sameID = report.sameID AND sendStatus = '1') AS succeedSend,
-                        (SELECT COUNT(id) FROM sms_reports_tb WHERE sameID = report.sameID AND sendStatus != '1') AS failedSend
-                  FROM sms_reports_tb AS report
-                   left join book_local_tb blt on report.request_number = blt.request_number 
-                   WHERE report.sendType = '{$sendType}' GROUP BY report.sameID ORDER BY report.creationDateInt DESC";
+                   blt.pnr as pnr_number
+            FROM sms_reports_tb AS report
+            LEFT JOIN book_local_tb blt 
+                ON report.request_number = blt.request_number
+            WHERE report.sendType = '{$sendType}'
+            AND report.id = (
+                SELECT MAX(id)
+                FROM sms_reports_tb
+                WHERE sameID = report.sameID
+            )
+            ORDER BY report.creationDateInt DESC
+            LIMIT 50
+";
 
 
         return $Model->select($query);

@@ -1992,8 +1992,445 @@ class ModalCreator extends clientAuth {
 
 
 
+      public function ModalShowBookForCip($Param, $type) {
+          $objbook = Load::controller($this->Controller);
+          $ticketsInfo = functions::info_cip_directions($Param);
+          ?>
+
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">جزئیات خرید تشریفات فرودگاه</h4>
+               </div>
+
+               <div class="modal-body">
+
+                   <?php if (empty($ticketsInfo)) { ?>
+                      <div class="text-center" style="padding:20px; color:#999;">
+                         اطلاعاتی برای نمایش موجود نیست.
+                      </div>
+                   <?php } else { ?>
+
+                       <?php
+                       // اطلاعات اصلی تور/پرواز/هتل از اولین آیتم
+                       $first = $ticketsInfo[0];
+                       ?>
+
+                      <!-- مشخصات کاربر -->
+                      <div class="row mb-3 section-row">
+                         <div class="col-md-12 text-center text-bold text-danger section-title">مشخصات کاربر</div>
+                         <div class="col-md-4"><strong>نام و نام خانوادگی:</strong> <?= isset($first['member_name']) ? $first['member_name'] : '-' ?></div>
+                         <div class="col-md-4"><strong>شماره موبایل:</strong> <?= isset($first['member_mobile']) ? $first['member_mobile'] : '-' ?></div>
+                         <div class="col-md-4"><strong>ایمیل:</strong> <?= isset($first['member_email']) ? $first['member_email'] : '-' ?></div>
+                      </div>
+
+                      <!-- مشخصات پرداخت -->
+                      <div class="row mb-3 section-row">
+                         <div class="col-md-12 text-center text-bold text-danger section-title">مشخصات پرداخت</div>
+                         <div class="col-md-4"><strong>تاریخ پرداخت:</strong> <?= !empty($first['payment_date']) ? functions::set_date_payment($first['payment_date']) : 'پرداخت نشده' ?></div>
+                         <div class="col-md-4"><strong>نوع پرداخت:</strong>
+                             <?php
+                             if($first['payment_type']=='cash') echo 'نقدی';
+                             else if($first['payment_type']=='credit' || $first['payment_type']=='member_credit') echo 'اعتباری';
+                             else echo '-';
+                             ?>
+                         </div>
+                         <div class="col-md-4"><strong>کد پیگیری بانک:</strong> <?= !empty($first['tracking_code_bank']) ? $first['tracking_code_bank'] : '-' ?></div>
+                      </div>
+
+                      <!-- مشخصات رفت و برگشت -->
+                      <div class="row mb-3 section-row">
+                         <div class="col-md-12 text-center text-bold text-danger section-title">اطلاعات سفر</div>
+                         <div class="col-md-4"><strong>تاریخ و ساعت :</strong> <?= $first['date_time'] ?></div>
+                         <div class="col-md-4"><strong>نام ایرلاین:</strong> <?= $first['airline_name'].' ('.$first['airline_iata'].')' ?></div>
+                         <div class="col-md-4"><strong>فرودگاه:</strong> <?= $first['airport_code'].' ('.$first['airport_code'].')' ?></div>
+                         <div class="col-md-4"><strong>شماره پرواز:</strong> <?= $first['flight_number'] ?></div>
+                      </div>
+
+                      <!-- اطلاعات تشریفات -->
+                      <div class="row mb-3 section-row">
+                         <div class="col-md-12 text-center text-bold text-danger section-title">اطلاعات تشریفات</div>
+                         <div class="col-md-4"><strong>نام :</strong> <?= $first['cip_name'] ?></div>
+                         <div class="col-md-4"><strong>فرودگاه:</strong> <?= $first['airport_code_cip'] ?></div>
+                         <div class="col-md-4">
+                            <strong>نوع پرواز :</strong>
+                             <?= $first['flight_type'] === "inbound"
+                                 ? "پرواز ورودی به فرودگاه"
+                                 : "پرواز خروجی از فرودگاه (" .
+                                 ($first['trip_type'] === 'international'
+                                     ? "پرواز بین المللی"
+                                     : "پرواز داخلی")
+                                 . ")"
+                             ?>
+                         </div>
+                      </div>
 
 
+                      <!-- مشخصات مسافران -->
+                      <div class="row mb-3 section-row">
+                         <div class="col-md-12 text-center text-bold text-danger section-title">مشخصات مسافران</div>
+
+                          <?php foreach($ticketsInfo as $passenger) { ?>
+                             <div class="col-md-4" style="margin-bottom:10px;">
+                                <div style="border:1px solid #cbd5e1; border-radius:8px; padding:12px; background:#eef2ff;">
+                                   <strong>نام و نام خانوادگی:</strong> <?= trim((isset($passenger['passenger_name']) ? $passenger['passenger_name'] : '').' '.(isset($passenger['passenger_family']) ? $passenger['passenger_family'] : '')) != '' ? trim((isset($passenger['passenger_name']) ? $passenger['passenger_name'] : '').' '.(isset($passenger['passenger_family']) ? $passenger['passenger_family'] : '')) : '-' ?><br>
+
+                                   <strong>تولد:</strong> <?= isset($passenger['passenger_birthday']) && $passenger['passenger_birthday'] != '' ? implode('-', array_reverse(explode('-', $passenger['passenger_birthday']))) : '-' ?><br>
+
+                                   <strong>کد ملی:</strong> <?= isset($passenger['passenger_national_code']) && $passenger['passenger_national_code'] != '' ? $passenger['passenger_national_code'] : '-' ?><br>
+
+                                   <strong>شماره پاسپورت:</strong> <?= isset($passenger['passportNumber']) && $passenger['passportNumber'] != '' ? $passenger['passportNumber'] : '-' ?><br>
+
+                                   <strong>رده سنی:</strong> <?= isset($passenger['passenger_age']) && $passenger['passenger_age'] != '' ? $passenger['passenger_age'] : '-' ?><br>
+
+                                   <strong>انقضا پاسپورت</strong> <?= isset($passenger['passportExpire']) && $passenger['passportExpire'] != '' ? $passenger['passportExpire'] : '-' ?><br>
+
+                                   <strong>جنیست</strong> <?= isset($passenger['PassengerTitle']) && ($passenger['PassengerTitle'] == 'MS' || $passenger['PassengerTitle'] == 'MISS')  ? 'زن' : 'مرد' ?><br>
+                                </div>
+                             </div>
+                          <?php } ?>
+                      </div>
+                   <?php } ?>
+
+               </div>
+
+               <div class="modal-footer site-bg-main-color"></div>
+            </div>
+         </div>
+
+         <style>
+             .modal-content {
+                 border-radius: 10px;
+                 overflow: hidden;
+                 background: #ffffff;
+                 border: 1px solid #f87171; /* قرمز ملایم */
+                 box-shadow: 0 8px 20px rgba(248, 113, 113, 0.3);
+             }
+
+             .modal-header {
+                 background: #f03c52; /* قرمز رسمی */
+                 color: #ffffff !important;
+                 padding: 15px 20px;
+                 border-bottom: 1px solid #b91c1c;
+             }
+
+             .modal-header .close {
+                 color: #ffffff;
+                 opacity: 1;
+                 font-size: 1.4rem;
+             }
+
+             .modal-title {
+                 font-weight: bold;
+                 font-size: 1.15rem;
+                 letter-spacing: 0.5px;
+                 color: #ffff;
+             }
+
+             .modal-body {
+                 background: #fff5f5; /* پس‌زمینه قرمز روشن */
+                 padding: 20px;
+                 max-height: 75vh;
+                 overflow-y: auto;
+             }
+
+             .row.section-row {
+                 padding: 12px 15px;
+                 border-radius: 6px;
+                 background: #ffffff;
+                 border: 1px solid #f87171; /* خطوط قرمز */
+                 margin-bottom: 12px;
+                 transition: background 0.2s ease, transform 0.2s ease;
+             }
+
+             .row.section-row:hover {
+                 background: #fee2e2; /* هایلایت روشن قرمز */
+                 transform: translateY(-2px);
+             }
+
+             .section-title {
+                 font-size: 1.05rem;
+                 margin-bottom: 10px;
+                 font-weight: 600;
+                 background: linear-gradient(to right, #f87171, #b91c1c);
+             }
+
+             hr {
+                 border: none;
+                 margin: 12px 0;
+             }
+
+             .modal-footer {
+                 background: #f87171; /* پایینه رسمی قرمز */
+                 height: 12px;
+                 border-top: 1px solid #dc2626;
+             }
+
+             /* کارت مسافران */
+             .passenger-card {
+                 border: 1px solid #f87171;
+                 border-radius: 8px;
+                 padding: 12px;
+                 margin-bottom: 10px;
+                 background: #fff5f5;
+                 transition: background 0.2s ease, transform 0.2s ease;
+             }
+
+             .passenger-card:hover {
+                 background: #fee2e2;
+                 transform: translateY(-2px);
+             }
+
+             /* Scrollbar */
+             .modal-body::-webkit-scrollbar {
+                 width: 8px;
+             }
+
+             .modal-body::-webkit-scrollbar-thumb {
+                 background: #f03c52;
+                 border-radius: 10px;
+             }
+
+             .modal-body::-webkit-scrollbar-track {
+                 background: #ffe4e4;
+             }
+
+             /* آیکون‌ها */
+             .fa-user, .fa-child {
+                 margin-right: 4px;
+             }
+             .ent-grid {
+                 display: grid;
+                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                 gap: 12px;
+             }
+
+             .ent-item {
+                 border: 1px solid #cbd5e1;
+                 border-radius: 8px;
+                 padding: 10px;
+                 background: #eef2ff;
+                 text-align: center;
+             }
+
+             .ent-title {
+                 font-weight: 600;
+                 margin-bottom: 6px;
+             }
+
+             .ent-price {
+                 font-size: 0.95rem;
+                 color: #14532d;
+                 font-weight: 500;
+             }
+
+         </style>
+
+
+          <?php
+      }
+
+      public function ModalShowBookForServiceCip($Param, $type) {
+          $objbook = Load::controller($this->Controller);
+          $ticketsInfo = functions::info_cip_directions($Param);
+          ?>
+
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">سرویس های خریداری شده</h4>
+               </div>
+
+               <div class="modal-body">
+
+                   <?php if (empty($ticketsInfo)) { ?>
+                      <div class="text-center" style="padding:20px; color:#999;">
+                         اطلاعاتی برای نمایش موجود نیست.
+                      </div>
+                   <?php } else { ?>
+
+
+
+                         <div class="col-md-12">
+                             <?php
+                             if (!empty($ticketsInfo[0]['service_data_json'])) {
+
+                                 $entData = json_decode($ticketsInfo[0]['service_data_json'], true);
+                                 if (is_array($entData) && count($entData)) {
+
+                                     echo '<div class="ent-grid">';
+
+                                     foreach ($entData as $ent) {
+
+                                         $title = isset($ent['CipName']) && $ent['CipName'] != ''
+                                             ? $ent['CipName']
+                                             : 'بدون نام';
+
+                                         $price = isset($ent['Price']) && $ent['Price'] != ''
+                                             ? number_format($ent['Price'])
+                                             : '0';
+
+                                         echo '<div class="ent-item">';
+                                         echo '<div class="ent-title">'.$title.'</div>';
+                                         echo '<div class="ent-price">'.$price.' ریال</div>';
+                                         echo '<div class="ent-price">'.$ent["ServiceInputAnswer"].' </div>';
+                                         echo '</div>';
+                                     }
+
+                                     echo '</div>';
+
+                                 } else {
+                                     echo '<span style="color:#888">بدون سرویس</span>';
+                                 }
+
+                             } else {
+                                 echo '<span style="color:#888">بدون سرویس</span>';
+                             }
+                             ?>
+                         </div>
+                      </div>
+
+
+                   <?php } ?>
+
+               </div>
+
+            </div>
+         </div>
+
+         <style>
+             .modal-content {
+                 border-radius: 10px;
+                 overflow: hidden;
+                 background: #ffffff;
+                 border: 1px solid #f87171; /* قرمز ملایم */
+                 box-shadow: 0 8px 20px rgba(248, 113, 113, 0.3);
+             }
+
+             .modal-header {
+                 background: #f03c52; /* قرمز رسمی */
+                 color: #ffffff !important;
+                 padding: 15px 20px;
+                 border-bottom: 1px solid #b91c1c;
+             }
+
+             .modal-header .close {
+                 color: #ffffff;
+                 opacity: 1;
+                 font-size: 1.4rem;
+             }
+
+             .modal-title {
+                 font-weight: bold;
+                 font-size: 1.15rem;
+                 letter-spacing: 0.5px;
+                 color: #ffff;
+             }
+
+             .modal-body {
+                 background: #fff5f5; /* پس‌زمینه قرمز روشن */
+                 padding: 20px;
+                 max-height: 75vh;
+                 overflow-y: auto;
+             }
+
+             .row.section-row {
+                 padding: 12px 15px;
+                 border-radius: 6px;
+                 background: #ffffff;
+                 border: 1px solid #f87171; /* خطوط قرمز */
+                 margin-bottom: 12px;
+                 transition: background 0.2s ease, transform 0.2s ease;
+             }
+
+             .row.section-row:hover {
+                 background: #fee2e2; /* هایلایت روشن قرمز */
+                 transform: translateY(-2px);
+             }
+
+             .section-title {
+                 font-size: 1.05rem;
+                 margin-bottom: 10px;
+                 font-weight: 600;
+                 background: linear-gradient(to right, #f87171, #b91c1c);
+             }
+
+             hr {
+                 border: none;
+                 margin: 12px 0;
+             }
+
+             .modal-footer {
+                 background: #f87171; /* پایینه رسمی قرمز */
+                 height: 12px;
+                 border-top: 1px solid #dc2626;
+             }
+
+             /* کارت مسافران */
+             .passenger-card {
+                 border: 1px solid #f87171;
+                 border-radius: 8px;
+                 padding: 12px;
+                 margin-bottom: 10px;
+                 background: #fff5f5;
+                 transition: background 0.2s ease, transform 0.2s ease;
+             }
+
+             .passenger-card:hover {
+                 background: #fee2e2;
+                 transform: translateY(-2px);
+             }
+
+             /* Scrollbar */
+             .modal-body::-webkit-scrollbar {
+                 width: 8px;
+             }
+
+             .modal-body::-webkit-scrollbar-thumb {
+                 background: #f03c52;
+                 border-radius: 10px;
+             }
+
+             .modal-body::-webkit-scrollbar-track {
+                 background: #ffe4e4;
+             }
+
+             /* آیکون‌ها */
+             .fa-user, .fa-child {
+                 margin-right: 4px;
+             }
+             .ent-grid {
+                 display: grid;
+                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                 gap: 12px;
+             }
+
+             .ent-item {
+                 border: 1px solid #cbd5e1;
+                 border-radius: 8px;
+                 padding: 10px;
+                 background: #eef2ff;
+                 text-align: center;
+             }
+
+             .ent-title {
+                 font-weight: 600;
+                 margin-bottom: 6px;
+             }
+
+             .ent-price {
+                 font-size: 0.95rem;
+                 color: #14532d;
+                 font-weight: 500;
+             }
+
+         </style>
+
+
+          <?php
+      }
 
       #endregion
 	#region ModalTrackingCancelTicketAdmin
@@ -3561,9 +3998,10 @@ class ModalCreator extends clientAuth {
 	#endregion
 	#region FinalConfirm
 
-	public function FinalConfirm($Param, $id, $ClientId) {
-       $request_number = $Param['RequestNumber'];
-       $pnr = $Param['pnr'];
+     public function FinalConfirm($Param, $id, $ClientId) {
+      $request_number = $Param['RequestNumber'];
+      $pnr = $Param['pnr'];
+
 
        $listCancel = Load::controller('listCancel');
 		$Cancel = $listCancel->InfoCancelTicket($request_number, $id, $ClientId);
@@ -3578,44 +4016,46 @@ class ModalCreator extends clientAuth {
 
 			 }elseif($Cancel[0]['flight_type'] == 'charter'){
 			    $TotalPrice = functions::TotalPriceNetTicketCharter($Cancel);
-
+			    
 			   $indemnityPrice = round(functions::CalculatePenaltyPriceCancelCharter($TotalPrice, $Cancel[0]));
 
-
+			   
 			 }
 		}elseif($Cancel[0]['TypeCancel'] == 'bus'){
 
 		    $admin = Load::controller('admin');
-		    $priceBusSql = "SELECT * FROM book_bus_tb WHERE order_code='{$Param}'";
+		    $priceBusSql = "SELECT * FROM book_bus_tb WHERE order_code='{$request_number}'";
 		    $priceBookBus = $airlineClientCharter = $admin->ConectDbClient($priceBusSql, $ClientId, "Select", "", "", "");
 
 		    $indemnityPrice = ($priceBookBus['price_api']-($priceBookBus['price_api']*($Cancel[0]['PercentIndemnity']/100))) ;
 
 		}elseif($Cancel[0]['TypeCancel'] == 'insurance'){
         $admin = Load::controller('admin');
-        $priceInsuranceSql = "SELECT * FROM book_insurance_tb WHERE factor_number='{$Param}'";
+        $priceInsuranceSql = "SELECT * FROM book_insurance_tb WHERE factor_number='{$request_number}'";
         $priceBookInsurance = $airlineClientCharter = $admin->ConectDbClient($priceInsuranceSql, $ClientId, "Select", "", "", "");
         $indemnityPrice = ($priceBookInsurance['base_price']-($priceBookInsurance['base_price']*($Cancel[0]['PercentIndemnity']/100))) ;
     }elseif($Cancel[0]['TypeCancel'] == 'hotel'){
         $admin = Load::controller('admin');
-        $priceHotelSql = "SELECT * FROM book_hotel_local_tb WHERE factor_number='{$Param}'";
+        $priceHotelSql = "SELECT * FROM book_hotel_local_tb WHERE factor_number='{$request_number}'";
         $priceBookHotel = $airlineClientCharter = $admin->ConectDbClient($priceHotelSql, $ClientId, "Select", "", "", "");
         $indemnityPrice = ($priceBookHotel['total_price']-($priceBookHotel['total_price']*($Cancel[0]['PercentIndemnity']/100))) ;
     }
+
 		?>
 		<div class="modal-dialog modal-lg">
 
 			<!-- Modal content-->
 			<div class="modal-content">
-            <div class="modal-header site-bg-main-color">
-            <div style="display:flex; gap:5px;">
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-               <h4 class="modal-title">تعیین مبلغ کنسلی </h4>
+				<div class="modal-header site-bg-main-color">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+               <div style="display:flex; gap:5px;">
+					<h4 class="modal-title">تعیین مبلغ کنسلی </h4>
 
-               <h4 class="modal-title"> (<?php echo $request_number; ?>) </h4>
+					<h4 class="modal-title"> (<?php echo $request_number; ?>) </h4>
 
-               <h4 class="modal-title">(<?php echo $pnr; ?>)</h4>
-            </div>
+					<h4 class="modal-title">(<?php echo $pnr; ?>)</h4>
+               </div>
+				</div>
 				<div class="modal-body">
 
 					<div class="row">
@@ -3625,10 +4065,10 @@ class ModalCreator extends clientAuth {
 								<label for="DescriptionClient" class="PercentLabel">تعیین مبلغ
 									<small>(شما میتوانید مبلغ استرداد مربوط را در اینجا وارد نمائید)</small>
 								</label>
-                        <input class="form-control" id="PriceIndemnity"
-                               placeholder="مبلغ مورد نظر را به ریال  وارد نمائید"
+								<input class="form-control" id="PriceIndemnity"
+								       placeholder="مبلغ مورد نظر را به ریال  وارد نمائید"
                                onkeyup="javascript:separator(this);"
-                               value="<?php echo number_format($indemnityPrice);?>">
+								       value="">
 							</div>
 						</div>
 
@@ -3639,7 +4079,7 @@ class ModalCreator extends clientAuth {
 				<div class="modal-footer site-bg-main-color">
 
 					<button type="button" class="btn btn-primary  pull-left"
-					        onclick="SendPriceForCalculate('<?php echo $Param; ?>', '<?php echo $id; ?>', '<?php echo $ClientId ?>')">
+					        onclick="SendPriceForCalculate('<?php echo $request_number; ?>', '<?php echo $id; ?>', '<?php echo $ClientId ?>')">
 						ارسال اطلاعات
 					</button>
 
@@ -9591,8 +10031,10 @@ public function ModalVisaShowSms($params){
                           <th scope="col"><?php echo functions::Xmlinformation("Name") ?></th>
                           <th scope="col"><?php echo functions::Xmlinformation("Nationalnumber") ?></th>
                           <th scope="col"><?php echo functions::Xmlinformation("Passport") ?></th>
-                          <th scope="col"><?php echo functions::Xmlinformation("DateOfBirth") ?></th>
-                          <th scope="col"><?php echo functions::Xmlinformation("Age") ?></th>
+                           <?php if($param2 != 'flight'){ ?>
+                               <th scope="col"><?php echo functions::Xmlinformation("DateOfBirth") ?></th>
+                               <th scope="col"><?php echo functions::Xmlinformation("Age") ?></th>
+                           <?php } ?>
                           <th scope="col"><?php echo functions::Xmlinformation("Status") ?></th>
                         </tr>
                       </thead>
@@ -9620,8 +10062,9 @@ public function ModalVisaShowSms($params){
                             <th><?php echo $info['passenger_name'] . ' ' . $info['passenger_family']; ?></th>
                             <th><?php echo $info['passenger_national_code']; ?></th>
                             <th><?php echo $info['passportNumber']; ?></th>
-                            <th><?php echo (!empty($info['passenger_birthday'])) ? $info['passenger_birthday'] : $info['passenger_birthday_en'] ?></th>
-                            <th><?php
+                            <?php if($param2 != 'flight'){ ?>
+                              <th><?php echo (!empty($info['passenger_birthday'])) ? $info['passenger_birthday'] : $info['passenger_birthday_en'] ?></th>
+                              <th><?php
                                   switch ($info['passenger_age']) {
 
                                       case 'Adt':
@@ -9637,6 +10080,7 @@ public function ModalVisaShowSms($params){
                                           break;
                                   }
                                   ?></th>
+                            <?php } ?>
                             <th>
                               <?php
                               if (!empty($info['Status']) && !empty($NationalCodeUser) && $info['Status'] != 'Nothing') {

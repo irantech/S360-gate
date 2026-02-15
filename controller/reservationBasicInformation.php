@@ -595,7 +595,7 @@ class reservationBasicInformation extends clientAuth {
 
         $dateNow = dateTimeSetting::jdate("Ymd", '', '', '', 'en');
         $sql = "SELECT 
-              C.id, C.name, C.name_en , T.tour_pic , T.start_date, T.origin_country_id, T.origin_city_id , C.abbreviation
+              C.id, C.name, C.name_en , T.tour_pic , T.start_date, T.origin_country_id, T.origin_city_id , C.abbreviation, C.pic as pic
           FROM
               reservation_country_tb AS C
               INNER JOIN reservation_tour_rout_tb AS TR ON C.id=TR.destination_country_id

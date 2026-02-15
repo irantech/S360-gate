@@ -1,0 +1,107 @@
+.content-whatever-special-pages{
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border-radius: 8px;
+    background: #fff;
+    padding: 15px;
+    transition: all ease .3s;
+}
+.special-pages-div{
+    text-align: right;
+    padding: 40px 0;
+}
+.head-special-pages *{
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.head-special-pages{
+    margin-bottom: 15px;
+}
+.content-whatever-special-pages p{
+    line-height: 32px;
+    font-size: 14px;
+}
+.parent-attachments-special-pages{
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    border-radius: 8px;
+    background: #fff;
+    padding: 15px;
+    transition: all ease .3s;
+}
+.card-img-attachments-special-pages{
+    background: #f3f4f6;
+    border: 1px solid rgba(210,214,222,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all ease .3s;
+}
+
+.card-img-attachments-special-pages i{
+    font-size: 30px;
+    color: #334155;
+    font-weight: bold;
+    transition: all ease .3s;
+}
+.card-link-attachments-special-pages{
+    color: #3b82f6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    transition: all ease .3s;
+}
+
+.card-attachments-special-pages{
+    transition: all ease .3s;
+}
+.card-attachments-special-pages:hover .card-link-attachments-special-pages{
+    text-decoration: none;
+    color: #000;
+}
+.card-attachments-special-pages:hover .card-img-attachments-special-pages{
+    text-decoration: none;
+    background: #fff;
+    border-color: #ccc;
+}
+.card-attachments-special-pages:hover .card-img-attachments-special-pages i{
+    color: #000;
+}
+
+@media (max-width: 991px ) {
+    .card-attachments-special-pages{
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    .card-link-attachments-special-pages{
+        margin-top: 0;
+        padding: 10px;
+    }
+    .card-img-attachments-special-pages{
+        border-radius: 8px 8px 0 0;
+        border: none;
+    }
+    .card-attachments-special-pages:hover .card-img-attachments-special-pages{
+        background: #f3f4f6;
+    }
+    .parent_box_right img{
+        height: auto !important;
+    }
+}
+.owl-gallery-page .owl-gallery-img{
+    height: 140px !important;
+}
+.owl-gallery-page{
+    margin-bottom: 20px;
+}
+.parent_box_right img{
+    width: 100% ;
+    height: 400px ;
+    border-radius: 8px;
+    object-fit: cover;
+}

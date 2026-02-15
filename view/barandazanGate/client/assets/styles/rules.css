@@ -1,0 +1,129 @@
+.nav-link.active{
+    color: #fff !important;
+}
+li.nav-link{
+    background-color: #ffffff !important;
+    color: #3f3f3f !important;
+}
+.after-border{
+    width: 100%;
+    vertical-align: middle;
+    align-items: center;
+    text-align: start;
+    display: flex;
+}
+.after-border:after{
+    content: "";
+    border-bottom: 1px solid #ededed;
+    line-height: 0.1em;
+    margin-right: 18px;
+    flex: 1 1 auto;
+
+}
+.p-sticky{
+    position: sticky;
+    top: 90px;
+}
+
+.header_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.box_rules{
+    padding:1rem;
+    border-radius:10px;
+    border:1px solid #ccc;
+    background:#fff;
+}
+
+.box_rules .nav-link{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    color:#555;
+    border-radius:10px;
+    transition: all .3s;
+    padding: 0.6rem 1rem;
+}
+.box_rules > ul > li:last-child .nav-link {
+    margin-bottom: 0;
+}
+.box_rules .nav-link > span{
+    font-size: 18px;
+    margin-left: 1rem;
+}
+.box_rules .nav-link.active{
+    border-color:transparent
+}
+.title_rules{
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+.title_rules span{
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-left: 1rem;
+}
+.mb-1rem{
+    margin-bottom:1rem
+}
+.box_rules .card_rules{
+    padding: 0 !important;
+    background:transparent !important;
+}
+.box_rules .card_rules > h5{
+    padding: 0.6rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.box_rules .card_rules > h5{
+    background: #f9f9f9;
+    translate: all .3s ;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+    white-space: normal;
+}
+.box_rules .card_rules > h5.collapsed{
+    background: none;
+    translate: all .3s ;
+    border-bottom: 1px solid transparent;
+
+}
+.box_rules .card_rules > h5 > span{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #999;
+    transform:rotate(0) !important;
+    translate: all .3s !important;
+}
+.box_rules .card_rules > h5.collapsed > span{
+    translate: all .3s !important;
+    transform:rotate(180deg) !important;
+}
+.box_rules .card-header{
+    border-bottom:none !important
+}
+.box_rules .card{
+    border-radius:10px;
+    border-color: #ddd
+}

@@ -1,0 +1,103 @@
+
+
+.bus-ticket-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 5px;
+    z-index: -1;
+}
+.bus-ticket-detail .path-information__trace {
+    flex: 1 1 auto;
+    display: block;
+    margin: 0;
+    padding: 10px 0 0;
+    position: relative;
+    text-align: center;
+}
+.bus-ticket-detail .path-information__trace span {
+    font-size: .85rem;
+}
+.bus-ticket-detail .path-information__trace span, .bus-ticket-detail .path-information__trace time {
+    display: block;
+}
+.bus-ticket-detail .path-information__trace:not(.start)::before {
+    content: " ";
+    position: absolute;
+    right: calc(50% - 5px);
+    top: -7px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 1px solid #646464;
+    border-top-color: rgb(100, 100, 100);
+    border-right-color: rgb(100, 100, 100);
+    border-bottom-color: rgb(100, 100, 100);
+    border-left-color: rgb(100, 100, 100);
+    border-radius: 50%;
+}
+.bus-ticket-detail .path-information__trace:not(.start)::before {
+    content: " ";
+    position: absolute;
+    right: calc(50% - 5px);
+    top: -7px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 1px solid #646464;
+    border-radius: 50%;
+}
+.bus-ticket-detail .path-information__trace span {
+    font-size: .85rem;
+}
+.bus-ticket-detail .path-information__trace.end span, .bus-ticket-detail .path-information__trace.start span {
+    font-weight: 700;
+}
+.bus-ticket-detail .path-information__trace.path-destination {
+    border-top: 2px dotted #646464;
+    text-align: left;
+}
+.bus-ticket-detail .path-information__trace.end span, .bus-ticket-detail .path-information__trace.path-destination span {
+    text-align: left;
+}
+
+
+.bus-ticket-detail .path-information__trace.start {
+    text-align: right;
+}
+.bus-ticket-detail .path-information__trace.start::before {
+    content: " ";
+    position: absolute;
+    right: -5px;
+    top: -11px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    background: #f9fafe;
+    color: #646464;
+    box-shadow: 0 0 0 3px #aaa;
+    margin: 5px;
+}
+.bus-ticket-detail .path-information__trace.end {
+    text-align: left;
+    margin-left: -6px;
+}
+.bus-ticket-detail .path-information__trace.end::before {
+    right: calc(100% - 10px);
+    background: #646464;
+    border-color: transparent;
+}
+.bus-ticket-detail .path-information__trace.path-destination::before {
+    right: calc(100% - 10px);
+    content: " ";
+    position: absolute;
+    top: -11px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    box-shadow: 0 0 0 1px #aaa;
+    margin: 5px;
+}
+.bus-ticket-detail .path-information__trace.end, .bus-ticket-detail .path-information__trace.start {
+    border-top: 2px solid #646464;
+}

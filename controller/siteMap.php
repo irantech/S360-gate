@@ -87,9 +87,9 @@ class siteMap extends clientAuth
 
         }
         }
-//        else{
-//            return self::returnJson(false, 'شما امکان ایجاد سایت مپ را ندارید، لطفا با پشتیبانی تماس بگیرید', null, 500);
-//        }
+       else{
+           return self::returnJson(false, 'شما دسترسی ایجاد سایت مپ را ندارید، لطفا با پشتیبانی تماس بگیرید', null, 500);
+       }
 
 
 

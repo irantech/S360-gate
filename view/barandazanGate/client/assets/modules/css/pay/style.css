@@ -1,0 +1,510 @@
+
+/*@font-face {*/
+/*    font-family: 'yekanbakhBold';*/
+/*    src: url("../fonts/yekanbakhBold/Yekan-Bakh-FaNum-06-Bold.woff") format("woff");*/
+/*    font-weight: bold;*/
+/*    font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'yekanbakhmedium';*/
+/*    src: url("../fonts/yekanbakhmedium/Yekan-Bakh-FaNum-05-Medium.woff") format("woff");*/
+/*}*/
+/*:root{*/
+/*    --mainColor: blue;*/
+/*    --secondColor: #1f2a31;*/
+/*}*/
+body{
+    /*font-family: 'yekanbakhmedium', sans-serif !important;*/
+    overflow-x: hidden;
+    direction: rtl;
+    padding: 0;
+    background: #f7f7f7 !important;
+    line-height: 24px;
+    text-align: right;
+    color: #4B5259 !important;
+}
+.parent-pay{
+   display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /*! margin-top: 50px; */
+    overflow: hidden;
+    /*! height: 500px; */
+    position: relative;
+}
+.parent-img{
+    width: 100%;
+    background: #f7f7fc;
+    height: 100% !important;
+    /*! overflow: hidden; */
+}
+.parent-img img{
+    width: 100%;
+    height: 100%;
+}
+.parent-form-pay form{
+    /*! width: 100%; */
+    /*! height: 100%; */
+    /*! padding: 70px 90px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.parent-form-pay form input{
+    width: 100%;
+    height: 48px;
+    color: #333;
+    background: #f9f9f9;
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 0 12px;
+    caret-color: #999;
+    border: 1px solid #eee;
+}
+.parent-form-pay{
+    padding: 40px 90px 3px;
+    display: flex;
+    flex-direction: column;
+}
+.parent-form-pay h2{
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 4px;
+}
+.parent-form-pay #factor_bank h4{
+    display: none;
+}
+.main-banks-logo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.bank-logo{
+}
+.bank-logo > input{
+    display: none!important;
+}
+.bank-logo > input:checked ~ label{
+    border: 2px solid #1c76ec;
+    border-bottom: 5px solid #1c76ec;
+    transition: all .3s;
+}
+.bank-logo > label{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: all .3s;
+}
+.bank-logo > label > img{
+    width: 100% !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.parent-form-pay p{
+    color: #777;
+}
+.login-captcha span {
+    background: #f9f9f9;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 8px !important;
+    height: 48px;
+    border: 1px solid #eee;
+}
+.login-captcha.gds-l-r-error input {
+    min-width: 100px !important;
+    width: 200px;
+    background: #f9f9f9;
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+    direction: ltr;
+    color: #333;
+    transition: all linear 0.3s;
+    text-align: right;
+    height: 38px;
+    border: none;
+}
+.login-captcha span img {
+    max-height: 38px;
+    width: 115px;
+    border-radius: 8px;
+}
+.login-captcha #captchaRefresh {
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MS4yMzYgNDkxLjIzNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkxLjIzNiA0OTEuMjM2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTUuODksMjYyLjgxOGMtMy0yNi0wLjUtNTEuMSw2LjMtNzQuM2MyMi42LTc3LjEsOTMuNS0xMzMuOCwxNzcuNi0xMzQuOHYtNTAuNGMwLTIuOCwzLjUtNC4zLDUuOC0yLjZsMTAzLjcsNzYuMiAgICBjMS43LDEuMywxLjcsMy45LDAsNS4xbC0xMDMuNiw3Ni4yYy0yLjQsMS43LTUuOCwwLjItNS44LTIuNnYtNTAuM2MtNTUuMywwLjktMTAyLjUsMzUtMTIyLjgsODMuMmMtNy43LDE4LjItMTEuNiwzOC4zLTEwLjUsNTkuNCAgICBjMS41LDI5LDEyLjQsNTUuNywyOS42LDc3LjNjOS4yLDExLjUsNywyOC4zLTQuOSwzN2MtMTEuMyw4LjMtMjcuMSw2LTM1LjgtNUM3NC4xOSwzMzAuNjE4LDU5Ljk5LDI5OC4yMTgsNTUuODksMjYyLjgxOHogICAgIE0zNTUuMjksMTY2LjAxOGMxNy4zLDIxLjUsMjguMiw0OC4zLDI5LjYsNzcuM2MxLjEsMjEuMi0yLjksNDEuMy0xMC41LDU5LjRjLTIwLjMsNDguMi02Ny41LDgyLjQtMTIyLjgsODMuMnYtNTAuMyAgICBjMC0yLjgtMy41LTQuMy01LjgtMi42bC0xMDMuNyw3Ni4yYy0xLjcsMS4zLTEuNywzLjksMCw1LjFsMTAzLjYsNzYuMmMyLjQsMS43LDUuOCwwLjIsNS44LTIuNnYtNTAuNCAgICBjODQuMS0wLjksMTU1LjEtNTcuNiwxNzcuNi0xMzQuOGM2LjgtMjMuMiw5LjItNDguMyw2LjMtNzQuM2MtNC0zNS40LTE4LjItNjcuOC0zOS41LTk0LjRjLTguOC0xMS0yNC41LTEzLjMtMzUuOC01ICAgIEMzNDguMjksMTM3LjcxOCwzNDYuMDksMTU0LjUxOCwzNTUuMjksMTY2LjAxOHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    opacity: 0.5;
+    background-size: contain !important;
+    width: 18px;
+    /*margin: 0 5px;*/
+    transition: all ease .3s;
+}
+.login-captcha #captchaRefresh:hover{
+    transform: rotate(180deg);
+}
+#captchaRefresh {
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../images/refresh.png) no-repeat center center;
+    background-size: auto;
+    margin: 4px 0px 0;
+}
+#signup-captcha2:focus{
+    border: none !important;
+}
+.btn-form{
+    background: #242424;
+    color: #fff;
+    border: 1px solid #242424;
+    border-radius: 20px;
+    padding: 7px 50px;
+    margin-top: 12px;
+}
+.parent-form-pay form input:focus{
+    outline: none;
+    border: 1px solid #444;
+    box-shadow: none;
+}
+.owl-carousel.owl-rtl,.owl-carousel .owl-stage-outer,.owl-carousel .owl-item,.owl-carousel .item{
+    width: 100%;
+    height: 100%;
+    /*! overflow: hidden; */
+}
+.pay{
+    margin: 2rem 0;
+}
+.owl-pay.owl-rtl .owl-item{
+    padding: 0;
+}
+.owl-pay .owl-stage{
+    height: 100%;
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    /*.parent-form-pay{*/
+    /*    padding: ;*/
+    /*}*/
+}
+
+@media (max-width: 991px) {
+    .parent-img{
+        display: none;
+    }
+    .parent-form-pay{
+        padding: 40px 90px;
+    }
+    .parent-pay{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .login-captcha.gds-l-r-error input{
+        width: 330px;
+    }
+    .item-form{
+        width: 100%;
+    }
+}
+@media (max-width: 769px) {
+    .custom-radio{
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .parent-form-pay{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 30px 10px;
+    }
+    .login-captcha.gds-l-r-error input{
+        width: 200px !important;
+    }
+    .item-form{
+        width: 100%;
+    }
+    .bank_style-new{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+}
+
+
+.capchaShow label {
+    float: left;
+}
+
+#captchaRefresh {
+    background-size: contain !important;
+    width: 30px !important;
+    height: 30px;
+    background: url(../../../images/refresh.png) no-repeat center center;
+    background-image: url("../../../images/refresh.png");
+    background-size: auto;
+    background-image: url("../../../images/refresh.png");
+    background-size: auto;
+
+}
+
+
+.itemCapcha a {
+    text-align: left;
+    float: left;
+    margin: 7px 0 0 16px;
+}
+.itemCapcha label {
+    float: left;
+    display: block;
+    position: absolute;
+    color: #d53232;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+
+@media (max-width: 576px) {
+    .itemCapcha {
+        width: 100%;
+    }
+    .itemCapcha a {
+        text-align: left;
+        float: left;
+    }
+}
+.item-input label.error{
+    color: red !important;
+    order: 2;
+}
+.error-tracking {
+    color: #ca3434;
+    font-size: 12px;
+    margin: 0 10px 0 0;
+}
+.parent-form-pay form textarea:focus{
+    outline: none;
+    border: 1px solid #444;
+    box-shadow: none;
+}
+.login-captcha.gds-l-r-error input:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+.parent-form-pay form textarea {
+    width: 100%;
+    height: 48px;
+    color: #333;
+    background: #f9f9f9;
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 3px 12px;
+    caret-color: #999;
+    border: 1px solid #eee;
+}
+/*error*/
+.error {
+    color: #CB4721;
+    font-size: 14px;
+    margin-top: -15px;
+}
+.result-pay {
+    margin: 20px 0;
+}
+.result-pay {
+    border-radius: 5px;
+    margin: 30px 0 0 0;
+}
+.bank_style{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 20px 0;
+}
+.show-info-payment {
+    width: 100%;
+    height: 48px;
+    color: #777;
+    background: #f9f9f9;
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 14px;
+    padding: 0 12px;
+    caret-color: #999;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 10px 0;
+    position: relative;
+}
+#resultName,#resultMobile,#resultPrice{
+    font-size: 17px;
+    color: #222;
+}
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #2196F3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.custom-radio{
+    display: inline-block;
+}
+.custom-radio input {
+    display: none;
+}
+.radio-btn {
+    width: 110px;
+    height: 110px;
+    /*border: 3px solid transparent;*/
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 3px #f9f9f966;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.svg-check {
+    fill: #fff;
+    background-color: green;
+    width: 20px;
+    position: absolute;
+    bottom: -8px;
+    left: 94%;
+    transform: translateX(-50%) scale(2);
+    border-radius: 50px;
+    padding: 3px;
+    transition: 0.5s;
+    pointer-events: none;
+    opacity: 0;
+}
+.radio-btn .hobbies-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.radio-btn .hobbies-icon img {
+    display: block;
+    width: 50px;
+}
+.hobbies-icon span{
+    color: #444;
+    font-size: 16px;
+}
+.custom-radio input:checked + .radio-btn > svg {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+.custom-radio input:checked + .radio-btn {
+    border: 2px solid green;
+}
+.bank_style-new{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+.riyal{
+    position: absolute;
+    top: 22%;
+    left: 15px;
+    color: #888;
+}
+.parent-pay-last{
+    background: #f9f9f9;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 20px !important;
+    height: 48px;
+    border: 1px solid #eee;
+    justify-content: space-between;
+    position: relative;
+}
+.riyals{
+    position: absolute;
+    top: 11px;
+    left: 170px;
+    color: #888;
+}
+.parent-pay-last input{
+    min-width: 100px !important;
+    width: 200px;
+    background: #f9f9f9;
+    outline: none;
+    border-radius: 4px;
+    font-size: 20px;
+    direction: ltr;
+    color: #000;
+    transition: all linear 0.3s;
+    text-align: right;
+    height: 38px;
+    border: none;
+    padding-right: 8px;
+}
+.parent-pay-last button{
+    background: #242424;
+    color: #fff;
+    border: 1px solid #242424;
+    border-radius: 20px;
+    padding: 7px 50px;
+}
+.parent-pay-last input:focus{
+    border: none;
+    outline: none;
+}
+#showResult>.show-info-payment:first-child{
+    margin-top: 1px;
+}
+
+
+.pay-error {
+    display: block !important;
+    font-size: 15px;
+    padding: 5px;
+    margin: 20px;
+    line-height: 25px;
+    clear: both !important;
+}
+.pay-error p {
+    color: #e1283f;
+}
+.error-exp {
+    color: #f20404;
+}

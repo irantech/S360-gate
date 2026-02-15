@@ -1,0 +1,21 @@
+.banner-slider{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 991px) {
+    .banner-slider{
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-slider{
+        height: 172px !important;
+    }
+}

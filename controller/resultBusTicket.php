@@ -1298,8 +1298,6 @@ class resultBusTicket extends apiBus
 
         $busDetail=parent::busDetail($jsonData);
 
-
-
         if($this->checkApiSuccessfulStatus($busDetail)){
 
             $temporaryBusModel=$this->getModel('temporaryBusModel');
@@ -1333,6 +1331,7 @@ class resultBusTicket extends apiBus
                 $dataInsert['base_company'] = $busDetail['response']['data']['baseCompany'];
                 $dataInsert['description'] = $busDetail['response']['data']['description'];
                 $dataInsert['refundRules'] = json_encode($busDetail['response']['data']['refundRules'], true);
+
                 $dataInsert['seates'] = json_encode($busDetail['response']['data']['seates'], true);
                 $temporaryBusModel->insertWithBind($dataInsert);
                 $resultInsert=$temporaryBusModel->get()->where('requestNumber',$data['requestNumber'])->find();

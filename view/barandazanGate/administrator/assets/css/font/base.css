@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "yekan";
+    font-style: normal;
+    font-weight: normal;
+    src: url("web/persian/Yekan/Yekan.woff?#iefix") format("embedded-opentype"),
+    url("web/persian/Yekan/Yekan.woff") format("woff"),
+    url("web/persian/Yekan/Yekan.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "yekan-number";
+    font-style: normal;
+    font-weight: normal;
+    src: url("web/persian/Yekan/number.woff?#iefix") format("embedded-opentype"),
+    url("web/persian/Yekan/number.woff") format("woff"),
+    url("web/persian/Yekan/number.ttf") format("truetype");
+}
+
+
+
+.yn{
+    font-family: yekan !important;
+    font-size: 12px;
+}
+
+html, body, h1 , h2 , h3 , h4 , h5 , h6{
+    font-family:yekan !important;
+}
+
+
+

@@ -16,6 +16,7 @@ class airline extends clientAuth
     public $listCientCharter = array();
     public $listCientSystem = array();
     public $clientActiveCharter = array();
+
     /**
      * @var array
      */
@@ -32,6 +33,17 @@ class airline extends clientAuth
     public function airLineList()
     {
         return $this->getModel('airlineModel')->get(['id', 'name_fa', 'name_en', 'abbreviation', 'active' , 'foreignAirline'], true)->all();
+    }
+
+    public function airLineListJson()
+    {
+        $data = $this->getModel('airlineModel')
+            ->get(['id', 'name_fa', 'name_en', 'abbreviation', 'active', 'foreignAirline'], true)
+            ->all();
+
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+        exit;
     }
 
     #endregion
@@ -82,7 +94,7 @@ class airline extends clientAuth
     public function getAll()
     {
         $airline = Load::model('airline');
-        $this->list = $airline->getAll();
+        $this->list = $airline->getAllOrderByiata();
     }
 
 //    ================Airline iata codes ===========================
@@ -154,279 +166,6 @@ class airline extends clientAuth
         $result = $model->delete($condition);
         return $result;
     }
-
-
-    //    ================Airline fare(کلاس نرخی) class ===========================
-    //    ================Airline fine(جریمه) changes ============================
-    public function add_airlineFine($params){
-        $Model = load::library('ModelBase');
-        $package_data['airline_iata_id'] = $params['airline_uniqe_iata'];
-        $Model->setTable('airline_fine_package_tb');
-        $last_package_id = $Model->insertWithBind($package_data);
-        $fineData = $params['FineData'];
-        $class_fare_ids = $params['class_fare_ids'];
-        $result = $this->insert_fine_rate($last_package_id,$fineData,$class_fare_ids);
-        if($result){
-            return $this->returnJson(true, "پکیج نرخی با موفقیت اضافه گردید");
-        }
-        return  $this->returnJson(false, "عملیات با خطا مواجه شد",  null, 500);
-
-    }
-    public function edit_airlineFine($params){
-
-        $package_id = $params['package_id'];
-        $airline_uniqe_iata = $params['airline_uniqe_iata'];
-        $data['airline_iata_id'] = $airline_uniqe_iata;
-        $Model = load::library('ModelBase');
-        $condition = "id = $package_id";
-        $Model->setTable('airline_fine_package_tb');
-        $Model->updateWithBind($data,$condition);
-        $Model->setTable('airline_fine_percentage_tb');
-        $condition = "fine_package_id = $package_id";
-        $Model->delete($condition);
-        $Model->setTable('airline_fine_class_fare_tb');
-        $Model->delete($condition);
-        $fineData = $params['FineData'];
-        $class_fare_ids = $params['class_fare_ids'];
-        $result = $this->insert_fine_rate($package_id,$fineData,$class_fare_ids);
-        if($result){
-            return $this->returnJson(true, "پکیج نرخی با موفقیت تغییر گردید");
-        }
-        return  $this->returnJson(false, "عملیات با خطا مواجه شد",  null, 500);
-    }
-    public function remove_airlineFine($param){
-        $package_id = $param['id'];
-        $data['status'] = 'disable';
-        $Model = load::library('ModelBase');
-        $condition = "id = $package_id";
-        $Model->setTable('airline_fine_package_tb');
-        $result =  $Model->updateWithBind($data,$condition);
-        if($result){
-            return $this->returnJson(true, "پکیج نرخی با موفقیت حذف گردید");
-        }
-        return  $this->returnJson(false, "عملیات با خطا مواجه شد",  null, 500);
-    }
-    private function insert_fine_rate($package_id,$fineData,$class_fare_ids){
-
-        $Model = load::library('ModelBase');
-        $result=[];
-        foreach ($fineData as $fine){
-            $Model->setTable('airline_fine_percentage_tb');
-
-            $data = array();
-            $data['fine_package_id'] = $package_id;
-            if($fine['from_day_date'] != '')
-            $data['from_day_date'] = $fine['from_day_date'] ;
-            if($fine['from_hour_date'] != '')
-            $data['from_hour_date'] = $fine['from_hour_date'] ;
-            if($fine['until_day_date'] != '')
-            $data['until_day_date'] = $fine['until_day_date'] ;
-            if($fine['until_hour_date'] != '')
-            $data['until_hour_date'] = $fine['until_hour_date'] ;
-            if($fine['fine_percentage'] != '')
-            $data['fine_percentage'] = $fine['fine_percentage'] ;
-
-            $Model->insertWithBind($data);
-        }
-        foreach ($class_fare_ids as $class_fare_id){
-            $Model->setTable('airline_fine_class_fare_tb');
-            $nestedData = array();
-            $nestedData['class_fare_id'] = $class_fare_id;
-            $nestedData['fine_package_id'] = $package_id;
-            $result = $Model->insertWithBind($nestedData);
-        }
-        return $result;
-    }
-
-
-    public function airlineFineList()
-    {
-        $Model = load::library('ModelBase');
-
-        $sql = "
-    SELECT
-        afpt.id AS package_id,
-        asi.id as airline_iata_id,
-        asi.airline_name,
-        asi.airline_uniqe_iata,
-        afpt.status AS package_status,
-        (
-            SELECT CONCAT('[', GROUP_CONCAT(CONCAT(
-                '{\"class_id\":', afct.id,
-                ',\"class_name\":\"', REPLACE(afct.class_name, '\"', '\\\"'), '\"}'
-            )), ']')
-            FROM airline_fine_class_fare_tb afcft
-            INNER JOIN airline_fare_class_tb afct 
-                ON afct.id = afcft.class_fare_id
-            WHERE afcft.fine_package_id = afpt.id
-        ) AS fare_classes,
-        (
-            SELECT CONCAT('[', GROUP_CONCAT(CONCAT(
-                '{\"from_day\":', IF(afpt2.from_day_date IS NULL, 'null', afpt2.from_day_date),
-                ',\"from_hour\":', IF(afpt2.from_hour_date IS NULL, 'null', afpt2.from_hour_date),
-                ',\"until_day\":', IF(afpt2.until_day_date IS NULL, 'null', afpt2.until_day_date),
-                ',\"until_hour\":', IF(afpt2.until_hour_date IS NULL, 'null', afpt2.until_hour_date),
-                ',\"fine_percentage\":', IF(afpt2.fine_percentage IS NULL, 'null', afpt2.fine_percentage),
-                '}'
-            )), ']')
-            FROM airline_fine_percentage_tb afpt2
-            WHERE afpt2.fine_package_id = afpt.id
-        ) AS fine_percentages
-    FROM airline_fine_package_tb afpt
-    INNER JOIN airline_standard_iata asi 
-        ON asi.id = afpt.airline_iata_id
-    WHERE afpt.status = 'active'
-    ORDER BY afpt.id DESC
-    ";
-
-        $result = $Model->select($sql);
-        foreach ($result as &$row) {
-            $row['fare_classes'] = json_decode($row['fare_classes'], true);
-            $row['fine_percentages'] = json_decode($row['fine_percentages'], true);
-        }
-
-        return $result;
-    }
-
-    // توی کلاس airline یا یه متد جدید
-
-    public function airlineFineListGroupedByTimeRanges() {
-        $fineList = $this->airlineFineList();
-
-        $grouped = [];
-
-        foreach ($fineList as $item) {
-            $timeRangeKeys = [];
-            $seen = [];
-            $uniquePercentages = [];
-
-            foreach ($item['fine_percentages'] as $fp) {
-                $rangeKey = sprintf(
-                    "%d-%d-%d-%d",
-                    (int)$fp['from_day'],
-                    (int)$fp['from_hour'],
-                    (int)$fp['until_day'],
-                    (int)$fp['until_hour']
-                );
-
-                if (!isset($seen[$rangeKey])) {
-                    $seen[$rangeKey] = true;
-                    $uniquePercentages[] = $fp;
-                    $timeRangeKeys[] = $rangeKey;
-                }
-            }
-
-            // Merge consecutive same percentages
-            $item['merged_percentages'] = $this->mergeConsecutivePercentages($uniquePercentages);
-            $item['fine_percentages'] = $uniquePercentages;
-
-            // حذف تکراری از fare_classes
-            $seenClasses = [];
-            $uniqueClasses = [];
-            foreach ($item['fare_classes'] as $fc) {
-                if (!isset($seenClasses[$fc['class_id']])) {
-                    $seenClasses[$fc['class_id']] = true;
-                    $uniqueClasses[] = $fc;
-                }
-            }
-            $item['fare_classes'] = $uniqueClasses;
-
-            sort($timeRangeKeys);
-            $groupKey = implode('|', $timeRangeKeys);
-
-            if (!isset($grouped[$groupKey])) {
-                $grouped[$groupKey] = [
-                    'time_ranges' => $uniquePercentages,
-                    'items' => []
-                ];
-            }
-
-            $grouped[$groupKey]['items'][] = $item;
-        }
-
-
-        return array_values($grouped);
-    }
-
-    /**
-     * Merge consecutive percentages with same value
-     */
-    private function mergeConsecutivePercentages($percentages) {
-        $merged = [];
-        $i = 0;
-
-        while ($i < count($percentages)) {
-            $current = $percentages[$i];
-            $colspan = 1;
-
-            // Check consecutive items with same percentage
-            while ($i + $colspan < count($percentages) &&
-                (int)$percentages[$i + $colspan]['fine_percentage'] === (int)$current['fine_percentage']) {
-                $colspan++;
-            }
-
-            $merged[] = [
-                'fine_percentage' => $current['fine_percentage'],
-                'is_tax_refund' => $current['is_tax_refund'],
-                'colspan' => $colspan
-            ];
-
-            $i += $colspan;
-        }
-
-        return $merged;
-    }
-    public function getAirlineFineData($id)
-    {
-        if(!$id){
-            return false;
-        }
-        $Model = load::library('ModelBase');
-        $sql = "
-    SELECT
-        afpt.id AS package_id,
-        asi.id as airline_iata_id,
-        asi.airline_name,
-        asi.airline_uniqe_iata,
-        afpt.status AS package_status,
-        (
-            SELECT CONCAT('[', GROUP_CONCAT(CONCAT(
-                '{\"class_id\":', afct.id,
-                ',\"class_name\":\"', REPLACE(afct.class_name, '\"', '\\\"'), '\"}'
-            )), ']')
-            FROM airline_fine_class_fare_tb afcft
-            INNER JOIN airline_fare_class_tb afct 
-                ON afct.id = afcft.class_fare_id
-            WHERE afcft.fine_package_id = afpt.id
-        ) AS fare_classes,
-        (
-            SELECT CONCAT('[', GROUP_CONCAT(CONCAT(
-                '{\"from_day\":', IF(afpt2.from_day_date IS NULL, 'null', afpt2.from_day_date),
-                ',\"from_hour\":', IF(afpt2.from_hour_date IS NULL, 'null', afpt2.from_hour_date),
-                ',\"until_day\":', IF(afpt2.until_day_date IS NULL, 'null', afpt2.until_day_date),
-                ',\"until_hour\":', IF(afpt2.until_hour_date IS NULL, 'null', afpt2.until_hour_date),
-                ',\"fine_percentage\":', IF(afpt2.fine_percentage IS NULL, 'null', afpt2.fine_percentage),
-                '}'
-            )), ']')
-            FROM airline_fine_percentage_tb afpt2
-            WHERE afpt2.fine_package_id = afpt.id
-        ) AS fine_percentages
-    FROM airline_fine_package_tb afpt
-    INNER JOIN airline_standard_iata asi 
-        ON asi.id = afpt.airline_iata_id
-    WHERE afpt.status = 'active' And afpt.id = {$id}
-    ORDER BY afpt.id DESC
-    ";
-
-        $result = $Model->select($sql);
-        foreach ($result as &$row) {
-            $row['fare_classes'] = json_decode($row['fare_classes'], true);
-            $row['fine_percentages'] = json_decode($row['fine_percentages'], true);
-        }
-        return $result;
-    }
-
-    //    ================Airline fine(جریمه) changes ============================
 
     public function getAllDomestic($client_id)
     {

@@ -50,8 +50,25 @@ class clients extends clientAuth {
     }
     public function listClosedClients() {
         $clientList = $this->getModel('clientsModel')
-            ->get(['id','AgencyName','MainDomain','status_factor'])
-            ->where('status_factor', 'Close')
+            ->get(['id','AgencyName','MainDomain','status_factor_user'])
+            ->where('status_factor_user', 'Close')
+            ->where('archived_at', NULL, 'IS')
+            ->all();
+        return $clientList;
+    }
+    public function listClosedAdminClients() {
+        $clientList = $this->getModel('clientsModel')
+            ->get(['id','AgencyName','MainDomain','status_factor_admin'])
+            ->where('status_factor_admin', 'Close')
+            ->where('archived_at', NULL, 'IS')
+            ->all();
+        return $clientList;
+    }
+    public function listWithoutHashIdWhmcsClients() {
+        $clientList = $this->getModel('clientsModel')
+            ->get(['id','AgencyName','MainDomain'])
+            ->where('hash_id_whmcs', NULL, ' IS ')
+            ->where('archived_at', NULL, 'IS')
             ->all();
         return $clientList;
     }
@@ -66,7 +83,31 @@ class clients extends clientAuth {
                 ];
             }
             $this->getModel('clientsModel')
-                ->updateWithBind(['status_factor' => ''], ['id' => $client_id]);
+                ->updateWithBind(['status_factor_user' => ''], ['id' => $client_id]);
+            return [
+                'status' => true,
+                'message' => 'وضعیت فاکتور با موفقیت ذخیره شد'
+            ];
+        } catch (Exception $e) {
+            return [
+                'status' => false,
+                'message' => 'خطا در ذخیره وضعیت فاکتور'
+            ];
+        }
+    }
+
+    public function setStatusFactorAdminClient($params)
+    {
+        try {
+            $client_id = isset($params['client_id']) ? $params['client_id'] : '';
+            if (!$client_id) {
+                return [
+                    'status' => false,
+                    'message' => 'شناسه نامعتبر است'
+                ];
+            }
+            $this->getModel('clientsModel')
+                ->updateWithBind(['status_factor_admin' => ''], ['id' => $client_id]);
             return [
                 'status' => true,
                 'message' => 'وضعیت فاکتور با موفقیت ذخیره شد'

@@ -1,0 +1,134 @@
+/*------------------------------------------- max-width -1210------------------------------*/
+@media screen and (max-width: 1210px){
+
+
+} 
+/*------------------------------------------- max-width -1200------------------------------*/
+@media screen and (max-width: 1200px){
+
+}
+/*------------------------------------------- max-width -1120------------------------------*/
+@media screen and (max-width: 1120px){
+
+}
+
+
+
+
+
+
+
+/*------------------------------------------- max-width -991-----------------------------*/
+@media screen and (max-width: 991px){
+	.form-wrapper{width: 95%; height: 150px}
+	.form-item.form-item-date {width: 24%;text-align: center;}
+	
+	.item {margin: 20px 0;}
+	.item figcaption .title-box{left: 90px}
+	.form-item-btn { width: 100% !important;margin-top: 10px;}
+	.form-item-btn button{width: 40%}
+	footer .footer-list-menu{height: 150px}
+	#emanad{display: inline-block;}
+	.social{display: inline-block;text-align: right;}
+	.copyright{height: 70px}
+	.copyright .company p,.copyright .irantech p {text-align: center;}
+
+
+}
+
+
+/*------------------------------------------ max-width-767------------------------------*/
+@media screen and (max-width:767px){
+	
+	.form-wrapper{height: 150px;bottom: -48px;}
+	.form-item {width: 100%;}
+	.form-item.form-item-date {width: 50%;margin-top: 5px;}
+	.c-tabs-nav a:nth-child(1){width: 50%}
+	.c-tabs-nav a:nth-child(2){width: 50%;right: auto;left: -10px}
+	.item figcaption .title-box {left: 30px;}
+	.navbar .logo{width: 40%}
+
+
+}
+/*menu*/
+@media screen and (max-width:770px){
+	.menu-toggle{z-index: 123}
+	nav.site-nav{float: left;}
+	nav.site-nav li{background-color: #fff}
+	.main-menu {width: 34%;}
+}
+
+
+/*------------------------------------------ max-width-544------------------------------*/
+@media screen and (max-width: 545px){
+	.item figcaption .title-box {left: 200px;}
+	.navbar .logo {width: 77%;}
+	.main-menu {width: 34%;position: absolute;}
+	.dh-aboutus .discription{width: 94%;margin: 0 auto}
+}
+
+
+/*------------------------------------------ max-width-480------------------------------*/
+@media screen and (max-width: 480px) { 
+	.item figcaption .title-box {left:100px;}
+	.left-link{display: none !important;}
+	.camera_fakehover{display: none;}
+	.top-wrapper{
+		background-color: #fff;
+		position: relative;
+		top: -27px;
+		display: block;
+		padding: 23px 0 41px 0;
+	}
+	.form-wrapper { height: 210px;}
+	.form-item.form-item-date {width: 100%;}
+	.navbar .logo a{margin-top: 10px;width: 150px}
+}
+
+
+
+
+
+/*------------------------------------------------col-ss -max-width-350----------------------------------------*/
+@media screen and (max-width: 350px) { 
+
+.col-ss-1, .col-ss-2,
+.col-ss-3, .col-ss-4,
+.col-ss-5, .col-ss-6,
+.col-ss-7, .col-ss-8,
+.col-ss-9, .col-ss-10,
+.col-ss-11, .col-ss-12 {
+    float: right;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-ss-6 {
+    width: 50%;
+}
+.col-ss-12
+{
+    width: 100%;
+
+}
+.col-xs-12{
+    padding: 0;
+
+}
+
+.top-wrapper{top: 0}
+.item {
+    margin: 20px auto;
+    width: 96%;
+    text-align: center;
+    float: none;
+}
+footer .footer-list-menu{width: 90%}
+footer .footerTitle span{display: block;right: 0;left:0;margin: 0 auto;text-align: center;}
+
+}
+
+
+
+ 

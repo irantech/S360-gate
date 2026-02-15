@@ -1185,7 +1185,7 @@ class articles extends positions
         $list = [];
         $list['results'][] = [
             'text' => 'عمومی',
-            'id' => '*'
+            'id' => 'all'
         ];
         foreach ($destinations as $destination) {
             $list['results'][] = [

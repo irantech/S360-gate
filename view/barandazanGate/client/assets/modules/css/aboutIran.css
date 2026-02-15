@@ -1,0 +1,577 @@
+body {
+    overflow-x: hidden;
+    direction: rtl;
+    min-height: 100vh;
+}
+.header_aboutiran {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.header_aboutiran > h2 {
+    color: #333;
+    margin-bottom: 0;
+    font-size: 1.3rem
+}
+
+.header_aboutiran .search_aboutiran > form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.header_aboutiran .search_aboutiran > form input {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    height: 45px;
+    border: 1px solid #d7d4d2;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.header_aboutiran .search_aboutiran > form input:focus {
+    outline: none
+}
+
+.header_aboutiran .search_aboutiran > form button {
+    height: 45px;
+    width: 135px;
+    border-radius: 10px;
+    background: #eee;
+    color: #333;
+    transition: all .3s;
+    cursor: no-drop !important
+}
+
+.header_aboutiran .search_aboutiran > form button.active {
+    background: var(--mainColor);
+    color: #fff;
+    cursor: pointer !important
+}
+
+.header_aboutiran .search_aboutiran > form button.active:hover {
+    background: var(--secondColor);
+    color: #fff
+}
+
+.aboutiran_grid {
+    display: grid;
+    margin: 1rem 0;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px
+}
+
+.aboutiran_box {
+    box-shadow: 0 6px 8px rgba(142, 152, 169, .12);
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.aboutiran_box .img_box {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.aboutiran_box .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.aboutiran_box h2 {
+    /*font-family: IRANSansFaNum-Bold;*/
+    color: #333;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.aboutiran_box p {
+    color: #555;
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 30px;
+}
+
+.aboutiran_box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 45px;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+    transition: all .3s;
+    margin-top: auto;
+}
+
+.aboutiran_box:hover {
+    text-decoration: none
+}
+
+.aboutiran_box:hover button {
+    background-color: var(--secondColor);
+    color: #fff;
+    border-color: var(--secondColor);
+}
+
+@media (max-width: 992px) {
+    .aboutiran_grid {
+        grid-template-columns:repeat(2, 1fr)
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutiran_grid {
+        grid-template-columns:repeat(1, 1fr)
+    }
+
+    .aboutiran_grid .img_box {
+        height: 350px !important
+    }
+
+    .header_aboutiran {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px
+    }
+
+    .header_aboutiran .search_aboutiran form input {
+        width: 100%;
+    }
+
+    .header_aboutiran .search_aboutiran form button {
+        width: 100px
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+.parent-sidebar {
+    position: sticky;
+    top: 100px
+}
+
+.parent-sidebar .sidebar-box {
+    box-shadow: 0 6px 8px rgba(142, 152, 169, .12);
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.parent-sidebar .sidebar-box h3 {
+    /*font-family: IRANSansFaNum-Bold;*/
+    color: #6c7680;
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 1.3rem
+}
+
+.parent-sidebar .sidebar-box .parent-link-data button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    color: #9e9e9e;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0 !important;
+    transition: all .3s;
+    outline: none;
+    font-size: .9rem;
+    gap: 5px;
+}
+
+.parent-sidebar .sidebar-box .parent-link-data button svg {
+    width: 15px;
+    height: 15px;
+    fill: #9e9e9e;
+    transition: all .3s;
+    /*margin-left: 10px*/
+}
+
+.parent-sidebar .sidebar-box .parent-link-data button:hover {
+    color: var(--mainColor)
+}
+
+.parent-sidebar .sidebar-box .parent-link-data button:hover svg {
+    fill: var(--mainColor)
+}
+
+.box_citydetail {
+    margin-bottom: 2rem
+}
+
+
+
+.box_citydetail > div {
+    box-shadow: 0 6px 8px rgba(142, 152, 169, .12);
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.box_citydetail > div p {
+    font-size: 1rem;
+    width: 100%;
+    color: #545454;
+    margin-bottom: 0;
+    text-align: justify;
+    line-height: 1.6
+}
+
+.box_citydetail > div .box_citydetail_grid {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px
+}
+
+.box_citydetail > div .box_citydetail_grid a {
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.box_citydetail > div .box_citydetail_grid a .img_box {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.box_citydetail > div .box_citydetail_grid a .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.box_citydetail > div .box_citydetail_grid a h2 {
+    /*font-family: IRANSansFaNum-Bold;*/
+    color: #333;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 5px !important;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.box_citydetail > div .box_citydetail_grid a p {
+    color: #555;
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+}
+
+.box_citydetail > div .box_citydetail_grid a button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 45px;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+    transition: all .3s
+}
+
+.box_citydetail > div .box_citydetail_grid a:hover {
+    text-decoration: none
+}
+
+.box_citydetail > div > video {
+    border-radius: 10px;
+    height: 400px
+}
+.owl-mobile{
+    display: none !important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    background: #fff !important;
+    border-radius: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 35px !important;
+    height: 35px !important;
+    border: 1px solid #ccc !important;
+    transition: all ease .4s !important;
+}
+
+.owl-carousel .owl-nav button.owl-next svg, .owl-carousel .owl-nav button.owl-prev svg {
+    width: 11px;
+}
+
+.owl-carousel .owl-nav button:hover {
+    background: var(--mainColor) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+    fill: #fff !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    right: -17px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    left: -17px;
+}
+
+
+@media (max-width: 992px) {
+    .parent-sidebar {
+        position: static
+    }
+
+    .parent-sidebar .sidebar-box {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .parent-sidebar .sidebar-box .parent-link-data {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .parent-sidebar .sidebar-box .parent-link-data button {
+        width: 50%
+    }
+}
+
+@media (max-width: 769px) {
+    .box_citydetail_grid {
+        grid-template-columns:repeat(1, 1fr) !important
+    }
+
+    .box_citydetail_grid a .img_box {
+        height: 300px
+    }
+    .search_aboutiran{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .parent-sidebar .sidebar-box .parent-link-data button {
+        width: 100%
+    }
+    .box_citydetail > div .socialMedia{
+        gap: 20px !important;
+    }
+    .box_citydetail > div .socialMedia a svg{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .box_citydetail > div{
+        font-size: 14px !important;
+    }
+    .box_citydetail > div .box_citydetail_grid a button{
+        font-size: 14px !important;
+    }
+    .parent-sidebar .sidebar-box h3{
+        font-size: 1rem !important;
+    }
+    .box_citydetail > div .box_citydetail_grid a h2{
+        font-size: 1rem !important;
+    }
+    .box_citydetail h2{
+        font-size: 1rem !important;
+    }
+    .box_citydetail_grid {
+        grid-template-columns:repeat(1, 1fr) !important
+    }
+    .owl-carousel.owl-rtl .owl-item{
+        padding: 0 !important;
+    }
+    .owl-carousel .item{
+        margin: 1px !important;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 8px !important;
+        height: 8px !important;
+        margin: 5px 4px !important;
+    }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: var(--mainColor) !important;
+    }
+    .owl-mobile{
+        display: block !important;
+    }
+    .aboutiran_grid{
+        display: none !important;
+    }
+    .search_aboutiran{
+        display: none !important;
+    }
+    .header_aboutiran > h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+.box_citydetail h2 {
+    /*font-family: IRANSansFaNum-Bold;*/
+    color: #6c7680;
+    margin-bottom: 1rem;
+    text-align: right;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.box_citydetail > div {
+    box-shadow: 0 6px 8px rgba(142, 152, 169, .12);
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+}
+
+.box_citydetail > div p {
+    font-size: 1rem;
+    width: 100%;
+    color: #545454;
+    margin-bottom: 0;
+    text-align: justify;
+    line-height: 1.6
+}
+
+.box_citydetail > div .img_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    /*margin-bottom: 1rem*/
+}
+
+.box_citydetail > div .img_box img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #ddd
+}
+
+.box_citydetail > div .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 30px;
+}
+
+.box_citydetail > div .socialMedia a {
+    display: flex
+}
+
+.box_citydetail > div .socialMedia a svg {
+    width: 30px;
+    height: 30px;
+    fill: #888;
+    transition: all .3s;
+}
+
+.box_citydetail > div .socialMedia a:hover svg {
+    fill: var(--secondColor)
+}
+
+@media (max-width: 769px) {
+    .box_citydetail_grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .img_box-new{
+        flex-wrap: nowrap !important;
+    }
+
+    .box_citydetail_grid a .img_box {
+        height: 300px
+    }
+
+    .img_box img {
+        width: 100% !important;
+        height: 100% !important
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+/*error*/
+.error {
+    padding: 5px;
+    margin: 5px 5px 20px 5px;
+    border: solid 1px #FBD3C6;
+    background: #FDE4E1;
+    color: #CB4721;
+    line-height: 25px;
+    /*border-radius: 5px !important;*/
+    clear: both !important;
+}

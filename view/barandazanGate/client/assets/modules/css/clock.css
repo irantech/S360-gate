@@ -1,0 +1,32 @@
+.parent-clock-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.clock-wrapper{
+    width: unset !important;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+}
+.clock-wrapper .h2{
+    -webkit-line-clamp: 1 !important;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical !important;
+    display: -webkit-box !important;
+}
+@media (max-width:922px) {
+    .parent-clock-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:768px) {
+    .parent-clock-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,132 @@
+
+
+body{
+    overflow-x: hidden;
+    direction: rtl;
+    padding: 0;
+    background: #fff !important;
+    line-height: 24px;
+    text-align: right;
+    color: #4b5259 !important;
+}
+.car-reservation{
+    margin-top: 50px;
+}
+.parent-car-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.item-link-car{
+    display: flex;
+    flex-direction: column;
+    transition: all ease .3s;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 6px rgba(146,146,146,.2);
+    overflow: hidden;
+}
+.parent-img-card{
+    width: 100%;
+    height: 205px;
+}
+.parent-img-card img{
+    width: 100%;
+    height: 100%;
+}
+.parent-text-car{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: auto;
+}
+.parent-text-car h2{
+    color: #333;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.parent-text-car .price-car{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+.parent-text-car .price-car h3{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0;
+}
+.parent-text-car .price-car svg,.parent-text-car .code-car svg{
+    fill: #666;
+}
+.parent-text-car .code-car{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+.parent-text-car .code-car span{
+    font-size: 16px;
+    color: #666;
+}
+.parent-text-car p{
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: #444;
+    text-align: justify;
+}
+.parent-text-car .reservation-car{
+    width: 100%;
+    height: 38px;
+    background: var(--mainColor);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .3s;
+    border-radius: 8px;
+    margin-top: auto;
+    border: 1px solid var(--mainColor);
+    outline: none;
+}
+.parent-text-car .reservation-car:hover{
+    opacity: .7;
+}
+.item-link-car:hover{
+    text-decoration: none;
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .parent-car-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .parent-car-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .parent-car-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/*error*/
+.error {
+    padding: 5px;
+    margin: 5px 5px 20px 5px;
+    border: solid 1px #FBD3C6;
+    background: #FDE4E1;
+    color: #CB4721;
+    line-height: 25px;
+    /*border-radius: 5px !important;*/
+    clear: both !important;
+}

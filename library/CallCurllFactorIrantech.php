@@ -1,7 +1,7 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
 header('Content-Type: application/json; charset=utf-8');
 $pageCallCurllFactorIrantech='yes';
 require '../config/bootstrap.php';
@@ -63,6 +63,21 @@ if (IdWhmcsCurll != '(NULL)' && IdWhmcsCurll != '') {
             ) {
                 $_SESSION['access_blocked'] = true; // ثبت ممنوعیت استفاده
                 $response_to_send['stop_execution'] = true;
+
+                //update table clients_tb baraye gozaresh be agahye afshar  1404/11/19
+                require_once __DIR__ . '/../config/configBase.php';
+                $pdo = new PDO(PDO_DSN_BASE . ";charset=utf8", DB_USERNAME_BASE, DB_PASSWORD_BASE, [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                ]);
+                $stmt = $pdo->prepare(
+                    "UPDATE clients_tb 
+                             SET status_factor_admin = 'Close' 
+                             WHERE hash_id_whmcs = :hash_id_whmcs"
+                );
+                $stmt->execute([
+                    ':hash_id_whmcs' => IdWhmcsCurll
+                ]);
+
             }
 
         }

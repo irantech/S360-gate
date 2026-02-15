@@ -239,4 +239,61 @@ class cancellationFeeSetting extends clientAuth
         }
         return $fee_cancel_finally ;
     }
+
+    public function feeByAirlineAndCabinTypeNew($params) {
+
+        $Model = load::library('ModelBase');
+        $Model->execQuery("SET SESSION group_concat_max_len = 1000000;");
+        $airlineObj = $this->getController('airLineFineController');
+        // گرفتن پارامترها
+        $airlineIata = addslashes($params['airline_iata']);
+        $cabinType   = addslashes($params['cabin_type']);
+
+        // SQL برای گرفتن fine percentages
+        $sql = "SELECT 
+                afpp.from_day_date,
+                afpp.from_hour_date,
+                afpp.until_day_date,
+                afpp.until_hour_date,
+                afpp.from_issuance_hour,
+                afpp.fine_description,
+                afpp.fine_description_en,
+                IFNULL(afpp.fine_percentage, 0) AS fine_percentage
+            FROM airline_fine_percentage_tb afpp
+            INNER JOIN airline_fine_package_tb afp
+                ON afp.id = afpp.fine_package_id
+            INNER JOIN airline_standard_iata asi
+                ON asi.id = afp.airline_iata_id
+            INNER JOIN airline_tb atb
+                ON atb.airline_iata_id = asi.id
+            INNER JOIN airline_fine_class_fare_tb afcf
+                ON afcf.fine_package_id = afp.id
+            INNER JOIN airline_fare_class_tb afct
+                ON afct.id = afcf.class_fare_id
+            WHERE afp.status = 'active'
+              AND atb.abbreviation = '{$airlineIata}'
+              AND afct.class_name = '{$cabinType}'
+           ;
+    ";
+        $rows = $Model->select($sql);
+
+        $output = [];
+
+        foreach ($rows as $tr) {
+            $output['data'][] = $airlineObj->normalizeFineRow($tr);
+        }
+
+
+        if (!empty($params['is_json'])) {
+            return json_encode($output);
+        }
+
+        return $output;
+    }
+
+
+
+
+
+
 }

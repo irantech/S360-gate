@@ -53,6 +53,21 @@ class clientAuth extends baseController {
         $result = $model->load($query);
         return $result;
     }
+
+
+    public function cipAuth($ClientID = null) {
+        $ClientID = !empty($ClientID) ? $ClientID : CLIENT_ID ;
+        Load::autoload('ModelBase');
+        $model = new ModelBase();
+        $query = "SELECT AUTH.Username, AUTH.Password, AUTH.ApiUrl, AUTH.ApiKey, SOURCE.SourceName, SERVICE.Service 
+                  FROM client_auth_tb AS AUTH 
+                  INNER JOIN client_source_tb AS SOURCE ON AUTH.SourceId = SOURCE.id
+                  INNER JOIN client_services_tb AS SERVICE ON SOURCE.ServiceId = SERVICE.id
+                  WHERE AUTH.ClientId = '{$ClientID}' AND SERVICE.Service = 'cip' AND AUTH.IsActive='Active' ";
+
+        $result = $model->load($query);
+        return $result;
+    }
     #endregion
     
     #region insurancePortalAuth

@@ -1,0 +1,392 @@
+
+
+/* -----------------------------------------------------------------------------
+
+  CONTAINER OBJECTS
+  
+----------------------------------------------------------------------------- */
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px;
+}
+
+@media all and (min-width: 480px) {
+  .o-container {
+    padding: 0 24px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .o-container {
+    padding: 0 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  HEADER OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-header {
+  margin: 0;
+  padding: 0;
+}
+
+.o-header-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #dc446e;
+}
+
+.o-header-nav__link {
+  padding: 12px;
+  color: #fff;
+}
+
+.o-header-nav__link:hover {
+  color: #fff;
+  background-color: #9d1d41;
+}
+
+.o-header__title {
+  margin: 24px;
+  padding: 0;
+  color: #818181;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media all and (min-width: 480px) {
+  .o-header__title {
+    margin: 36px;
+    font-size: 42px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  MAIN OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-main {
+  /**/
+}
+
+/* -----------------------------------------------------------------------------
+
+  SECTION OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-section {
+  margin-bottom: 24px;
+}
+
+.o-section:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 768px) {
+  .o-section {
+    margin-bottom: 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  SUB-NAVIGATION OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-sub-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.o-sub-nav__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.o-sub-nav__item {
+  margin: 0;
+  padding: 4px;
+}
+
+.o-sub-nav__link {
+  display: block;
+  margin: 0;
+  padding: 4px 24px;
+  border: solid 2px #dc446e;
+}
+
+.o-sub-nav__link:hover,
+.o-sub-nav__item.active .o-sub-nav__link {
+  color: #fff;
+  background-color: #dc446e;
+}
+
+/* -----------------------------------------------------------------------------
+
+  FOOTER OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-footer {
+  padding: 12px 0;
+  text-align: center;
+}
+
+@media all and (min-width: 480px) {
+  .o-footer {
+    padding: 24px 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .o-footer {
+    padding: 48px 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  TABS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Tabs component
+ *
+ * A responsive tabs component that falls back to a linear conent display when
+ * JavaScript is disabled. The following is the default suggested markup to play
+ * nicely with the JavaScript. If you change it up, just make sure you pass in
+ * the correct parameters to the tabs instance.
+ *
+ * <div id="tabs" class="c-tabs no-js">
+ *   <div class="c-tabs-nav">
+ *     <a href="#" class="c-tabs-nav__link is-active"></a>
+ *     <a href="#" class="c-tabs-nav__link"></a>
+ *     ...
+ *   </div>
+ *   <div class="c-tab is-active">
+ *     <div class="c-tab__content"></div>
+ *   </div>
+ *   <div class="c-tab">
+ *     <div class="c-tab__content"></div>
+ *   </div>
+ *   ...
+ * </div>
+ */
+.c-tabs {
+  /**/
+}
+
+/**
+ * Tabs navigation
+ */
+.c-tabs-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 10px 0 0 0 ;
+  padding: 0;
+      direction: rtl;
+}
+
+.c-tabs-nav__link {
+    /*padding: 3px 15px;
+    color: #fff;
+    text-align: center;
+    transition: 0.2s all;
+    box-sizing: border-box;
+    border-bottom: none;
+    margin: 0 10px 0 0;
+    background: rgba(10, 101, 98, 0.81);*/
+    border-radius: 0px;
+}
+
+.c-tabs-nav__link.is-active{
+    background-color:#00d0e1 !important;
+    border-top: solid 2px #fc0 !important;
+    border-right: solid 2px #fc0 !important;
+    border-left: solid 2px #fc0 !important;
+    color: #fff !important;
+    height: 45px !important;
+    z-index: 13;
+}
+.c-tabs-nav a{
+    border: none;
+    font-size: 18px;
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #555;
+    position: relative;
+    right:15px;
+   
+    margin: 0 auto;
+    width: 24%;
+    height: 45px;
+    background:#fff;
+    /*top: -47px;*/
+    /*padding-top: 32px;*/
+    text-align: center;
+/*border-top: solid 2px #fff;*/
+/*    border-top-right-radius: 142px;*/
+
+}
+
+
+.c-tabs-nav__link i,
+.c-tabs-nav__link span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c-tabs-nav__link i {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    /*float: right;*/
+    box-sizing: border-box;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    /*margin-top: 33px;*/
+    display: none;
+}
+
+.c-tabs-nav__link span {
+  font-size: 16px;
+}
+
+
+/*active style*/
+.c-tabs-nav__link.is-active i.ticket-tab{
+    background: url(../images/f-local2.png) no-repeat center center;
+}
+.c-tabs-nav__link.is-active i.hotel-tab{
+    background: url(../images/hotel.png) no-repeat center center;
+}
+.c-tabs-nav__link.is-active i.portal-tab{
+    background: url(../images/f-portal2.png) no-repeat center center;
+}
+
+  .c-tabs-nav__link span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+
+    margin-top: 4px;
+    font: 15px IRANSans,yekan;
+    font-weight: normal;
+  }
+
+
+/**
+ * Tab
+ */
+.c-tab {
+    display: none;
+    /*background:rgba(0,0,0,.6);*/
+    min-height: 160px;
+    box-sizing: border-box;
+    border-radius: 4px 0 4px 4px;
+}
+
+.c-tab.is-active {
+  display: block;
+}
+
+.c-tab__content {
+    padding: 5px;
+    overflow: hidden;
+    min-height: 160px;
+    box-sizing: border-box;
+}
+
+/**
+ * Tabs no-js fallback
+ */
+.c-tabs.no-js .c-tabs-nav {
+  display: none;
+}
+
+.c-tabs.no-js .c-tab {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.c-tabs.no-js .c-tab:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------------
+
+  CARBON AD COMPONENT
+  
+----------------------------------------------------------------------------- */
+#carbonads {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 1000;
+  padding: 24px 12px 12px 12px;
+  width: 154px;
+  background-color: #fff;
+  line-height: 1.1;
+  border: solid 1px #e7e7e7;
+}
+
+.carbon-wrap {
+  display: block;
+  margin: 0 0 4px 0;
+}
+
+.carbon-img {
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 0;
+  width: 130px;
+  height: 100px;
+}
+
+.carbon-text {
+  color: #818181;
+  font-size: 12px;
+}
+
+.carbon-poweredby {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.carbonad__close {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  height: 24px;
+  font-size: 11px;
+  line-height: 24px;
+}
+

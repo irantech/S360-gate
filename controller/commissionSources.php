@@ -291,6 +291,7 @@ class commissionSources extends clientAuth
         $flightType = isset($data['flightType']) ? $data['flightType'] : null;
         $sourceId = isset($data['sourceId']) ? $data['sourceId'] : null;
 
+
         $checkResult = functions::checkConfigPid($abbrev, $isInternalInt, $flightType, $sourceId);
 
         return $checkResult === 'private';

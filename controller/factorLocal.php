@@ -153,11 +153,12 @@ class factorLocal extends apiLocal
             if (strtolower($rec['flight_type']) == 'system') {
 
                 $isCounter = Load::controller( 'login' )->isCounter();
+                $isCounter = json_decode($isCounter);
                 $isSafar360 = functions::isSafar360();
 
                 // اگر میخواهید تخفیف برای منبع درست کار کند مانند شرط زیر برای منبع مورد نظر هم یک شرط بزارید-
 
-                if ( ($rec['IsInternal'] == '1' && $rec['api_id'] != '14') || ($rec['api_id'] != '10' && $rec['api_id'] != '15' && $rec['api_id'] != '17' && $rec['api_id'] != '14' && $rec['api_id'] != '8' && $rec['api_id'] != '43' && $rec['api_id'] != '21') ) {
+                if ( ($rec['IsInternal'] == '1' && $rec['api_id'] != '14') || ($rec['api_id'] != '10' && $rec['api_id'] != '15' && $rec['api_id'] != '17' && $rec['api_id'] != '14' && $rec['api_id'] != '8' && $rec['api_id'] != '43' && $rec['api_id'] != '21' && $rec['api_id'] != '20') ) {
 
 
 

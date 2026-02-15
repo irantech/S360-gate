@@ -1,0 +1,6525 @@
+.filtertip {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.s-u-passenger-wrapper-change .s-u-last-p-bozorgsal-change {
+    padding-left: 20px;
+}
+.s-u-passenger-wrapper-change .s-u-last-p-bozorgsal-change i {
+    position: absolute;
+    top: 0px;
+    left:3px;
+    bottom: 0px;
+    margin:auto !important;
+    padding-left: 0px;
+    text-align: left;
+    line-height: 15px;
+    height: 15px;
+}
+.parvaz-sidebar .open-sidebar-parvaz {
+    display:none;
+}
+.tell-sms-btns {
+    display: flex;
+    margin:10px 0px;
+    top:-4px;
+    justify-content: space-evenly;
+    position: absolute;
+    right: -83px;
+    min-width: 80px;
+}
+.tell-sms-btns > div {
+    width: 30px;
+    height: 30px;
+    background: #efefef;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.client-profile{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tell-sms-btns > div svg {
+    width: 20px;
+    fill:#8f8f8f !important;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+    margin: auto;
+}
+.tip-content p span {
+    color: white;
+}
+
+.tzCBPart {
+    top: 3px;
+    height: 26px;
+    background: #ababab;
+}
+
+.tzCBPart::before {
+    line-height: 26px !important;
+    font: 10px 'inherit', yekan;
+    font-weight: 300;
+}
+
+.tzCBPart::after {
+    top: 4px;
+    background: #fefefe;
+}
+
+.chooseiconDay.icons.tooltipWeighDay {
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.chooseiconDay.icons.tooltipWeighDay i {
+    color: white;
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px;
+}
+
+.change-bor .select2-container .select2-selection--single .select2-selection__rendered {
+
+    padding:0 20px;
+
+    text-align: left;
+
+}
+
+.swap-flight-box {
+    right: calc(100% - 56.4%);
+}
+
+.s-u-filter-item ul li {
+    padding: 6px 0px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+
+.s-u-filter-item ul li:last-child {
+    border-bottom: none;
+}
+
+.s-u-filter-item-time label {
+    padding: 0px 10px;
+    font-family: 'inherit', yekan, YekanNumbers;
+    color: #585858;
+    text-align: left;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.s-u-filter-title, .s-u-filter-content {
+    box-shadow: none !important;
+}
+
+.s-u-filter-title i {
+    font-size: 23px;
+    margin: 0px 0 0 5px;
+    position: relative;
+    top: 5px;
+}
+
+.s-u-jalali-change input {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.s-u-num-inp-search-change button {
+    border-radius: 4px;
+    border: none !important;
+    transition: all ease 0.3s;
+    color: white;
+    font-weight: 300;
+}
+
+.s-u-filter-title, .s-u-filter-content {
+    box-shadow: none !important;
+    color: #565656;
+    font-family: 'inherit', yekan, yekanNumbers;
+}
+
+.s-u-filter-title {
+    font-weight: 700;
+}
+
+.s-u-filter-title {
+    background: #fbfbfb;
+    border: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #656565;
+}
+
+.s-u-filter-content {
+    background: white;
+    padding: 20px 15px 15px 15px;
+    border-color: #f5f5f5;
+}
+
+.s-u-filter-item-time {
+    padding-top: 0px;
+}
+
+#slider-range.ui-widget-content {
+    height: 8px;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+#slider-range .ui-state-default {
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+.s-u-filter-wrapper-ul {
+    padding: 10px 0px;
+}
+
+.items .showListSort:first-child > div.international-available-box {
+    padding-top: 20px;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(1), .international-available-airlines-info .airlines-info:nth-child(3) {
+    width: 25%;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(2) {
+    width: 48%;
+}
+
+.priceSortAdt {
+    color: #a8a8a8;
+    font-size: 11px !important;
+    font-family: inherit !important;
+    display: block;
+}
+
+.priceSortAdt i {
+    font-size: 19px !important;
+    padding-left: 4px;
+    color: #5eb75e;
+    letter-spacing: 0.7px !important;
+}
+.priceSortAdt i .CurrencyText{
+    font-size: 14px !important;
+}
+.airlines-info.destination span:nth-child(2) {
+    font-family: 'inherit' !important;
+}
+
+.inner-avlbl-itm > div {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+    margin-top: 10px;
+}
+
+.inner-avlbl-itm > div > a {
+    width: 100%;
+    display: block;
+    padding: 8px 0px;
+    color: white;
+    border-radius: 4px;
+    border: 0px none;
+    font-family: inherit !important;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+}
+
+.last-price-factor-local {
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.inner-avlbl-itm > div > a:hover {
+    opacity: 0.9;
+    transition: all ease 0.3s;
+}
+
+.international-available-airlines-logo {
+    box-shadow: none;
+    background: white;
+    border: none;
+    position: relative;
+}
+
+.international-available-airlines-logo img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+}
+
+.blit-flight-passenger:nth-child(3) {
+    border-top: 1px dashed #e6e6e6 !important;
+    padding-top: 10px;
+}
+
+.d-block {
+    display: block;
+}
+
+.blit-flight-passenger2:nth-child(2) {
+    border-top: 1px dashed #e6e6e6 !important;
+    padding-top: 10px;
+}
+
+.international-available-airlines-info span {
+    line-height: 20px;
+    font-family: inherit, inherit !important;
+}
+
+.international-available-airlines-info span.flight-type {
+    font-weight: 700 !important;
+}
+
+.s-u-filter-item {
+    background: transparent;
+    margin: 15px 1px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0px 0px;
+}
+
+.s-u-update-popup-change {
+    margin: 0px 1px 10px 1px;
+}
+
+.airline-line {
+    position: relative;
+    padding: 0px 0px;
+    right: 3px;
+    text-align: left;
+
+}
+
+.airline-line:before {
+    content: " ";
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    margin: 0px auto;
+    border-top: 1px dashed #d2d2d2;
+    z-index: 0;
+}
+
+.loc-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    transform: rotate(0deg);
+    position: absolute;
+    right: -8px;
+    top: 4px;
+}
+
+.loc-icon svg {
+    display: inline-block;
+    width: 18px;
+    fill: currentColor;
+    height: 25px;
+}
+
+.airlines-info-inner {
+    padding: 0px 10px;
+}
+
+.plane-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    z-index: 6;
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+    right: -8px;
+    -webkit-transform: rotate(45deg) !important;
+    transform: rotate(45deg) !important;
+}
+
+.international-available-box:hover .plane-icon {
+    right: 70%;
+    transition: all ease-in-out 5s;
+}
+
+.plane-icon svg {
+    width: 25px;
+    fill: currentColor;
+    color: #c4c4c4;
+}
+
+.airlines-info.destination span {
+    position: relative;
+    top: -10px;
+    padding-top: 15px;
+}
+
+.airlines-info.destination span:first-child {
+    font-family: inherit !important;
+    text-align: center;
+    font-size: 16px !important;
+}
+
+.airlines-info.destination span:last-of-type {
+    font-size: 14px !important;
+    color: #858585;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(1) {
+    padding-left: 10px
+}
+
+.international-available-airlines-info .airlines-info:nth-child(3) {
+    padding-right: 10px
+}
+
+.sit-class, .flight-type {
+    display: inline-block !important;
+    padding: 0px 5px !important;
+}
+.irretrievable-text {
+    opacity:0.7;
+    color:   #FF3A46 !important;
+}
+.airlines-info-inner span:first-child {
+    top: 6px;
+    color: #999;
+    font-family: inherit !important;
+    font-weight: 300 !important;
+    z-index: 9999;
+}
+
+.sandali-span2 {
+    color: #a8a8a8 !important;
+}
+
+.off-price .sandali-span {
+    top: 10px;
+}
+
+.old-price {
+    font-size: 13px !important;
+    display: block;
+}
+
+.inner-avlbl-itm > div.special-p {
+    position: relative;
+    top: 10px;
+}
+
+.sorting2 input {
+    display: none;
+}
+
+.sorting2 .text-price-sort, .sorting2 .text-time-sort {
+    padding-right: 12px;
+    color: #797979;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: inherit !important;
+    font-weight: 300;
+}
+
+.sorting2 .sorting-inner .next-date span, .sorting2 .sorting-inner .prev-date span {
+    font-family: inherit !important;
+    font-weight: 300;
+}
+
+.sorting2 .svg svg {
+    width: 19px;
+    top: 5px;
+    position: relative;
+    color: #d2d2d2;
+    fill: currentColor;
+    transition: all ease 0.3s;
+}
+
+.sorting2 .sorting-inner.deactive .svg svg {
+    color: #d2d2d2;
+}
+
+.sorting2 .svg {
+    display: inline-block;
+    width: 19px;
+    height: 0px;
+    padding: 0px 0px;
+}
+
+.international-available-box {
+    width: 100%;
+}
+
+.sorting2 {
+    border-radius: 4px;
+    display: flex;
+}
+
+.sorting2 .price, .sorting2 .time {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    justify-content: center;
+    background: white;
+    flex: 0 0 35%;
+}
+
+.sorting2 .price {
+    border-left: 1px solid #e4e4e4;
+}
+
+.sorting-inner.date-change {
+    flex: 0 0 15%;
+    max-height: 47.5px;
+}
+.sorting2 .price, .sorting2 .time {
+    max-height: 47.5px;
+}
+.international-available-airlines-log-info span {
+    font-family: inherit, inherit !important;
+}
+
+.sorting2 .date-change .today-date {
+    flex: 0 0 50%;
+    color: #797979;
+}
+
+.tip-content p span, .pop-up-h > span, .tableOrderHeadTitle > span, .tdpricelabel {
+    font-family: inherit !important;
+    font-weight: 700 !important;
+}
+
+.tdprice, .rp-tableOrder th {
+    font-family: inherit, inherit !important;
+    font-weight: 400 !important;
+}
+
+.tip-content p {
+    font-family: inherit;
+}
+
+.search-wrapper .displayib .fltr {
+    font-family: inherit !important;
+}
+
+.inp-child-change::before, .inp-adt-change::before, .inp-baby-change::before {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.international-available-details ul.tabs li {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+}
+
+.international-available-details .tab-content > p {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 400 !important;
+    text-align: justify;
+}
+
+.international-available-details ul.tabs li.current {
+    font-weight: 700 !important;
+}
+
+.international-available-airlines-detail-tittle span {
+    font-family: Arial, Helvetica, sans-serif !important;
+    text-align: right;
+}
+.international-available-airlines-detail-tittle span i{
+    margin-right: 5px;
+
+}
+.sorting2 .date-change .prev-date i {
+    color: #c3c3c3;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+
+    left: 0;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.sorting2 .date-change.sorting-inner a.next-date{
+    justify-content: center;
+
+}
+.sorting2 .date-change .next-date i {
+    color: #c3c3c3;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    right: 0;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.loc-icon-destination {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    float: left;
+    z-index: 6;
+    position: relative;
+    top: 4px;
+    left: -8px;
+}
+
+.loc-icon-destination svg {
+    display: inline-block;
+    width: 21px;
+    fill: currentColor;
+}
+
+.source {
+    color: white;
+    font-size: 9px;
+    position: absolute !important;
+    top: 0px;
+}
+
+.s-u-result-item-div-logo-change {
+    width: 70px;
+    height: 70px;
+}
+
+.shenase-nerkhi {
+    display: inline-block;
+    font-size: 11px;
+}
+
+.s-u-popup-in-result .cd-user-modal-container .cd-switcher a {
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.51);
+    margin-bottom: 5px;
+}
+
+.f-loader-check {
+    float: none !important;
+}
+
+.s-u-passenger-wrapper-change, .s-u-passenger-wrapper-change-Buyer {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px 15px;
+    margin: 30px 0px !important;
+    clear: both;
+    display: inline-block;
+}
+
+.s-u-passenger-wrapper-change-Buyer {
+    position: relative;
+    top: 15px
+}
+
+.s-u-last-p-bozorgsal-change, .s-u-last-p-nozad-change, .s-u-last-p-koodak-change {
+    text-shadow: none;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.s-u-result-item-change:hover {
+    box-shadow: none;
+}
+
+.s-u-passenger-item-change select, .s-u-passenger-item-change input {
+    border-color: #dedede;
+    border-width: 2px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.s-u-passenger-item::before {
+    right: 15px;
+}
+
+.panel-body-change .s-u-passenger-item-change:nth-child(4n) {
+    padding: 0 10px 0 0 ;
+}
+
+.panel-default-change-Buyer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.s-u-passenger-wrapper .panel-default-change {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-default-change .panel-heading-change {
+    border-bottom: 1px dashed #c3c3c3;
+}
+
+.control--checkbox {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px 5px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.control--checkbox input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.checkbox {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: #039be5;
+    border: 2px solid #039be5;
+    border-radius: 2px;
+    /*transition: border-color .2s;
+    transition-delay: .3s;*/
+}
+
+.control--checkbox span {
+    vertical-align: middle;
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+.filler {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: white;
+    transform: scale(1, 1);
+    transition: transform .2s;
+    transition-delay: .2s;
+    will-change: transform;
+}
+
+polyline {
+    position: absolute;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 18px;
+    stroke-dashoffset: 18px;
+    transition: stroke-dashoffset .2s;
+    transition-delay: 0s;
+    will-change: stroke-dashoffset;
+}
+
+/* Checked state */
+.control--checkbox input:checked ~ .checkbox .filler {
+    transform: scale(0, 0);
+    border-radius: 3px;
+    transition-delay: 0s;
+}
+
+.control--checkbox input:checked ~ .checkbox polyline {
+    stroke-dashoffset: 0;
+    transition-delay: .2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.s-u-last-passenger-btn-change {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.s-u-result-item-div-change {
+    background: transparent;
+}
+
+.right-Cell-change {
+    margin-bottom: 5px;
+    padding-bottom: 5px !important;
+    border-bottom: none;
+}
+
+.flight-info span {
+    float: none;
+    margin-right: 2px;
+    width: 35px;
+    height: 35px;
+}
+
+.flight-info .chooseicon .icon {
+    color: #606060;
+    transition: all 0.3s ease 0s;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.flight-info .chooseicon:hover .icon {
+    color: white;
+}
+
+.s-u-bozorg-change i {
+    letter-spacing: 1px;
+    padding-left: 2px;
+    font-family: inherit !important;
+}
+
+.s-u-bozorg-change .price {
+    color: #858585;
+    font-size: 12px;
+}
+
+.s-u-bozorg-change .price i {
+    color: #5eb75e !important;
+}
+
+.Dash-ContentL-B-Table {
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.Dash-ContentL-B-Table table {
+    border: none;
+}
+
+.Dash-ContentL-B-Table table tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+.s-u-p-factor-bank-change > h4 {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.boxerFactorLogo img {
+    width: 40px;
+}
+
+.s-u-p-factor-bank {
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
+}
+
+.s-u-select-bank:hover {
+    box-shadow: 0px 0px 0px #999, 0px 0px 0px #999, 0px 4px 0px #999;
+}
+
+.boxerFactorLogo, .bank-logo {
+    border: none;
+}
+
+.cancel-passenger:active, .cancel-passenger:hover {
+    box-shadow: 0 0px 9px -2px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-passenger {
+    border: none;
+}
+
+.international-available-box {
+    border-radius: 5px;
+}
+
+.sorting-inner.rotated-icon svg {
+    transform: rotate(180deg);
+}
+
+.selectedTicket .international-available-box {
+    padding: 10px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
+}
+
+h5.raft-ticket, h5.bargasht-ticket {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #555;
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+h5.bargasht-ticket {
+    margin-top: 30px;
+}
+
+.selectedTicket .raft-ticket i {
+    color: #c3c3c3;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    right: 13px;
+    float: right;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.8);
+}
+
+.twowayWarning{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    background-color: #f2dede;
+}
+.twowayWarning ul li{
+    list-style: circle inside;
+    text-align: justify;
+}
+
+.my-info-detail > span {
+    display: inline-block !important;
+    float: right !important;
+}
+
+.my-info-detail .my-seperator {
+    padding: 0px 5px;
+}
+
+.my-more-info {
+    display: inline-block;
+    background: #f5f5f5;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 5px 8px 5px 7px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 11px;
+    font-family: inherit;
+    color: #777777;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.s-u-filter-item-time label > i {
+    font-family: inherit !important;
+    letter-spacing: 0.4px;
+}
+
+.my-more-info:hover {
+    background: #e2e2e2;
+    transition: all ease 0.3s;
+}
+
+.international-available-detail-btn i.fa-angle-down , .btn-available-d-n i.fa-angle-down {
+    font: normal normal normal 13px/17px FontAwesome;
+    border-bottom: 1px solid #afaeae;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #afaeae;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+}
+
+.blite-rafto-bargasht-text {
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: none;
+    transform: rotate(90deg);
+}
+
+.blite-rafto-bargasht-text span {
+    color: white;
+    background: #5eb75e !important;
+    padding: 0px 11px;
+    font-size: 12px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.international-available-airlines {
+    width: 18%;
+}
+
+/* ============== foreign flight page css ================= */
+
+.foreign .international-available-item-left-Cell {
+    width: 17%;
+}
+
+.foreign .international-available-item-right-Cell {
+    width: calc(100% - 19%) !important;
+}
+
+.foreign .international-available-airlines {
+    width: 15%;
+}
+
+.foreign .international-available-airlines-info {
+    width: calc(100% - 16%);
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+    padding-right: 1.5%;
+    width: 27%;
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+    width: 43%;
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+    padding-left: 1.5%;
+    width: 27%;
+}
+
+.foreign .date-time {
+    display: flex;
+}
+
+.foreign .date-time > .time-flight {
+    flex: 0 0 35%;
+    padding: 3px 0px 4px 0px;
+}
+
+.foreign .date-time > .date-flight {
+    flex: 0 0 65%;
+}
+
+.foreign .date-time .time-flight {
+    font-size: 11px;
+    border-radius: 4px;
+    text-align: right;
+    margin-left: 1.5%;
+    color: #9e9e9e;
+}
+
+.foreign .date-time .date-flight {
+    font-size: 11px;
+    border-radius: 4px;
+    text-align: right;
+    margin-right: 1.5%;
+    color: #9e9e9e;
+    display: flex;
+}
+
+.foreign .airlines-info.txtLeft .date-time > * {
+    text-align: left;
+}
+
+.foreign .airport-name-flight {
+    font-size: 9px;
+}
+
+.foreign .tavaghof {
+    display: inline-block !important;;
+    font-size: 12px;
+}
+
+.foreign .flight-type, .foreign .sit-class {
+    font-size: 12px;
+    padding-left: 7px !important;
+    margin-left: 7px;
+    border-left: 2px solid #c3c3c3;
+    line-height: 10px !important;
+    height: 10px;
+    padding-right: 0px !important;
+}
+
+.foreign .airline-line {
+    font-size: 13px;
+}
+
+.foreign .airlines-info-inner span {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.foreign .airlines-info-inner {
+    padding: 0px 10px;
+    font-size: 0px;
+}
+
+.foreign .airlines-info-inner span:first-child {
+    top: 6px;
+    color: #999;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.tip-content .counthotel a {
+    color: white !important;
+}
+
+kbd {
+    background: transparent;
+    color: #666;
+}
+
+.s-u-next-setep-login-popup {
+    display: none;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.foreign .international-available-airlines-log-info span {
+    line-height: 15px !important;
+    font-size: 11px !important;
+}
+
+.foreign .speratopr-foraign {
+    padding: 0px 1px;
+    font-weight: bold !important;
+    display: block;
+}
+
+.foreign .sorting2 {
+    margin-bottom: 15px;
+}
+
+.foreign-sidebar .inputSearchForeign {
+    font-size: 11px;
+    text-align: left;
+    padding-left: 10px;
+    font-family: inherit;
+    color: #999;
+}
+
+.foreign-sidebar .s-u-num-inp-change {
+    width: 100%;
+}
+
+.blit-foreign-passenger .s-u-result-items-div-international {
+    background: white !important;
+    border-bottom: 0px;
+    min-height: 70px;
+}
+
+.foreign .international-available-airlines-logo-detail {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.foreign .international-available-airlines-logo-detail img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.foreign .side-logo-detail span:nth-child(1) {
+    width: 100%;
+    display: block;
+}
+
+.foreign .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+    width: 30% !important;;
+}
+
+.foreign .international-available-airlines-detail.airlines-stops-time {
+    border: none !important;
+    border-radius: 7px !important;
+    text-align: right;
+    background: #e1e1e1 !important;
+    width: auto;
+    margin: 10px 10px 30px 10px !important;
+    display: block !important;
+    padding: 10px 20px !important;
+    text-align: center;
+}
+
+.airlines-stops-time > span:nth-child(1), .airlines-stops-time > span:nth-child(2) {
+    margin: 0 auto !important;
+    float: none !important;
+    display: inline-block !important;
+    text-align: center;
+}
+
+.airlines-stops-time > span:nth-child(2) {
+    padding-right: 10px !important;
+}
+
+.side-logo-detail > span:nth-child(2), .side-logo-detail > span:nth-child(3) {
+    padding-left: 8px;
+    margin-left: 8px;
+    border-left: 2px solid #c3c3c3;
+}
+
+#s-u-result-wrapper-ul .items .international-available-box:nth-child(1) {
+    padding-top: 20px;
+}
+
+.pasenger-flight-date-1 {
+    flex: 0 0 100% !important;;
+}
+
+.pasenger-flight-date-2 {
+    text-align: left !important;
+    justify-content: left;
+    flex: 0 0 100% !important;
+}
+
+.international-available-panel-min2 {
+    margin-top: 30px;
+}
+
+.foreign .international-available-airlines-info-detail {
+    width: calc(100% - 55px);
+}
+.login-captcha {
+    justify-content: center;
+    display: inline-block !important;
+    margin: 10px auto !important;
+    justify-self: center;
+    align-self: center;
+    background: #f6f6f6;
+    flex: 0 0 auto !important;
+    border-radius: 4px;
+}
+/* ============== end foreign flight page css ================= */
+
+@media screen and (max-width: 1200px) {
+    .international-available-airlines-info .airlines-info:nth-child(1), .international-available-airlines-info .airlines-info:nth-child(3) {
+        width: calc(20% - 10px);
+    }
+
+    .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 58%;
+    }
+
+    .sandali-span {
+        color: #ef5661;
+        width: 100%;
+        right: 0px;
+    }
+
+    .international-available-item-left-Cell {
+        position: relative;
+    }
+
+
+
+    .foreign .international-available-airlines {
+        width: 12%;
+    }
+
+    .foreign .international-available-airlines-info {
+        width: calc(100% - 13%);
+    }
+
+    .foreign .airlines-info-inner {
+        padding: 0px 5px;
+    }
+
+    .foreign .airlines-info-inner span:first-child {
+        font-size: 10.5px;
+        text-align: center;
+    }
+
+    .foreign .flight-type lable, .foreign .sit-class, .foreign .tavaghof {
+        font-size: 10px;
+    }
+
+    .foreign .flight-type, .foreign .sit-class {
+
+        padding-left: 5px !important;
+        margin-left: 5px;
+
+    }
+
+    .foreign .plane-icon {
+        right: -22px;
+    }
+
+    .foreign .international-available-airlines-log-info span {
+        font-size: 9px !important;
+        padding-top: 4px;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        padding-left: 1%;
+        width: 31%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 36%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        padding-right: 1%;
+        width: 31%;
+    }
+
+    .international-available-airlines-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .foreign .date-time .date-flight, .foreign .date-time .time-flight {
+        font-size: 10px;
+    }
+
+    .foreign .priceSortAdt i {
+        font-size: 16px !important;
+    }
+
+    .foreign .inner-avlbl-itm > div > a {
+        padding: 6px 0px !important;;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 57%;
+        transition: all ease-in-out 5s;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #timeSortSelect , .filter_search_mobile_res{
+        position: relative;
+    }
+    #timeSortSelect::before , .filter_search_mobile_res::before{
+        content: '';
+        background: #ccc;
+        height: 15px;
+        width: 1px;
+        right: 0;
+        position: absolute;
+
+    }
+    .s-u-last-p-bozorgsal-change{ width: 100%; margin-left: 0; text-align: center}
+    .s-u-passenger-item{ width: 100% !important;}
+
+    .notifications-upload-image{ height: auto}
+    .cancel-policy-inner .cancel-policy-item .cancel-policy-item-text {
+        padding:7px !important;
+    }
+    .swap-flight-box {
+        right: calc(100% - 9.1%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .international-available-item-right-Cell::before ,
+    .international-available-item-right-Cell::after{
+        opacity: 0;
+    }
+    .dateprice {
+        margin-left: auto;
+        margin-top: 10px;
+        order: 1;
+        margin-bottom: 10px;
+        border: 1px solid #eee;
+        padding: 10px 5px;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button{ padding:.1em .1em !important;}
+    .userProfileInfo-btn input{ width: 219px;}
+    .international-available-panel-min ul.tabs li{ width: 33.333% !important; }
+    .international-available-panel-min  ul.tabs li{
+        padding: 8px 3px;
+
+    }
+    .timeSortDep{
+        display: none;
+    }
+
+    .international-available-panel-min2 ul li.tab-link {
+        width: 25%;
+    }
+
+    .foreign .international-available-panel-min2 .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+        width: 33% !important;
+        padding: 0 5px !important;
+    }
+
+    .foreign .international-available-panel-min2 .details-detail-box span {
+        font-size: 10px !important;
+    }
+
+    .source {
+        position: absolute;
+    }
+
+    .international-available-airlines-log-info span {
+        font-size: 9px;
+        padding-top: 7px;
+    }
+
+    .items .showListSort:first-child > div.international-available-box {
+        padding-top: 0px;
+    }
+
+    .priceSortAdt {
+        /*! position: relative; */
+        /*! top: 5px; */
+        width: 48%;
+        /*! display:inline-block; */
+        flex: 0 0 50%;
+    }
+
+    .priceSortAdt i {
+        display: inline-block;
+    }
+
+    .priceSortAdt .old-price {
+        display: inline-block;
+        padding-left: 5px;
+    }
+
+    .inner-avlbl-itm > div {
+        top: 0px;
+        width: 50%;
+        min-height: 36px;
+        margin: 0 auto;
+        float: left;
+        margin: 10px 0px 4px 10px;
+    }
+
+    .sandali-span {
+        color: #ef5661;
+        width: calc(50% - 10px);
+        right: 0px;
+        top: 0px;
+        text-align: center;
+    }
+
+    .airline-line::before {
+        bottom: 14px;
+    }
+
+    .loc-icon {
+        width: 20px;
+        height: 20px;
+        top: 1px;
+    }
+
+    .plane-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loc-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .international-available-item-right-Cell {
+        /*! padding:8px; */
+    }
+
+    .priceSortAdt i {
+        font-size: 17px !important;
+    }
+
+    .sorting2 {
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 14%;
+    }
+
+    .sorting2 .price, .sorting2 .time {
+        flex: 0 0 34%;
+    }
+
+    .international-available-airlines {
+        width: 75px;
+    }
+
+    .international-available-item-left-Cell > .inner-avlbl-itm {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .international-available-item-left-Cell {
+        width: 100%;
+        border-top: 1px dashed #ddd;
+    }
+
+    .foreign .international-available-item-left-Cell {
+        width: 100%;
+    }
+
+    .foreign .international-available-item-right-Cell {
+        width: 100% !important;
+    }
+
+    .foreign .international-available-airlines, .foreign .international-available-airlines-info {
+        width: 100%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        padding-left: 1.5%;
+        width: 29%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 39%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        padding-right: 1.5%;
+        width: 29%;
+    }
+
+    .foreign .plane-icon {
+        right: -10px;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 70%;
+        transition: all ease-in-out 5s;
+    }
+
+    .foreign .airport-name-flight {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+
+    .hotel-result-item-text {
+
+        width: calc(100%) !important;
+        padding: 4px;
+
+    }
+
+    .hotel-result-item-bottom .bookbtn{ display: block; position: relative; bottom: 0}
+    .hotel-time-stay , .hotel-start-price{ margin: 5px auto;}
+
+    .hotel-result-item-bottom{ width: 100%; min-height: auto; border-left: none}
+    .hotel-result-item-text{ width: 100%;}
+    .international-available-panel-min2 ul li.tab-link {
+        width: 28%;
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    .international-available-panel-min2 ul li.current {
+        padding: 5px 2px;
+    }
+
+    .foreign .international-available-panel-min2 .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+        width: 100% !important;
+        margin: 10px 0px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail span:first-child {
+        font-size: 11px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail span:nth-child(2) {
+        font-size: 10px;
+        margin-left: 2px;
+        padding-left: 2px;
+        border-left: 0px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail {
+        padding: 0px 5px;
+    }
+
+    .sorting2 .date-change .next-date i {
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        right: 5px;
+    }
+
+    .sorting2 .date-change .prev-date i {
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        left: 5px;
+    }
+
+    .sorting2 .sorting-inner .next-date span, .sorting2 .sorting-inner .prev-date span {
+        font-size: 12px;
+    }
+
+    .sorting2 .text-price-sort, .sorting2 .text-time-sort {
+        font-size: 12px;
+    }
+
+    .sorting2 {
+        margin: 17px 0px;
+    }
+
+    .sorting2 .price, .sorting2 .time {
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 17%;
+    }
+
+    .sorting2 .price, .sorting2 .time {
+        flex: 0 0 32%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-captcha #captchaRefresh{ margin-top: 7px !important;}
+    .gds-login-rememmber-inner span {
+        font-size:12px;
+    }
+    .gds-login-register-inner form > div input::placeholder {
+        font-size:10px !important;
+
+    }
+    .gds-login-level > span {
+        width: 100% !important;
+    }
+    .gds-login-register-inner form > div {
+        max-width: 100% !important;
+
+    }
+    .gds-login-rememmber-inner  {
+        max-width: 100%;
+    }
+    #signup-captcha2 {
+        width: calc(100% - 100px) !important;
+        float: right;
+    }
+    .login-captcha span img {
+        display: block;
+        min-width: 50px !important;
+    }
+    .login-captcha {
+        flex: 0 0 100% !important;
+    }
+    .gds-login-register-inner form > div input {
+        min-width:  initial !important;
+        width: 100% !important;
+        /*! max-width: calc(100% - 55px) !important; */
+    }
+    .gds-login-register-inner form > div.gds-l-up span {
+        display: block !important;
+    }
+    .gds-register-nf {
+        flex-wrap: wrap;
+
+        margin: 0px !important;
+    }
+    .gds-register-nf span {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .gds-login-register-inner form > div span label {
+        left:inherit !important;
+        max-width: 80%;
+        margin: auto;
+        top:-17px !important;
+        right: 20px !important;
+        padding: 5px 15px 7px !important;
+    }
+    .international-available-item  ul.tabs li{ width: 30%;}
+    .special-tour-item .special-ribbon {
+        top: 15px !important;
+    }
+    .sandali-span {
+        top: 15px !important;
+        line-height: 0px !important;
+        height: 0px !important;
+        display: block;
+    }
+    .tour-joy .international-available-airlines-info span.sandali-span {
+        top: -10px !important;
+        line-height: inherit !important;
+        height: auto !important;
+        display: block;
+    }
+    .priceSortAdt {
+        width: 46%;
+    }
+
+    .international-available-airlines {
+        width: 100%;
+    }
+
+    .international-available-airlines-info {
+        /*! width: 100%; */
+    }
+    .tour-joy .international-available-airlines-info {
+        width: 100% !important;
+
+    }
+    .tour-joy .international-available-airlines {
+        width: 100% !important;
+    }
+    .tour-joy .international-available-item-right-Cell {
+        width: 100%;
+        padding-right: 0px !important;
+    }
+    .international-available-airlines-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .international-available-airlines-info .airlines-info:nth-child(2) {
+        margin: 0px;
+    }
+
+    .sorting2 .text-price-sort, .sorting2 .text-time-sort {
+        font-size: 11px;
+        padding-right: 5px;
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 49%;
+        margin-bottom: 10px;
+        background: white;
+        padding-bottom: 8px;
+        padding-top: 3px;
+    }
+
+    .sorting-inner.date-change:first-child {
+        border-left: 1px solid #e4e4e4;
+    }
+
+    .sorting2 .price {
+        order: 3;
+        flex: 0 0 49%;
+    }
+
+    .sorting2 .time {
+        order: 4;
+        flex: 0 0 49%;
+    }
+
+    .foreign .plane-icon {
+        right: -5px;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 65%;
+        transition: all ease-in-out 5s;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .airlines-info.destination span:first-child {
+        font-size: 10px !important;
+    }
+
+    .airlines-info.destination span:last-of-type {
+        font-size: 13px !important;
+    }
+
+    .airlines-info-inner span:first-child {
+        font-size: 10px;
+    }
+
+    .airlines-info-inner {
+        padding: 0px 0px;
+    }
+
+    .flight-type, .sit-class {
+        line-height: 15px !important;
+        font-size: 11px !important;
+    }
+
+    .international-available-airlines-log-info span {
+        font-size: 9px;
+    }
+
+    .inner-avlbl-itm > div {
+        width: 40%;
+        top: 0px !important;
+    }
+
+    .priceSortAdt {
+        width: 55%;
+    }
+
+    .priceSortAdt .old-price {
+        font-size: 10px !important;
+    }
+
+    .priceSortAdt i {
+        font-size: 14px !important;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        flex: 0 0 48%;
+        order: 1;
+        margin-right: 1%;
+        padding-left: 4%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        order: 0;
+        flex: 0 0 100%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        flex: 0 0 48%;
+        order: 2;
+
+    }
+
+    .foreign .international-available-airlines, .foreign .international-available-airlines-info {
+        /*! display: flex; */
+        /*! flex-wrap: wrap; */
+        /*! padding: 5px; */
+    }
+
+    .international-available-airlines-info span {
+        text-align: right;
+    }
+    .tour-joy .international-available-airlines-info span {
+        text-align: center;
+    }
+    .foreign .airlines-info.txtLeft .date-time > * {
+        text-align: right;
+    }
+
+    .foreign .destination-city span:first-child, .foreign .destination-city span:nth-child(2) {
+        text-align: left;
+    }
+
+    .international-available-airlines-log-info {
+        margin: auto;
+        display: inline-block;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 83%;
+        transition: all ease-in-out 5s;
+    }
+
+    .foreign .international-available-airlines-log-info span {
+        font-size: 11px !important;
+        padding-bottom: 2px;
+    }
+}
+
+.search-wrapper .displayib.padr20.padl20 {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    padding: 0px !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px ) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+.search-wrapper .displayib.padr20.padl20 span:nth-child(1), .search-wrapper .displayib.padr20.padl20 span:nth-child(3) {
+    width: 90px;
+    text-align: center !important;;
+}
+
+.search-wrapper .displayib.padr20.padl20 span:nth-child(2) {
+    margin: 0px;
+    position: relative;
+    top: 4px !important;;
+    width: 85px;
+}
+
+.s-u-number-input-change .minus, .s-u-number-input-change .plus {
+    text-align: center !important;
+}
+
+.filtertip::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto !important;
+}
+
+.bus .airlines-info.destination span:first-child {
+    font-size: 13px !important;
+    color: #888 !important;
+    font-weight: 500 !important;
+}
+
+.bus .airlines-info.destination span:last-of-type {
+    font-size: 13px !important;
+    color: #666 !important;
+    letter-spacing: 1.1px;
+    font-family: inherit !important;;
+    font-weight: 500 !important;
+}
+
+.bus .international-available-airlines-info span.sandali-span {
+    position: relative;
+    top: -10px;
+    font-size: 13px;
+    font-family: inherit, inherit !important;
+}
+
+.select-meliat .select2-container--default .select2-selection--single {
+    border-color: #dedede;
+    border-width: 2px;
+    border-radius: 4px;
+    color: #333;
+    text-align: right;
+}
+
+.select-meliat .select2-container--default .select2-selection--single .select2-selection__rendered {
+    direction: rtl !important;
+}
+
+.select2-container--default .select2-results__option {
+    text-align: left !important;
+}
+
+.resultUlInputSearch li:first-child {
+    text-align: center;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.textSearchFlightForeign {
+    padding: 5px !important;
+    font-family: inherit;
+    font-size: 11px !important;
+    margin: 5px 0px !important;
+    border: none !important;
+    box-shadow: 0px 0px 2px -0px rgba(0, 0, 0, 0.25);
+}
+
+.resultUlInputSearch li i {
+    padding-left: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+.foreign-date {
+    font-family: Arail !important;
+}
+
+.info-login .form-sort.hotel-sort {
+    display: flex;
+    margin-top: 1.5px;
+}
+
+.form-sort.hotel-sort .form-item.form-item-sort {
+    flex: 0 0 33%;
+    margin-top: 0px;
+    margin: 0px 0.3%;
+}
+
+.hotel-result-item-image:hover a img {
+    transform: scale(1.1);
+    margin: 0 !important;
+    width: auto !important;
+}
+
+
+.info-login .head-info-login span {
+    max-height: 38px;
+}
+
+/* =============== editeReserveHotel =============== */
+.edit-hotel .s-u-passenger-wrapper.s-u-passenger-wrapper-change.first {
+    background: none;
+    box-shadow: none;
+}
+
+.edit-hotel .edit-hotel-title {
+    box-shadow: none;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 17px;
+    font-family: inherit;
+}
+
+.edit-hotel .edit-hotel-title i {
+    margin-left: 5px;
+}
+
+.edit-hotel .edit-hotel-box-inner {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.tip-content p span {
+    color: white;
+}
+
+.tzCBPart {
+    top: 3px;
+    height: 26px;
+    background: #ababab;
+}
+
+.tzCBPart::before {
+    line-height: 26px !important;
+    font: 10px 'inherit', yekan;
+    font-weight: 300;
+}
+
+.tzCBPart::after {
+    top: 4px;
+    background: #fefefe;
+}
+
+.chooseiconDay.icons.tooltipWeighDay {
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.chooseiconDay.icons.tooltipWeighDay i {
+    color: white;
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px;
+}
+
+
+
+.swap-flight-box {
+    right: calc(100% - 56.4%);
+}
+
+.s-u-filter-item ul li {
+    padding: 6px 0px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+
+.s-u-filter-item ul li:last-child {
+    border-bottom: none;
+}
+
+.s-u-filter-item-time label {
+    padding: 0px 10px;
+    font-family: 'inherit', yekan, YekanNumbers;
+    color: #585858;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.s-u-filter-title, .s-u-filter-content {
+    box-shadow: none !important;
+}
+
+.s-u-filter-title i {
+    font-size: 23px;
+    margin: 0px 0 0 5px;
+    position: relative;
+    top: 5px;
+}
+
+.s-u-jalali-change input {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.s-u-num-inp-search-change button {
+    border-radius: 4px;
+    border: none !important;
+    transition: all ease 0.3s;
+    color: white;
+    font-weight: 300;
+}
+
+.s-u-filter-title, .s-u-filter-content {
+    box-shadow: none !important;
+    color: #565656;
+    font-family: 'inherit', yekan, yekanNumbers;
+}
+
+.s-u-filter-title {
+    font-weight: 700;
+}
+
+.s-u-filter-title {
+    background: #fbfbfb;
+    border: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #656565;
+}
+
+.s-u-filter-content {
+    background: white;
+    padding: 20px 15px 15px 15px;
+    border-color: #f5f5f5;
+}
+
+.s-u-filter-item-time {
+    padding-top: 0px;
+}
+
+#slider-range.ui-widget-content {
+    height: 8px;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+#slider-range .ui-state-default {
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+.s-u-filter-wrapper-ul {
+    padding: 10px 0px;
+}
+
+.items .showListSort:first-child > div.international-available-box {
+    padding-top: 20px;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(1), .international-available-airlines-info .airlines-info:nth-child(3) {
+    width: 25%;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(2) {
+    width: 48%;
+}
+
+.priceSortAdt {
+    color: #a8a8a8;
+    font-size: 11px !important;
+    font-family: inherit !important;
+    display: block;
+}
+
+.priceSortAdt i {
+    font-size: 19px !important;
+    padding-left: 4px;
+    color: #5eb75e;
+    letter-spacing: 0.7px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.airlines-info.destination span:nth-child(2) {
+    font-family: 'inherit' !important;
+}
+
+
+
+.inner-avlbl-itm > div > a {
+    width: 100%;
+    display: block;
+    padding: 8px 0px;
+    color: white;
+    border-radius: 4px;
+    border: 0px none;
+    font-family: inherit !important;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+}
+
+.last-price-factor-local {
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.inner-avlbl-itm > div > a:hover {
+    opacity: 0.9;
+    transition: all ease 0.3s;
+}
+
+.international-available-airlines-logo {
+    box-shadow: none;
+    background: white;
+    border: none;
+    position: relative;
+}
+
+.international-available-airlines-logo img {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+}
+
+.blit-flight-passenger:nth-child(3) {
+    border-top: 1px dashed #e6e6e6 !important;
+    padding-top: 10px;
+}
+
+.d-block {
+    display: block;
+}
+
+.blit-flight-passenger2:nth-child(2) {
+    border-top: 1px dashed #e6e6e6 !important;
+    padding-top: 10px;
+}
+
+.international-available-airlines-info span {
+    line-height: 20px;
+    font-family: inherit, inherit !important;
+    padding-top: 0px;
+}
+
+.international-available-airlines-info span.flight-type {
+    font-weight: 700 !important;
+}
+
+.s-u-filter-item {
+    background: transparent;
+    margin: 15px 1px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0px 0px;
+}
+
+.s-u-update-popup-change {
+    margin: 0px 1px 10px 1px;
+}
+
+.airline-line {
+    position: relative;
+    padding: 0px 0px;
+    right: 0px;
+    text-align: left;
+
+}
+
+.airline-line:before {
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed #d2d2d2;
+    z-index: 0;
+    top: 8px;
+    margin: auto;
+}
+
+.loc-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    transform: rotate(0deg);
+    position: relative;
+    left: -25px;
+    top: 0;
+}
+
+.loc-icon svg {
+    display: inline-block;
+    width: 18px;
+    fill: currentColor;
+    height: 25px;
+}
+
+.airlines-info-inner {
+    padding: 0px 10px;
+}
+
+.plane-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    z-index: 6;
+
+    position: relative;
+    top: 4px;
+    float: left;
+    left:30px;
+}
+
+.international-available-box:hover .plane-icon {
+    left: 70%;
+    transition: all ease-in-out 5s;
+}
+
+.plane-icon svg {
+    width: 25px;
+    fill: currentColor;
+    color: #737373;
+}
+
+.airlines-info.destination span {
+    position: relative;
+    top: -10px;
+    padding-top: 15px;
+}
+
+.airlines-info.destination span:first-child {
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+.airlines-info.destination span:last-of-type {
+    font-size: 14px !important;
+    color: #858585;
+}
+
+.international-available-airlines-info .airlines-info:nth-child(1) {
+    padding-left: 10px
+}
+
+.international-available-airlines-info .airlines-info:nth-child(3) {
+    padding-right: 10px
+}
+
+.sit-class, .flight-type {
+    display: inline-block !important;
+    padding: 0px 5px !important;
+}
+
+.airlines-info-inner span:first-child {
+    top: 6px;
+    color: #999;
+    font-family: inherit !important;
+    font-weight: 300 !important;
+    z-index: 9;
+}
+
+.sandali-span2 {
+    color: #a8a8a8 !important;
+}
+
+.off-price .sandali-span {
+    top: 10px;
+}
+
+.old-price {
+    font-size: 13px !important;
+    display: block;
+}
+
+.inner-avlbl-itm > div.special-p {
+    position: relative;
+    top: 10px;
+}
+
+.sorting2 input {
+    display: none;
+}
+
+.sorting2 .text-price-sort, .sorting2 .text-time-sort {
+    padding-right: 12px;
+    color: #797979;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: inherit !important;
+    font-weight: 300;
+}
+
+.sorting2 .sorting-inner .next-date span, .sorting2 .sorting-inner .prev-date span {
+    font-family: inherit !important;
+    font-weight: 300;
+    padding:0 8px;
+    font-size: 12px;
+}
+
+.sorting2 .svg svg {
+    width: 19px;
+    top:4px;
+    position: relative;
+    color: #d2d2d2;
+    fill: currentColor;
+    transition: all ease 0.3s;
+}
+
+.sorting2 .sorting-inner.deactive .svg svg {
+    color: #d2d2d2;
+}
+
+.sorting2 .svg {
+    display: inline-block;
+    width: 19px;
+    height: 0px;
+    padding: 0px 0px;
+}
+.sorting2 .price .svg, .sorting2 .time .svg {
+    height: 20px;
+    width: 20px;
+}
+.international-available-box {
+    width: 100%;
+}
+
+.sorting2 {
+    border-radius: 4px;
+    display: flex;
+}
+
+.sorting2 .price, .sorting2 .time {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    justify-content: center;
+    background: white;
+    flex: 0 0 35%;
+}
+
+.sorting2 .price {
+    border-left: 1px solid #e4e4e4;
+}
+
+.sorting2 .date-change.sorting-inner div, .sorting2 .date-change.sorting-inner a {
+    line-height: 30px !important;
+    padding-top: 1px;
+    color: #797979;
+    height: 100%;
+
+    text-align: center;
+    width: 100%;
+    direction: ltr;
+    display: flex;
+    align-items: center;
+}
+
+.sorting-inner.date-change {
+    flex: 0 0 15%;
+}
+
+.international-available-airlines-log-info span {
+    font-family: inherit, inherit !important;
+}
+
+.sorting2 .date-change .today-date {
+    flex: 0 0 50%;
+    color: #797979;
+}
+
+.tip-content p span, .pop-up-h > span, .tableOrderHeadTitle > span, .tdpricelabel {
+    font-family: inherit !important;
+    font-weight: 700 !important;
+}
+
+.tdprice, .rp-tableOrder th {
+    font-family: inherit, inherit !important;
+    font-weight: 400 !important;
+}
+
+.tip-content p {
+    font-family: inherit;
+}
+
+.search-wrapper .displayib .fltr {
+    font-family: inherit !important;
+}
+
+.inp-child-change::before, .inp-adt-change::before, .inp-baby-change::before {
+    font-family: inherit;
+}
+
+.international-available-details ul.tabs li {
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.international-available-details .tab-content > p {
+    font-family: inherit, inherit !important;
+    font-weight: 400 !important;
+    text-align: justify;
+}
+
+.international-available-details ul.tabs li.current {
+    font-weight: 700 !important;
+}
+
+.international-available-airlines-detail-tittle span {
+    font-family: inherit, inherit !important;
+    text-align: left;
+}
+
+.loc-icon-destination {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    float: right;
+    z-index: 6;
+    position: relative;
+    top: 0;
+    right: -20px;
+    left: auto;
+}
+
+.loc-icon-destination svg {
+    display: inline-block;
+    width: 21px;
+    fill: currentColor;
+}
+
+.source {
+    color: white;
+    font-size: 9px;
+    position: absolute !important;
+    top: 0px;
+}
+
+.s-u-result-item-div-logo-change {
+    width: 70px;
+    height: 70px;
+}
+
+.shenase-nerkhi {
+    display: inline-block;
+    font-size: 11px;
+}
+
+.s-u-popup-in-result .cd-user-modal-container .cd-switcher a {
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.51);
+    margin-bottom: 5px;
+}
+
+.f-loader-check {
+    float: none !important;
+}
+
+
+.s-u-passenger-wrapper-change-Buyer {
+    position: relative;
+    top: 15px
+}
+
+.s-u-last-p-bozorgsal-change, .s-u-last-p-nozad-change, .s-u-last-p-koodak-change {
+    text-shadow: none;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.s-u-result-item-change:hover {
+    box-shadow: none;
+}
+
+.s-u-passenger-item-change select, .s-u-passenger-item-change input {
+    border-color: #dedede;
+    border-width: 2px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.s-u-passenger-item::before {
+    right: 15px;
+}
+
+
+
+.panel-default-change-Buyer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.s-u-passenger-wrapper .panel-default-change {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-default-change .panel-heading-change {
+    border-bottom: 1px dashed #c3c3c3;
+}
+
+.control--checkbox {
+    position: relative;
+    display: inline-block;
+    padding: 5px 30px 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.control--checkbox input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.checkbox {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: #039be5;
+    border: 2px solid #039be5;
+    border-radius: 2px;
+    /*transition: border-color .2s;
+    transition-delay: .3s;*/
+}
+.sorting2#sortFlightInternal{
+    margin: 0;
+}
+.sorting2#sortFlightInternal > div {
+    padding: 8px 0;
+    padding-bottom: 8px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control--checkbox span {
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.filler {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: white;
+    transform: scale(1, 1);
+    transition: transform .2s;
+    transition-delay: .2s;
+    will-change: transform;
+}
+
+polyline {
+    position: absolute;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 18px;
+    stroke-dashoffset: 18px;
+    transition: stroke-dashoffset .2s;
+    transition-delay: 0s;
+    will-change: stroke-dashoffset;
+}
+
+/* Checked state */
+.control--checkbox input:checked ~ .checkbox .filler {
+    transform: scale(0, 0);
+    border-radius: 3px;
+    transition-delay: 0s;
+}
+
+.control--checkbox input:checked ~ .checkbox polyline {
+    stroke-dashoffset: 0;
+    transition-delay: .2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.s-u-last-passenger-btn-change {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.s-u-result-item-div-change {
+    background: transparent;
+}
+
+.right-Cell-change {
+    margin-bottom: 5px;
+    padding-bottom: 5px !important;
+    border-bottom: none;
+}
+
+.flight-info span {
+    float: none;
+    margin-right: 2px;
+    width: 35px;
+    height: 35px;
+}
+
+.flight-info .chooseicon .icon {
+    color: #606060;
+    transition: all 0.3s ease 0s;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.flight-info .chooseicon:hover .icon {
+    color: white;
+}
+
+.s-u-bozorg-change i {
+    letter-spacing: 1px;
+    padding-left: 2px;
+    font-family: inherit !important;
+}
+
+.s-u-bozorg-change .price {
+    color: #858585;
+    font-size: 12px;
+}
+
+.s-u-bozorg-change .price i {
+    color: #5eb75e !important;
+}
+
+.Dash-ContentL-B-Table {
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.Dash-ContentL-B-Table table {
+    border: none;
+}
+
+.Dash-ContentL-B-Table table tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+.s-u-p-factor-bank-change > h4 {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.boxerFactorLogo img {
+    width: 40px;
+}
+
+.s-u-p-factor-bank {
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
+    min-height: 305px;
+}
+
+.s-u-select-bank:hover {
+    box-shadow: 0px 0px 0px #999, 0px 0px 0px #999, 0px 4px 0px #999;
+}
+
+.boxerFactorLogo, .bank-logo {
+    border: none;
+}
+
+.cancel-passenger:active, .cancel-passenger:hover {
+    box-shadow: 0 0px 9px -2px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-passenger {
+    border: none;
+}
+
+.international-available-box {
+    border-radius: 5px;
+}
+
+.sorting-inner.rotated-icon svg {
+    transform: rotate(180deg);
+}
+
+.selectedTicket .international-available-box {
+    padding: 10px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.1);
+}
+
+h5.raft-ticket, h5.bargasht-ticket {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #555;
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+h5.bargasht-ticket {
+    margin-top: 30px;
+}
+
+.selectedTicket .raft-ticket i {
+    color: #c3c3c3;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    right: 13px;
+    float: right;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.8);
+}
+
+.my-info-detail > span {
+    display: inline-block !important;
+    float: left !important;
+}
+
+.my-info-detail .my-seperator {
+    padding: 0px 5px;
+}
+.my-more-info {
+    display: inline-block;
+    background-color: rgb(245, 245, 245);
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 5px 8px 5px 7px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 11px;
+    font-family: inherit;
+    color: #777777;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.s-u-filter-item-time label > i {
+    font-family: inherit !important;
+    letter-spacing: 0.4px;
+}
+
+.my-more-info:hover {
+    background: #e2e2e2;
+    transition: all ease 0.3s;
+}
+
+.international-available-detail-btn i.fa-angle-down , .btn-available-d-n i.fa-angle-down{
+
+    font: normal normal normal 13px/17px FontAwesome;
+    border-bottom: 1px solid
+    transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #afaeae;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+}
+
+.blite-rafto-bargasht-text {
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: none;
+    transform: rotate(90deg);
+}
+
+.blite-rafto-bargasht-text span {
+    color: white;
+    background: #5eb75e !important;
+    padding: 0px 11px;
+    font-size: 12px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.international-available-airlines {
+    width: 18%;
+}
+
+/* ============== foreign flight page css ================= */
+
+.foreign .international-available-item-left-Cell {
+    width: 17%;
+}
+
+.foreign .international-available-item-right-Cell {
+    width: calc(100% - 19%) !important;
+}
+
+.foreign .international-available-airlines {
+    width: 15%;
+}
+
+.foreign .international-available-airlines-info {
+    width: calc(100% - 16%);
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+    padding-left: 1.5%;
+    width: 27%;
+    float: left !important;
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+    width: 43%;
+}
+
+.foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+    padding-right: 1.5%;
+    width: 27%;
+    float: right !important;
+}
+
+.foreign .date-time {
+    display: flex;
+}
+
+.foreign .date-time > .time-flight {
+    flex: 0 0 30%;
+    /*! padding: 0px !important; */
+}
+
+.foreign .date-time > .date-flight {
+    flex: 0 0 70%;
+}
+
+.foreign .date-time .time-flight {
+    font-size: 11px;
+    border-radius: 4px;
+    text-align: right;
+    /*! margin-left: 1.5%; */
+    color: #9e9e9e;
+    line-height: 20px !important;
+}
+
+.foreign .date-time .date-flight {
+    font-size: 11px;
+    border-radius: 4px;
+    text-align: right;
+    color: #9e9e9e;
+    display: flex;
+    /*! line-height: 20px !important; */
+    padding: 0px !important;
+    padding-top: 2px !important;
+}
+
+.foreign .airlines-info.txtLeft .date-time > * {
+    text-align: left;
+}
+
+.foreign .airport-name-flight {
+    font-size: 9px;
+}
+
+.foreign .tavaghof {
+    display: inline-block !important;;
+    font-size: 12px;
+}
+
+.foreign .flight-type, .foreign .sit-class {
+    font-size: 12px;
+    padding-left: 7px !important;
+    margin-left: 7px;
+    border-left: 2px solid #c3c3c3;
+    line-height: 10px !important;
+    height: 10px;
+    padding-right: 0px !important;
+}
+
+.foreign .airline-line {
+    font-size: 13px;
+}
+
+.foreign .airlines-info-inner span {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.foreign .airlines-info-inner {
+    padding: 0px 10px;
+    font-size: 0px;
+}
+
+.foreign .airlines-info-inner span:first-child {
+    top: 6px;
+    color: #999;
+    font-family:Arial, Helvetica, sans-serif !important;
+}
+
+.tip-content .counthotel a {
+    color: white !important;
+}
+
+kbd {
+    background: transparent;
+    color: #666;
+}
+
+.s-u-next-setep-login-popup {
+    display: none;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.foreign .international-available-airlines-log-info span {
+    line-height: 15px !important;
+    font-size: 11px !important;
+}
+
+.foreign .speratopr-foraign {
+    padding: 0px 1px;
+    font-weight: bold !important;
+    display: block;
+}
+
+.foreign .sorting2 {
+    margin-bottom: 15px;
+}
+
+.foreign-sidebar .inputSearchForeign {
+    font-size: 11px;
+    text-align: left;
+    padding-left: 10px;
+    font-family: inherit;
+    color: #999;
+}
+
+.foreign-sidebar .s-u-num-inp-change {
+    width: 100% !important;
+}
+
+.blit-foreign-passenger .s-u-result-items-div-international {
+    background: white !important;
+    border-bottom: 0px;
+    min-height: 70px;
+}
+
+.foreign .international-available-airlines-logo-detail {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.foreign .international-available-airlines-logo-detail img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.foreign .side-logo-detail span:nth-child(1) {
+    width: 100%;
+    display: block;
+}
+
+.foreign .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+    width: 30% !important;;
+}
+
+.foreign .international-available-airlines-detail.airlines-stops-time {
+    border: none !important;
+    border-radius: 7px !important;
+    text-align: right;
+    background: #e1e1e1 !important;
+    width: auto;
+    margin: 10px 10px 30px 10px !important;
+    display: block !important;
+    padding: 10px 20px !important;
+    text-align: center;
+}
+
+.airlines-stops-time > span:nth-child(1), .airlines-stops-time > span:nth-child(2) {
+    margin: 0 auto !important;
+    float: none !important;
+    display: inline-block !important;
+    text-align: center;
+}
+
+.airlines-stops-time > span:nth-child(2) {
+    padding-right: 10px !important;
+}
+
+.side-logo-detail > span:nth-child(2), .side-logo-detail > span:nth-child(3) {
+    padding-left: 8px;
+    margin-left: 8px;
+    border-left: 2px solid #c3c3c3;
+}
+
+#s-u-result-wrapper-ul .items .international-available-box:nth-child(1) {
+    padding-top: 20px;
+}
+
+.pasenger-flight-date-1 {
+    flex: 0 0 100% !important;;
+}
+
+.pasenger-flight-date-2 {
+    text-align: left !important;
+    justify-content: left;
+    flex: 0 0 100% !important;
+}
+
+.international-available-panel-min2 {
+    margin-top: 30px;
+}
+
+.foreign .international-available-airlines-info-detail {
+    width: calc(100% - 55px);
+}
+
+
+.tour-joy .international-available-airlines {
+    width: 25%;
+}
+.tour-joy .international-available-airlines-info {
+    width: calc( 100% - 26%);
+}
+.tour-joy .international-available-item-right-Cell {
+    padding-right: 20px;
+}
+
+
+
+
+.client-profile .client-profile-heading {
+    display: flex;
+}
+.client-profile-btn {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    position:relative;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+.client-profile-btn:before {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MC44MTEgMjQwLjgxMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQwLjgxMSAyNDAuODExOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBpZD0iRXhwYW5kX01vcmUiIGQ9Ik0yMjAuMDg4LDU3LjY2N2wtOTkuNjcxLDk5LjY5NUwyMC43NDYsNTcuNjU1Yy00Ljc1Mi00Ljc1Mi0xMi40MzktNC43NTItMTcuMTkxLDAgICBjLTQuNzQsNC43NTItNC43NCwxMi40NTEsMCwxNy4yMDNsMTA4LjI2MSwxMDguMjk3bDAsMGwwLDBjNC43NCw0Ljc1MiwxMi40MzksNC43NTIsMTcuMTc5LDBMMjM3LjI1Niw3NC44NTkgICBjNC43NC00Ljc1Miw0Ljc0LTEyLjQ2MywwLTE3LjIxNUMyMzIuNTI4LDUyLjkxNSwyMjQuODI4LDUyLjkxNSwyMjAuMDg4LDU3LjY2N3oiIGZpbGw9IiMwMDAwMDAiLz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    background-size:contain;
+    opacity: 0.7;
+    content: "";
+    transition: all linear 0.3s;
+}
+.client-profile-btn.client-profile-open:before {
+    transform: rotate(180deg);
+}
+.client-profile-btn i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNzMuMTY4IDczLjE2OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzMuMTY4IDczLjE2ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnIGlkPSJOYXZpZ2F0aW9uIj4KCQk8Zz4KCQkJPHBhdGggZD0iTTQuMjQyLDE0LjQyNWg2NC42ODRjMi4zNDQsMCw0LjI0Mi0xLjkzMyw0LjI0Mi00LjMyNGMwLTIuMzg1LTEuODk4LTQuMzI1LTQuMjQyLTQuMzI1SDQuMjQyICAgICBDMS44OTgsNS43NzYsMCw3LjcxNiwwLDEwLjEwMUMwLDEyLjQ5MywxLjg5OCwxNC40MjUsNC4yNDIsMTQuNDI1eiBNNjguOTI2LDMyLjI1OUg0LjI0MkMxLjg5OCwzMi4yNTksMCwzNC4yLDAsMzYuNTg0ICAgICBjMCwyLjM5MywxLjg5OCw0LjMyNSw0LjI0Miw0LjMyNWg2NC42ODRjMi4zNDQsMCw0LjI0Mi0xLjkzMyw0LjI0Mi00LjMyNUM3My4xNjgsMzQuMiw3MS4yNywzMi4yNTksNjguOTI2LDMyLjI1OXogICAgICBNNjguOTI2LDU4Ljc0Mkg0LjI0MkMxLjg5OCw1OC43NDIsMCw2MC42ODMsMCw2My4wNjdjMCwyLjM5MywxLjg5OCw0LjMyNSw0LjI0Miw0LjMyNWg2NC42ODRjMi4zNDQsMCw0LjI0Mi0xLjkzNSw0LjI0Mi00LjMyNSAgICAgQzczLjE2OCw2MC42ODMsNzEuMjcsNTguNzQyLDY4LjkyNiw1OC43NDJ6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+    background-size:contain;
+    opacity: 0.6;
+    position: absolute;
+
+}
+.client-profile-btn span {
+    padding-left: 30px;
+}
+.client-profile .client-profile-heading > div {
+    flex-grow: 1;
+    background: #fff;
+    text-align: center;
+    border-bottom: 2px solid #ececec;
+    padding: 0;
+    transition: all linear 0.2s;
+    margin: 0px !important;
+}
+.client-profile .client-profile-heading > div:first-child {
+    border-top-left-radius: 4px;
+}
+.client-profile .client-profile-heading > div:last-child {
+    border-top-right-radius: 4px;
+}
+.client-profile .client-profile-heading > div:hover {
+    background:#f9f9f9;
+}
+.client-profile .client-profile-heading > div:hover i {
+    color:#c9c9c9;
+}
+.client-profile .client-profile-heading > div.client-profile-heading-active {
+    border-color:rgba(0,0,0,0);
+}
+.client-profile .client-profile-heading > div.client-profile-heading-active * {
+    color:white !important;
+}
+.client-profile .client-profile-heading > div i {
+    display: block;
+    position: relative;
+
+    transition: all linear 0.2s;
+    top: -3px;
+    color: #ececec;
+    margin-bottom: 5px;
+}
+.client-profile .client-profile-heading > div span {
+    font-family: inherit !important;
+    font-weight: 500 !important;
+    font-size: 13px;
+    color:#767676;
+    margin-top: 0px;
+}
+.client-profile .client-head-content {
+    background:white;
+    padding:10px;
+    float:right;
+    width: 100%;
+}
+.mob-parvaz-kh {
+    display: none;
+}
+#sortFlightInternal .price, #sortFlightInternal .time {
+    flex: 0 0 23.33333% ;
+}
+
+@media screen and (max-width: 1200px) {
+    .gds-login-register-inner > .gds-login-form {
+        padding: 15px;
+        flex: 1 0 calc(50% - 30px) !important;
+    }
+    .gds-login-register-inner > .gds-login-detail {
+        flex: 0 0 calc(50% - 30px) !important;
+    }
+    .tour-joy .international-available-item-right-Cell {
+        padding-right: 0px;
+    }
+    .tour-joy .international-available-airlines-log-info span {
+        font-size:11px !important;
+    }
+    .international-available-airlines-info .airlines-info:nth-child(1), .international-available-airlines-info .airlines-info:nth-child(3) {
+        width: calc(20% - 10px);
+    }
+
+    .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 58%;
+    }
+
+    .sandali-span {
+        color: #ef5661;
+        width: 100%;
+        right: 0px;
+    }
+
+    .international-available-item-left-Cell {
+        position: relative;
+    }
+
+    .inner-avlbl-itm > div {
+        top: 20px;
+    }
+
+    .foreign .international-available-airlines {
+        width: 12%;
+    }
+
+    .foreign .international-available-airlines-info {
+        width: calc(100% - 13%);
+    }
+
+    .foreign .airlines-info-inner {
+        padding: 0px 5px;
+    }
+
+    .foreign .airlines-info-inner span:first-child {
+        font-size: 10.5px;
+        text-align: center;
+    }
+
+    .foreign .flight-type lable, .foreign .sit-class, .foreign .tavaghof {
+        font-size: 10px;
+    }
+
+    .foreign .flight-type, .foreign .sit-class {
+
+        padding-left: 5px !important;
+        margin-left: 5px;
+
+    }
+
+    .foreign .plane-icon {
+        right: -22px;
+    }
+
+    .foreign .international-available-airlines-log-info span {
+        font-size: 9px !important;
+        padding-top: 4px;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        padding-left: 1%;
+        width: 31%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 36%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        padding-right: 1%;
+        width: 31%;
+    }
+
+    .international-available-airlines-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .foreign .date-time .date-flight, .foreign .date-time .time-flight {
+        font-size: 10px;
+    }
+
+    .foreign .priceSortAdt i {
+        font-size: 16px !important;
+        font-style: normal !important;
+    }
+
+    .foreign .inner-avlbl-itm > div > a {
+        padding: 6px 0px !important;;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 57%;
+        transition: all ease-in-out 5s;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tip-content p{ text-align: left;}
+    .client-profile-counter .client-profile-h {
+        max-height: 0px;
+        overflow: hidden;
+        transition: all linear 0.5s;
+    }
+    .client-profile-counter .client-profile-h.client-profile-h-show {
+        max-height: 1000px;
+        overflow: hidden;
+        transition: all linear 0.5s;
+    }
+
+    .client-profile.client-profile-counter  .client-profile-btn {
+        display: block;
+    }
+    .client-profile.client-profile-counter .client-profile-heading {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .s-u-passenger-wrapper-change .s-u-last-p-bozorgsal-change i{ left: 10px;}
+    .client-profile.client-profile-counter .client-profile-heading .client-profile-heading-item {
+        flex:0 0 100%;
+        padding: 9px 15px;
+        text-align: left;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .client-profile.client-profile-counter .client-profile-heading > div:first-child {
+        border-top-left-radius: 4px;
+    }
+    .client-profile.client-profile-counter .client-profile-heading > div:last-child {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom:none;
+    }
+    .client-profile.client-profile-counter .client-profile-heading div i {
+        display: inline-block;
+        top:1px;
+        color:#b6b6b6;
+        margin-left: 10px;
+    }
+    .swap-flight-box {
+        right: calc(100% - 9.1%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #timeSortSelect::before, .filter_search_mobile_res::before {
+        content: '';
+        background: #ccc;
+        height: 15px;
+        width: 1px;
+        left: 0;
+        position: absolute;
+    }
+    .sorting-inner.date-change {
+        flex: 0 0 50% !important;
+        order: 1;
+        margin-bottom: 0px;
+        padding-bottom: 0px !important;
+        border: none !important;
+    }
+    .sorting2 #priceSortSelect {
+        border-left: none;
+    }
+    .sorting2 .price, .sorting2 .time {
+        flex: 0 0 50% !important;
+        box-sizing: border-box;
+    }
+    .sorting2 .price {
+        order: 3;
+    }
+    .sorting-inner.date-change {
+        flex: 0 0 50% !important;
+        order: 1;
+        margin-bottom: 0px;
+        padding-bottom: 0px !important;
+        border: none !important;
+    }
+    .sorting2#sortFlightInternal .filter_search_mobile {
+        flex: 0 0 100%;
+        margin-top: 10px;
+    }
+
+    .notifications-upload-image span{ width: 100%;}
+
+
+    .notifications-upload-image{ width: 100% !important;}
+    .hotel-result-item-content{ height: 100%;}
+    .car-result-item{ width: 100%;}
+    .international-available-item-right-Cell{ direction: rtl}
+    .plane-icon svg {
+        fill:#737373;
+    }
+    .mob-parvaz-kh {
+        display: flex;
+        margin-top:2px;
+    }
+    .mob-parvaz-kh span {
+        font-size:11px;
+        background:#f8f8f8;
+        border-radius: 4px;
+        padding: 0px 3px;
+        margin-left: 5px;
+        font-weight: 300;
+    }
+    .gds-login-modal {
+        max-width: 310px;
+    }
+    .gds-login-modal-inner .no-register-buy {
+        order:2;
+        border-left: none;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    .gds-login-modal-inner .gds-login-register-inner > div.registered-buy {
+        flex: 0 0 100%;
+        padding: 20px;
+        max-width: 100%;
+
+    }
+    .gds-login-modal-inner .gds-login-register-inner form > div > span input {
+        width: 100%;
+        min-width: initial;
+
+    }
+    .gds-login-modal-inner .gds-login-register-inner form > div > span {
+        width: 100%;
+    }
+    .gds-login-modal-inner .gds-login-register-inner > div {
+        padding:10px 15px !important;
+        flex: 0 0 100% !important;
+    }
+    .gds-login-modal-inner .no-register-buy ul {
+        display: none;
+    }
+    .gds-login-register-inner {
+        flex-wrap: wrap;
+    }
+    #register-gds-form {
+        margin-bottom: 0px !important;
+    }
+    .gds-login-register-inner > .gds-login-form {
+        padding: 15px;
+        flex: 0 0 100% !important;
+        max-width: 100%;
+    }
+    .gds-login-register-inner > .gds-login-detail {
+        flex: 0 0 100% !important;
+        border-bottom-right-radius: 0px !important;
+        border-top-left-radius: 6px !important;
+    }
+    .gds-login-detail-inner h2 {
+        margin-top:80px !important;
+        font-size:27px !important;
+    }
+    .gds-login-detail-inner > span {
+        width: 55px !important;
+        top:30px !important;
+        height: 55px !important;
+    }
+    .gds-login-register-inner > .gds-login-detail:before {
+        border-bottom-right-radius: 0px !important;
+        border-top-left-radius: 6px !important;
+    }
+    .btn-rezerv-pc {
+        display: none;
+    }
+    .btn-rezerv-mob {
+        display: block !important;
+    }
+    .tour-joy .international-available-item-right-Cell {
+        width:100%;
+        padding-right: 23px;
+    }
+    .tour-joy .international-available-detail-btn {
+        display: none;
+    }
+    .tour-joy .inner-avlbl-itm > div.special-p {
+        position: relative;
+        top: 0px;
+    }
+    .tour-joy  .international-available-airlines-info span.sandali-span {
+        width: 100%
+    }
+    .tell-sms-btns {
+        display: flex;
+        margin:10px 0px;
+        top:-155px;
+        justify-content: space-evenly;
+        position: absolute;
+        right: 72px;
+        min-width: 80px;
+    }
+    .international-available-panel-min2 ul li.tab-link {
+        width: 25%;
+    }
+
+    .foreign .international-available-panel-min2 .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+        width: 33% !important;
+        padding: 0 5px !important;
+    }
+
+    .foreign .international-available-panel-min2 .details-detail-box span {
+        font-size: 10px !important;
+    }
+
+    .source {
+        position: absolute;
+    }
+
+    .international-available-airlines-log-info span {
+        font-size: 9px;
+        padding-top: 7px;
+    }
+
+    .items .showListSort:first-child > div.international-available-box {
+        padding-top: 0px;
+    }
+
+    .priceSortAdt {
+        /*! position: relative; */
+        /*! top: 5px; */
+        width: 48%;
+        /*! display:inline-block; */
+        flex: 0 0 50%;
+    }
+
+    .priceSortAdt i {
+        display: inline-block;
+    }
+
+    .priceSortAdt .old-price {
+        display: inline-block;
+        padding-left: 5px;
+    }
+
+    .inner-avlbl-itm > div  {
+        top: 0px;
+        width: 50%;
+        min-height: 36px;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        float: left;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    .sandali-span {
+        color: #ef5661;
+        width: calc(50% - 10px);
+        right: 0px;
+        top: 0px;
+        text-align: center;
+    }
+
+    .airline-line::before {
+        bottom: 14px;
+    }
+
+    .loc-icon {
+        width: 20px;
+        height: 20px;
+        top: 1px;
+    }
+
+    .plane-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loc-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .international-available-item-right-Cell {
+        /*! padding:8px; */
+        width: 10;
+    }
+
+    .priceSortAdt i {
+        font-size: 17px !important;
+    }
+
+    .sorting2 {
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 14%;
+    }
+
+
+    .international-available-airlines {
+        width: 75px;
+    }
+
+    .international-available-item-left-Cell > .inner-avlbl-itm {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .international-available-item-left-Cell {
+        width: 100%;
+        border-top: 1px dashed #ddd;
+    }
+
+    .foreign .international-available-item-left-Cell {
+        width: 100%;
+    }
+
+    .foreign .international-available-item-right-Cell {
+        width: 100% !important;
+    }
+
+    .foreign .international-available-airlines  {
+        width: 60px;
+    }
+    .foreign .international-available-airlines-info {
+        width: calc(100% - 70px);
+    }
+    .foreign .international-available-airlines-info .airlines-info.txtRight .date-time , .foreign .airlines-info-inner span.tavaghof {
+        display: none !important;
+    }
+    .foreign .international-available-airlines-info .airlines-info.txtLeft .date-time {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        flex-wrap: wrap;
+        max-width: 75px;
+    }
+    .foreign .date-time > .date-flight {
+        flex: 0 0 100% !important;
+        order: 2;
+        padding: 0px !important;
+        display: none !important;
+    }
+    .foreign .speratopr-foraign {
+        padding:0px 3px;
+    }
+    .foreign .date-time > .time-flight {
+        flex: 0 0 100% !important;
+        order: 1;
+        padding-left: 20px;
+        position: relative;
+        padding: 0px 20px 0px 0px !important;
+        font-weight: bold;
+        color: #717171;
+        font-size: 13px;
+    }
+    .foreign .international-available-airlines-info .airlines-info.txtLeft .date-time {
+
+    }
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        padding-left: 1.5%;
+        width: 29%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        width: 39%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        padding-right: 1.5%;
+        width: 29%;
+    }
+
+    .foreign .plane-icon {
+        right: -10px;
+    }
+    .international-available-box .plane-icon {
+        right: -2px !important;
+        transition: all 0s;
+        top: -14px !important;
+        position: relative;
+    }
+    .international-available-box:hover .plane-icon {
+        right: 4px !important;
+        transition: all 0s;
+    }
+
+    .foreign .airport-name-flight {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .s-u-passenger-item-hotel{ width: 50%;}
+    .kindOfPasenger{ float: left;}
+    .hotel-booking-room{ float: none; margin: 0; padding: 0}
+    .checkbox-passenger-car p{ width: 100%;}
+    .s-u-passenger-wrapper-change .s-u-last-p-bozorgsal-change {
+        padding-bottom:10px;
+        width: 100%;
+    }
+    .sorting2 .date-change {
+        display: none;
+    }
+    .client-profile  .client-profile-h {
+        max-height: 0px;
+        overflow: hidden;
+        transition: all linear 0.5s;
+    }
+    .client-profile .client-profile-h.client-profile-h-show {
+        max-height: 1000px;
+        overflow: hidden;
+        transition: all linear 0.5s;
+    }
+    .client-profile  .client-profile-btn {
+        display: block;
+    }
+    .client-profile .client-profile-heading {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .client-profile .client-profile-heading .client-profile-heading-item {
+        flex:0 0 100%;
+        padding: 9px 15px;
+        text-align: left;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .client-profile .client-profile-heading > div:first-child {
+        border-top-left-radius: 4px;
+    }
+    .client-profile .client-profile-heading > div:last-child {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom:none;
+    }
+    .client-profile .client-profile-heading div i {
+        display: inline-block;
+        top:1px;
+        color:#b6b6b6;
+        margin-right: 10px;
+    }
+    .international-available-panel-min2 ul li.tab-link {
+        width: 28%;
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    .international-available-panel-min2 ul li.current {
+        padding: 5px 2px;
+    }
+
+    .foreign .international-available-panel-min2 .origin-detail-box, .destination-detail-box, .foreign .details-detail-box {
+        width: 100% !important;
+        margin: 10px 0px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail span:first-child {
+        font-size: 11px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail span:nth-child(2) {
+        font-size: 10px;
+        margin-left: 2px;
+        padding-left: 2px;
+        border-left: 0px;
+    }
+
+    .foreign .international-available-panel-min2 .side-logo-detail {
+        padding: 0px 5px;
+    }
+
+    .sorting2 .date-change .next-date i {
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        right: 5px;
+    }
+
+    .sorting2 .date-change .prev-date i {
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        left: 5px;
+    }
+
+    .sorting2 .sorting-inner .next-date span, .sorting2 .sorting-inner .prev-date span {
+        font-size: 12px;
+    }
+
+    .sorting2 .text-price-sort, .sorting2 .text-time-sort {
+        font-size: 12px;
+    }
+
+    .sorting2 {
+        margin: 17px 0px;
+    }
+
+    .sorting2 .price, .sorting2 .time {
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 17%;
+    }
+
+    .sorting2 .price, .sorting2 .time {
+        flex: 0 0 32%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sandali-span {
+        top: 15px !important;
+        line-height: 0px !important;
+        height: 0px !important;
+        display: block;
+    }
+
+    .priceSortAdt {
+        width: 100%;
+    }
+
+    .international-available-airlines {
+        /*! width: 100%; */
+    }
+
+    .international-available-airlines-info {
+        /*! width: 100%; */
+    }
+
+    .international-available-airlines-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .international-available-airlines-info .airlines-info:nth-child(2) {
+        margin: 0px;
+    }
+
+    .sorting2 .text-price-sort, .sorting2 .text-time-sort {
+        font-size: 11px;
+        padding-right: 5px;
+    }
+
+    .sorting-inner.date-change {
+        flex: 0 0 49%;
+        margin-bottom: 10px;
+        background: transparent;
+        padding-bottom: 8px;
+        padding-top: 3px;
+    }
+    .loader-section {
+        top:139px;
+        width: 100%;
+        right: 0px;
+    }
+    .sorting-inner.date-change:first-child {
+        border-left: 1px solid #e4e4e4;
+    }
+
+    .sorting2 .price {
+        order: 3;
+        flex: 0 0 49%;
+    }
+
+    .sorting2 .time {
+        order: 4;
+        flex: 0 0 49%;
+    }
+
+    .foreign .plane-icon {
+        right: -5px;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 65%;
+        transition: all ease-in-out 5s;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .airlines-info.destination span:first-child {
+        font-size: 13px !important;
+    }
+
+    .airlines-info.destination span:last-of-type {
+        font-size: 13px !important;
+    }
+
+    .airlines-info-inner span:first-child {
+        font-size: 10px;
+    }
+
+    .airlines-info-inner {
+        padding: 0px 0px;
+    }
+
+    .flight-type, .sit-class {
+        line-height: 15px !important;
+        font-size: 11px !important;
+    }
+
+    .international-available-airlines-log-info span {
+        font-size: 9px;
+    }
+
+    .inner-avlbl-itm > div {
+        width: 46%;
+        top: 0px !important;
+        margin-left: 0px;
+    }
+
+    .priceSortAdt {
+        width: 55%;
+    }
+    .hotel-start-price.priceSortAdt {
+        width:100%;
+    }
+    .hotel-result-item-bottom {
+        padding: 4px;
+        width: 100%;
+    }
+    .hotel-result-item-text {
+        width: calc(100%) !important;
+        padding: 4px;
+    }
+    .priceSortAdt .old-price {
+        font-size: 10px !important;
+    }
+
+    .priceSortAdt i {
+        font-size: 14px !important;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(1) {
+        flex: 0 0 48%;
+        order: 1;
+        margin-right: 1%;
+        padding-left: 4%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(2) {
+        order: 0;
+        flex: 0 0 100%;
+    }
+
+    .foreign .international-available-airlines-info .airlines-info:nth-child(3) {
+        flex: 0 0 48%;
+        order: 2;
+
+    }
+
+    .foreign .international-available-airlines, .foreign .international-available-airlines-info {
+        /*! display: flex; */
+        /*! flex-wrap: wrap; */
+        /*! padding: 5px; */
+    }
+
+    .international-available-airlines-info .airlines-info > span:nth-child(2) {
+        /*! display: none !important; */
+        font-size: 8px;
+        color: #989898;
+    }
+    .international-available-box .plane-icon {
+        right: 0px !important;
+        transition: all 0s;
+        top: 2px !important;
+    }
+    .foreign .destination-city span:first-child, .foreign .destination-city span:nth-child(2) {
+        text-align: left;
+    }
+
+    .international-available-airlines-log-info {
+        margin: auto;
+        display: inline-block;
+    }
+
+    .international-available-box:hover .plane-icon {
+        right: 83%;
+        transition: all ease-in-out 5s;
+    }
+
+    .foreign .international-available-airlines-log-info span {
+        font-size: 11px !important;
+        padding-bottom: 2px;
+    }
+}
+
+
+.search-wrapper .displayib.padr20.padl20 {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    padding: 0px !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px ) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+.search-wrapper .displayib.padr20.padl20 span:nth-child(1), .search-wrapper .displayib.padr20.padl20 span:nth-child(3) {
+    width: 90px;
+    text-align: center !important;;
+}
+
+.search-wrapper .displayib.padr20.padl20 span:nth-child(2) {
+    margin: 0px;
+    position: relative;
+    top: 4px !important;;
+    width: 85px;
+}
+
+.s-u-number-input-change .minus, .s-u-number-input-change .plus {
+    text-align: center !important;
+}
+
+.filtertip::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto !important;
+}
+
+.bus .airlines-info.destination span:first-child {
+    font-size: 13px !important;
+    color: #888 !important;
+    font-weight: 500 !important;
+}
+
+.bus .airlines-info.destination span:last-of-type {
+    font-size: 13px !important;
+    color: #666 !important;
+    letter-spacing: 1.1px;
+    font-family: inherit !important;;
+    font-weight: 500 !important;
+}
+
+.bus .international-available-airlines-info span.sandali-span {
+    position: relative;
+    top: -10px;
+    font-size: 13px;
+    font-family: inherit, inherit !important;
+}
+
+.select-meliat .select2-container--default .select2-selection--single {
+    border-color: #dedede;
+    border-width: 2px;
+    border-radius: 4px;
+    color: #333;
+    text-align: right;
+}
+
+.select-meliat .select2-container--default .select2-selection--single .select2-selection__rendered {
+    direction: rtl !important;
+}
+
+.select2-container--default .select2-results__option {
+    text-align: left !important;
+}
+
+.resultUlInputSearch li:first-child {
+    text-align: center;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.textSearchFlightForeign {
+    padding: 5px !important;
+    font-family: inherit;
+    font-size: 11px !important;
+    margin: 5px 0px !important;
+    border: none !important;
+    box-shadow: 0px 0px 2px -0px rgba(0, 0, 0, 0.25);
+}
+
+.resultUlInputSearch li i {
+    padding-left: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+.foreign-date {
+    font-family: Arail !important;
+}
+
+.info-login .form-sort.hotel-sort {
+    display: flex;
+    margin-top: 1.5px;
+}
+
+.form-sort.hotel-sort .form-item.form-item-sort {
+    flex: 0 0 25%;
+    margin-top: 0px;
+    margin: 0px 0.3%;
+}
+.form-sort.hotel-sort-hotel .form-item.form-item-sort{  flex: 0 0 33% !important;}
+.hotel-result-item-image:hover a img {
+    transform: scale(1.1);
+    margin-top: 0px;
+}
+
+
+
+.info-login .head-info-login span {
+    max-height: 100%;
+}
+
+/* =============== editeReserveHotel =============== */
+
+.edit-hotel .s-u-passenger-wrapper.s-u-passenger-wrapper-change.first {
+    background: none;
+    box-shadow: none;
+    padding: 0px 0px 0px;
+    margin-top: 35px !important;
+}
+
+.edit-hotel .edit-hotel-title {
+    box-shadow: none;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 17px;
+    font-family: inherit;
+    clear: both;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.edit-hotel .edit-hotel-title i {
+    margin-left: 5px;
+}
+
+.edit-hotel .edit-hotel-box-inner {
+    background: white !important;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.edit-hotel .edit-hotel-box-inner > div:nth-child(1) {
+    padding: 17px 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.edit-hotel .edit-hotel-box-inner > div:nth-child(1) .deleteReserve {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: inherit;
+    border: none;
+    box-shadow: 0px 0px 0px 2px #cf270c;
+}
+
+.edit-hotel .box_every_passenger .panel-heading-change {
+    display: flex;
+}
+
+.edit-hotel .box_every_passenger .panel-heading-change > div {
+    flex: 0 0 50%;
+}
+
+.edit-hotel .box_every_passenger .panel-head-hotel-box-left {
+    align-items: end;
+    align-content: end;
+    justify-content: end;
+    justify-items: end;
+    display: flex;
+}
+
+.edit-hotel .box_every_passenger .panel-head-hotel-box-left .panel-Former-travelers-change {
+    position: relative;
+    top: -10px;
+}
+
+.edit-hotel .box-add-room-hotel {
+    border-top: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    display: flex;
+}
+
+.edit-hotel .box-add-room-hotel > div {
+    flex: 0 0 33%;
+    display: flex;
+    position: initial;
+}
+
+.edit-hotel .box-add-room-hotel > div select {
+    margin-right: 5px;
+    min-width: 70px;
+}
+
+.edit-hotel .box-add-room-hotel > div .addReserve {
+    border-radius: 5px;
+    padding: 6px 15px 7px 15px;
+    border: none;
+    color: white;
+    font-family: inherit;
+    background: #039be5;
+}
+
+.edit-hotel .box-add-room-hotel > div .addReserve i {
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+}
+
+.edit-hotel .panel-Former-travelers-change {
+    border: none;
+}
+
+.edit-hotel .panel-Former-travelers-change .deleteReserve {
+    color: white !important;
+    border: none !important;
+    background: #cf270c;
+    border-radius: 5px;
+    padding: 7px 10px !important;
+    font-family: inherit;
+}
+
+.hotel-last-section {
+    display: flex;
+    margin-top: 30px;
+}
+
+.hotel-last-section > div {
+    flex: 0 0 50%;
+    width: auto;
+    clear: none;
+}
+
+.hotel-last-section > div:nth-child(1) {
+    padding: 0px;
+    margin: 0px !important;
+    border-radius: 5px;
+}
+
+.hotel-last-section > div:nth-child(1) > div {
+    padding: 15px;
+    text-align: center;
+    font-family: inherit, inherit;
+    color: #666;
+}
+
+.hotel-last-section > div:nth-child(2) input {
+    text-align: left;
+    float: right;
+}
+
+.rp-cel-hotel-name {
+    padding-left: 60px;
+    position: relative;
+    font-size: 18px;
+    font-family: inherit, inherit;
+    line-height: 55px;
+}
+
+.rp-cel-hotel-name i.ravis-icon-hotel {
+    font-size: 35px;
+    left: 5px;
+    color: #777;
+    position: absolute;
+    bottom: 12px;
+}
+
+.rp-hotel-box .gmap3 {
+    border-radius: 7px;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1);
+
+}
+
+.first-item-hotel-azm .hotel-description {
+    min-height: 126px;
+}
+
+.filter-search-hotel {
+    clear: both;
+    padding: 20px 5px;
+    display: flex;
+    flex: 0 0 100%;
+}
+
+.filter-search-hotel form {
+    flex: 0 0 100%;
+}
+
+.nuumbrtRoom select {
+    font-family: inherit, inherit;
+    color: #666;
+    padding: 0px 5px;
+    margin: 0px 0px;
+    font-size: 13px;
+    border: 1px solid #d7d7d7;
+    background-color: #f7f7f7;
+    color: #222;
+    padding: 5px 2px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.finalPrice {
+    margin-top: 20px;
+}
+
+.row-hotel-name {
+    display: inline-block;
+    max-width: 330px;
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+    height: 20px;
+    top: -13px;
+
+}
+
+.row-hotel-name div {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.row-hotel-name div span {
+    flex: 0 0 100%;
+}
+
+.row-hotel-name div span.nameFa {
+    font-size: 15px;
+}
+
+.row-hotel-name div span.nameEn {
+    font-size: 12px;
+}
+.pagination {
+    padding-top:20px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+    direction: ltr;
+}
+
+.pagination i {
+    /*! padding: 4px 10px 6px 10px !important; */
+    margin:0px 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size:15px !important;
+    border-radius: 5px;
+    color:#555;
+    line-height: 24px !important;
+    background:white;
+    transition: all linear 0.3s 0.1s;
+    cursor: pointer;
+    display: block;
+    box-sizing: content-box;
+    font-family: Arial;
+}
+.pagination span {
+    margin:0px 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size:15px !important;
+    border-radius: 5px;
+    color:#555;
+    line-height: 25px;
+    background:#8f8f8f;
+    color: white;
+    transition: all linear 0.3s 0.1s;
+    cursor: default;
+    font-family: Arial;
+}
+.pagination span.left-pagination {
+    font-size:0px !important;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im04OC42LDEyMS4zYzAuOCwwLjggMS44LDEuMiAyLjksMS4yczIuMS0wLjQgMi45LTEuMmMxLjYtMS42IDEuNi00LjIgMC01LjhsLTUxLTUxIDUxLTUxYzEuNi0xLjYgMS42LTQuMiAwLTUuOHMtNC4yLTEuNi01LjgsMGwtNTQsNTMuOWMtMS42LDEuNi0xLjYsNC4yIDAsNS44bDU0LDUzLjl6IiBmaWxsPSIjRkZGRkZGIi8+CiAgPC9nPgo8L3N2Zz4K);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pagination span.right-pagination {
+    font-size:0px !important;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTQwLjQsMTIxLjNjLTAuOCwwLjgtMS44LDEuMi0yLjksMS4ycy0yLjEtMC40LTIuOS0xLjJjLTEuNi0xLjYtMS42LTQuMiAwLTUuOGw1MS01MS01MS01MWMtMS42LTEuNi0xLjYtNC4yIDAtNS44IDEuNi0xLjYgNC4yLTEuNiA1LjgsMGw1My45LDUzLjljMS42LDEuNiAxLjYsNC4yIDAsNS44bC01My45LDUzLjl6IiBmaWxsPSIjRkZGRkZGIi8+CiAgPC9nPgo8L3N2Zz4K);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pagination a:hover {
+    background:#848484;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.23);
+}
+.checkbox svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.jconfirm-box-container {
+    margin:0 auto !important;
+    float:none !important;
+}
+.currency-gds {
+    background: white;
+    border-radius: 5px;
+    margin: 0px 0px 10px;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit !important;
+    transition: all linear 0.2s;
+    z-index: 5;
+    padding: 8px;
+    box-shadow: 0 -1px 1px 0
+    rgba(0, 0, 0, .05), 0 1px 5px 0
+    rgba(0, 0, 0, .15);
+}
+.currency-gds .currency-inner {
+    display: flex;
+}
+.currency-gds .currency-inner span {
+    line-height: 32px;
+}
+.currency-gds .currency-inner img {
+    display: block;
+    margin: 0px 8px;
+}
+.currency-gds .currency-inner .currency-arrow {
+    width: 17px;
+    display: block;
+    margin: auto auto auto 5px;
+    height: 17px;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTIyNS45MjMsMzU0LjcwNmMtOC4wOTgsMC0xNi4xOTUtMy4wOTItMjIuMzY5LTkuMjYzTDkuMjcsMTUxLjE1N2MtMTIuMzU5LTEyLjM1OS0xMi4zNTktMzIuMzk3LDAtNDQuNzUxICAgYzEyLjM1NC0xMi4zNTQsMzIuMzg4LTEyLjM1NCw0NC43NDgsMGwxNzEuOTA1LDE3MS45MTVsMTcxLjkwNi0xNzEuOTA5YzEyLjM1OS0xMi4zNTQsMzIuMzkxLTEyLjM1NCw0NC43NDQsMCAgIGMxMi4zNjUsMTIuMzU0LDEyLjM2NSwzMi4zOTIsMCw0NC43NTFMMjQ4LjI5MiwzNDUuNDQ5QzI0Mi4xMTUsMzUxLjYyMSwyMzQuMDE4LDM1NC43MDYsMjI1LjkyMywzNTQuNzA2eiIgZmlsbD0iIzk5OTk5OSIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+    background-size:contain;
+    transform: rotate(90deg);
+    transition: all linear 0.3s;
+}
+.currency-gds .change-currency {
+    position: absolute;
+    right: 0px;
+    top:38px;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    display: none;
+}
+.currency-gds .change-currency .change-currency-inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+}
+.currency-gds .change-currency .change-currency-inner .change-currency-item {
+    flex:0 0 100%;
+}
+.change-currency-item {
+    display: flex;
+    border-bottom: 1px solid #898989;
+    padding: 4px 0;
+    background:#787878;
+    font-weight: 300;
+    color: #d4d4d4;
+    transition: all linear 0.3s;
+}
+.BoxErrorSearch_n > div:first-child{ float: left !important;}
+.change-currency-item:hover {
+    background:#3c3c3c;
+}
+.change-currency-item:last-child {
+    border-bottom: 0px;
+}
+.change-currency-item img {
+    margin: 0px 7px;
+    max-width:25px;
+}
+.change-currency-item span {
+    font-weight: 200 !important;
+    line-height: 25px;
+    font-size: 12px;
+}
+.currency-rotate {
+    transform: rotate(0deg) !important;
+}
+.text-right {
+    text-align:left !important;
+}
+.visa-text{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 13px;
+}
+.cancel-policy {
+    margin-top:30px;
+    font-family: inherit !important;
+    padding-top: 20px;
+    display: block;
+    border-top: 1px solid #e4e4e4;
+}
+.cancel-policy .cancel-policy-head {
+    display: flex;
+    text-align: right;
+}
+.cancel-policy .cancel-policy-head .cancel-policy-head-text {
+    font-weight: bold;
+    font-size:15px;
+    color:#4d4d4d;
+}
+.cancel-policy .cancel-policy-head .cancel-policy-class {
+    font-weight: bold;
+    font-size:13px;
+    color:#6f6f6f;
+    margin-right: auto;
+}
+.cancel-policy-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+}
+.cancel-policy-inner .cancel-policy-item {
+    flex:0 0 19%;
+    box-shadow:0px 0px 7px 0px rgba(0,0,0,0.05);
+    border-radius:4px;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+}
+.cancel-policy-inner .cancel-policy-item .cancel-policy-item-text {
+    display: block;
+    padding:10px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #4e4e4e;
+    font-family: inherit !important;
+
+}
+.cancel-policy-inner .cancel-policy-item .cancel-policy-item-pnalty {
+    display: block;
+    padding: 7px 0px 10px;
+    flex: 0 0 100%;
+    margin-top: auto;
+    font-weight: bold;
+    color: white;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    /*    background: #fff5f5;*/
+}
+
+.special-tour-item {
+    position: relative;
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+.special-tour-items {
+    border: 2px solid #fb3449;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    display: block;
+}
+.special-tour-item .special-ribbon {
+    position: absolute;
+    padding: 3px 8px;
+    background:#fb3449;
+    right: 22px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    color:white;
+    font-size:11px;
+    top: 27px;
+    transform:rotate(-90deg);
+    transform-origin: right top;
+    font-family: inherit !important;
+}
+.special-tour-item  .inner-avlbl-itm > div > a {
+    background:#fb3449 !important;
+}
+.cancel-policy-charter span {
+    /*background:#fff5f5;*/
+    display: block;
+    width: 100%;
+    padding:12px 0px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    color: white;
+}
+.tell-text-rezerv {
+    display: flex !important;
+}
+.tell-text-rezerv a {
+    flex-grow: 1;
+    text-align: right;
+    margin: 0px 5px;
+    color:white;
+    border-radius: 4px;
+    padding: 7px 0px;
+    position: relative;
+}
+.tell-text-rezrv-registered  {
+    flex-wrap: wrap;
+}
+.tell-text-rezrv-registered a {
+    flex: 0 0 100%;
+    margin:10px 0px;
+    padding: 15px 0px;
+}
+.tell-text-rezerv span {
+    padding-right:40px;
+}
+.tell-text-rezerv a:before {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top:0px;
+    bottom: 0px;
+    content: "";
+    margin: auto;
+    background-size:contain;
+}
+.tell-text-rezerv .online-rezerv:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+CiAgICA8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJtNDI5LjIsODIuOGMtNDYuMi00Ni4zLTEwNy44LTcxLjgtMTczLjItNzEuOHMtMTI3LDI1LjUtMTczLjIsNzEuOC03MS44LDEwNy44LTcxLjgsMTczLjIgMjUuNSwxMjcgNzEuOCwxNzMuMiAxMDcuOCw3MS44IDE3My4yLDcxLjggMTI3LTI1LjUgMTczLjItNzEuOCA3MS44LTEwNy44IDcxLjgtMTczLjItMjUuNS0xMjctNzEuOC0xNzMuMnptNDkuNiwxNjIuMmgtOTVjLTAuOS0zNy44LTYuMi03NC4yLTE1LjUtMTA2LjUgMTguMS05LjMgMzUtMjEgNTAuNS0zNC44IDM1LDM3LjQgNTcuMyw4Ni44IDYwLDE0MS4zem0tMjExLjgsMjJoOTQuOWMtMC44LDM0LjgtNS42LDY4LjEtMTMuOSw5Ny45LTI1LjYtMTAuMy01Mi45LTE2LjMtODEtMTcuNnYtODAuM3ptMTM2LTE3OC42Yy0xMi44LDExLjMtMjYuOCwyMC45LTQxLjYsMjguOS0zLjgtMTAuNi04LjEtMjAuNi0xMi45LTMwLTkuNS0xOC44LTIwLjMtMzQuMi0zMi4yLTQ2IDMyLjUsOS4xIDYyLDI1LjQgODYuNyw0Ny4xem0tMTM2LTUyYzIyLjksNS4xIDQ0LjUsMjYuMiA2MS45LDYwLjYgNC43LDkuMyA4LjksMTkuMiAxMi42LDI5LjctMjMuNSw5LjctNDguNiwxNS40LTc0LjUsMTYuN3YtMTA3em04MS4xLDExMS40YzguMiwyOS42IDEyLjksNjIuNyAxMy43LDk3LjNoLTk0Ljh2LTc5LjZjMjguMi0xLjMgNTUuNS03LjQgODEuMS0xNy43em0tMTAzLjEsOTcuMmgtOTQuOWMwLjgtMzQuNiA1LjUtNjcuNyAxMy43LTk3LjMgMjUuNiwxMC40IDUzLDE2LjQgODEuMSwxNy42djc5Ljd6bS4xLTIwOC42djEwN2MtMjUuOS0xLjMtNTEuMS03LTc0LjUtMTYuNyAzLjctMTAuNSA3LjktMjAuNCAxMi42LTI5LjcgMTcuNC0zNC40IDM5LTU1LjUgNjEuOS02MC42em0tNDkuMyw0LjljLTExLjksMTEuOC0yMi43LDI3LjMtMzIuMiw0Ni00LjcsOS40LTksMTkuNC0xMi45LDMwLTE0LjgtOC0yOC43LTE3LjYtNDEuNi0yOC45IDI0LjctMjEuNyA1NC4yLTM4IDg2LjctNDcuMXptLTEwMi41LDYyLjRjMTUuNSwxMy44IDMyLjQsMjUuNCA1MC41LDM0LjgtOS4zLDMyLjQtMTQuNyw2OC43LTE1LjUsMTA2LjVoLTk1YzIuNy01NC41IDI1LTEwMy45IDYwLTE0MS4zem0tNjAsMTYzLjNoOTVjMC45LDM4LjEgNi4zLDc0LjYgMTUuNywxMDcuMS0xOCw5LjMtMzQuOSwyMC44LTUwLjMsMzQuNi0zNS4zLTM3LjUtNTcuNy04Ny02MC40LTE0MS43em03Ni4yLDE1N2MxMi44LTExLjIgMjYuNy0yMC44IDQxLjQtMjguNyAzLjgsMTAuMyA4LDIwLjIgMTIuNywyOS40IDkuNSwxOC44IDIwLjMsMzQuMiAzMi4yLDQ2LjEtMzIuMy05LjEtNjEuNy0yNS4zLTg2LjMtNDYuOHptMTM1LjYsNTEuNmMtMjIuOS01LjEtNDQuNS0yNi4yLTYxLjktNjAuNi00LjYtOS4xLTguNy0xOC44LTEyLjQtMjkuMSAyMy40LTkuNyA0OC41LTE1LjQgNzQuMy0xNi42djEwNi4zem0tODEtMTEwLjdjLTguMy0yOS44LTEzLjEtNjMuMS0xMy45LTk3LjloOTQuOXY4MC4zYy0yOC4xLDEuMi01NS40LDcuMi04MSwxNy42em0xMDMsMTEwLjd2LTEwNi4zYzI1LjgsMS4zIDUwLjksNi45IDc0LjMsMTYuNi0zLjcsMTAuMy03LjgsMjAtMTIuNCwyOS4xLTE3LjQsMzQuNC0zOSw1NS41LTYxLjksNjAuNnptNDkuMy00LjljMTEuOS0xMS44IDIyLjctMjcuMyAzMi4yLTQ2LjEgNC43LTkuMiA4LjktMTkuMSAxMi43LTI5LjQgMTQuNyw3LjkgMjguNiwxNy41IDQxLjQsMjguNy0yNC42LDIxLjYtNTQsMzcuOC04Ni4zLDQ2Ljh6bTEwMi4yLTYyYy0xNS40LTEzLjctMzIuMy0yNS4zLTUwLjMtMzQuNiA5LjQtMzIuNSAxNC44LTY5LjEgMTUuNy0xMDcuMWg5NWMtMi44LDU0LjctMjUuMiwxMDQuMi02MC40LDE0MS43eiIgZGF0YS1vcmlnaW5hbD0iIzIzMUYyMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iI2ZmZmZmZiI+PC9wYXRoPgogIDwvZz48L2c+IDwvc3ZnPg==);
+}
+.tell-text-rezerv .text-rezerv-btn:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDM1Ni40ODQgMzU2LjQ4NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzU2LjQ4NCAzNTYuNDg0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjkzLjk4NCw3LjIzSDYyLjVDMjguMDM3LDcuMjMsMCwzNS4yNjgsMCw2OS43MzF2MTQyLjc4YzAsMzQuNDYzLDI4LjAzNyw2Mi41LDYyLjUsNjIuNWwxNDcuNDQzLDAuMDAxbDcwLjU4MSw3MC41OCAgICBjMi4zOTIsMi4zOTMsNS41ODgsMy42NjIsOC44NDIsMy42NjJjMS42MSwwLDMuMjM0LTAuMzEyLDQuNzgtMC45NTNjNC42NzEtMS45MzQsNy43MTctNi40OSw3LjcxNy0xMS41NDd2LTYyLjIzNyAgICBjMzAuNzU5LTMuODg1LDU0LjYyMS0zMC4yMTEsNTQuNjIxLTYyLjAwNlY2OS43MzFDMzU2LjQ4NCwzNS4yNjgsMzI4LjQ0Nyw3LjIzLDI5My45ODQsNy4yM3ogTTMzMS40ODQsMjEyLjUxMiAgICBjMCwyMC42NzgtMTYuODIyLDM3LjUtMzcuNSwzNy41aC00LjYyMWMtNi45MDMsMC0xMi41LDUuNTk4LTEyLjUsMTIuNXY0NC4wNjRsLTUyLjkwMy01Mi45MDMgICAgYy0yLjM0NC0yLjM0NS01LjUyMi0zLjY2MS04LjgzOS0zLjY2MUg2Mi41Yy0yMC42NzgsMC0zNy41LTE2LjgyMi0zNy41LTM3LjVWNjkuNzMyYzAtMjAuNjc4LDE2LjgyMi0zNy41LDM3LjUtMzcuNWgyMzEuNDg0ICAgIGMyMC42NzgsMCwzNy41LDE2LjgyMiwzNy41LDM3LjVWMjEyLjUxMnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiNmZmZmZmYiPjwvcGF0aD4KCQk8cGF0aCBkPSJNMjcwLjI0Miw5NS43NDNoLTE4NGMtNi45MDMsMC0xMi41LDUuNTk2LTEyLjUsMTIuNWMwLDYuOTAzLDUuNTk3LDEyLjUsMTIuNSwxMi41aDE4NGM2LjkwMywwLDEyLjUtNS41OTcsMTIuNS0xMi41ICAgIEMyODIuNzQyLDEwMS4zMzksMjc3LjE0Niw5NS43NDMsMjcwLjI0Miw5NS43NDN6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3BhdGg+CgkJPHBhdGggZD0iTTI3MC4yNDIsMTY1Ljc0M2gtMTg0Yy02LjkwMywwLTEyLjUsNS41OTYtMTIuNSwxMi41czUuNTk3LDEyLjUsMTIuNSwxMi41aDE4NGM2LjkwMywwLDEyLjUtNS41OTcsMTIuNS0xMi41ICAgIFMyNzcuMTQ2LDE2NS43NDMsMjcwLjI0MiwxNjUuNzQzeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iI2ZmZmZmZiI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+}
+.tell-text-rezerv .tell-rezerv-btn:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDgwLjU2IDQ4MC41NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDgwLjU2IDQ4MC41NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNjUuMzU0LDMxNy45Yy0xNS43LTE1LjUtMzUuMy0xNS41LTUwLjksMGMtMTEuOSwxMS44LTIzLjgsMjMuNi0zNS41LDM1LjZjLTMuMiwzLjMtNS45LDQtOS44LDEuOCAgICBjLTcuNy00LjItMTUuOS03LjYtMjMuMy0xMi4yYy0zNC41LTIxLjctNjMuNC00OS42LTg5LTgxYy0xMi43LTE1LjYtMjQtMzIuMy0zMS45LTUxLjFjLTEuNi0zLjgtMS4zLTYuMywxLjgtOS40ICAgIGMxMS45LTExLjUsMjMuNS0yMy4zLDM1LjItMzUuMWMxNi4zLTE2LjQsMTYuMy0zNS42LTAuMS01Mi4xYy05LjMtOS40LTE4LjYtMTguNi0yNy45LTI4Yy05LjYtOS42LTE5LjEtMTkuMy0yOC44LTI4LjggICAgYy0xNS43LTE1LjMtMzUuMy0xNS4zLTUwLjksMC4xYy0xMiwxMS44LTIzLjUsMjMuOS0zNS43LDM1LjVjLTExLjMsMTAuNy0xNywyMy44LTE4LjIsMzkuMWMtMS45LDI0LjksNC4yLDQ4LjQsMTIuOCw3MS4zICAgIGMxNy42LDQ3LjQsNDQuNCw4OS41LDc2LjksMTI4LjFjNDMuOSw1Mi4yLDk2LjMsOTMuNSwxNTcuNiwxMjMuM2MyNy42LDEzLjQsNTYuMiwyMy43LDg3LjMsMjUuNGMyMS40LDEuMiw0MC00LjIsNTQuOS0yMC45ICAgIGMxMC4yLTExLjQsMjEuNy0yMS44LDMyLjUtMzIuN2MxNi0xNi4yLDE2LjEtMzUuOCwwLjItNTEuOEM0MDMuNTU0LDM1NS45LDM4NC40NTQsMzM2LjksMzY1LjM1NCwzMTcuOXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiNmZmZmZmYiPjwvcGF0aD4KCQk8cGF0aCBkPSJNMzQ2LjI1NCwyMzguMmwzNi45LTYuM2MtNS44LTMzLjktMjEuOC02NC42LTQ2LjEtODljLTI1LjctMjUuNy01OC4yLTQxLjktOTQtNDYuOWwtNS4yLDM3LjEgICAgYzI3LjcsMy45LDUyLjksMTYuNCw3Mi44LDM2LjNDMzI5LjQ1NCwxODguMiwzNDEuNzU0LDIxMiwzNDYuMjU0LDIzOC4yeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iI2ZmZmZmZiI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik00MDMuOTU0LDc3LjhjLTQyLjYtNDIuNi05Ni41LTY5LjUtMTU2LTc3LjhsLTUuMiwzNy4xYzUxLjQsNy4yLDk4LDMwLjUsMTM0LjgsNjcuMmMzNC45LDM0LjksNTcuOCw3OSw2Ni4xLDEyNy41ICAgIGwzNi45LTYuM0M0NzAuODU0LDE2OS4zLDQ0NC4zNTQsMTE4LjMsNDAzLjk1NCw3Ny44eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iI2ZmZmZmZiI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+}
+
+.tell-text-rezerv a:first-child {
+    margin-right: 0px;
+}
+.tell-text-rezerv a:last-child {
+    margin-left: 0px;
+}
+.btn-rezerv-mob {
+    display:none;
+}
+.gds-login-register {
+    background:White;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.08);
+    margin: 40px 10px 0;
+
+}
+.gds-login-register * , .gds-login-register *:after , .gds-login-register *:before {
+    box-sizing: border-box !important;
+}
+.gds-login-register-inner {
+    direction: ltr;
+    display: flex;
+
+}
+.gds-login .gds-login-register-inner > .gds-login-detail {
+    order:0 !important;
+}
+
+.gds-login-register-inner > .gds-login-detail {
+    flex: 0 0 calc(40% - 30px);
+    padding:15px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background:url(../../images/gds-login-register-2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    order:2;
+}
+.gds-login-register-inner > .gds-login-detail:before {
+    background:#0d8d17;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    position: absolute;
+    content: "";
+    top: 0px;
+    z-index: -1;
+    right:0px;
+}
+.gds-login-detail-inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+.gds-login-detail-inner h2 {
+    direction: ltr;
+    color:White;
+    text-align: center;
+    font-size:33px;
+    margin-top: 140px;
+    display: inline-block;
+    font-family: inherit !important;
+    font-weight: 700;
+}
+.gds-login-detail-inner > span {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAtMTAgNDkwLjY2NjY3IDQ5MCIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iIj48Zz48cGF0aCBkPSJtMzI1LjMzMjAzMSAyNTFoLTMwOS4zMzIwMzFjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzA5LjMzMjAzMWM4LjgzMjAzMSAwIDE2IDcuMTY3OTY5IDE2IDE2cy03LjE2Nzk2OSAxNi0xNiAxNnptMCAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3BhdGg+PHBhdGggZD0ibTI0MCAzMzYuMzMyMDMxYy00LjA5NzY1NiAwLTguMTkxNDA2LTEuNTU0Njg3LTExLjMwODU5NC00LjY5MTQwNi02LjI1LTYuMjUtNi4yNS0xNi4zODI4MTMgMC0yMi42MzY3MTlsNzQuMDI3MzQ0LTc0LjAyMzQzNy03NC4wMjczNDQtNzQuMDI3MzQ0Yy02LjI1LTYuMjUtNi4yNS0xNi4zODY3MTkgMC0yMi42MzY3MTkgNi4yNTM5MDYtNi4yNSAxNi4zODY3MTktNi4yNSAyMi42MzY3MTkgMGw4NS4zMzIwMzEgODUuMzM1OTM4YzYuMjUgNi4yNSA2LjI1IDE2LjM4MjgxMiAwIDIyLjYzMjgxMmwtODUuMzMyMDMxIDg1LjMzMjAzMmMtMy4xMzY3MTkgMy4xNjAxNTYtNy4yMzA0NjkgNC43MTQ4NDMtMTEuMzI4MTI1IDQuNzE0ODQzem0wIDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiNmZmZmZmYiPjwvcGF0aD48cGF0aCBkPSJtMjU2IDQ2OS42Njc5NjljLTk3LjA4OTg0NCAwLTE4Mi44MDQ2ODgtNTguNDEwMTU3LTIxOC40MTAxNTYtMTQ4LjgyNDIxOS0zLjI0MjE4OC04LjE5MTQwNi44MDg1OTQtMTcuNDkyMTg4IDkuMDIzNDM3LTIwLjczNDM3NSA4LjE5MTQwNy0zLjE5OTIxOSAxNy41MTU2MjUuNzg5MDYzIDIwLjc1NzgxMyA5LjA0Njg3NSAzMC43NDIxODcgNzguMDU4NTk0IDEwNC43ODkwNjIgMTI4LjUxMTcxOSAxODguNjI4OTA2IDEyOC41MTE3MTkgMTExLjc0MjE4OCAwIDIwMi42Njc5NjktOTAuOTI1NzgxIDIwMi42Njc5NjktMjAyLjY2Nzk2OXMtOTAuOTI1NzgxLTIwMi42Njc5NjktMjAyLjY2Nzk2OS0yMDIuNjY3OTY5Yy04My44Mzk4NDQgMC0xNTcuODg2NzE5IDUwLjQ1MzEyNS0xODguNjI4OTA2IDEyOC41MTE3MTktMy4yNjU2MjUgOC4yNTc4MTItMTIuNTY2NDA2IDEyLjI0NjA5NC0yMC43NTc4MTMgOS4wNDY4NzUtOC4yMTQ4NDMtMy4yNDIxODctMTIuMjY1NjI1LTEyLjU0Mjk2OS05LjAyMzQzNy0yMC43MzQzNzUgMzUuNjA1NDY4LTkwLjQxNDA2MiAxMjEuMzIwMzEyLTE0OC44MjQyMTkgMjE4LjQxMDE1Ni0xNDguODI0MjE5IDEyOS4zODY3MTkgMCAyMzQuNjY3OTY5IDEwNS4yODEyNSAyMzQuNjY3OTY5IDIzNC42Njc5NjlzLTEwNS4yODEyNSAyMzQuNjY3OTY5LTIzNC42Njc5NjkgMjM0LjY2Nzk2OXptMCAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3BhdGg+PC9nPiA8L3N2Zz4=);
+    width:70px;
+    height: 70px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-size:contain;
+    left: 0px;
+    margin: auto;
+}
+.gds-register .gds-login-detail-inner > span {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNTUuNTAxLDAuNDk5Yy04MS40NDgsMC0xNDcuNzExLDY2LjI2NC0xNDcuNzExLDE0Ny43MTFjMCw1MC40NDksMjUuNDI5LDk1LjA2NSw2NC4xMzcsMTIxLjcyNCAgICBjLTM2LjEzOSwxMi40NzEtNjkuMjYzLDMzLjA3MS05Ny4wOTEsNjAuODk5QzI2LjU3NywzNzkuMDkzLDAsNDQzLjI1NCwwLDUxMS41MDFoMzkuOTIyICAgIGMwLTExOC44NzEsOTYuNzA4LTIxNS41NzksMjE1LjU3OS0yMTUuNTc5YzgxLjQ0OCwwLDE0Ny43MTEtNjYuMjY0LDE0Ny43MTEtMTQ3LjcxMlMzMzYuOTQ5LDAuNDk5LDI1NS41MDEsMC40OTl6IE0yNTUuNTAxLDI1NiAgICBjLTU5LjQzNSwwLTEwNy43ODktNDguMzU0LTEwNy43ODktMTA3Ljc4OVMxOTYuMDY2LDQwLjQyMSwyNTUuNTAxLDQwLjQyMVMzNjMuMjksODguNzc1LDM2My4yOSwxNDguMjExUzMxNC45MzYsMjU2LDI1NS41MDEsMjU2eiAgICAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiNmZmZmZmYiPjwvcGF0aD4KCTwvZz4KPC9nPjxnPgoJPGc+CgkJPHBvbHlnb24gcG9pbnRzPSI0MjguMTY0LDM4Ny43NDMgNDI4LjE2NCwzMDMuOTA2IDM4OC4yNDIsMzAzLjkwNiAzODguMjQyLDM4Ny43NDMgMzA0LjQwNSwzODcuNzQzIDMwNC40MDUsNDI3LjY2NSAgICAgMzg4LjI0Miw0MjcuNjY1IDM4OC4yNDIsNTExLjUwMSA0MjguMTY0LDUxMS41MDEgNDI4LjE2NCw0MjcuNjY1IDUxMiw0MjcuNjY1IDUxMiwzODcuNzQzICAgIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3BvbHlnb24+Cgk8L2c+CjwvZz48L2c+IDwvc3ZnPg==);
+}
+.gds-login-detail-text {
+    margin-top: auto;
+    text-align: center;
+}
+.gds-login-detail-text * {
+    font-family:inherit !important;
+    color:White;
+}
+.gds-login-detail-text  a {
+    border-bottom: 1px dotted white;
+    padding-bottom: 2px;
+}
+.gds-login-register-inner > .gds-login-form {
+    padding: 15px;
+    flex: 1 0 calc(60% - 30px);
+}
+.gds-login-register-inner form {
+    margin:20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    /*! justify-content: center; */
+    max-width: 100%;
+    height:100%;
+    clear: both;
+}
+.gds-login-modal .gds-login-register-inner form {
+    margin:0px;
+}
+.gds-login-register-inner form > div {
+    margin: 10px 0px;
+    text-align: center;
+    display: block;
+    flex: 0 0 100%;
+}
+.gds-login-register-inner form > div input {
+    background:#f6f6f6;
+    border:none;
+    outline: none;
+    padding: 13px 15px 13px 40px;
+    border-radius: 4px;
+    min-width: 290px;
+    font-size: 13px;
+    direction: ltr;
+    text-align: left;
+    color: #393939;
+    border:1px solid white;
+    font-family: tahoma ;
+    box-sizing: border-box;
+}
+
+.gds-login-register-inner form > div input:focus {
+    border-color:#c3c3c3;
+    background:#f9f9f9;
+}
+.gds-login-register-inner form > div input.error {
+    border-color: #f52b3b !important;
+}
+.gds-login-register-inner form > div input::placeholder {
+    text-align:left;
+    font-weight: 300;
+    font-family: inherit !important;
+    direction: rtl !important;
+}
+
+.gds-login-register-inner form > div span {
+    position: relative;
+}
+.gds-login-register-inner form > div span label {
+    background:#f52b3b;
+    color:white;
+    position: absolute;
+    text-align: center;
+    top: -19px;
+    left: -50px;
+    padding: 5px 25px 7px;
+    border-radius: 4px;
+    font-family: inherit !important;
+
+    font-size: 11px;
+    z-index: 2;
+}
+.gds-login-register-inner form > div span label:before {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    bottom:-11px;
+    right: 10px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM4Ni4yNTcgMzg2LjI1NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzg2LjI1NyAzODYuMjU3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGNsYXNzPSIiPjxnPjxwb2x5Z29uIHBvaW50cz0iMCw5Ni44NzkgMTkzLjEyOSwyODkuMzc5IDM4Ni4yNTcsOTYuODc5ICIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRjUyQjNCIiBkYXRhLW9sZF9jb2xvcj0iI2Y1MmIzYiI+PC9wb2x5Z29uPjwvZz4gPC9zdmc+);
+    background-size:15px;
+}
+
+.gds-login-register-inner form > div.gds-l-up span {
+    display: inline-block;
+    height: 44px;
+    position: relative;
+}
+.gds-login-register-inner form > div.gds-l-up span:before {
+    width: 20px;
+    height: 20px;
+    opacity: 0.57;
+    position: absolute;
+    content: "";
+
+    background-size:contain;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    left: 10px;
+}
+.gds-login-register-inner form > div.gds-login-password span:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iLTY5IDAgNTEyIDUxMiIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJtMTg2LjkxNDA2MiAzODQuMzM1OTM4YzguMjg1MTU3IDAgMTUtNi43MTg3NSAxNS0xNXYtNjIuMTM2NzE5YzAtOC4yODUxNTctNi43MTQ4NDMtMTUtMTUtMTUtOC4yODEyNSAwLTE1IDYuNzE0ODQzLTE1IDE1djYyLjEzNjcxOWMwIDguMjgxMjUgNi43MTg3NSAxNSAxNSAxNXptMCAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMwMDAwMDAiPjwvcGF0aD48cGF0aCBkPSJtMzU4LjgyODEyNSAxNjQuNTMxMjVoLTcwLjk5MjE4N3YtNzMuMDcwMzEyYzAtNTAuNDMzNTk0LTQ1LjI3MzQzOC05MS40NjA5MzgtMTAwLjkyMTg3Ni05MS40NjA5MzgtNTUuNjQ0NTMxIDAtMTAwLjkxNzk2OCA0MS4wMjczNDQtMTAwLjkxNzk2OCA5MS40NjA5Mzh2NzMuMDcwMzEyaC03MC45OTYwOTRjLTguMjg1MTU2IDAtMTUgNi43MTg3NS0xNSAxNXYxOTEuODMyMDMxYzAgNzcuNTQ2ODc1IDYzLjA4OTg0NCAxNDAuNjM2NzE5IDE0MC42MzY3MTkgMTQwLjYzNjcxOWg5Mi41NTg1OTNjNzcuNTQ2ODc2IDAgMTQwLjYzNjcxOS02My4wODk4NDQgMTQwLjYzNjcxOS0xNDAuNjM2NzE5di0xOTEuODMyMDMxYy0uMDAzOTA2LTguMjgxMjUtNi43MTg3NS0xNS0xNS4wMDM5MDYtMTV6bS0yNDIuODMyMDMxLTczLjA3MDMxMmMwLTMzLjg5MDYyNiAzMS44MTI1LTYxLjQ2MDkzOCA3MC45MTc5NjgtNjEuNDYwOTM4IDM5LjEwNTQ2OSAwIDcwLjkyMTg3NiAyNy41NzAzMTIgNzAuOTIxODc2IDYxLjQ2MDkzOHY3My4wNzAzMTJoLTE0MS44Mzk4NDR6bTIyNy44MzIwMzEgMjc5LjkwMjM0M2MwIDYxLjAwMzkwNy00OS42Mjg5MDYgMTEwLjYzNjcxOS0xMTAuNjM2NzE5IDExMC42MzY3MTloLTkyLjU1NDY4N2MtNjEuMDAzOTA3IDAtMTEwLjYzNjcxOS00OS42MzI4MTItMTEwLjYzNjcxOS0xMTAuNjM2NzE5di0xNzYuODMyMDMxaDMxMy44MjgxMjV6bTAgMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMDAwMDAwIj48L3BhdGg+PC9nPiA8L3N2Zz4=);
+}
+.gds-login-register-inner form > div.gds-lgoin-user span:before , .gds-register-email span:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDgzLjMgNDgzLjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4My4zIDQ4My4zOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPGc+CgkJPHBhdGggZD0iTTQyNC4zLDU3Ljc1SDU5LjFjLTMyLjYsMC01OS4xLDI2LjUtNTkuMSw1OS4xdjI0OS42YzAsMzIuNiwyNi41LDU5LjEsNTkuMSw1OS4xaDM2NS4xYzMyLjYsMCw1OS4xLTI2LjUsNTkuMS01OS4xICAgIHYtMjQ5LjVDNDgzLjQsODQuMzUsNDU2LjksNTcuNzUsNDI0LjMsNTcuNzV6IE00NTYuNCwzNjYuNDVjMCwxNy43LTE0LjQsMzIuMS0zMi4xLDMyLjFINTkuMWMtMTcuNywwLTMyLjEtMTQuNC0zMi4xLTMyLjF2LTI0OS41ICAgIGMwLTE3LjcsMTQuNC0zMi4xLDMyLjEtMzIuMWgzNjUuMWMxNy43LDAsMzIuMSwxNC40LDMyLjEsMzIuMXYyNDkuNUg0NTYuNHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDAwMCI+PC9wYXRoPgoJCTxwYXRoIGQ9Ik0zMDQuOCwyMzguNTVsMTE4LjItMTA2YzUuNS01LDYtMTMuNSwxLTE5LjFjLTUtNS41LTEzLjUtNi0xOS4xLTFsLTE2MywxNDYuM2wtMzEuOC0yOC40Yy0wLjEtMC4xLTAuMi0wLjItMC4yLTAuMyAgICBjLTAuNy0wLjctMS40LTEuMy0yLjItMS45TDc4LjMsMTEyLjM1Yy01LjYtNS0xNC4xLTQuNS0xOS4xLDEuMWMtNSw1LjYtNC41LDE0LjEsMS4xLDE5LjFsMTE5LjYsMTA2LjlMNjAuOCwzNTAuOTUgICAgYy01LjQsNS4xLTUuNywxMy42LTAuNiwxOS4xYzIuNywyLjgsNi4zLDQuMyw5LjksNC4zYzMuMywwLDYuNi0xLjIsOS4yLTMuNmwxMjAuOS0xMTMuMWwzMi44LDI5LjNjMi42LDIuMyw1LjgsMy40LDksMy40ICAgIGMzLjIsMCw2LjUtMS4yLDktMy41bDMzLjctMzAuMmwxMjAuMiwxMTQuMmMyLjYsMi41LDYsMy43LDkuMywzLjdjMy42LDAsNy4xLTEuNCw5LjgtNC4yYzUuMS01LjQsNC45LTE0LTAuNS0xOS4xTDMwNC44LDIzOC41NXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+}
+
+.login-captcha span {
+    /*! background:#f3f3f3; */
+    display: flex;
+    padding: 5px;
+}
+.login-captcha span img {
+    border-radius: 4px;
+    max-height: 34px;
+}
+.login-captcha input {
+    width: 120px;
+    min-width: 172px !important;
+    padding: 7px 10px !important;
+    border: none !important;
+    text-align: center !important;
+}
+.login-captcha input::placeholder {
+    text-align: center !important;
+}
+.login-captcha input:focus {
+    background:#f6f6f6 !important;
+}
+.login-captcha #captchaRefresh {
+    margin-top:10px !important;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MS4yMzYgNDkxLjIzNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkxLjIzNiA0OTEuMjM2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTUuODksMjYyLjgxOGMtMy0yNi0wLjUtNTEuMSw2LjMtNzQuM2MyMi42LTc3LjEsOTMuNS0xMzMuOCwxNzcuNi0xMzQuOHYtNTAuNGMwLTIuOCwzLjUtNC4zLDUuOC0yLjZsMTAzLjcsNzYuMiAgICBjMS43LDEuMywxLjcsMy45LDAsNS4xbC0xMDMuNiw3Ni4yYy0yLjQsMS43LTUuOCwwLjItNS44LTIuNnYtNTAuM2MtNTUuMywwLjktMTAyLjUsMzUtMTIyLjgsODMuMmMtNy43LDE4LjItMTEuNiwzOC4zLTEwLjUsNTkuNCAgICBjMS41LDI5LDEyLjQsNTUuNywyOS42LDc3LjNjOS4yLDExLjUsNywyOC4zLTQuOSwzN2MtMTEuMyw4LjMtMjcuMSw2LTM1LjgtNUM3NC4xOSwzMzAuNjE4LDU5Ljk5LDI5OC4yMTgsNTUuODksMjYyLjgxOHogICAgIE0zNTUuMjksMTY2LjAxOGMxNy4zLDIxLjUsMjguMiw0OC4zLDI5LjYsNzcuM2MxLjEsMjEuMi0yLjksNDEuMy0xMC41LDU5LjRjLTIwLjMsNDguMi02Ny41LDgyLjQtMTIyLjgsODMuMnYtNTAuMyAgICBjMC0yLjgtMy41LTQuMy01LjgtMi42bC0xMDMuNyw3Ni4yYy0xLjcsMS4zLTEuNywzLjksMCw1LjFsMTAzLjYsNzYuMmMyLjQsMS43LDUuOCwwLjIsNS44LTIuNnYtNTAuNCAgICBjODQuMS0wLjksMTU1LjEtNTcuNiwxNzcuNi0xMzQuOGM2LjgtMjMuMiw5LjItNDguMyw2LjMtNzQuM2MtNC0zNS40LTE4LjItNjcuOC0zOS41LTk0LjRjLTguOC0xMS0yNC41LTEzLjMtMzUuOC01ICAgIEMzNDguMjksMTM3LjcxOCwzNDYuMDksMTU0LjUxOCwzNTUuMjksMTY2LjAxOHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    opacity: 0.5;
+    background-size:contain !important;
+    width: 18px;
+    min-width: 18px;
+    margin-left: 5px;
+    height: 18px;
+}
+.gds-login-level > span {
+    width: 290px;
+    position: relative;
+    margin: auto;
+    display: block;
+    text-align: right;
+    background: #f5f5f5;
+}
+.gds-login-level span {
+    background:#f5f5f5;
+    border-radius: 4px;
+    line-height: 44px !important;
+    height: 44px !important;
+    font-family: inherit !important;
+    font-weight: 300;
+}
+.gds-login-level > span .select2-container--default .select2-selection--single {
+    border:none;
+}
+.gds-login-level .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border:none;
+    width: 10px;
+    height: 10px;
+    background-size:contain;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEyOSAxMjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+CiAgICA8cGF0aCBkPSJtMTIxLjMsMzQuNmMtMS42LTEuNi00LjItMS42LTUuOCwwbC01MSw1MS4xLTUxLjEtNTEuMWMtMS42LTEuNi00LjItMS42LTUuOCwwLTEuNiwxLjYtMS42LDQuMiAwLDUuOGw1My45LDUzLjljMC44LDAuOCAxLjgsMS4yIDIuOSwxLjIgMSwwIDIuMS0wLjQgMi45LTEuMmw1My45LTUzLjljMS43LTEuNiAxLjctNC4yIDAuMS01Ljh6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMwMDAwMDAiIGRhdGEtb2xkX2NvbG9yPSIjRkZGRkZGIj48L3BhdGg+CiAgPC9nPjwvZz4gPC9zdmc+);
+    left: 13px;
+}
+
+.gds-login-rememmber-inner {
+    display: flex;
+    width: 300px;
+    text-align: right;
+    position: relative;
+    font-family: inherit !important;
+    font-weight: 300;
+    color: #696969;
+    margin: auto;
+}
+.gds-login-rememmber-inner span {
+    line-height: 30px;
+    /*! display: inline-block; */
+}
+.gds-login-rememmber-inner span a {
+    font-size:12px;
+}
+.gds-login-rememmber .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.gds-login-rememmber .custom-checkbox .background {
+    fill: #e9e9e9;
+    transition: ease all .6s;
+    -webkit-transition: ease all .6s;
+}
+.gds-login-rememmber .custom-checkbox .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all .6s;
+    -webkit-transition: ease all .6s;
+}
+.gds-login-rememmber .custom-checkbox .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all .6s;
+    -webkit-transition: ease all .6s;
+}
+.gds-login-rememmber .custom-checkbox input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    -appearance: none;
+    -webkit-appearance: none;
+    min-width: 290px;
+    padding: 0px !important;
+}
+.gds-login-rememmber .custom-checkbox input[type=checkbox]:hover {
+    cursor: pointer;
+}
+.gds-login-rememmber .custom-checkbox input[type=checkbox]:checked + svg .background {
+    fill: #6cbe45;
+}
+.gds-login-rememmber .custom-checkbox input[type=checkbox]:checked + svg .stroke {
+    stroke-dashoffset: 0;
+}
+.gds-login-rememmber .custom-checkbox input[type=checkbox]:checked + svg .check {
+    stroke-dashoffset: 0;
+}
+.gds-login-submit input {
+    min-width: 200px !important;
+    border-radius: 20px !important;
+    padding-left: 0px !important;
+    color:white !important;
+    padding-right: 0px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    cursor: pointer;
+}
+.gds-login-forget a {
+    display: inline-block;
+    width: 290px;
+    text-align: left;
+    font-size:13px;
+    font-weight: 300;
+    color:#595959;
+    font-family: inherit !important;
+    margin-left: auto;
+
+}
+.gds-register-nf {
+    display: flex !important;
+    width: 290px;
+    margin:auto;
+    justify-content: center;
+}
+.gds-register-nf input {
+    min-width:100px !important;
+    width: 143px;
+    margin-left: 4px;
+    padding-right: 30px !important;
+    text-align: right !important;
+    font-size: 13px !important;
+    font-family: inherit !important;
+}
+.gds-register-nf span:last-child input {
+    margin-left: 0px;
+}
+.gds-register-nf span:last-child label {
+    left: -116px;
+}
+.gds-register-nf span:before {
+    width: 17px !important;
+    height: 17px !important;
+}
+.gds-register-nf span:first-child::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00MzcuMDIsMzMwLjk4Yy0yNy44ODMtMjcuODgyLTYxLjA3MS00OC41MjMtOTcuMjgxLTYxLjAxOEMzNzguNTIxLDI0My4yNTEsNDA0LDE5OC41NDgsNDA0LDE0OCAgICBDNDA0LDY2LjM5MywzMzcuNjA3LDAsMjU2LDBTMTA4LDY2LjM5MywxMDgsMTQ4YzAsNTAuNTQ4LDI1LjQ3OSw5NS4yNTEsNjQuMjYyLDEyMS45NjIgICAgYy0zNi4yMSwxMi40OTUtNjkuMzk4LDMzLjEzNi05Ny4yODEsNjEuMDE4QzI2LjYyOSwzNzkuMzMzLDAsNDQzLjYyLDAsNTEyaDQwYzAtMTE5LjEwMyw5Ni44OTctMjE2LDIxNi0yMTZzMjE2LDk2Ljg5NywyMTYsMjE2ICAgIGg0MEM1MTIsNDQzLjYyLDQ4NS4zNzEsMzc5LjMzMyw0MzcuMDIsMzMwLjk4eiBNMjU2LDI1NmMtNTkuNTUxLDAtMTA4LTQ4LjQ0OC0xMDgtMTA4UzE5Ni40NDksNDAsMjU2LDQwICAgIGM1OS41NTEsMCwxMDgsNDguNDQ4LDEwOCwxMDhTMzE1LjU1MSwyNTYsMjU2LDI1NnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+}
+.gds-register-nf span:last-child::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9IiI+PGc+PHBhdGggZD0ibTQwNCAxNDhjMC04MS42MDU0NjktNjYuMzk0NTMxLTE0OC0xNDgtMTQ4cy0xNDggNjYuMzk0NTMxLTE0OCAxNDhjMCA1MC41NDY4NzUgMjUuNDgwNDY5IDk1LjI1IDY0LjI2MTcxOSAxMjEuOTY0ODQ0LTM2LjIxMDkzOCAxMi40OTIxODctNjkuMzk4NDM4IDMzLjEzMjgxMi05Ny4yODEyNSA2MS4wMTU2MjUtNDguMzUxNTYzIDQ4LjM1MTU2Mi03NC45ODA0NjkgMTEyLjY0MDYyNS03NC45ODA0NjkgMTgxLjAxOTUzMWg0MGMwLTExOS4xMDE1NjIgOTYuODk4NDM4LTIxNiAyMTYtMjE2IDgxLjYwNTQ2OSAwIDE0OC02Ni4zOTQ1MzEgMTQ4LTE0OHptLTE0OCAxMDhjLTU5LjU1MDc4MSAwLTEwOC00OC40NDkyMTktMTA4LTEwOHM0OC40NDkyMTktMTA4IDEwOC0xMDggMTA4IDQ4LjQ0OTIxOSAxMDggMTA4LTQ4LjQ0OTIxOSAxMDgtMTA4IDEwOHptNjYgMTM1Ljk4MDQ2OWgxOTB2NDBoLTE5MHptMTkwLTc5Ljk4MDQ2OXY0MGgtMTkwdi00MHptLTE5MCAxNjBoMTkwdjQwaC0xOTB6bTAgMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMDAwMDAwIj48L3BhdGg+PC9nPiA8L3N2Zz4=);
+}
+.gds-register-mobile span:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDM1IDM1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNSAzNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPHBhdGggZD0iTTI1LjMwMiwwSDkuNjk4Yy0xLjMsMC0yLjM2NCwxLjA2My0yLjM2NCwyLjM2NHYzMC4yNzFDNy4zMzQsMzMuOTM2LDguMzk4LDM1LDkuNjk4LDM1aDE1LjYwNCAgIGMxLjMsMCwyLjM2NC0xLjA2MiwyLjM2NC0yLjM2NFYyLjM2NEMyNy42NjYsMS4wNjMsMjYuNjAyLDAsMjUuMzAyLDB6IE0xNS4wMDQsMS43MDRoNC45OTJjMC4xNTgsMCwwLjI4NiwwLjEyOCwwLjI4NiwwLjI4NyAgIGMwLDAuMTU4LTAuMTI4LDAuMjg2LTAuMjg2LDAuMjg2aC00Ljk5MmMtMC4xNTgsMC0wLjI4Ni0wLjEyOC0wLjI4Ni0wLjI4NkMxNC43MTgsMS44MzIsMTQuODQ2LDEuNzA0LDE1LjAwNCwxLjcwNHogTTE3LjUsMzMuODE4ICAgYy0wLjY1MywwLTEuMTgyLTAuNTI5LTEuMTgyLTEuMTgzczAuNTI5LTEuMTgyLDEuMTgyLTEuMTgyczEuMTgyLDAuNTI4LDEuMTgyLDEuMTgyUzE4LjE1MywzMy44MTgsMTcuNSwzMy44MTh6IE0yNi4wMjEsMzAuNjI1ICAgSDguOTc5VjMuNzQ5aDE3LjA0MlYzMC42MjV6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiMwMDAwMDAiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+);
+}
+.gds-login-reagent-code > div {
+    flex: 0 0 190px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 44px;
+}
+.gds-login-reagent-code > div input {
+    max-width: 100%;
+    /*! width: 145px !important; */
+    min-width: 140px !important;
+}
+.gds-login-reagent-code > span input {
+    min-width: 101px !important;
+    padding: 13px 15px !important;
+    max-width: 100%;
+    width: 150px;
+}
+.gds-login-reagent-code > span {
+    display: none;
+}
+.gds-login-rules input {
+    min-width: 205px !important;
+}
+.gds-login-modal-inner .gds-login-register-inner {
+    margin-top: 0px;
+    flex-wrap: wrap;
+    box-sizing: border-box !important;
+}
+.gds-login-modal-inner .gds-login-register-inner > div.registered-buy {
+    flex: 0 0 50%;
+    box-sizing: border-box !important;
+    padding:20px;
+}
+.gds-login-modal-inner .gds-login-register-inner > div.no-register-buy {
+    flex: 0 0 50%;
+    padding: 20px;
+    background: #3096a1;
+    box-sizing: border-box !important;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    position: relative;
+
+}
+.gds-login-modal-inner .gds-login-register-inner > div.no-register-buy:before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07);
+    right:32%;
+    top: 10%;
+    animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+    z-index: 1;
+    will-change: border-radius, transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+}
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+
+.gds-login-modal-inner .gds-login-register-inner > div > form#login {
+    margin: 0px !important;
+}
+
+.select2login-popup {
+    width: 100%;
+    height: 100%;
+    border:1px solid white;
+    background-color:#f6f6f6 !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEyOSAxMjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+CiAgICA8cGF0aCBkPSJtMTIxLjMsMzQuNmMtMS42LTEuNi00LjItMS42LTUuOCwwbC01MSw1MS4xLTUxLjEtNTEuMWMtMS42LTEuNi00LjItMS42LTUuOCwwLTEuNiwxLjYtMS42LDQuMiAwLDUuOGw1My45LDUzLjljMC44LDAuOCAxLjgsMS4yIDIuOSwxLjIgMSwwIDIuMS0wLjQgMi45LTEuMmw1My45LTUzLjljMS43LTEuNiAxLjctNC4yIDAuMS01Ljh6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiM1OTU5NTkiIGRhdGEtb2xkX2NvbG9yPSIjNDk0OTQ5Ij48L3BhdGg+CiAgPC9nPjwvZz4gPC9zdmc+);
+    background-size:12px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    line-height:44px !important;
+    font-size:12px;
+    color:#494949;
+    padding: 0px 10px;
+}
+.select2login-popup * {
+    font-family: inherit !important;
+    line-height: 30px;
+    padding: 10px;
+    background:White;
+}
+.gds-login-modal .gds-login-register-inner form > div {
+    margin:6px auto !important;
+}
+.gds-login-modal-reg-abs {
+    position: absolute;
+    right: 15px;
+    font-size:10px;
+    top: 27px;
+}
+.gds-login-modal .gds-login-register-inner form > div.gds-login-submit {
+    margin-bottom: 0px !important;
+}
+.gds-login-modal #login {
+    z-index:9999999;
+    margin-bottom:5px !important;
+}
+.gds-login-modal .gds-login-register-inner form > .gds-login-modal-title {
+    margin-top:5px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+    font-size:21px;
+    font-family: inherit !important;
+    font-weight: bold;
+    text-align: left;
+}
+.gds-login-modal {
+
+    /*! box-shadow: 0px 0px 25px rgba(0,0,0,0.6); */
+    background: none !important;
+    width: 700px !important;
+}
+.gds-login-modal > .gds-login-modal-inner {
+    background:white;
+    border-radius: 7px !important;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
+}
+
+.gds-login-modal:before {
+    display: none !important;
+}
+.gds-login-modal-reg * {
+    font-family: inherit !important;
+    color:#494949;
+}
+.gds-modal-no-register {
+    width: 100%;
+    margin: 10px 0px;
+    border-top:1px solid #e7e7e7;
+    padding-top:10px;
+}
+.gds-modal-no-register input {
+    width: 200px;
+    background:white !important;
+    color:#3096a1;
+    border:none;
+    outline: none;
+    border-radius: 6px;
+    font-family: inherit !important;
+    font-weight: bold;
+    padding: 13px 0px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: none;
+    margin: auto;
+    transition: all ease 0.3s;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.3);
+}
+.gds-login-error-none .gds-login-error-box-inner {
+    display: none;
+}
+.gds-login-error-box-inner {
+    display: inline-block;
+    border: 1px solid #f52b3b7a !important;
+    padding:5px 20px 7px;
+    margin-top: 10px;
+    background: #fff1f1;
+    border-radius: 5px;
+    color: #f52b3b;
+}
+.gds-login-error-box-inner > div {
+    color: #f52b3b !important;
+}
+.gds-login-submit input {
+    font-family: inherit !important;
+}
+.no-register-buy {
+    display: flex;
+    /*! flex-wrap: wrap; */
+    flex-flow: column nowrap;
+    /*! border-left: 1px solid #ececec; */
+    /*! padding: 15px; */
+    justify-content: center;
+    align-content: center;
+}
+.no-register-buy form {
+    margin-top: auto;
+    margin-bottom: 0px !important;
+    border-top: none;
+    z-index: 2;
+}
+.no-register-buy form input:hover {
+    background:rgba(255,255,255,0.2);
+    transition: all ease 0.7s;
+}
+.modal-login-title {
+    margin-top: 5px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+    font-size: 21px;
+
+    color: white;
+    font-family: inherit !important;
+    font-weight: bold;
+    text-align: left;
+}
+.modal-login-text {
+    font-size:13px !important;
+    text-align: justify;
+    line-height: 25px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: inherit !important;
+}
+.no-register-buy ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.no-register-buy ul li {
+    text-align: left;
+    margin: 7px 0;
+    font-size:13px !important;
+    position: relative;
+    list-style: none;
+    margin-right: 15px !important;
+    color: white;
+    font-family: inherit !important;
+    font-weight: 300;
+    flex: 0 0 calc(100% - 15px);
+}
+.no-register-buy ul li:before {
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    left:  -15px;
+    top:2px;
+
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+.return-bank-box > .container > .row {
+    display: flex;
+}
+.return-bank-box > .container > .row > div {
+    margin:0px auto;
+}
+.return-bank-inner {
+    background:White;
+    padding: 20px;
+    border-radius: 4px;
+    margin:20px 0px;
+    box-shadow:0px 0px 10px 0px rgba(0,0,0,0.08);
+}
+.return-bank-inner.return-error > .row  > div {
+    margin:auto;
+}
+.success-icon {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.success-text {
+    text-align: center;
+    margin-top:30px;;
+    display: block;
+}
+.success-text .success-text-title {
+    font-family: inherit !important;
+    font-size:17px;
+    color:#32ba7c;
+    font-weight: bold;
+}
+.return-bank-inner.return-error .success-text .success-text-title {
+    color:#f15249;
+
+}
+.success-text .success-text-info  {
+    margin-top:10px;
+    font-size:13px;
+    margin-top:30px;
+    font-family: inherit;
+    font-weight: 300;
+    text-align: justify;
+}
+.success-text .success-text-info  p {
+    line-height: 27px;
+}
+.return-bank-inner > .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.panel-return {
+    width: 100%;
+    height: 100%;
+
+    border:1px solid #e1e1e1;
+    border-radius: 4px;
+}
+.panel-return .panel-return-head {
+    flex: 0 0 100%;
+    background:#efefef;
+    padding:20px;
+}
+.panel-return .panel-return-head span {
+    font-family: inherit;
+    font-size:16px;
+}
+.panel-return .panel-return-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px;
+}
+.panel-return .panel-return-content div {
+    padding: 10px 0px;
+    flex: 0 0 100%;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+}
+.panel-return .panel-return-content div:last-child {
+    border-bottom: 0px;
+    padding-bottom:0px;
+}
+.panel-return .panel-return-content div span {
+    font-family: inherit !important;
+    font-size: 13px;
+}
+.panel-return .panel-return-content div span:last-child {
+    margin-right: auto;
+    font-weight: 300;
+}
+.return-bank-inner.return-error .success-text .success-text-info {
+    text-align: center;
+}
+.client-head-content #result {
+    padding-left: .9375rem;
+}
+.return-bank-inner  .change-price .change-price-titile {
+    margin:10px 0px 20px;
+    font-size:16px;
+    font-family: inherit;
+    color: #f15249;
+    padding-right: 30px;
+    position: relative;
+}
+.return-bank-inner  .change-price .change-price-titile:before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    right: 0px;
+    bottom:0px;
+    content: "";
+    background-size:contain;
+    margin: auto;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzM0Ljg3NyAzMzQuODc3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMzQuODc3IDMzNC44Nzc7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBkPSJNMzMzLjE5NiwxNTUuOTk5aC0xNi4wNjdWODIuMDljMC0xNy43MTktMTQuNDE1LTMyLjEzNC0zMi4xMzQtMzIuMTM0aC0yMS43NjFMMjQwLjk2NSw5LjkxNyAgIEMyMzcuNTcxLDMuNzk4LDIzMS4xMTIsMCwyMjQuMTA3LDBjLTMuMjY1LDAtNi41MDQsMC44NDItOS4zNjQsMi40MjlsLTg1LjQ2NCw0Ny41MjZIMzMuODE1ICAgYy0xNy43MTksMC0zMi4xMzQsMTQuNDE1LTMyLjEzNCwzMi4xMzR2MjIwLjY1M2MwLDE3LjcxOSwxNC40MTUsMzIuMTM0LDMyLjEzNCwzMi4xMzRoMjUxLjE4ICAgYzE3LjcxOSwwLDMyLjEzNC0xNC40MTUsMzIuMTM0LTMyLjEzNHYtNjQuODAyaDE2LjA2N1YxNTUuOTk5eiBNMjg0Ljk5NSw2Mi44MDljOS44OTcsMCwxNy45ODIsNy41MTksMTkuMDY4LDE3LjE0aC0yNC4xNTIgICBsLTkuNTI1LTE3LjE0SDI4NC45OTV6IE0yMjAuOTk2LDEzLjY2M2MzLjAxNC0xLjY5LDcuMDctMC41MDgsOC43MzQsMi40OTRsMzUuNDc2LDYzLjc4NkgxMDEuNzk4TDIyMC45OTYsMTMuNjYzeiAgICBNMzA0LjI3NSwzMDIuNzQyYzAsMTAuNjMtOC42NTEsMTkuMjgxLTE5LjI4MSwxOS4yODFIMzMuODE1Yy0xMC42MywwLTE5LjI4MS04LjY1MS0xOS4yODEtMTkuMjgxVjgyLjA5ICAgYzAtMTAuNjMsOC42NTEtMTkuMjgxLDE5LjI4MS0xOS4yODFoNzIuMzUzTDc1LjM0NSw3OS45NUgzNy44MzJjLTMuNTU0LDAtNi40MjcsMi44NzktNi40MjcsNi40MjdzMi44NzMsNi40MjcsNi40MjcsNi40MjdoMTQuMzk2ICAgaDIzNC44M2gxNy4yMTd2NjMuMjAxaC00Ni45OTljLTIxLjgyNiwwLTM5LjU4OSwxNy43NjQtMzkuNTg5LDM5LjU4OXYyLjc2NGMwLDIxLjgyNiwxNy43NjQsMzkuNTg5LDM5LjU4OSwzOS41ODloNDYuOTk5VjMwMi43NDJ6ICAgIE0zMjAuMzQyLDIyNS4wODdoLTMuMjEzaC01OS44NTNjLTE0Ljc0MywwLTI2LjczNi0xMS45OTItMjYuNzM2LTI2LjczNnYtMi43NjRjMC0xNC43NDMsMTEuOTkyLTI2LjczNiwyNi43MzYtMjYuNzM2aDU5Ljg1MyAgIGgzLjIxM1YyMjUuMDg3eiBNMjc2Ljk2MSwxOTcuNDk3YzAsNy44NDEtNi4zNSwxNC4xOS0xNC4xOSwxNC4xOWMtNy44NDEsMC0xNC4xOS02LjM1LTE0LjE5LTE0LjE5czYuMzUtMTQuMTksMTQuMTktMTQuMTkgICBDMjcwLjYxMiwxODMuMzA2LDI3Ni45NjEsMTg5LjY2MiwyNzYuOTYxLDE5Ny40OTd6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGMTUyNDkiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+CjwvZz48L2c+IDwvc3ZnPg==)
+}
+.return-bank-inner .change-price .change-price-info p {
+    font-family: inherit;
+    line-height: 25px;
+    font-weight: 300;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.change-price-input {
+    display: flex;
+    justify-content: center;
+    margin-top:25px;
+}
+.change-price-input input {
+    border:1px solid #e6e6e6;
+    padding: 6px 12px;
+    font-size:13px;
+    min-width:230px;
+    color: #494949;
+}
+.change-price-input input::placeholder {
+    font-size:11px;
+}
+.change-price-input button {
+    border:1px solid #32ba7c;
+    border-right: none;
+    font-size:13px;
+    padding:0px 15px;
+    background: #32ba7c;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.return-bank-inner.price-change .row > .col-md-10 {
+    margin:auto;
+}
+.return-bank-inner.price-change {
+    background:#fffbfb;
+    box-shadow:0 0 10px 0 rgba(255, 0, 0, 0.1);
+}
+.filter-price-text {
+    display: flex;
+    margin-bottom: 15px;
+}
+.filter-price-text span {
+    font-size:11px;
+    background:#e9e9e9;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-weight: 300;
+}
+.filter-price-text span i {
+    font-style: normal;
+    font-weight: 400;
+}
+.filter-price-text span:last-child {
+    margin-right: auto;
+}
+#slider-range {
+    width: calc(100% - 20px);
+    margin: auto;
+}
+.peygiri-code {
+    padding: 10px;
+}
+.peygiri-code div {
+    display: flex;
+    font-family: inherit;
+    font-size:13px;
+}
+
+.peygiri-code div span:first-child {
+    color:#393939;
+    margin-left: 5px;
+    font-size:13px;
+}
+.peygiri-code div span:nth-child(2) {
+    font-weight: bold;
+    color:#39ae00;
+    font-size: 14px;
+}
+.peygiri-code div span:nth-child(3) {
+    margin-right: auto;
+    color:#919191;
+}
+.faktor-btns {
+    display: flex;
+    padding: 25px 10px 15px;
+    position: relative;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-align: center;
+    justify-content: center;
+}
+.faktor-btns span {
+    position: absolute;
+    font-size:11px;
+    top: -10px;
+    line-height: 20px;
+    background: white;
+    padding: 0px 12px;
+    font-family: inherit;
+}
+.faktor-btns a {
+    background:#049f58;
+    font-family: inherit;
+    padding: 7px 13px;
+    font-size:13px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+    transition: all linear 0.3s;
+    opacity: 0.9;
+}
+.faktor-btns a:hover {
+    opacity: 1;
+}
+.text-code-takhfif {
+    padding: 10px 20px;
+    margin-top: 35px;
+    border-radius: 4px;
+    background:#f5f5f5;
+}
+.text-code-takhfif p {
+    font-family: inherit;
+    font-size:13px;
+    line-height: 25px;
+    text-align: center;
+    color: #049f58;
+}
+.logo-airline-ico {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image:url(../../images/airline-dakheli.jpg);
+
+}
+
+div.IV .logo-airline-ico {
+    background-position: 120px 120px;
+}
+div.PYA .logo-airline-ico {
+    background-position: 0px 0px;
+}
+div.ZV .logo-airline-ico {
+    background-position: -60px 0px;
+}
+div.Y9 .logo-airline-ico {
+    background-position: -120px 0px;
+}
+div.VR .logo-airline-ico , div.Varesh .logo-airline-ico {
+    background-position: -180px 0px;
+}
+div.TF .logo-airline-ico {
+    background-position: -240px 0px;
+}
+div.JR .logo-airline-ico {
+    background-position: 00px -60px;
+}
+div.AK .logo-airline-ico {
+    background-position: -60px -60px;
+}
+div.IR .logo-airline-ico {
+    background-position: -120px -60px;
+}
+div.NV .logo-airline-ico {
+    background-position: -180px -60px;
+}
+div.B9 .logo-airline-ico {
+    background-position: -240px -60px;
+}
+div.JI .logo-airline-ico {
+    background-position: 0px -60px;
+}
+div.EP .logo-airline-ico {
+    background-position: 00px -120px;
+}
+div.QB .logo-airline-ico {
+    background-position: -60px -120px;
+}
+div.HH .logo-airline-ico {
+    background-position: -120px -120px;
+}
+div.IV .logo-airline-ico {
+    background-position: -180px -120px;
+}
+div.IRZ .logo-airline-ico , div.saha .logo-airline-ico {
+    background-position: -240px -120px;
+}
+div.I3 .logo-airline-ico {
+    background-position: 0 -180px;
+}
+div.W5 .logo-airline-ico {
+    background-position: -60px -180px;
+}
+div.SR .logo-airline-ico , div.sepehran .logo-airline-ico {
+    background-position: -120px -180px;
+}
+
+div.IV .logo-airline-ico-foreign {
+    background-position: 180px 120px;
+}
+
+div.AJ .logo-airline-ico-foreign {
+    background-position: 60px 60px;
+}
+
+div.ZV .logo-airline-ico-foreign {
+    background-position: 180px 60px;
+}
+
+div.Y9 .logo-airline-ico-foreign {
+    background-position: -60px 60px
+}
+
+div.IR .logo-airline-ico-foreign {
+    background-position: -300px 60px
+}
+
+div.NV .logo-airline-ico-foreign {
+
+    background-position: 60px 120px;
+}
+
+div.B9 .logo-airline-ico-foreign {
+    background-position: -240px 60px;
+}
+
+div.JI .logo-airline-ico-foreign, div.JR .logo-airline-ico-foreign {
+    background-position: -360px 60px
+}
+
+div.EP .logo-airline-ico-foreign {
+    background-position: 0 60px
+}
+
+div.QB .logo-airline-ico-foreign {
+    background-position: -180px 60px
+}
+
+div.HH .logo-airline-ico-foreign {
+    background-position: -120px 60px;
+}
+
+div.IRZ .logo-airline-ico-foreign, div.saha .logo-airline-ico-foreign {
+    background-position: -240px -120px;
+}
+
+div.I3 .logo-airline-ico-foreign {
+    background-position: 240px 60px;
+}
+
+div.W5 .logo-airline-ico-foreign {
+    background-position: 300px 120px;
+}
+
+
+
+div.foreign.PS .logo-airline-ico-foreign {
+    background-position: -60px -120px;
+
+}
+
+div.foreign.KK .logo-airline-ico-foreign {
+    background-position: 0 -120px;
+
+}
+
+div.foreign.SU .logo-airline-ico-foreign {
+    background-position: 120px -60px;
+}
+
+div.foreign.J2 .logo-airline-ico-foreign {
+    background-position: -360px 0;
+}
+
+div.foreign.J21 .logo-airline-ico-foreign {
+    background-position: -360px 0;
+}
+
+div.foreign.QR .logo-airline-ico-foreign {
+    background-position: -360px -120px;
+}
+
+div.foreign.WY .logo-airline-ico-foreign {
+    background-position: -360px -60px;
+}
+
+div.foreign.EK .logo-airline-ico-foreign {
+    background-position: -180px -120px;
+}
+
+div.foreign.TK .logo-airline-ico-foreign {
+    background-position: -240px -120px;
+}
+
+div.foreign.EY .logo-airline-ico-foreign {
+    background-position: -300px -120px;
+}
+
+div.foreign.LH .logo-airline-ico-foreign {
+    background-position: -120px -120px;
+}
+
+div.foreign.OS .logo-airline-ico-foreign {
+    background-position: 120px -120px;
+}
+
+div.foreign.AZ .logo-airline-ico-foreign {
+    background-position: -420px -60px;
+}
+
+div.foreign.KK .logo-airline-ico-foreign {
+    background-position: -0 -120px;
+}
+
+div.foreign.G9 .logo-airline-ico-foreign {
+    background-position: 180px -60px;
+}
+
+div.foreign.KL .logo-airline-ico-foreign {
+    background-position: -480px -60px;
+}
+
+div.foreign.PC .logo-airline-ico-foreign,
+div.foreign.pegasus .logo-airline-ico-foreign {
+    background-position: -420px -120px;
+}
+
+div.foreign.GF .logo-airline-ico-foreign {
+    background-position: 60px -60px;
+}
+
+div.foreign.TG .logo-airline-ico-foreign {
+    background-position: -480px -120px;
+}
+
+div.foreign.BA .logo-airline-ico-foreign {
+    background-position: -60px -60px;
+}
+
+div.foreign.A3 .logo-airline-ico-foreign {
+    background-position: -540px -120px;
+}
+
+div.foreign.AF .logo-airline-ico-foreign {
+    background-position: -540px -60px;
+}
+
+div.foreign.SA .logo-airline-ico-foreign {
+    background-position: -120px -60px;
+}
+
+div.foreign.AK .logo-airline-ico-foreign {
+    background-position: -180px -180px;
+}
+
+div.foreign.AC .logo-airline-ico-foreign {
+    background-position: -120px -180px;
+}
+
+div.foreign.QF .logo-airline-ico-foreign {
+    background-position: -60px -180px;
+}
+
+div.foreign.CZ .logo-airline-ico-foreign {
+    background-position: -60px -240px;
+}
+
+div.foreign.U2 .logo-airline-ico-foreign {
+    background-position: 0 -180px;
+}
+
+div.foreign.FZ .logo-airline-ico-foreign {
+    background-position: -120px 0;
+}
+
+div.foreign.IB .logo-airline-ico-foreign {
+    background-position: 60px -120px;
+}
+
+div.foreign.KE .logo-airline-ico-foreign {
+
+    background-position: -180px 0;
+}
+
+div.foreign.KU .logo-airline-ico-foreign {
+    background-position: -240px -60px
+}
+
+div.foreign.MH .logo-airline-ico-foreign {
+    background-position: 180px 300px;
+}
+
+div.foreign.OV .logo-airline-ico-foreign {
+    background-position: 180px 0;
+}
+
+div.foreign.VY .logo-airline-ico-foreign {
+    background-position: -180px -60px;
+}
+
+div.foreign.ME .logo-airline-ico-foreign {
+    background-position: -360px -300px;
+}
+
+div.foreign.IA .logo-airline-ico-foreign {
+    background-position: -240px -300px;
+}
+
+div.foreign.JP .logo-airline-ico-foreign {
+    background-position: -300px -60px;
+}
+
+div.foreign.SN .logo-airline-ico-foreign {
+    background-position: -360px -240px;
+}
+
+div.foreign.JP .logo-airline-ico-foreign {
+    background-position: -300px -60px
+}
+
+div.foreign.KC .logo-airline-ico-foreign {
+    background-position: 120px -180px;
+}
+
+div.foreign.AB .logo-airline-ico-foreign {
+    background-position: 300px -180px
+}
+
+div.foreign.XC .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+.\32 j .logo-airline-ico-foreign {
+
+    background-position: -300px 0;
+}
+
+div.foreign.CA .logo-airline-ico-foreign {
+    background-position: -120px -240px
+}
+
+div.foreign.UX .logo-airline-ico-foreign {
+    background-position: 120px 0
+}
+
+div.foreign.JU .logo-airline-ico-foreign {
+    background-position: -240px 0;
+}
+
+div.foreign.AS .logo-airline-ico-foreign {
+    background-position: 0 -300px
+}
+
+div.foreign.AA .logo-airline-ico-foreign {
+    background-position: 0 -60px
+}
+
+div.foreign.OZ .logo-airline-ico-foreign {
+    background-position: 300px 0;
+}
+
+div.foreign.CX .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+div.foreign.DL .logo-airline-ico-foreign {
+    background-position: -420px 360px;
+}
+
+div.foreign.EN .logo-airline-ico-foreign {
+    background-position: -480px 300px
+}
+
+div.foreign.KA .logo-airline-ico-foreign {
+    background-position: -60px 300px
+}
+
+div.foreign.E2 .logo-airline-ico-foreign {
+    background-position: 0 0;
+}
+
+div.foreign.EW .logo-airline-ico-foreign {
+    background-position: 240px 0;
+}
+
+div.foreign.GA .logo-airline-ico-foreign {
+    background-position: 60px -180px
+}
+
+div.foreign.QX .logo-airline-ico-foreign {
+    background-position: -60px 0;
+}
+
+div.foreign.AI .logo-airline-ico-foreign {
+    background-position: 180px 360px
+}
+
+div.foreign.NQ .logo-airline-ico-foreign {
+    background-position: 240px 420px
+}
+
+div.foreign.\39 W .logo-airline-ico-foreign {
+    background-position: 360px -300px;
+}
+
+div.foreign.B6 .logo-airline-ico-foreign {
+    background-position: 360px -180px
+}
+
+div.foreign.KQ .logo-airline-ico-foreign {
+    background-position: -300px -180px
+}
+
+div.foreign.OD .logo-airline-ico-foreign {
+    background-position: 240px 300px
+}
+
+div.foreign.OA .logo-airline-ico-foreign {
+    background-position: 120px 300px
+}
+
+div.foreign.FV .logo-airline-ico-foreign {
+    background-position: -300px -300px;
+}
+
+div.foreign.S7 .logo-airline-ico-foreign {
+    background-position: -360px -180px
+}
+
+div.foreign.SV .logo-airline-ico-foreign {
+    background-position: -180px -300px;
+}
+
+div.foreign.\33 U .logo-airline-ico-foreign {
+    background-position: 180px -180px;
+}
+
+div.foreign.SQ .logo-airline-ico-foreign {
+    background-position: 60px -240px;
+}
+
+div.foreign.UL .logo-airline-ico-foreign {
+    background-position: 60px -300px;
+}
+
+div.foreign.LX .logo-airline-ico-foreign {
+    background-position: -300px -240px
+}
+
+div.foreign.TF .logo-airline-ico-foreign {
+
+    background-position: 300px 60px;
+}
+
+div.foreign.UA .logo-airline-ico-foreign {
+    background-position: 360px 0
+}
+
+div.foreign.U6 .logo-airline-ico-foreign {
+    background-position: -180px -240px
+}
+
+div.foreign.UT .logo-airline-ico-foreign {
+    background-position: -240px -240px
+}
+
+div.foreign.WS .logo-airline-ico-foreign {
+    background-position: 120px -240px
+}
+
+div.foreign.PYA .logo-airline-ico-foreign {
+
+    background-position: 120px 60px;
+}
+
+div.foreign.VR .logo-airline-ico-foreign {
+
+    background-position: 120px 120px
+}
+
+div.foreign.ET .logo-airline-ico-foreign {
+    background-position: 0 240px
+}
+
+div.foreign.CX .logo-airline-ico-foreign {
+    background-position: 60px 0
+}
+
+div.foreign.\38 Q .logo-airline-ico-foreign {
+    background-position: -240px -180px
+}
+
+div.foreign.MS .logo-airline-ico-foreign {
+    background-position: -120px 300px
+}
+
+div.foreign.RJ .logo-airline-ico-foreign {
+    background-position: 240px -240px
+}
+
+div.foreign.sepehran .logo-airline-ico-foreign {
+    background-position: 240px -240px
+}
+.logo-airline-ico-foreign{
+
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image:url(../../images/airline_pattern_foreign.jpg);
+
+}
+
+.a-takhfif-box {
+    display: flex;
+    margin:20px 0px;
+    justify-content: flex-end;
+}
+.a-takhfif-box >.a-takhfif-box-inner {
+    border: 1px solid #eaeaea;
+    /*! padding: 5px 20px; */
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    overflow: hidden;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div {
+    flex:0 0 100%;
+    display: flex;
+    padding: 15px 15px;
+    color:#363636;
+    font-family: inherit;
+    border-bottom: 1px solid #e8e8e8;
+    box-sizing: border-box !important;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div.a-takhfif-before {
+    color:#fc3434;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div.a-takhfif-before span:last-child {
+    position: relative;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div.a-takhfif-before span:last-child:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background:#e14949;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    opacity: 0.5;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div.a-takhfif-after {
+    border-bottom: 0px;
+    background: #f7fff3;
+    color: #39ae00;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div span:first-child {
+    display: inline-block;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div span:last-child {
+    margin-right: auto;
+    display: inline-block;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+}
+.a-takhfif-box >.a-takhfif-box-inner > div span i {
+    padding-right:3px;
+    font-family: inherit;
+    letter-spacing: 0px !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size:11px;
+}
+.mob-parvaz-info {
+    display: none;
+}
+
+.result_hotel_n{ padding-left: .9375rem;}
+
+.dataTables_wrapper .dataTables_filter , .dataTables_wrapper .dataTables_paginate{ float: right !important;}
+.dataTables_wrapper .dataTables_length , .dataTables_wrapper .dataTables_info{ float: left !important;}
+
+.dataTables_wrapper .dataTables_filter input{ text-align: left !important; padding-left: 8px;}
+
+.Dash-ContentL-B-Table table{ direction: ltr !important;}
+
+
+
+@media (min-width: 768px) and (max-width: 992px){
+    .s-u-passenger-item{ width: 50% !important;}
+}
+
+.next_tour_n_ , .next_ReservationTicket , .cancel_ReservationTicket{ float: right !important;}
+.cancel_ReservationTicket{ margin-right: 5px !important;}
+
+.roulst__factor::after{
+    top: 6px !important;
+}
+
+.busicon_zm{
+    transform: rotateY(150deg) !important;
+}
+
+.desctiptionBus { text-align: left;}
+
+.currency-gds .currency-inner .currency-arrow{
+    margin-left: auto !important;
+    margin-top: 7px;
+    margin-right: 5px;
+    transform: rotate(-90deg);
+}
+
+
+
+.factorl_nn {
+    display: inline-block;
+    width: 50%;
+}
+
+.s-u-passenger-wrapper-change_nn .s-u-last-p-bozorgsal_n h4 {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+.s-u-passenger-wrapper-change_nn .s-u-last-p-bozorgsal_n h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: 0;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 29%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 29%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%, rgba(0,0,0,0.8) 29%, rgba(0,0,0,1) 75%,
+    rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+    height: 1px;
+}
+
+.s-u-passenger-wrapper-change_nn .s-u-result-item-change {
+    font-family: inherit !important;
+    font-style: normal;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: table;
+    width: 98%;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 5px;
+    table-layout: fixed;
+    text-align: center;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.item_flight .showListSort > div {
+    transition: all ease .4s;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 -1px 1px 0
+    rgba(0, 0, 0, .05), 0 1px 5px 0
+    rgba(0, 0, 0, .15);
+    margin: 10px 0;
+}
+
+
+.filter-interrupt-ul-f li span, .filter-type-ul-f li span,
+.filter-seat-ul-f li span,
+.filter-airline-ul-f li span,
+.filter-time-ul-f li span {
+    margin-left: 8px;
+}
+
+.s-u-filter-wrapper-fo .s-u-filter-item-time label {
+    width: 100%;
+}
+
+.visa_price_ {
+    margin-top: -30px;
+}
+
+.filter-content .raste-item label {
+    font-size: 12px;
+}
+
+.filterCompanyName_bus .raste-item label  {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.filterCompanyName_bus .raste-item:last-child {
+    border-bottom: 0 !important;
+}
+
+.FilterHoteltype[type="checkbox"]:not(:checked) + label::before, .FilterHoteltype[type="checkbox"]:checked + label::before {
+    box-sizing: initial;
+}
+
+.international-available-airlines-info .bus-info_:nth-child(2) {
+
+    width: 40% !important;
+
+}
+
+.international-available-bus-info {
+    align-items: center;
+    justify-content: center
+}
+
+.international-available-bus-info .bus-info_:nth-child(1),
+.international-available-bus-info .bus-info_:nth-child(3) {
+    width: 30%;
+}
+
+.international-available-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.international-available-info .international-available-details {
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.international-available-info.bus_page .international-available-detail-btn {
+
+    background-color: #f9fafe;
+
+}
+
+.international-available-detail-btn .my-more-info {
+    background-color: #f9fafe;
+}
+
+.items_buses .showListSort > div ,
+.items_train .showListSort > div
+{
+    transition: all ease .4s;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    margin: 10px 0;
+}
+.item_flight .showListSort > div{
+    transition: all ease .4s;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    margin: 10px 0;
+}
+.items_buses .international-available-box,
+.items_train .international-available-box,
+.item_flight .international-available-box {
+    padding: 0 !important;
+}
+
+.international-available-info.bus_page .international-available-item-right-Cell,
+.international-available-info.bus_page .international-available-item-left-Cell {
+    position: relative;
+    padding: 10px 0;
+}
+
+.international-available-info.bus_page .inner-avlbl-itm > div {
+    top: auto;
+    margin-top: 10px;
+}
+
+.international-available-info .airlines-info.destination span:last-of-type {
+    text-align: center;
+}
+
+.bus_page_sort {
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+}
+
+.international-available-item-right-Cell {
+    border-right: 1px dashed #ddd;
+    padding: 20px 0;
+
+}
+
+.international-available-info .international-available-item-left-Cell {
+    padding-left: 10px;
+}
+
+.international-available-item-right-Cell::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: #ddd;
+    right: -12px;
+}
+
+.international-available-item-right-Cell::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: #ddd;
+    right: -12px;
+}
+
+.international-available-info.bus_page .priceSortAdt1 {
+    font-size: 18px;
+}
+
+.international-available-info.bus_page .priceSortAdt1 span {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.international-available-info.bus_page .tab-content.current {
+    font-size: 12px;
+    line-height: 2;
+}
+
+.international-available-info.bus_page .tab-content {
+    margin: 0 !important;
+}
+
+.international-available-info.bus_page ul.tabs::before {
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.international-available-info .my-more-info {
+    background-color: #f9fafe;
+}
+
+.international-available-info.bus_page .international-available-detail-btn::after,
+.international-available-info.bus_page .btn-available-d-n::after {
+    background-color: transparent;
+}
+
+.sidebar_bus .currency-gds {
+    padding: 8px;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    margin-bottom: 10px;
+}
+
+.sidebar_bus .filterBox {
+    margin-bottom: 10px;
+
+}
+
+.sidebar_bus .filtertip-searchbox {
+    margin-bottom: 10px
+}
+
+.sidebar_bus .s-u-update-popup-change, .sidebar_bus .filtertip-searchbox {
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    border-radius: 5px;
+}
+
+.left_bus_body {
+    padding-right: 10px;
+}
+
+.international-available-info .airlines-info.destination span:last-of-type {
+    font-size: 12px !important;
+}
+
+.international-available-info.bus_page .international-available-airlines-log-info > span {
+    font-size: 11px !important;
+    color: #717171;
+    line-height: 20px;
+}
+
+.international-available-box.bus_page:hover .plane-icon {
+    right: 60% !important;
+}
+
+.ui-datepicker-group.ui-datepicker-group-first {
+    border-left: 1px solid #ccc
+}
+
+.filter_airline_flight {
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+    border-radius: 5px;
+
+}
+
+.flight_body_search {
+    padding-right: 10px;
+}
+
+
+
+.blit-mob-charter {
+    position: absolute;
+    right: -22px;
+    top: 15px;
+    font-size: 10px;
+    border-radius: 0px 0px 6px 6px;
+    z-index: 1;
+    font-weight: 600;
+    background: #5eb75e;
+    color: White;
+
+    transform: rotate(90deg);
+    line-height: 15px;
+    padding: 0px 11px 4px 11px;
+    display: none;
+}
+
+@media ( min-width: 990px){
+    .external-hotel-name .hotel-rate-outer{
+        margin-right: auto;
+        margin-left: 0 !important;
+    }
+    .filter_search_holel , .research_Hotel {
+        display: none;
+    }
+
+    .dateprice:hover{
+        background-color: rgba(0, 0, 0, 0.6);
+        border-color: transparent;
+    }
+    .dateprice:hover .dataprice-icon svg{
+        fill: #fff !important;
+    }
+    .dateprice:hover .text-dateprice{
+        color:#fff !important;
+    }
+    .filter_search_mobile_res{
+        display: none !important;
+    }
+}
+.international-available-detail-btn.more_1 {
+    display: flex;
+    align-items: center;
+}

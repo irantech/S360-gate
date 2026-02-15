@@ -250,6 +250,7 @@ GROUP BY {$this->config_tbl}.id, {$this->clients_tbl}.AgencyName";
 
     public function checkClientConfigurationAccess($configuration_id, $client_id)
     {
+    
         $result = $this->getModel('clientConfigRelationModel')
        ->get()
        ->where('configuration_id', $configuration_id)

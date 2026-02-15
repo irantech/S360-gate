@@ -1,0 +1,119 @@
+/*------------ background color ---------------------*/
+.site-bg-main-color{
+	background-color: #78C0AE;
+	color: #777;
+} 
+
+.site-bg-main-color-b::before{
+	background-color: #78C0AE;
+}
+.site-bg-tsxt-color-b::before{
+	background-color: #78C0AE;
+	color: #777;
+}
+.site-bg-color-border-bottom::after{
+	border-bottom-color: #78C0AE;
+}
+.site-bg-color-border-top::after{
+	border-top-color: #78C0AE;
+}
+.site-bg-color-border-right::after{
+	border-right-color: #78C0AE;
+}
+.site-bg-color-border-left::after{
+	border-left-color: #78C0AE;
+}
+
+.site-bg-color-border-bottom-b::before{
+	border-bottom-color: #78C0AE;
+}
+.site-bg-color-border-top-b::before{
+	border-top-color: #78C0AE;
+}
+.site-bg-color-border-right-b::before{
+	border-right-color: #78C0AE;
+}
+.site-bg-color-border-left-b::before{
+	border-left-color: #78C0AE;
+}
+/*------------ border color ---------------------*/
+.site-border-text-color{
+	border:1px solid #777;
+}
+.site-border-main-color{ 
+	border-color:  #78C0AE;
+}
+.site-border-secondary-color{
+	color: #777;
+}
+/*------------ text color ---------------------*/
+.site-main-text-color {
+	color: #78C0AE;
+}
+.site-main-text-color-a::after{
+	color: #78C0AE;
+}
+.site-main-text-color-h {
+	color: #78C0AE;
+}
+.site-main-text-color-h:hover {
+	color: #639F8E;
+}
+
+.site-main-text-color-drck {
+	color: #639F8E;
+}
+
+.site-secondary-text-color{
+	color: #777;
+}
+.site-secondary-text-color:hover{
+	color: #eee;
+}
+
+/*------------ button color ---------------------*/
+.site-main-button-color {
+	border: 1px solid #78C0AE;
+	background: #78C0AE;
+	background: -webkit-gradient(linear, left top, left bottom, from(#639F8E), to(#78C0AE));
+	background: -webkit-linear-gradient(top, #639F8E, #78C0AE);
+	background: -moz-linear-gradient(top, #639F8E, #78C0AE);
+	background: -ms-linear-gradient(top, #639F8E, #78C0AE);
+	background: -o-linear-gradient(top, #639F8E, #78C0AE);
+	
+}
+
+.site-main-button-color:hover {
+	border: 1px solid #639F8E;
+	background: #639F8E;
+	background: -webkit-gradient(linear, left top, left bottom, from(#78C0AE), to(#639F8E));
+	background: -webkit-linear-gradient(top, #78C0AE, #639F8E);
+	background: -moz-linear-gradient(top, #78C0AE, #639F8E);
+	background: -ms-linear-gradient(top, #78C0AE, #639F8E);
+	background: -o-linear-gradient(top, #78C0AE, #639F8E);
+	
+}
+
+.site-main-button-flat-color {background: #78C0AE;}
+.site-main-button-flat-color:hover {background: #639F8E;}
+
+.site-main-button-color-hover:hover{
+	background: #78C0AE;
+	border-color: #78C0AE;
+	color: #777;
+}
+/*------------filter slider  color ---------------------*/
+.addui-slider .addui-slider-track .addui-slider-range, .site-bg-filter-color.checked{
+	background-color: #78C0AE
+}
+
+/*------------ select2 ------------------------------*/
+.select2-container--default .select2-selection--single .select2-selection__arrow b ,
+.form-item.form-item-sort .select2-container--default .select2-selection--single .select2-selection__arrow b,
+.s-u-class-pick-change .select2-container--default .select2-selection--single .select2-selection__arrow b,
+.change-bor .select2-container--default .select2-selection--single .select2-selection__arrow b{
+	border-top-color: #78C0AE;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+	border-bottom-color: #78C0AE;
+}

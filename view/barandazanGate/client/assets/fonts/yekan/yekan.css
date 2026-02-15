@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Yekan";
+    src: url('yekanweb-regular.eot') format("embedded-opentype"),
+		 url('yekanweb-regular.woff') format("woff"),
+		 url('yekanweb-regular.ttf') format("truetype"),
+		 url('yekanweb-regular.svg') format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "YekanNumbers";
+    src: url('yekannumbers-regular.eot') format("embedded-opentype"),
+		 url('yekannumbers-regular.woff') format("woff"),
+		 url('yekannumbers-regular.ttf') format("truetype"),
+		 url('yekannumbers-regular.svg') format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
