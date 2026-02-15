@@ -190,21 +190,21 @@ function addNumberAdult(type_section, obj) {
    console.log('ssssssssssssss')
    console.log(type_section)
    let input_num = $(obj)
-      .parent("div")
-      .find("." + type_section + "-count-parent-js")
-      .val()
+       .parent("div")
+       .find("." + type_section + "-count-parent-js")
+       .val()
 
    if (input_num < 7) {
       input_num++
       let number_adult = parseInt(
-         $("." + type_section + "-number-adult-js").text()
+          $("." + type_section + "-number-adult-js").text()
       )
       let result_number = number_adult + 1
       console.log(result_number)
       $(obj)
-         .parent("div")
-         .find("." + type_section + "-count-parent-js")
-         .val(input_num)
+          .parent("div")
+          .find("." + type_section + "-count-parent-js")
+          .val(input_num)
       $("." + type_section + "-number-adult-js").html("")
       $("." + type_section + "-number-adult-js").append(result_number)
    }
@@ -212,18 +212,18 @@ function addNumberAdult(type_section, obj) {
 
 function minusNumberAdult(type_section, obj) {
    let input_num = $(obj)
-      .parent("div")
-      .find("." + type_section + "-count-parent-js")
-      .val()
+       .parent("div")
+       .find("." + type_section + "-count-parent-js")
+       .val()
 
    if (input_num > 1) {
       input_num--
       let number_adult = parseInt($("." + type_section + "-number-adult-js").text())
       let result_number = number_adult - 1
       $(obj)
-         .parent("div")
-         .find("." + type_section + "-count-parent-js")
-         .val(input_num)
+          .parent("div")
+          .find("." + type_section + "-count-parent-js")
+          .val(input_num)
       $("." + type_section + "-number-adult-js").html("")
       $("." + type_section + "-number-adult-js").append(result_number)
    }
@@ -231,73 +231,73 @@ function minusNumberAdult(type_section, obj) {
 
 function addNumberChild(type_section, obj) {
    let input_num = $(obj)
-      .parent("div")
-      .find("." + type_section + "-count-child-js")
-      .val()
+       .parent("div")
+       .find("." + type_section + "-count-child-js")
+       .val()
    console.log("add child==>" + input_num)
    input_num++
    if (input_num < 5) {
       let number_child = parseInt(
-         $("." + type_section + "-number-child-js").text()
+          $("." + type_section + "-number-child-js").text()
       )
 
       let result_number = number_child + 1
       $(obj)
-         .parent("div")
-         .find("." + type_section + "-count-child-js")
-         .val(input_num)
+          .parent("div")
+          .find("." + type_section + "-count-child-js")
+          .val(input_num)
       $("." + type_section + "-number-child-js").html("")
       $("." + type_section + "-number-child-js").append(result_number)
 
       let room_number = $(obj)
-         .parents("." + type_section + "-my-room-hotel-item-js")
-         .data("roomnumber")
+          .parents("." + type_section + "-my-room-hotel-item-js")
+          .data("roomnumber")
 
       let html_box = createBirthdayCalendar(input_num, room_number)
 
       $(obj)
-         .parents("." + type_section + "-my-room-hotel-item-info-js")
-         .find("." + type_section + "-birth-days-js")
-         .html(html_box)
+          .parents("." + type_section + "-my-room-hotel-item-info-js")
+          .find("." + type_section + "-birth-days-js")
+          .html(html_box)
    }
 }
 
 function minusNumberChild(type_section, obj) {
    let input_num = $(obj)
-      .parent("div")
-      .find("." + type_section + "-count-child-js")
-      .val()
+       .parent("div")
+       .find("." + type_section + "-count-child-js")
+       .val()
 
    if (input_num > 0) {
       let number_child = parseInt(
-         $("." + type_section + "-number-child-js").text()
+          $("." + type_section + "-number-child-js").text()
       )
 
       let result_number = number_child - 1
 
       input_num--
       $(obj)
-         .parent("div")
-         .find("." + type_section + "-count-child-js")
-         .val(input_num)
+          .parent("div")
+          .find("." + type_section + "-count-child-js")
+          .val(input_num)
       $("." + type_section + "-number-child-js").html("")
       $("." + type_section + "-number-child-js").append(result_number)
 
       let room_number = $(obj)
-         .parents("." + type_section + "-my-room-hotel-item-js")
-         .data("roomnumber")
+          .parents("." + type_section + "-my-room-hotel-item-js")
+          .data("roomnumber")
 
       let html_box = createBirthdayCalendar(input_num, room_number)
 
       $(obj)
-         .parents("div." + type_section + "-my-room-hotel-item-info-js")
-         .find("." + type_section + "-birth-days-js")
-         .html(html_box)
+          .parents("div." + type_section + "-my-room-hotel-item-info-js")
+          .find("." + type_section + "-birth-days-js")
+          .html(html_box)
    } else {
       $(obj)
-         .parents("div")
-         .find("." + type_section + "-count-child-js")
-         .val("0")
+          .parents("div")
+          .find("." + type_section + "-count-child-js")
+          .val("0")
    }
 }
 
@@ -305,39 +305,39 @@ function itemsRoom(_this,type_section) {
    let room_count = $("." + type_section + "-my-room-hotel-item-js").length
 
    let child_count_this = parseInt(
-     _this
-         .parents("." + type_section + "-my-room-hotel-item-js")
-         .find("." + type_section + "-count-child-js")
-         .val()
+       _this
+           .parents("." + type_section + "-my-room-hotel-item-js")
+           .find("." + type_section + "-count-child-js")
+           .val()
    )
    let number_child = parseInt(
-      $("." + type_section + "-number-child-js").text()
+       $("." + type_section + "-number-child-js").text()
    )
 
    console.log([number_child,child_count_this]);
 
    $("." + type_section + "-number-child-js").text(
-      number_child - child_count_this
+       number_child - child_count_this
    )
 
    let adult_count_this =_this
-      .parents("." + type_section + "-my-room-hotel-item-js")
-      .find("." + type_section + "-count-parent-js")
-      .val()
+       .parents("." + type_section + "-my-room-hotel-item-js")
+       .find("." + type_section + "-count-parent-js")
+       .val()
    let number_adult = $("." + type_section + "-number-adult-js").text()
    $("." + type_section + "-number-adult-js").text(
-      number_adult - adult_count_this
+       number_adult - adult_count_this
    )
 
    $("." + type_section + "-btn-add-room-js").show()
 
    _this
-      .parents("." + type_section + "-my-room-hotel-item-js")
-      .remove()
+       .parents("." + type_section + "-my-room-hotel-item-js")
+       .remove()
    let number_room = 1
    let number_text = useXmltag('First')
    $("." + type_section + "-my-room-hotel-item-js").each(function () {
-       $(this).data("roomnumber", number_room)
+      $(this).data("roomnumber", number_room)
 
       console.log("roomnumber=>" + number_room)
       if (number_room == 1) {
@@ -350,46 +350,46 @@ function itemsRoom(_this,type_section) {
          number_text = useXmltag('Fourth')
       }
       $(this)
-         .find("." + type_section + "-my-room-hotel-item-title-js")
-         .html(
-            `<span class="close" onclick="itemsRoom($(this),'${type_section}')"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M144 400C144 408.8 136.8 416 128 416C119.2 416 112 408.8 112 400V176C112 167.2 119.2 160 128 160C136.8 160 144 167.2 144 176V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V176C208 167.2 215.2 160 224 160C232.8 160 240 167.2 240 176V400zM336 400C336 408.8 328.8 416 320 416C311.2 416 304 408.8 304 400V176C304 167.2 311.2 160 320 160C328.8 160 336 167.2 336 176V400zM310.1 22.56L336.9 64H432C440.8 64 448 71.16 448 80C448 88.84 440.8 96 432 96H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V96H16C7.164 96 0 88.84 0 80C0 71.16 7.164 64 16 64H111.1L137 22.56C145.8 8.526 161.2 0 177.7 0H270.3C286.8 0 302.2 8.526 310.1 22.56V22.56zM148.9 64H299.1L283.8 39.52C280.9 34.84 275.8 32 270.3 32H177.7C172.2 32 167.1 34.84 164.2 39.52L148.9 64zM64 432C64 458.5 85.49 480 112 480H336C362.5 480 384 458.5 384 432V96H64V432z"/></svg></i> </span> ${useXmltag('Room')} ${number_text}`
-         )
+          .find("." + type_section + "-my-room-hotel-item-title-js")
+          .html(
+              `<span class="close" onclick="itemsRoom($(this),'${type_section}')"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M144 400C144 408.8 136.8 416 128 416C119.2 416 112 408.8 112 400V176C112 167.2 119.2 160 128 160C136.8 160 144 167.2 144 176V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V176C208 167.2 215.2 160 224 160C232.8 160 240 167.2 240 176V400zM336 400C336 408.8 328.8 416 320 416C311.2 416 304 408.8 304 400V176C304 167.2 311.2 160 320 160C328.8 160 336 167.2 336 176V400zM310.1 22.56L336.9 64H432C440.8 64 448 71.16 448 80C448 88.84 440.8 96 432 96H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V96H16C7.164 96 0 88.84 0 80C0 71.16 7.164 64 16 64H111.1L137 22.56C145.8 8.526 161.2 0 177.7 0H270.3C286.8 0 302.2 8.526 310.1 22.56V22.56zM148.9 64H299.1L283.8 39.52C280.9 34.84 275.8 32 270.3 32H177.7C172.2 32 167.1 34.84 164.2 39.52L148.9 64zM64 432C64 458.5 85.49 480 112 480H336C362.5 480 384 458.5 384 432V96H64V432z"/></svg></i> </span> ${useXmltag('Room')} ${number_text}`
+          )
       $(this)
-         .find("." + type_section + "-my-room-hotel-item-info-js")
-         .find("input[name^='adult']")
-         .attr("name", "adult" + number_room)
+          .find("." + type_section + "-my-room-hotel-item-info-js")
+          .find("input[name^='adult']")
+          .attr("name", "adult" + number_room)
       $(this)
-         .find("." + type_section + "-my-room-hotel-item-info-js")
-         .find("input[name^='adult']")
-         .attr("id", "adult" + number_room)
+          .find("." + type_section + "-my-room-hotel-item-info-js")
+          .find("input[name^='adult']")
+          .attr("id", "adult" + number_room)
       $(this)
-         .find("." + type_section + "-my-room-hotel-item-info-js")
-         .find("input[name^='child']")
-         .attr("name", "child" + number_room)
+          .find("." + type_section + "-my-room-hotel-item-info-js")
+          .find("input[name^='child']")
+          .attr("name", "child" + number_room)
       $(this)
-         .find("." + type_section + "-my-room-hotel-item-info-js")
-         .find("input[name^='child']")
-         .attr("id", "child" + number_room)
+          .find("." + type_section + "-my-room-hotel-item-info-js")
+          .find("input[name^='child']")
+          .attr("id", "child" + number_room)
 
 
       let number_child = 1
       let input_name_select_child_age =_this.find(
-         ".birth-days-js .birth-days-item-js"
+          ".birth-days-js .birth-days-item-js"
       )
       input_name_select_child_age.each(function () {
          $(this)
-            .find("select[name^='child_age']")
-            .attr("name", "child_age" + number_room + number_child)
+             .find("select[name^='child_age']")
+             .attr("name", "child_age" + number_room + number_child)
          $(this)
-            .find("select[name^='child_age']")
-            .attr("id", "child_age" + number_room + number_child)
+             .find("select[name^='child_age']")
+             .attr("id", "child_age" + number_room + number_child)
          number_child++
       })
       number_room++
    })
 
    let number_room_total = parseInt(
-     $("." + type_section + "-number-room-js").text()
+       $("." + type_section + "-number-room-js").text()
    )
 
    $("." + type_section + "-number-room-js").text(number_room - 1)
@@ -423,7 +423,7 @@ function viewResultInternalHotel(data_response) {
       })
    } else {
       $(".tabs-sub-hotel-js .tabs_ul_hotel .hotel-view-js").addClass(
-         "activing_tab"
+          "activing_tab"
       )
 
       hotels_view.show()
@@ -446,11 +446,11 @@ function viewResultInternalHotel(data_response) {
                             </li>`
       })
       $(".tabs-sub-hotel-js .tabs_ul_hotel .hotel-view-js").addClass(
-         "activing_tab"
+          "activing_tab"
       )
    } else {
       $(".tabs-sub-hotel-js .tabs_ul_hotel .city-view-js").addClass(
-         "activing_tab"
+          "activing_tab"
       )
 
       cities_view.show()
@@ -459,7 +459,7 @@ function viewResultInternalHotel(data_response) {
 
    if (hotels_html != "" && cities_html != "") {
       $(".tabs-sub-hotel-js .tabs_ul_hotel .city-view-js").addClass(
-         "activing_tab"
+          "activing_tab"
       )
       hotels_view.hide()
       cities_view.show()
@@ -510,9 +510,9 @@ function showEmptyMessage(type_search, null_message) {
    let lang_message = ""
    let html = ""
    if (
-      null_message != "undefined" &&
-      null_message &&
-      type_search === "international"
+       null_message != "undefined" &&
+       null_message &&
+       type_search === "international"
    ) {
       $(".div-hotel-city-js").html("")
       lang_message = "موردی یافت نشد"
@@ -525,9 +525,9 @@ function showEmptyMessage(type_search, null_message) {
       $(".div-hotel-city-js").html(html).removeClass("d-none")
    } else {
       if (
-         null_message != "undefined" &&
-         null_message &&
-         type_search === "internal"
+          null_message != "undefined" &&
+          null_message &&
+          type_search === "internal"
       ) {
          lang_message = "حداقل دو حرف وارد نمائید"
       } else {
@@ -561,33 +561,33 @@ function createBirthdayCalendar(inputNum, roomNumber) {
          number_textChild = useXmltag('Fourth')
       }
       HtmlCode +=
-         '<div class="tarikh-tavalod-item birth-days-item-js">' +
-         "<span><i>" +
-        useXmltag('Childage') +
-        ' ' +
-         number_textChild +
-         "</i></span>" +
-         '<select id="child_age' +
-         roomNumber +
-         i +
-         '" name="child_age' +
-         roomNumber +
-         i +
-         '">' +
-         '<option value="1">'+useXmltag('ZeroToOneYear')+'</option>' +
-         '<option value="2">'+useXmltag('OneToTwoYear')+'</option>' +
-         '<option value="3">'+useXmltag('TwoToThreeYear')+'</option>' +
-         '<option value="4">'+useXmltag('ThreeToFourYear')+'</option>' +
-         '<option value="5">'+useXmltag('FourToFiveYear')+'</option>' +
-         '<option value="6">'+useXmltag('FiveToSixYear')+'</option>' +
-         '<option value="7">'+useXmltag('SixToSevenYear')+'</option>' +
-         '<option value="8">'+useXmltag('SevenToEightYear')+'</option>' +
-         '<option value="9">'+useXmltag('EightToNineYear')+'</option>' +
-         '<option value="10">'+useXmltag('NineToTenYear')+'</option>' +
-         '<option value="11">'+useXmltag('TenToElevenYear')+'</option>' +
-         '<option value="12">'+useXmltag('ElevenToTwelveYear')+'</option>' +
-         "</select>" +
-         "</div>"
+          '<div class="tarikh-tavalod-item birth-days-item-js">' +
+          "<span><i>" +
+          useXmltag('Childage') +
+          ' ' +
+          number_textChild +
+          "</i></span>" +
+          '<select id="child_age' +
+          roomNumber +
+          i +
+          '" name="child_age' +
+          roomNumber +
+          i +
+          '">' +
+          '<option value="1">'+useXmltag('ZeroToOneYear')+'</option>' +
+          '<option value="2">'+useXmltag('OneToTwoYear')+'</option>' +
+          '<option value="3">'+useXmltag('TwoToThreeYear')+'</option>' +
+          '<option value="4">'+useXmltag('ThreeToFourYear')+'</option>' +
+          '<option value="5">'+useXmltag('FourToFiveYear')+'</option>' +
+          '<option value="6">'+useXmltag('FiveToSixYear')+'</option>' +
+          '<option value="7">'+useXmltag('SixToSevenYear')+'</option>' +
+          '<option value="8">'+useXmltag('SevenToEightYear')+'</option>' +
+          '<option value="9">'+useXmltag('EightToNineYear')+'</option>' +
+          '<option value="10">'+useXmltag('NineToTenYear')+'</option>' +
+          '<option value="11">'+useXmltag('TenToElevenYear')+'</option>' +
+          '<option value="12">'+useXmltag('ElevenToTwelveYear')+'</option>' +
+          "</select>" +
+          "</div>"
       i++
    }
 
@@ -706,7 +706,9 @@ function viewResultInternationalHotel(data_response) {
 //    $(".div-hotel-city-js").addClass("d-none")
 //    $(".check-in-date-international-js").trigger("focus")
 // }
-function searchInternalHotel(is_new_tab = false) {
+function searchInternalHotel() {
+   const form = document.getElementById('internal_hotel_form');
+   const is_new_tab = form.target === '_blank';
 
    let type_application = $("#autoComplateSearchIN_hidden_en")
 
@@ -760,9 +762,9 @@ function searchInternalHotel(is_new_tab = false) {
    if (type_application_searchInternalHotel === "api") {
       url = "detailHotel/api/" + hotel_id + "/";
 
-        $("#internal_hotel_form").attr('action', amadeusPathByLang +url);
-        $("#internal_hotel_form").attr('target', target);
-        $("#internal_hotel_form").submit();
+      $("#internal_hotel_form").attr('action', amadeusPathByLang +url);
+      $("#internal_hotel_form").attr('target', target);
+      $("#internal_hotel_form").submit();
       return false;
    }
    if (type_application_searchInternalHotel === "city") {
@@ -771,15 +773,15 @@ function searchInternalHotel(is_new_tab = false) {
    if (type_application_searchInternalHotel === "reservation") {
       url = `roomHotelLocal/reservation/${hotel_id}/${hotel_name_en_local}`
       $("<input>")
-         .attr("type", "hidden")
-         .attr("name", "startDate")
-         .attr("value", check_in_date)
-         .appendTo("#internal_hotel_form");
+          .attr("type", "hidden")
+          .attr("name", "startDate")
+          .attr("value", check_in_date)
+          .appendTo("#internal_hotel_form");
       $("<input>")
-        .attr("type", "hidden")
-        .attr("name", "nights")
-        .attr("value", nights_hotel)
-        .appendTo("#internal_hotel_form");
+          .attr("type", "hidden")
+          .attr("name", "nights")
+          .attr("value", nights_hotel)
+          .appendTo("#internal_hotel_form");
 
       $("#internal_hotel_form").attr('action', amadeusPathByLang +url);
       $("#internal_hotel_form").attr('target', target);
@@ -790,7 +792,10 @@ function searchInternalHotel(is_new_tab = false) {
    url = amadeusPathByLang + url
    openLink(url, is_new_tab)
 }
-function searchInternationalHotel(is_new_tab = false) {
+function searchInternationalHotel() {
+   const form = document.getElementById('international_hotel_form');
+   const is_new_tab = form.target === '_blank';
+
    let check_in_date = $(".check-in-date-international-js")
    let check_out_date_js = $(".check-out-date-international-js")
    let nights_hotel = $(".nights-hotel-js")
@@ -807,10 +812,10 @@ function searchInternationalHotel(is_new_tab = false) {
    my_room_hotel_item.each(function () {
       let childAge = 0
       const adult = parseInt(
-         $(this).find(".international-count-parent-js").val()
+          $(this).find(".international-count-parent-js").val()
       )
       const child = parseInt(
-         $(this).find(".international-count-child-js").val()
+          $(this).find(".international-count-child-js").val()
       )
 
       if (adult > 0) {
@@ -888,7 +893,7 @@ function searchResidence(is_new_tab = false) {
    })
    let url = null
 
-      url = `searchHotel&type=new&city=${city_for_hotel_local}&startDate=${check_in_date}&nights=${nights_hotel}&rooms=${rooms}&type_residence=${type_residence}`
+   url = `searchHotel&type=new&city=${city_for_hotel_local}&startDate=${check_in_date}&nights=${nights_hotel}&rooms=${rooms}&type_residence=${type_residence}`
 
 
    url = amadeusPathByLang + url
@@ -1387,8 +1392,8 @@ function searchResidence(is_new_tab = false) {
       let generateHtmlForSearchHotel = function(data, parseJson) {
 
          let value = data.Result,
-           searched_details = data.History,
-           IsInternal = data.Result.IsInternal
+             searched_details = data.History,
+             IsInternal = data.Result.IsInternal
          let addressTxt = value.ContactInformation.Address
          let hotelName = value.Name
          let Latitude = value.ContactInformation.Location.Latitude
@@ -1829,7 +1834,7 @@ function searchResidence(is_new_tab = false) {
                         }
                      }
                      let mainItem =
-                       `<div class='hotelResultItem count count-${index}'> <div id='api${index}' class='hotel-result-item'
+                         `<div class='hotelResultItem count count-${index}'> <div id='api${index}' class='hotel-result-item'
                      data-typeApplication='${item.type_application}' 
                      data-discount='${item.discount}'
                      data-priority='' 
@@ -2347,36 +2352,36 @@ function searchCity(e) {
    }else if (autoComplateSearchIN.length == 0){
       HotelPopular(e)
    }else if(autoComplateSearchIN.length >= 2 && (e === 'searchCityHotelForInternalHotel' ||e === 'hotel'  ) ||
-     autoComplateSearchIN.length >= 3 && e === 'externalHotel'){
+       autoComplateSearchIN.length >= 3 && e === 'externalHotel'){
 
       hotelLoader()
       setTimeout(()=>{
          $.post(amadeusPath + 'hotel_ajax.php',
-           {
-              inputSearchValue: autoComplateSearchIN,
-              flag: e === 'externalHotel' ? 'searchCityForExternalHotel' : 'searchCityHotelForInternalHotel' ,
-              json:true,
-           },
-           function(data) {
-              if(e === 'externalHotel') {
-                 let data_parse = JSON.parse(data)
+             {
+                inputSearchValue: autoComplateSearchIN,
+                flag: e === 'externalHotel' ? 'searchCityForExternalHotel' : 'searchCityHotelForInternalHotel' ,
+                json:true,
+             },
+             function(data) {
+                if(e === 'externalHotel') {
+                   let data_parse = JSON.parse(data)
 
-                 if (data_parse.length >= 1) {
-                    $('#listSearchCity , #listSearchCity_2, #listSearchCityResidence').html('');
-                    data_parse.forEach((index) => {
-                       let indexCountry;
-                       if(!index.CountryFa){
-                          index.CountryFa = index.CountryEn
-                       }
-                       console.log(index.CountryFa)
-                       if(index.CountryFa !== null && lang == 'fa'){
-                          indexCountry = index.CountryFa
-                       }else if(index.CountryEn !== null){
-                          indexCountry = index.CountryEn
-                       } else {
-                          indexCountry = " "
-                       }
-                       document.querySelector('#listSearchCity_2').innerHTML+= `
+                   if (data_parse.length >= 1) {
+                      $('#listSearchCity , #listSearchCity_2, #listSearchCityResidence').html('');
+                      data_parse.forEach((index) => {
+                         let indexCountry;
+                         if(!index.CountryFa){
+                            index.CountryFa = index.CountryEn
+                         }
+                         console.log(index.CountryFa)
+                         if(index.CountryFa !== null && lang == 'fa'){
+                            indexCountry = index.CountryFa
+                         }else if(index.CountryEn !== null){
+                            indexCountry = index.CountryEn
+                         } else {
+                            indexCountry = " "
+                         }
+                         document.querySelector('#listSearchCity_2').innerHTML+= `
                               <li onclick="selectCity(event,'${index.AirportEn}','${index.AirportFa}','${index.CountryEn}','${index.CountryFa}','${index.DepartureCityEn}','${index.DepartureCityFa}','${index.DepartureCode}')"> 
                                <i class="div_c_sr_i">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z"/></svg>
@@ -2392,20 +2397,20 @@ function searchCity(e) {
                                </div>
                               </li>`
 
-                    })
-                 } else {
-                    hotelNothingFound();
-                 }
+                      })
+                   } else {
+                      hotelNothingFound();
+                   }
 
-              }
-              else{
-                 let data_parse = JSON.parse(data)
-                 setTimeout(function() {
-                    if (Object.keys(data_parse).length > 0) {
-                       document.querySelector('#listSearchCity').innerHTML=""
-                       if(data_parse.Cities !== undefined){
-                          data_parse.Cities.forEach((item) => {
-                             document.querySelector('#listSearchCity').innerHTML+= `
+                }
+                else{
+                   let data_parse = JSON.parse(data)
+                   setTimeout(function() {
+                      if (Object.keys(data_parse).length > 0) {
+                         document.querySelector('#listSearchCity').innerHTML=""
+                         if(data_parse.Cities !== undefined){
+                            data_parse.Cities.forEach((item) => {
+                               document.querySelector('#listSearchCity').innerHTML+= `
                               <li onclick="selectCity_internal('${item.CityId}','${item.CityName}' , '${item.CityNameEn}' , 'city')"> 
                                <i class="div_c_sr_i">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z"></path></svg>
@@ -2417,11 +2422,11 @@ function searchCity(e) {
                                   </span>
                                </div>
                               </li>`
-                          })
-                       }
-                       if(data_parse.ApiHotels !== undefined){
-                          data_parse.ApiHotels.forEach((item) => {
-                             document.querySelector('#listSearchCity').innerHTML+= `
+                            })
+                         }
+                         if(data_parse.ApiHotels !== undefined){
+                            data_parse.ApiHotels.forEach((item) => {
+                               document.querySelector('#listSearchCity').innerHTML+= `
                               <li class="div_c_sr_blue" onclick="selectCity_internal('${item.HotelId}','${item.HotelName}' , '${item.HotelNameEn}' , 'api')"> 
                                <i class="div_c_sr_i">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M336 304C336 295.2 343.2 288 352 288H384C392.8 288 400 295.2 400 304V336C400 344.8 392.8 352 384 352H352C343.2 352 336 344.8 336 336V304zM336 112C336 103.2 343.2 96 352 96H384C392.8 96 400 103.2 400 112V144C400 152.8 392.8 160 384 160H352C343.2 160 336 152.8 336 144V112zM352 256C343.2 256 336 248.8 336 240V208C336 199.2 343.2 192 352 192H384C392.8 192 400 199.2 400 208V240C400 248.8 392.8 256 384 256H352zM448 0C483.3 0 512 28.65 512 64V448C512 483.3 483.3 512 448 512H288C252.7 512 224 483.3 224 448V64C224 28.65 252.7 0 288 0H448zM448 48H288C279.2 48 272 55.16 272 64V448C272 456.8 279.2 464 288 464H448C456.8 464 464 456.8 464 448V64C464 55.16 456.8 48 448 48zM192 176H72C58.75 176 48 186.7 48 200V440C48 453.3 58.75 464 72 464H193.3C196.4 482.3 204.6 498.8 216.4 512H72C32.24 512 0 479.8 0 440V200C0 160.2 32.24 128 72 128H192V176zM144 320C152.8 320 160 327.2 160 336V368C160 376.8 152.8 384 144 384H112C103.2 384 96 376.8 96 368V336C96 327.2 103.2 320 112 320H144zM144 224C152.8 224 160 231.2 160 240V272C160 280.8 152.8 288 144 288H112C103.2 288 96 280.8 96 272V240C96 231.2 103.2 224 112 224H144z"/></svg>
@@ -2432,11 +2437,11 @@ function searchCity(e) {
                                   </span>
                                </div>
                               </li>`
-                          })
-                       }
-                       if(data_parse.ReservationHotels !== undefined){
-                          data_parse.ReservationHotels.forEach((item) => {
-                             document.querySelector('#listSearchCity').innerHTML+= `
+                            })
+                         }
+                         if(data_parse.ReservationHotels !== undefined){
+                            data_parse.ReservationHotels.forEach((item) => {
+                               document.querySelector('#listSearchCity').innerHTML+= `
                               <li class="div_c_sr_blue" onclick="selectCity_internal('${item.HotelId}','${item.HotelName}' , '${item.HotelNameEn}' , 'reservation')"> 
                                <i class="div_c_sr_i">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M336 488C336 501.3 325.3 512 312 512C298.7 512 288 501.3 288 488V56C288 25.07 313.1 0 344 0H456C486.9 0 512 25.07 512 56V192H544V120C544 106.7 554.7 96 568 96C581.3 96 592 106.7 592 120V192.6C619.1 196.4 640 219.8 640 248V488C640 501.3 629.3 512 616 512C602.7 512 592 501.3 592 488V248C592 243.6 588.4 240 584 240H464V56C464 51.58 460.4 48 456 48H344C339.6 48 336 51.58 336 56V488zM368 96C368 87.16 375.2 80 384 80H416C424.8 80 432 87.16 432 96V128C432 136.8 424.8 144 416 144H384C375.2 144 368 136.8 368 128V96zM416 176C424.8 176 432 183.2 432 192V224C432 232.8 424.8 240 416 240H384C375.2 240 368 232.8 368 224V192C368 183.2 375.2 176 384 176H416zM368 288C368 279.2 375.2 272 384 272H416C424.8 272 432 279.2 432 288V320C432 328.8 424.8 336 416 336H384C375.2 336 368 328.8 368 320V288zM544 272C552.8 272 560 279.2 560 288V320C560 328.8 552.8 336 544 336H512C503.2 336 496 328.8 496 320V288C496 279.2 503.2 272 512 272H544zM496 384C496 375.2 503.2 368 512 368H544C552.8 368 560 375.2 560 384V416C560 424.8 552.8 432 544 432H512C503.2 432 496 424.8 496 416V384zM224 160C224 166 223 171 222 176C242 190 256 214 256 240C256 285 220 320 176 320H160V480C160 498 145 512 128 512C110 512 96 498 96 480V320H80C35 320 0 285 0 240C0 214 13 190 33 176C32 171 32 166 32 160C32 107 74 64 128 64C181 64 224 107 224 160z"/></svg>
@@ -2447,14 +2452,14 @@ function searchCity(e) {
                                   </span>
                                </div>
                               </li>`
-                          })
-                       }
-                    } else {
-                       hotelNothingFound();
-                    }
-                 }, 10)
-              }
-           })
+                            })
+                         }
+                      } else {
+                         hotelNothingFound();
+                      }
+                   }, 10)
+                }
+             })
       },500)
    }
 

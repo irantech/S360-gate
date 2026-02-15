@@ -18,10 +18,13 @@
 
         public $icons_json = '{
          "Flight": {"icon": "<i class=\"fa-regular fa-plane-circle-check\"></i>", "name": "هواپیما"},
+         "Cip": {"icon": "<i class=\"fa-regular fa-concierge-bell\"></i>", "name": "تشریفات فرودگاه"},
            "Bus": {"icon": "<i class=\"fa-regular fa-bus\"></i>", "name": "اتوبوس"},
            "Hotel": {"icon": "<i class=\"fa-regular fa-hotel\"></i>", "name": "هتل"},
             "Insurance": {"icon": "<i class=\"fa-regular fa-umbrella-beach\"></i>", "name": "بیمه"}
+
                }';
+
 
 
 

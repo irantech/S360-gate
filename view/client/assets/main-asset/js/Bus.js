@@ -47,7 +47,10 @@ $("document").ready(function () {
    })
 })
 
-function searchBus(is_new_tab = false) {
+function searchBus() {
+   const form = document.getElementById('gds_local_bus');
+   const is_new_tab = form.target === '_blank';
+
    let origin_bus = $(".select-origin-route-bus-js")
    let destination_bus = $(".select-destination-route-bus-js")
    let departure_date_bus = $(".departure-date-bus-js")
@@ -57,6 +60,7 @@ function searchBus(is_new_tab = false) {
    destination_bus = destination_bus.val()
    departure_date_bus = departure_date_bus.val()
    let url = `${amadeusPathByLang}buses/${origin_bus}-${destination_bus}/${departure_date_bus}`
+   console.log('is_new_tab: ' , is_new_tab)
 
    openLink(url, is_new_tab)
 }

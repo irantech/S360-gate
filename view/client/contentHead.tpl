@@ -199,6 +199,8 @@ in_array($smarty.const.GDS_SWITCH, [ 'resultTrainApi','passengersDetailTrainApi'
     <link rel="stylesheet" href="assets/styles{$fileCss}/tour.css"/>
     <link rel="stylesheet" href="assets/styles{$fileCss}/tour-v2.css"/>
     <link rel='stylesheet' href="assets/styles{$fileCss}/exclusive-tour.css"/>
+{elseif in_array($smarty.const.GDS_SWITCH,['cip-detail'])}
+    <link rel='stylesheet' href="assets/styles{$fileCss}/cip.css"/>
 {elseif in_array($smarty.const.GDS_SWITCH,['submitRequest'])}
     <link rel="stylesheet" href="assets/styles{$fileCss}/tour.css?v=2"/>
     <link rel="stylesheet" href="assets/styles{$fileCss}/tour-v2.css?v=2"/>

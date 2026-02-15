@@ -413,7 +413,7 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
             'resultEuropcarLocal', 'resultTourLocal', 'tours', 'resultVisa', 'flatResultVisa', 'agencyListByCity',
             'roomHotelLocal', 'detailTour', 'detailTour-v2', 'detailTour-v3', 'buses', 'mag', 'news', 'page', 'roomExternalHotel', 'detailEntertainment', 'resultEntertainment',
             'searchHotel','detailHotel','articles','recommendation','introductIran','introductCountry','aboutIran','aboutCountry','video','gallery','pay','search-flight' , 'immigration' , 'visa' , 'embassy' , 'pickup', 'hotel' , 'bookings','roomManagement'
-            ,'hotelLog','hotelFinancialCenter' , 'hotelInvoices' , 'newInvoice' , 'exclusive-tour' , 'exclusive-tour-detail'
+            ,'hotelLog','hotelFinancialCenter' , 'hotelInvoices' , 'newInvoice' , 'exclusive-tour' , 'exclusive-tour-detail', 'search-cip' , 'cip-detail'
 
         ];
         $array_delete_refer = array(
@@ -532,6 +532,48 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
                     defined('REQUEST') or define('REQUEST', GDS_SWITCH);
 
                     break;
+                }
+                case 'search-cip':
+                {
+                    if (isset($arrUrl[4])) {
+                        defined('CIP_AIRPORT_SEARCH') or define('CIP_AIRPORT_SEARCH', $arrUrl[4]);
+                    }
+                    if (isset($arrUrl[5])) {
+                        defined('CIP_DATE_SEARCH') or define('CIP_DATE_SEARCH',$arrUrl[5]);
+                    }
+                    if (isset($arrUrl[6])) {
+                        $flightTypeAndTripType = explode('&', $arrUrl[6]);
+                        defined('CIP_FLIGHT_TYPE_SEARCH') or define('CIP_FLIGHT_TYPE_SEARCH', $flightTypeAndTripType[0]);
+                        defined('CIP_TRIP_TYPE_SEARCH') or define('CIP_TRIP_TYPE_SEARCH', $flightTypeAndTripType[1]);
+                    }
+                    if (isset($arrUrl[7])) {
+                        $num = explode('-', $arrUrl[7]);
+
+                        defined('SEARCH_ADULT') or define('SEARCH_ADULT', $num[0]);
+                        defined('SEARCH_CHILD') or define('SEARCH_CHILD', $num[1]);
+                        defined('SEARCH_INFANT') or define('SEARCH_INFANT', $num[2]);
+
+                    }
+                    defined('REQUEST') or define('REQUEST', GDS_SWITCH);
+                    break;
+
+//                case 'cip-detail':
+//                {
+//                    if (isset($arrUrl[4])) {
+//                        defined('REQUEST_NUMBER') or define('REQUEST_NUMBER', $arrUrl[4]);
+//                    }
+//
+//                    if (isset($arrUrl[5])) {
+//                        defined('SOURCE_ID') or define('SOURCE_ID', $arrUrl[5]);
+//                    }
+//
+//                    if (isset($arrUrl[6])) {
+//                        defined('HOTEL_GLOBAL_ID') or define('HOTEL_GLOBAL_ID', $arrUrl[6]);
+//                    }
+//
+//                    defined('REQUEST') or define('REQUEST', GDS_SWITCH);
+//
+//                    break;
                 }
                 case 'international': {
                     $orig_dest = explode('-', $arrUrl[5]);

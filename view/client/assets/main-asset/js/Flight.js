@@ -663,7 +663,7 @@ function getPopularInternalCities(type) {
       popular_cities = response.data
       let items_search = []
       let list_flight_popular = $(
-        '.list_popular_' + type + '_internal-js',
+          '.list_popular_' + type + '_internal-js',
       )
       list_flight_popular.html('')
       let data
@@ -1051,7 +1051,7 @@ function getPopularCityInternational(type) {
 
           items_search += ` <i>${value.DepartureCityAr ?value.DepartureCityAr :value.DepartureCityEn}</i> `
         }
-       else{
+        else{
           items_search += ` <i>${value.DepartureCityEn}</i> `
         }
         items_search += `<em>(${value.DepartureCode})</em>
@@ -1123,6 +1123,9 @@ function jumping(obj_type,type,DepartureCode){
 
           $("#departure_date_internal_exclusive_tour").trigger("click").focus();
         }
+
+
+
       }
     }
   } else if(type === "international"){
@@ -1303,14 +1306,14 @@ function initIdAdditionalExternal() {
   let counter = 1
   $('.additional-flight-multi-way-js').each(function() {
     $(this)
-      .find('[id]')
-      .each(function() {
-        if (counter !== 1 && $(this).hasClass('remove_btn')) {
-          $(this).removeClass('d-none')
-        }
+        .find('[id]')
+        .each(function() {
+          if (counter !== 1 && $(this).hasClass('remove_btn')) {
+            $(this).removeClass('d-none')
+          }
 
-        addIdAndName($(this), counter)
-      })
+          addIdAndName($(this), counter)
+        })
     counter++
   })
 }
@@ -1321,8 +1324,8 @@ function addIdAndName(item, counter) {
     item.attr('id', `iata_multi_${counter}_origin_international`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `iata-multi-${counter}-origin-international-js origin-multi-way-js form-control  inputSearchForeign`,
+        'class',
+        `iata-multi-${counter}-origin-international-js origin-multi-way-js form-control  inputSearchForeign`,
     )
     item.attr('data-number', counter)
   } else if (item.hasClass('iata-multi-js')) {
@@ -1330,30 +1333,30 @@ function addIdAndName(item, counter) {
     item.attr('id', `multi_${counter}_origin_airport`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `multi-${counter}-origin-international-js iata-multi-js`,
+        'class',
+        `multi-${counter}-origin-international-js iata-multi-js`,
     )
   } else if (item.hasClass('list-show-result-js')) {
     item.attr('name', `list_multi_${counter}_origin_airport`)
     item.attr('id', `list_multi_${counter}_origin_airport`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `resultUlInputSearch list-show-result list-multi-${counter}-origin-airport-international-js list-show-result-js`,
+        'class',
+        `resultUlInputSearch list-show-result list-multi-${counter}-origin-airport-international-js list-show-result-js`,
     )
   } else if (item.hasClass('switch-routs-js')) {
     let arg_title = 'multi_way_flight'
     item.attr(
-      'onclick',
-      'reversRouteFlight(' +
-      '\'' +
-      `${arg_title}` +
-      '\'' +
-      ',' +
-      '\'' +
-      `${counter}` +
-      '\'' +
-      ')',
+        'onclick',
+        'reversRouteFlight(' +
+        '\'' +
+        `${arg_title}` +
+        '\'' +
+        ',' +
+        '\'' +
+        `${counter}` +
+        '\'' +
+        ')',
     )
   } else if (item.hasClass('destination-multi-way-js')) {
     item.attr('name', `iata_multi_${counter}_destination_international`)
@@ -1361,31 +1364,31 @@ function addIdAndName(item, counter) {
     item.attr('data-number', counter)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `iata-multi-${counter}-destination-international-js destination-multi-way-js form-control  inputSearchForeign`,
+        'class',
+        `iata-multi-${counter}-destination-international-js destination-multi-way-js form-control  inputSearchForeign`,
     )
   } else if (item.hasClass('destination-iata-multi-js')) {
     item.attr('name', `multi_${counter}_destination_airport`)
     item.attr('id', `multi_${counter}_destination_airport`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `multi-${counter}-destination-international-js iata-multi-js`,
+        'class',
+        `multi-${counter}-destination-international-js iata-multi-js`,
     )
   } else if (item.hasClass('destination-list-show-result-js')) {
     item.attr('id', `list_multi_${counter}_destination_airport`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `resultUlInputSearch list-show-result destination-list-js list-multi-${counter}-destination-airport-international-js  destination-list-show-result-js `,
+        'class',
+        `resultUlInputSearch list-show-result destination-list-js list-multi-${counter}-destination-airport-international-js  destination-list-show-result-js `,
     )
   } else if (item.hasClass('date_multi_way')) {
     item.attr('name', `date_multi_${counter}`)
     item.attr('id', `date_multi_${counter}`)
     item.removeAttr('class')
     item.attr(
-      'class',
-      `deptCalendar date_multi_way form-control date-multi-${counter}-js `,
+        'class',
+        `deptCalendar date_multi_way form-control date-multi-${counter}-js `,
     )
   }
 }
@@ -1409,8 +1412,8 @@ function dataSearchFlight(type) {
 
 
   let multi_way = $('.' + type + '-two-way-js').is(':checked')
-    ? $('.' + type + '-two-way-js').val()
-    : $('.' + type + '-one-way-js').val()
+      ? $('.' + type + '-two-way-js').val()
+      : $('.' + type + '-one-way-js').val()
   let departure_date = $('.departure-date-' + type + '-js')
   let return_date = $('.' + type + '-arrival-date-js')
   let today = dateNow('-')
@@ -1438,11 +1441,12 @@ function searchFlight(type) {
   console.log(type)
   let no_error = true
   let obj_url = dataSearchFlight(type)
+  console.log(obj_url)
   no_error = checkCountAdult(obj_url.number_adult)
   if (no_error) {
     no_error = checkCountAdultVsInfant(
-      obj_url.number_adult,
-      obj_url.number_infant,
+        obj_url.number_adult,
+        obj_url.number_infant,
     )
   }
   if (no_error) {
@@ -1450,18 +1454,18 @@ function searchFlight(type) {
   }
   if (no_error) {
     no_error = checkEmptyField(
-      obj_url.origin,
-      obj_url.destination,
-      obj_url.multi_way,
-      obj_url.return_date,
+        obj_url.origin,
+        obj_url.destination,
+        obj_url.multi_way,
+        obj_url.return_date,
     )
   }
   if (no_error) {
     no_error = checkDateFlight(
-      obj_url.departure_date,
-      obj_url.today,
-      obj_url.return_date,
-      obj_url.multi_way,
+        obj_url.departure_date,
+        obj_url.today,
+        obj_url.return_date,
+        obj_url.multi_way,
     )
   }
   if (no_error) {
@@ -1482,9 +1486,9 @@ function searchInternal(obj) {
 
   let path = `${obj.origin}-${obj.destination}`
   let date =
-    obj.multi_way === '2'
-      ? `${obj.departure_date}&${obj.return_date}`
-      : `${obj.departure_date}`
+      obj.multi_way === '2'
+          ? `${obj.departure_date}&${obj.return_date}`
+          : `${obj.departure_date}`
   let count_passenger = `${obj.number_adult}-${obj.number_child}-${obj.number_infant}`
 
 
@@ -1495,8 +1499,8 @@ function searchInternal(obj) {
 
   // Only add classFlight to URL if it's not 'all' or empty
   let classFlightParam = (obj.classFlight && obj.classFlight !== 'all' && obj.classFlight !== '')
-    ? `/${obj.classFlight}`
-    : '';
+      ? `/${obj.classFlight}`
+      : '';
 
   let url = `${amadeusPathByLang}search-flight/${obj.multi_way}/${path}/${date}/Y/${count_passenger}${classFlightParam}`;
   console.log('url -> ' , obj)
@@ -1504,8 +1508,10 @@ function searchInternal(obj) {
     url = `${amadeusPathByLang}international/${obj.multi_way}/${path}/${date}/Y/${count_passenger}`
   }
 
-  let target = $('#internal_flight_form').data('target')
-  if(target !=  undefined && target == '_blank' ){
+  const form = $('#internal_flight_form')[0];
+  let target = form.target === '_blank';
+  console.log('target: ' , target)
+  if(target){
     window.open(url , '_blank')
   }else {
     window.open(url , '_self')
@@ -1515,19 +1521,21 @@ function searchInternal(obj) {
 function searchInternational(obj) {
   let path = `${obj.origin}-${obj.destination}`
   let date =
-    obj.multi_way === '2'
-      ? `${obj.departure_date}&${obj.return_date}`
-      : `${obj.departure_date}`
+      obj.multi_way === '2'
+          ? `${obj.departure_date}&${obj.return_date}`
+          : `${obj.departure_date}`
   let count_passenger = `${obj.number_adult}-${obj.number_child}-${obj.number_infant}`
 
   // Only add classFlight to URL if it's not 'all' or empty
   let classFlightParam = (obj.classFlight && obj.classFlight !== 'all' && obj.classFlight !== '')
-    ? `/${obj.classFlight}`
-    : '';
+      ? `/${obj.classFlight}`
+      : '';
 
   let url = `${amadeusPathByLang}international/${obj.multi_way}/${path}/${date}/Y/${count_passenger}${classFlightParam}`
-  let target = $('#international_flight_form').data('target')
-  if(target != 'undefind' && target == '_blank' ){
+  // let target = $('#international_flight_form').data('target')
+  const form = $('#international_flight_form')[0];
+  const target = form.target === '_blank';
+  if(target){
     window.open(url , '_blank')
   }else {
     window.open(url , '_self')
@@ -1537,9 +1545,9 @@ function searchInternational(obj) {
 function search_international_flight_form(obj) {
   let path = `${obj.origin}-${obj.destination}`
   let date =
-    obj.multi_way === '2'
-      ? `${obj.departure_date}&${obj.return_date}`
-      : `${obj.departure_date}`
+      obj.multi_way === '2'
+          ? `${obj.departure_date}&${obj.return_date}`
+          : `${obj.departure_date}`
   let count_passenger = `${obj.number_adult}-${obj.number_child}-${obj.number_infant}`
   let url = `${amadeusPathByLang}${internal_international}/${obj.multi_way}/${path}/${date}/Y/${count_passenger}`
 
@@ -1571,9 +1579,9 @@ function severalPathFlight() {
     departure_date[i] = $('.date-multi-' + i + '-js').val()
 
     if (
-      departure_date[i] == '' ||
-      origin[i] == '' ||
-      destination[i] == ''
+        departure_date[i] == '' ||
+        origin[i] == '' ||
+        destination[i] == ''
     ) {
 
       error_multi = false
@@ -1586,7 +1594,7 @@ function severalPathFlight() {
       path_multi += `&departure[${i}]=${origin[i]}&arrival[${i}]=${destination[i]}&departuredate[${i}]=${departure_date[i]}`
     }
   }
-  
+
   if (!error_multi) {
     $.alert({
       title: useXmltag('BookTicket'),
@@ -1666,9 +1674,9 @@ function checkAdultAndChild(number_adult, number_child) {
 
 function checkEmptyField(origin, destination, multi_way, return_date) {
   if (
-    origin === '' ||
-    destination === '' ||
-    (multi_way === '2' && return_date === '')
+      origin === '' ||
+      destination === '' ||
+      (multi_way === '2' && return_date === '')
   ) {
     $.alert({
       title: useXmltag('BookTicket'),
@@ -1721,12 +1729,12 @@ function getCountPassengersFlight(obj, type) {
   let total_count_value = (parseInt(adult_count) + parseInt(child_count) + parseInt(infant_count)) ;
   let total_count = parseInt(adult_count) == 1 ? (parseInt(adult_count) + 1) : parseInt(total_count_value);
   if(type === 'add') {
-     total_count = 1 + parseInt(total_count_value);
+    total_count = 1 + parseInt(total_count_value);
 
   }else{
-     total_count = parseInt(total_count_value) - 1 ;
+    total_count = parseInt(total_count_value) - 1 ;
   }
-  
+
   if(total_count > 9 && type === 'add'){
 
     $('.' + type_search + '-count-passenger-js').css('color','#ccc').css('border-color','#ccc');
@@ -1752,36 +1760,36 @@ function getCountPassengersFlight(obj, type) {
     }
 
 
-      let passenger_adult   = Number($(obj).parents('.box-of-count-passenger-js').find('.adult-number-js .number-count-js').attr('data-number'))
-      let passenger_child   = Number($(obj).parents('.box-of-count-passenger-js').find('.child-number-js .number-count-js').attr('data-number'))
-      let passenger_infant  = Number($(obj).parents('.box-of-count-passenger-js').find('.infant-number-js .number-count-js').attr('data-number'))
+    let passenger_adult   = Number($(obj).parents('.box-of-count-passenger-js').find('.adult-number-js .number-count-js').attr('data-number'))
+    let passenger_child   = Number($(obj).parents('.box-of-count-passenger-js').find('.child-number-js .number-count-js').attr('data-number'))
+    let passenger_infant  = Number($(obj).parents('.box-of-count-passenger-js').find('.infant-number-js .number-count-js').attr('data-number'))
 
-      if (passenger_adult < passenger_infant && (passenger_infant > 0)) {
-        console.log(['less if=>',passenger_adult,passenger_infant]);
-        $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js .number-count-js').attr('data-number',(passenger_adult )).text(passenger_adult )
-        passenger_infant =passenger_adult ;
-        $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js').find('.add-flight-to-count-passenger-js').css('color','#ccc').css('border-color','#ccc')
+    if (passenger_adult < passenger_infant && (passenger_infant > 0)) {
+      console.log(['less if=>',passenger_adult,passenger_infant]);
+      $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js .number-count-js').attr('data-number',(passenger_adult )).text(passenger_adult )
+      passenger_infant =passenger_adult ;
+      $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js').find('.add-flight-to-count-passenger-js').css('color','#ccc').css('border-color','#ccc')
 
-      }
+    }
 
-      $('.' + type_search+'-adult-js').val(passenger_adult);
-      $('.' + type_search+'-child-js').val(passenger_child);
-      $('.' + type_search+'-infant-js').val(passenger_infant);
+    $('.' + type_search+'-adult-js').val(passenger_adult);
+    $('.' + type_search+'-child-js').val(passenger_child);
+    $('.' + type_search+'-infant-js').val(passenger_infant);
 
 
-      $(obj).parents('.box-of-count-passenger-js').find('.text-count-passenger-js').text(`${passenger_adult}   ${useXmltag("Adult")} ,  ${passenger_child}  ${useXmltag("Child")} ,  ${passenger_infant} ${useXmltag("Infant")}`)
+    $(obj).parents('.box-of-count-passenger-js').find('.text-count-passenger-js').text(`${passenger_adult}   ${useXmltag("Adult")} ,  ${passenger_child}  ${useXmltag("Child")} ,  ${passenger_infant} ${useXmltag("Infant")}`)
 
-        if (passenger_adult === passenger_infant && (passenger_infant > 0)) {
-          console.log(['second if=>',$(obj).data('type')]);
+    if (passenger_adult === passenger_infant && (passenger_infant > 0)) {
+      console.log(['second if=>',$(obj).data('type')]);
 
-          $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js').find('.add-flight-to-count-passenger-js').css('color','#ccc').css('border-color','#ccc')
-          return false;
-        }
+      $(obj).parents('.box-of-count-passenger-js').find('.infant-number-js').find('.add-flight-to-count-passenger-js').css('color','#ccc').css('border-color','#ccc')
+      return false;
+    }
 
-      if(total_count===9){
-        console.log('after=>',total_count);
-        $('.' + type_search + '-count-passenger-js').css('color','#ccc').css('border-color','#ccc');
-      }
+    if(total_count===9){
+      console.log('after=>',total_count);
+      $('.' + type_search + '-count-passenger-js').css('color','#ccc').css('border-color','#ccc');
+    }
 
 
   }

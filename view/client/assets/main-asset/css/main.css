@@ -33,6 +33,7 @@
 #internal_flight .flight_error_text ,
 #Flight .flight_error_text ,
 #Package .flight_error_text ,
+#Cip .flight_error_text ,
 #flight_multi_way .flight_error_text {
     cursor: no-drop;
 }
@@ -42,7 +43,8 @@
 #internal_flight .flight_loading_div ,
 #flight_multi_way .flight_loading_div ,
 #Flight .flight_loading_div ,
-#Package .flight_loading_div {
+#Package .flight_loading_div,
+#Cip .flight_loading_div{
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -56,7 +58,8 @@
 #internal_flight .flight_loading_div_loading ,
 #flight_multi_way .flight_loading_div_loading ,
 #Flight .flight_loading_div_loading ,
-#Package .flight_loading_div_loading {
+#Package .flight_loading_div_loading ,
+#Cip .flight_loading_div_loading{
     width: 35px;
     height: 35px;
     display: flex;
@@ -73,7 +76,8 @@
 #internal_flight .flight_error_div ,
 #flight_multi_way .flight_error_div ,
 #Flight .flight_error_div ,
-#Package .flight_error_div {
+#Package .flight_error_div,
+#Cip .flight_error_div{
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -87,7 +91,8 @@
 #internal_flight .flight_error_div > i ,
 #flight_multi_way .flight_error_div > i ,
 #Flight .flight_error_div > i ,
-#Package .flight_error_div > i {
+#Package .flight_error_div > i,
+#Cip .flight_error_div > i{
     width: 35px;
     height: 35px;
     display: flex;
@@ -106,7 +111,8 @@
 #internal_flight .flight_error_div > i.svg_icon > svg ,
 #flight_multi_way .flight_error_div > i.svg_icon > svg ,
 #Flight .flight_error_div > i.svg_icon > svg ,
-#Package .flight_error_div > i.svg_icon > svg {
+#Package .flight_error_div > i.svg_icon > svg,
+#Cip .flight_error_div > i.svg_icon > svg{
     width: 20px;
     height: 20px;
     fill: #9c9c9c;
@@ -118,7 +124,8 @@
 #internal_flight .error-line ,
 #flight_multi_way .error-line ,
 #Flight .error-line ,
-#Package .error-line {
+#Package .error-line,
+#Cip .error-line {
     color: #8e8e8e;
 }
 #flight_khareji .flight_error_text_div ,
@@ -127,7 +134,8 @@
 #internal_flight .flight_error_text_div ,
 #flight_multi_way .flight_error_text_div ,
 #Flight .flight_error_text_div ,
-#Package .flight_error_text_div {
+#Package .flight_error_text_div,
+#Cip .flight_error_text_div{
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -141,7 +149,8 @@
 #internal_flight .flight_error_text_div > i ,
 #flight_multi_way .flight_error_text_div > i ,
 #Flight .flight_error_text_div > i ,
-#Package .flight_error_text_div > i {
+#Package .flight_error_text_div > i,
+#Cip .flight_error_text_div > i{
     width: 35px;
     height: 35px;
     display: flex;
@@ -160,7 +169,8 @@
 #internal_flight .flight_error_text_div > i.svg_icon > svg ,
 #flight_multi_way .flight_error_text_div > i.svg_icon > svg ,
 #Flight .flight_error_text_div > i.svg_icon > svg ,
-#Package .flight_error_text_div > i.svg_icon > svg {
+#Package .flight_error_text_div > i.svg_icon > svg ,
+#Cip .flight_error_text_div > i.svg_icon > svg{
     width: 20px;
     height: 20px;
     fill: #9c9c9c;
@@ -172,7 +182,9 @@
 #internal_flight .error_text-line ,
 #flight_multi_way .error_text-line ,
 #Flight .error_text-line ,
-#Package .error_text-line {
+#Package .error_text-line,
+#Cip .error_text-line
+{
     color: #8e8e8e;
 }
 #flight_khareji #loading-spinner ,
@@ -181,7 +193,9 @@
 #internal_flight #loading-spinner ,
 #flight_multi_way #loading-spinner ,
 #Flight #loading-spinner ,
-#Package #loading-spinner {
+#Package #loading-spinner,
+#Cip #loading-spinner
+{
     width: 20px;
     height: 20px;
     border: 2px solid #bdbdbd;
@@ -195,7 +209,8 @@
 #internal_flight .loading-line ,
 #flight_multi_way .loading-line ,
 #Flight .loading-line ,
-#Package .loading-line {
+#Package .loading-line,
+#Cip .loading-line{
     width: 80px;
     height: 18px;
     background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
@@ -426,7 +441,8 @@
 #internal_flight .div_c_sr,
 #flight_multi_way .div_c_sr,
 #Flight .div_c_sr,
-#Package .div_c_sr{
+#Package .div_c_sr ,
+#Cip .div_c_sr{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -443,7 +459,8 @@
 #internal_flight .div_c_sr > i ,
 #flight_multi_way .div_c_sr > i ,
 #Flight .div_c_sr > i ,
-#Package .div_c_sr > i {
+#Package .div_c_sr > i ,
+#Cip .div_c_sr > i {
     width: 35px;
     height: 35px;
     display: flex;
@@ -462,7 +479,8 @@
 #internal_flight .div_c_sr > i.svg_icon > svg ,
 #flight_multi_way .div_c_sr > i.svg_icon > svg ,
 #Flight .div_c_sr > i.svg_icon > svg ,
-#Package .div_c_sr > i.svg_icon > svg {
+#Package .div_c_sr > i.svg_icon > svg,
+#Cip .div_c_sr > i.svg_icon > svg{
     width: 20px;
     height: 20px;
     fill: #9c9c9c;
@@ -474,7 +492,8 @@
 #internal_flight .div_c_sr:hover i.svg_icon ,
 #flight_multi_way .div_c_sr:hover i.svg_icon ,
 #Flight .div_c_sr:hover:hover i.svg_icon ,
-#Package .div_c_sr:hover:hover i.svg_icon {
+#Package .div_c_sr:hover:hover i.svg_icon ,
+#Cip .div_c_sr:hover:hover i.svg_icon{
     background: var(--mainColor);
 }
 #flight_khareji .div_c_sr:hover i.svg_icon > svg ,
@@ -483,7 +502,8 @@
 #internal_flight .div_c_sr:hover i.svg_icon > svg ,
 #flight_multi_way .div_c_sr:hover i.svg_icon > svg ,
 #Flight .div_c_sr:hover:hover i.svg_icon > svg ,
-#Package .div_c_sr:hover:hover i.svg_icon > svg {
+#Package .div_c_sr:hover:hover i.svg_icon > svg ,
+#Cip .div_c_sr:hover:hover i.svg_icon > svg {
     fill: #fff;
 }
 #flight_khareji .div_c_sr:hover .c-text,
@@ -492,7 +512,8 @@
 #internal_flight .div_c_sr:hover .c-text,
 #flight_multi_way .div_c_sr:hover .c-text,
 #Flight .div_c_sr:hover .c-text,
-#Package .div_c_sr:hover .c-text{
+#Package .div_c_sr:hover .c-text,
+#Cip .div_c_sr:hover .c-text{
     color: var(--mainColor) !important;
 }
 #flight_khareji .c-text,
@@ -501,7 +522,8 @@
 #internal_flight .c-text,
 #flight_multi_way .c-text,
 #Flight .c-text,
-#Package .c-text{
+#Package .c-text,
+#Cip .c-text{
     display: flex;
     color: #8e8e8e !important;
     text-align: right;
@@ -515,7 +537,8 @@
 #internal_flight .yata_gdemo,
 #flight_multi_way .yata_gdemo,
 #Flight .yata_gdemo,
-#Package .yata_gdemo{
+#Package .yata_gdemo,
+#Cip .yata_gdemo{
     font-size: 10px;
     color: #8e8e8e !important;
     margin-top: 3px;
@@ -533,7 +556,8 @@
 #Flight .yata_gdemo > i ,
 #Flight .yata_gdemo > em,
 #Package .yata_gdemo > i ,
-#Package .yata_gdemo > em {
+#Package .yata_gdemo > em ,
+#Cip .yata_gdemo > em {
     font-style: normal;
 }
 #flight_khareji .resultUlInputSearch.up ,
@@ -542,7 +566,8 @@
 #internal_flight .resultUlInputSearch.up ,
 #flight_multi_way .resultUlInputSearch.up ,
 #Flight .resultUlInputSearch.up ,
-#Package .resultUlInputSearch.up {
+#Package .resultUlInputSearch.up,
+#Cip .resultUlInputSearch.up {
     bottom: 30px;
 }
 #flight_khareji .resultUlInputSearch::-webkit-scrollbar-track ,
@@ -551,7 +576,8 @@
 #internal_flight .resultUlInputSearch::-webkit-scrollbar-track ,
 #flight_multi_way .resultUlInputSearch::-webkit-scrollbar-track ,
 #Flight .resultUlInputSearch::-webkit-scrollbar-track ,
-#Package .resultUlInputSearch::-webkit-scrollbar-track {
+#Package .resultUlInputSearch::-webkit-scrollbar-track ,
+#Cip .resultUlInputSearch::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 8px;
     background-color: #F5F5F5;
@@ -563,7 +589,8 @@
 #internal_flight .resultUlInputSearch::-webkit-scrollbar ,
 #flight_multi_way .resultUlInputSearch::-webkit-scrollbar ,
 #Flight .resultUlInputSearch::-webkit-scrollbar ,
-#Package .resultUlInputSearch::-webkit-scrollbar {
+#Package .resultUlInputSearch::-webkit-scrollbar ,
+#Cip .resultUlInputSearch::-webkit-scrollbar{
     width: 6px;
     background-color: #F5F5F5;
 }
@@ -574,7 +601,8 @@
 #internal_flight .resultUlInputSearch::-webkit-scrollbar-thumb ,
 #flight_multi_way .resultUlInputSearch::-webkit-scrollbar-thumb ,
 #Flight .resultUlInputSearch::-webkit-scrollbar-thumb ,
-#Package .resultUlInputSearch::-webkit-scrollbar-thumb {
+#Package .resultUlInputSearch::-webkit-scrollbar-thumb ,
+#Cip .resultUlInputSearch::-webkit-scrollbar-thumb {
     border-radius: 8px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #999;
@@ -1132,6 +1160,25 @@
         width: 100%;
     }
 }
+
+
+.modal_center_flight{
+    width: 100%;
+}
+@media (max-width: 768px){
+    .flight-modal-items{
+        width: 33.33333%;
+    }
+}
+@media (max-width: 576px){
+    .modal-body > .row {
+        max-height: 300px;
+        overflow: auto;
+    }
+}
 .flitght-price-price-info-none{
     display: none !important;
 }
+
+
+

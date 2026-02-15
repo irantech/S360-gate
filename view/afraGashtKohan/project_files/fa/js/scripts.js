@@ -1,0 +1,1520 @@
+// RPEPOLOMP
+$(document).ready(function () {
+    $('body').on('click', '.more_close_matn', function () {
+        $(this).parents('.card_matn_').removeClass('show_more');
+        $(this).parents('.card_matn_').find('.more_read_matn').show();
+        $(this).remove();
+    });
+    $('.more_read_matn').click(function () {
+        $(this).parents('.card_matn_').addClass('show_more');
+        $(this).hide();
+        $(this).parent('.content_card_matn').append('<button type="button" class="btn btn-primary more_close_matn py-2 px-3">بستن</button>');
+    });
+    $('.more_read').click(function () {
+        $(this).parents('.card_').addClass('show_more');
+        $(this).hide();
+        $(this).parent('.content_card').append('<a class="more_close">بستن</a>');
+    });
+    $('body').on('click', '.more_close', function () {
+        $(this).parents('.card_').removeClass('show_more');
+        $(this).parents('.content_card').find('.more_read').show();
+        $(this).remove();
+    });
+    $('.more_matn').click(function () {
+        $(this).parent('.c-card-content').toggleClass('selected');
+        $(this).toggleClass('select_btn');
+
+        if ($(this).parent('.c-card-content').hasClass('selected')) {
+            $(this).text('بستن')
+        } else {
+            $(this).text('بیشتر بخوانید')
+        }
+    });
+    setTimeout(function () {
+        $('.more_matn').parent().find('.typo__context').each(function () {
+            if ($( this ).height() < 210) {
+                $( this ).nextAll('span.more_matn').first().hide();
+            }
+        });
+    }, 200);
+    $('.more_read_matn').parent().find('.typo__context').each(function () {
+        if ($( this ).height() < 90) {
+            $( this ).nextAll('button.more_read_matn').first().css({ display: "none" });
+        }
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // $(".select2 , .select2BusRouteSearch").select2();
+    var heiw = $(window).height();
+
+    $('.banner_main').css('min-height' , heiw);
+
+    $('.temp_content').css('min-height' , heiw);
+
+    var winh = $(window).height();
+
+    if($(window).width() > 767){
+        $('.banner').css('height' , winh);
+    }
+    $('body').click(function () {
+        $('.main-navigation__sub-menu2').hide();
+    });
+
+    $('.smoothScrollTo').on('click', function () {
+        var thiss = $(this);
+        if (thiss.hasClass('TabScroll')) {
+            smoothScrollFunction(thiss, true);
+        } else {
+            smoothScrollFunction(thiss, false);
+        }
+    });
+    if (window.location.hash != '') {
+        var thiss = $('a[data-target="#' + window.location.hash.replace(/\#/g, '') + '-tab"]');
+        if (thiss.length > 0) {
+            smoothScrollFunction(thiss);
+        } else {
+            var thiss = $('a[data-target="' + window.location.hash.replace(/\#/g, '.') + '"]');
+            var data_hover = thiss.attr('data-hover');
+            if (data_hover != null) {
+                var target = data_hover.split(',')[0];
+                var new_class = data_hover.split(',')[1];
+                $(target).addClass(new_class);
+                $(target).mouseout(function () {
+                    $(target).removeClass(new_class);
+                });
+            }
+            smoothScrollFunction(thiss, false);
+        }
+    }
+    function smoothScrollFunction(thiss, tab = true) {
+        if (tab == true) {
+
+            var target = thiss.attr('data-target');
+            $('a[data-toggle="tab"]').each(function () {
+                $(this).removeClass('active show');
+            });
+            $(target).addClass('active show');
+            $('#myTabContent div').each(function () {
+                $(this).removeClass('active show');
+            });
+            $('div[aria-labelledby="' + target.replace(/\#/g, '').replace(/\./g, '') + '"]').addClass('active show');
+            $.smoothScroll({
+                scrollTarget: '#myTab',
+                offset: -150
+            });
+            return false;
+        } else {
+            $.smoothScroll({
+                scrollTarget: thiss.attr('data-target'),
+                offset: -150
+            });
+            var data_hover = thiss.attr('data-hover');
+            if (data_hover != null) {
+                var target = data_hover.split(',')[0];
+                var new_class = data_hover.split(',')[1];
+                $(target).addClass(new_class);
+                $(target).mouseout(function () {
+                    $(target).removeClass(new_class);
+                });
+            }
+        }
+    }
+
+
+
+
+
+    var header = $('.header_area'),
+      headerHeight = header.height(),
+      treshold = 0,
+      lastScroll = 0;
+
+    $(document).on('scroll', function (evt) {
+        var newScroll = $(document).scrollTop(),
+          diff = newScroll-lastScroll - 10;
+
+        // normalize treshold range
+        treshold = (treshold+diff>headerHeight) ? headerHeight : treshold+diff;
+        treshold = (treshold < 0) ? 0 : treshold + 10;
+
+        header.css('top', (-treshold)+'px');
+
+        lastScroll = newScroll;
+    });
+
+
+    $(document).ready(function () {
+
+
+
+
+        var wwidth = $(window).width();
+        if (wwidth < 575) {
+            var wheight = $(window).height();
+            var sheight = $('.search').height();
+            var height11 = sheight + 200;
+            $(".js-height-full").height(height11);
+        } else {
+            var wheight = $(window).height();
+            var sheight = $('.search').height();
+            var height1 = wheight - sheight;
+            var height = height1 + sheight;
+            $(".js-height-full").height(height);
+        }
+    });
+
+
+
+    $('#countRoomPackage').on('change', function (e) {
+
+        var roomCount = $("#countRoomPackage").val();
+        createRoomHotelPackage(roomCount);
+        $(".mypackage-rooms").find(".myroom-hotel-item").remove();
+        var code = createRoomHotelPackage(roomCount);
+        $(".mypackage-rooms").append(code);
+
+
+        var wwidth = $(window).width();
+        if (wwidth < 575) {
+            var wheight = $(window).height();
+            var sheight = $('.search').height();
+            var height11 = sheight + 200;
+            $(".js-height-full").height(height11);
+        } else {
+            var wheight = $(window).height();
+            var sheight = $('.search').height();
+            var height1 = wheight - sheight;
+            var height = height1 + sheight;
+            $(".js-height-full").height(height);
+        }
+    });
+
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    $('.top__user_menu').bind('click', function(e){
+        //as when we click inside the menu it bubbles up and closes the menu when it hits html we have to stop the propagation while its open
+        e.stopPropagation();
+
+    });
+
+
+    $('.main-navigation__button').click(function () {
+
+        $('.main-navigation__sub-menu').toggle();
+        $('.button-chevron').toggleClass('rotate');
+
+    });
+
+    $('body').click(function () {
+
+        $('.main-navigation__sub-menu').hide();
+        $('.button-chevron').removeClass('rotate');
+
+        $('.cbox-count-nafar').hide();
+        $(this).parents().find('.down-count-nafar').removeClass('fa-caret-up');
+    });
+    $('.btn-close').click(function () {
+        $('.cbox-count-nafar').hide();
+        $(this).parents().find('.down-count-nafar').removeClass('fa-caret-up');
+
+    })
+    $('.myhotels-rooms').on('click', '.close_room', function () {
+
+        $(this).parent().removeClass('active_p');
+
+    });
+
+    /* End select oneway toway */
+
+    function createRoomHotel(roomCount) {
+
+        var HtmlCode = "";
+        let i = $('.myroom-hotel-item').length +1;
+        let numberText = "اول";
+        let valuefirst;
+
+
+        if (i == 1) {
+            numberText = "اول";
+            valuefirst = "2"
+        } else if (i == 2) {
+            numberText = "دوم";
+            valuefirst = "1";
+
+        } else if (i == 3) {
+            numberText = "سوم";
+            valuefirst = "1";
+
+        } else if (i == 4) {
+            numberText = "چهارم";
+            valuefirst = "1";
+
+        }
+
+
+        if(i < 5){
+            HtmlCode +=
+              `<div class="myroom-hotel-item" data-roomNumber="${i}">
+             <div class="myroom-hotel-item-title">
+             <span class="close">
+             <i class="fal fa-trash-alt"></i>
+            </span>
+            اتاق  ${numberText}
+            </div><div class="myroom-hotel-item-info">
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>بزرگسال</h6>
+           (بزرگتر از ۱۲ سال)
+        <div><i class="addParent plus-nafar hotelroom-minus plus-hotelroom-bozorgsal fas fa-plus"></i>
+        <input readonly class="countParent"  min="0" value="${valuefirst}" max="5" type="number" name="adult${i}" id="adult${i}">
+        <i class="minusParent minus-nafar hotelroom-minus minus-hotelroom-bozorgsal fas fa-minus"></i>
+        </div>
+        </div>
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>کودک</h6>
+                                                    (کوچکتر از ۱۲ سال)
+        <div>
+        <i class="addChild plus-nafar hotelroom-minus plus-hotelroom-koodak fas fa-plus">
+        
+        </i><input readonly class="countChild" min="0" value="0" max="5" type="number" name="child${i}" id="child${i}">
+        <i class="minusChild minus-nafar hotelroom-minus minus-hotelroom-koodak fas fa-minus"></i>
+        </div>
+        </div><div class="tarikh-tavalods"></div>
+        </div>
+        </div>`;
+        }
+
+        return HtmlCode;
+    }
+
+    function createRoomHotelPackage(roomCount) {
+
+        var HtmlCode = "";
+        let i = $('.myroom-package-item').length +1;
+        let numberText = "اول";
+        let valuefirst;
+
+
+        if (i == 1) {
+            numberText = "اول";
+            valuefirst = "2"
+        } else if (i == 2) {
+            numberText = "دوم";
+            valuefirst = "1";
+
+        } else if (i == 3) {
+            numberText = "سوم";
+            valuefirst = "1";
+
+        } else if (i == 4) {
+            numberText = "چهارم";
+            valuefirst = "1";
+
+        }
+
+
+        if(i < 5){
+            HtmlCode +=
+              `<div class="myroom-package-item" data-roomNumber="${i}">
+             <div class="myroom-package-item-title">اتاق  ${numberText}
+             <span class="close">
+             <i class="fal fa-trash-alt"></i>
+            </span>
+            </div><div class="myroom-package-item-info">
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>بزرگسال</h6>
+           (بزرگتر از ۱۲ سال)
+        <div><i class="addParent_p plus-nafar hotelroom-minus plus-hotelroom-bozorgsal fas fa-plus"></i>
+        <input readonly class="countParent_p"  min="0" value="${valuefirst}" max="5" type="number" name="adultpackage${i}" id="adultpackage${i}">
+        <i class="minusParent_p minus-nafar hotelroom-minus minus-hotelroom-bozorgsal fas fa-minus"></i>
+        </div>
+        </div>
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>کودک</h6>
+                                                    (کوچکتر از ۱۲ سال)
+        <div>
+        <i class="addChild_p plus-nafar hotelroom-minus plus-hotelroom-koodak fas fa-plus">
+        
+        </i><input readonly class="countChild_p" min="0" value="0" max="5" type="number" name="childpackage${i}" id="childpackage${i}">
+        <i class="minusChild_p minus-nafar hotelroom-minus minus-hotelroom-koodak fas fa-minus"></i>
+        </div>
+        </div><div class="tarikh-tavalods"></div>
+        </div>
+        </div>`;
+        }
+
+        return HtmlCode;
+    }
+
+
+
+    function createBirthdayCalendar(inputNum, roomNumber) {
+        var i = 1;
+        var HtmlCode = "";
+        let numberTextChild = "سلام";
+        while (i <= inputNum) {
+            if (i == 1) {
+                numberTextChild = "اول";
+            } else if (i == 2) {
+                numberTextChild = "دوم";
+            } else if (i == 3) {
+                numberTextChild = "سوم";
+            } else if (i == 4) {
+                numberTextChild = "چهارم";
+            }
+            HtmlCode += '<div class="tarikh-tavalod-item">'
+              + '<span>سن کودک <i>' + numberTextChild + '</i></span>'
+              + '<select id="childAge' + roomNumber + i + '" name="childAge' + roomNumber + i + '">'
+              + '<option value="1">0 تا 1 سال</option>'
+              + '<option value="2">1 تا 2 سال</option>'
+              + '<option value="3">2 تا 3 سال</option>'
+              + '<option value="4">3 تا 4 سال</option>'
+              + '<option value="5">4 تا 5 سال</option>'
+              + '<option value="6">5 تا 6 سال</option>'
+              + '<option value="7">6 تا 7 سال</option>'
+              + '<option value="8">7 تا 8 سال</option>'
+              + '<option value="9">8 تا 9 سال</option>'
+              + '<option value="10">9 تا 10 سال</option>'
+              + '<option value="11">10 تا 11 سال</option>'
+              + '<option value="12">11 تا 12 سال</option>'
+              + '</select>'
+              + '</div>';
+            i++;
+        }
+
+        return HtmlCode;
+    };
+
+
+    $('.owl_tour_local').owlCarousel({
+        rtl:true,
+        loop:true,
+        margin:30,
+        nav:true,
+        navText: ["<i class='fas fa-chevron-right'></i>","<i class='fas fa-chevron-left'></i>"],
+        autoplay: true,
+        autoplayTimeout: 15000,
+        autoplaySpeed:5000,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2,
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
+
+
+
+
+    // var owl_stour = $('.owl_tour_local');
+    // owl_stour.owlCarousel({
+    //     rtl: true,
+    //     dots:false,
+    //     loop: false,
+    //     margin: 1,
+    //     nav:true,
+    //     autoplaySpeed:1000,
+    //     autoplay: false,
+    //     autoplayTimeout: 4000,
+    //     autoplayHoverPause: true,
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //             dots:true,
+    //             nav:false,
+    //         },
+    //         600: {
+    //             items: 2,
+    //         },
+    //         1000: {
+    //             items: 4,
+    //
+    //
+    //         }
+    //     }
+    // });
+
+
+
+    var owlair = $('#owl-air');
+    owlair.owlCarousel({
+        rtl: true,
+        dots:false,
+        loop: true,
+        margin: 20,
+        nav:false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplaySpeed:1000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 3,
+                dots:true,
+                nav:false,
+
+            },
+            600: {
+                items: 5,
+
+            },
+            1000: {
+                items: 7,
+
+                margin: 5
+            }
+        }
+    });
+    var owl_4 = $('.owl_4');
+    owl_4.owlCarousel({
+        rtl: true,
+        dots:false,
+        loop: true,
+        margin: 10,
+        navText: ["<i class='fas fa-chevron-right'></i>","<i class='fas fa-chevron-left'></i>"],
+        nav:true,
+        autoplaySpeed:1000,
+        autoplay: true,
+        autoplayTimeout: 4500,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav:false
+            },
+            600: {
+                items: 2,
+                dots:true,
+                nav:false
+            },
+            1000: {
+                items: 4,
+            }
+        }
+    });
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+
+    // hide #back-top first
+    $("#scroll-top").hide();
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#scroll-top').fadeIn();
+            } else {
+                $('#scroll-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#scroll-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+        });
+    });
+
+
+});
+
+// RPEPOLOMP END
+
+
+if($(window).width() > 576){
+
+    $('#flight-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/airline.jpg")')});
+    $('#hotel-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/hotel.jpg")')});
+    $('#tour-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/tour.jpg")')});
+    $('#train-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/train.jpg")')});
+    $('#bus-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/bus.jpg")')});
+    $('#fun-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/tafrih.jpg")')});
+    $('#car-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/car.jpg")')});
+    $('#visa-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/visa.jpg")')});
+    $('#gasht-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/gasht.jpg")')});
+    $('#insurance-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/insurance.jpg")')});
+    $('#package-tab').click(function () {$('.section_slider').css('background-image' , 'url("images/package.jpg")')});
+
+    $('a[data-target="#flight-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/airline.jpg")')});
+    $('a[data-target="#hotel-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/hotel.jpg")')});
+    $('a[data-target="#tour-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/tour.jpg")')});
+    $('a[data-target="#train-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/train.jpg")')});
+    $('a[data-target="#bus-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/bus.jpg")')});
+    $('a[data-target="#fun-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/tafrih.jpg")')});
+    $('a[data-target="#car-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/car.jpg")')});
+    $('a[data-target="#visa-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/visa.jpg")')});
+    $('a[data-target="#gasht-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/gasht.jpg")')});
+    $('a[data-target="#insurance-tab"]').click(function () {$('.section_slider').css('background-image' , 'url("images/insurance.jpg")')});
+
+
+}
+$('.lang ').bind('click', function(e){
+    //as when we click inside the menu it bubbles up and closes the menu when it hits html we have to stop the propagation while its open
+    e.stopPropagation();
+});
+
+$('body').click(function () {
+    $('.lang_ul').removeClass('active_lang');
+});
+
+$('.lang span').click(function () {
+    $('.lang_ul').toggleClass('active_lang');
+});
+
+$('.top__user_menu').bind('click', function(e){
+    e.stopPropagation();
+});
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+
+$('.box-of-count-nafar').bind('click', function(e){
+    //as when we click inside the menu it bubbles up and closes the menu when it hits html we have to stop the propagation while its open
+    e.stopPropagation();
+
+});
+$('.main-navigation__button').click(function () {
+
+    $('.main-navigation__sub-menu').toggle();
+    $('.button-chevron').toggleClass('rotate');
+
+});
+
+$('body').click(function () {
+
+    $('.main-navigation__sub-menu').hide();
+    $('.button-chevron').removeClass('rotate');
+
+    $('.cbox-count-nafar').hide();
+    $(this).parents().find('.down-count-nafar').removeClass('fa-caret-up');
+});
+$(document).ready(function () {
+    $('.top__user_menu').bind('click', function(e){
+        //as when we click inside the menu it bubbles up and closes the menu when it hits html we have to stop the propagation while its open
+        e.stopPropagation();
+
+    });
+
+
+    $('.FAQOWL').owlCarousel({
+        loop:true,
+        rtl:true,
+        navText: ["<i class='fas fa-chevron-right'></i>","<i class='fas fa-chevron-left'></i>"],
+        margin:0,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:3500,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+    $('.owl_ads').owlCarousel({
+        loop: true,
+        rtl: true,
+        margin: 10,
+        navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+        nav: false,
+        dots: true,
+        responsive: {0: {items: 1}, 600: {items: 1}, 1000: {items: 2}}
+    });
+
+
+
+});
+
+
+<!--select oneway toway-->
+
+
+
+
+/*Scripts Packages*/
+
+$('.mypackege-rooms').on('click','.btn_add_room_p', function (e) {
+    $('.mypackege-rooms .close').show();
+
+
+    let roomCount = parseInt($('.myroom-package-item').length) ;
+
+    let numberAdult = parseInt($('.number_adult_p').text() );
+    let number_room = parseInt($('.number_room_p').text() );
+    $('.number_adult_p').text(numberAdult + 1)
+    $('.number_room_p').text(number_room + 1)
+
+    let code = createRoomHotelPackage(roomCount);
+    $(".package_select_room").append(code);
+    if(roomCount ==3){
+        $(this).hide();
+    }
+
+
+
+});
+//hotel local
+
+
+$('.mypackege-rooms').on('click', '.myroom-package-item .close', function () {
+
+    let babyCountThis =$(this).parents('.myroom-package-item').find('.countChild_p').val();
+    let number_baby = $('.number_baby_p').text();
+    $('.number_baby_p').text(number_baby - babyCountThis );
+
+    let AdultCountThis =$(this).parents('.myroom-package-item').find('.countParent_p').val();
+    let number_adult = $('.number_adult_p').text();
+    $('.number_adult_p').text(number_adult - AdultCountThis );
+
+    $('.btn_add_room_p').show();
+
+    let roomNumber = $(this).parents(".myroom-package-item").data("roomnumber");
+    let roomCount = $(".myroom-package-item").length;
+
+    let number_room = parseInt($('.number_room_p').text());
+    $('.number_room_p').text(number_room - 1)
+
+
+    $(this).parents(".myroom-package-item").remove();
+    let countRoom = parseInt($('#countRoom').val()) - 1;
+    $("#countRoom option:selected").prop("selected", false);
+    $("#countRoom option[value=" + countRoom + "]").prop("selected", true);
+    let numberRoom = 1;
+    let numberText = "اول";
+    $('.myroom-package-item').each(function () {
+        $(this).data("roomnumber", numberRoom);
+        if (numberRoom == 1) {
+            numberText = "اول";
+        } else if (numberRoom == 2) {
+            numberText = "دوم";
+        } else if (numberRoom == 3) {
+            numberText = "سوم";
+        } else if (numberRoom == 4) {
+            numberText = "چهارم";
+        }
+        $(this).find('.myroom-package-item-title').html(' اتاق ' + numberText + '<span class="close"><i class="fal fa-trash-alt"></i></span>');
+        $(this).find(".myroom-package-item-info").find("input[name^='adult_p']").attr("name", "adult_p" + numberRoom);
+        $(this).find(".myroom-package-item-info").find("input[name^='adult_p']").attr("id", "adult_p" + numberRoom);
+        $(this).find(".myroom-package-item-info").find("input[name^='child_p']").attr("name", "child_p" + numberRoom);
+        $(this).find(".myroom-package-item-info").find("input[name^='child_p']").attr("id", "child_p" + numberRoom);
+        let numberChild = 1;
+        let inputNameSelectChildAge = $(this).find(".tarikh-tavalods .tarikh-tavalod-item");
+        inputNameSelectChildAge.each(function () {
+            $(this).find("select[name^='childAge']").attr("name", "childAge" + numberRoom + numberChild);
+            $(this).find("select[name^='childAge']").attr("id", "childAge" + numberRoom + numberChild);
+            numberChild++;
+        });
+        numberRoom++;
+    });
+    if(roomCount == 2){
+        $('.myroom-package-item-title .close').hide();
+    }
+
+
+});
+//hotel local
+$('.hotel_local-rooms').on('click', '.myroom-hotel_local-item .close', function () {
+
+    let babyCountThis =$(this).parents('.myroom-hotel_local-item').find('.countChild_hotel_local').val();
+    let number_baby = $('.number_baby_hotel_local').text();
+    $('.number_baby_hotel_local').text(number_baby - babyCountThis );
+
+    let AdultCountThis =$(this).parents('.myroom-hotel_local-item').find('.countParent_hotel_local').val();
+    let number_adult = $('.number_adult_hotel_local').text();
+    $('.number_adult_hotel_local').text(number_adult - AdultCountThis );
+
+    $('.btn_add_room_hotel_local').show();
+
+    let roomNumber = $(this).parents(".myroom-hotel_local-item").data("roomnumber");
+    let roomCount = $(".myroom-hotel_local-item").length;
+
+    let number_room = parseInt($('.number_room_hotel_local').text());
+    $('.number_room_hotel_local').text(number_room - 1)
+
+
+    $(this).parents(".myroom-hotel_local-item").remove();
+    let countRoom = parseInt($('#countRoom').val()) - 1;
+    $("#countRoom option:selected").prop("selected", false);
+    $("#countRoom option[value=" + countRoom + "]").prop("selected", true);
+    let numberRoom = 1;
+    let numberText = "اول";
+    $('.myroom-hotel_local-item').each(function () {
+        $(this).data("roomnumber", numberRoom);
+        if (numberRoom == 1) {
+            numberText = "اول";
+        } else if (numberRoom == 2) {
+            numberText = "دوم";
+        } else if (numberRoom == 3) {
+            numberText = "سوم";
+        } else if (numberRoom == 4) {
+            numberText = "چهارم";
+        }
+        $(this).find('.myroom-hotel_local-item-title').html(' اتاق ' + numberText + '<span class="close"><i class="fal fa-trash-alt"></i></span>');
+        $(this).find(".myroom-hotel_local-item-info").find("input[name^='adult_hotel_local']").attr("name", "adult_hotel_local" + numberRoom);
+        $(this).find(".myroom-hotel_local-item-info").find("input[name^='adult_hotel_local']").attr("id", "adult_hotel_local" + numberRoom);
+        $(this).find(".myroom-hotel_local-item-info").find("input[name^='child_hotel_local']").attr("name", "child_hotel_local" + numberRoom);
+        $(this).find(".myroom-hotel_local-item-info").find("input[name^='child_hotel_local']").attr("id", "child_hotel_local" + numberRoom);
+        let numberChild = 1;
+        let inputNameSelectChildAge = $(this).find(".tarikh-tavalods .tarikh-tavalod-item");
+        inputNameSelectChildAge.each(function () {
+            $(this).find("select[name^='childAge']").attr("name", "childAge" + numberRoom + numberChild);
+            $(this).find("select[name^='childAge']").attr("id", "childAge" + numberRoom + numberChild);
+            numberChild++;
+        });
+        numberRoom++;
+    });
+    if(roomCount == 2){
+        $('.myroom-hotel_local-item-title .close').hide();
+    }
+
+
+});
+
+$('.mypackege-rooms').on('click', 'i.addParent_p', function () {
+
+
+    var inputNum = $(this).siblings(".countParent_p").val();
+
+    if (inputNum < 7) {
+        inputNum++;
+        let numberAdult =parseInt( $('.number_adult_p').text());
+        let resultNumber = numberAdult + 1
+        $(this).siblings(".countParent_p").val(inputNum);
+        $('.number_adult_p').html('');
+        $('.number_adult_p').append(resultNumber);
+    }
+});
+//hotel local
+$('.hotel_local-rooms').on('click', 'i.addParent_hotel_local', function () {
+
+
+    var inputNum = $(this).siblings(".countParent_hotel_local").val();
+
+    if (inputNum < 7) {
+        inputNum++;
+        let numberAdult =parseInt( $('.number_adult_hotel_local').text());
+        let resultNumber = numberAdult + 1
+        $(this).siblings(".countParent_hotel_local").val(inputNum);
+        $('.number_adult_hotel_local').html('');
+        $('.number_adult_hotel_local').append(resultNumber);
+    }
+});
+
+$('.mypackege-rooms').on('click', 'i.minusParent_p', function () {
+
+    let data_roomnumber = $(this).parents('.myroom-package-item').attr('data-roomnumber');
+    let ThiscountParent =  $(this).parents('.myroom-package-item').find('.countParent_p').val();
+
+
+    var inputNum = $(this).siblings(".countParent_p").val();
+
+    if (inputNum > 1) {
+        inputNum--;
+        let numberAdult =parseInt( $('.number_adult_p').text());
+        let resultNumber = numberAdult - 1
+        $(this).siblings(".countParent_p").val(inputNum);
+        $('.number_adult_p').html('');
+        $('.number_adult_p').append(resultNumber);
+    }
+
+
+
+});
+
+//hotel local
+$('.hotel_local-rooms').on('click', 'i.minusParent_hotel_local', function () {
+
+    let data_roomnumber = $(this).parents('.myroom-hotel_local-item').attr('data-roomnumber');
+    let ThiscountParent =  $(this).parents('.myroom-hotel_local-item').find('.countParent_hotel_local').val();
+
+
+    var inputNum = $(this).siblings(".countParent_hotel_local").val();
+
+    if (inputNum > 1) {
+        inputNum--;
+        let numberAdult =parseInt( $('.number_adult_hotel_local').text());
+        let resultNumber = numberAdult - 1
+        $(this).siblings(".countParent_hotel_local").val(inputNum);
+        $('.number_adult_hotel_local').html('');
+        $('.number_adult_hotel_local').append(resultNumber);
+    }
+
+
+
+});
+
+$('.mypackege-rooms').on('click', 'i.addChild_p', function () {
+
+    var inputNum = $(this).siblings(".countChild_p").val();
+    inputNum++;
+    if (inputNum < 5) {
+        let numberBaby =parseInt( $('.number_baby_p').text());
+        let numberBabyThis =parseInt($(this).parents().find('.countChild_p').val()) + 1;
+
+        let resultNumber = numberBaby + 1
+
+        $(this).siblings(".countChild_p").val(inputNum);
+        $('.number_baby_p').html('');
+        $('.number_baby_p').append(resultNumber);
+
+        $(this).parents(".child-number").siblings(".child-birthday-box").find(".childAge-button").remove();
+
+        let roomNumber = $(this).parents(".myroom-package-item").data("roomnumber");
+
+        var htmlBox = createBirthdayCalendar(inputNum, roomNumber);
+
+        $(this).parents(".myroom-package-item-info").find(".tarikh-tavalods").html(htmlBox);
+    }
+});
+//hotel local
+$('.hotel_local-rooms').on('click', 'i.addChild_hotel_local', function () {
+
+    var inputNum = $(this).siblings(".countChild_hotel_local").val();
+    inputNum++;
+    if (inputNum < 5) {
+        let numberBaby =parseInt( $('.number_baby_hotel_local').text());
+        let numberBabyThis =parseInt($(this).parents().find('.countChild_hotel_local').val()) + 1;
+
+        let resultNumber = numberBaby + 1
+
+        $(this).siblings(".countChild_hotel_local").val(inputNum);
+        $('.number_baby_hotel_local').html('');
+        $('.number_baby_hotel_local').append(resultNumber);
+
+        $(this).parents(".child-number").siblings(".child-birthday-box").find(".childAge-button").remove();
+
+        let roomNumber = $(this).parents(".myroom-hotel_local-item").data("roomnumber");
+
+        var htmlBox = createBirthdayCalendar(inputNum, roomNumber);
+
+        $(this).parents(".myroom-hotel_local-item-info").find(".tarikh-tavalods").html(htmlBox);
+    }
+});
+
+$('.mypackege-rooms').on('click', 'i.minusChild_p', function () {
+
+    var inputNum = $(this).siblings(".countChild_p").val();
+    $(this).parents(".child-number").siblings(".child-birthday-box").find(".childAge-button").remove();
+
+    if (inputNum != 0) {
+        let numberBaby =parseInt( $('.number_baby_p').text());
+        let numberBabyThis =parseInt($(this).parents().find('.countChild_p').val()) + 1;
+
+        let resultNumber = numberBaby - 1
+
+        inputNum--;
+        $(this).siblings(".countChild_p").val(inputNum);
+        $('.number_baby_p').html('');
+        $('.number_baby_p').append(resultNumber);
+
+        let roomNumber = $(this).parents(".myroom-packege-item").data("roomnumber");
+
+        var htmlBox = createBirthdayCalendar(inputNum, roomNumber);
+
+        $(this).parents(".myroom-package-item-info").find(".tarikh-tavalods").html(htmlBox);
+
+    } else {
+        $(this).siblings(".countChild_p").val('0');
+
+    }
+});
+//hotel local
+$('.hotel_local-rooms').on('click', 'i.minusChild_hotel_local', function () {
+
+    var inputNum = $(this).siblings(".countChild_hotel_local").val();
+    $(this).parents(".child-number").siblings(".child-birthday-box").find(".childAge-button").remove();
+
+    if (inputNum != 0) {
+        let numberBaby =parseInt( $('.number_baby_hotel_local').text());
+        let numberBabyThis =parseInt($(this).parents().find('.countChild_hotel_local').val()) + 1;
+
+        let resultNumber = numberBaby - 1
+
+        inputNum--;
+        $(this).siblings(".countChild_hotel_local").val(inputNum);
+        $('.number_baby_hotel_local').html('');
+        $('.number_baby_hotel_local').append(resultNumber);
+
+        let roomNumber = $(this).parents(".myroom-hotel_local-item").data("roomnumber");
+
+        var htmlBox = createBirthdayCalendar(inputNum, roomNumber);
+
+        $(this).parents(".myroom-hotel_local-item-info").find(".tarikh-tavalods").html(htmlBox);
+
+    } else {
+        $(this).siblings(".countChild_hotel_local").val('0');
+
+    }
+});
+
+$('.mypackege-rooms').on('click', '.close_room', function () {
+
+    $(this).parent().removeClass('active_p');
+
+
+});
+//hotel local
+$('.internal-my-hotels-rooms-js').on('click', '.close_room', function () {
+
+    $(this).parent().parent().removeClass('active_p');
+
+
+});
+$('.international-my-hotels-rooms-js').on('click', '.close_room', function () {
+
+    $(this).parent().parent().removeClass('active_p');
+
+});
+
+/* End select oneway toway */
+
+function createRoomHotel(roomCount) {
+
+    var HtmlCode = "";
+    let i = $('.myroom-hotel-item').length +1;
+    let numberText = "اول";
+    let valuefirst;
+
+
+    if (i == 1) {
+        numberText = "اول";
+        valuefirst = "2"
+    } else if (i == 2) {
+        numberText = "دوم";
+        valuefirst = "1";
+
+    } else if (i == 3) {
+        numberText = "سوم";
+        valuefirst = "1";
+
+    } else if (i == 4) {
+        numberText = "چهارم";
+        valuefirst = "1";
+
+    }
+
+
+    if(i < 5){
+        HtmlCode +=
+          `<div class="myroom-hotel-item" data-roomNumber="${i}">
+             <div class="myroom-hotel-item-title">
+             <span class="close">
+             <i class="fal fa-trash-alt"></i>
+            </span>
+            اتاق  ${numberText}
+            </div><div class="myroom-hotel-item-info">
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>بزرگسال</h6>
+           (بزرگتر از ۱۲ سال)
+        <div><i class="addParent plus-nafar hotelroom-minus plus-hotelroom-bozorgsal fas fa-plus"></i>
+        <input readonly class="countParent"  min="0" value="${valuefirst}" max="5" type="number" name="adult${i}" id="adult${i}">
+        <i class="minusParent minus-nafar hotelroom-minus minus-hotelroom-bozorgsal fas fa-minus"></i>
+        </div>
+        </div>
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>کودک</h6>
+                                                    (کوچکتر از ۱۲ سال)
+        <div>
+        <i class="addChild plus-nafar hotelroom-minus plus-hotelroom-koodak fas fa-plus">
+        
+        </i><input readonly class="countChild" min="0" value="0" max="5" type="number" name="child${i}" id="child${i}">
+        <i class="minusChild minus-nafar hotelroom-minus minus-hotelroom-koodak fas fa-minus"></i>
+        </div>
+        </div><div class="tarikh-tavalods"></div>
+        </div>
+        </div>`;
+    }
+
+    return HtmlCode;
+}
+
+function createRoomHotelPackage(roomCount) {
+
+    var HtmlCode = "";
+    let i = $('.myroom-package-item').length +1;
+    let numberText = "اول";
+    let valuefirst;
+
+
+    if (i == 1) {
+        numberText = "اول";
+        valuefirst = "2"
+    } else if (i == 2) {
+        numberText = "دوم";
+        valuefirst = "1";
+
+    } else if (i == 3) {
+        numberText = "سوم";
+        valuefirst = "1";
+
+    } else if (i == 4) {
+        numberText = "چهارم";
+        valuefirst = "1";
+
+    }
+
+
+    if(i < 5){
+        HtmlCode +=
+          `<div class="myroom-package-item" data-roomNumber="${i}">
+             <div class="myroom-package-item-title">اتاق  ${numberText}
+             <span class="close">
+             <i class="fal fa-trash-alt"></i>
+            </span>
+            </div><div class="myroom-package-item-info">
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>بزرگسال</h6>
+           (بزرگتر از ۱۲ سال)
+        <div><i class="addParent_p plus-nafar hotelroom-minus plus-hotelroom-bozorgsal fas fa-plus"></i>
+        <input readonly class="countParent_p"  min="0" value="${valuefirst}" max="5" type="number" name="adultpackage${i}" id="adultpackage${i}">
+        <i class="minusParent_p minus-nafar hotelroom-minus minus-hotelroom-bozorgsal fas fa-minus"></i>
+        </div>
+        </div>
+        <div class="myroom-hotel-item-tedad my-room-hotel-bozorgsal">
+       <h6>کودک</h6>
+                                                    (کوچکتر از ۱۲ سال)
+        <div>
+        <i class="addChild_p plus-nafar hotelroom-minus plus-hotelroom-koodak fas fa-plus">
+        
+        </i><input readonly class="countChild_p" min="0" value="0" max="5" type="number" name="childpackage${i}" id="childpackage${i}">
+        <i class="minusChild_p minus-nafar hotelroom-minus minus-hotelroom-koodak fas fa-minus"></i>
+        </div>
+        </div><div class="tarikh-tavalods"></div>
+        </div>
+        </div>`;
+    }
+
+    return HtmlCode;
+}
+
+
+
+
+
+function changeText(text, none) {
+    $('#text_search').text(text);
+    if (none == 'null') {
+        $('#titr_searchBox em').text('');
+    } else {
+        $('#titr_searchBox em').text('Ø¨Ù„ÛŒØ·');
+    }
+}
+
+
+let percentage = 20;
+let NumberOfInstallments = 4;
+function plus_box_percentage(e){
+    if (percentage < 100 ){
+        e.currentTarget.parentNode.querySelector('span').innerText = percentage + 10 + '%';
+        percentage = percentage + 10;
+    }
+}
+function minus_box_percentage(e){
+    if (percentage > 20 ){
+        e.currentTarget.parentNode.querySelector('span').innerText = percentage - 10 + '%';
+        percentage = percentage - 10;
+    }
+}
+function plus_box_NumberOfInstallments(e){
+    if (NumberOfInstallments < 12 ) {
+        e.currentTarget.parentNode.querySelector('span').innerText = NumberOfInstallments + 1;
+        NumberOfInstallments = NumberOfInstallments + 1;
+    }
+}
+function minus_box_NumberOfInstallments(e){
+    if (NumberOfInstallments > 4 ) {
+        e.currentTarget.parentNode.querySelector('span').innerText = NumberOfInstallments - 1;
+        NumberOfInstallments = NumberOfInstallments - 1;
+    }
+}
+function AdvancedInstallmentCalculatorBtn(){
+    $(".AdvancedInstallmentCalculatorBox").toggle();
+    $(".AdvancedInstallmentCalculatorBtn__open").toggle();
+    $(".AdvancedInstallmentCalculatorBtn__close").toggle();
+    $("#AdvancedInstallmentCalculatorBox_response_hide").hide();
+    $("#AdvancedInstallmentCalculatorBox_response_hide_error").hide();
+
+}
+
+function formatPrice() {
+    let priceInput = document.getElementById('priceInput');
+    let price = priceInput.value.replace(/\D/g, '');
+    if (!isNaN(price)) {
+        let formattedPrice = price.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        priceInput.value = formattedPrice;
+    }
+}
+$(document).ready(function () {
+    $(".anAmount_btn").click(() => {
+        $(".percentage").hide()
+        $(".anAmount").show()
+        $(".anAmount_btn").addClass("active")
+        $(".percentage_btn").removeClass("active")
+    })
+    $(".percentage_btn").click(() => {
+        $(".percentage").show()
+        $(".anAmount").hide()
+        $(".percentage_btn").addClass("active")
+        $(".anAmount_btn").removeClass("active")
+        $('#anAmount_tour').val('');
+
+
+    })
+    $('.internal-close-room-js').on('click', function () {
+        $(".internal-my-hotels-rooms-js").removeClass('active_p');
+    });
+    // $('.box-of-count-passenger-boxes-js,.div_btn').on('click', function(e) {
+    //     $('.cbox-count-passenger-js').toggle()
+    //     $(this).parents().find('.down-count-passenger').toggleClass('fa-caret-up')
+    //     e.stopPropagation()
+    // })
+
+    $('[data-rangeslider]').rangeslider({
+        polyfill:false,
+        rangeClass:'rangeslider',
+        disabledClass:'rangeslider--disabled',
+        activeClass:'rangeslider--active',
+        horizontalClass:'rangeslider--horizontal',
+        verticalClass:'rangeslider--vertical',
+        fillClass:'rangeslider__fill',
+        handleClass:'rangeslider__handle',
+        onSlide:function(position, value) {
+            console.log("onSlide" , position , value);
+            $(".div-rangeslider > h6").text(value)
+        }
+    });
+    $('[data-rangeslider2]').rangeslider({
+        polyfill:false,
+        rangeClass:'rangeslider',
+        disabledClass:'rangeslider--disabled',
+        activeClass:'rangeslider--active',
+        horizontalClass:'rangeslider--horizontal',
+        verticalClass:'rangeslider--vertical',
+        fillClass:'rangeslider__fill',
+        handleClass:'rangeslider__handle',
+        onSlide:function(position, value) {
+            console.log("onSlide" , position , value)
+            $(".div-rangeslider2 > h6").text(value)
+        }
+    });
+
+    $('.owl-tour').owlCarousel({
+        loop:true,
+        rtl:true,
+        margin:30,
+        navText: ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M166.5 424.5l-143.1-152c-4.375-4.625-6.562-10.56-6.562-16.5c0-5.938 2.188-11.88 6.562-16.5l143.1-152c9.125-9.625 24.31-10.03 33.93-.9375c9.688 9.125 10.03 24.38 .9375 33.94l-128.4 135.5l128.4 135.5c9.094 9.562 8.75 24.75-.9375 33.94C190.9 434.5 175.7 434.1 166.5 424.5z"/></svg>','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M89.45 87.5l143.1 152c4.375 4.625 6.562 10.56 6.562 16.5c0 5.937-2.188 11.87-6.562 16.5l-143.1 152C80.33 434.1 65.14 434.5 55.52 425.4c-9.688-9.125-10.03-24.38-.9375-33.94l128.4-135.5l-128.4-135.5C45.49 110.9 45.83 95.75 55.52 86.56C65.14 77.47 80.33 77.87 89.45 87.5z"/></svg>'],
+        nav:true,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:3500,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            992:{
+                items:2
+            },
+            1000:{
+                items:2
+            },
+            1200:{
+                items:3
+            }
+        },
+    });
+    $('.owl-custom').owlCarousel({
+        loop:false,
+        rtl:true,
+        margin:30,
+        navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 512\"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d=\"M166.5 424.5l-143.1-152c-4.375-4.625-6.562-10.56-6.562-16.5c0-5.938 2.188-11.88 6.562-16.5l143.1-152c9.125-9.625 24.31-10.03 33.93-.9375c9.688 9.125 10.03 24.38 .9375 33.94l-128.4 135.5l128.4 135.5c9.094 9.562 8.75 24.75-.9375 33.94C190.9 434.5 175.7 434.1 166.5 424.5z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 512\"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d=\"M89.45 87.5l143.1 152c4.375 4.625 6.562 10.56 6.562 16.5c0 5.937-2.188 11.87-6.562 16.5l-143.1 152C80.33 434.1 65.14 434.5 55.52 425.4c-9.688-9.125-10.03-24.38-.9375-33.94l128.4-135.5l-128.4-135.5C45.49 110.9 45.83 95.75 55.52 86.56C65.14 77.47 80.33 77.87 89.45 87.5z\"/></svg>"],
+        nav:false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:3500,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            992:{
+                items:2
+            },
+            1000:{
+                items:2
+            },
+            1200:{
+                items:4
+            }
+        },
+    });
+});
+
+
+//programmer
+$(document).ready(function () {
+    setTimeout(function () {
+        getInfoCalculator();
+    }, 100);
+});
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+function getInfoCalculator() {
+    var installments = Number($('#installments').val());  // تعداد اقساط
+    var installmentsPlus = Number(installments + 1);   // تعدا اقساط به اضافه یک
+    var initialPayment = $('#initial_payment').val();   // درصد پیش پرداخت
+    var price = $('#price').val();  // قیمت بدون میلیون
+    var priceAll = Number(price*Math.pow(10,6)); //  قیمت برحسب میلیون
+    var initialPaymentPrice = priceAll*(initialPayment/100);  // محاسبه مبلغ پیش پرداخت
+    var priceWithOutInitial = ((priceAll-initialPaymentPrice)/installments)+(((priceAll-initialPaymentPrice)*installmentsPlus)/100);
+    var amountEachInstallmentWithSoud = (priceWithOutInitial*installments)+initialPaymentPrice;
+    $('#result_calculate').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش پرداخت
+    $('#price_all').html(numberWithCommas(Math.round(amountEachInstallmentWithSoud))); // قیمت کل
+    $('#amount_each_installment').html(numberWithCommas(Math.round(priceWithOutInitial))); // محاسبه هر قسط
+}
+
+function Main_AdvancedInstallmentCalculatorBtn(){
+    var priceAll = Number((document.getElementById("priceInput").value).replace(/\D+/g, ""));
+
+    // alert(priceAll);
+    if(priceAll == ""){
+        $("#AdvancedInstallmentCalculatorBox_response_hide").hide();
+        $("#error_show_price").show();
+        $("#error_show_price").html(useXmltag('PleaseEnterTourPrice'));
+    }else if(priceAll < 2000000){
+        $("#AdvancedInstallmentCalculatorBox_response_hide").hide();
+        $("#error_show_price").show();
+        $("#error_show_price").html(useXmltag('MinimumAmountDivided'));
+    }else {
+        $("#AdvancedInstallmentCalculatorBox_response_hide").show();
+        $("#error_show_price").hide();
+        var anAmount_tour = $('#anAmount_tour').val();
+        if(anAmount_tour==''){
+            var persent_discount = document.getElementById("persent_discount").innerText; // دریافت درصد مثلا 20%
+            var initialPayment = Number(persent_discount.slice(0, 2)); // گرفتن عبارت %
+            var installments = Number(document.getElementById("number_installments").innerText);
+            var installmentsPlus = Number(installments + 1);   // تعدا اقساط به اضافه یک
+            var initialPaymentPrice = priceAll*(initialPayment/100);  // محاسبه مبلغ پیش پرداخت
+            var priceWithOutInitial = ((priceAll-initialPaymentPrice)/installments)+(((priceAll-initialPaymentPrice)*installmentsPlus)/100);
+            var amountEachInstallmentWithSoud = (priceWithOutInitial*installments)+initialPaymentPrice;
+            $('#result_calculater').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش پرداخت
+            $('#price_all_calculater').html(numberWithCommas(Math.round(amountEachInstallmentWithSoud))); // قیمت کل
+            $('#amount_each_installment_calculater').html(numberWithCommas(Math.round(priceWithOutInitial))); // مبلغ هر قسط
+        }else{
+            var installments = Number(document.getElementById("number_installments").innerText);
+            var installmentsPlus = Number(installments + 1);   // تعدا اقساط به اضافه یک
+            var initialPaymentPrice = Number(anAmount_tour);  // محاسبه مبلغ پیش پرداخت
+            var priceWithOutInitial = ((priceAll-initialPaymentPrice)/installments)+(((priceAll-initialPaymentPrice)*installmentsPlus)/100);
+            var amountEachInstallmentWithSoud = (priceWithOutInitial*installments)+initialPaymentPrice;
+            $('#result_calculater').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش پرداخت
+            $('#price_all_calculater').html(numberWithCommas(Math.round(amountEachInstallmentWithSoud))); // قیمت کل
+            $('#amount_each_installment_calculater').html(numberWithCommas(Math.round(priceWithOutInitial))); // مبلغ هر قسط
+        }
+    }
+    // alert(totalMoney);
+}
+
+
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        const hash = window.location.hash;
+        if (hash && document.querySelector(hash)) {
+            document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
+        }
+    }, 600); // می‌توانید مقدار تأخیر را در صورت نیاز تنظیم کنید
+});
+
+
+// کد برای انتخاب نفر در بیمه
+//----------------------start passenger Count js-----------------------------//
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggleBime = document.querySelector('.dropdown-toggle-insurance');
+    const dropdownMenu = document.querySelector('.dropdown-menu-insurance');
+    const increaseButtons = document.querySelectorAll('.increase');
+    const decreaseButtons = document.querySelectorAll('.decrease');
+
+    function updateTotalPassengers() {
+        const counts = document.querySelectorAll('.counter-insurance span');
+        let total = 0;
+        counts.forEach((count ,index) => {
+            const countValue = parseInt(count.textContent);
+            total += countValue;
+        });
+        if(dropdownToggleBime != null) {
+            if (total > 0 ) {
+                dropdownToggleBime.textContent = total + ' مسافر';
+            } else {
+                dropdownToggleBime.textContent = 'تعداد مسافر';
+            }
+        }
+        $('#passengers-count-js').val(total);
+    }
+
+    if (dropdownToggleBime != null) {
+        // باز و بسته کردن منو با کلیک روی دکمه
+        dropdownToggleBime.addEventListener('click', function(event) {
+            event.stopPropagation(); // جلوگیری از انتشار رویداد به body
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // بستن منو با کلیک خارج از آن
+        document.addEventListener('click', function(event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownToggleBime.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    }
+
+
+    increaseButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const countSpan = this.parentElement.querySelector('span');
+            let group = this.getAttribute('data-age')
+            let count = parseInt(countSpan.textContent);
+            countSpan.textContent = count + 1;
+            updateTotalPassengers();
+            const newInput = createAgeInput(index + '-' + count , group);
+            this.parentElement.parentElement.appendChild(newInput);
+        });
+    });
+
+    decreaseButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const countSpan = this.parentElement.querySelector('span');
+            let count = parseInt(countSpan.textContent);
+            if (count > 0) {
+                countSpan.textContent = count - 1;
+                updateTotalPassengers();
+                const inputId = 'txt_birth_insurance' + index + '-' + (count - 1);
+                const inputToRemove = document.getElementById(inputId);
+                if (inputToRemove) {
+                    inputToRemove.remove();
+                }
+            }
+        });
+    });
+
+    updateTotalPassengers();
+});
+
+function createAgeInput(index , ageGroup) {
+    console.log('ageGroup' ,  ageGroup)
+    const ageValue = generateBirthDate(ageGroup); // Generate random age between 18 and 60
+    const input = document.createElement('input');
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('class', 'form-control passengers-age-js shamsiBirthdayCalendar');
+    input.setAttribute('id', 'txt_birth_insurance' + index);
+    input.setAttribute('name', 'txt_birth_insurance' + index);
+    input.setAttribute('type', 'hidden');
+    input.setAttribute('value', ageValue);
+    return input;
+}
+
+function generateBirthDate(ageGroup){
+
+    const today = new Date(); // Get current date
+    const currentYearShamsi = today.getFullYear() - 621; // Convert Gregorian to Shamsi approximately
+
+    let minYear, maxYear;
+
+    if (ageGroup === "0-12") {
+        minYear = currentYearShamsi - 12; // Max 12 years old
+        maxYear = currentYearShamsi;      // Min 0 years old
+    } else if (ageGroup === "13-64") {
+        minYear = currentYearShamsi - 64;
+        maxYear = currentYearShamsi - 13;
+    } else if (ageGroup === "65-70") {
+        minYear = currentYearShamsi - 70; // Max 70 years old
+        maxYear = currentYearShamsi - 65; // Min 65 years old
+    } else if (ageGroup === "71-75") {
+        minYear = currentYearShamsi - 75; // Max 75 years old
+        maxYear = currentYearShamsi - 71; // Min 71 years old
+    } else if (ageGroup === "76-85") {
+        minYear = currentYearShamsi - 85; // Max 85 years old
+        maxYear = currentYearShamsi - 76; // Min 76 years old
+    } else if (ageGroup === "+81") {
+        minYear = currentYearShamsi - 100; // Assume max age 100
+        maxYear = currentYearShamsi - 81;  // Min 81 years old
+    } else {
+        throw new Error("Invalid age group");
+    }
+
+    const year = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear; // Random year within range
+    const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, '0'); // Random month 01-12
+    const day = String(Math.floor(Math.random() * 29) + 1).padStart(2, '0'); // Random day 01-29
+
+    return `${year}-${month}-${day}`; // Format: YYYY-MM-DD
+}
+
+//----------------------end passenger Count js-----------------------------//
+
+$(".custom-date").datepicker({
+    beforeShow: function (input) {
+        setTimeout(() => {
+            $(".ui-datepicker")
+               .addClass("datepicker--convert")
+               .attr("data-owner", input.id);
+        }, 0);
+    },
+    onClose: function () {
+        $(".ui-datepicker")
+           .removeClass("datepicker--convert")
+           .removeAttr("data-owner");
+    }
+});
+
+
+
+$('.owl-tour-arshida').owlCarousel({
+    rtl:true,
+    loop:true,
+    margin:25,
+    nav:false,
+    navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M505 273c9.4-9.4 9.4-24.6 0-33.9L369 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l95 95L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-95 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M7 239c-9.4 9.4-9.4 24.6 0 33.9L143 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-95-95L488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24L81.9 232l95-95c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 239z\"/></svg>"],
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed:1000,
+    dots:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:3
+        },
+        1200:{
+            items:4
+        }
+    }
+});

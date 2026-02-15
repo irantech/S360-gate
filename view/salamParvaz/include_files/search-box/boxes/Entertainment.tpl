@@ -11,7 +11,7 @@
  <div class="col-md-12 col-12">
   <div class="row">
    <form data-action="https://s360online.iran-tech.com/" class="d_contents" method="post"
-         name="submit_tafrih_form" id="submit_tafrih_form">
+         name="submit_tafrih_form" id="submit_tafrih_form" target="_blank">
     {include file="./sections/entertainment/country_destination.tpl"}
     {include file="./sections/entertainment/city_destination.tpl"}
     {include file="./sections/entertainment/category_entertainment.tpl"}

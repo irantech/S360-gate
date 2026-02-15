@@ -32,7 +32,7 @@ function getArrivalCitiesTour(type, obj) {
    let like_category = $(`.${type}#like_category`).val()
    let method = "getTourCities";
    if(type == 'ziaraty') {
-       method = "getZiaratyTourCity";
+      method = "getZiaratyTourCity";
    }
    $.ajax({
       type: "POST",
@@ -56,16 +56,16 @@ function getArrivalCitiesTour(type, obj) {
                let option_text = ''
                if(lang == 'fa') {
                   option_text =
-                    obj_arrival[key]["name"] == ""
-                      ? `${obj_arrival[key]["name_en"]}`
-                      : `${obj_arrival[key]["name"]}`
+                      obj_arrival[key]["name"] == ""
+                          ? `${obj_arrival[key]["name_en"]}`
+                          : `${obj_arrival[key]["name"]}`
                }else{
                   option_text = `${obj_arrival[key]["name_en"]}`
                }
 
 
                let option_value = `${obj_arrival[key]["id"]}`
-               let new_option = `<option value='${option_value}'>${option_text}</option>`
+               let new_option = `<option value='${option_text}'>${option_text}</option>`
                destination.append(new_option).trigger("open")
             })
          }
@@ -142,48 +142,51 @@ function getDestinationCityTour(type, obj) {
       },
    })
 }
-function searchInternalTour(is_new_tab = false) {
+function searchInternalTour() {
+   const form = document.getElementById('gdsTourLocal');
+   const is_new_tab = form.target === '_blank';
+
    let internal_origin_tour = $(".internal-origin-tour-js")
    let internal_destination_tour = $(".internal-destination-tour-js")
    let internal_date_travel_tour = $(".internal-date-travel-tour-js")
-
    console.log('internal_date_travel_tour' , internal_date_travel_tour.val())
 
    checkSearchFields(
-      internal_origin_tour,
-      internal_destination_tour,
-      internal_date_travel_tour
+       internal_origin_tour,
+       internal_destination_tour,
+       internal_date_travel_tour
    )
 
    internal_origin_tour = internal_origin_tour.val()
    internal_destination_tour = internal_destination_tour.val()
    internal_date_travel_tour = internal_date_travel_tour.val()
-
-   let url = `${amadeusPathByLang}resultTourLocal/1-${internal_origin_tour}/1-${internal_destination_tour}/${internal_date_travel_tour}/all`
+   // let url = `${amadeusPathByLang}resultTourLocal/1-${internal_origin_tour}/1-${internal_destination_tour}/${internal_date_travel_tour}/all`
+   let url = `${amadeusPathByLang}tours/تور-های-${internal_destination_tour.replace(' ','')}?origin=1-${internal_origin_tour}&date=${internal_date_travel_tour}&type=all`
    openLink(url, is_new_tab)
 }
-function searchInternationalTour(is_new_tab = false) {
+function searchInternationalTour() {
+   const form = document.getElementById('gdsPortalLocal');
+   const is_new_tab = form.target === '_blank';
    let international_tour = $(".international-tour-origin-city-js")
    let international_destination_tour = $(".international-destination-tour-js")
    let international_destination_city_tour = $(".international-destination-city-tour-js")
    let internal_date_travel_tour = $(".international-date-travel-tour-js")
 
    checkSearchFields(
-      international_tour,
-      international_destination_tour,
-      international_destination_city_tour,
-      internal_date_travel_tour
+       international_tour,
+       international_destination_tour,
+       international_destination_city_tour,
+       internal_date_travel_tour
    )
 
    international_tour = international_tour.val()
    international_destination_tour = international_destination_tour.val()
    international_destination_city_tour =
-      international_destination_city_tour.val()
+       international_destination_city_tour.val()
    internal_date_travel_tour = internal_date_travel_tour.val()
 
    let url = `${amadeusPathByLang}resultTourLocal/1-${international_tour}/${international_destination_tour}-${international_destination_city_tour}/${internal_date_travel_tour}/all`
    // let url = `${amadeusPathByLang}tours/تور-های-${international_tour.replace(' ','')}?origin=${international_destination_tour}-${international_destination_city_tour}&date=${internal_date_travel_tour}&type=all`
-   console.log(url)
 
    openLink(url, is_new_tab)
 }
@@ -193,21 +196,21 @@ function searchZiaratiTour(is_new_tab = false) {
    let ziaraty_tour = $(".ziaraty-tour-origin-city-js")
    let ziaraty_destination_tour = $(".ziaraty-destination-tour-js")
    let ziaraty_destination_city_tour = $(
-     ".ziaraty-destination-city-tour-js"
+       ".ziaraty-destination-city-tour-js"
    )
    let ziaraty_date_travel_tour = $(".ziaratiy-date-travel-tour-js")
 
    checkSearchFields(
-     ziaraty_tour,
-     ziaraty_destination_tour,
-     ziaraty_destination_city_tour,
-     ziaraty_date_travel_tour
+       ziaraty_tour,
+       ziaraty_destination_tour,
+       ziaraty_destination_city_tour,
+       ziaraty_date_travel_tour
    )
 
    ziaraty_tour = ziaraty_tour.val()
    ziaraty_destination_tour = ziaraty_destination_tour.val()
    ziaraty_destination_city_tour =
-     ziaraty_destination_city_tour.val()
+       ziaraty_destination_city_tour.val()
    ziaraty_date_travel_tour = ziaraty_date_travel_tour.val()
 
    let url = `${amadeusPathByLang}resultTourLocal/1-${ziaraty_tour}/${ziaraty_destination_tour}-${ziaraty_destination_city_tour}/${ziaraty_date_travel_tour}/5`

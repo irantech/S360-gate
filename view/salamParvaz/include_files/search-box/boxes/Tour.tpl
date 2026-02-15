@@ -30,7 +30,7 @@
    <div class="row">
     <form data-action="https://s360online.iran-tech.com/" class="d_contents"
           method="post"
-          name="gdsTourLocal" id="gdsTourLocal" target="_blank">
+          name="gdsTourLocal" id="gdsTourLocal" target="_blank" data-target="_blank">
      {include file="./sections/tour/internal/origin_city_tour.tpl"}
      {include file="./sections/tour/internal/destination_city_tour.tpl"}
      {include file="./sections/tour/internal/date_teravel.tpl"}
@@ -48,7 +48,7 @@
   <div class="col-md-12 col-12">
    <div class="row  ">
     <form data-action="https://s360online.iran-tech.com/" method="post" data-target="_self"
-          class="d_contents" id="package_form" name="package_form">
+          class="d_contents" id="package_form" name="package_form" >
 
      {include file="./sections/package/origin_search_box.tpl"}
      {include file="./sections/package/destination_search_box.tpl"}

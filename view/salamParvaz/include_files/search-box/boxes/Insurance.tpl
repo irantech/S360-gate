@@ -1,10 +1,10 @@
 {assign var="countries" value=$obj_main_page->countryInsurance()}
 
-<div class="__box__ tab-pane shadow-box {if $active} active {/if}" id="Insurance" style="padding:0.5px !important">
-    <div class="col-md-12 col-12">
-        <div class="row align-items-center">
+<div class="__box__ tab-pane shadow-box {if $active} active {/if} search-background" id="Insurance" style="padding:0.5px !important">
+    <div class="col-md-10 col-12 searchbox-style-insurance">
+        <div class="row align-items-center searchbox-style searchbox-style-insurance-width">
             <form class="d_contents" data-action="://s360online.iran-tech.com/" id="gdsInsurance" method="post" name="gdsInsurance" target="_blank">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 col_search p-1 mt-2 mt-lg-0">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 col_search p-1 mt-2 mt-lg-0">
                     <div class="form-group d-flex align-items-center form-insurance">
                         <i class="fas fa-map-marker-alt fa-lg mx-2"></i>
 
@@ -16,7 +16,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 col_search p-1">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 col_search p-1">
                     <div class="form-group d-flex align-items-center form-insurance">
                         <i class="fas fa-calendar fa-lg mx-2"></i>
 
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-2 col-md-6 col-sm-6 col-12 col_search p-1 mr-0">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 col_search p-1 mr-0">
                     <input type='hidden' name="passengers-count-js" class='passengers-count-js' id="passengers-count-js">
                     <div class="parent-input-search-box form-insurance" style="border-left:0 !important">
                         <i class="fas fa-user fa-lg mr-2"></i>
@@ -119,8 +119,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-1 col-lg-3 col-md-6 col-sm-6 col-12 col_search search_btn_insuranc mr-auto mt-1 mb-md-2 mb-lg-0">
-                    <button class="btn theme-btn seub-btn b-0"  style="left:9.5px;" onclick="searchInsurance()" type="button">
+                <div class="col-xl-1 col-lg-6  col-md-6 col-sm-6 col-12 col_search search_btn_insuranc mr-auto mt-1 mb-md-2 mb-lg-0">
+                    <button class="btn theme-btn seub-btn b-0"  style="left:9.5px;" onclick="searchInsurance(true)" type="button">
 <span>
  جستجو
 </span>
