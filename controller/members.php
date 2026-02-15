@@ -6,10 +6,10 @@
 //@ini_set('display_errors', 'on');
 
 // خط پایین مربوط به ارسال ایمیل پس از رزرو پرواز میباشد ، باید در هاست آپلود باشد اما اگر روی لوکال کامنت نباشید لوکال سفید میاد
-require '/home/safar360/public_html/vendor/autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+//require '/home/safar360/public_html/vendor/autoload.php';
+//
+//use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\Exception;
 
 /**
  * Class members
