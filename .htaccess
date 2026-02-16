@@ -16,10 +16,13 @@
 
 </IfModule>
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !\.(jpeg|jpg|png|gif|webp|css|js|php|eot|svg|ttf|woff|woff2|ico|mp4|webm|pdf|xml|xlsx|zip|json|docx|doc|apk|txt)$
-#RewriteRule ^!/pwa [L]
-RewriteRule ^(.*)$   index.php?$1 [QSA,L]
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.(jpeg|jpg|png|gif|css|js|php|eot|svg|ttf|woff|woff2|ico|mp4|webm|pdf|xml|xlsx|zip|json|docx|doc|apk|txt)$
+#RewriteRule ^!/pwa [L]
+#RewriteRule ^(.*)$   index.php?$1 [QSA,L]
+#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+RewriteRule ^([\s\S]*)$   index.php?$1 [QSA,L]
+RewriteRule [\s\S]* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
