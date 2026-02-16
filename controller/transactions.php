@@ -16,17 +16,17 @@ class transactions extends clientAuth
     public $apiAddress;
     public $transactions;
     public function __construct() {
-            self::$admin =  Load::controller('admin');
-            $this->modelTransactions = $this->getModel('transactionsModel');
-            $this->apiAddress = functions::UrlSource();
-            $this->transactions = $this->getModel('transactionsModel');
+        self::$admin =  Load::controller('admin');
+        $this->modelTransactions = $this->getModel('transactionsModel');
+        $this->apiAddress = functions::UrlSource();
+        $this->transactions = $this->getModel('transactionsModel');
     }
 
 
     public function index()
     {
 
-       // die(json_encode($this->mergeTransactionsAndSort()));
+        // die(json_encode($this->mergeTransactionsAndSort()));
         $res = [];
         try {
 
@@ -60,37 +60,37 @@ class transactions extends clientAuth
         $updated_at = date("Y-m-d H:i:s", $array['LastEditInt']);
 
 
-            $clientID = $array[0]['clientID'];
-            $price = $array['Price'];
-            $payment_date = $array['PriceDate'];
-            $factor_number = $array['FactorNumber'];
-            $status = (string)$array['status'];
-            $reason = $array['Reason'];
-            $comment = $array['Comment'];
-            $tracking_code = $array['BankTrackingCode'];
-            $payment_status = (string)$array['PaymentStatus'];
-            $creation_date_int = $array['CreationDateInt'];
-            $last_edit_int = $array['LastEditInt'];
-            $created_at = (string)$created_at;
-            $updated_at = (string)$updated_at;
+        $clientID = $array[0]['clientID'];
+        $price = $array['Price'];
+        $payment_date = $array['PriceDate'];
+        $factor_number = $array['FactorNumber'];
+        $status = (string)$array['status'];
+        $reason = $array['Reason'];
+        $comment = $array['Comment'];
+        $tracking_code = $array['BankTrackingCode'];
+        $payment_status = (string)$array['PaymentStatus'];
+        $creation_date_int = $array['CreationDateInt'];
+        $last_edit_int = $array['LastEditInt'];
+        $created_at = (string)$created_at;
+        $updated_at = (string)$updated_at;
 
 
-            $data = [
-                'clientID' => $clientID,
-                'price' => $price,
-                'PriceDate' => $payment_date,
-                'FactorNumber' => $factor_number,
-                'status' => $status,
-                'reason' => $reason,
-                'comment' => $comment,
-                'BankTrackingCode' => $tracking_code,
-                'PaymentStatus' => $payment_status,
-                'CreationDateInt' => $creation_date_int,
-                'LastEditInt' => $last_edit_int,
-                'year' => $year,
-                'created_at' => $created_at,
-                'updated_at' => $updated_at
-            ];
+        $data = [
+            'clientID' => $clientID,
+            'price' => $price,
+            'PriceDate' => $payment_date,
+            'FactorNumber' => $factor_number,
+            'status' => $status,
+            'reason' => $reason,
+            'comment' => $comment,
+            'BankTrackingCode' => $tracking_code,
+            'PaymentStatus' => $payment_status,
+            'CreationDateInt' => $creation_date_int,
+            'LastEditInt' => $last_edit_int,
+            'year' => $year,
+            'created_at' => $created_at,
+            'updated_at' => $updated_at
+        ];
         $this->modelTransactions->insertWithBind($data);
     }
 
@@ -268,21 +268,17 @@ LEFT JOIN report_gasht_tb
         if (!empty($_POST['FactorNumber']) && $_POST['FactorNumber'] > 0) {
             $sql .= " AND t.FactorNumber= '{$_POST['FactorNumber']}'";
         }
-
-        if(empty($_POST) || (!empty($_POST['Reason']) && $_POST['Reason']=='')){//پیش فرض همه خرید ها
-            $Reason='buy';
-        }
-        else $Reason=$_POST['Reason'];
-
-        if ($Reason != 'all') {
-            if($Reason=='buy'){
-                 $sql .= " AND (t.Reason= 'buy' OR t.Reason= 'buy_hotel' OR t.Reason= 'buy_insurance' OR t.Reason= 'buy_reservation_hotel' OR t.Reason= 'buy_reservation_ticket' OR t.Reason= 'buy_foreign_hotel'
+        $Reason = !empty($_POST['Reason']) ? $_POST['Reason'] : 'buy';
+        if ($_POST['Reason'] != 'all') {
+            if($_POST['Reason']=='buy'){
+                $sql .= " AND (t.Reason= 'buy' OR t.Reason= 'buy_hotel' OR t.Reason= 'buy_insurance' OR t.Reason= 'buy_reservation_hotel' OR t.Reason= 'buy_reservation_ticket' OR t.Reason= 'buy_foreign_hotel'
                     OR t.Reason= 'buy_Europcar' OR t.Reason= 'buy_reservation_tour' OR t.Reason= 'buy_reservation_visa' OR t.Reason= 'buy_gasht_transfer' OR t.Reason= 'buy_train' OR t.Reason= 'buy_bus' OR t.Reason= 'buy_entertainment' OR t.Reason= 'buy_visa_plan' OR t.Reason= 'buy_package' ) ";
             }else{
                 $sql .= " AND (t.Reason='{$Reason}') ";
             }
         }
         $sql .= 'GROUP BY id ORDER BY t.PriceDate ASC' ;
+
         $transactions = $Model->select($sql);
 
 //        $sql_remain_prev = "SELECT SUM(Price) AS sum_price FROM  transactions  WHERE PriceDate IS NOT NULL AND (( PaymentStatus = 'success' ) AND PriceDate <= '{$StartPostDate} 00:00:00' )  GROUP BY `Status`" ;
@@ -386,7 +382,6 @@ LEFT JOIN report_gasht_tb
                     'cacheOrCredit'        => self::checkTransactionCacheOrCredit($transaction['BankTrackingCode']),
                     'publicOrPrivate'      => self::getPublicPrivate($transaction['publicOrPrivate']),
                     'type'                 => self::getTransactionType($transaction['Reason']),
-                    'typeColor'            => self::getTransactionTypeColor($transaction['Reason']),
                     'comment'              => $transaction['Comment'],
                     'date'                 => dateTimeSetting::jdate("Y-m-d H:i:s",$transaction['CreationDateInt']),
                     'service_date'         => $transaction['service_date'],
@@ -405,12 +400,10 @@ LEFT JOIN report_gasht_tb
 
     public function getAllProviderTransactions()
     {
-
         $params = $_POST ;
         $getParams = $_GET;
         $api_id = $getParams['api_id'];
         $type = $getParams['sourceType'];
-        
         $Model = Load::library('ModelBase');
         $EndPostDate = $StartTimeNow = date("Y-m-d");
         $time = time() - (600);
@@ -528,22 +521,23 @@ LEFT JOIN report_gasht_tb
             CASE
                WHEN (report_tb.id IS NOT NULL) THEN report_tb.api_id
                WHEN (report_hotel_tb.id IS NOT NULL) THEN report_hotel_tb.source_id
-               WHEN (report_bus_tb.id IS NOT NULL) THEN report_bus_tb.SourceCode
+               WHEN t.Reason = 'buy_bus' THEN report_bus_tb.SourceName
+               WHEN t.Reason = 'buy_insurance' THEN report_insurance_tb.source_name_fa
                ELSE NULL
             END = $api_id OR t.api_id = $api_id
                             )";
         }
         if($type == 'flight'){
-            $sql .= " AND (report_tb.id is not null OR t.sourceType = '{$type}') ";
+            $sql .= " AND (report_tb.id is not null OR t.sourceType = $type) ";
         }
         if($type == 'hotel'){
-            $sql .= " AND (report_hotel_tb.id is not null OR t.sourceType = '{$type}') ";
+            $sql .= " AND (report_hotel_tb.id is not null OR t.api_id = $api_id) ";
         }
         if($type == 'bus'){
-            $sql .= " AND (report_bus_tb.id is not null OR t.sourceType = '{$type}') ";
+            $sql .= " AND (report_bus_tb.id is not null OR t.sourceType = $type) ";
         }
         if($type == 'train'){
-            $sql .= " AND (report_train_tb.id is not null OR t.sourceType = '{$type}') ";
+            $sql .= " AND (report_train_tb.id is not null OR t.sourceType = $type) ";
         }
 
 
@@ -568,7 +562,6 @@ LEFT JOIN report_gasht_tb
         }
         $sql .= 'GROUP BY id ORDER BY t.PriceDate ASC' ;
 
-       
 
 
         $transactions = $Model->select($sql);
@@ -722,25 +715,25 @@ LEFT JOIN report_gasht_tb
 
 //            if($providersArray[$index]['sourceType'] ==  'flight' )
 //            {
-                $sql_charge_search = " SELECT SUM(t.Price) AS total_charge FROM transactions t
+            $sql_charge_search = " SELECT SUM(t.Price) AS total_charge FROM transactions t
                                          left join report_tb rt on t.FactorNumber = rt.factor_number And rt.api_id = {$provider['sourceCode']}
                                          left join report_hotel_tb rht on t.FactorNumber = rht.factor_number And rht.source_id =  {$provider['sourceCode']}
                                          left join report_bus_tb rbt on t.FactorNumber = rbt.passenger_factor_num And rbt.SourceCode = {$provider['sourceCode']}
                                          WHERE t.Status='1' AND t.PaymentStatus = 'success' 
                                             $condition       
                                            ";
-                $sql_buy_search = " SELECT SUM(t.Price) AS total_buy FROM transactions t
+            $sql_buy_search = " SELECT SUM(t.Price) AS total_buy FROM transactions t
                                       left join report_tb rt on t.FactorNumber = rt.factor_number And rt.api_id = {$provider['sourceCode']}
                                       left join report_hotel_tb rht on t.FactorNumber = rht.factor_number And rht.source_id =  {$provider['sourceCode']}
                                       left join report_bus_tb rbt on t.FactorNumber = rbt.passenger_factor_num And rbt.SourceCode = {$provider['sourceCode']}
                                       WHERE t.Status='2' AND ((t.PaymentStatus = 'success') OR (t.PaymentStatus = 'pending' AND t.CreationDateInt > '{$time}')  )  
                                        $condition";
 //            var_dump($sql_charge_search);
-                $ModelBase = Load::library('ModelBase');
-                $buy_search = $ModelBase->select($sql_buy_search);
-                $charge_search = $ModelBase->select($sql_charge_search);
-                $providersArray[$index]['total_remain_transaction'] = $charge_search[0]['total_charge'] - $buy_search[0]['total_buy'] ;
-                $final_array[$index] = $providersArray[$index];
+            $ModelBase = Load::library('ModelBase');
+            $buy_search = $ModelBase->select($sql_buy_search);
+            $charge_search = $ModelBase->select($sql_charge_search);
+            $providersArray[$index]['total_remain_transaction'] = $charge_search[0]['total_charge'] - $buy_search[0]['total_buy'] ;
+            $final_array[$index] = $providersArray[$index];
 //            }
         }
 
@@ -887,32 +880,6 @@ LEFT JOIN report_gasht_tb
         return $type ;
     }
 
-    private function getTransactionTypeColor($transaction_reason){
-        switch ($transaction_reason) {
-            case 'buy':
-                $color = '#2840a7';//آبی
-                break;
-            case 'buy_hotel':
-                $color = '#f67913';//نارنجی
-                break;
-            case 'buy_bus':
-                $color = '#28a745';//سبز
-                break;
-            case 'buy_reservation_hotel':
-                $color = '#f67913';
-                break;
-            case 'buy_reservation_ticket':
-                $color = '#2840a7';
-                break;
-            case 'buy_insurance':
-                $color = '#f6f313';
-                break;
-            default:
-                $color = '#000000';
-                break;
-        }
-        return $color ;
-    }
     private function getSourceName($source) {
         switch ($source) {
             case '13':
@@ -952,7 +919,7 @@ LEFT JOIN report_gasht_tb
 
     public function getLastTransactionBalanceStatus($clientID,$numberFactor)
     {
-        /*
+
         $ResultIdInTrabsaction = $this->modelTransactions
             ->get(['id'])
             ->where('clientID', $clientID)
@@ -960,23 +927,22 @@ LEFT JOIN report_gasht_tb
             ->find();
         $IdInTrabsaction =$ResultIdInTrabsaction['id'];
 
-        $TotalBuyClient=0;//sum price ta Ghabl In kharid
-        $TotalChargeClient=0;//شارژ مشتری در سیستم
-
-        if($IdInTrabsaction!='') {
-
-           $ResultChargeClient = $this->modelTransactions
+        $TotalChargeClient=0;
+        $ResultChargeClient = $this->modelTransactions
             ->get(['Price'])
             ->where('clientID',$clientID)
             ->where('Status','1')
             ->where('PaymentStatus','success')
             ->where('id',$IdInTrabsaction,'<')
             ->all();
-            foreach ($ResultChargeClient as $row) {
-                $TotalChargeClient += $row['Price'];
-            }
+        foreach ($ResultChargeClient as $row) {
+            $TotalChargeClient += $row['Price'];
+        }
 
-            $time = time() - 600;//10 min ghabl
+        //sum price ta Ghabl In kharid
+        $TotalBuyClient=0;
+        if($IdInTrabsaction!='') {
+            $time = time() - 600;
             $Model = Load::library('ModelBase');
             $sqlBuy = "SELECT sum(Price) AS total_buy FROM transactions 
                        WHERE 
@@ -984,17 +950,13 @@ LEFT JOIN report_gasht_tb
                             Status='2' AND 
                             id< {$IdInTrabsaction} AND
                             (
-                                PaymentStatus = 'success'  or
+                                PaymentStatus = 'success' OR 
                                 (PaymentStatus = 'pending' AND CreationDateInt > '{$time}')
                             )";
-                                //
             $ResultBuy = $Model->select($sqlBuy);
             $TotalBuyClient=$ResultBuy[0]['total_buy'];
         }
-         return ($TotalChargeClient-$TotalBuyClient);
-        */
 
-        $resultCharge=functions::calculateChargeUserPrice($clientID,$numberFactor);//شارژ فعلی مشتری از دیتابیس خودش
-        return ($resultCharge);
+        return ($TotalChargeClient-$TotalBuyClient);
     }
 }
