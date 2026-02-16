@@ -104,17 +104,17 @@
 <section class='cover-img-tour position-relative {if $TourGalleryList|count>3}cover-img-tour-3i{/if}'>
     {include file="`$smarty.const.FRONT_CURRENT_CLIENT`modules/rich/breadcrumb/detail.tpl"}
 
-    {if $TourGalleryList|count<4}
-        <div class='central-title'>
-            <h1>
-                {if $smarty.const.SOFTWARE_LANG eq 'fa'}
-                    {$objResult->arrayTour['infoTour']['tour_name']}
-                {else}
-                    {$objResult->arrayTour['infoTour']['tour_name_en']}
-                {/if}
-            </h1>
-        </div>
-    {/if}
+{*    {if $TourGalleryList|count<4}*}
+{*        <div class='central-title'>*}
+{*            <h1>*}
+{*                {if $smarty.const.SOFTWARE_LANG eq 'fa'}*}
+{*                    {$objResult->arrayTour['infoTour']['tour_name']}*}
+{*                {else}*}
+{*                    {$objResult->arrayTour['infoTour']['tour_name_en']}*}
+{*                {/if}*}
+{*            </h1>*}
+{*        </div>*}
+{*    {/if}*}
 
     {if $objResult->arrayTour['infoTour']['tour_file']}
         <a id="fileUrlPackageMob" target="_blank" href='{$smarty.const.ROOT_ADDRESS_WITHOUT_LANG}/pic/reservationTour/{$objResult->arrayTour['infoTour']['tour_file']}' class="parent-share-tour-img-caver">
@@ -173,17 +173,17 @@
 
 </section>
 
-{if $TourGalleryList|count>3}
-    <div class='central-title-3i'>
-        <h1>
-            {if $smarty.const.SOFTWARE_LANG eq 'fa'}
-                {$objResult->arrayTour['infoTour']['tour_name']}
-            {else}
-                {$objResult->arrayTour['infoTour']['tour_name_en']}
-            {/if}
-        </h1>
-    </div>
-{/if}
+{*{if $TourGalleryList|count>3}*}
+{*    <div class='central-title-3i'>*}
+{*        <h1>*}
+{*            {if $smarty.const.SOFTWARE_LANG eq 'fa'}*}
+{*                {$objResult->arrayTour['infoTour']['tour_name']}*}
+{*            {else}*}
+{*                {$objResult->arrayTour['infoTour']['tour_name_en']}*}
+{*            {/if}*}
+{*        </h1>*}
+{*    </div>*}
+{*{/if}*}
 
 <div class='container position-relative z-index-3 '>
     <section class='box-title-tour {if $TourGalleryList|count>3}box-title-tour-3i{/if}'>
