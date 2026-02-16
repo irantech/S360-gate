@@ -1,5 +1,12 @@
 <?php
 
+//if ($_SERVER['REMOTE_ADDR'] === '93.118.161.174') {
+   // error_reporting(E_ALL);
+   // ini_set('display_errors', 1);
+//}
+
+
+
 date_default_timezone_set('Asia/Tehran');
 // SITE_ROOT contains the full path to the Project folder
 defined('SITE_ROOT') or define('SITE_ROOT', dirname(dirname(__FILE__)));
@@ -187,11 +194,175 @@ if(!empty($client['Services'])){
         }
     }
 
-if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') || (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')) {
-    defined('SERVER_HTTP') or define('SERVER_HTTP', 'https://');
-} else {
-    defined('SERVER_HTTP') or define('SERVER_HTTP', 'http://');
-}
+
+
+    $mizbanFly=[
+        '192.168.1.1',
+
+    ];
+
+    $safar360FielsR = [
+        '0' => 'yazdseir',
+        '1' => 'jahangardan',
+        '2' => 'marz_por_gohar',
+        '3' => 'bime_saman',
+        '4' => 'oshida',
+        '5' => 'sayare',
+        '6' => 'manshore_solh_new',
+        '7' => 'sufarainvestment',
+        '8' => 'torang_gasht',
+        '9' => 'irantechs360',
+        '15' => 'pabepa360',
+        '16' => 'ava_parvaz',
+        '18' => 'versa360',
+        '19' => 'yazdSeir_I_m',
+        '20' => 'ababil',
+
+        '22' => 'ava_parvaz_modular',
+        '23' => 'ava_parvaz_modular_test_data',
+        '25' => 'asareh_ar',
+        '27' => 'asareh',
+        '28' => 'asareh_en',
+
+        '29' => 'ava_parvaz_ar',
+        '30' => 'ava_parvaz_en',
+        '31' => 'darya_gasht',
+        '33' => 'avan',
+        '34' => 'hayat_seir',
+        '35' => 'homan_seir',
+
+        '36' => 'touring_persia',
+        '39' => 'ghods_gasht360',
+        '40' => 'white_label',
+        '41' => 'adineh360',
+        '42' => 'keyhan_mohajer',
+        '43' => 'ww',
+        '44' => 'raspina360',
+        '45' => 'lika',
+        '46' => 'safar360',
+        '47' => 'paeez_sahra',
+        '48' => 'safiran360',
+        '49' => 'gisoo',
+        '50' => 'solan360',
+        '51' => 'safar360_child',
+        '53' => 'golgasht',
+        '54' => 'pars_parvaz',
+        '55' => 'hotelato',
+        '56' => 'mizbanfly',
+        '57' => 'test_search_box',
+        '58' => 'test1',
+        '59' => 'venos',
+        '60' => 'mahbod',
+        '61' => 'paeizSahraTes',
+        '62' => 'parvazBist',
+        '63' => 'kanonSeir',
+        '64' => 'raymon',
+        '65' => 'gandomTalaee',
+        '66' => 'ww',
+        '67' => 'meraj',
+        '68' => 'salam_aseman',
+        '69' => 'kharazmi',
+        '70' => 'havanavardan',
+        '71' => 'donyaeSafar',
+        '72' => 'midari',
+        '73' => 'atiyeGasht',
+        '74' => 'anis',
+        '75' => 'skyHealth',
+        '76' => 'manshoorTravel',
+        '77' => 'bank_sina',
+        '78' => 'neginRoxan',
+        '79' => 'sepid_gasht_morvarid',
+        '80' => 'irOtagh',
+        '81' => 'arshidaSeirAseman',
+        '82' => 'parvaz_talaee',
+        '83' => 'mahbalSeirGds',
+        '84' => 'setateSamGasht',
+        '85' => 'reshnoParvaz',
+        '86' => 'demo360',
+        '87' => 'aviatop',
+        '88' => 'jeyjet',
+        '89' => 'parsParvazJonob',
+        '90' => 'mahAsalGasht',
+        '91' => 'donyaeSafarNew',
+        '92' => 'gta',
+        '93' => 'airaavia',
+        '94' => 'safirAlIraq',
+        '95' => 'ashiyaneh',
+        '96' => 'karvanSadat',
+        '97' => 'tehranGasht',
+        '98' => 'tavousGasht',
+        '99' => 'kishOnTime',
+        '100' => 'abiBalSeir',
+        '101' => 'rayanet_afzar_gds',
+        '102' => 'afrashteh',
+        '103' => 'afrashtehfive',
+        '104' => 'afrashtehThree',
+        '105' => 'gardima',
+        '106' => 'sanaSeirGds',
+        '107' => 'drBilit',
+        '108' => 'mynaGds',
+        '109' => 'shidrokhGds',
+        '110' => 'yazdmehrGds',
+        '111' => 'sam24Gds',
+        '112' => 'afrashtehSix',
+        '113' => 'shabbadgashtGds',
+        '114' => 'bilitiom',
+        '115' => 'barandazanGds',
+        '116' => 'vanaparvaz',
+        '117' => 'orangGds',
+        '118' => 'shenhayesaheli',
+        '119' => 'bahartravel',
+        '120' => 'taktinsafar',
+        '121' => 'aghayetourGds',
+        '122' => 'azarakhshparse',
+        '123' => 'jazirehganj',
+        '124' => 'watchparvaz',
+        '125' => 'kifsafar',
+        '126' => 'razdonya',
+        '127' => 'bamekhalkhal',
+        '128' => 'ferdosi',
+        '129' => 'karevansadat',
+        '130' => 'hafez',
+        '131' => 'sohrabsepehri',
+        '132' => 'khayam',
+        '133' => 'amirrrrrR',
+        //gardesh
+        '10' => 'pa_be_pa',
+        '11' => 'shidrokh',
+        '12' => 'shidrokh_old',
+        '99' => 'manshore_solh_new',
+        '17' => 'adinehgasht',
+        '37' => 'relaxtourismW',
+        '38' => 'relaxtourism_m',
+        '52' => 'myna',
+    ];
+
+    if(in_array($_SERVER['REMOTE_ADDR'],$mizbanFly)) {
+        $client['jahangaThemeDir'] = 'mizbanfly';
+    }
+    // mr farhadi >>>
+    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.9') {
+        $client['ThemeDir'] = 'demoJami';
+    }
+    // mr abbasi >>>
+    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.56') {
+        $client['ThemeDir'] = 'doctor_bilit';
+    }
+    // mr shojaii >>>
+    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.2') {
+        $client['ThemeDir'] = 'doctor_bilit';
+    }
+    // mr tester >>>
+    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.7') {
+        $client['ThemeDir'] = 'ava_parvaz_ar';
+    }
+    // mr javani >>>
+    elseif($_SERVER['REMOTE_ADDR'] == "127.0.0.1")
+    {
+        $client['ThemeDir'] = 'demo360';
+    }
+
+
 
     defined('CLIENT_SERVICES') or define('CLIENT_SERVICES', $client['Services']);
 
@@ -276,12 +447,15 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
     }
 
     $firstURL = urldecode($_SERVER['REQUEST_URI']);
+
+
+//    var_dump('dsfsfsdf');
     if($firstURL == '/robots.txt'){
-     
         if(file_exists(FRONT_CURRENT_THEME . 'project_files/robots.txt')) {
             header('Location: http://' . CLIENT_MAIN_DOMAIN . '/gds/view/' . FRONT_TEMPLATE_NAME . '/project_files/robots.txt');
             exit();
         }else{
+//            var_dump('sdfsfsdfa3');
             require SITE_ROOT . '/404.shtml';
         }
     }
@@ -299,17 +473,15 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
     }
 
 
-
     if(in_array('gds',$arrUrlFirst)){
-        if(isset($_GET['eventParams'])) {
-            header('Location: ' . SERVER_HTTP .$_SERVER["HTTP_HOST"] . $_SERVER["REDIRECT_URL"] );
-            exit();
-        }
         foreach ( $arrUrlFirst as $part){
+            $part = strip_tags($part);
             $string = str_replace("'", "", $part);
             $string = str_replace("\"", "", $part);
-            $string = str_replace(array("\n", "'", "‘", "’", "'", "“", "”", "„" , '"', '(', ')', '<', '>','</','/>'), array(
+            $string = str_replace(array("\n", "'", "‘", "’", "'", "“", "”", "„" , '"', '(', ')', '<', '>','</','/>','alert','+'), array(
                 "",
+                '',
+                '',
                 '',
                 '',
                 '',
@@ -325,7 +497,9 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
                 '',
                 ''
             ), $part);
+            $string = filter_var($string,FILTER_SANITIZE_STRING);
             $arrUrl[] = $string;
+
         }
         $arrayLanguage = ['fa', 'ar', 'en' , 'ru'];
         if (!in_array($arrUrl[2], $arrayLanguage)) {
@@ -1283,12 +1457,14 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
         }
 
         $rootAddressWithoutLang = SERVER_HTTP . CLIENT_DOMAIN . '/gds';
+
         $rootAddress = $rootAddressWithoutLang . '/' . SOFTWARE_LANG;
         defined('ROOT_ADDRESS_WITHOUT_LANG') or define('ROOT_ADDRESS_WITHOUT_LANG', $rootAddressWithoutLang);
         defined('ROOT_ADDRESS') or define('ROOT_ADDRESS', $rootAddress);
 
 
         if ( isset($arrUrlFirst[1]) && !in_array($arrUrlFirst[1], ['gds', '', 'intro', 'sitemap.xml'])) {
+
             if (isset($_GET['fbclid']) || isset($_GET['hjVerifyInstall'])) {
                 header('Location: ' . SERVER_HTTP . $_SERVER["HTTP_HOST"]);
                 exit();
@@ -1307,7 +1483,7 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
             }
         }
         else {
-            
+
 
             if(CLIENT_ID =='302' || CLIENT_ID=='303')
             {
@@ -1337,6 +1513,7 @@ if ((isset($_SERVER['REDIRECT_HTTPS']) && $_SERVER['REDIRECT_HTTPS'] == 'on') ||
                 defined('GDS_SWITCH') or define('GDS_SWITCH', 'sitemap');
             }
             else{
+
                 defined('GDS_SWITCH') or define('GDS_SWITCH', 'mainPage');
             }
             defined('REQUEST') or define('REQUEST', GDS_SWITCH);
