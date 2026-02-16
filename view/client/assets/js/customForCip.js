@@ -1140,15 +1140,20 @@
             <div class="cip-passengers-forms"></div>
         `;
 
+        // 1. Create contact box (مشخصات تماس خریدار)
+        const contactHtml = generateContactBox();
+        container.insertAdjacentHTML('beforeend', contactHtml);
+
+        // 2. Create flight info box (اطلاعات سفر)
+        const flightInfoHtml = generateFlightInfoBox(cipData);
+        container.insertAdjacentHTML('beforeend', flightInfoHtml);
+
+        // 3. Create passengers wrapper (اطلاعات مسافرین)
         container.appendChild(passengersWrapper);
 
         // Generate passenger forms
         const formsContainer = passengersWrapper.querySelector('.cip-passengers-forms');
         generateAllPassengerForms(formsContainer, quantity);
-
-        // Create flight info box
-        const flightInfoHtml = generateFlightInfoBox(cipData);
-        container.insertAdjacentHTML('beforeend', flightInfoHtml);
 
         const serviceHtml = generateServiceBox(cipData);
         container.insertAdjacentHTML('beforeend', serviceHtml);
@@ -1479,7 +1484,7 @@
             <div class="cip-flight-info-header">
                 <h2 class="cip-section-title">
                     <i class="fa-solid fa-plane"></i>
-                    اطلاعات سفر
+                     اطلاعات سفر (برای ارائه خدمات صحیح لطفا اطلاعات پرواز خود را وارد نمایید)
                 </h2>
             </div>
             <div class="cip-flight-info-body">
@@ -1493,7 +1498,7 @@
                             <input type="text"
                                    id="cip-airline-input"
                                    class="cip-input"
-                                   placeholder="جستجوی شرکت هواپیمایی..."
+                                   placeholder="شرکت هواپیمایی که سوار می شوید ..."
                                    autocomplete="off">
                             <input type="hidden" name="flightInfo[airline]" id="cip-airline-select">
                             <div id="cip-airline-list" class="cip-autocomplete-list"></div>
@@ -1526,7 +1531,7 @@
                             <input type="text"
                                    id="cip-airport-input"
                                    class="cip-input"
-                                   placeholder="جستجوی فرودگاه..."
+                                   placeholder="فرودگاهی که سوار می شوید ..."
                                    autocomplete="off">
                             <input type="hidden" name="flightInfo[airport]" id="cip-airport-select">
                             <div id="cip-airport-list" class="cip-autocomplete-list"></div>
@@ -1556,20 +1561,20 @@
                             <span class="cip-required">*</span>
                         </label>
                         <div class="cip-input-wrapper cip-time-wrapper">
-                            <select name="flightInfo[flightHour]"
-                                    id="cip-flight-hour"
-                                    class="cip-select cip-time-select"
-                                    required>
-                                <option value="">ساعت</option>
-                                ${generateHourOptions()}
-                            </select>
-                            <span class="cip-time-separator">:</span>
                             <select name="flightInfo[flightMinute]"
                                     id="cip-flight-minute"
                                     class="cip-select cip-time-select"
                                     required>
                                 <option value="">دقیقه</option>
                                 ${generateMinuteOptions()}
+                            </select>
+                            <span class="cip-time-separator">:</span>
+                            <select name="flightInfo[flightHour]"
+                                    id="cip-flight-hour"
+                                    class="cip-select cip-time-select"
+                                    required>
+                                <option value="">ساعت</option>
+                                ${generateHourOptions()}
                             </select>
                         </div>
                     </div>
@@ -2126,7 +2131,7 @@
                 html = `
                 <div class="cip-extra-input-group mb-3" data-unit="${index + 1}">
                     <label class="small text-muted mb-2 d-block fw-bold">
-                        حیوان خانگی - واحد ${index + 1}
+                        حیوان خانگی 
                     </label>
                     <div class="cip-service-inputs-grid">
                         <div class="cip-service-input-item">
@@ -2534,43 +2539,43 @@
 
         return `
     <div class="cip-services-wrapper">
-        <div class="cip-services-header">
+        <div class="cip-services-header" onclick="this.parentElement.classList.toggle('cip-services-open')" style="cursor: pointer;">
             <h2 class="cip-section-title">
                 <i class="fa-solid fa-concierge-bell"></i>
                 سرویس های جانبی
             </h2>
+            <i class="fa-solid fa-chevron-down cip-services-toggle-icon"></i>
         </div>
 
-        <!-- نسخه دسکتاپ (جدول) -->
-        <div class="cip-services-desktop d-none d-md-block">
-            <div class="cip-services-body">
-                <div class="cip-table-responsive">
-                    <table class="cip-services-table">
-                        <thead>
-                            <tr>
-                                <th width="60%">شرح / عنوان سرویس</th>
-                                <th width="20%">تعداد</th>
-                                <th width="20%">قیمت کل</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${desktopHTML}
-                        </tbody>
-                    </table>
+        <div class="cip-services-content" style="display: none;">
+            <!-- نسخه دسکتاپ (جدول) -->
+            <div class="cip-services-desktop d-none d-md-block">
+                <div class="cip-services-body">
+                    <div class="cip-table-responsive">
+                        <table class="cip-services-table">
+                            <thead>
+                                <tr>
+                                    <th width="60%">شرح / عنوان سرویس</th>
+                                    <th width="20%">تعداد</th>
+                                    <th width="20%">قیمت کل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${desktopHTML}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نسخه موبایل (کارت) -->
+            <div class="cip-services-mobile d-md-none">
+                <div class="cip-services-cards">
+                    ${mobileHTML}
                 </div>
             </div>
         </div>
-
-        <!-- نسخه موبایل (کارت) -->
-        <div class="cip-services-mobile d-md-none">
-            <div class="cip-services-cards">
-                ${mobileHTML}
-            </div>
-        </div>
     </div>
-
-    <!-- مشخصات تماس خریدار -->
-    ${generateContactBox()}
 
     <!-- باکس خلاصه سرویس‌های انتخاب شده -->
     ${generateSelectedServicesSummary(cipData)}

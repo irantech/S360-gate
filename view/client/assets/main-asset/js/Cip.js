@@ -2,104 +2,68 @@ let airportSearchTimeout;
 let origin = null;
 let flightType = null;
 
+const cipAirportsList = [
+   { AirportFa: 'فرودگاه امام خمینی', AirportEn: 'Imam Khomeini Airport', AirportAr: 'مطار الإمام الخميني', DepartureCode: 'IKA', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه مهرآباد', AirportEn: 'Mehrabad Airport', AirportAr: 'مطار مهرآباد', DepartureCode: 'THR', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه مشهد', AirportEn: 'Mashhad Airport', AirportAr: 'مطار مشهد', DepartureCode: 'MHD', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه اصفهان', AirportEn: 'Isfahan Airport', AirportAr: 'مطار أصفهان', DepartureCode: 'IFN', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه شیراز', AirportEn: 'Shiraz Airport', AirportAr: 'مطار شیراز', DepartureCode: 'SYZ', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه تبریز', AirportEn: 'Tabriz Airport', AirportAr: 'مطار تبریز', DepartureCode: 'TBZ', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه اهواز', AirportEn: 'Ahvaz Airport', AirportAr: 'مطار أهواز', DepartureCode: 'AWZ', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه کرمانشاه', AirportEn: 'Kermanshah Airport', AirportAr: 'مطار کرمانشاه', DepartureCode: 'KSH', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه اردبیل', AirportEn: 'Ardabil Airport', AirportAr: 'مطار أردبیل', DepartureCode: 'ADU', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه کیش', AirportEn: 'Kish Airport', AirportAr: 'مطار کیش', DepartureCode: 'KIH', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه اسخیپول آمستردام', AirportEn: 'Amsterdam Schiphol Airport', AirportAr: 'مطار سخيبول أمستردام', DepartureCode: 'AMS', CountryFa: 'هلند', CountryEn: 'Netherlands' },
+   { AirportFa: 'فرودگاه سووارنابومی', AirportEn: 'Suvarnabhumi Airport', AirportAr: 'مطار سوفارنابومي', DepartureCode: 'BKK', CountryFa: 'تایلند', CountryEn: 'Thailand' },
+   { AirportFa: 'فرودگاه حمد', AirportEn: 'Hamad International Airport', AirportAr: 'مطار حمد الدولي', DepartureCode: 'DOH', CountryFa: 'قطر', CountryEn: 'Qatar' },
+   { AirportFa: 'فرودگاه دبی', AirportEn: 'Dubai International Airport', AirportAr: 'مطار دبي الدولي', DepartureCode: 'DXB', CountryFa: 'امارات', CountryEn: 'UAE' },
+   { AirportFa: 'فرودگاه فرانکفورت', AirportEn: 'Frankfurt Airport', AirportAr: 'مطار فرانكفورت', DepartureCode: 'FRA', CountryFa: 'آلمان', CountryEn: 'Germany' },
+   { AirportFa: 'فرودگاه استانبول', AirportEn: 'Istanbul Airport', AirportAr: 'مطار إسطنبول', DepartureCode: 'IST', CountryFa: 'ترکیه', CountryEn: 'Turkey' },
+   { AirportFa: 'فرودگاه لس آنجلس', AirportEn: 'Los Angeles Airport', AirportAr: 'مطار لوس أنجلوس', DepartureCode: 'LAX', CountryFa: 'آمریکا', CountryEn: 'USA' },
+   { AirportFa: 'هیترو لندن', AirportEn: 'London Heathrow Airport', AirportAr: 'مطار هيثرو لندن', DepartureCode: 'LHR', CountryFa: 'انگلستان', CountryEn: 'UK' },
+   { AirportFa: 'فرودگاه مسقط', AirportEn: 'Muscat Airport', AirportAr: 'مطار مسقط', DepartureCode: 'MCT', CountryFa: 'عمان', CountryEn: 'Oman' },
+   { AirportFa: 'فرودگاه خلیج فارس', AirportEn: 'Persian Gulf Airport', AirportAr: 'مطار الخليج الفارسي', DepartureCode: 'PGU', CountryFa: 'ایران', CountryEn: 'Iran' },
+   { AirportFa: 'فرودگاه شارجه', AirportEn: 'Sharjah Airport', AirportAr: 'مطار الشارقة', DepartureCode: 'SHJ', CountryFa: 'امارات', CountryEn: 'UAE' },
+];
+
 // =============================================== start airport List ==============================================
 // show airport all List
 function showAirportList(inputElement) {
    let $listContainer = $('#list_airport_origin_cip');
    let $input = $(inputElement);
-   let search_value = $input.val().trim();
+   let search_value = $input.val().trim().toLowerCase();
 
-   if (!search_value) search_value = '';
+   let filtered = cipAirportsList.filter(function(item) {
+      if (!search_value) return true;
+      return item.AirportFa.includes(search_value) ||
+          item.AirportEn.toLowerCase().includes(search_value) ||
+          item.AirportAr.includes(search_value) ||
+          item.DepartureCode.toLowerCase().includes(search_value);
+   });
 
-   if (airportSearchTimeout) clearTimeout(airportSearchTimeout);
+   let html = '';
 
+   filtered.forEach(function(item) {
+      let airport_name = (lang === 'fa') ? item.AirportFa :
+          (lang === 'ar') ? (item.AirportAr || item.AirportEn) :
+              item.AirportEn;
 
-      let internalRequest = $.ajax({
-         type: 'POST',
-         url: amadeusPath + 'ajax',
-         dataType: 'json',
-         data: JSON.stringify({
-            method: 'searchCitiesFlightInternal',
-            className: 'newApiFlight',
-            value: search_value,
-            use_customer_db: true,
-            is_group: true,
-         })
-      });
+      let json_value = JSON.stringify(item);
 
-      let internationalRequest = $.ajax({
-         type: 'POST',
-         url: amadeusPath + 'ajax',
-         dataType: 'json',
-         data: JSON.stringify({
-            method: 'cityForSearchInternational',
-            className: 'routeFlight',
-            iata: search_value,
-            is_json: true,
-         })
-      });
-
-
-      $.when(internalRequest, internationalRequest).done(function(internalRes, internationalRes) {
-         let internalData = internalRes[0].data || [];
-         let internationalData = internationalRes[0].data || [];
-         let combinedData = internalData.concat(internationalData);
-
-         // فقط آیتم‌هایی که نام فرودگاه دارند
-         combinedData = combinedData.filter(item => {
-            let airport_name = (lang === 'fa') ? item.AirportFa :
-               (lang === 'ar') ? (item.AirportAr || item.AirportEn) :
-                  item.AirportEn;
-            return airport_name && airport_name.trim() !== '';
-         });
-
-         // حالا 10 مورد اول
-         combinedData = combinedData.slice(0, 10);
-
-         let html = '';
-
-         combinedData.forEach(function(item) {
-            let airport_name = (lang === 'fa') ? item.AirportFa :
-               (lang === 'ar') ? (item.AirportAr || item.AirportEn) :
-                  item.AirportEn;
-
-            let json_value = JSON.stringify(item);
-
-            html += `<li onclick='onAirportSelect(${json_value}, this)'>
+      html += `<li onclick='onAirportSelect(${json_value}, this)'>
                    <div class='div_c_sr'>
                        <i class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z"/></svg></i>
                        <span class='c-text'>${airport_name}</span>
-                       <em>(${item.DepartureCode || item.Departure_Code || ''})</em>
+                       <em>(${item.DepartureCode})</em>
                    </div>
                </li>`;
+   });
 
-            if (item.sub && item.sub.length > 0) {
-               item.sub.slice(0, 2).forEach(function(subItem) {
-                  let sub_airport = (lang === 'fa') ? subItem.AirportFa :
-                     (lang === 'ar') ? (subItem.AirportAr || subItem.AirportEn) :
-                        subItem.AirportEn;
-                  if (!sub_airport) return;
-
-                  let sub_json = JSON.stringify(subItem);
-                  html += `<li onclick='onAirportSelect(${sub_json}, this)'>
-                           <div class='div_c_sr'>
-                              <i class="svg_icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z"/></svg></i>
-                               <span class='c-text'>${sub_airport}</span>
-                               <em>(${subItem.DepartureCode || subItem.Departure_Code || ''})</em>
-                           </div>
-                       </li>`;
-               });
-            }
-         });
-
-         if (!html) {
-            $listContainer.html(`<ul><li>${error_flight}</li></ul>`).show();
-         } else {
-            $listContainer.html('<ul>' + html + '</ul>').show();
-         }
-      });
-
-
+   if (!html) {
+      $listContainer.html(`<ul><li>${error_flight}</li></ul>`).show();
+   } else {
+      $listContainer.html('<ul>' + html + '</ul>').show();
+   }
 }
 
 // Close the list when we click outside
@@ -137,8 +101,8 @@ function onAirportSelect(item, element) {
    origin = item.DepartureCode || item.Departure_Code || null;
 
    let airport_name = (lang === 'fa') ? item.AirportFa :
-      (lang === 'ar') ? (item.AirportAr || item.AirportEn) :
-         item.AirportEn;
+       (lang === 'ar') ? (item.AirportAr || item.AirportEn) :
+           item.AirportEn;
 
    $('#route_origin_all').val(airport_name);
    $('#list_airport_origin_cip').hide().empty();
@@ -153,16 +117,16 @@ function onAirportSelect(item, element) {
    $flightSelect.append(new Option('', '', true, true));
 
    let options = (item.CountryFa === 'ایران' || item.CountryEn === 'Iran')
-      ? [
-         { value: 'dom_inbound', text: 'پرواز داخلی  (ورودی به فرودگاه)' },
-         { value: 'dom_outbound', text: 'پرواز داخلی  (خروجی از فرودگاه)' },
-         { value: 'intl_inbound', text: 'پرواز بین المللی  (ورودی به فرودگاه)' },
-         { value: 'intl_outbound', text: 'پرواز بین المللی  (خروجی از فرودگاه)' }
-      ]
-      : [
-         { value: 'intl_inbound', text: 'پرواز بین المللی  (ورودی به فرودگاه)' },
-         { value: 'intl_outbound', text: 'پرواز بین المللی  ( خروجی از فرودگاه)' }
-      ];
+       ? [
+          { value: 'dom_inbound', text: 'پرواز داخلی  (ورودی به فرودگاه)' },
+          { value: 'dom_outbound', text: 'پرواز داخلی  (خروجی از فرودگاه)' },
+          { value: 'intl_inbound', text: 'پرواز بین المللی  (ورودی به فرودگاه)' },
+          { value: 'intl_outbound', text: 'پرواز بین المللی  (خروجی از فرودگاه)' }
+       ]
+       : [
+          { value: 'intl_inbound', text: 'پرواز بین المللی  (ورودی به فرودگاه)' },
+          { value: 'intl_outbound', text: 'پرواز بین المللی  ( خروجی از فرودگاه)' }
+       ];
 
    options.forEach(opt => {
       $flightSelect.append(new Option(opt.text, opt.value));
@@ -240,9 +204,9 @@ function checkAdultAndChildCip(number_adult, number_child) {
 }
 function checkEmptyFieldCip(origin , TripType ,  FlightType) {
    if (
-      origin === '' ||
-      TripType == '' ||
-      FlightType == ''
+       origin === '' ||
+       TripType == '' ||
+       FlightType == ''
 
    ) {
       $.alert({
@@ -276,9 +240,9 @@ function dataSearchCip() {
    let number_infant = parseInt($('.internal-infant-js').val())
    let departure_date = $('#startDateForCip').val()
    checkSearchCipFieldsValues(
-      { value: origin, name: 'فرودگاه مبدا' },
-      { value: flightType, name: 'نوع پرواز' },
-      { value: departure_date, name: 'تاریخ ورود' }
+       { value: origin, name: 'فرودگاه مبدا' },
+       { value: flightType, name: 'نوع پرواز' },
+       { value: departure_date, name: 'تاریخ ورود' }
    );
    let tripType = flightType === "intl_outbound" || flightType === "intl_inbound" ? "international" : "domestic"
    let flightTypeNew = (flightType === "dom_outbound" || flightType === "intl_outbound" ) ? "outbound" : "inbound"
@@ -297,12 +261,12 @@ function dataSearchCip() {
 function searchFormCip(obj) {
    let count_passenger = `${obj.number_adult}-${obj.number_child}-${obj.number_infant}`
    let url = `${amadeusPathByLang}search-cip/${origin}/${obj.departure_date}/${obj.flightType}&${obj.TripType}/${count_passenger}`;
-   let target = $('#cip_form').data('target')
-   if(target !=  undefined && target == '_blank' ){
-      window.open(url , '_blank')
-   }else {
-      window.open(url , '_self')
-   }
+   const form = $('#cip_form')[0];
+
+   let target = form.target || '_self';
+
+   window.open(url, target);
+
 }
 
 function searchCip() {
@@ -311,8 +275,8 @@ function searchCip() {
    no_error = checkCountAdultCip(obj_url.number_adult)
    if (no_error) {
       no_error = checkCountAdultVsInfantCip(
-         obj_url.number_adult,
-         obj_url.number_infant,
+          obj_url.number_adult,
+          obj_url.number_infant,
       )
    }
    if (no_error) {
@@ -320,16 +284,17 @@ function searchCip() {
    }
    if (no_error) {
       no_error = checkEmptyFieldCip(
-         obj_url.origin,
-         obj_url.FlightType,
-         obj_url.TripType
+          obj_url.origin,
+          obj_url.FlightType,
+          obj_url.TripType
       )
    }
    if (no_error) {
-         searchFormCip(obj_url)
+      searchFormCip(obj_url)
 
    }
-   
+
+
 }
 
 // =============================================== end search ==============================================

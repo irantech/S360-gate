@@ -96,38 +96,38 @@ class bookCip extends cip
         functions::insertLog('$info: ' . json_encode($info) , '000shojaee');
         $resultBook = false;
 
-            functions::insertLog('in foreach==>' . json_encode([$info['factor_number'], $info['successfull']], 256), 'newBookCip');
-            if ($info['successfull'] !== "book" && $info['successfull'] !== "error") {
-                functions::insertLog('before updateStatusProcessing==>' . json_encode([$info['factor_number'], $resultBook], 256), 'newBookCip');
-                $this->updateStatusProcessing($info['factor_number']);
+        functions::insertLog('in foreach==>' . json_encode([$info['factor_number'], $info['successfull']], 256), 'newBookCip');
+        if ($info['successfull'] !== "book" && $info['successfull'] !== "error") {
+            functions::insertLog('before updateStatusProcessing==>' . json_encode([$info['factor_number'], $resultBook], 256), 'newBookCip');
+            $this->updateStatusProcessing($info['factor_number']);
 
-                    try {
-                        $startTime = time();
-                        $maxTime = 70;
-                        set_time_limit($maxTime + 5);
+            try {
+                $startTime = time();
+                $maxTime = 70;
+                set_time_limit($maxTime + 5);
 
-                        $resultBook = $this->reserveTicket($payType, $info);
-
-
-                        $elapsed = time() - $startTime;
-                        if ($elapsed > $maxTime) {
-                            return functions::withSuccess('pending', 408, 'Tickets require more time to be issued');
-                        }
-
-                    }
-                    catch (Exception $e) {
-                        return functions::withError('', 500, 'Error when booking a flight');
-                    }
+                $resultBook = $this->reserveTicket($payType, $info);
 
 
-                    functions::insertLog('after reserveTicket==>' . json_encode([$info['factor_number'], $resultBook], 256), 'newBookCip');
-
-                functions::insertLog('**************************************', 'newBookCip');
+                $elapsed = time() - $startTime;
+                if ($elapsed > $maxTime) {
+                    return functions::withSuccess('pending', 408, 'Tickets require more time to be issued');
+                }
 
             }
-            else {
-                return functions::withError('', 403, 'تشریفات فرودگاه قبلا به نتیجه رسیده است');
+            catch (Exception $e) {
+                return functions::withError('', 500, 'Error when booking a flight');
             }
+
+
+            functions::insertLog('after reserveTicket==>' . json_encode([$info['factor_number'], $resultBook], 256), 'newBookCip');
+
+            functions::insertLog('**************************************', 'newBookCip');
+
+        }
+        else {
+            return functions::withError('', 403, 'تشریفات فرودگاه قبلا به نتیجه رسیده است');
+        }
 
         if ($resultBook) {
             return functions::withSuccess($resultBook, 200, 'تشریفات فرودگاه با موفقیت صادر شد');
@@ -181,7 +181,7 @@ class bookCip extends cip
 
         return $airlineController->checkSourceAirline($dataCheckConfigAirline);
     }
-    
+
     private function updateInfo($payType, $eachDirection, $ReserveTicket = array()) {
 
 
@@ -191,10 +191,10 @@ class bookCip extends cip
             $this->transaction->setCreditToSuccess($eachDirection['factor_number'], $eachDirection['tracking_code_bank']);
         }
 
-                $this->members->memberCreditConfirm($eachDirection['factor_number'], $this->tracking_code);
+        $this->members->memberCreditConfirm($eachDirection['factor_number'], $this->tracking_code);
 
-                //email to buyer
-                $this->sendSmsToClient($eachDirection);
+        //email to buyer
+        $this->sendSmsToClient($eachDirection);
 
 
         return true;
@@ -323,15 +323,15 @@ class bookCip extends cip
         functions::insertLog('after reserve ticket==>' . json_encode([$eachDirection['factor_number']], 256), 'newBookCip');
 
         if (!empty($ReserveTicket) && $ReserveTicket['curl_error'] == false && !empty($ReserveTicket['Pnr'])) {
-                functions::insertLog('before updateInfo==>' . json_encode([$eachDirection['factor_number'], $ReserveTicket], 256), 'newBookCip');
-                $resultBookedFlight = $this->updateInfo($payType, $eachDirection, $ReserveTicket);
+            functions::insertLog('before updateInfo==>' . json_encode([$eachDirection['factor_number'], $ReserveTicket], 256), 'newBookCip');
+            $resultBookedFlight = $this->updateInfo($payType, $eachDirection, $ReserveTicket);
 
-                functions::insertLog('after updateInfo==>' . json_encode([$eachDirection['factor_number'], $resultBookedFlight], 256), 'newBookCip');
+            functions::insertLog('after updateInfo==>' . json_encode([$eachDirection['factor_number'], $resultBookedFlight], 256), 'newBookCip');
         }
         else {
             if ($payType == 'credit') {
                 if ($eachDirection['successfull'] != 'book') {
-                        $this->transaction->pendingTransactionCurrent($eachDirection['factor_number']);
+                    $this->transaction->pendingTransactionCurrent($eachDirection['factor_number']);
                     $this->transaction->deleteCreditAgencyCurrent($eachDirection['request_number']);
                 }
             }
