@@ -3436,59 +3436,59 @@ class bookshowTest extends clientAuth {
             if (TYPE_ADMIN == '1') {
 
 
-            if ( $flightBook['type_app'] == 'Web' || $flightBook['type_app'] == 'Application' || $flightBook['type_app'] == 'Api' ) {
+                if ( $flightBook['type_app'] == 'Web' || $flightBook['type_app'] == 'Application' || $flightBook['type_app'] == 'Api' ) {
 
-                $DataFlightType .= '<hr style="margin:3px">';
+                    $DataFlightType .= '<hr style="margin:3px">';
 
-                $DataFlightType .= '<a href="' . $transactionLink . '" data-toggle="tooltip" data-placement="top"
+                    $DataFlightType .= '<a href="' . $transactionLink . '" data-toggle="tooltip" data-placement="top"
                                                data-original-title="مشاهده تراکنش ها"
                                                target="_blank">' . $flightBook['NameAgency'] . '</a><br/>
                                             <hr style="margin:3px">';
 
-                if ( $flightBook['api_id'] == '1' ) {
-                    $DataFlightType .= "سرور5";
-                } elseif ( $flightBook['api_id'] == '5' ) {
-                    $DataFlightType .= " سرور 4";
-                } elseif ( $flightBook['api_id'] == '14' ) {
-                    $DataFlightType .= " سرور 14";
-                }elseif ( $flightBook['api_id'] == '15' ) {
-                    $DataFlightType .= " سرور 15";
-                }elseif ( $flightBook['api_id'] == '16' ) {
-                    $DataFlightType .= "سرور 16";
-                } elseif ( $flightBook['api_id'] == '17' ) {
-                    $DataFlightType .= "سرور 17";
-                } elseif ( $flightBook['api_id'] == '12' ) {
-                    $DataFlightType .= "سرور 12";
-                } elseif ( $flightBook['api_id'] == '13' ) {
-                    $DataFlightType .= " سرور 13";
-                } elseif ( $flightBook['api_id'] == '8' ) {
-                    $DataFlightType .= "سرور 7";
-                } elseif ( $flightBook['api_id'] == '10' ) {
-                    $DataFlightType .= " سرور 9";
-                } elseif ( $flightBook['api_id'] == '11' ) {
-                    $DataFlightType .= "سرور 10";
-                }elseif ( $flightBook['api_id'] == '18' ) {
-                    $DataFlightType .= "سرور 18";
-                }elseif ( $flightBook['api_id'] == '19' ) {
-                    $DataFlightType .= "سرور 19";
-                }elseif ( $flightBook['api_id'] == '20' ) {
-                    $DataFlightType .= "سپهر";
-                }elseif ( $flightBook['api_id'] == '21' ) {
-                    $DataFlightType .= " چارتر118";
-                }elseif ( $flightBook['api_id'] == '43' ) {
-                    $DataFlightType .= " سیتی نت";
-                }elseif ( $flightBook['api_id'] == '22' ) {
-                    $DataFlightType .= "سپهر پرستاره";
-                }
+                    if ( $flightBook['api_id'] == '1' ) {
+                        $DataFlightType .= "سرور5";
+                    } elseif ( $flightBook['api_id'] == '5' ) {
+                        $DataFlightType .= " سرور 4";
+                    } elseif ( $flightBook['api_id'] == '14' ) {
+                        $DataFlightType .= " سرور 14";
+                    }elseif ( $flightBook['api_id'] == '15' ) {
+                        $DataFlightType .= " سرور 15";
+                    }elseif ( $flightBook['api_id'] == '16' ) {
+                        $DataFlightType .= "سرور 16";
+                    } elseif ( $flightBook['api_id'] == '17' ) {
+                        $DataFlightType .= "سرور 17";
+                    } elseif ( $flightBook['api_id'] == '12' ) {
+                        $DataFlightType .= "سرور 12";
+                    } elseif ( $flightBook['api_id'] == '13' ) {
+                        $DataFlightType .= " سرور 13";
+                    } elseif ( $flightBook['api_id'] == '8' ) {
+                        $DataFlightType .= "سرور 7";
+                    } elseif ( $flightBook['api_id'] == '10' ) {
+                        $DataFlightType .= " سرور 9";
+                    } elseif ( $flightBook['api_id'] == '11' ) {
+                        $DataFlightType .= "سرور 10";
+                    }elseif ( $flightBook['api_id'] == '18' ) {
+                        $DataFlightType .= "سرور 18";
+                    }elseif ( $flightBook['api_id'] == '19' ) {
+                        $DataFlightType .= "سرور 19";
+                    }elseif ( $flightBook['api_id'] == '20' ) {
+                        $DataFlightType .= "سپهر";
+                    }elseif ( $flightBook['api_id'] == '21' ) {
+                        $DataFlightType .= " چارتر118";
+                    }elseif ( $flightBook['api_id'] == '43' ) {
+                        $DataFlightType .= " سیتی نت";
+                    }elseif ( $flightBook['api_id'] == '22' ) {
+                        $DataFlightType .= "سپهر پرستاره";
+                    }
 
-            }
-            else {
-                $DataFlightType .= '<a href="' . $transactionLink . '" data-toggle="tooltip" data-placement="top"
+                }
+                else {
+                    $DataFlightType .= '<a href="' . $transactionLink . '" data-toggle="tooltip" data-placement="top"
                                            data-original-title="مشاهده تراکنش ها"
                                            target="_blank">' . $flightBook['NameAgency'] . '</a>';
-            }
-            $DataFlightType .= " - ";
-            $DataFlightType .=functions::DetectDirection( $flightBook['factor_number'], $flightBook['request_number'] );
+                }
+                $DataFlightType .= " - ";
+                $DataFlightType .=functions::DetectDirection( $flightBook['factor_number'], $flightBook['request_number'] );
             }
 
 
@@ -4576,9 +4576,9 @@ class bookshowTest extends clientAuth {
                     $ColorTr='#444343';//مشکی
                 }
                 else if($this->colorTrByStatusCreditPurple=='Yes'){//یعنی اعبار بعد خرید کم نشده
-                   $ColorTr='#b0a7dd';//بنفش
-               }
-               else if($BuyFromIt==0){//رکورد تراکنش مالی ندارد
+                    $ColorTr='#b0a7dd';//بنفش
+                }
+                else if($BuyFromIt==0){//رکورد تراکنش مالی ندارد
                     $ColorTr='#f7c2c2';//قرمز
                 }
             }
@@ -8183,7 +8183,7 @@ class bookshowTest extends clientAuth {
 
             $DataCipInformation .=
                 $flightBook['airport_code_cip'] . '-' .  ($flightBook['flight_type'] === 'inbound' ? 'پرواز ورودی به فرودگاه' : 'پرواز خروجی از فرودگاه' ) . '/' .  ($flightBook['trip_type'] === 'international' ? 'پرواز بین المللی' : 'پرواز داخلی' );
-                ;
+            ;
 //====================================Cip Information ===================
 
 
@@ -8534,7 +8534,7 @@ class bookshowTest extends clientAuth {
                         //                        echo $DataFlightActionBtn; die();
                         if ( $flightBook['successfull'] != 'nothing' ) {
 
-                            $DataFlightActionBtn .= '<a onclick="ModalShowBookForExclusiveTour(' . "'" . $flightBook['request_number'] . "'" . ');return false"
+                            $DataFlightActionBtn .= '<a onclick="ModalShowBookForCip(' . "'" . $flightBook['request_number'] . "'" . ');return false"
                                                                            data-toggle="modal"
                                                                            data-target="#ModalPublic">
                                                                             <i class="fcbtn btn btn-outline btn-info btn-1c tooltip-info fa fa-eye"
@@ -8985,7 +8985,7 @@ class bookshowTest extends clientAuth {
             $sql   = "SELECT *, '" . CLIENT_DOMAIN . "' AS DomainAgency, "
                 . " SUM(adt_qty) AS adt_qty_f,"
                 . " SUM(chd_qty) AS chd_qty_f"
-                . " FROM book_exclusive_tour_tb WHERE 1=1 ";
+                . " FROM book_cip_tb WHERE 1=1 ";
 
             if ( ! empty( $intendedUser['member_id'] ) ) {
                 $sql .= ' AND member_id=' . $intendedUser['member_id'] . ' ';
@@ -10257,8 +10257,8 @@ class bookshowTest extends clientAuth {
         }
         else{
             $this->ArrChargeUserPrice[$client_id] = $ChargeNow;
-        $beforeCredit = $this->ArrChargeUserPrice[$client_id];  // اعتبار قبل از خرید
-        $this->ArrChargeUserPrice[$client_id] = $beforeCredit-$BuyFromIt;  // اعتبار بعد از خرید
+            $beforeCredit = $this->ArrChargeUserPrice[$client_id];  // اعتبار قبل از خرید
+            $this->ArrChargeUserPrice[$client_id] = $beforeCredit-$BuyFromIt;  // اعتبار بعد از خرید
 
             if ($beforeCredit <= 0 || $this->ArrChargeUserPrice[$client_id] < 0)
                 $this->colorTrByStatusCreditBlak = 'Yes';

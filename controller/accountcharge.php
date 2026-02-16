@@ -192,7 +192,7 @@ class accountcharge extends clientAuth
 			if (!empty($_POST['Reason'])) {
                 if($_POST['Reason']=='buy'){
                     $sql .= " AND (T.Reason= 'buy' OR T.Reason= 'buy_hotel' OR T.Reason= 'buy_insurance' OR T.Reason= 'buy_reservation_hotel' OR T.Reason= 'buy_reservation_ticket' OR T.Reason= 'buy_foreign_hotel'
-                    OR T.Reason= 'buy_Europcar' OR T.Reason= 'buy_reservation_tour' OR T.Reason= 'buy_reservation_visa' OR T.Reason= 'buy_gasht_transfer' OR T.Reason= 'buy_train' OR T.Reason= 'buy_bus' OR T.Reason= 'buy_entertainment' OR T.Reason= 'buy_visa_plan' OR T.Reason= 'buy_package' ) ";
+                    OR T.Reason= 'buy_Europcar' OR T.Reason= 'buy_reservation_tour' OR T.Reason= 'buy_reservation_visa' OR T.Reason= 'buy_gasht_transfer' OR T.Reason= 'buy_train' OR T.Reason= 'buy_bus' OR T.Reason= 'buy_entertainment' OR T.Reason= 'buy_visa_plan' OR T.Reason= 'buy_package OR T.Reason= 'buy_cip' ) ";
                 }else{
                     $sql .= " AND (T.Reason='{$_POST['Reason']}') ";
                 }
@@ -253,7 +253,7 @@ class accountcharge extends clientAuth
 			if (!empty($_POST['Reason'])) {
                 if($_POST['Reason']=='buy'){
                     $sql .= " AND (T.Reason= 'buy' OR T.Reason= 'buy_hotel' OR T.Reason= 'buy_insurance' OR T.Reason= 'buy_reservation_hotel' OR T.Reason= 'buy_reservation_ticket' OR T.Reason= 'buy_foreign_hotel'
-                    OR T.Reason= 'buy_Europcar' OR T.Reason= 'buy_reservation_tour' OR T.Reason= 'buy_reservation_visa' OR T.Reason= 'buy_gasht_transfer' OR T.Reason= 'buy_train' OR T.Reason= 'buy_bus' OR T.Reason= 'buy_entertainment' OR T.Reason= 'buy_visa_plan' OR T.Reason= 'buy_package' ) ";
+                    OR T.Reason= 'buy_Europcar' OR T.Reason= 'buy_reservation_tour' OR T.Reason= 'buy_reservation_visa' OR T.Reason= 'buy_gasht_transfer' OR T.Reason= 'buy_train' OR T.Reason= 'buy_bus' OR T.Reason= 'buy_entertainment' OR T.Reason= 'buy_visa_plan' OR T.Reason= 'buy_package OR T.Reason= 'buy_cip' ) ";
                 }else{
                     $sql .= " AND (T.Reason='{$_POST['Reason']}') ";
                 }
@@ -321,7 +321,7 @@ class accountcharge extends clientAuth
             if (!empty($_POST['Reason'])) {
                 if($_POST['Reason']=='buy'){
                     $sql_buy_search .= " AND (Reason= 'buy' OR Reason= 'buy_hotel' OR Reason= 'buy_insurance' OR Reason= 'buy_reservation_hotel' OR Reason= 'buy_reservation_ticket' OR Reason= 'buy_foreign_hotel'
-                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' ) ";
+                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package OR Reason= 'buy_cip' ) ";
                 }else{
                     $sql_buy_search .= " AND (Reason='{$_POST['Reason']}') ";
                 }
@@ -403,6 +403,9 @@ class accountcharge extends clientAuth
 			case 'buy_package':
 				$ReasonFa = 'پرواز+ هتل';
 				break;
+                case 'buy_cip':
+                    $ReasonFa = 'تشریفات فرودگاه';
+                    break;
 			default:
 				$ReasonFa = 'ـــــــ';
 				break;
@@ -1000,6 +1003,9 @@ class accountcharge extends clientAuth
                     case 'buy_package':
                         $ReasonFa = 'پرواز+ هتل';
                         break;
+                    case 'buy_cip':
+                        $ReasonFa = 'تشریفات فرودگاه';
+                        break;
                     default:
                         $ReasonFa = 'ـــــــ';
                         break;
@@ -1129,7 +1135,7 @@ class accountcharge extends clientAuth
             if (!empty($_POST['Reason'])) {
                 if($_POST['Reason']=='buy'){
                     $sql .= " AND (Reason= 'buy' OR Reason= 'buy_hotel' OR Reason= 'buy_insurance' OR Reason= 'buy_reservation_hotel' OR Reason= 'buy_reservation_ticket' OR Reason= 'buy_foreign_hotel'
-                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' ) ";
+                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package OR Reason= 'buy_cip' ) ";
                 }else{
                     $sql .= " AND (Reason='{$_POST['Reason']}') ";
                 }
@@ -1206,7 +1212,7 @@ class accountcharge extends clientAuth
 
                 if($_POST['Reason']=='buy'){
                     $sql_buy_search .= " AND (Reason= 'buy' OR Reason= 'buy_hotel' OR Reason= 'buy_insurance' OR Reason= 'buy_reservation_hotel' OR Reason= 'buy_reservation_ticket' OR Reason= 'buy_foreign_hotel'
-                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' ) ";
+                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' OR Reason= 'buy_cip' ) ";
                 }else{
                     $sql_buy_search .= " AND (Reason='{$_POST['Reason']}') ";
                 }
@@ -1315,6 +1321,9 @@ class accountcharge extends clientAuth
                         break;
                     case 'buy_package':
                         $ReasonFa = 'پرواز+ هتل';
+                        break;
+                    case 'buy_cip':
+                        $ReasonFa = 'تشریفات فرودگاه';
                         break;
                     default:
                         $ReasonFa = 'ـــــــ';
@@ -1533,6 +1542,9 @@ class accountcharge extends clientAuth
                     case 'buy_package':
                         $ReasonFa = 'پرواز+ هتل';
                         break;
+                        case 'buy_cip':
+                    $ReasonFa = 'تشریفات فرودگاه';
+                    break;
                     default:
                         $ReasonFa = 'ـــــــ';
                         break;

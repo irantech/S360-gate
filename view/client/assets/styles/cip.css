@@ -585,6 +585,25 @@
     font-size: 20px;
 }
 
+.cip-services-toggle-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.cip-services-open .cip-services-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.cip-services-content {
+    transition: all 0.3s ease;
+}
+
+.cip-services-open .cip-services-content {
+    display: block !important;
+}
+
 .cip-services-body {
     padding: 0;
 }
