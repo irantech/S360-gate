@@ -8,7 +8,10 @@
             <input type="text" id="iata_destination_package" name="iata_destination_package"
                    class="inputSearchForeign  iata-destination-package-js" placeholder="مقصد ( شهر )">
         </div>
+        <div class="resultUlInputSearch list-show-result list_popular_destination_internal-js" id="list_destination_popular_internal">
+        </div>
         <input id="destination_package" type="hidden" value="" name="destination_package" placeholder="مقصد ( نام شهر یا فرودگاه )" class="destination-package-js">
         <div id="list_destination_airport_package" class="resultUlInputSearch list-show-result list-destination-airport-package-js"></div>
     </div>
+
 </div>

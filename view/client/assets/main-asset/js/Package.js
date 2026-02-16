@@ -1,11 +1,36 @@
 const origin_input = $('.iata-origin-package-js')
 const destination_input = $('.iata-destination-package-js')
-origin_input.on('keyup', function() {
-  getCities(this, 'origin')
-})
-destination_input.on('keyup', function() {
-  getCities(this, 'destination')
-})
+
+$(document).ready(function () {
+
+  $(document).on('click', '.iata-origin-package-js', function () {
+    getCities(this, 'origin');
+  });
+
+  $(document).on('focus', '.iata-origin-package-js', function () {
+    getCities(this, 'origin');
+  });
+
+  $(document).on('keyup', '.iata-origin-package-js', function () {
+    getCities(this, 'origin');
+  });
+
+
+  $(document).on('click', '.iata-destination-package-js', function () {
+    getCities(this, 'destination');
+  });
+
+  $(document).on('focus', '.iata-destination-package-js', function () {
+    getCities(this, 'destination');
+  });
+
+  $(document).on('keyup', '.iata-destination-package-js', function () {
+    getCities(this, 'destination');
+  });
+
+});
+
+
 $('.box-of-count-package-passenger-boxes-js,.div_btn').on('click', function(e) {
   $('.cbox-package-count-passenger-js').toggle()
   $(this).parents().find('.down-count-passenger').toggleClass('fa-caret-up')
@@ -30,6 +55,7 @@ $('body').click(() => {
 })
 
 function getCities(obj, type) {
+
   let list_flight_searched = $('.list-' + type + '-airport-package-js')
   $('.' + type + '-package-js').val('')
   $('.list_popular_' + type + '_external-js').hide();
@@ -120,8 +146,8 @@ function getCities(obj, type) {
     })
   }
   else if(iata.length === 0) {
-    $('.list-origin' + type + '-airport-package-js , .list-' + type + '-airport-package-js').hide();
-    $('.list_popular_' + type + '_external-js').show()
+    $('.list-' + type + '-airport-package-js').hide();
+    $('.list_popular_' + type + '_internal-js').show();
   } else {
     list_flight_searched.html(`<ul>${error_flight_text}</ul>`).show()
   }
