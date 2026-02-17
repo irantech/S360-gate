@@ -4676,3 +4676,261 @@ div.container_0.col-md-6:nth-child(1) .week-list li:nth-child(4), li:nth-child(5
 .tourSpecial_main>a:hover img {
     transform:scale(1.3)
 }
+.hotels-demo {
+    padding:0 0 70px;
+    position:relative
+}
+.hotels-demo .bg-absolute4 {
+    opacity:.25;
+    filter:blur(125px);
+    background:#22c55e;
+    border-radius:9999px;
+    width:15rem;
+    height:15rem;
+    z-index:-10;
+    left:0;
+    top:0;
+    position:absolute
+}
+.hotels-demo .hotels-grid {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(4, 1fr);
+    gap:20px
+}
+.hotels-demo .hotels-grid .div1 {
+    grid-area:3/2/5/4
+}
+.hotels-demo .hotels-grid .div2 {
+    grid-area:1/1/5/2;
+    height:550px
+}
+.hotels-demo .hotels-grid .div3 {
+    grid-area:1/2/3/3
+}
+.hotels-demo .hotels-grid .div4 {
+    grid-area:1/3/3/4
+}
+.hotels-demo .hotels-grid>div>a {
+    border-radius:12px;
+    box-shadow:0 1px 16px 0 rgba(0,0,0,.12);
+    overflow:hidden;
+    position:relative;
+    height:100%;
+    z-index:2;
+    display:flex;
+    flex-direction:column
+}
+.hotels-demo .hotels-grid>div>a::after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    background:linear-gradient(transparent, #000)
+}
+.hotels-demo .hotels-grid>div>a:hover img {
+    transform:scale(1.3)
+}
+.hotels-demo .hotels-grid>div>a:hover>div>i>svg {
+    fill:#00ced1
+}
+.hotels-demo .hotels-grid>div>a>img {
+    position:absolute;
+    z-index:-1;
+    transition:all .3s;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.hotels-demo .hotels-grid>div>a>div {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    height:100%;
+    padding:1rem
+}
+.hotels-demo .hotels-grid>div>a>div>i {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:100%;
+    transition:all .3s
+}
+.hotels-demo .hotels-grid>div>a>div>i>svg {
+    width:20px;
+    height:20px;
+    fill:#fff;
+    transition:all ease .5s
+}
+.hotels-demo .hotels-grid>div>a>div>div {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    width:calc(100% - 40px)
+}
+.hotels-demo .hotels-grid>div>a>div>div h4 {
+    font-size:18px;
+    font-weight:500;
+    color:#fff;
+    margin:0 0 .7rem 0;
+    text-align:right;
+    -webkit-line-clamp:1;
+    overflow:hidden;
+    -webkit-box-orient:vertical;
+    display:-webkit-box
+}
+.hotels-demo .hotels-grid>div>a>div>div span {
+    font-size:12px;
+    color:#fff;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+    -webkit-box-orient:vertical;
+    display:-webkit-box
+}
+.tours-style-demo {
+    width: 100%;
+    direction: rtl;
+    font-family: IRANSans, sans-serif;
+    padding: 40px 0px;
+    background: #fafafa;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 25px 0;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    font-weight: 550;
+    color: #8a00b8;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+
+.section-title h2:before,
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 2px;
+    background: #8a00b8;
+}
+
+.section-title h2:before {
+    right: 100%;
+}
+
+.section-title h2:after {
+    left: 100%;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+/* کارت ها */
+.tour-card {
+    width: 270px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.tour-card:hover {
+    transform: translateY(-4px);
+}
+
+.tour-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tour-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+}
+
+.tour-img img {
+    width: 78%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+.tour-info {
+    /*! padding: 0px 0px 0px 0px; */
+    text-align: right;
+}
+
+.tour-city {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    /*! margin-bottom: -10px; */
+    line-height: 22px;
+    height: 33px;
+    overflow: hidden;
+}
+
+.tour-time {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.tour-time span {
+    display: inline-block;
+    margin-right: 6px;
+    color: #555;
+}
+
+.price {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    margin-right: 6px;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .tour-card {
+        width: 240px;
+    }
+
+    .section-title h2:before,
+    .section-title h2:after {
+        width: 40px;
+    }
+}
+
+
+
+

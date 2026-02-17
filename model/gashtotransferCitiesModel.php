@@ -1,7 +1,7 @@
 <?php
 
 
-class gashToTransferCitiesModel extends  ModelBase
+class gashToTransferCitiesModel extends ModelBase
 {
     protected $table='gashtotransfer_cities_tb';
     protected $pk = 'id';
