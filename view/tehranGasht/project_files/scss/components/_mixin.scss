@@ -1,0 +1,40 @@
+@mixin grid-style($columns-num: 1, $column-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns:repeat($columns-num, 1fr);
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+}
+@mixin flex-center-all() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-direction-colum(){
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin text-limit($dot: 3){
+  -webkit-line-clamp: $dot;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+@mixin flex-between(){
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin grid($number){
+  display: grid;
+  grid-template-columns: repeat($number, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+@mixin flex-align-items-center() {
+  display: flex;
+  align-items: center;
+}

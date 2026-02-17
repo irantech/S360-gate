@@ -85,8 +85,9 @@ a:hover {
 
 //start about
 .about-ghods {
-  padding: 80px 0;
+  //padding: 80px 0;
   position: relative;
+  margin-top: 50px;
 
   .parent-about {
     @include grid-style(2, 30px, 30px);
@@ -362,6 +363,7 @@ a:hover {
 }
 .search_flight{
   background: #f8f8f8;
+  padding: 50px 0 !important;
   .container{
     position: relative;
   }
@@ -1076,7 +1078,7 @@ a:hover {
 .title-demo {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  //align-items: end;
   margin-bottom: 30px;
   padding-bottom: 7px;
   border-bottom: 1px dashed #666;
