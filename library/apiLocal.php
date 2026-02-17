@@ -356,9 +356,6 @@ class apiLocal extends clientAuth
         $data_json = json_encode($d);
         $Revalidate = $this->curlExecution($url, $data_json, 'yes');
 
-        functions::insertLog('$Revalidate: ' . json_encode($Revalidate) , '0abbasi');
-
-
         error_log('try show result Request Client AND Response in  method Revalidate in : ' . date('Y/m/d H:i:s') . 'url'. $url .' with request Number=>'.$_POST['UniqueCode'].'  array equal in => : ' . $data_json . " \n" . json_encode($Revalidate, true) . " \n", 3, LOGS_DIR . 'log_Request_Response_Revalidate.txt');
 
         if (!empty($Revalidate['Result']['Flight']['FlightID']) && $Revalidate['Result']['Flight']['PassengerDatas'][0]['BasePrice'] > 0) {

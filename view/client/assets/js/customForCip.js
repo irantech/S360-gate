@@ -353,6 +353,10 @@
                 beforeShow: function(n) {
                     if (typeof e === 'function') e(n, true);
                     $("#ui-datepicker-div").addClass("INH_class_Datepicker");
+                },
+                onSelect: function() {
+                    var input = this;
+                    setTimeout(function() { validateField(input); }, 100);
                 }
             });
             $el.datepicker('option', $.datepicker.regional['']);
@@ -375,6 +379,10 @@
                 beforeShow: function(n) {
                     if (typeof e === 'function') e(n, true);
                     $("#ui-datepicker-div").addClass("INH_class_Datepicker");
+                },
+                onSelect: function() {
+                    var input = this;
+                    setTimeout(function() { validateField(input); }, 100);
                 }
             });
             $el.datepicker('option', $.datepicker.regional['']);
@@ -397,8 +405,8 @@
             // Iranian: National code required, passport optional
             nationalCodeGroup.style.display = 'block';
             nationalCodeInput.required = true;
-            passportInput.required = false;
-            if (passportLabel) passportLabel.textContent = '(اختیاری برای ایرانیان)';
+            passportInput.required = true;
+            if (passportLabel) passportLabel.textContent = '';
         } else {
             // Non-Iranian: Passport required, national code hidden
             nationalCodeGroup.style.display = 'none';
@@ -542,7 +550,7 @@
             processedIds.add(serviceId);
 
             const quantityInput = document.getElementById(`cip-service-${serviceId}`) ||
-                                  document.getElementById(`cip-service-${serviceId}-mobile`);
+                document.getElementById(`cip-service-${serviceId}-mobile`);
             const quantity = quantityInput ? (parseInt(quantityInput.value) || 0) : 0;
 
             if (quantity <= 0) return;
@@ -804,8 +812,8 @@
                 console.log('Response:', response); // برای دیباگ
 
                 var data = Array.isArray(response)
-                   ? response
-                   : (response && response.data ? response.data : []);
+                    ? response
+                    : (response && response.data ? response.data : []);
 
                 // فیلتر جستجو
                 if (search_value) {
@@ -813,8 +821,8 @@
                     data = data.filter(function (item) {
                         if (!item) return false;
                         return (item.name_fa && item.name_fa.toLowerCase().includes(search)) ||
-                           (item.name_en && item.name_en.toLowerCase().includes(search)) ||
-                           (item.abbreviation && item.abbreviation.toLowerCase().includes(search));
+                            (item.name_en && item.name_en.toLowerCase().includes(search)) ||
+                            (item.abbreviation && item.abbreviation.toLowerCase().includes(search));
                     });
                 }
 
@@ -822,7 +830,7 @@
                 data = data.filter(function (item) {
                     if (!item || !item.active) return false;
                     return ['yes', '1', 'true', 'on', 'active']
-                       .includes(item.active.toString().toLowerCase());
+                        .includes(item.active.toString().toLowerCase());
                 });
 
                 // مرتب‌سازی فارسی
@@ -835,8 +843,8 @@
                 data.slice(0, 15).forEach(function (item) {
                     // تبدیل item به string قابل استفاده در onclick
                     var itemJson = JSON.stringify(item)
-                       .replace(/'/g, "\\'")
-                       .replace(/"/g, '&quot;');
+                        .replace(/'/g, "\\'")
+                        .replace(/"/g, '&quot;');
 
                     html += `
                 <li onclick="window.onAirlineSelectCip(${itemJson}, this)">
@@ -850,9 +858,9 @@
                 html += '</ul>';
 
                 $listContainer.html(
-                   data.length
-                      ? html
-                      : '<ul><li>نتیجه‌ای یافت نشد</li></ul>'
+                    data.length
+                        ? html
+                        : '<ul><li>نتیجه‌ای یافت نشد</li></ul>'
                 ).show();
             },
             error: function (xhr, status, error) {
@@ -968,11 +976,11 @@
                 var code = item.DepartureCode || item.Departure_Code || '';
 
                 html += "<li onclick='onAirportSelectCip(" + JSON.stringify(item).replace(/'/g, "&apos;") + ", this)'>" +
-                        "<div class='div_c_sr'>" +
-                        "<i class='svg_icon'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='16' height='16'><path d='M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z'/></svg></i>" +
-                        "<span class='c-text'>" + airport_name + "</span>" +
-                        "<em>(" + code + ")</em>" +
-                        "</div></li>";
+                    "<div class='div_c_sr'>" +
+                    "<i class='svg_icon'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='16' height='16'><path d='M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 160C174.3 160 160 174.3 160 192C160 209.7 174.3 224 192 224C209.7 224 224 209.7 224 192C224 174.3 209.7 160 192 160zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 48C112.5 48 48 112.5 48 192C48 204.4 52.49 223.6 63.3 249.2C73.78 274 88.66 301.4 105.8 329.1C134.2 375.3 167.2 419.1 192 451.7C216.8 419.1 249.8 375.3 278.2 329.1C295.3 301.4 310.2 274 320.7 249.2C331.5 223.6 336 204.4 336 192C336 112.5 271.5 48 192 48V48z'/></svg></i>" +
+                    "<span class='c-text'>" + airport_name + "</span>" +
+                    "<em>(" + code + ")</em>" +
+                    "</div></li>";
 
                 // Show sub airports if exists
                 if (item.sub && item.sub.length > 0) {
@@ -981,11 +989,11 @@
                         if (!sub_airport) return;
 
                         html += "<li onclick='onAirportSelectCip(" + JSON.stringify(subItem).replace(/'/g, "&apos;") + ", this)'>" +
-                                "<div class='div_c_sr sub-airport'>" +
-                                "<i class='svg_icon'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='16' height='16'><path d='M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192z'/></svg></i>" +
-                                "<span class='c-text'>" + sub_airport + "</span>" +
-                                "<em>(" + (subItem.DepartureCode || subItem.Departure_Code || '') + ")</em>" +
-                                "</div></li>";
+                            "<div class='div_c_sr sub-airport'>" +
+                            "<i class='svg_icon'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='16' height='16'><path d='M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192z'/></svg></i>" +
+                            "<span class='c-text'>" + sub_airport + "</span>" +
+                            "<em>(" + (subItem.DepartureCode || subItem.Departure_Code || '') + ")</em>" +
+                            "</div></li>";
                     });
                 }
             });
@@ -1132,15 +1140,20 @@
             <div class="cip-passengers-forms"></div>
         `;
 
+        // 1. Create contact box (مشخصات تماس خریدار)
+        const contactHtml = generateContactBox();
+        container.insertAdjacentHTML('beforeend', contactHtml);
+
+        // 2. Create flight info box (اطلاعات سفر)
+        const flightInfoHtml = generateFlightInfoBox(cipData);
+        container.insertAdjacentHTML('beforeend', flightInfoHtml);
+
+        // 3. Create passengers wrapper (اطلاعات مسافرین)
         container.appendChild(passengersWrapper);
 
         // Generate passenger forms
         const formsContainer = passengersWrapper.querySelector('.cip-passengers-forms');
         generateAllPassengerForms(formsContainer, quantity);
-
-        // Create flight info box
-        const flightInfoHtml = generateFlightInfoBox(cipData);
-        container.insertAdjacentHTML('beforeend', flightInfoHtml);
 
         const serviceHtml = generateServiceBox(cipData);
         container.insertAdjacentHTML('beforeend', serviceHtml);
@@ -1471,7 +1484,7 @@
             <div class="cip-flight-info-header">
                 <h2 class="cip-section-title">
                     <i class="fa-solid fa-plane"></i>
-                    اطلاعات سفر
+                     اطلاعات سفر (برای ارائه خدمات صحیح لطفا اطلاعات پرواز خود را وارد نمایید)
                 </h2>
             </div>
             <div class="cip-flight-info-body">
@@ -1485,7 +1498,7 @@
                             <input type="text"
                                    id="cip-airline-input"
                                    class="cip-input"
-                                   placeholder="جستجوی شرکت هواپیمایی..."
+                                   placeholder="شرکت هواپیمایی که سوار می شوید ..."
                                    autocomplete="off">
                             <input type="hidden" name="flightInfo[airline]" id="cip-airline-select">
                             <div id="cip-airline-list" class="cip-autocomplete-list"></div>
@@ -1518,7 +1531,7 @@
                             <input type="text"
                                    id="cip-airport-input"
                                    class="cip-input"
-                                   placeholder="جستجوی فرودگاه..."
+                                   placeholder="فرودگاهی که سوار می شوید ..."
                                    autocomplete="off">
                             <input type="hidden" name="flightInfo[airport]" id="cip-airport-select">
                             <div id="cip-airport-list" class="cip-autocomplete-list"></div>
@@ -1548,20 +1561,20 @@
                             <span class="cip-required">*</span>
                         </label>
                         <div class="cip-input-wrapper cip-time-wrapper">
-                            <select name="flightInfo[flightHour]"
-                                    id="cip-flight-hour"
-                                    class="cip-select cip-time-select"
-                                    required>
-                                <option value="">ساعت</option>
-                                ${generateHourOptions()}
-                            </select>
-                            <span class="cip-time-separator">:</span>
                             <select name="flightInfo[flightMinute]"
                                     id="cip-flight-minute"
                                     class="cip-select cip-time-select"
                                     required>
                                 <option value="">دقیقه</option>
                                 ${generateMinuteOptions()}
+                            </select>
+                            <span class="cip-time-separator">:</span>
+                            <select name="flightInfo[flightHour]"
+                                    id="cip-flight-hour"
+                                    class="cip-select cip-time-select"
+                                    required>
+                                <option value="">ساعت</option>
+                                ${generateHourOptions()}
                             </select>
                         </div>
                     </div>
@@ -2096,75 +2109,6 @@
 
         return `
         <div class="cip-selected-services-summary">
-            <div class="cip-summary-header">
-                <h3>
-                    <i class="fa-solid fa-receipt"></i>
-                    خلاصه سفارش
-                </h3>
-            </div>
-            <div class="cip-summary-body">
-                <!-- سرویس اصلی - قیمت واحد -->
-                <div class="cip-summary-row" style="padding: 10px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
-                    <span style="font-weight: 600;">
-                        <i class="fa-solid fa-star"></i>
-                        ${mainServiceTitle}
-                    </span>
-                    <span style="color: #666; font-size: 14px;">
-                        ${formatPrice(unitPrice)} ریال
-                    </span>
-                </div>
-
-                <!-- جزئیات مسافران -->
-                ${passengerDetailsHTML ? `
-                <div id="cip-passenger-details" style="padding: 10px; background: #f8f9fa; border-radius: 4px; margin: 10px 0;">
-                    <div style="font-weight: 600; margin-bottom: 8px; font-size: 14px; color: #333;">جزئیات مسافران:</div>
-                    ${passengerDetailsHTML}
-                </div>
-                ` : ''}
-
-                <!-- جمع سرویس اصلی -->
-                <div class="cip-summary-total-row main-service" style="padding: 10px; display: flex; justify-content: space-between; align-items: center; font-weight: 600">
-                    <span class="cip-summary-total-label">جمع سرویس اصلی:</span>
-                    <span class="cip-summary-total-value">
-                        <span id="cip-main-service-price">${formatPrice(totalPassengerPrice)}</span>
-                        <small>ریال</small>
-                    </span>
-                </div>
-
-                <!-- پیام خالی بودن -->
-                <div id="cip-summary-empty-message" class="cip-summary-empty">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <p>هنوز سرویس جانبی انتخاب نشده است</p>
-                </div>
-
-                <!-- محتوای سرویس‌های انتخاب شده -->
-                <div id="cip-summary-content" style="display: none;">
-                    <div class="cip-summary-divider"></div>
-
-                    <!-- لیست سرویس‌های جانبی انتخاب شده -->
-                    <div id="cip-selected-services-list"></div>
-
-                    <div class="cip-summary-divider"></div>
-
-                    <!-- جمع سرویس‌های جانبی -->
-                    <div class="cip-summary-total-row ancillary-total">
-                        <span class="cip-summary-total-label">جمع سرویس‌های جانبی:</span>
-                        <span class="cip-summary-total-value">
-                            <span id="cip-ancillary-total">0</span>
-                            <small>ریال</small>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- جمع کل نهایی -->
-                <div class="cip-summary-total-row grand-total">
-                    <span class="cip-summary-total-label">جمع کل:</span>
-                    <span class="cip-summary-total-value">
-                        <span id="cip-grand-total-summary">${formatPrice(totalPassengerPrice)}</span>
-                        <small>ریال</small>
-                    </span>
-                </div>
-            </div>
 
             <!-- دکمه ادامه خرید -->
             <div class="cip-continue-btn-wrapper">
@@ -2187,7 +2131,7 @@
                 html = `
                 <div class="cip-extra-input-group mb-3" data-unit="${index + 1}">
                     <label class="small text-muted mb-2 d-block fw-bold">
-                        حیوان خانگی - واحد ${index + 1}
+                        حیوان خانگی 
                     </label>
                     <div class="cip-service-inputs-grid">
                         <div class="cip-service-input-item">
@@ -2418,8 +2362,8 @@
                 if (inputConfig && inputConfig.fields && inputConfig.fields.length > 0) {
                     // extraInputsHTML = inputService(serviceCip, serviceId, i);
                     // mobileExtraInputsHTML = inputService(serviceCip, serviceId, i);
-                container.innerHTML += inputService(serviceCip, serviceId, i)
-                console.log('data: ' , extraInputsHTML)
+                    container.innerHTML += inputService(serviceCip, serviceId, i)
+                    console.log('data: ' , extraInputsHTML)
 
 
                 } else {
@@ -2595,43 +2539,43 @@
 
         return `
     <div class="cip-services-wrapper">
-        <div class="cip-services-header">
+        <div class="cip-services-header" onclick="this.parentElement.classList.toggle('cip-services-open')" style="cursor: pointer;">
             <h2 class="cip-section-title">
                 <i class="fa-solid fa-concierge-bell"></i>
                 سرویس های جانبی
             </h2>
+            <i class="fa-solid fa-chevron-down cip-services-toggle-icon"></i>
         </div>
 
-        <!-- نسخه دسکتاپ (جدول) -->
-        <div class="cip-services-desktop d-none d-md-block">
-            <div class="cip-services-body">
-                <div class="cip-table-responsive">
-                    <table class="cip-services-table">
-                        <thead>
-                            <tr>
-                                <th width="60%">شرح / عنوان سرویس</th>
-                                <th width="20%">تعداد</th>
-                                <th width="20%">قیمت کل</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${desktopHTML}
-                        </tbody>
-                    </table>
+        <div class="cip-services-content" style="display: none;">
+            <!-- نسخه دسکتاپ (جدول) -->
+            <div class="cip-services-desktop d-none d-md-block">
+                <div class="cip-services-body">
+                    <div class="cip-table-responsive">
+                        <table class="cip-services-table">
+                            <thead>
+                                <tr>
+                                    <th width="60%">شرح / عنوان سرویس</th>
+                                    <th width="20%">تعداد</th>
+                                    <th width="20%">قیمت کل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${desktopHTML}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نسخه موبایل (کارت) -->
+            <div class="cip-services-mobile d-md-none">
+                <div class="cip-services-cards">
+                    ${mobileHTML}
                 </div>
             </div>
         </div>
-
-        <!-- نسخه موبایل (کارت) -->
-        <div class="cip-services-mobile d-md-none">
-            <div class="cip-services-cards">
-                ${mobileHTML}
-            </div>
-        </div>
     </div>
-
-    <!-- مشخصات تماس خریدار -->
-    ${generateContactBox()}
 
     <!-- باکس خلاصه سرویس‌های انتخاب شده -->
     ${generateSelectedServicesSummary(cipData)}
@@ -2686,9 +2630,9 @@
             const nationalCode = p.nationalCode || '-';
             const genderVal = p.gender || '';
             const genderLabel = (genderVal === 'MR' || genderVal === 'Male') ? 'آقا' :
-                                (genderVal === 'MS' || genderVal === 'Female') ? 'خانم' :
-                                (genderVal === 'MSTR') ? 'پسر' :
-                                (genderVal === 'MISS') ? 'دختر' : '-';
+                (genderVal === 'MS' || genderVal === 'Female') ? 'خانم' :
+                    (genderVal === 'MSTR') ? 'پسر' :
+                        (genderVal === 'MISS') ? 'دختر' : '-';
 
             // پیدا کردن نام ملیت از لیست کشورها
             const nationalityCode = p.nationality || '';

@@ -399,6 +399,8 @@ class mainTour extends clientAuth
 
         $tourCollection = $this->tour_resource->collection($tours);
 
+        functions::insertLog('$tourCollection: ' . json_encode($tourCollection) , '0abbasi');
+
         return functions::withSuccess(array(
             'tours'   => $tourCollection,
             'filters' => array(

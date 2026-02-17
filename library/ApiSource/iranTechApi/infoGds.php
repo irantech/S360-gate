@@ -3285,8 +3285,6 @@ CASE
     public function getAllData($params) {
         $final_result = [];
 
-
-
         foreach ($params['services'] as $key=>$each_method) {
             $name = $key ;
             if($key == 'tourInternalDeptCity'){

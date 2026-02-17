@@ -629,6 +629,7 @@ class Model {
 	 * @return array
 	 */
 	public function all( $without_trashed = true ) {
+
 		if ( $without_trashed ) {
 			$query = $this->withoutTrashed();
 
