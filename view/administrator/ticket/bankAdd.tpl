@@ -58,6 +58,7 @@
                             <option value="publicBank-بانک اشتراکی-publicBank">بانک اشتراکی (publicBank)</option>
                             <option value="selfit-سلفیت-selfit">درگاه سلفیت (SELFiT)</option>
                             <option value="payStar-پی استار-payStar">پی استار</option>
+                            <option value="payPing-پی پینگ-payPing">پی پینگ</option>
                         </select>
                     </div>
 

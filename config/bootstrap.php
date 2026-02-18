@@ -71,12 +71,10 @@ $query = $mainConfig->prepare($SqlClient);
 $query->execute();
 $client = $query->fetch(PDO::FETCH_ASSOC);
 
-
-
 //select id current page panel counter
 if (isset($_SESSION['memberIdCounterInAdmin']) && !isset($pageCallCurllFactorIrantech)) {
     defined('memberIdCounterInAdmin') or define('memberIdCounterInAdmin',$_SESSION['memberIdCounterInAdmin']);
-    if (!empty($_SERVER['HTTP_REFERER']) && strlen($_SERVER['HTTP_REFERER']) > strlen('https://localhost/')) {
+    if (!empty($_SERVER['HTTP_REFERER']) && strlen($_SERVER['HTTP_REFERER']) > strlen('http://localhost/')) {
         $urlPageNow = $_SERVER['HTTP_REFERER'];
     } else {
         $urlPageNow = $_SERVER['REQUEST_URI'];
@@ -340,10 +338,11 @@ if(!empty($client['Services'])){
         $client['jahangaThemeDir'] = 'mizbanfly';
     }
 
-    // mr javani >>>
+
+    //  mr shojaee developer
     elseif($_SERVER['REMOTE_ADDR'] == "127.0.0.1")
     {
-        $client['ThemeDir'] = 'jazireGanj';
+        $client['ThemeDir'] = 'doctor_bilit';
     }
 
 

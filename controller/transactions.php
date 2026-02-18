@@ -193,27 +193,30 @@ class transactions extends clientAuth
         WHEN t.Reason = 'buy_bus'  THEN report_bus_tb.DateMove
         WHEN t.Reason = 'buy_train'  THEN report_train_tb.MoveDate
         WHEN t.Reason = 'buy_gasht_transfer'  THEN report_gasht_tb.passenger_entryDate
+        WHEN t.Reason = 'buy_cip'  THEN report_cip_tb.date_time
         ELSE NULL
     END AS service_date,
 
-    CASE 
+    CASE
         WHEN (t.Reason = 'buy' or t.Reason = 'buy_reservation_ticket') THEN report_tb.api_id
         WHEN (t.Reason = 'buy_hotel' OR t.Reason = 'buy_reservation_hotel') THEN report_hotel_tb.source_id
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.SourceName
         WHEN t.Reason = 'buy_insurance' THEN report_insurance_tb.source_name_fa
+        WHEN t.Reason = 'buy_cip' THEN report_cip_tb.api_id
         ELSE NULL
     END AS source,
- CASE 
+ CASE
         WHEN (t.Reason = 'buy' or t.Reason = 'buy_reservation_ticket') THEN report_tb.total_price
         WHEN (t.Reason = 'buy_hotel' OR t.Reason = 'buy_reservation_hotel') THEN report_hotel_tb.total_price
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.total_price
         WHEN t.Reason = 'buy_train' THEN report_train_tb.FullPrice
         WHEN t.Reason = 'buy_insurance' THEN report_insurance_tb.paid_price
         WHEN t.Reason = 'buy_gasht_transfer' THEN report_insurance_tb.paid_price
+        WHEN t.Reason = 'buy_cip' THEN report_cip_tb.total_price
         ELSE NULL
     END AS customer_price,
 
- CASE 
+ CASE
         WHEN (t.Reason = 'buy' or t.Reason = 'buy_reservation_ticket') THEN report_tb.pid_private
         WHEN (t.Reason = 'buy_hotel' OR t.Reason = 'buy_reservation_hotel') THEN report_hotel_tb.serviceTitle
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.WebServiceType
@@ -222,7 +225,7 @@ class transactions extends clientAuth
         ELSE NULL
     END AS publicOrPrivate
 
-        
+
 FROM transactions t
 
 LEFT JOIN clients_tb  
@@ -243,8 +246,11 @@ LEFT JOIN report_insurance_tb
 LEFT JOIN report_train_tb 
     ON t.FactorNumber = report_train_tb.factor_number AND t.Reason = 'buy_train'
     
-LEFT JOIN report_gasht_tb  
+LEFT JOIN report_gasht_tb
     ON t.FactorNumber = report_gasht_tb.passenger_factor_num AND t.Reason = 'buy_gasht_transfer'
+
+LEFT JOIN report_cip_tb
+    ON t.FactorNumber = report_cip_tb.factor_number AND t.Reason = 'buy_cip'
          WHERE 1=1 " ;
 
 
@@ -272,7 +278,7 @@ LEFT JOIN report_gasht_tb
         if ($_POST['Reason'] != 'all') {
             if($_POST['Reason']=='buy'){
                 $sql .= " AND (t.Reason= 'buy' OR t.Reason= 'buy_hotel' OR t.Reason= 'buy_insurance' OR t.Reason= 'buy_reservation_hotel' OR t.Reason= 'buy_reservation_ticket' OR t.Reason= 'buy_foreign_hotel'
-                    OR t.Reason= 'buy_Europcar' OR t.Reason= 'buy_reservation_tour' OR t.Reason= 'buy_reservation_visa' OR t.Reason= 'buy_gasht_transfer' OR t.Reason= 'buy_train' OR t.Reason= 'buy_bus' OR t.Reason= 'buy_entertainment' OR t.Reason= 'buy_visa_plan' OR t.Reason= 'buy_package' ) ";
+                    OR t.Reason= 'buy_Europcar' OR t.Reason= 'buy_reservation_tour' OR t.Reason= 'buy_reservation_visa' OR t.Reason= 'buy_gasht_transfer' OR t.Reason= 'buy_train' OR t.Reason= 'buy_bus' OR t.Reason= 'buy_entertainment' OR t.Reason= 'buy_visa_plan' OR t.Reason= 'buy_package' OR t.Reason= 'buy_cip' ) ";
             }else{
                 $sql .= " AND (t.Reason='{$Reason}') ";
             }
@@ -330,7 +336,7 @@ LEFT JOIN report_gasht_tb
 
                 if($_POST['Reason']=='buy'){
                     $sql_buy_search .= " AND (Reason= 'buy' OR Reason= 'buy_hotel' OR Reason= 'buy_insurance' OR Reason= 'buy_reservation_hotel' OR Reason= 'buy_reservation_ticket' OR Reason= 'buy_foreign_hotel'
-                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' ) ";
+                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' OR Reason= 'buy_cip' ) ";
                 }else{
                     $sql_buy_search .= " AND (Reason='{$_POST['Reason']}') ";
                 }
@@ -444,27 +450,30 @@ LEFT JOIN report_gasht_tb
         WHEN t.Reason = 'buy_bus'  THEN report_bus_tb.DateMove
         WHEN t.Reason = 'buy_train'  THEN report_train_tb.MoveDate
         WHEN t.Reason = 'buy_gasht_transfer'  THEN report_gasht_tb.passenger_entryDate
+        WHEN t.Reason = 'buy_cip'  THEN report_cip_tb.date_time
         ELSE NULL
     END AS service_date,
 
-    CASE 
+    CASE
         WHEN (report_tb.id is not null) THEN report_tb.api_id
         WHEN (report_hotel_tb.id is not null) THEN report_hotel_tb.source_id
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.SourceName
         WHEN t.Reason = 'buy_insurance' THEN report_insurance_tb.source_name_fa
+        WHEN t.Reason = 'buy_cip' THEN report_cip_tb.api_id
         ELSE NULL
     END AS source,
- CASE 
+ CASE
         WHEN (t.Reason = 'buy' or t.Reason = 'buy_reservation_ticket') THEN report_tb.total_price
         WHEN (t.Reason = 'buy_hotel' OR t.Reason = 'buy_reservation_hotel') THEN report_hotel_tb.total_price
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.total_price
         WHEN t.Reason = 'buy_train' THEN report_train_tb.FullPrice
         WHEN t.Reason = 'buy_insurance' THEN report_insurance_tb.paid_price
         WHEN t.Reason = 'buy_gasht_transfer' THEN report_insurance_tb.paid_price
+        WHEN t.Reason = 'buy_cip' THEN report_cip_tb.total_price
         ELSE NULL
     END AS customer_price,
 
- CASE 
+ CASE
         WHEN (report_tb.id is not null) THEN report_tb.pid_private
         WHEN (report_hotel_tb.id is not null) THEN report_hotel_tb.serviceTitle
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.WebServiceType
@@ -472,7 +481,7 @@ LEFT JOIN report_gasht_tb
         WHEN t.Reason = 'buy_reservation_tour' THEN report_insurance_tb.serviceTitle
         ELSE NULL
     END AS publicOrPrivate,
- CASE 
+ CASE
         WHEN (report_tb.id is not null) THEN report_tb.pnr
         WHEN (report_hotel_tb.id is not null) THEN report_hotel_tb.pnr
         WHEN t.Reason = 'buy_bus' THEN report_bus_tb.pnr
@@ -500,6 +509,8 @@ LEFT JOIN report_insurance_tb
 LEFT JOIN report_train_tb 
     ON t.FactorNumber = report_train_tb.factor_number AND t.Reason = 'buy_train'
 
+    LEFT JOIN report_cip_tb 
+    ON t.FactorNumber = report_cip_tb.factor_number AND t.Reason = 'buy_cip'
 
 LEFT JOIN report_gasht_tb  
     ON t.FactorNumber = report_gasht_tb.passenger_factor_num AND t.Reason = 'buy_gasht_transfer'
@@ -539,6 +550,9 @@ LEFT JOIN report_gasht_tb
         if($type == 'train'){
             $sql .= " AND (report_train_tb.id is not null OR t.sourceType = $type) ";
         }
+        if($type == 'cip'){
+            $sql .= " AND (report_cip_tb.id is not null OR t.sourceType = $type) ";
+        }
 
 
 
@@ -555,7 +569,7 @@ LEFT JOIN report_gasht_tb
         if ($Reason != 'all') {
             if($_POST['Reason']=='buy'){
                 $sql .= " AND (t.Reason= 'buy' OR t.Reason= 'buy_hotel' OR t.Reason= 'buy_insurance' OR t.Reason= 'buy_reservation_hotel' OR t.Reason= 'buy_reservation_ticket' OR t.Reason= 'buy_foreign_hotel'
-                    OR t.Reason= 'buy_Europcar' OR t.Reason= 'buy_reservation_tour' OR t.Reason= 'buy_reservation_visa' OR t.Reason= 'buy_gasht_transfer' OR t.Reason= 'buy_train' OR t.Reason= 'buy_bus' OR t.Reason= 'buy_entertainment' OR t.Reason= 'buy_visa_plan' OR t.Reason= 'buy_package' ) ";
+                    OR t.Reason= 'buy_Europcar' OR t.Reason= 'buy_reservation_tour' OR t.Reason= 'buy_reservation_visa' OR t.Reason= 'buy_gasht_transfer' OR t.Reason= 'buy_train' OR t.Reason= 'buy_bus' OR t.Reason= 'buy_entertainment' OR t.Reason= 'buy_visa_plan' OR t.Reason= 'buy_package' OR t.Reason= 'buy_cip' ) ";
             }else{
                 $sql .= " AND (t.Reason='{$Reason}') ";
             }
@@ -615,7 +629,7 @@ LEFT JOIN report_gasht_tb
 
                 if($_POST['Reason']=='buy'){
                     $sql_buy_search .= " AND (Reason= 'buy' OR Reason= 'buy_hotel' OR Reason= 'buy_insurance' OR Reason= 'buy_reservation_hotel' OR Reason= 'buy_reservation_ticket' OR Reason= 'buy_foreign_hotel'
-                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' ) ";
+                    OR Reason= 'buy_Europcar' OR Reason= 'buy_reservation_tour' OR Reason= 'buy_reservation_visa' OR Reason= 'buy_gasht_transfer' OR Reason= 'buy_train' OR Reason= 'buy_bus' OR Reason= 'buy_entertainment' OR Reason= 'buy_visa_plan' OR Reason= 'buy_package' OR Reason= 'buy_cip' ) ";
                 }else{
                     $sql_buy_search .= " AND (Reason='{$_POST['Reason']}') ";
                 }
@@ -709,6 +723,8 @@ LEFT JOIN report_gasht_tb
                 $condition .= " AND (rht.id is not null or (t.api_id = {$provider['sourceCode']}) AND t.sourceType = 'hotel') ";
             }elseif($provider['sourceType'] == 'bus'){
                 $condition .= " AND (rbt.id is not null or (t.api_id = {$provider['sourceCode']}) AND t.sourceType = 'bus') ";
+            }elseif($provider['sourceType'] == 'cip'){
+                $condition .= " AND (rct.id is not null or (t.api_id = {$provider['sourceCode']}) AND t.sourceType = 'cip') ";
             }else{
                 $condition .= " AND FALSE ";
             }
@@ -719,14 +735,16 @@ LEFT JOIN report_gasht_tb
                                          left join report_tb rt on t.FactorNumber = rt.factor_number And rt.api_id = {$provider['sourceCode']}
                                          left join report_hotel_tb rht on t.FactorNumber = rht.factor_number And rht.source_id =  {$provider['sourceCode']}
                                          left join report_bus_tb rbt on t.FactorNumber = rbt.passenger_factor_num And rbt.SourceCode = {$provider['sourceCode']}
-                                         WHERE t.Status='1' AND t.PaymentStatus = 'success' 
-                                            $condition       
+                                         left join report_cip_tb rct on t.FactorNumber = rct.factor_number And rct.api_id = {$provider['sourceCode']}
+                                         WHERE t.Status='1' AND t.PaymentStatus = 'success'
+                                            $condition
                                            ";
             $sql_buy_search = " SELECT SUM(t.Price) AS total_buy FROM transactions t
                                       left join report_tb rt on t.FactorNumber = rt.factor_number And rt.api_id = {$provider['sourceCode']}
                                       left join report_hotel_tb rht on t.FactorNumber = rht.factor_number And rht.source_id =  {$provider['sourceCode']}
                                       left join report_bus_tb rbt on t.FactorNumber = rbt.passenger_factor_num And rbt.SourceCode = {$provider['sourceCode']}
-                                      WHERE t.Status='2' AND ((t.PaymentStatus = 'success') OR (t.PaymentStatus = 'pending' AND t.CreationDateInt > '{$time}')  )  
+                                      left join report_cip_tb rct on t.FactorNumber = rct.factor_number And rct.api_id = {$provider['sourceCode']}
+                                      WHERE t.Status='2' AND ((t.PaymentStatus = 'success') OR (t.PaymentStatus = 'pending' AND t.CreationDateInt > '{$time}')  )
                                        $condition";
 //            var_dump($sql_charge_search);
             $ModelBase = Load::library('ModelBase');
@@ -796,6 +814,9 @@ LEFT JOIN report_gasht_tb
             case 'buy_gasht_transfer':
                 $service = 'گشت و ترانسفر';
                 break;
+            case 'buy_cip':
+                $service = 'سی آی پی';
+                break;
             case 'buy_package':
                 $service = 'پرواز+ هتل';
                 break;
@@ -853,6 +874,9 @@ LEFT JOIN report_gasht_tb
                 break;
             case 'buy_gasht_transfer':
                 $type = 'خرید گشت ترانسفر';
+                break;
+            case 'buy_cip':
+                $type = 'خرید تشریفات فرودگاه';
                 break;
             case 'buy_reservation_tour':
                 $type = 'خرید تور';

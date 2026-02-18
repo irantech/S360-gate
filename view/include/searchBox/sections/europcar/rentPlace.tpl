@@ -1,6 +1,6 @@
 
 {load_presentation_object filename="mainCity" assign="objCity"}
-<div class="col-lg-2 col-md-4 col-sm-6 col-12 col_search">
+<div class="col-lg-2 col-md-6 col-sm-6 col-12 col_search">
     <div class="form-group">
         <select data-placeholder="##rentPlace##"
                 name="rent_car_place"
