@@ -1,0 +1,177 @@
+<template>
+  <div>
+    <div class="form-group">
+      <div
+        class="col-lg-12 col-md-12 col-12 col_search search_col col_with_route">
+        <div class="form-group origin_start">
+          <input
+            @input="(evt) => (form.origin = evt.target.value)"
+            autocomplete="nope"
+            aria-haspopup="false"
+            @keyup="prepareSearchCity('origin')"
+            v-model="form.origin"
+            ref="origin"
+            type="text"
+            class="form-control"
+            :placeholder="`${useXmltag('OriginCityAirPlane2')}`" />
+
+          <app-loading-spinner
+            :class="`${getLang() == 'en' ? 'loading-spinner-holder-en' : 'loading-spinner-holder'}`"
+            :loading="loading.origin"></app-loading-spinner>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-12 col_search search_col">
+        <div class="form-group">
+          <input
+            @input="(evt) => (form.destination = evt.target.value)"
+            autocomplete="nope"
+            aria-haspopup="false"
+            @keyup="prepareSearchCity('destination')"
+            v-model="form.destination"
+            ref="destination"
+            :disabled="!current_panel.selected_origin.value"
+            type="text"
+            class="inputSearchForeign form-control"
+            :placeholder="`${useXmltag('DestinationCityAirPlane2')}`" />
+          <app-loading-spinner
+            :class="`${getLang() == 'en' ? 'loading-spinner-holder-en' : 'loading-spinner-holder'}`"
+            :loading="loading.destination"></app-loading-spinner>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-cities">
+      <h6 class="title-c d-flex">
+        {{ current_panel.searched_cities ? useXmltag('Result') : useXmltag('PopularRoutes') }}
+      </h6>
+      <ul>
+        <li
+          v-if="city_list === null"
+          class="d-flex justify-content-center py-4">
+          <app-loading-spinner :loading="true"></app-loading-spinner>
+        </li>
+        <li v-for="city in city_list" :key="city.value" class="item_c">
+          <button
+            @click="selectCity(city)"
+            class="btn btn-block"
+            :disabled="
+              current_panel.selected_origin.value === city.value ||
+              current_panel.selected_destination.value === city.value
+            ">
+            {{getLang() == 'fa' ?  city.title :  city.title_en}}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  props: ["index_data", "panel_data"],
+  data() {
+    return {
+      form: {
+        origin: null,
+        destination: null,
+      },
+      loading: {
+        origin: false,
+        destination: false,
+      },
+      refillable: {
+        define: "origin",
+        origin: "selected_origin",
+        destination: "selected_destination",
+      },
+    }
+  },
+  computed: {
+    current_panel() {
+      let current_panel = this.panel_data[this.index_data.key]
+      console.log("current_panel", current_panel)
+      return current_panel
+    },
+    city_list() {
+      if (!this.current_panel.searched_cities) {
+
+         return this.current_panel.default_cities
+      } else {
+
+         return this.current_panel.searched_cities
+      }
+    },
+  },
+  methods: {
+    async selectCity(city) {
+      await this.$store.commit("setPwaData", {
+        index: this.index_data.key,
+        data: {
+          [this.refillable[this.refillable.define]]: city,
+        },
+      })
+
+      this.form[this.refillable.define] = this.getLang() == 'fa' ? city.title : city.title_en
+      this.refillable.define = "destination"
+      await this.$refs.destination.focus()
+      await this.$store.commit("setPwaData", {
+        index: this.index_data.key,
+        data: {searched_cities: null},
+      })
+      if (this.form.destination) {
+        this.panel_data.status = false
+      }
+    },
+
+    prepareSearchCity(define) {
+      let loading_index = this.refillable.define
+      this.loading[loading_index] = true
+      if (this.timer) {
+        clearTimeout(this.timer)
+        this.timer = null
+      }
+      this.timer = setTimeout(() => {
+        this.refillable.define = define
+        this.searchCity(this.form[define])
+      }, 485)
+    },
+    async searchCity(searchable) {
+      let loading_index = this.refillable.define
+      this.loading[loading_index] = true
+      if (!searchable) {
+        this.form[this.refillable.define] = null
+        await this.$store.commit("setPwaData", {
+          index: this.index_data.key,
+          data: {
+            [this.refillable[this.refillable.define]]:
+              this.current_panel.city_template,
+          },
+        })
+        this.loading[loading_index] = false
+      }
+      await this.$store.dispatch("pwaGetSearchedCities", {
+        index: this.index_data.key,
+        strategy: this.index_data.strategy,
+        searchable: searchable,
+      })
+      this.loading[loading_index] = false
+    },
+  },
+  /*watch: {
+    "panel_data.status": {
+      handler: function (after, before) {
+        if (after) {
+          setTimeout(() => {
+            if (!this.form.origin) {
+              this.$refs.origin.focus();
+            } else {
+              this.$refs.destination.focus();
+            }
+          }, 100);
+        }
+      },
+      deep: true,
+      immediate: true,
+    },
+  },*/
+}
+</script>

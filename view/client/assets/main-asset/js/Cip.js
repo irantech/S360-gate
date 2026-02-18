@@ -139,7 +139,7 @@ function onAirportSelect(item, element) {
    }, 100);
 }
 function openDepartureDate() {
-   $('#startDateForCip').datepicker('show');
+   $('#dateForCip').datepicker('show');
 }
 // =============================================== end airport List ==============================================
 
@@ -238,11 +238,11 @@ function dataSearchCip() {
    let number_adult = parseInt($('.internal-adult-js').val())
    let number_child = parseInt($('.internal-child-js').val())
    let number_infant = parseInt($('.internal-infant-js').val())
-   let departure_date = $('#startDateForCip').val()
+   let departure_date_cip = $('#dateForCip').val()
    checkSearchCipFieldsValues(
        { value: origin, name: 'فرودگاه مبدا' },
        { value: flightType, name: 'نوع پرواز' },
-       { value: departure_date, name: 'تاریخ ورود' }
+       { value: departure_date_cip, name: 'تاریخ ورود' }
    );
    let tripType = flightType === "intl_outbound" || flightType === "intl_inbound" ? "international" : "domestic"
    let flightTypeNew = (flightType === "dom_outbound" || flightType === "intl_outbound" ) ? "outbound" : "inbound"
@@ -252,7 +252,7 @@ function dataSearchCip() {
       number_child: number_child,
       number_infant: number_infant,
       origin: origin,
-      departure_date: departure_date,
+      departure_date: departure_date_cip,
       TripType:tripType,
       flightType: flightTypeNew
    }

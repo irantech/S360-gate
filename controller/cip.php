@@ -126,6 +126,23 @@ class cip extends clientAuth
         ]);
         exit;
     }
+    public function updateSuccessfull($factorNum, $value) {
+        $Model = Load::library('Model');
+        $ModelBase = Load::library('ModelBase');
+
+        $data = array(
+            'successfull' => $value
+        );
+
+        $condition = " factor_number='" . $factorNum . "' ";
+        $Model->setTable('book_cip_tb');
+        $res = $Model->update($data, $condition);
+
+        if ($res) {
+            $ModelBase->setTable('report_cip_tb');
+            $ModelBase->update($data, $condition);
+        }
+    }
 
 
     public function PreReserve($data)
@@ -283,7 +300,7 @@ class cip extends clientAuth
             'factor_number'       => $factorNumber,
             'api_id'              => $apiId,
             'successfull'         => 'prereserve',
-            'trip_type'         => '',
+            'trip_type'         => $data['TripType'],
             'payment_date'        => '',
             'payment_type'        => 'cash',
             'name_bank_port'      => '',

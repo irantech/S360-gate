@@ -299,7 +299,7 @@ function  getResultBusSearch(cityOrigin, cityDestination, dateMove,lang) {
                 $("#countBuses").html(data.countBuses);
             }
             if((typeof data.countBuses != 'undefined' && data.countBuses == 0) ||
-               (typeof data.notAvailableBus != 'undefined' && data.notAvailableBus == true)) {
+                (typeof data.notAvailableBus != 'undefined' && data.notAvailableBus == true)) {
                 $("#show_offline_request").removeClass('d-none').addClass('d-block');
                 $(".bus-sort-by-section").addClass('d-none');
                 if(data.countBuses == 0) {
@@ -497,38 +497,39 @@ async function reserveBusTicket(busCode, sourceCode, checkLogin = true, _this = 
 
     if (checkLogin) {
         $.post(amadeusPath + 'hotel_ajax.php',
-           {
-               flag: 'CheckedLogin',
-           },
-           function(data) {
-               if (data.indexOf('successLoginHotel') > -1) {
-                   reserveBusTicketWithoutRegister()
-               }
-               else if (data.indexOf('errorLoginHotel') > -1) {
-                   $('#noLoginBuy').val(useXmltag('Bookingwithoutregistration'))
-                   let isShowLoginPopup = $('#isShowLoginPopup').val()
-                   let useTypeLoginPopup = $('#useTypeLoginPopup').val()
-                   if (isShowLoginPopup == '' || isShowLoginPopup == '1') {
-                       $('#login-popup').trigger('click')
-                   } else {
-                       popupBuyNoLogin(useTypeLoginPopup)
-                   }
-                   loadingToggle(_this, false)
-               }
-           },
+            {
+                flag: 'CheckedLogin',
+            },
+            function(data) {
+                if (data.indexOf('successLoginHotel') > -1) {
+                    reserveBusTicketWithoutRegister()
+                }
+                else if (data.indexOf('errorLoginHotel') > -1) {
+                    $('#noLoginBuy').val(useXmltag('Bookingwithoutregistration'))
+                    let isShowLoginPopup = $('#isShowLoginPopup').val()
+                    let useTypeLoginPopup = $('#useTypeLoginPopup').val()
+                    if (isShowLoginPopup == '' || isShowLoginPopup == '1') {
+                        $('#login-popup').trigger('click')
+                    } else {
+                        popupBuyNoLogin(useTypeLoginPopup)
+                    }
+                    loadingToggle(_this, false)
+                }
+            },
         )
     }
 }
-async function showDescriptionDetail(busCode, sourceCode) {
+async function showDescriptionDetail(el, busCode, sourceCode) {
     await $('#busCode').val(busCode)
     await $('#sourceCode').val(sourceCode)
-    $('[data-name="bus-extra-descriptions"]').removeClass('d-block').addClass('d-none')
-    $('[data-name="bus-refund-rules"]').html('')
-    $('[data-name="bus-extra-descriptions-loading"]').removeClass('d-none').addClass('d-flex')
+    var $container = $(el).closest('.ticketSubDetail')
+    $container.find('[data-name="bus-extra-descriptions"]').removeClass('d-block').addClass('d-none')
+    $container.find('[data-name="bus-refund-rules"]').html('')
+    $container.find('[data-name="bus-extra-descriptions-loading"]').removeClass('d-none').addClass('d-flex')
 
-    await reserveBusTicketWithoutRegister(true)
+    await reserveBusTicketWithoutRegister(true, $container)
 }
-async function reserveBusTicketWithoutRegister(description_only=false) {
+async function reserveBusTicketWithoutRegister(description_only=false, $container=null) {
 
     let busCode = $('#busCode').val();
     let sourceCode = $('#sourceCode').val();
@@ -537,64 +538,66 @@ async function reserveBusTicketWithoutRegister(description_only=false) {
     let requestNumber = $('#requestNumber').val();
     let dateMove = $('#dateMove').val();
     await $.post(amadeusPath + 'bus_ajax.php',
-       {
-           busCode: busCode,
-           sourceCode: sourceCode,
-           originCity: originCity,
-           destinationCity: destinationCity,
-           dateMove: dateMove,
-           requestNumber: requestNumber,
-           flag: 'flagSetTemporaryBus'
-       },
-       function (data) {
-           console.log('data: ' , data)
-           let dataArray = data.split('|');
+        {
+            busCode: busCode,
+            sourceCode: sourceCode,
+            originCity: originCity,
+            destinationCity: destinationCity,
+            dateMove: dateMove,
+            requestNumber: requestNumber,
+            flag: 'flagSetTemporaryBus'
+        },
+        function (data) {
+            console.log('data: ' , data)
+            let dataArray = data.split('|');
 
-           if (data.indexOf('success') > -1) {
-               let parseData = JSON.parse(dataArray[1]);
+            if (data.indexOf('success') > -1) {
+                let parseData = JSON.parse(dataArray[1]);
 
-               $('#factorNumber').val(parseData.factor_number);
-               $('#requestNumber').val(parseData.requestNumber);
-               if(description_only){
-                   $('[data-name="bus-extra-descriptions-loading"]').removeClass('d-flex').addClass('d-none')
-                   $('[data-name="bus-extra-descriptions"]').removeClass('d-none').addClass('d-block')
+                $('#factorNumber').val(parseData.factor_number);
+                $('#requestNumber').val(parseData.requestNumber);
+                if(description_only && $container){
+                    $container.find('[data-name="bus-extra-descriptions-loading"]').removeClass('d-flex').addClass('d-none')
+                    $container.find('[data-name="bus-extra-descriptions"]').removeClass('d-none').addClass('d-block')
 
-                   $.each(parseData.refundRules, function(index, item) {
-                       let html_code = '<div class="alert-bus" role="alert">';
+                    $.each(parseData.refundRules, function(index, item) {
+                        let html_code = '<div class="alert-bus" role="alert">';
 
-                       if (item.From && item.Percent) {
-                           let time = item.From.substr(1);
-                           let hours = time.replace(":", " ");
-                           hours = parseInt(hours);
-                           html_code += 'از لحظه خرید تا ' + hours + 'ساعت قبل از حرکت کسر ' + item.Percent + '% جریمه';
-                       } else if (item.To && item.Percent) {
-                           let time = item.To.substr(1);
-                           let hours = time.replace(":", " ");
-                           hours = parseInt(hours);
-                           html_code += 'از ' + hours + 'ساعت قبل از حرکت کسر ' + item.Percent + '% جریمه';
-                       }
+                        if (item.From && item.Percent) {
+                            let time = item.From.substr(1);
+                            let hours = time.replace(":", " ");
+                            hours = parseInt(hours);
+                            html_code += 'از لحظه خرید تا ' + hours + 'ساعت قبل از حرکت کسر ' + item.Percent + '% جریمه';
+                        } else if (item.To && item.Percent) {
+                            let time = item.To.substr(1);
+                            let hours = time.replace(":", " ");
+                            hours = parseInt(hours);
+                            html_code += 'از ' + hours + 'ساعت قبل از حرکت کسر ' + item.Percent + '% جریمه';
+                        }
 
-                       html_code += '</div>';
-                       $('[data-name="bus-refund-rules"]').append(html_code);
-                   });
+                        html_code += '</div>';
+                        $container.find('[data-name="bus-refund-rules"]').append(html_code);
+                    });
 
-               }else{
-                   $("#formReserveBusTicket").attr("action", amadeusPathByLang + 'passengersDetailBusTicket');
-                   $("#formReserveBusTicket").submit();
-               }
+                }else{
+                    $("#formReserveBusTicket").attr("action", amadeusPathByLang + 'passengersDetailBusTicket');
+                    $("#formReserveBusTicket").submit();
+                }
 
-           } else {
-               $('[data-name="bus-extra-descriptions-loading"]').removeClass('d-flex').addClass('d-none')
-               $('[data-name="bus-extra-descriptions"]').removeClass('d-none').addClass('d-block')
-               $.alert({
-                   title: useXmltag("Reservation"),
-                   icon: 'fa fa-trash',
-                   content: dataArray[1],
-                   rtl: true,
-                   type: 'red'
-               });
-           }
-       });
+            } else {
+                if($container) {
+                    $container.find('[data-name="bus-extra-descriptions-loading"]').removeClass('d-flex').addClass('d-none')
+                    $container.find('[data-name="bus-extra-descriptions"]').removeClass('d-none').addClass('d-block')
+                }
+                $.alert({
+                    title: useXmltag("Reservation"),
+                    icon: 'fa fa-trash',
+                    content: dataArray[1],
+                    rtl: true,
+                    type: 'red'
+                });
+            }
+        });
 }
 
 const checkBusLocal = async function(currentDate,_this=null) {
@@ -637,40 +640,40 @@ const checkBusLocal = async function(currentDate,_this=null) {
             }
 
             $.post(amadeusPath + 'hotel_ajax.php',
-               {
-                   mobile: mob,
-                   telephone: tel,
-                   Email: email,
-                   flag: "register_memeberHotel"
-               },
-               function (data) {
-                   if (data != "") {
+                {
+                    mobile: mob,
+                    telephone: tel,
+                    Email: email,
+                    flag: "register_memeberHotel"
+                },
+                function (data) {
+                    if (data != "") {
 
-                       $('#idMember').val(data);
+                        $('#idMember').val(data);
 
-                       $('#loader_check').show();
-                       $('#send_data').attr('disabled', 'disabled').css('opacity', '0.5').css('cursor', 'progress').val(useXmltag("Pending"));
+                        $('#loader_check').show();
+                        $('#send_data').attr('disabled', 'disabled').css('opacity', '0.5').css('cursor', 'progress').val(useXmltag("Pending"));
 
-                       setTimeout(
-                          function () {
-                              $('#loader_check').hide();
-                              $('#formPassengerDetailBusTicket').submit();
-                          }, 300);
+                        setTimeout(
+                            function () {
+                                $('#loader_check').hide();
+                                $('#formPassengerDetailBusTicket').submit();
+                            }, 300);
 
-                   } else {
-                       if(_this && _this.length){
-                           loadingToggle(_this,false)
-                       }
-                       $.alert({
-                           title: useXmltag("Reservationhotel"),
-                           icon: 'fa fa-cart-plus',
-                           content: useXmltag("Errorrecordinginformation"),
-                           rtl: true,
-                           type: 'red'
-                       });
-                       return false;
-                   }
-               });
+                    } else {
+                        if(_this && _this.length){
+                            loadingToggle(_this,false)
+                        }
+                        $.alert({
+                            title: useXmltag("Reservationhotel"),
+                            icon: 'fa fa-cart-plus',
+                            content: useXmltag("Errorrecordinginformation"),
+                            rtl: true,
+                            type: 'red'
+                        });
+                        return false;
+                    }
+                });
         }
 
     } else {
@@ -1050,16 +1053,16 @@ function modalListBus(FactorNumber) {
     }, 3000);
 
     $.post(libraryPath + 'ModalCreator.php',
-       {
-           Controller: 'user',
-           Method: 'ModalShowBus',
-           Param: FactorNumber
-       },
-       function (data) {
+        {
+            Controller: 'user',
+            Method: 'ModalShowBus',
+            Param: FactorNumber
+        },
+        function (data) {
 
-           $('#ModalPublicContent').html(data);
+            $('#ModalPublicContent').html(data);
 
-       });
+        });
 }
 
 function SendBusEmailForOther() {
@@ -1098,41 +1101,41 @@ function SendBusEmailForOther() {
         return false;
     } else {
         $.post(amadeusPath + 'user_ajax.php',
-           {
-               email: Email,
-               request_number: request_number,
-               flag: 'SendBusEmailForOther'
-           },
-           function (data) {
-               var res = data.split(':');
-               if (data.indexOf('success') > -1) {
-                   $.alert({
-                       title: useXmltag("Sendemail"),
-                       icon: 'fa fa-check',
-                       content: res[1],
-                       rtl: true,
-                       type: 'green',
-                   });
-                   setTimeout(function () {
-                       $("#ModalSendEmail").fadeOut(700);
-                       $('#loaderTracking').fadeOut(500);
-                       $('#SendBusEmailForOther').attr("disabled", false);
-                       $('#SendForOthers').val(' ');
-                   }, 1000);
+            {
+                email: Email,
+                request_number: request_number,
+                flag: 'SendBusEmailForOther'
+            },
+            function (data) {
+                var res = data.split(':');
+                if (data.indexOf('success') > -1) {
+                    $.alert({
+                        title: useXmltag("Sendemail"),
+                        icon: 'fa fa-check',
+                        content: res[1],
+                        rtl: true,
+                        type: 'green',
+                    });
+                    setTimeout(function () {
+                        $("#ModalSendEmail").fadeOut(700);
+                        $('#loaderTracking').fadeOut(500);
+                        $('#SendBusEmailForOther').attr("disabled", false);
+                        $('#SendForOthers').val(' ');
+                    }, 1000);
 
-               } else {
-                   $.alert({
-                       title: useXmltag("Sendemail"),
-                       icon: 'fa fa-times',
-                       content: res[1],
-                       rtl: true,
-                       type: 'red',
-                   });
-                   $('#SendBusEmailForOther').attr("disabled", false);
-                   $('#loaderTracking').fadeOut(500);
-               }
+                } else {
+                    $.alert({
+                        title: useXmltag("Sendemail"),
+                        icon: 'fa fa-times',
+                        content: res[1],
+                        rtl: true,
+                        type: 'red',
+                    });
+                    $('#SendBusEmailForOther').attr("disabled", false);
+                    $('#loaderTracking').fadeOut(500);
+                }
 
-           });
+            });
     }
 }
 function openPopularBusCities(targetInput){

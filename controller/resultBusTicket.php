@@ -328,7 +328,7 @@ class resultBusTicket extends apiBus
                         '</div>';
                 }
             }
-                $output .= '<div onclick="showDescriptionDetail(\'' . $item['busCode'] . '\', \'' . $item['sourceCode'] . '\')" class="my-more-info">' . Functions::Xmlinformation('detailAndCacellation') . '
+                $output .= '<div onclick="showDescriptionDetail(this, \'' . $item['busCode'] . '\', \'' . $item['sourceCode'] . '\')" class="my-more-info">' . Functions::Xmlinformation('detailAndCacellation') . '
                       <i class="fa fa-angle-down"></i>
                   </div>';
 

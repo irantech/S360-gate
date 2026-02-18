@@ -337,6 +337,16 @@ class bank {
 			}else{
 				$this->callBackPage = ROOT_ADDRESS . "/" . 'returnBankExclusiveTour';
 			}
+		}	elseif ( $payFor == 'cip' ) {
+			$bookModel = Load::getModel('cipModel');
+			$reserveInfo  = $bookModel->getOneByReq($requestID);
+			$this->amountToPay  = $reserveInfo[0]['total_price'];
+			$this->factorNumber = $reserveInfo[0]['factor_number'];
+			if(isset($redirectBank) && !empty($redirectBank)) {
+				$this->callBackPage = SERVER_HTTP.$redirectBank['replace_url'].'/gds/'.SOFTWARE_LANG.'/transferReturnBank&redirectUrl=returnBankCip';
+			}else{
+				$this->callBackPage = ROOT_ADDRESS . "/" . 'returnBankCip';
+			}
 		}
 
 		#region price changing by discount code and credits

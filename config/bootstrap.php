@@ -75,7 +75,7 @@ $client = $query->fetch(PDO::FETCH_ASSOC);
 //select id current page panel counter
 if (isset($_SESSION['memberIdCounterInAdmin']) && !isset($pageCallCurllFactorIrantech)) {
     defined('memberIdCounterInAdmin') or define('memberIdCounterInAdmin',$_SESSION['memberIdCounterInAdmin']);
-    if (!empty($_SERVER['HTTP_REFERER']) && strlen($_SERVER['HTTP_REFERER']) > strlen('https://localhost/')) {
+    if (!empty($_SERVER['HTTP_REFERER']) && strlen($_SERVER['HTTP_REFERER']) > strlen('http://localhost/')) {
         $urlPageNow = $_SERVER['HTTP_REFERER'];
     } else {
         $urlPageNow = $_SERVER['REQUEST_URI'];
@@ -338,26 +338,11 @@ if(!empty($client['Services'])){
     if(in_array($_SERVER['REMOTE_ADDR'],$mizbanFly)) {
         $client['jahangaThemeDir'] = 'mizbanfly';
     }
-    // mr farhadi >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.9') {
-        $client['ThemeDir'] = 'demoJami';
-    }
-    // mr abbasi >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.56') {
-        $client['ThemeDir'] = 'doctor_bilit';
-    }
-    // mr shojaii >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.2') {
-        $client['ThemeDir'] = 'doctor_bilit';
-    }
-    // mr tester >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.7') {
-        $client['ThemeDir'] = 'ava_parvaz_ar';
-    }
-    // mr javani >>>
+
+    //  mr shojaee developer
     elseif($_SERVER['REMOTE_ADDR'] == "127.0.0.1")
     {
-        $client['ThemeDir'] = 'hamsafaranUranus';
+        $client['ThemeDir'] = 'doctor_bilit';
     }
 
 
