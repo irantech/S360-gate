@@ -1,0 +1,350 @@
+@import "components/variables";
+@import "components/mixin";
+@import "components/fonts";
+
+
+@font-face {
+    font-family: IRANSansnum;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../fonts/IRANSansWeb_FaNum.eot');
+    src: url('../../fonts/IRANSansWeb_FaNum.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../../fonts/IRANSansWeb_FaNum.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../../fonts/IRANSansWeb_FaNum.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../../fonts/IRANSans_FaNum_Bold.ttf') format('truetype');
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.c-header__btn{
+    cursor: pointer;
+    position: relative;
+}
+.c-header__btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.c-header__btn-login{
+    display: flex;
+    align-items: center;
+
+}
+.login_icon{
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+
+}
+.login_icon svg{
+    width: 100%;
+    fill: #fff;
+}
+.main-navigation__sub-menu2 {
+    display: none;
+    width: 450px;
+    background-color: #fff;
+    top: 100%;
+    height: 245px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0 0 5px 0;
+}
+.main-navigation__sub-menu2.active_log {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logined-name{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content:center;
+    font-family: IRANSansnum !important;
+
+}
+
+.logined-vorood{
+    font-size: 13px;
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    color: #fff;
+    width: 100%;
+    display: block;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content:flex-start;
+    font-family: IRANSansnum !important;
+}
+.logined-vorood svg , .logined-name svg{
+
+    fill: #fff;
+    width: 10px;
+    margin-right: 5px;
+}
+.loginframe{
+
+    height: 36px;
+    color: #fff !important;
+    width: 125px;
+
+}
+
+
+.sup-menu-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.sup-menu-flex-r {
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--mainColor);
+    font-family: IRANSansnum !important;
+}
+
+.sup-menu-flex-l {
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: IRANSansnum !important;
+}
+
+.sup-menu-flex-r a.log-reg-sub {
+
+    color: white;
+
+    border-radius: 4px;
+    width:100% ;
+    text-align: center;
+    position: relative;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    flex-flow: column nowrap;
+}
+.log-reg-sub {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+.log-reg-sub div {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+    display: block;
+}
+.log-reg-sub svg {
+    width: 75px;
+    height: 100px;
+    opacity: 0.1;
+    transition: all ease 0.2s;
+}
+
+.log-reg-sub span {
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 0px;
+    margin-bottom: 10px;
+    color: #000;
+    margin-top: auto;
+    width: calc(100% - 20px);
+    opacity: 0.9;
+    font-weight: bold;
+    background-color: #fff;
+    transition: all ease 0.4s;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+
+.log-reg-sub:hover span{
+    background-color: #eee;
+}
+.login-head-icon{
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: content-box;
+}
+.login-head-icon svg {
+    width:100%;
+    height: 100%;
+}
+.hello-login {
+    font-size: 13px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.hello-login span:first-child {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.hello-login span {
+    flex: 0 0 100%;
+    text-align: center;
+}
+.etebar-login {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    width: 100%;
+}
+.etebar-login span {
+    flex: 0 0 100%;
+    text-align: center;
+}
+.etebar-login span i {
+    font-style: normal;
+    font-size: 14px;
+}
+.etebar-login span i:first-child {
+    font-family: IRANSansnum;
+    font-weight: bold;
+}
+
+.support-menu__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #51a8b1;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.sup-menu-flex-login .support-menu__link {
+    line-height: 35px !important;
+    transition: all ease .4s;
+    position: relative;
+
+    border-bottom: 1px solid #e1e1e1;
+
+}
+
+.support-menu__link > a {
+    font-size: 13px;
+    color: #646464;
+    display: block;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: right;
+}
+.club_{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius:1rem;
+    color: #000;
+
+}
+.sup-menu-flex-login .support-menu__link > a::before {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    content: '';
+    height: 40%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    width: 40%;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    transition: .3s all;
+    font-family: IRANSansnum !important;
+}
+.sup-menu-flex-login .support-menu__link:hover > a::before {
+    background-color: rgba(0, 0, 0, .1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.sup-menu-flex-login .support-menu__link:hover > a {
+    color: #a38eff;
+}
+.log-reg-head {
+    display: flex !important;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+}
+
+.log-reg-head a.logout-head {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    cursor: pointer;
+    color:#000
+}
+.log-reg-head a {
+    display: block;
+    font-size: 12px;
+    width: 48%;
+    margin: 5px auto;
+    text-align: center;
+    min-width: 108px;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 15px;
+}
+
+@media (max-width: 990px) {
+    .main-navigation__sub-menu2{
+
+    }
+}
+
+@media (max-width: 767px) {
+    .loginframe{
+        width: 124px;
+    }
+
+}
+@media (max-width: 124px) {
+
+}
+@media (max-width: 567px) {
+    .main-navigation__sub-menu2{
+        width: 280px !important;
+    }
+}
+

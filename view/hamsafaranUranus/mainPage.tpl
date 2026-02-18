@@ -9,12 +9,8 @@
 {/if}
 <main>
     {include file="include_files/search-box.tpl"}
-
-
-
+    {include file="include_files/fast_flight_search-1.tpl"}
     {include file="include_files/about-us-1.tpl"}
-
-
     {include file="include_files/newsletter-1.tpl"}
 </main>
 {include file="include_files/footer-1.tpl"}
