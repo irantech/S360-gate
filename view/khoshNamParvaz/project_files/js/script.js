@@ -1861,19 +1861,35 @@ function Main_AdvancedInstallmentCalculatorBtn(){
     // alert(totalMoney);
 }
 
+
 function getInfoCalculator() {
-    var installments = Number($('#installments').val());  // تعداد اقساط
-    var installmentsPlus = Number(installments + 1);   // تعدا اقساط به اضافه یک
-    var initialPayment = $('#initial_payment').val();   // درصد پیش پرداخت
-    var price = $('#price').val();  // قیمت بدون میلیون
-    var priceAll = Number(price*Math.pow(10,6)); //  قیمت برحسب میلیون
-    var initialPaymentPrice = priceAll*(initialPayment/100);  // محاسبه مبلغ پیش پرداخت
-    var priceWithOutInitial = ((priceAll-initialPaymentPrice)/installments)+(((priceAll-initialPaymentPrice)*installmentsPlus)/100);
-    var amountEachInstallmentWithSoud = (priceWithOutInitial*installments)+initialPaymentPrice;
-    $('#result_calculate').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش پرداخت
-    $('#price_all').html(numberWithCommas(Math.round(amountEachInstallmentWithSoud))); // قیمت کل
-    $('#amount_each_installment').html(numberWithCommas(Math.round(priceWithOutInitial))); // محاسبه هر قسط
+    var profitPercentage = Number($('#profit_percentage').val());  // درصد سود ماهانه
+    var installments = Number($('#installments').val());          // تعداد اقساط
+    var initialPayment = Number($('#initial_payment').val());     // درصد پیش پرداخت
+    var price = Number($('#price').val());                         // قیمت تور به میلیون
+    var priceAll = price * 1e6;                                   // تبدیل به ریال
+
+    // محاسبه مبلغ پیش‌پرداخت
+    var initialPaymentPrice = priceAll * (initialPayment / 100);
+
+    // مبلغ باقی‌مانده بعد از کسر پیش‌پرداخت
+    var remainingPrice = priceAll - initialPaymentPrice;
+
+    // محاسبه سود کل (ساده ماهانه)
+    var totalProfit = remainingPrice * (profitPercentage / 100) * installments;
+
+    // کل مبلغ قابل پرداخت بعد از کسر پیش‌پرداخت و اضافه کردن سود
+    var totalPrice = remainingPrice + totalProfit;
+
+    // مبلغ هر قسط
+    var installmentAmount = totalPrice / installments;
+
+    // نمایش نتایج با کاما
+    $('#result_calculate').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش‌پرداخت
+    $('#price_all').html(numberWithCommas(Math.round(totalPrice + initialPaymentPrice))); // قیمت کل شامل پیش‌پرداخت
+    $('#amount_each_installment').html(numberWithCommas(Math.round(installmentAmount))); // هر قسط
 }
+
 
 function formatPrice() {
     let priceInput = document.getElementById('priceInput');
@@ -1926,7 +1942,6 @@ $(document).ready(function () {
         fillClass:'rangeslider__fill',
         handleClass:'rangeslider__handle',
         onSlide:function(position, value) {
-            console.log("onSlide" , position , value);
             $(".div-rangeslider > h6").text(value)
         }
     });
@@ -1940,8 +1955,22 @@ $(document).ready(function () {
         fillClass:'rangeslider__fill',
         handleClass:'rangeslider__handle',
         onSlide:function(position, value) {
-            console.log("onSlide" , position , value)
             $(".div-rangeslider2 > h6").text(value)
+        }
+    })
+    $('[data-rangeslider3]').rangeslider({
+        polyfill:false,
+        rangeClass:'rangeslider',
+        disabledClass:'rangeslider--disabled',
+        activeClass:'rangeslider--active',
+        horizontalClass:'rangeslider--horizontal',
+        verticalClass:'rangeslider--vertical',
+        fillClass:'rangeslider__fill',
+        handleClass:'rangeslider__handle',
+        onSlide:function(position, value) {
+            $(".div-rangeslider3 > h6").text(value);
+            $('#initial_payment').val(value);
+            getInfoCalculator();
         }
     })
     setTimeout(function () {
@@ -2014,7 +2043,7 @@ function updateStars() {
     stars.forEach((star) => {
         star.y -= star.speed; // All stars move upward
         star.opacity =
-           star.baseOpacity + Math.sin(Date.now() * 0.001 * star.speed) * 0.3; // Smooth twinkle
+            star.baseOpacity + Math.sin(Date.now() * 0.001 * star.speed) * 0.3; // Smooth twinkle
 
         // Reset star position when it goes off-screen
         if (star.y < 0) {
@@ -2030,12 +2059,12 @@ function drawStars() {
 
     // Add a dark radial blur gradient background
     const gradient = ctx.createRadialGradient(
-       canvas.width / 2,
-       canvas.height / 2,
-       canvas.width / 8, // Start small for a blur effect
-       canvas.width / 2,
-       canvas.height / 2,
-       canvas.width // Expand to the edges
+        canvas.width / 2,
+        canvas.height / 2,
+        canvas.width / 8, // Start small for a blur effect
+        canvas.width / 2,
+        canvas.height / 2,
+        canvas.width // Expand to the edges
     );
     gradient.addColorStop(0, "rgba(10, 20, 40, 1)"); // Deep dark blue at the center
     gradient.addColorStop(1, "rgba(0, 0, 0, 1)"); // Black at the edges
@@ -2081,11 +2110,11 @@ function updateShootingStar() {
     shootingStar.opacity -= 0.01;
 
     if (
-       shootingStar.opacity <= 0 ||
-       shootingStar.x < 0 ||
-       shootingStar.x > canvas.width ||
-       shootingStar.y < 0 ||
-       shootingStar.y > canvas.height
+        shootingStar.opacity <= 0 ||
+        shootingStar.x < 0 ||
+        shootingStar.x > canvas.width ||
+        shootingStar.y < 0 ||
+        shootingStar.y > canvas.height
     ) {
         shootingStar = null; // Remove shooting star
     }
@@ -2096,10 +2125,10 @@ function drawShootingStar() {
     if (!shootingStar) return;
 
     const gradient = ctx.createLinearGradient(
-       shootingStar.x,
-       shootingStar.y,
-       shootingStar.x - shootingStar.dx * shootingStar.length,
-       shootingStar.y - shootingStar.dy * shootingStar.length
+        shootingStar.x,
+        shootingStar.y,
+        shootingStar.x - shootingStar.dx * shootingStar.length,
+        shootingStar.y - shootingStar.dy * shootingStar.length
     );
     gradient.addColorStop(0, `rgba(255, 255, 255, ${shootingStar.opacity})`);
     gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
@@ -2109,8 +2138,8 @@ function drawShootingStar() {
     ctx.lineWidth = 2;
     ctx.moveTo(shootingStar.x, shootingStar.y);
     ctx.lineTo(
-       shootingStar.x - shootingStar.dx * shootingStar.length,
-       shootingStar.y - shootingStar.dy * shootingStar.length
+        shootingStar.x - shootingStar.dx * shootingStar.length,
+        shootingStar.y - shootingStar.dy * shootingStar.length
     );
     ctx.stroke();
     ctx.closePath();

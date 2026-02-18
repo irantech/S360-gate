@@ -122,7 +122,7 @@
                     <span class="cip-passenger-type cip-passenger-type-${typeClass}">${typeLabel}</span>
                 </div>
                 <span class="cip-phonebook-btn" onclick="cipOpenPhonebook('CIP${index}')">
-                    <i class="fa-solid fa-address-book"></i> دفترچه تلفن
+                    <i class="fa-solid fa-address-book"></i> دفترچه مسافر
                 </span>
             </div>
 
@@ -557,10 +557,43 @@
                         const fieldName = match[1];
                         let value = input.value || '';
 
+                        // Transfer fields
                         if (fieldName === 'luggage_count' && value) {
                             value = 'Bag:' + value;
                         } else if (fieldName === 'passenger_count' && value) {
                             value = 'Pax:' + value;
+                        } else if (fieldName === 'origin_address' && value) {
+                            value = 'From:' + value;
+                        } else if (fieldName === 'destination_address' && value) {
+                            value = 'To:' + value;
+                        } else if (fieldName === 'phone' && value) {
+                            value = 'Tel:' + value;
+                        }
+                        // Attendant fields
+                        else if (fieldName === 'first_name' && value) {
+                            value = 'Name:' + value;
+                        } else if (fieldName === 'last_name' && value) {
+                            value = 'Family:' + value;
+                        } else if (fieldName === 'gender' && value) {
+                            value = 'Gender:' + value;
+                        } else if (fieldName === 'nationality' && value) {
+                            value = 'Nationality:' + value;
+                        } else if (fieldName === 'national_code' && value) {
+                            value = 'NationalCode:' + value;
+                        }
+                        // Parking fields
+                        else if (fieldName === 'vehicle_type' && value) {
+                            value = 'Vehicle:' + value;
+                        } else if (fieldName === 'vehicle_color' && value) {
+                            value = 'Color:' + value;
+                        } else if (fieldName === 'delivery_date' && value) {
+                            value = 'Date:' + value;
+                        } else if (fieldName === 'delivery_time' && value) {
+                            value = 'Time:' + value;
+                        } else if (fieldName === 'license_plate' && value) {
+                            value = 'Plate:' + value;
+                        } else if (fieldName === 'days_count' && value) {
+                            value = 'Days:' + value;
                         }
 
                         if (value) {
