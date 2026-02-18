@@ -1,4 +1,6 @@
 <div class="tab-pane {if  $smarty.const.GDS_SWITCH eq 'page'} active {/if}" id="Europcar">
+        <div class="empty-div">
+        </div>
         <div class="col-md-12 col-12">
                 <div class="row">
                         <form data-action="/" method="post" target="_blank" class="d_contents"
@@ -8,7 +10,7 @@
                                 {include file="./sections/europcar/rentPlace.tpl"}
                                 {include file="./sections/europcar/deliveryDate.tpl"}
                                 {include file="./sections/europcar/deliveryPlace.tpl"}
-                                <div class="{if isset($col) } {$col} {else} col-lg-2{/if} col-md-3 col-sm-6 col-12 btn_s col_search">
+                                <div class="{if isset($col) } {$col} {else} col-lg-2{/if} col-md-6 col-sm-6 col-12 btn_s col_search">
                                         <button type="button" onclick="rentcar_local()" class="btn theme-btn seub-btn b-0">
                                                 <span>##Search##</span></button>
                                 </div>

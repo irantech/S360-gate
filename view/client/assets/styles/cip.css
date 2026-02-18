@@ -176,7 +176,7 @@
     background: white;
     border-radius: var(--cip-radius-lg);
     position: relative;
-    border: 2px solid var(--mainColor);
+    border: 2px solid #e5e7eb;
     overflow: hidden;
 }
 
