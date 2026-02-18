@@ -6,7 +6,6 @@
 //}
 
 
-
 date_default_timezone_set('Asia/Tehran');
 // SITE_ROOT contains the full path to the Project folder
 defined('SITE_ROOT') or define('SITE_ROOT', dirname(dirname(__FILE__)));
@@ -340,26 +339,11 @@ if(!empty($client['Services'])){
     if(in_array($_SERVER['REMOTE_ADDR'],$mizbanFly)) {
         $client['jahangaThemeDir'] = 'mizbanfly';
     }
-    // mr farhadi >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.9') {
-        $client['ThemeDir'] = 'demoJami';
-    }
-    // mr abbasi >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.56') {
-        $client['ThemeDir'] = 'doctor_bilit';
-    }
-    // mr shojaii >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.2') {
-        $client['ThemeDir'] = 'doctor_bilit';
-    }
-    // mr tester >>>
-    elseif($_SERVER['REMOTE_ADDR']=='192.168.1.7') {
-        $client['ThemeDir'] = 'ava_parvaz_ar';
-    }
+
     // mr javani >>>
     elseif($_SERVER['REMOTE_ADDR'] == "127.0.0.1")
     {
-        $client['ThemeDir'] = 'hamsafaranUranus';
+        $client['ThemeDir'] = 'jazireGanj';
     }
 
 
