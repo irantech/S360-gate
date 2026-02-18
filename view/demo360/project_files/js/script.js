@@ -376,17 +376,17 @@ function generateBirthDate(ageGroup){
     if (ageGroup === "0-12") {
         minYear = currentYearShamsi - 12; // Max 12 years old
         maxYear = currentYearShamsi;      // Min 0 years old
-    } else if (ageGroup === "13-64") {
-        minYear = currentYearShamsi - 64;
+    } else if (ageGroup === "13-65") {
+        minYear = currentYearShamsi - 65;
         maxYear = currentYearShamsi - 13;
-    } else if (ageGroup === "65-70") {
+    } else if (ageGroup === "66-70") {
         minYear = currentYearShamsi - 70; // Max 70 years old
-        maxYear = currentYearShamsi - 65; // Min 65 years old
+        maxYear = currentYearShamsi - 66; // Min 65 years old
     } else if (ageGroup === "71-75") {
         minYear = currentYearShamsi - 75; // Max 75 years old
         maxYear = currentYearShamsi - 71; // Min 71 years old
-    } else if (ageGroup === "76-85") {
-        minYear = currentYearShamsi - 85; // Max 85 years old
+    } else if (ageGroup === "76-80") {
+        minYear = currentYearShamsi - 80; // Max 85 years old
         maxYear = currentYearShamsi - 76; // Min 76 years old
     } else if (ageGroup === "+81") {
         minYear = currentYearShamsi - 100; // Assume max age 100
@@ -430,13 +430,13 @@ function toggleDropdown() {
     // dropdownIcon.classList.toggle('active-internal-external-svg');
 }
 document.body.addEventListener('click', function(event) {
-if(dropdown2){
+    if(dropdown2){
 
-    if (!dropdown2.contains(event.target)) {
-        dropdownContent.classList.remove('activeDropdown');
-        dropdownIcon.classList.remove('active-internal-external-svg');
+        if (!dropdown2.contains(event.target)) {
+            dropdownContent.classList.remove('activeDropdown');
+            dropdownIcon.classList.remove('active-internal-external-svg');
+        }
     }
-}
 });
 
 
@@ -475,23 +475,23 @@ function selectOptionBtnInternalExternal(optionText, type) {
 
 
 
-    // تعیین گزینه اکتیو به صورت اولیه
-    window.onload = function() {
-        let toggleTextElement = document.querySelector('toggle-text');
-        let initialOption = null ;
-        if (toggleTextElement) {
-             initialOption = toggleTextElement.innerText;
-        }
-        if (initialOption !== null){
-            if (initialOption === 'داخلی') {
-                document.querySelector('.internal-content-flight').style.display = 'flex';
-                document.querySelector('.external-content-flight').style.display = 'none';
-            } else {
-                document.querySelector('.internal-content-flight').style.display = 'none';
-                document.querySelector('.external-content-flight').style.display = 'flex';
-            }
+// تعیین گزینه اکتیو به صورت اولیه
+window.onload = function() {
+    let toggleTextElement = document.querySelector('toggle-text');
+    let initialOption = null ;
+    if (toggleTextElement) {
+        initialOption = toggleTextElement.innerText;
+    }
+    if (initialOption !== null){
+        if (initialOption === 'داخلی') {
+            document.querySelector('.internal-content-flight').style.display = 'flex';
+            document.querySelector('.external-content-flight').style.display = 'none';
+        } else {
+            document.querySelector('.internal-content-flight').style.display = 'none';
+            document.querySelector('.external-content-flight').style.display = 'flex';
         }
     }
+}
 
 
 
@@ -597,48 +597,48 @@ menuItemsDakheli.forEach(function(item) {
 
 // start
 // یک طرفه دو طرفه خارجی
-    const dropdownToggleChengKharegi = document.querySelector('#Flight .parent-kharegi-cheng .dropdown-toggle-cheng');
-    const dropdownMenuKharegi = document.querySelector('#dropdown-menu-kharegi');
-    const dropdownTextKharegi = document.querySelector('#Flight .parent-kharegi-cheng .dropdown-text');
-    const menuItemsKharegi = document.querySelectorAll('#Flight .parent-kharegi-cheng .switch-way-js');
-    const multiContent = document.querySelector('.flight_multi_way');
-    const internalContent = document.querySelector('.internal-content-flight');
-    const externalContent = document.querySelector('.external-content-flight');
+const dropdownToggleChengKharegi = document.querySelector('#Flight .parent-kharegi-cheng .dropdown-toggle-cheng');
+const dropdownMenuKharegi = document.querySelector('#dropdown-menu-kharegi');
+const dropdownTextKharegi = document.querySelector('#Flight .parent-kharegi-cheng .dropdown-text');
+const menuItemsKharegi = document.querySelectorAll('#Flight .parent-kharegi-cheng .switch-way-js');
+const multiContent = document.querySelector('.flight_multi_way');
+const internalContent = document.querySelector('.internal-content-flight');
+const externalContent = document.querySelector('.external-content-flight');
 
-    if (dropdownToggleChengKharegi !== null) {
-        dropdownToggleChengKharegi.addEventListener('click', function() {
+if (dropdownToggleChengKharegi !== null) {
+    dropdownToggleChengKharegi.addEventListener('click', function() {
 
-            dropdownMenuKharegi.classList.toggle('activeDropdown');
-        });
-    }
-
-
-    const flightInputInternational = document.getElementById('arrival_date_international');
-
-    menuItemsKharegi.forEach(function(item) {
-        item.addEventListener('click', function(e) {
-            e.stopPropagation(); // جلوگیری از انتقال رویداد به والدین
-            dropdownTextKharegi.textContent = this.textContent;
-            dropdownMenuKharegi.classList.remove('activeDropdown'); // بستن منو پس از انتخاب
-
-
-            if(e.target.getAttribute('data-text') === 'یک طرفه'){
-                flightInputInternational.parentElement.style.opacity='0.3';
-                flightInputInternational.disabled = true;
-                multiContent.style.display = 'none';
-                externalContent.style.display = 'flex';
-            } if (e.target.getAttribute('data-text') === 'رفت و برگشت') {
-                flightInputInternational.parentElement.style.opacity='1';
-                flightInputInternational.disabled = false;
-                multiContent.style.display = 'none';
-                externalContent.style.display = 'flex';
-            } if(e.target.getAttribute('data-text') === 'چند مسیره'){
-                multiContent.style.display = 'flex';
-                internalContent.style.display = 'none';
-                externalContent.style.display = 'none';
-            }
-        });
+        dropdownMenuKharegi.classList.toggle('activeDropdown');
     });
+}
+
+
+const flightInputInternational = document.getElementById('arrival_date_international');
+
+menuItemsKharegi.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        e.stopPropagation(); // جلوگیری از انتقال رویداد به والدین
+        dropdownTextKharegi.textContent = this.textContent;
+        dropdownMenuKharegi.classList.remove('activeDropdown'); // بستن منو پس از انتخاب
+
+
+        if(e.target.getAttribute('data-text') === 'یک طرفه'){
+            flightInputInternational.parentElement.style.opacity='0.3';
+            flightInputInternational.disabled = true;
+            multiContent.style.display = 'none';
+            externalContent.style.display = 'flex';
+        } if (e.target.getAttribute('data-text') === 'رفت و برگشت') {
+            flightInputInternational.parentElement.style.opacity='1';
+            flightInputInternational.disabled = false;
+            multiContent.style.display = 'none';
+            externalContent.style.display = 'flex';
+        } if(e.target.getAttribute('data-text') === 'چند مسیره'){
+            multiContent.style.display = 'flex';
+            internalContent.style.display = 'none';
+            externalContent.style.display = 'none';
+        }
+    });
+});
 
 // بستن منو با کلیک بیرون از آن
 // بستن منو با کلیک بیرون از آن (نسخه ایمن و بهینه)
@@ -868,50 +868,50 @@ if(dropdownTour){
 // window.addEventListener('resize',checkWidth);
 
 
-    $('.owl-tour-demo').owlCarousel({
-        rtl:true,
-        loop:true,
-        margin:20,
-        nav:false,
-        navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M505 273c9.4-9.4 9.4-24.6 0-33.9L369 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l95 95L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-95 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M7 239c-9.4 9.4-9.4 24.6 0 33.9L143 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-95-95L488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24L81.9 232l95-95c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 239z\"/></svg>"],
-        autoplay: true,
-        autoplayTimeout: 15000,
-        autoplaySpeed:5000,
-        dots:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:2,
-            },
-            1000:{
-                items:4
-            }
+$('.owl-tour-demo').owlCarousel({
+    rtl:true,
+    loop:true,
+    margin:20,
+    nav:false,
+    navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M505 273c9.4-9.4 9.4-24.6 0-33.9L369 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l95 95L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-95 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M7 239c-9.4 9.4-9.4 24.6 0 33.9L143 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-95-95L488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24L81.9 232l95-95c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 239z\"/></svg>"],
+    autoplay: true,
+    autoplayTimeout: 15000,
+    autoplaySpeed:5000,
+    dots:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:4
         }
-    });
-    $('.owl-hotel-demo').owlCarousel({
-        rtl:true,
-        loop:true,
-        margin:20,
-        nav:false,
-        navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M505 273c9.4-9.4 9.4-24.6 0-33.9L369 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l95 95L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-95 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M7 239c-9.4 9.4-9.4 24.6 0 33.9L143 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-95-95L488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24L81.9 232l95-95c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 239z\"/></svg>"],
-        autoplay: true,
-        autoplayTimeout: 15000,
-        autoplaySpeed:5000,
-        dots:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:2,
-            },
-            1000:{
-                items:4
-            }
+    }
+});
+$('.owl-hotel-demo').owlCarousel({
+    rtl:true,
+    loop:true,
+    margin:20,
+    nav:false,
+    navText: ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M505 273c9.4-9.4 9.4-24.6 0-33.9L369 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l95 95L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l406.1 0-95 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L505 273z\"/></svg>","<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d=\"M7 239c-9.4 9.4-9.4 24.6 0 33.9L143 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-95-95L488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24L81.9 232l95-95c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L7 239z\"/></svg>"],
+    autoplay: true,
+    autoplayTimeout: 15000,
+    autoplaySpeed:5000,
+    dots:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:4
         }
-    });
+    }
+});
 
 
 // particlesJS("particles-js", {
@@ -1852,17 +1852,31 @@ function Main_AdvancedInstallmentCalculatorBtn(){
 }
 
 function getInfoCalculator() {
-    var installments = Number($('#installments').val());  // تعداد اقساط
-    var installmentsPlus = Number(installments + 1);   // تعدا اقساط به اضافه یک
-    var initialPayment = $('#initial_payment').val();   // درصد پیش پرداخت
-    var price = $('#price').val();  // قیمت بدون میلیون
-    var priceAll = Number(price*Math.pow(10,6)); //  قیمت برحسب میلیون
-    var initialPaymentPrice = priceAll*(initialPayment/100);  // محاسبه مبلغ پیش پرداخت
-    var priceWithOutInitial = ((priceAll-initialPaymentPrice)/installments)+(((priceAll-initialPaymentPrice)*installmentsPlus)/100);
-    var amountEachInstallmentWithSoud = (priceWithOutInitial*installments)+initialPaymentPrice;
-    $('#result_calculate').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش پرداخت
-    $('#price_all').html(numberWithCommas(Math.round(amountEachInstallmentWithSoud))); // قیمت کل
-    $('#amount_each_installment').html(numberWithCommas(Math.round(priceWithOutInitial))); // محاسبه هر قسط
+    var profitPercentage = Number($('#profit_percentage').val());  // درصد سود ماهانه
+    var installments = Number($('#installments').val());          // تعداد اقساط
+    var initialPayment = Number($('#initial_payment').val());     // درصد پیش پرداخت
+    var price = Number($('#price').val());                         // قیمت تور به میلیون
+    var priceAll = price * 1e6;                                   // تبدیل به ریال
+
+    // محاسبه مبلغ پیش‌پرداخت
+    var initialPaymentPrice = priceAll * (initialPayment / 100);
+
+    // مبلغ باقی‌مانده بعد از کسر پیش‌پرداخت
+    var remainingPrice = priceAll - initialPaymentPrice;
+
+    // محاسبه سود کل (ساده ماهانه)
+    var totalProfit = remainingPrice * (profitPercentage / 100) * installments;
+
+    // کل مبلغ قابل پرداخت بعد از کسر پیش‌پرداخت و اضافه کردن سود
+    var totalPrice = remainingPrice + totalProfit;
+
+    // مبلغ هر قسط
+    var installmentAmount = totalPrice / installments;
+
+    // نمایش نتایج با کاما
+    $('#result_calculate').html(numberWithCommas(Math.round(initialPaymentPrice))); // پیش‌پرداخت
+    $('#price_all').html(numberWithCommas(Math.round(totalPrice + initialPaymentPrice))); // قیمت کل شامل پیش‌پرداخت
+    $('#amount_each_installment').html(numberWithCommas(Math.round(installmentAmount))); // هر قسط
 }
 
 function formatPrice() {
@@ -1932,6 +1946,21 @@ $(document).ready(function () {
         onSlide:function(position, value) {
             console.log("onSlide" , position , value)
             $(".div-rangeslider2 > h6").text(value)
+        }
+    })
+    $('[data-rangeslider3]').rangeslider({
+        polyfill:false,
+        rangeClass:'rangeslider',
+        disabledClass:'rangeslider--disabled',
+        activeClass:'rangeslider--active',
+        horizontalClass:'rangeslider--horizontal',
+        verticalClass:'rangeslider--vertical',
+        fillClass:'rangeslider__fill',
+        handleClass:'rangeslider__handle',
+        onSlide:function(position, value) {
+            $(".div-rangeslider3 > h6").text(value);
+            $('#initial_payment').val(value);
+            getInfoCalculator();
         }
     })
     setTimeout(function () {
@@ -2013,7 +2042,229 @@ $('.show-box-nologin-js').on('click', function(e) {
 // بستن منو با کلیک در هر جای دیگر صفحه
 $(document).on('click', function(e) {
     if ($('.show-content-box-nologin-js').is(':visible') &&
-       !$(e.target).closest('.show-content-box-nologin-js, .show-box-nologin-js').length) {
+        !$(e.target).closest('.show-content-box-nologin-js, .show-box-nologin-js').length) {
         $('.show-content-box-nologin-js').slideUp(200);
     }
 });
+
+
+
+
+
+
+
+function toggleDropdownFlightClass(event) {
+    // پیدا کردن المان dropdown که کلیک شده
+    let clickedElement = null;
+    let dropdownContent = null;
+
+    if (event && event.target) {
+        // پیدا کردن والد dropdown-toggle-cheng
+        clickedElement = event.target.closest('.dropdown-toggle-cheng');
+        if (clickedElement) {
+            dropdownContent = clickedElement.querySelector('.money-filter_ul');
+        }
+    }
+
+    if (!dropdownContent) {
+        // fallback برای کد قبلی
+        dropdownContent = document.getElementById('flight-class-dropdown');
+    }
+
+    if(dropdownContent) {
+        dropdownContent.classList.toggle('activeDropdown');
+    }
+}
+
+document.body.addEventListener('click', function(event) {
+    // بستن تمام dropdown های باز اگر کلیک خارج از آنها بود
+    const allDropdowns = document.querySelectorAll('.dropdown-toggle-cheng');
+    allDropdowns.forEach(function(dropdown) {
+        const dropdownContent = dropdown.querySelector('.money-filter_ul');
+        if(dropdown && dropdownContent){
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.classList.remove('activeDropdown');
+            }
+        }
+    });
+});
+
+function selectFlightClass(optionText, classType, event) {
+    // پیدا کردن dropdown والد
+    let clickedElement = null;
+    let dropdownParent = null;
+    let toggleText = null;
+    let dropdown = null;
+
+    if (event && event.target) {
+        clickedElement = event.target;
+        dropdownParent = clickedElement.closest('.dropdown-toggle-cheng');
+        if(dropdownParent) {
+            toggleText = dropdownParent.querySelector('.dropdown-text');
+            dropdown = dropdownParent.querySelector('.money-filter_ul');
+        }
+    }
+
+    if (!toggleText) {
+        toggleText = document.getElementById('toggle-text-class');
+        dropdown = document.getElementById('flight-class-dropdown');
+    }
+
+    if(toggleText) {
+        toggleText.innerText = optionText;
+    }
+
+    // حذف کلاس active از همه آیتم‌ها
+    const allItems = dropdown.querySelectorAll('.switch-class-js');
+    allItems.forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // اضافه کردن کلاس active به آیتم انتخاب شده
+    if (clickedElement) {
+        clickedElement.classList.add('active');
+    }
+
+    // ذخیره مقدار در input hidden
+    const flightClassInternal = document.getElementById('flight_class_internal');
+    const flightClassInternational = document.getElementById('flight_class_international');
+
+    if(flightClassInternal) {
+        flightClassInternal.value = classType;
+    }
+    if(flightClassInternational) {
+        flightClassInternational.value = classType;
+    }
+
+    console.log('Selected flight class:', classType);
+
+    // بستن dropdown بعد از انتخاب
+    if(dropdown) {
+        dropdown.classList.remove('activeDropdown');
+    }
+}
+
+
+// تعیین گزینه اکتیو به صورت اولیه
+window.onload = function() {
+    let toggleTextElement = document.querySelector('toggle-text');
+    let initialOption = null ;
+    if (toggleTextElement) {
+        initialOption = toggleTextElement.innerText;
+    }
+
+    // همیشه dropdown کلاس پرواز را نمایش بده
+    const boxClass = document.querySelector('.parent-class-cheng');
+    if(boxClass) {
+        boxClass.style.display = 'flex';
+    }
+
+    if (initialOption !== null){
+        if (initialOption === 'داخلی') {
+            document.querySelector('.internal-content-flight').style.display = 'flex';
+            document.querySelector('.external-content-flight').style.display = 'none';
+        } else {
+            document.querySelector('.internal-content-flight').style.display = 'none';
+            document.querySelector('.external-content-flight').style.display = 'flex';
+        }
+    }
+}
+
+
+
+
+$(document).ready(function () {
+    $('input:radio[name="btn_switch_tour"]').change(
+        function(){
+            if (this.checked && this.value == '1') {
+
+
+                $('#international_tour').css('display','flex');
+                $('#internal_tour').hide();
+
+
+            }
+            else {
+                $('#international_tour').hide();
+                $('#internal_tour').css('display','flex');
+            }
+        });
+
+
+
+    // $(".select2 , .select-route-bus-js , .default-select2 , .gasht-type-js , .select2_in").select2();
+
+
+
+    $('.switch-input-js').on('change', function() {
+        if (this.checked && this.value === '1') {
+            $('.international-flight-js').css('display', 'flex')
+            $('.internal-flight-js').hide()
+            $('.flight-multi-way-js').hide()
+            $(this).attr('select_type','yes')
+        } else {
+            $('.internal-flight-js').css('display', 'flex')
+            $('.international-flight-js').hide()
+            $('.flight-multi-way-js').hide()
+            $('.switch-input-js').removeAttr('select_type')
+        }
+    })
+    $('.select-type-way-js').on('click', function () {
+        let type = $(this).data('type');
+        let class_element = $(`.${type}-one-way-js`);
+        let arrival_date =  $(`.${type}-arrival-date-js`)
+        if (class_element.is(':checked')) {
+            arrival_date.attr("disabled", "disabled");
+        } else {
+            arrival_date.removeAttr("disabled");
+        }
+    });
+    $('.click_flight_multi_way').on('click', function() {
+        $('.flight-multi-way-js').css('display', 'flex')
+        $('.internal-flight-js').hide()
+        $('.international-flight-js').hide()
+    })
+    $('.click_flight_oneWay').on('click', function() {
+        $('.international-flight-js').css('display', 'flex')
+        $('.internal-flight-js').hide()
+        $('.flight-multi-way-js').hide()
+    })
+    $('.click_flight_twoWay').on('click', function() {
+        $('.international-flight-js').css('display', 'flex')
+        $('.internal-flight-js').hide()
+        $('.flight-multi-way-js').hide()
+    })
+    $(".switch-input-hotel-js").on("change", function () {
+        $(".init-shamsi-datepicker").val("")
+        $(".init-shamsi-return-datepicker").val("")
+        $(".nights-hotel-js").val("")
+        if (this.checked && this.value === "1") {
+            $(".internal-hotel-js").css("display", "flex")
+            $(".international-hotel-js").hide()
+            $(".type-section-js").val("internal")
+        } else {
+            $(".internal-hotel-js").hide()
+            $(".international-hotel-js").css("display", "flex")
+            $(".type-section-js").val("international")
+        }
+    })
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
