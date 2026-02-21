@@ -118,7 +118,8 @@ class api extends clientAuth
             }
 
 
-        } else {
+        }
+        else {
             $infoCode = array(
                 'Result' => array(
                     'Value' => ''

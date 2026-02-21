@@ -7,19 +7,12 @@ function base64url_encode($data) {
     return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
 }
 
-// دریافت ورودی (فرمت x-www-form-urlencoded expected)
-$grant_type = isset($_POST['grant_type']) ? $_POST['grant_type'] : '';
-$refresh_token = isset($_POST['refresh_token']) ? $_POST['refresh_token'] : 'test-refresh-token';
-
-// اگر خواستی می‌تونی بر اساس $refresh_token پاسخ متفاوت بسازی.
-// برای سادگی ما همیشه یک id_token و access_token ثابت برمی‌گردونیم.
-
 $header = array("alg" => "HS256", "typ" => "JWT");
 $payload = array(
-    "given_name" => "علی",
-    "family_name" => "محمدی",
-    "email" => "ali@example.com",
-    "Mobile" => "09197597588",
+    "given_name" => $_POST['given_name'],
+    "family_name" => $_POST['family_name'],
+    "email" => $_POST['email'],
+    "Mobile" => $_POST['Mobile'],
     "iat" => time(),
     "exp" => time() + 3600,
     "iss" => "mock.sso",
