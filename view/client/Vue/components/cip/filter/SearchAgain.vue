@@ -15,7 +15,7 @@ export default {
    name: 'SearchAgain',
    methods: {
       go() {
-         window.location.href = '/gds/fa/page/cip'
+         window.location.href = '/'
       }
    }
 }

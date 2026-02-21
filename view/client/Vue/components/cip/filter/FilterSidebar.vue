@@ -1,12 +1,12 @@
 <template>
    <aside class="side-bar-cip">
       <div class="filter-side-bar">
-         <h2>فیلتر ها</h2>
+<!--         <h2>فیلتر ها</h2>-->
 
-         <FilterPrice
-            :price_cip_filter="price_cip_filter"
-            @setPriceFilter="setPriceFilter"
-         />
+<!--         <FilterPrice-->
+<!--            :price_cip_filter="price_cip_filter"-->
+<!--            @setPriceFilter="setPriceFilter"-->
+<!--         />-->
 
          <!-- جست‌وجوی مجدد -->
          <SearchAgain :to="{ name: 'cip-search' }" />

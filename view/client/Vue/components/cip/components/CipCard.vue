@@ -13,7 +13,7 @@
                   ><i class="fa-solid fa-earth-americas mr-1"></i>
                   {{
                      cip.CipInfo.TripType === "international"
-                        ? " پرواز بین الملی"
+                        ? " پرواز بین المللی"
                         : " پرواز داخلی"
                   }}</span
                >
@@ -30,6 +30,7 @@
                >
 
             </div>
+
             <div class="mt-3">
             <span v-if="cip.isIranian == 1" class="is-iranian-cip">
                      فقط ملیت ایران
@@ -37,6 +38,9 @@
             <span v-if="cip.isIranian == 0" class="is-not-iranian-cip">
                      همه ملیت‌ها بجز ایران
                </span>
+            </div>
+            <div class="my-3 cip-notes" v-if="cip.CipInfo.Notes.fa" >
+               <span v-text=" cip.CipInfo.Notes.fa"></span>
             </div>
          </div>
          <div class="parent-price-cip">
@@ -52,7 +56,7 @@
                      </div>
                   </div>
                </div>
-               <a @click="saveCipAndRedirect">
+               <a @click="checkLogin" style="cursor:pointer">
 <!--               <a :href="`${baseUrl}${lang}/cip-detail/${cip.Code}/${cip.SourceId}`">-->
                   <span>رزرو</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -70,9 +74,10 @@
 <script>
 import HotelDetailModal from "./HotelDetailModal.vue"
 import CipDetail from "./CipDetail.vue"
+import SeatClass from "../../global/filters/seatclass.vue"
 
 export default {
-   components: {HotelDetailModal, CipDetail},
+   components: {SeatClass, HotelDetailModal, CipDetail},
    data() {
       return {
          showHotelModal: false,
@@ -99,14 +104,15 @@ export default {
          if (isNaN(num)) return "0"
          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       },
-     handleImageError(event) {
-       event.target.src =
-           amadeusPath + "/view/client/assets/images/no-image.jpg"
-     },
+      handleImageError(event) {
+         event.target.src =
+            amadeusPath + "view/client/assets/images/no-image.jpg"
+      },
       openHotelModal() {
          this.showHotelModal = true
       },
       saveCipAndRedirect() {
+
          try {
             // ذخیره اطلاعات CIP در localStorage
             localStorage.setItem('selectedCip', JSON.stringify(this.cip));
@@ -122,8 +128,61 @@ export default {
             // در صورت خطا، به روش قبلی ریدایرکت شود
             window.location.href = `${this.baseUrl}${this.lang}/cip-detail/${this.cip.Code}/${this.cip.SourceId}`;
          }
+
+
+      },
+      checkLogin() {
+         axios.post(
+            amadeusPath + "ajax",
+            {
+               className: "cip",
+               method: "checkLogin",
+            },
+            {
+               headers: {
+                  "Content-Type": "application/json",
+               },
+            }
+         )
+            .then((response) => {
+               if (response.data.data.statusCode == 200) {
+
+                     this.saveCipAndRedirect(); // حالا this درست کار می‌کنه
+
+                  } else {
+                  window.cipCode = this.cip.Code;
+                  window.sourceId = this.cip.SourceId;
+                  window.cipData = JSON.parse(JSON.stringify(this.cip));
+                  setTimeout(function () {
+                     const modal = document.getElementsByClassName("cd-user-modal")[0];
+                     if (modal) {
+                        modal.classList.add("is-visible");
+                     }
+                  }, 1000)
+                  }
+
+            })
+            .catch((error) => {
+               this.$swal({
+                  icon: "error",
+                  toast: true,
+                  position: "bottom-end",
+                  showConfirmButton: false,
+                  timerProgressBar: true,
+                  timer: 4000,
+                  width: 600,
+                  iconColor: "#FFFFFF",
+                  background: "#2f2f2f",
+                  title: "خطا در بررسی وضعیت لاگین",
+               })
+            })
       }
-   },
+
+
+
+   }
+
+
 
 }
 </script>

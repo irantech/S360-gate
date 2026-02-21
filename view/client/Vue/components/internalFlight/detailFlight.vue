@@ -7,10 +7,10 @@
                <li data-tab="tab-1-0" class="tab-link current site-border-top-main-color ">
                   {{useXmltag('Informationflight')}}
                </li>
-               <li data-tab="tab-2-0" class="tab-link site-border-top-main-color detailShow" @click="getFeeCancel(`${flight.flight_type_li}`,`${flight.airline}`,`${flight.cabin_type}`)">
+               <li data-tab="tab-2-0" class="tab-link site-border-top-main-color detailShow">
                   {{useXmltag('Price')}}
                </li>
-               <li data-tab="tab-3-0" class="tab-link site-border-top-main-color">
+               <li data-tab="tab-3-0" class="tab-link site-border-top-main-color" @click="getFeeCancel(`${flight.flight_type_li}`,`${flight.airline}`,`${flight.cabin_type}`)">
                   {{useXmltag('TermsandConditions')}}
                </li>
                <li class="tab-link site-border-top-main-color"  :data-tab="`tab-4-0`"
@@ -206,7 +206,7 @@
                   </div>
                </div>
 
-               <template v-if="flight.flight_type_li =='system'">
+
 
                   <!--                        <template v-if="fee_cancel !='' ">
                                               <div class="cancel-policy cancel_modal">
@@ -282,40 +282,6 @@
                                                   </div>
                                               </div>
                                           </template>-->
-                  <template v-if="fee_cancel && fee_cancel.length">
-                     <div class="cancel-policy cancel_modal">
-                        <div class="cancel-policy-head">
-                           <div class="cancel-policy-head-text">{{ useXmltag('DetailMoneyCancel') }}</div>
-                           <div class="cancel-policy-class">
-                              <span>{{ useXmltag('Classflight') }} :</span>
-                              <span>{{ useXmltag('TypeClass') }}</span>
-                           </div>
-                        </div>
-
-                        <div class="cancel-policy-inner">
-                           <div class="cancel-policy-item cancel_modal" v-for="(item, index) in fee_cancel" :key="index">
-        <span class="cancel-policy-item-text site-main-text-color">
-          {{ item.title }}
-        </span>
-                              <span class="cancel-policy-item-pnalty site-bg-main-color-admin site-bg-main-color">
-          {{ item.fine_text }}
-        </span>
-                           </div>
-                        </div>
-                     </div>
-                  </template>
-
-                  <template v-else>
-                     <div class="cancel-policy cancel_modal cancel-policy-charter1">
-                        <div class="cancel-policy-head">
-                           <div class="cancel-policy-head-text">{{ useXmltag('DetailMoneyCancel') }}</div>
-                        </div>
-                        <span class="site-bg-main-color-admin">
-      {{ useXmltag('Contactbackupunitinformationaboutamountconsignmentfines') }}
-    </span>
-                     </div>
-                  </template>
-               </template>
 
                <div class="cancel-policy cancel-policy-charter" v-if="flight.flight_type_li !='system'">
                         <span class="">
@@ -334,6 +300,10 @@
                   <li>6- {{useXmltag('AircraftDeterminedAnyChangeAircraftCarrierHoldingFlight')}}</li>
                   <li>7- {{useXmltag('PresenceDomesticFlightsRequiredForeignFlightsRequiredDocuments')}}</li>
                </ul>
+               <cancel-policy
+                  :fee_cancel="fee_cancel"
+                  :flight_type_li="flight.flight_type_li"
+               />
             </div>
             <div :id="`tab-4-0`" class="tab-content w-100" v-show="flight.source_id=='14'">
 
@@ -365,6 +335,7 @@
 
 <script>
 import rulesFlight from './rulesFlight';
+import CancelPolicy from './CancelPolicy.vue';
 import airlineOutPutFlight from './airlineFight.vue'
 import infoOutPutFlight from './outPutFlight.vue'
 import airlineReturnFlight from './airlineReturnFlight.vue'
@@ -386,7 +357,8 @@ export default {
       }
    },
    components: {
-      'rulesFlight':rulesFlight
+      'rulesFlight':rulesFlight,
+      'CancelPolicy':CancelPolicy
    },
    methods:{
       getFeeCancel(type_flight,airline_iata,cabin_type){

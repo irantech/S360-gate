@@ -11,7 +11,7 @@
             @setPriceFilter="setPriceFilter" />
 
       <!--  filter mobile responsive       -->
-         <FilterMobile :price_cip_filter="priceFilter"  @setPriceFilter="setPriceFilter" />
+<!--         <FilterMobile :price_cip_filter="priceFilter"  @setPriceFilter="setPriceFilter" />-->
 
          <CipList
             v-if="filteredCip.length > 0"
@@ -144,6 +144,8 @@ export default {
          return result
       },
    },
+
+
 
 }
 </script>
