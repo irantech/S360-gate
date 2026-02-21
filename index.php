@@ -11,7 +11,10 @@
 //}
 //ini_set('memory_limit', '-1');
 
-
+//error_reporting(1);
+//error_reporting(E_ALL | E_STRICT);
+//@ini_set('display_errors', 1);
+//@ini_set('display_errors', 'on');
 
 
 
@@ -24,6 +27,8 @@ require LIBRARY_DIR . 'functions.php';
 require LIBRARY_DIR . 'baseController.php';
 require LIBRARY_DIR . 'Session.php';
 require CONTROLLERS_DIR . 'dateTimeSetting.php';
+
+
 
 Session::init();
 
@@ -52,9 +57,13 @@ $date = dateTimeSetting::jdate("Y-m-d", "", "", "", "en");
 defined('DATE') or define('DATE', $date);
 spl_autoload_register(array('Load', 'autoload'));
 
+//var_dump('2');
+
+
 $page = new application();
 
 
+//var_dump('1');
 
 
 $pwa_access=functions::checkClientConfigurationAccess('pwa',CLIENT_ID);
@@ -63,7 +72,6 @@ if (functions::checkClientConfigurationAccess('redirect',CLIENT_ID)) {
 
     functions::redirectToNewUrl();
 }
-
 
 
 functions::redirectTo410();
