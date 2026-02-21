@@ -1,5 +1,6 @@
 ﻿<meta charset="utf-8">
 <?php
+
 /*
  * todo: please paste sql below
  * note: there is no need to include DbName in sql.
@@ -99,3 +100,4 @@ while ($row = mysqli_fetch_assoc($client_query)){
 }
 
 echo number_format($price_final) ;
+
