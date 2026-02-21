@@ -2,23 +2,23 @@
     <h4 class='title-searchBox-mobile'>جستجو برای پروازهای داخلی و خارجی</h4>
     <div class="d-flex flex-wrap gap-search-box">
         <div class="cheng-internal-external" id="dropdown-flight-internal-external" onclick="toggleDropdown()">
-                <h4 id="toggle-text">داخلی</h4>
-                <svg id="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path d="M362.7 203.9l-159.1 144c-6.125 5.469-15.31 5.469-21.44 0L21.29 203.9C14.73 197.1 14.2 187.9 20.1 181.3C26.38 174.4 36.5 174.5 42.73 180.1L192 314.5l149.3-134.4c6.594-5.877 16.69-5.361 22.62 1.188C369.8 187.9 369.3 197.1 362.7 203.9z"></path>
-                </svg>
-                <ul id="flight-dropdown" class="money-filter_ul arrow-up2">
-                    <li>
-                        <div class="switch-btn-js" data-main="flight-toggle-js" data-target="internal_flight" onclick="selectOptionBtnInternalExternal('داخلی', 'internal')">
-                            داخلی
-                        </div>
-                    </li>
-                    <li>
-                        <div class="switch-btn-js" data-main="flight-toggle-js" data-target="international_flight" onclick="selectOptionBtnInternalExternal('خارجی', 'external')">
-                            خارجی
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <h4 id="toggle-text">داخلی</h4>
+            <svg id="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M362.7 203.9l-159.1 144c-6.125 5.469-15.31 5.469-21.44 0L21.29 203.9C14.73 197.1 14.2 187.9 20.1 181.3C26.38 174.4 36.5 174.5 42.73 180.1L192 314.5l149.3-134.4c6.594-5.877 16.69-5.361 22.62 1.188C369.8 187.9 369.3 197.1 362.7 203.9z"></path>
+            </svg>
+            <ul id="flight-dropdown" class="money-filter_ul arrow-up2">
+                <li>
+                    <div class="switch-btn-js" data-main="flight-toggle-js" data-target="internal_flight" onclick="selectOptionBtnInternalExternal('داخلی', 'internal')">
+                        داخلی
+                    </div>
+                </li>
+                <li>
+                    <div class="switch-btn-js" data-main="flight-toggle-js" data-target="international_flight" onclick="selectOptionBtnInternalExternal('خارجی', 'external')">
+                        خارجی
+                    </div>
+                </li>
+            </ul>
+        </div>
 
 
 
@@ -57,7 +57,39 @@
                         <input type="radio" class="multiselectportal international-two-way-js"
                                id="rdo-4" name="select-rb" value="2" >
                         رفت و برگشت</label>
-                    <li data-text='چند مسیره' class="switch-way-js multi-track-flight">چند مسیره</li>
+                    {*                    <li data-text='چند مسیره' class="switch-way-js multi-track-flight">چند مسیره</li>*}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="parent-cheng-way-internal-external">
+            <div class="cheng-flight-class dropdown-toggle-cheng" id="dropdown-flight-class" onclick="toggleDropdownFlightClass(event)">
+                <h4 class="dropdown-text" id="toggle-text-class">همه</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M362.7 203.9l-159.1 144c-6.125 5.469-15.31 5.469-21.44 0L21.29 203.9C14.73 197.1 14.2 187.9 20.1 181.3C26.38 174.4 36.5 174.5 42.73 180.1L192 314.5l149.3-134.4c6.594-5.877 16.69-5.361 22.62 1.188C369.8 187.9 369.3 197.1 362.7 203.9z"/>
+                </svg>
+                <ul class="money-filter_ul arrow-up2" id="flight-class-dropdown">
+                    <li>
+                        <div class="switch-class-js" onclick="event.stopPropagation(); selectFlightClass('همه', 'all', event)">
+                            همه
+                        </div>
+                    </li>
+                    <li>
+                        <div class="switch-class-js" onclick="event.stopPropagation(); selectFlightClass('اکونومی', 'economy', event)">
+                            اکونومی
+                        </div>
+                    </li>
+                    <li>
+                        <div class="switch-class-js" onclick="event.stopPropagation(); selectFlightClass('پریمیوم', 'premium_economy', event)">
+                            پریمیوم
+                        </div>
+                    </li>
+                    <li>
+                        <div class="switch-class-js" onclick="event.stopPropagation(); selectFlightClass('بیزنیس', 'business', event)">
+                            بیزنیس
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,6 +97,8 @@
 
         <div id="internal-content-flight" class="_internal d_flex visible flight-toggle-js flex-wrap internal-flight-js internal-content-flight">
             <form method="post" class="d_contents" target="_blank" id="internal_flight_form" name="internal_flight_form">
+                <input type="hidden" id="flight_class_internal" name="flight_class_internal" value="all">
+
                 <div class="d-flex flex-wrap gap-mobile">
                     <div class="col-lg-2 col-md-6 col-sm-6 col-12 p-1 col_search">
                         <div class="parent-input-search-box origin_start">
@@ -230,6 +264,8 @@
         </div>
         <div id="external-content-flight" class="_external flex-wrap flight-toggle-js international-flight-js external-content-flight">
             <form data-action="https://s360online.iran-tech.com/" method="post" target="_blank" class="d_contents" id="international_flight_form" name="international_flight_form">
+                <input type="hidden" id="flight_class_international" name="flight_class_international" value="all">
+
                 <div class='d-flex flex-wrap gap-mobile'>
                     <div class="col-lg-2 col-md-6 col-sm-6 col-12 col_search search_col col_with_route p-1">
                         <div class="parent-input-search-box origin_start">

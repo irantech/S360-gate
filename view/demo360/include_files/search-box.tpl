@@ -5,12 +5,12 @@
 {/if}
 
 <section class="i_modular_banner_gallery position-relative">
-    <div class='container'>
-        <div class='demo-ticket-old'>
-            <p>به نسخه قدیمی وب‌سایت ما علاقه دارید؟</p>
-            <a href='https://old.safar360.com/'>[این‌جا را کلیک کنید]</a>
-        </div>
-    </div>
+{*    <div class='container'>*}
+{*        <div class='demo-ticket-old'>*}
+{*            <p>به نسخه قدیمی وب‌سایت ما علاقه دارید؟</p>*}
+{*            <a href='https://old.safar360.com/'>[این‌جا را کلیک کنید]</a>*}
+{*        </div>*}
+{*    </div>*}
     <div class="banner-demo">
         <div class="container h-100">
             <div class="parent-data-demo" id="bg-banner-demo">

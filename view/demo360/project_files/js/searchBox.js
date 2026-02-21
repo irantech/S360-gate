@@ -18,19 +18,56 @@ $(document).ready(function () {
 
 
     $(".select2 , .select-route-bus-js , .default-select2 , .gasht-type-js , .select2_in").select2();
+
+    // Helper function to update return date status based on one-way/round-trip selection
+    function updateReturnDateStatus(type) {
+        let class_element = $(`.${type}-one-way-js`);
+        let arrival_date = $(`.${type}-arrival-date-js`);
+        if (class_element.is(':checked')) {
+            arrival_date.attr("disabled", "disabled");
+        } else {
+            arrival_date.removeAttr("disabled");
+        }
+    }
+
     $('.switch-input-js').on('change', function() {
         if (this.checked && this.value === '1') {
             $('.international-flight-js').css('display', 'flex')
             $('.internal-flight-js').hide()
             $('.flight-multi-way-js').hide()
             $(this).attr('select_type','yes')
+            // Update return date status for international flights
+            updateReturnDateStatus('international')
         } else {
             $('.internal-flight-js').css('display', 'flex')
             $('.international-flight-js').hide()
             $('.flight-multi-way-js').hide()
             $('.switch-input-js').removeAttr('select_type')
+            // Update return date status for internal flights
+            updateReturnDateStatus('internal')
         }
     })
+
+    // Event handler for internal flight one-way/round-trip radio buttons
+    $('input[name="select-rb2"]').on('change', function() {
+        let arrival_date = $('.internal-arrival-date-js');
+        if ($('.internal-one-way-js').is(':checked')) {
+            arrival_date.attr("disabled", "disabled");
+        } else {
+            arrival_date.removeAttr("disabled");
+        }
+    });
+
+    // Event handler for international flight one-way/round-trip radio buttons
+    $('input[name="select-rb"]').on('change', function() {
+        let arrival_date = $('.international-arrival-date-js');
+        if ($('.international-one-way-js').is(':checked')) {
+            arrival_date.attr("disabled", "disabled");
+        } else {
+            arrival_date.removeAttr("disabled");
+        }
+    });
+
     $('.select-type-way-js').on('click', function () {
         let type = $(this).data('type');
         let class_element = $(`.${type}-one-way-js`);

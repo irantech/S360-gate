@@ -7,7 +7,7 @@
     <script src="project_files/js/searchBox.js"></script>
     <script src="assets/js/jquery-confirm.min.js" type="text/javascript"></script>
     <script src="project_files/js/jquery.smoothscroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+{*    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>*}
 {else}
     {if $smarty.const.GDS_SWITCH neq 'app'}
         {include file="`$smarty.const.FRONT_CURRENT_CLIENT`contentFooter.tpl"}

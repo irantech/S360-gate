@@ -115,9 +115,9 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-item-insurance">
-                                    <span>۱۳ تا ۶۴ سال</span>
+                                    <span>۱۳ تا ۶۵ سال</span>
                                     <div class="counter-insurance">
-                                        <button type='button' class="increase" data-age='13-64'>
+                                        <button type='button' class="increase" data-age='13-65'>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M232 72c0-13.3-10.7-24-24-24s-24 10.7-24 24V232H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H184V440c0 13.3 10.7 24 24 24s24-10.7 24-24V280H392c13.3 0 24-10.7 24-24s-10.7-24-24-24H232V72z"/></svg>
                                         </button>
                                         <span>0</span>
@@ -127,9 +127,9 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-item-insurance">
-                                    <span>۶۵ تا ۷۰ سال</span>
+                                    <span>۶۶ تا ۷۰ سال</span>
                                     <div class="counter-insurance">
-                                        <button type='button' class="increase"  data-age='65-70'>
+                                        <button type='button' class="increase"  data-age='66-70'>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M232 72c0-13.3-10.7-24-24-24s-24 10.7-24 24V232H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H184V440c0 13.3 10.7 24 24 24s24-10.7 24-24V280H392c13.3 0 24-10.7 24-24s-10.7-24-24-24H232V72z"/></svg>
                                         </button>
                                         <span>0</span>

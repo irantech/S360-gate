@@ -1958,9 +1958,7 @@ $(document).ready(function () {
         fillClass:'rangeslider__fill',
         handleClass:'rangeslider__handle',
         onSlide:function(position, value) {
-            $(".div-rangeslider3 > h6").text(value);
-            $('#initial_payment').val(value);
-            getInfoCalculator();
+            $(".div-rangeslider3 > h6").text(value)
         }
     })
     setTimeout(function () {
@@ -2042,7 +2040,7 @@ $('.show-box-nologin-js').on('click', function(e) {
 // بستن منو با کلیک در هر جای دیگر صفحه
 $(document).on('click', function(e) {
     if ($('.show-content-box-nologin-js').is(':visible') &&
-        !$(e.target).closest('.show-content-box-nologin-js, .show-box-nologin-js').length) {
+       !$(e.target).closest('.show-content-box-nologin-js, .show-box-nologin-js').length) {
         $('.show-content-box-nologin-js').slideUp(200);
     }
 });
@@ -2175,20 +2173,20 @@ window.onload = function() {
 
 $(document).ready(function () {
     $('input:radio[name="btn_switch_tour"]').change(
-        function(){
-            if (this.checked && this.value == '1') {
+       function(){
+           if (this.checked && this.value == '1') {
 
 
-                $('#international_tour').css('display','flex');
-                $('#internal_tour').hide();
+               $('#international_tour').css('display','flex');
+               $('#internal_tour').hide();
 
 
-            }
-            else {
-                $('#international_tour').hide();
-                $('#internal_tour').css('display','flex');
-            }
-        });
+           }
+           else {
+               $('#international_tour').hide();
+               $('#internal_tour').css('display','flex');
+           }
+       });
 
 
 

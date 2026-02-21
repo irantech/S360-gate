@@ -166,7 +166,7 @@
         let selector_div = document.querySelectorAll('.box_ways > div');
         this.$store.commit('setSearchType',type_search_box)
 
-
+        console.log('selector_div' , selector_div)
         selector_div.forEach(div => {
           div.classList.remove('is_active_box_ways');
         });
@@ -182,9 +182,11 @@
 
 
           }
+        console.log(type_search_box)
           if(type_search_box=='Twoway'){
             this.is_multi_destination = false;
             this.has_return = true;
+            console.log('document.getElementsByClassName(\'multiWays\')[0]: ' , document.getElementsByClassName('multiWays')[0])
             document.getElementsByClassName('multiWays')[0].classList.add('checked');
           }
           if(type_search_box=='multiSearch'){

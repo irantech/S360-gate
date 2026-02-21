@@ -86,7 +86,7 @@
                         <div class="tab-pane fade show active" id="tour-dakheli-demo" role="tabpanel" aria-labelledby="tab-tour-dakheli-demo">
                             <div class="__tour__internal__ parent-tour-demo">
                                 {foreach $internalTours as $item}
-                                <a href="{$smarty.const.ROOT_ADDRESS}/detailTour/{$item['id']}/{$item['tour_slug']}" class="__i_modular_nc_item_class_0">
+                                <a href="{$smarty.const.ROOT_ADDRESS}/detailTour/{$item['id_same']}/{$item['tour_slug']}" class="__i_modular_nc_item_class_0">
                                     <div class="parent-img">
                                         <img class="__image_class__" src="{$smarty.const.ROOT_ADDRESS_WITHOUT_LANG}/pic/reservationTour/{$item['tour_pic']}" alt="{$item['tour_name']}">
                                         <div class="___price_class__ price-tour-demo">

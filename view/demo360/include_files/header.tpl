@@ -56,7 +56,7 @@
     {*    <script crossorigin="anonymous" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>*}
     <link href="assets/main-asset/css/main.css" rel="stylesheet"/>
 
-    {if $smarty.const.GDS_SWITCH eq 'mainPage' || $smarty.const.GDS_SWITCH eq 'page'}
+{if $smarty.const.GDS_SWITCH eq 'mainPage' || $smarty.const.GDS_SWITCH eq 'page'}
 
 <link rel="stylesheet" href="project_files/css/owl.carousel.min.css">
 <link href="assets/css/jquery-confirm.min.css" rel="stylesheet">
