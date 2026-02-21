@@ -1,4 +1,4 @@
-<div class="switches">
+<div class="switches pr-3">
     <label for="rdo_train" class="btn-radio select-type-way-js" data-type='train'>
         <input checked="" type="radio" id="rdo_train" name="DOM_TripMode_train" value="1" class="train-one-way-js">
         <svg width="20px" height="20px" viewBox="0 0 20 20">

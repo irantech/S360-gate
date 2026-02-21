@@ -1,4 +1,6 @@
 <div class="tab-pane {if  $smarty.const.GDS_SWITCH eq 'page'} active {/if}" id="Entertainment">
+    <div class="empty-div">
+    </div>
     <div class="col-md-12 col-12">
         <div class="row">
             <form data-action="https://s360online.iran-tech.com/" class="d_contents" method="post"

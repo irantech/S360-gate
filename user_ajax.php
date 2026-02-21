@@ -884,6 +884,7 @@ elseif ( isset( $_POST['flag'] ) && $_POST['flag'] == 'check_credit_cip' ) {
 
     $bookModel = Load::getModel('cipModel');
     $objTransaction    = Load::controller( 'transaction' );
+    $objFactorCip = Load::controller( 'cip' );
 
     $total_price           = 0;
     $TicketPriceBank       = 0;
@@ -913,6 +914,7 @@ elseif ( isset( $_POST['flag'] ) && $_POST['flag'] == 'check_credit_cip' ) {
     if ( empty( $existTransaction ) ) {
         // Caution: اعتبارسنجی صاحب سیستم
         $check = $objTransaction->checkCreditNew( $total_price, 'online' ,'', $total_price , $_POST['selectedBank']);
+
         if ( $check['status'] == 'TRUE' ) {
 
             $reason = 'buy';
@@ -921,6 +923,8 @@ elseif ( isset( $_POST['flag'] ) && $_POST['flag'] == 'check_credit_cip' ) {
 
 
             if ( $reduceTransaction ) {
+                $objFactorCip->updateSuccessfull( $factorNumber, 'bank' );
+
                 $output = 'TRUE';
             } else {
                 $output = 'FALSE';

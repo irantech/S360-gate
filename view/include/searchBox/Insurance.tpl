@@ -11,7 +11,7 @@
                 {include file="./sections/insurance/country.tpl"}
                 {include file="./sections/insurance/duration.tpl"}
                 {include file="./sections/insurance/passengerCount.tpl"}
-                {*                {include file="./sections/insurance/date.tpl"}*}
+{*                {include file="./sections/insurance/date.tpl"}*}
                 <div class="{if isset($col) } {$col} {else} col-lg-2{/if} col-md-6 col-sm-6 col-12 col_search search_btn_insuranc">
                     <button type="button" onclick="searchInsurance()"
                             class="btn theme-btn seub-btn b-0"><span>##Search##</span></button>

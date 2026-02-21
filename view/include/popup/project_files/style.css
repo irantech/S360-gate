@@ -1,0 +1,388 @@
+
+/*# sourceMappingURL=header.css.map */
+
+.modal-dialog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  /* عمودی وسط */
+    margin: 0 auto !important;     /* افقی وسط */
+}
+.modal-content-custom {
+    border-radius: 18px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    background: #ffffff;
+}
+
+/* هدر و دکمه ضربدر */
+.modal-body {
+    padding: 25px 28px 30px 28px;
+    position: relative;
+    height: fit-content;
+}
+
+.modal-body h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+/* عکس */
+.modal-body picture,
+.modal-body img{
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 27px 0 5px 0;
+
+}@media (min-width: 992px) {
+    .modal-lg, .modal-xl {
+        max-width: 600px;
+    }
+}
+@media (max-width: 567px) {
+    .modal-dialog  {
+        margin: 15px !important;    }
+}
+.modal-desc-popup{  font-size: 15px;
+    line-height: 1.9;
+    color: #4a4a4a;
+    margin: 0;
+    padding:10px;
+    text-align: justify;
+}
+/* متن */
+
+
+/* دکمه بستن */
+.modal-body .close{
+    position: absolute;
+    left: 18px !important;
+    top: 16px;
+    font-size: 30px;
+    opacity: .55;
+    transition: .25s;
+}
+.modal-backdrop{
+    pointer-events: none;
+}
+.modal-body .close:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* انیمیشن ورود مودال */
+.modal.in .modal-dialog {
+    animation: modalShow .35s ease;
+}
+
+@keyframes modalShow{
+    from{
+        opacity: 0;
+        transform: translateY(20px) scale(.97);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* kolahi modal's*/
+.modal_center_flight{
+    display:none !important;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    bottom: 0;
+    padding-top: 35px;
+    background: rgba(0,0,0,.45);  /* بک‌گراند محو */
+
+}
+.modal-title-popup{
+    position: absolute;
+    top: 17px;
+    right: 0;
+    left: 0;
+}
+
+.modal_video_main_after::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    left: -15px;
+    top: -15px;
+    z-index: 9999;
+    border-radius: 100%;
+}
+.btn_show_modal_info > span{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+}
+.btn_show_modal_info > span > img{
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.modal_video{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+}
+.modal-content-custom{
+    background-color: transparent !important;
+    border: none;
+
+}
+.modal-content-custom .modal-body button{
+    position: absolute !important;
+    border-radius: 50% !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 9999999999 !important;
+    background: #c70909 !important;
+    color: #fff !important;
+    font-size: 25px !important;
+    transition: all ease .4s !important;
+    opacity: 1;
+}
+
+.modal-content-custom .modal-body {
+
+    max-height: 90vh;
+    background: #fff;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.modal-content-custom .modal-body picture{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 18px;
+}
+.modal-content-custom .modal-body picture img{
+    object-fit: contain;
+    width:100% !important;
+
+}
+.modal-content-custom .modal-body {
+    position: relative;
+    padding: 0;
+    border-radius: 10px;
+}
+.modal_video_active{
+    visibility: hidden;
+    opacity: 0;
+}
+.modal_video_after {
+    position:absolute;
+    content: "";
+    background: #000a;
+    display: flex;
+    z-index:-1;
+    inset: 0;
+}
+.modal_video_main{
+    width:600px;
+    height:460px;
+    position:relative;
+    margin-top:112px;
+    background:transparent !important;
+}
+.modal_video_main > button{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    z-index: 1002;
+    padding: 0;
+}
+.modal_video_main_button_anim{
+    animation : modal_video_main_btn_anim 5s ease-in;
+}
+.modal_video_main_button_anim::before {
+    content:"";
+    position:absolute;
+    inset: 0;
+    width:100%;
+    height: 100%;
+    opacity:0;
+    z-index:2;
+}
+
+@keyframes modal_video_main_btn_anim {
+    0%{
+        background: conic-gradient(#fff 0%, #333 0);
+    }
+    20%{
+        background: conic-gradient(#fff 20%, #333 0);
+    }
+    40%{
+        background: conic-gradient(#fff 40%, #333 0);
+    }
+    60%{
+        background: conic-gradient(#fff 60%, #333 0);
+    }
+    80%{
+        background: conic-gradient(#fff 80%, #333 0);
+    }
+    100%{
+        background: conic-gradient(#fff 100%, #333 0);
+    }
+}
+
+.modal_video_main > button > i{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #555;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 100%;
+    transition: all .3s
+}
+.modal_video_main > button:hover {
+    opacity: .7;
+}
+.modal_video_main > video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    border-radius:1rem
+}
+.h_iframe-aparat_embed_frame{
+    position:relative;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.h_iframe-aparat_embed_frame .ratio{
+    display:block;
+    width:100%;
+    height:auto;
+}
+.h_iframe-aparat_embed_frame iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:600px;
+    height:461px;
+    border: none;
+}
+@media (max-width: 768px) {
+    .modal_video_main{
+        margin-top:0;
+    }
+    .modal_video{
+        align-items: center;
+    }
+    .modal_video_main , .h_iframe-aparat_embed_frame iframe{
+        width: 90%
+    }
+}
+.btn_show_modal{
+    background: #ff3a46;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color:#fff;
+    margin-left: auto;
+    line-height: 50px;
+    position: fixed;
+    left: 5px;
+    bottom: 20px;
+    z-index: 9999999999;
+    cursor: pointer;
+    box-shadow: 0 0 25px -2px #ff3a46;
+    transition: all ease .4s;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.btn_show_modal:hover {
+    background: rgba(255, 58, 70, 0.73);
+}
+.animation_btn_show_modal {
+    animation: amin_btn_show_modal 1s linear;
+}
+@keyframes amin_btn_show_modal {
+    0% {
+        box-shadow: 0 0 0 0 #ff3a46;
+    }
+    100% {
+        box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+    }
+}
+.btn_show_modal_parent{
+    position:relative;
+}
+.btn_show_modal_info{
+    background: #233D63;
+    color: white;
+    padding: 4px 7px;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 6px;
+    margin-bottom: 13px;
+    animation: i-move 3s linear infinite 2s;
+    position: fixed;
+    transition: all ease .4s;
+    bottom: 75px;
+    transform: translateY(0px);
+    width: max-content;
+    left: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn_show_modal_info::before{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    transform: rotate(45deg);
+    content: "";
+    background: #233D63;
+}
+.btn_show_modal_parent:hover .btn_show_modal_info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade:not(.show){
+
+    opacity:1 !important;
+}

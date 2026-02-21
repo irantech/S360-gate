@@ -99,10 +99,10 @@ export default {
          if (isNaN(num)) return "0"
          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       },
-      handleImageError(event) {
-         event.target.src =
-            "https://192.168.1.100/gds/view/client/Vue/assets/images/no-image.jpg"
-      },
+     handleImageError(event) {
+       event.target.src =
+           amadeusPath + "/view/client/assets/images/no-image.jpg"
+     },
       openHotelModal() {
          this.showHotelModal = true
       },

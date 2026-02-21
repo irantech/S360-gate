@@ -1,5 +1,5 @@
 {assign var="countries" value=$obj_main_page->countryInsurance()}
-<div class="col-lg-3 col-md-4 col-sm-6 col-12 col_search">
+<div class="col-lg-3 col-md-6 col-sm-6 col-12 col_search">
     <div class="form-group">
         <select data-placeholder="##CountryName## ##Destination##"
                 name="insurance_destination_country"
