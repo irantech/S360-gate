@@ -3826,60 +3826,61 @@ class bookshowTest extends clientAuth {
                     $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-primary ">در حال پردازش</a>';
                 }elseif ( $flightBook['successfull'] == 'pending' ) {
                     $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-print cursor-warning ">در حال صدور</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اختصاصی سرور 5</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '0' && $flightBook['api_id'] == '10' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
-                                                اختصاصی سرور 9</a>';
-                } elseif ( $flightBook['successfull'] == 'book' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '0' && $flightBook['api_id'] == '10' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو سرور 9</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '5' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
-                                                اختصاصی سرور 4</a>';
-                } elseif ( $flightBook['successfull'] == 'book' && $flightBook['api_id'] == '11' && TYPE_ADMIN == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
-                                                اشتراکی سرور 10</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['api_id'] == '14' && TYPE_ADMIN == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
-                                                اختصاصی سرور 14</a>';
-                }elseif (($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '15' && TYPE_ADMIN == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
-                                                 رزور قطعی سرور 15</a>';
-                }elseif ( ($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '16' && TYPE_ADMIN == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
-                                                 رزرو قطعی سرور 16</a>';
-                }elseif ( ($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '17' && TYPE_ADMIN == '1' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
-                                                 رزرو قطعی سرور 17</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '12' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اختصاصی سرور 12</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '18' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اختصاصی سرور 18</a>';
-                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '20' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اختصاصی سرور چارتر118</a>';
-                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '21' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اختصاصی سرور 20</a>';
-                }elseif ( $flightBook['successfull'] == 'book' && $flightBook['pid_private'] == '0' && $flightBook['api_id'] == '13' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
-                                                اشتراکی سرور 13</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '13' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
-                                                اختصاصی سرور 13</a>';
-                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1'  && $flightBook['api_id'] == '8' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
-                                                اختصاصی سرور 7</a>';
-                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '19' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
-                                                اختصاصی سرور 19</a>';
-                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '22' ) {
-                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">رزرو
-                                                اختصاصی سرور 22</a>';
-                } elseif ( $flightBook['successfull'] == 'book' ) {
+                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1') {
+                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو اختصاصی <p style="margin: 0; font-family: arial; cursor: text;user-select: text;"> ' . $flightBook['pnr'] . '</p></a>';
+                }
+//                elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '0' && $flightBook['api_id'] == '10' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
+//                                                اختصاصی سرور 9</a>';
+//                } elseif ( $flightBook['successfull'] == 'book' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '0' && $flightBook['api_id'] == '10' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو سرور 9</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['private_m4'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '5' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
+//                                                اختصاصی سرور 4</a>';
+//                } elseif ( $flightBook['successfull'] == 'book' && $flightBook['api_id'] == '11' && TYPE_ADMIN == '1' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
+//                                                اشتراکی سرور 10</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['api_id'] == '14' && TYPE_ADMIN == '1' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
+//                                                اختصاصی سرور 14</a>';
+//                }elseif (($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '15' && TYPE_ADMIN == '1' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
+//                                                 رزور قطعی سرور 15</a>';
+//                }elseif ( ($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '16' && TYPE_ADMIN == '1' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
+//                                                 رزرو قطعی سرور 16</a>';
+//                }elseif ( ($flightBook['successfull'] == 'book' || $flightBook['successfull'] == 'private_reserve') && $flightBook['api_id'] == '17' && TYPE_ADMIN == '1' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">
+//                                                 رزرو قطعی سرور 17</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '12' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
+//                                                اختصاصی سرور 12</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '18' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
+//                                                اختصاصی سرور 18</a>';
+//                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '20' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
+//                                                اختصاصی سرور چارتر118</a>';
+//                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['api_id'] == '21' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
+//                                                اختصاصی سرور 20</a>';
+//                }elseif ( $flightBook['successfull'] == 'book' && $flightBook['pid_private'] == '0' && $flightBook['api_id'] == '13' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default ">رزرو
+//                                                اشتراکی سرور 13</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '13' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
+//                                                اختصاصی سرور 13</a>';
+//                } elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1'  && $flightBook['api_id'] == '8' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
+//                                                اختصاصی سرور 7</a>';
+//                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '19' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-primary cursor-default">رزرو
+//                                                اختصاصی سرور 19</a>';
+//                }elseif ( $flightBook['successfull'] == 'private_reserve' && $flightBook['pid_private'] == '1' && $flightBook['IsInternal'] == '1' && $flightBook['api_id'] == '22' ) {
+//                    $DataFlightAgencyShare .= '<a href="#" onclick="return false;" class="btn btn-info cursor-default">رزرو
+//                                                اختصاصی سرور 22</a>';
+//                }
+                elseif ( $flightBook['successfull'] == 'book' ) {
                     if ( $flightBook['request_cancel'] == 'confirm' ) {
                         $DataFlightAgencyShare .= '<a class="btn btn-danger cursor-default" onclick="return false;">کنسل شده</a>';
                     } else {
